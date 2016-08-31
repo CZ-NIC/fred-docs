@@ -23,4 +23,4 @@ Table of Contents
    :name: fred-arch-toc
    :maxdepth: 2
 
-   .. Chapters go here.
+   .. Chapters will go here.
