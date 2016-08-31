@@ -15,11 +15,7 @@ Publication structure (Architecture)
    * CR backend servers, CORBA clients (interface servers), clients
    * internal interfaces (CORBA IDL)
 
-* Components decomposition?
-
-* Logical data model
-   * registrable objects/CR objects/all objects + relationships
-   * object states, object life cycle
+* Components decomposition - :abbr:`TBD (to be developed)`
 
 * Physical data model - ERD (generate from SQL?)
 
@@ -29,5 +25,4 @@ Publication structure (Architecture)
    * dependencies on 3rd-party libraries
    * dependencies across projects (repositories)
 
-
-* All-in-one diagram? (quickref)
+* All-in-one diagram (quickref) - :abbr:`TBD (to be developed)`

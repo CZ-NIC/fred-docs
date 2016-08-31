@@ -18,7 +18,7 @@ Publication structure (Features)
       * "audit" logging vs. process logging
    * Accounting (Pricing, Payments, Charging, Invoicing)
    * Notifications & Reports (Mailing, Messaging...)
-      * Delivery channels (email, sms, letters, poll msgs, jabber, ?)
+      * Delivery channels (email, sms, letters, poll msgs)
       * types (group by object type?)
          * Domain Expiration Warning
          * Domain Deletion Warning
@@ -26,10 +26,8 @@ Publication structure (Features)
          * Tech.check results (go into poll messages)
    * Technical checks (PY)
       * types
-   * (Mailing (PY))
-   * (File managing (PY))
    * IDN
-   * DNSSEC support (keys)
+   * DNSSEC support (get keys from registrars + include them in zone file)
    * ENUM
 
 * Administration Features (~ADIF+utils)
@@ -37,14 +35,14 @@ Publication structure (Features)
    * Web administration :sup:`READY`
    * CLI administration (fred-admin, transproc, fred-dbmanager?, other?)
 
-* Registrar Features (~RIF)
+* Registrar Features (~RIF) - :abbr:`TBD (to be developed)`
    * EPP protocol features
       * check/create/delete... domain/contact/keyset/nsset
-      * request authinfo, request tech.test (součást EPP?)
-      * change registrar info? (součást EPP?)
-   * Poll messages (součást EPP?)
+      * request authinfo, request tech.test (a part of std.EPP)
+      * change registrar info? (a part of std.EPP???)
+   * Poll messages (a part of std.EPP)
 
-* Public Features (~PIF)
+* Public Features (~PIF) - :abbr:`TBD (to be developed)`
    * Anonymous end-users
       * WhoisWeb, WhoisUnx, RDAP
       * restrictions (CAPTCHA)

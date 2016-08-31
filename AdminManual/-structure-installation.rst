@@ -5,7 +5,7 @@ Chapter structure (Installation)
 ====================================
 
 * Installation
-   * System Requirements ? (varies for bin/src installations)
+   * System Requirements (varies for bin/src installations)
    * From binaries
       * Ubuntu 12--16
          * Getting the install.script

@@ -4,17 +4,13 @@
 Publication structure (Admin.Manual)
 ====================================
 
-
-
-* System requirements ?
-
 * :ref:`Installation <FRED-Admin-structure-installation>`
 
 * Configuration
    * Overview of executables and the default config.files
       * Main and supporting programs
-   * Configurable database values (table:enum_parameters, other?)
-   * ???
+   * Configurable database values
+     * table:enum_parameters
 
 * Registry initialization :sup:`$READY$`
    * Setting up a zone
@@ -22,13 +18,15 @@ Publication structure (Admin.Manual)
    * Setting up the invoicing subsystem
      (price list, invoice numbering, VAT tax, credit)
 
-* Periodic tasks (CRON) (automatic tasks)
+* Periodic tasks (CRON)
    * Generate zone file
    * Regular procedure :sup:`$CRITICAL$`
       * +Delete unused objects
       * +Export notification letters (to PostServis) :sup:`$CZ-specific$`
-   * Delete domains :sup:`$CRITICAL$`
-   * Perform automatic contact verifications
+      * +more (see fred-admin help)
+   * Removal of inactive records
+      * Delete expired domains :sup:`$CRITICAL$`
+   * Perform automatic contact verifications :sup:`$CZ-specific$`
    * Export notification letters (to Optys) :sup:`$CZ-specific$`
    * Export (and send) notification SMS texts :sup:`$CZ-specific$`
    * Export registered letters (for manual dispatch) :sup:`$CZ-specific$`
@@ -41,24 +39,10 @@ Publication structure (Admin.Manual)
       * Bill registrars (charge fees and create invoice)
    * Generate statistics
 
-* Accounting (Billing & Banking)
+* Billing
    * Price list
-   * Charging fees/fines
-   * Payments processing (transproc), "standard XML format?" => Dev?
-   * Invoice generation :sup:`$CZ-specific$`
-      * Account invoice (monthly)
-      * Advance invoice (when a payment is received)
-   * ???
 
-* Notifications & Reports – anything to administer?
-
-* Technical checks – anything to administer?
-
-* Removal of inactive records
-   * Expired domains
-   * Unused contacts
-   * Unused NS sets
-   * Unused key sets
+.. Administrative tasks
 
 * CR search (Daphne/*_admin_clients?)
 
@@ -70,19 +54,19 @@ Publication structure (Admin.Manual)
    * register(create+renew)/extend(renew) (client?)
    * inclusion in a zone
 
-* Zone generation (manual)
-* Technical checks execution (manual)
-* Contact verification (manual)
-
 * Maintenance (manual tasks)
-   * Syslog log rotate
-   * Logger database backups
-   * ???
+   * Postgresql database
+      * backup (regular security backup - postgresql documentation)
+      * regular vacuum (check postgresql documentation)
+   * Regular cleanup to keep the size of system low
+      * Syslog log rotate
+      * Content of /var/lib/pyfred/* (managed files)
+      * Logger database content archivation (archivation of old partitions)
 
 * Customizations
    * Localization of UIs
    * Template adaptation
-   * Bank transcript processing (custom bank)
+   * Bank-transcript processing (custom bank)
 
 * Extensions
    * mojeID
