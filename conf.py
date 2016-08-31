@@ -119,7 +119,7 @@ pygments_style = 'sphinx'
 todo_include_todos = True
 
 # Conditional inclusion tags
-#tags.add('tagname')
+tags.add('mode_structure')
 
 # -- Options for HTML output ----------------------------------------------
 

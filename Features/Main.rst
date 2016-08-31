@@ -6,7 +6,7 @@ Features
 
 This document describes the features of the FRED.
 
-.. NOTE This document shall also contain concepts of operations/behavioral models?
+.. NOTE This document shall also contain concepts of operations/conception explanations?
 
 .. rubric:: Target Audience
 
@@ -25,6 +25,18 @@ find advanced or not-so-obvious usage, have checklist for verification
 
 A feature is a **user-visible** aspect, quality or characteristic of software.
 
+.. only:: mode_structure
+
+   WIP: Content & Structure
+   ------------------------
+
+   The structure of this document (or the future table of contents)
+   is being developed in the following file(s).
+
+   .. toctree::
+      :maxdepth: 1
+
+      -structure
 
 Table of Contents
 -----------------
