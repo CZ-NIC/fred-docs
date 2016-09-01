@@ -12,6 +12,13 @@ Regenerated |today|
 
    .. Note:: This deliverable was generated in the *structure mode*.
 
+   .. rubric:: Structure file list
+
+   * :ref:`Structure (Features) <FRED-Features-structure>`
+   * :ref:`Structure (Architecture) <FRED-Arch-structure>`
+   * :ref:`Structure (Admin.Manual) <FRED-Admin-structure>`
+      * :ref:`Structure (Installation) <FRED-Admin-structure-installation>`
+
 .. rubric:: Publications
 
 .. toctree::
