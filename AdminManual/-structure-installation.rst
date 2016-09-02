@@ -19,4 +19,4 @@ Chapter structure (Installation)
       * Compilation tools
 
    * Testing the installation
-   * Upgrades
+   * Upgrades – :abbr:`TBD (to be developed)`
