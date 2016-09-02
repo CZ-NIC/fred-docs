@@ -4,22 +4,18 @@
 Features
 ========
 
-This document describes the features of the FRED.
-
-.. NOTE This document shall also contain concepts of operations/behavioral models?
+This document describes the features of the FRED (and explains the conception logic 
+beyond these features).
 
 .. rubric:: Target Audience
 
-Acquirer, tester
-
-.. + (system administrator, developer)
+Acquirer, tester, (system administrator, developer)
 
 .. rubric:: Purpose
 
 Determine if the system can satisfy your needs, compare with other products,
-find advanced or not-so-obvious usage, have checklist for verification
-
-.. + (learn about the concepts of operations)
+find advanced or not-so-obvious usage, have checklist for verification,
+(be aware of the logic beyond the features).
 
 .. rubric:: Feature Definition
 
