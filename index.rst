@@ -29,3 +29,11 @@ Regenerated |today|
    Architecture/Main
    AdminManual/Main
 
+
+.. rubric:: Other documentation
+
+Apart from the publications mentioned above, additional pieces of documentation
+are planned:
+
+* FRED-client user guide – :abbr:`TBD (to be developed)`
+* Custom EPP client implementation guide – :abbr:`TBD (to be developed)`
