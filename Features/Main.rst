@@ -28,4 +28,8 @@ Table of Contents
    :name: fred-features-toc
    :maxdepth: 1
 
-   .. Chapters will go here.
+   General/Main
+   AdminIF/Main
+   
+   .. More chapters will go here.
+
