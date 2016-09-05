@@ -35,4 +35,6 @@ Table of Contents
    :name: fred-arch-toc
    :maxdepth: 2
 
-   .. Chapters will go here.
+   BlackboxModel
+   TopLevelComponents
+

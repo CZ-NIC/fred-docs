@@ -38,4 +38,13 @@ Table of Contents
    :name: fred-admin-toc
    :maxdepth: 1
 
-   .. Chapters will go here.
+   Installation/Main
+   Configuration
+   RegistryInitialization
+   PeriodicTasks
+   AdministrativeTasks/Main
+   Accounting
+   Maintenance
+   Customization
+   Extensions
+
