@@ -4,21 +4,25 @@
 Publication structure (Admin.Manual)
 ====================================
 
+* **Prerequisities** (to understand this manual)
+
 * :ref:`Installation <FRED-Admin-structure-installation>`
 
-* Configuration
+* **Configuration**
    * Overview of executables and the default config.files
-      * Main and supporting programs
+      * Main and supporting programs with short descriptions
+      * List of config.files with default locations
    * Configurable database values
-     * table:enum_parameters
+      * table:enum_parameters
+      * example of SQL query to change a value
 
-* Registry initialization :sup:`$READY$`
+* **Registry initialization** :sup:`READY, may need a revision`
    * Setting up a zone
    * Setting up registrars
    * Setting up the invoicing subsystem
      (price list, invoice numbering, VAT tax, credit)
 
-* Periodic tasks (CRON)
+* **Periodic tasks (CRON)**
    * Generate zone file
    * Regular procedure :sup:`$CRITICAL$`
       * +Delete unused objects
@@ -39,7 +43,7 @@ Publication structure (Admin.Manual)
       * Bill registrars (charge fees and create invoice)
    * Generate statistics
 
-* Administrative tasks
+* **Administrative tasks**
 
    * Registrar administration
       * add/delete/details/edit/block/unblock
@@ -60,12 +64,13 @@ Publication structure (Admin.Manual)
 
    * Object search (Daphne)
 
-* Accounting
+* **Accounting tasks**
    * Changing prices
    * Adding credit
    * Invoice numbering
 
-* Maintenance - **see admin**
+* **Maintenance**
+   * (depends on deployment?)
    * Postgresql database
       * backup (regular security backup - postgresql documentation)
       * regular vacuum (check postgresql documentation)
@@ -74,11 +79,12 @@ Publication structure (Admin.Manual)
       * Content of /var/lib/pyfred/* (managed files)
       * Logger database content archivation (archivation of old partitions)
 
-* Customization
+* **Customization**
    * Localization of UIs
    * Template adaptation
    * Bank-transcript processing (custom bank)
 
-* Extensions
+* **Extensions**
    * mojeID
    * DomainBrowser
+
