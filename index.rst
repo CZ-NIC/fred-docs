@@ -12,14 +12,14 @@ Regenerated |today|
 
    .. Note:: This deliverable was generated in the *structure mode*.
 
-   .. rubric:: Structure file list
+   .. rubric:: Structure files
 
    * :ref:`Structure (Features) <FRED-Features-structure>`
    * :ref:`Structure (Architecture) <FRED-Arch-structure>`
    * :ref:`Structure (Admin.Manual) <FRED-Admin-structure>`
       * :ref:`Structure (Installation) <FRED-Admin-structure-installation>`
 
-.. rubric:: Publications
+.. rubric:: Publications (Actual content)
 
 .. toctree::
    :name: fred-toc
@@ -30,7 +30,7 @@ Regenerated |today|
    AdminManual/Main
 
 
-.. rubric:: Other documentation
+.. rubric:: Planned publications
 
 Apart from the publications mentioned above, additional pieces of documentation
 are planned:
