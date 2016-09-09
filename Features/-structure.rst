@@ -7,7 +7,7 @@ Publication structure (Features)
 .. Note:: Features will also contain conception logic.
 
 
-* **General Features**
+* **General Features** :sup:`src:WEB/Features + WIKI/Dev + WIKI/Test`
    * RRR model, registrars
    * Registrations
       * Registrable objects + relationships
@@ -16,31 +16,31 @@ Publication structure (Features)
       * Object history
    * Zones
       * generation
-   * Logging
+   * Logging :sup:`src:NOTES`
       * audit logging vs. process logging
          * explain difference, link to Admin/Config
    * Notifications & Reports
       * (Mailing, Messaging...)
       * Delivery channels (email, sms, letters, poll msgs)
-      * types
+      * types  :sup:`src:DB`
          * (group by object type? or use table?)
          * Domain Expiration Warning
          * Domain Deletion Warning
          * ...expirations, validations :sup:`ENUM`, changes, ...
          * Tech.check results (go into poll messages + contact email?)
    * Technical checks
-      * types
+      * types :sup:`src:WIKI/Test`
    * IDN support (we can register domains in UTF-8 and display them, but we can't restrict the character set just to a local alphabet)
    * DNSSEC support (get keys from registrars + include them in zone file)
    * ENUM
    * Accounting (Pricing, Payments, Charging, Invoicing)
 
 * **Administration Features** (~ADIF+utils)
-   * System registrar
+   * System registrar :sup:`src:NOTES`
       * explain concept
       * (link to Registrar Features)
    * Web administration :sup:`READY, may need a revision`
-   * CLI administration (fred-admin, transproc, fred-dbmanager, genzone_client, other?)
+   * CLI administration (fred-admin, transproc, fred-dbmanager, genzone_client, other?) :sup:`src:HELP`
 
 * **Registrar Features** (~RIF) – :abbr:`TBD (to be developed)`
    * EPP protocol features (standard)
