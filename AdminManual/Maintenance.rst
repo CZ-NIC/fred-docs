@@ -5,12 +5,18 @@
 AdminManual Maintenance
 =======================
 
-Paragraph text.
+.. only:: mode_structure
 
-Subsegment
-----------
+   **Sources:** IVIEW + translate
 
-Paragraph text.
+   **Chapter outline:**
 
+   * Postgresql database
+      * backup (regular security backup - postgresql documentation)
+      * regular vacuum (check postgresql documentation)
+   * Regular cleanup to keep the size of system low
+      * Syslog log rotate
+      * Content of /var/lib/pyfred/* (managed files)
+      * Logger database content archivation (archivation of old partitions)
 
 

@@ -5,12 +5,15 @@
 AdminManual Configuration
 =========================
 
-Paragraph text.
+.. only:: mode_structure
 
-Subsegment
-----------
+   **Sources:** WEB/Install + NOTES
 
-Paragraph text.
+   **Chapter outline:**
 
-
-
+   * Overview of executables and the default config.files
+      * Main and supporting programs with short descriptions
+      * List of config.files with default locations
+   * Configurable database values
+      * table:enum_parameters
+      * example of SQL query to change a value

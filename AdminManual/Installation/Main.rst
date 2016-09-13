@@ -6,9 +6,24 @@ Installation
 
 How the FRED is installed.
 
-.. toctree::
-   
-   SystemRequirements
-   Binaries
-   Sources
+.. only:: mode_structure
 
+   **Sources:** WEB/Install + NOTES
+
+   **Chapter outline:**
+
+   * System Requirements (varies for bin/src installations)
+   * From binaries
+      * Ubuntu 12--16
+         * Getting the install.script
+         * Installation steps
+         * Starting services
+         * Initializing the system
+      * Fedora 23
+         * Installation steps
+         * Initializing the system
+   * From source
+      * Compilation tools
+
+   * Testing the installation
+   * Upgrades – :abbr:`TBD (to be developed)`

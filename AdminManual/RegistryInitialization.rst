@@ -5,12 +5,13 @@
 AdminManual RegistryInitialization
 ==================================
 
-Paragraph text.
+.. only:: mode_structure
 
-Subsegment
-----------
+   **Sources:** NOTES
 
-Paragraph text.
+   **Chapter outline:**
 
-
-
+   * Setting up a zone
+   * Setting up Registrars
+   * Setting up the invoicing subsystem
+     (price list, invoice numbering, VAT tax, credit)

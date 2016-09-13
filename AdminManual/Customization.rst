@@ -5,12 +5,14 @@
 AdminManual Customization
 =========================
 
-Paragraph text.
 
-Subsegment
-----------
+.. only:: mode_structure
 
-Paragraph text.
+   **Sources:** WEB/Docs + IVIEW + translate
 
+   **Chapter outline:**
 
-
+   * email template (parameters)
+   * default header/footer
+   * letter template (parameters)
+      * expiration letters

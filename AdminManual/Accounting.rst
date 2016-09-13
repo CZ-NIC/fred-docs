@@ -5,12 +5,14 @@
 AdminManual Accounting
 ======================
 
-Paragraph text.
-
-Subsegment
-----------
-
-Paragraph text.
 
 
+.. only:: mode_structure
 
+   **Sources:** NOTES
+
+   **Chapter outline:**
+
+   * Changing prices
+   * Adding credit
+   * Invoice numbering
