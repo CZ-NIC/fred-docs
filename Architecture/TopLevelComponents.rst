@@ -2,15 +2,14 @@
 
 .. _FRED-Architecture-TopLevelComponents:
 
-Architecture TopLevelComponents
-===============================
+Top-level Components
+====================
 
-Paragraph text.
+.. only:: mode_structure
 
-Subsegment
-----------
+   **Sources:** OLDREPO + NOTES
 
-Paragraph text.
-
-
-
+   **Chapter outline:**
+   
+   * CORBA servers, CORBA clients, user agents
+   * internal interfaces (CORBA IDL)

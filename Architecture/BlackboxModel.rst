@@ -5,12 +5,12 @@
 Architecture BlackboxModel
 ==========================
 
-Paragraph text.
+.. only:: mode_structure
 
-Subsegment
-----------
+   **Sources:** OLDREPO + NOTES
 
-Paragraph text.
-
-
-
+   **Chapter outline:**
+   
+   * external interfaces
+   * 3rd-party software required for operation
+      * PostgreSQL, Postfix, CORBA Nameserver, Apache, DNS server...
