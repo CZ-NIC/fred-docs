@@ -14,14 +14,7 @@ Regenerated |today|
       which means that it contains authoring/editing/managing notes
       in addition to the actual content.
 
-   .. rubric:: Structure files
-
-   * :ref:`Structure (Features) <FRED-Features-structure>`
-   * :ref:`Structure (Architecture) <FRED-Arch-structure>`
-   * :ref:`Structure (Admin.Manual) <FRED-Admin-structure>`
-      * :ref:`Structure (Installation) <FRED-Admin-structure-installation>`
-
-.. rubric:: Publications (Actual content)
+.. rubric:: Publications
 
 .. toctree::
    :name: fred-toc
