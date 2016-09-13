@@ -10,7 +10,9 @@ Regenerated |today|
 
 .. only:: mode_structure
 
-   .. Note:: This deliverable was generated in the *structure mode*.
+   .. Note:: This deliverable was generated in the *structure mode*
+      which means that it contains authoring/editing/managing notes
+      in addition to the actual content.
 
    .. rubric:: Structure files
 
