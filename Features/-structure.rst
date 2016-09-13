@@ -19,6 +19,8 @@ Publication structure (Features)
    * Logging :sup:`src:NOTES`
       * audit logging vs. process logging
          * explain difference, link to Admin/Config
+   * Technical checks
+      * types :sup:`src:WIKI/Test`
    * Notifications & Reports
       * (Mailing, Messaging...)
       * Delivery channels (email, sms, letters, poll msgs)
@@ -28,8 +30,6 @@ Publication structure (Features)
          * Domain Deletion Warning
          * ...expirations, validations :sup:`ENUM`, changes, ...
          * Tech.check results (go into poll messages + contact email?)
-   * Technical checks
-      * types :sup:`src:WIKI/Test`
    * IDN support (we can register domains in UTF-8 and display them, but we can't restrict the character set just to a local alphabet)
    * DNSSEC support (get keys from registrars + include them in zone file)
    * ENUM

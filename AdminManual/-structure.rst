@@ -8,7 +8,7 @@ Publication structure (Admin.Manual)
 
 * :ref:`Installation <FRED-Admin-structure-installation>` :sup:`src:WEB/Install+NOTES`
 
-* **Configuration** :sup:`src:NOTES+IVIEW`
+* **Configuration** :sup:`src:NOTES+IVIEW+translate`
    * Overview of executables and the default config.files
       * Main and supporting programs with short descriptions
       * List of config.files with default locations
@@ -69,7 +69,7 @@ Publication structure (Admin.Manual)
    * Adding credit
    * Invoice numbering
 
-* **Maintenance** :sup:`src:IVIEW`
+* **Maintenance** :sup:`src:IVIEW+translate`
    * (depends on deployment?)
    * Postgresql database
       * backup (regular security backup - postgresql documentation)
@@ -79,7 +79,7 @@ Publication structure (Admin.Manual)
       * Content of /var/lib/pyfred/* (managed files)
       * Logger database content archivation (archivation of old partitions)
 
-* **Customization** :sup:`src:WEB/Docs+IVIEW`
+* **Customization** :sup:`src:WEB/Docs+IVIEW+translate`
    * Localization of UIs
    * Template adaptation
    * Bank-transcript processing (custom bank)
