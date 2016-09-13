@@ -4,11 +4,11 @@
 Publication structure (Admin.Manual)
 ====================================
 
-* **Prerequisities** (to understand this manual)
+* **Prerequisities** (to understand this manual) :sup:`src:SELF`
 
-* :ref:`Installation <FRED-Admin-structure-installation>`
+* :ref:`Installation <FRED-Admin-structure-installation>` :sup:`src:WEB/Install+NOTES`
 
-* **Configuration**
+* **Configuration** :sup:`src:NOTES+IVIEW`
    * Overview of executables and the default config.files
       * Main and supporting programs with short descriptions
       * List of config.files with default locations
@@ -22,7 +22,7 @@ Publication structure (Admin.Manual)
    * Setting up the invoicing subsystem
      (price list, invoice numbering, VAT tax, credit)
 
-* **Periodic tasks (CRON)**
+* **Periodic tasks (CRON)** :sup:`src:WIKI/Dev+IVIEW+translate`
    * Generate zone file
    * Regular procedure :sup:`$CRITICAL$`
       * +Delete unused objects
@@ -43,7 +43,7 @@ Publication structure (Admin.Manual)
       * Bill registrars (charge fees and create invoice)
    * Generate statistics
 
-* **Administrative tasks**
+* **Administrative tasks** :sup:`src:HELP+SELF`
 
    * Registrar administration
       * add/delete/details/edit/block/unblock
@@ -64,12 +64,12 @@ Publication structure (Admin.Manual)
 
    * Object search (Daphne)
 
-* **Accounting tasks**
+* **Accounting tasks** :sup:`src:NOTES`
    * Changing prices
    * Adding credit
    * Invoice numbering
 
-* **Maintenance**
+* **Maintenance** :sup:`src:IVIEW`
    * (depends on deployment?)
    * Postgresql database
       * backup (regular security backup - postgresql documentation)
@@ -79,12 +79,11 @@ Publication structure (Admin.Manual)
       * Content of /var/lib/pyfred/* (managed files)
       * Logger database content archivation (archivation of old partitions)
 
-* **Customization**
+* **Customization** :sup:`src:WEB/Docs+IVIEW`
    * Localization of UIs
    * Template adaptation
    * Bank-transcript processing (custom bank)
 
-* **Extensions**
+* **Extensions** :sup:`src:WEBS+WIKI/Test`
    * mojeID
    * DomainBrowser
-
