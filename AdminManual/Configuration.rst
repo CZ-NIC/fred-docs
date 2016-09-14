@@ -6,7 +6,8 @@ Configuration
 
 .. only:: mode_structure
 
-   **Sources:** WEB/Install + NOTES
+   **Sources:** NOTES + IVIEW + translate :ref:`??? <src>` 
+   | **AoW:** 0.5 day (translation)
 
    **Chapter outline:**
 

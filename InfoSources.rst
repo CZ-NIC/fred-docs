@@ -1,6 +1,10 @@
 
 .. _src:
 
+.. rubric:: Abbreviations
+
+* AoW = Amount of work
+
 .. rubric:: Information sources
 
 * WEB = http://fred.nic.cz
