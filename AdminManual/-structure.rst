@@ -4,8 +4,6 @@
 Publication structure (Admin.Manual)
 ====================================
 
-* **Prerequisities** (to understand this manual) :sup:`src:SELF`
-
 * **Installation** :sup:`src:WEB/Install+NOTES`
 
 * **Configuration** :sup:`src:NOTES+IVIEW+translate`
