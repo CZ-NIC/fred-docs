@@ -15,7 +15,7 @@ Administration features
    * System registrar :sup:`src:NOTES`
       * explain concept
       * (link to Registrar Features)
-   * :ref:`Web administration <FRED-Features-Admin-Web>` :sup:`READY, may need a revision`
+   * Web administration :sup:`READY, may need a revision`
    * CLI administration (fred-admin, transproc, fred-dbmanager, genzone_client, other?) :sup:`src:HELP`
 
 .. toctree::
