@@ -1,8 +1,7 @@
 
+.. _FRED-Admin-Extensions:
 
-.. _FRED-AdminManual-Extensions:
-
-AdminManual Extensions
+Extensions
 ======================
 
 Paragraph text.

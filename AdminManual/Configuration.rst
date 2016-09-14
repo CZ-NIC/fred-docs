@@ -1,8 +1,7 @@
 
+.. _FRED-Admin-Config:
 
-.. _FRED-AdminManual-Configuration:
-
-AdminManual Configuration
+Configuration
 =========================
 
 Paragraph text.

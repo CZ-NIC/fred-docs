@@ -1,8 +1,7 @@
 
+.. _FRED-Admin-AdminTasks:
 
-.. _FRED-AdminManual-AdministrativeTasks-Main:
-
-AdminManual AdministrativeTasks Main
+Administrative tasks
 ====================================
 
 Paragraph text.

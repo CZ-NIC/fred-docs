@@ -1,8 +1,8 @@
 
 
-.. _FRED-AdminManual-PeriodicTasks:
+.. _FRED-Admin-PeriodicTasks:
 
-AdminManual PeriodicTasks
+Periodic tasks
 =========================
 
 Paragraph text.
@@ -11,6 +11,3 @@ Subsegment
 ----------
 
 Paragraph text.
-
-
-

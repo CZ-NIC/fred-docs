@@ -1,8 +1,7 @@
 
+.. _FRED-Admin-Maintenance:
 
-.. _FRED-AdminManual-Maintenance:
-
-AdminManual Maintenance
+Maintenance
 =======================
 
 Paragraph text.

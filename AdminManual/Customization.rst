@@ -1,8 +1,7 @@
 
+.. _FRED-Admin-Custom:
 
-.. _FRED-AdminManual-Customization:
-
-AdminManual Customization
+Customization
 =========================
 
 Paragraph text.

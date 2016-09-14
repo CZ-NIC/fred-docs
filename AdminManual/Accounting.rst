@@ -1,8 +1,7 @@
 
+.. _FRED-Admin-Accounting:
 
-.. _FRED-AdminManual-Accounting:
-
-AdminManual Accounting
+Accounting tasks
 ======================
 
 Paragraph text.

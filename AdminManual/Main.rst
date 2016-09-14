@@ -1,4 +1,5 @@
 
+.. _FRED-Admin:
 
 =====================
 Administration Manual

@@ -1,8 +1,7 @@
 
+.. _FRED-Admin-RegInit:
 
-.. _FRED-AdminManual-RegistryInitialization:
-
-AdminManual RegistryInitialization
+Registry initialization
 ==================================
 
 Paragraph text.

@@ -1,8 +1,7 @@
 
+.. _FRED-Arch-TopComponents:
 
-.. _FRED-Architecture-TopLevelComponents:
-
-Architecture TopLevelComponents
+Top-level components
 ===============================
 
 Paragraph text.

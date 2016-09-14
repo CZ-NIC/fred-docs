@@ -1,8 +1,7 @@
 
+.. _FRED-Features-General:
 
-.. _FRED-Features-General-Main:
-
-Features General Main
+General features
 =====================
 
 Paragraph text.

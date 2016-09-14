@@ -1,5 +1,5 @@
 
-
+.. _FRED-Arch:
 
 ========================
 Architecture Description

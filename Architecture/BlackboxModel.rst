@@ -1,8 +1,7 @@
 
+.. _FRED-Arch-Blackbox:
 
-.. _FRED-Architecture-BlackboxModel:
-
-Architecture BlackboxModel
+Blackbox model
 ==========================
 
 Paragraph text.
