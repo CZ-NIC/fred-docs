@@ -1,15 +1,15 @@
 
 .. _FRED-Features-Admin-Web:
 
-WebAdmin Features
+WebAdmin features
 =================
 
 Webadmin features are divided into feature groups which also constitute
 the sections of this document.
 
 
-General
--------
+General WebAdmin features
+-------------------------
 
 * User authentication on login
 * User must be permitted to perform an action (read/change/block/unblock/delete/add)
@@ -17,8 +17,8 @@ General
 * Extra confirmation for critical actions (e.g. Include domain in the zone, Block domain)
 * Referenced objects are linked by hypertext (object handles, attached files)
 
-Configurable
-^^^^^^^^^^^^
+Configurables
+^^^^^^^^^^^^^
 
 * User authentication method
 * User authorization method and permissions
