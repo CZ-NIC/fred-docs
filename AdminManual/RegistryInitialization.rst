@@ -3,3 +3,5 @@
 
 Registry initialization
 ==================================
+
+:abbr:`TBD (to be developed)`

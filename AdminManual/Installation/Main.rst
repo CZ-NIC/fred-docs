@@ -6,9 +6,4 @@ Installation
 
 How the FRED is installed.
 
-.. toctree::
-   
-   SystemRequirements
-   Binaries
-   Sources
-
+:abbr:`TBD (to be developed)`

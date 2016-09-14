@@ -4,6 +4,7 @@
 Periodic tasks
 =========================
 
+:abbr:`TBD (to be developed)`
 
 ----------
 
