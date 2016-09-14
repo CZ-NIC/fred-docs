@@ -30,3 +30,4 @@ Chapters
 
    General/Main
    AdminIF/Main
+   Extensions
