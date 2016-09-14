@@ -4,12 +4,8 @@
 General features
 =====================
 
-Paragraph text.
 
-Subsegment
-----------
 
-Paragraph text.
 
 
 

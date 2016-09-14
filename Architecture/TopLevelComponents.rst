@@ -3,13 +3,3 @@
 
 Top-level components
 ===============================
-
-Paragraph text.
-
-Subsegment
-----------
-
-Paragraph text.
-
-
-

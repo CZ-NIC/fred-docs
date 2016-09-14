@@ -4,12 +4,8 @@
 Maintenance
 =======================
 
-Paragraph text.
 
-Subsegment
-----------
 
-Paragraph text.
 
 
 

@@ -3,13 +3,3 @@
 
 Configuration
 =========================
-
-Paragraph text.
-
-Subsegment
-----------
-
-Paragraph text.
-
-
-

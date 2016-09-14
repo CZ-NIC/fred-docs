@@ -3,13 +3,3 @@
 
 Accounting tasks
 ======================
-
-Paragraph text.
-
-Subsegment
-----------
-
-Paragraph text.
-
-
-

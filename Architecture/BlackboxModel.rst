@@ -3,13 +3,3 @@
 
 Blackbox model
 ==========================
-
-Paragraph text.
-
-Subsegment
-----------
-
-Paragraph text.
-
-
-
