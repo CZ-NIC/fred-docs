@@ -31,3 +31,58 @@ Periodic tasks
    * Generate statistics
 
 :abbr:`TBD (to be developed)`
+
+This chapter should help you with the setting of automated tasks in CRON.
+
+.. TODO translate https://admin.nic.cz/wiki/developers/fred/cron_jobs
+.. NOTE Jirka slibil doplnit
+
+.. NOTE výpis z produkce:
+   /home/lenny/Documents/Documenting/FRED/admin/cron jobs/
+
+
+Zone file generation
+--------------------
+
+
+
+
+Administration of registry objects
+----------------------------------
+
+Regular procedure
+^^^^^^^^^^^^^^^^^
+(with/out object removal)
+
+Inactive record removal
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Automatic contact verification :sup:`$CZ-specific$`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Communication
+-------------
+* Letters Postservis :sup:`$CZ-specific$`
+* Letters Optys :sup:`$CZ-specific$`
+* SMS Texts :sup:`$CZ-specific$`
+* Registered Letters :sup:`$CZ-specific$`
+* Email assembly ?
+
+Registrars
+----------
+
+* Bill fee (poll msgs)
+* Block over (request-usage) limit
+   + Send list of blocked to an (customer support) email
+* Process bank transcripts
+
+Invoicing
+---------
+* Numbering
+* "Archiving" (gen. XML & PDF)
+* Monthly
+   * charge fee (subtract from credit)
+   * bill (create invoice record)
+
+Statistics
+----------
