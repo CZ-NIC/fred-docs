@@ -7,7 +7,7 @@ Architecture Description
 
 This document describes the top-level architecture and internal bindings of the FRED system.
 
-.. rubric:: Target Audience
+.. rubric:: Target audience
 
 Developer, system administrator, customer support
 

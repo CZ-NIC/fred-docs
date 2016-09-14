@@ -7,7 +7,7 @@ Administration Manual
 
 This document provides guidance on operation and maintenance of the system.
 
-.. rubric:: Target Audience
+.. rubric:: Target audience
 
 System administrator, customer support
 

@@ -7,7 +7,7 @@ Features
 This document describes the features of the FRED (and explains the conception logic 
 beyond these features).
 
-.. rubric:: Target Audience
+.. rubric:: Target audience
 
 Acquirer, tester, (system administrator, developer)
 
