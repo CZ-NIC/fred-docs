@@ -17,6 +17,10 @@ Make the system work and keep it operational (install, configure, customize,
 maintain), set automated tasks,
 use administrator interface and tools for manual intervention.
 
+.. rubric:: Prerequisities
+
+(to understand this manual)
+
 Chapters
 --------
 
