@@ -28,7 +28,8 @@ Regenerated |today|
 .. rubric:: Planned publications
 
 Apart from the publications mentioned above, additional pieces of documentation
-are planned:
+are planned to be developed later:
 
-* FRED-client user guide – :abbr:`TBD (to be developed)`
-* Custom EPP client implementation guide – :abbr:`TBD (to be developed)`
+* FRED-client user guide
+* Custom EPP-client implementation guide
+* Daphne user guide
