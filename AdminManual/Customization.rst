@@ -6,7 +6,8 @@ Customization
 
 .. only:: mode_structure
 
-   **Sources:** WEB/Docs + IVIEW + translate
+   **Sources:** WEB/Docs + IVIEW + translate :ref:`??? <src>` 
+   | **AoW:** 2 days (translation)
 
    **Chapter outline:**
 
