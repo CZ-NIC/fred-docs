@@ -15,14 +15,12 @@ Developer, system administrator, customer support
 
 Know the basic top-level composition and organization of the system (reflects general design, no implementation details).
 
-
-Table of Contents
------------------
+Chapters
+--------
 
 .. toctree::
    :name: fred-arch-toc
-   :maxdepth: 2
+   :numbered:
 
    BlackboxModel
    TopLevelComponents
-

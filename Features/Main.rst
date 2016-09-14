@@ -21,15 +21,12 @@ find advanced or not-so-obvious usage, have checklist for verification,
 
 A feature is a **user-visible** aspect, quality or characteristic of software.
 
+Chapters
+--------
 
-Table of Contents
------------------
 .. toctree::
    :name: fred-features-toc
-   :maxdepth: 1
+   :numbered:
 
    General/Main
    AdminIF/Main
-   
-   .. More chapters will go here.
-

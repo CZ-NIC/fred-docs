@@ -17,13 +17,12 @@ Make the system work and keep it operational (install, configure, customize,
 maintain), set automated tasks, 
 use administrator interface and tools for manual intervention.
 
-Table of Contents
------------------
+Chapters
+--------
 
 .. toctree::
-   :caption:
    :name: fred-admin-toc
-   :maxdepth: 1
+   :numbered:
 
    Installation/Main
    Configuration
@@ -34,4 +33,3 @@ Table of Contents
    Maintenance
    Customization
    Extensions
-
