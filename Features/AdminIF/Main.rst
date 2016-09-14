@@ -8,6 +8,8 @@ Administration features
 
 .. only:: mode_structure
 
+   :ref:`Info. sources <src>` vary, see outline | **AoW:** 3 days
+
    **Chapter outline:**
 
    * System registrar :sup:`src:NOTES`

@@ -6,7 +6,8 @@ Periodic tasks
 
 .. only:: mode_structure
 
-   **Sources:** WIKI/Dev + IVIEW + translate
+   **Sources:** WIKI/Dev + IVIEW + translate :ref:`??? <src>` 
+   | **AoW:** 7 days (translation)
 
    **Chapter outline:**
 
