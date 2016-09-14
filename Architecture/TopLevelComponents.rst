@@ -4,9 +4,9 @@
 Top-level components
 ===============================
 
-.. only:: mode_structure
+.. only:: mode_structure 
 
-   **Sources:** OLDREPO + NOTES
+   **Sources:** OLDREPO + NOTES :ref:`??? <src>` | **AoW:** 3 days
 
    **Chapter outline:**
 

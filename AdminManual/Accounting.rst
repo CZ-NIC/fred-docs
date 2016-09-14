@@ -6,7 +6,7 @@ Accounting tasks
 
 .. only:: mode_structure
 
-   **Sources:** NOTES
+   **Sources:** NOTES :ref:`??? <src>` | **AoW:** 1 day
 
    **Chapter outline:**
 

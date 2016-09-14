@@ -6,7 +6,8 @@ General features
 
 .. only:: mode_structure
 
-   **Sources:** WEB/Features + WIKI/Dev + WIKI/Test
+   **Sources:** WEB/Features + WIKI/Dev + WIKI/Test :ref:`??? <src>` 
+   | **AoW:** 10 days
 
    **Chapter outline:**
 

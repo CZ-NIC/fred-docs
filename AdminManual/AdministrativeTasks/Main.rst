@@ -6,7 +6,7 @@ Administrative tasks
 
 .. only:: mode_structure
 
-   **Sources:** WIKI/Dev + IVIEW + translate
+   **Sources:** HELP + SELF :ref:`??? <src>` | **AoW:** 5 days
 
    **Chapter outline:**
 

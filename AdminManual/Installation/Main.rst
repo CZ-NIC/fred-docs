@@ -8,7 +8,7 @@ How the FRED is installed.
 
 .. only:: mode_structure
 
-   **Sources:** WEB/Install + NOTES
+   **Sources:** WEB/Install + NOTES :ref:`??? <src>` | **AoW:** 2 days
 
    **Chapter outline:**
 
