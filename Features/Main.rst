@@ -4,8 +4,8 @@
 Features
 ========
 
-This document describes the features of the FRED (and explains the conception logic 
-beyond these features).
+This document describes the features of the FRED (and explains the conception
+logic beyond these features).
 
 .. rubric:: Target audience
 
