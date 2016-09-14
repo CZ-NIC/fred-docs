@@ -1,7 +1,7 @@
 
 .. _FRED-Features-Extensions:
 
-Extensions
+Extensions features
 ======================
 
 The FRED has some extensions.
