@@ -134,6 +134,7 @@ html_theme = 'alabaster'
 # documentation.
 #
 html_theme_options = {
+    "nosidebar": True,
     "logo": "fred-logo.png",
     "description": "Free Registry for ENUM and Domains",
 }
