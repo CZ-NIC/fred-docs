@@ -1,8 +1,7 @@
 
+.. _FRED-Arch-Blackbox:
 
-.. _FRED-Architecture-BlackboxModel:
-
-Architecture BlackboxModel
+Blackbox model
 ==========================
 
 .. only:: mode_structure
@@ -10,7 +9,9 @@ Architecture BlackboxModel
    **Sources:** OLDREPO + NOTES
 
    **Chapter outline:**
-   
+
    * external interfaces
    * 3rd-party software required for operation
       * PostgreSQL, Postfix, CORBA Nameserver, Apache, DNS server...
+
+:abbr:`TBD (to be developed)`

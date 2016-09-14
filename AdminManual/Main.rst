@@ -1,4 +1,5 @@
 
+.. _FRED-Admin:
 
 =====================
 Administration Manual
@@ -6,7 +7,7 @@ Administration Manual
 
 This document provides guidance on operation and maintenance of the system.
 
-.. rubric:: Target Audience
+.. rubric:: Target audience
 
 System administrator, customer support
 
@@ -16,13 +17,12 @@ Make the system work and keep it operational (install, configure, customize,
 maintain), set automated tasks,
 use administrator interface and tools for manual intervention.
 
-Table of Contents
------------------
+Chapters
+--------
 
 .. toctree::
-   :caption:
    :name: fred-admin-toc
-   :maxdepth: 1
+   :numbered:
 
    Installation/Main
    Configuration
@@ -33,4 +33,3 @@ Table of Contents
    Maintenance
    Customization
    Extensions
-

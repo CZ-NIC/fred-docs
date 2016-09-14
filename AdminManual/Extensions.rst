@@ -1,16 +1,12 @@
 
+.. _FRED-Admin-Extensions:
 
-.. _FRED-AdminManual-Extensions:
-
-AdminManual Extensions
+Extensions
 ======================
 
-Paragraph text.
+:abbr:`TBD (to be developed)`
 
-Subsegment
-----------
 
-Paragraph text.
 
 
 

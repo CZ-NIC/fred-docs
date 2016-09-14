@@ -1,5 +1,5 @@
 
-
+.. _FRED-Features-Admin-Web:
 
 WebAdmin Features
 =================

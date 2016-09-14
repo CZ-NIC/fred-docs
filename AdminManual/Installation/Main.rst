@@ -27,3 +27,5 @@ How the FRED is installed.
 
    * Testing the installation
    * Upgrades – :abbr:`TBD (to be developed)`
+
+:abbr:`TBD (to be developed)`

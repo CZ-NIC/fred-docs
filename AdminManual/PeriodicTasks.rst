@@ -1,8 +1,7 @@
 
+.. _FRED-Admin-PeriodicTasks:
 
-.. _FRED-AdminManual-PeriodicTasks:
-
-AdminManual PeriodicTasks
+Periodic tasks
 =========================
 
 .. only:: mode_structure
@@ -10,7 +9,7 @@ AdminManual PeriodicTasks
    **Sources:** WIKI/Dev + IVIEW + translate
 
    **Chapter outline:**
-   
+
    * Generate zone file
    * Regular procedure :sup:`$CRITICAL$`
       * +Delete unused objects
@@ -31,7 +30,4 @@ AdminManual PeriodicTasks
       * Bill registrars (charge fees and create invoice)
    * Generate statistics
 
-
-
-
-
+:abbr:`TBD (to be developed)`

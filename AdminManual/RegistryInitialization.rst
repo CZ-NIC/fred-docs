@@ -1,8 +1,7 @@
 
+.. _FRED-Admin-RegInit:
 
-.. _FRED-AdminManual-RegistryInitialization:
-
-AdminManual RegistryInitialization
+Registry initialization
 ==================================
 
 .. only:: mode_structure
@@ -15,3 +14,5 @@ AdminManual RegistryInitialization
    * Setting up Registrars
    * Setting up the invoicing subsystem
      (price list, invoice numbering, VAT tax, credit)
+
+:abbr:`TBD (to be developed)`

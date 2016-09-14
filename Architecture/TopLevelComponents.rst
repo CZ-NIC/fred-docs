@@ -1,15 +1,16 @@
 
+.. _FRED-Arch-TopComponents:
 
-.. _FRED-Architecture-TopLevelComponents:
-
-Top-level Components
-====================
+Top-level components
+===============================
 
 .. only:: mode_structure
 
    **Sources:** OLDREPO + NOTES
 
    **Chapter outline:**
-   
+
    * CORBA servers, CORBA clients, user agents
    * internal interfaces (CORBA IDL)
+
+:abbr:`TBD (to be developed)`

@@ -1,8 +1,7 @@
 
+.. _FRED-Admin-Maintenance:
 
-.. _FRED-AdminManual-Maintenance:
-
-AdminManual Maintenance
+Maintenance
 =======================
 
 .. only:: mode_structure
@@ -19,4 +18,4 @@ AdminManual Maintenance
       * Content of /var/lib/pyfred/* (managed files)
       * Logger database content archivation (archivation of old partitions)
 
-
+:abbr:`TBD (to be developed)`

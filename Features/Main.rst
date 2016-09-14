@@ -1,13 +1,13 @@
 
-
+.. _FRED-Features:
 
 Features
 ========
 
-This document describes the features of the FRED (and explains the conception logic 
-beyond these features).
+This document describes the features of the FRED (and explains the conception
+logic beyond these features).
 
-.. rubric:: Target Audience
+.. rubric:: Target audience
 
 Acquirer, tester, (system administrator, developer)
 
@@ -21,14 +21,12 @@ find advanced or not-so-obvious usage, have checklist for verification,
 
 A feature is a **user-visible** aspect, quality or characteristic of software.
 
-Table of Contents
------------------
+Chapters
+--------
+
 .. toctree::
    :name: fred-features-toc
-   :maxdepth: 1
+   :numbered:
 
    General/Main
    AdminIF/Main
-   
-   .. More chapters will go here.
-

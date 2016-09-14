@@ -1,8 +1,8 @@
 
+.. _FRED-Features-General:
 
-.. _FRED-Features-General-Main:
-General Features
-=================
+General features
+=====================
 
 .. only:: mode_structure
 
@@ -37,5 +37,4 @@ General Features
    * ENUM
    * Accounting (Pricing, Payments, Charging, Invoicing)
 
-
-
+:abbr:`TBD (to be developed)`

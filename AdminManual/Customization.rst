@@ -1,10 +1,8 @@
 
+.. _FRED-Admin-Custom:
 
-.. _FRED-AdminManual-Customization:
-
-AdminManual Customization
+Customization
 =========================
-
 
 .. only:: mode_structure
 
@@ -16,3 +14,5 @@ AdminManual Customization
    * default header/footer
    * letter template (parameters)
       * expiration letters
+
+:abbr:`TBD (to be developed)`

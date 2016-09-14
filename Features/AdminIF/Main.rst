@@ -1,7 +1,7 @@
 
+.. _FRED-Features-Admin:
 
-
-Administration Features
+Administration features
 =======================
 
 .. :abbr:`TBD (to be developed)`

@@ -1,10 +1,8 @@
 
+.. _FRED-Admin-AdminTasks:
 
-.. _FRED-AdminManual-AdministrativeTasks-Main:
-
-AdminManual AdministrativeTasks Main
+Administrative tasks
 ====================================
-
 
 .. only:: mode_structure
 
@@ -30,3 +28,5 @@ AdminManual AdministrativeTasks Main
       * Resolving public requests
 
    * Object search (Daphne)
+
+:abbr:`TBD (to be developed)`

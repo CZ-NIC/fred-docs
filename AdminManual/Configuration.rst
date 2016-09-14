@@ -1,8 +1,7 @@
 
+.. _FRED-Admin-Config:
 
-.. _FRED-AdminManual-Configuration:
-
-AdminManual Configuration
+Configuration
 =========================
 
 .. only:: mode_structure
@@ -17,3 +16,5 @@ AdminManual Configuration
    * Configurable database values
       * table:enum_parameters
       * example of SQL query to change a value
+
+:abbr:`TBD (to be developed)`
