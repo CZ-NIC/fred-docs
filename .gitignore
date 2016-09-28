@@ -1,0 +1,9 @@
+# Sphinx build dir
+_build
+
+# Additional Sphinx directories - for now
+_static
+_templates
+
+# TIP: If you need some private ignores, put them in your global ignore file 
+# ~/.gitfiles/ignore
