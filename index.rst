@@ -32,7 +32,7 @@ are planned to be developed later:
 
 * FRED-client user guide
 * Custom EPP-client implementation guide
-* Daphne user guide
+* WebAdmin user guide
 
 .. only:: mode_structure
 
