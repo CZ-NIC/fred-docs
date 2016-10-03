@@ -6,6 +6,8 @@ General features
 
 .. only:: mode_structure
 
+   .. struct-start
+
    **Sources:** WEB/Features + WIKI/Dev + WIKI/Test :ref:`??? <src>` 
    | **AoW:** 10 days
 
@@ -37,5 +39,7 @@ General features
    * DNSSEC support (get keys from registrars + include them in zone file)
    * ENUM
    * Accounting (Pricing, Payments, Charging, Invoicing)
+
+   .. struct-end
 
 :abbr:`TBD (to be developed)`

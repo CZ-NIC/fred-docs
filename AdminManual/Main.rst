@@ -5,6 +5,8 @@
 Administration Manual
 =====================
 
+.. struct-start
+
 This document provides guidance on operation and maintenance of the system.
 
 .. rubric:: Target audience
@@ -16,6 +18,8 @@ System administrator, customer support
 Make the system work and keep it operational (install, configure, customize,
 maintain), set automated tasks,
 use administrator interface and tools for manual intervention.
+
+.. struct-end
 
 Chapters
 --------
