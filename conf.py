@@ -60,7 +60,7 @@ master_doc = 'index'
 # General information about the project.
 project = u'FRED'
 copyright = u'2016, CZ.NIC'
-author = u'Zuzana Lena Ansorgová'
+author = u'CZ.NIC'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -276,8 +276,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'FREDDocumentation.tex', u'FRED Documentation Documentation',
-     u'Zuzana Lena Ansorgová', 'manual'),
+    (master_doc, 'FREDDocumentation.tex', u'FRED Documentation',
+     author, 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -288,11 +288,11 @@ latex_documents = [
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
 #
-# latex_use_parts = False
+latex_use_parts = True
 
 # If true, show page references after internal links.
 #
-# latex_show_pagerefs = False
+latex_show_pagerefs = True
 
 # If true, show URL addresses after external links.
 #
