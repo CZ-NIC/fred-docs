@@ -8,6 +8,8 @@ How the FRED is installed.
 
 .. only:: mode_structure
 
+   .. struct-start
+
    **Sources:** WEB/Install + NOTES :ref:`??? <src>` | **AoW:** 2 days
 
    **Chapter outline:**
@@ -27,5 +29,7 @@ How the FRED is installed.
 
    * Testing the installation
    * Upgrades – :abbr:`TBD (to be developed)`
+
+   .. struct-end
 
 :abbr:`TBD (to be developed)`

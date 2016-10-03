@@ -6,6 +6,8 @@ Maintenance
 
 .. only:: mode_structure
 
+   .. struct-start
+
    **Sources:** IVIEW + translate :ref:`??? <src>` | **AoW:** 1 day
 
    **Chapter outline:**
@@ -17,5 +19,7 @@ Maintenance
       * Syslog log rotate
       * Content of /var/lib/pyfred/* (managed files)
       * Logger database content archivation (archivation of old partitions)
+
+   .. struct-end
 
 :abbr:`TBD (to be developed)`

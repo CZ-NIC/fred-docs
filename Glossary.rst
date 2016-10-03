@@ -24,6 +24,9 @@ Glossary of Terms
    * accounting ... a system that provides quantitative information about finances
    * billing ... request for payment of a debt, synonym: charge
 
+   (mydef)
+
+   * accounting ?= pricing + billing + invoicing + keeping credit + banking
 
 .. glossary::
    :sorted:
@@ -36,3 +39,21 @@ Glossary of Terms
 
    FQDN : F
       Fully Qualified Domain Name
+
+   feature
+      a user-visible aspect, quality or characteristic of software
+
+   acquirer
+      a person or an organization that acquires the system
+
+   customer
+      a registrar or registrant or end-user
+
+   guide
+      a document that contains only glimpses of actions
+
+   manual
+      a document that contains full-fledged sets of instructions
+
+   tutorial
+      a document that contains examples with specific data
