@@ -24,6 +24,9 @@ Glossary of Terms
    * accounting ... a system that provides quantitative information about finances
    * billing ... request for payment of a debt, synonym: charge
 
+   (mydef)
+
+   * accounting ?= pricing + billing + invoicing + keeping credit + banking
 
 .. glossary::
    :sorted:
