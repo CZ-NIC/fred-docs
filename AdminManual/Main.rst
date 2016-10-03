@@ -5,6 +5,8 @@
 Administration Manual
 =====================
 
+.. struct-start
+
 This document provides guidance on operation and maintenance of the system.
 
 .. rubric:: Target audience
@@ -17,9 +19,15 @@ Make the system work and keep it operational (install, configure, customize,
 maintain), set automated tasks,
 use administrator interface and tools for manual intervention.
 
+.. struct-end
+
 .. rubric:: Prerequisities
 
 (to understand this manual)
+
+.. rubric:: Terms & definitions
+
+Terms and definitions can be found :ref:`in the glossary <glossary>`.
 
 Chapters
 --------
@@ -37,3 +45,4 @@ Chapters
    Maintenance
    Customization
    Extensions
+   ../Glossary

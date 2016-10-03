@@ -6,7 +6,9 @@ Configuration
 
 .. only:: mode_structure
 
-   **Sources:** NOTES + IVIEW + translate :ref:`??? <src>` 
+   .. struct-start
+
+   **Sources:** NOTES + IVIEW + translate :ref:`??? <src>`
    | **AoW:** 0.5 day (translation)
 
    **Chapter outline:**
@@ -17,5 +19,7 @@ Configuration
    * Configurable database values
       * table:enum_parameters
       * example of SQL query to change a value
+
+   .. struct-end
 
 :abbr:`TBD (to be developed)`

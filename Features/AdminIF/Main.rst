@@ -8,6 +8,8 @@ Administration features
 
 .. only:: mode_structure
 
+   .. struct-start
+
    :ref:`Info. sources <src>` vary, see outline | **AoW:** 3 days
 
    **Chapter outline:**
@@ -17,6 +19,8 @@ Administration features
       * (link to Registrar Features)
    * Web administration :sup:`READY, may need a revision`
    * CLI administration (fred-admin, transproc, fred-dbmanager, genzone_client, other?) :sup:`src:HELP`
+
+   .. struct-end
 
 .. toctree::
    :maxdepth: 1

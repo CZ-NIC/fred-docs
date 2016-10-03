@@ -36,6 +36,10 @@ are planned to be developed later:
 
 .. only:: mode_structure
 
+   .. rubric:: Structure notes
+
+   * :ref:`overview <structure-overview>`
+
    .. rubric:: TODO list
 
    .. todolist::

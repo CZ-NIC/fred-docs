@@ -6,6 +6,8 @@ Administrative tasks
 
 .. only:: mode_structure
 
+   .. struct-start
+
    **Sources:** HELP + SELF :ref:`??? <src>` | **AoW:** 5 days
 
    **Chapter outline:**
@@ -28,5 +30,7 @@ Administrative tasks
       * Resolving public requests
 
    * Object search (Daphne)
+
+   .. struct-end
 
 :abbr:`TBD (to be developed)`

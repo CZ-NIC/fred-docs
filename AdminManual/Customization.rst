@@ -6,6 +6,8 @@ Customization
 
 .. only:: mode_structure
 
+   .. struct-start
+
    **Sources:** WEB/Docs + IVIEW + translate :ref:`??? <src>` 
    | **AoW:** 2 days (translation)
 
@@ -15,5 +17,7 @@ Customization
    * default header/footer
    * letter template (parameters)
       * expiration letters
+
+   .. struct-end
 
 :abbr:`TBD (to be developed)`

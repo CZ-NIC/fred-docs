@@ -6,6 +6,8 @@ Periodic tasks
 
 .. only:: mode_structure
 
+   .. struct-start
+
    **Sources:** WIKI/Dev + IVIEW + translate :ref:`??? <src>` 
    | **AoW:** 7 days (translation)
 
@@ -30,6 +32,8 @@ Periodic tasks
       * Archive (create PDF-version and assemble emails)
       * Bill registrars (charge fees and create invoice)
    * Generate statistics
+
+   .. struct-end
 
 :abbr:`TBD (to be developed)`
 

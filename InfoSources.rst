@@ -1,6 +1,9 @@
 
 .. _src:
 
+Structure notes clarification
+=============================
+
 .. rubric:: Abbreviations
 
 * AoW = Amount of work
