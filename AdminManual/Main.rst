@@ -21,6 +21,10 @@ use administrator interface and tools for manual intervention.
 
 .. struct-end
 
+.. rubric:: Terms & definitions
+
+Terms and definitions can be found :ref:`in the glossary <glossary>`.
+
 Chapters
 --------
 
@@ -37,3 +41,4 @@ Chapters
    Maintenance
    Customization
    Extensions
+   ../Glossary

@@ -21,9 +21,10 @@ find advanced or not-so-obvious usage, have checklist for verification,
 
 .. struct-end
 
-.. rubric:: Feature Definition
 
-A feature is a **user-visible** aspect, quality or characteristic of software.
+.. rubric:: Terms & definitions
+
+Terms and definitions can be found :ref:`in the glossary <glossary>`.
 
 Chapters
 --------
@@ -34,3 +35,4 @@ Chapters
 
    General/Main
    AdminIF/Main
+   ../Glossary

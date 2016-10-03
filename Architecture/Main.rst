@@ -19,6 +19,10 @@ Know the basic top-level composition and organization of the system (reflects ge
 
 .. struct-end
 
+.. rubric:: Terms & definitions
+
+Terms and definitions can be found :ref:`in the glossary <glossary>`.
+
 Chapters
 --------
 
@@ -28,3 +32,4 @@ Chapters
 
    BlackboxModel
    TopLevelComponents
+   ../Glossary
