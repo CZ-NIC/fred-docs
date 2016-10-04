@@ -8,7 +8,8 @@ Top-level components
 
    .. struct-start
 
-   **Sources:** OLDREPO + NOTES :ref:`??? <src>` | **AoW:** 3 days
+   **Sources:** OLDREPO + NOTES :ref:`??? <src>` 
+   | **AoW:** 3 days = *2 days (base on old picture)*
 
    **Chapter outline:**
 

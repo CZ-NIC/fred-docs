@@ -8,7 +8,8 @@ Registry initialization
 
    .. struct-start
 
-   **Sources:** NOTES :ref:`??? <src>` | **AoW:** 1 day
+   **Sources:** NOTES :ref:`??? <src>` 
+   | **AoW:** (1 day) for CR + *1 day*
 
    **Chapter outline:**
 
