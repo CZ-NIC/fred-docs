@@ -31,6 +31,4 @@ Regenerated |today|
 
    * :ref:`overview <structure-overview>`
 
-   .. rubric:: TODO list
 
-   .. todolist::
