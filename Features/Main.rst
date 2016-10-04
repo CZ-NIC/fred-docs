@@ -36,4 +36,5 @@ Chapters
    General/Main
    AdminIF/Main
    RegIF/Main
+   PublicIF/Main
    ../Glossary
