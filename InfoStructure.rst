@@ -25,17 +25,17 @@ Chapter: Admin features
    :start-after: .. struct-start 
    :end-before: .. struct-end
 
-.. Chapter: Registrar features
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   .. include:: Features/RegIF/Main.rst
-      :start-after: .. struct-start 
-      :end-before: .. struct-end
+Chapter: Registrar features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: Features/RegIF/Main.rst
+   :start-after: .. struct-start 
+   :end-before: .. struct-end
 
-.. Chapter: Public features
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   .. include:: Features/PublicIF/Main.rst
-      :start-after: .. struct-start 
-      :end-before: .. struct-end
+Chapter: Public features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: Features/PublicIF/Main.rst
+   :start-after: .. struct-start 
+   :end-before: .. struct-end
 
 Architecture
 ------------
@@ -134,32 +134,44 @@ Chapter: Extensions
 Client user guide
 -----------------
 
-TBD
+.. include:: ClientUser/Main.rst
+   :start-after: .. struct-start
+   :end-before: .. struct-end
+
+:abbr:`TBP (to be planned)` & :abbr:`TBD (to be developed)`
 
 Client implementation guide
 ---------------------------
 
-TBD
+.. include:: ClientImpl/Main.rst
+   :start-after: .. struct-start
+   :end-before: .. struct-end
+
+:abbr:`TBP (to be planned)` & :abbr:`TBD (to be developed)`
 
 WebAdmin user guide
 -------------------
 
-TBD
+.. include:: WebAdminUser/Main.rst
+   :start-after: .. struct-start
+   :end-before: .. struct-end
+
+:abbr:`TBP (to be planned)` & :abbr:`TBD (to be developed)`
 
 Development documentation
 -------------------------
 
 a.k.a. Detailed design and code documentation
 
-???
+:abbr:`TBP (to be planned)` ?
 
 Security guidelines
 -------------------
 
-???
+:abbr:`TBP (to be planned)` ?
 
 User guides for public services
 -------------------------------
 
-???
+:abbr:`TBP (to be planned)` ?
 

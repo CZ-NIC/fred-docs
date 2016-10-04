@@ -25,21 +25,15 @@ Regenerated |today|
    AdminManual/Main
 
 
-.. rubric:: Planned publications
-
-Apart from the publications mentioned above, additional pieces of documentation
-are planned to be developed later:
-
-* FRED-client user guide
-* Custom EPP-client implementation guide
-* WebAdmin user guide
-
 .. only:: mode_structure
 
    .. rubric:: Structure notes
 
-   * :ref:`overview <structure-overview>`
+   .. toctree::
+      :name: structure-toc
+      :maxdepth: 1
 
-   .. rubric:: TODO list
+      InfoSources
+      InfoStructure
+      TODOList
 
-   .. todolist::
