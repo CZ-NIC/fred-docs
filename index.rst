@@ -29,6 +29,11 @@ Regenerated |today|
 
    .. rubric:: Structure notes
 
-   * :ref:`overview <structure-overview>`
+   .. toctree::
+      :name: structure-toc
+      :maxdepth: 1
 
+      InfoSources
+      InfoStructure
+      TODOList
 
