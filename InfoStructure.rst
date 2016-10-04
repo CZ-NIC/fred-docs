@@ -25,17 +25,17 @@ Chapter: Admin features
    :start-after: .. struct-start 
    :end-before: .. struct-end
 
-.. Chapter: Registrar features
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   .. include:: Features/RegIF/Main.rst
-      :start-after: .. struct-start 
-      :end-before: .. struct-end
+Chapter: Registrar features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: Features/RegIF/Main.rst
+   :start-after: .. struct-start 
+   :end-before: .. struct-end
 
-.. Chapter: Public features
-   ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   .. include:: Features/PublicIF/Main.rst
-      :start-after: .. struct-start 
-      :end-before: .. struct-end
+Chapter: Public features
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: Features/PublicIF/Main.rst
+   :start-after: .. struct-start 
+   :end-before: .. struct-end
 
 Architecture
 ------------
