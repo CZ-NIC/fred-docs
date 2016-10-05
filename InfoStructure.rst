@@ -6,6 +6,7 @@ Structure overview
 
 .. contents::
    :local:
+   :backlinks: none
 
 Features
 --------
@@ -13,25 +14,25 @@ Features
    :start-after: .. struct-start 
    :end-before: .. struct-end
 
-Chapter: General features
+General features
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: Features/General/Main.rst
    :start-after: .. struct-start 
    :end-before: .. struct-end
 
-Chapter: Admin features
+Admin features
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: Features/AdminIF/Main.rst
    :start-after: .. struct-start 
    :end-before: .. struct-end
 
-Chapter: Registrar features
+Registrar features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: Features/RegIF/Main.rst
    :start-after: .. struct-start 
    :end-before: .. struct-end
 
-Chapter: Public features
+Public features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: Features/PublicIF/Main.rst
    :start-after: .. struct-start 
@@ -43,13 +44,13 @@ Architecture
    :start-after: .. struct-start 
    :end-before: .. struct-end
 
-Chapter: Blackbox model
+Blackbox model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: Architecture/BlackboxModel.rst
    :start-after: .. struct-start 
    :end-before: .. struct-end
 
-Chapter: Top-level components
+Top-level components
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: Architecture/TopLevelComponents.rst
    :start-after: .. struct-start 
@@ -61,7 +62,7 @@ Administration manual
    :start-after: .. struct-start 
    :end-before: .. struct-end
 
-Chapter: Installation
+Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/Installation/Main.rst
@@ -69,7 +70,7 @@ Chapter: Installation
    :end-before: .. struct-end
 
 
-Chapter: Configuration
+Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/Configuration.rst
@@ -77,7 +78,7 @@ Chapter: Configuration
    :end-before: .. struct-end
 
 
-Chapter: Registry initialization
+Registry initialization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/RegistryInitialization.rst
@@ -85,7 +86,7 @@ Chapter: Registry initialization
    :end-before: .. struct-end
 
 
-Chapter: Periodic tasks
+Periodic tasks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/PeriodicTasks.rst
@@ -93,7 +94,7 @@ Chapter: Periodic tasks
    :end-before: .. struct-end
 
 
-Chapter: Administrative tasks
+Administrative tasks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/AdministrativeTasks/Main.rst
@@ -101,14 +102,14 @@ Chapter: Administrative tasks
    :end-before: .. struct-end
 
 
-Chapter: Accounting
+Accounting tasks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/Accounting.rst
    :start-after: .. struct-start 
    :end-before: .. struct-end
 
-Chapter: Maintenance
+Maintenance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/Maintenance.rst
@@ -116,7 +117,7 @@ Chapter: Maintenance
    :end-before: .. struct-end
 
 
-Chapter: Customization
+Customization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/Customization.rst
@@ -124,7 +125,7 @@ Chapter: Customization
    :end-before: .. struct-end
 
 
-Chapter: Extensions
+Extensions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/Extensions.rst
@@ -138,7 +139,7 @@ Client user guide
    :start-after: .. struct-start
    :end-before: .. struct-end
 
-:abbr:`TBP (to be planned)` & :abbr:`TBD (to be developed)`
+:abbr:`TBP (to be planned)`
 
 Client implementation guide
 ---------------------------
@@ -147,7 +148,7 @@ Client implementation guide
    :start-after: .. struct-start
    :end-before: .. struct-end
 
-:abbr:`TBP (to be planned)` & :abbr:`TBD (to be developed)`
+:abbr:`TBP (to be planned)`
 
 WebAdmin user guide
 -------------------
@@ -156,7 +157,7 @@ WebAdmin user guide
    :start-after: .. struct-start
    :end-before: .. struct-end
 
-:abbr:`TBP (to be planned)` & :abbr:`TBD (to be developed)`
+(only suggested)
 
 Development documentation
 -------------------------
@@ -165,13 +166,28 @@ a.k.a. Detailed design and code documentation
 
 :abbr:`TBP (to be planned)` ?
 
+.. rubric:: Target audience
+
+Developer, tester
+
+.. rubric:: Purpose
+
+Understand internal workings of the system, change/adapt/extend code,
+design tests
+
+.. rubric:: Topics
+
+* source code organization
+* design descriptions
+* code/API docs
+
 Security guidelines
 -------------------
 
-:abbr:`TBP (to be planned)` ?
+(only suggested)
 
 User guides for public services
 -------------------------------
 
-:abbr:`TBP (to be planned)` ?
+(only suggested)
 

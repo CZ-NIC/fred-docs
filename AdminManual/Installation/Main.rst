@@ -10,7 +10,8 @@ How the FRED is installed.
 
    .. struct-start
 
-   **Sources:** WEB/Install + NOTES :ref:`??? <src>` | **AoW:** 2 days
+   **Sources:** WEB/Install + NOTES :ref:`??? <src>` 
+   | **AoW:** (2 days) in CR + *1 day*
 
    **Chapter outline:**
 
