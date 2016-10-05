@@ -291,16 +291,11 @@ This command grants a registrar permissions to manage objects in a specified zon
 Preparing the accounting subsystem
 ----------------------------------
 
-.. only:: mode_structure
+The accounting subsystem allows you to set prices for operations,
+charge Registrars for these operations, keep track of their credit
+and create bills (invoices) for them.
 
-   .. todo:: move to Features as a Warning
-
-      The work with the accounting subsystem might be a little tricky because
-      it is tightly tied to the context of the financial and commercial laws
-      of the Czech Republic (esp. the VAT handling and invoice essentials).
-      Therefore it may not be fully (or at all) suitable for your environment.
-
-.. NOTE Expand on this? This warning should be mentioned sooner.
+All these functions are built-in and on by default.
 
 You can **turn charging off**: find the ``[rifd]`` section in the server
 configuration and set ``epp_operations_charging = false``. Then you don't
