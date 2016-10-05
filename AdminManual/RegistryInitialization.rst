@@ -22,9 +22,6 @@ Registry initialization
 
    -----
 
-.. contents::
-   :local:
-
 This chapter will help you initialize the Registry, i.e. introduce the crucial data that must be present in the system prior to registrations or
 any work with registrable objects.
 
@@ -65,6 +62,8 @@ If you omit an optional parameter, the default value is assigned.
    and often incomplete. To see all available commands and parameters,
    refer to ``fred-admin --help``.
 
+.. contents:: Chapter TOC
+   :local:
 
 .. _FRED-Admin-reginit-zone:
 
