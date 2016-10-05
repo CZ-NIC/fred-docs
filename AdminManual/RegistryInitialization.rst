@@ -319,7 +319,7 @@ Chargeable operations include:
 
 .. https://admin.nic.cz/wiki/developers/fred/accounting#%C3%9A%C4%8Dtovan%C3%A9polo%C5%BEky
 
-* ``CreateDomain`` – domain registration (one-time payment when a new domain
+* ``CreateDomain`` – domain creation (one-time payment when a new domain
   is introduced to the Registry, corresponding EPP command: create_domain),
   pricing period: one-time
 * ``RenewDomain`` – domain renewal (renewal per unit, corresponding
@@ -371,9 +371,9 @@ If you don't want to charge for an operation, just set the price to zero.
 * ``--enable_postpaid_operation`` – operation charge doesn't require prepaid
   credit (allows negative credit)
 
-.. Note:: The first domain renewal is made upon domain creation, therefore
-   a registration of a new domain is in fact billed as 2 operations:
-   ``CreateDomain + RenewDomain`` whereas the renewal of an existing domain
+.. Note:: The first domain renewal is made upon domain registration that means
+   that a registration of a new domain is in fact billed as 2 operations:
+   ``CreateDomain + RenewDomain`` whereas a renewal of an existing domain
    is billed only as one operation ``RenewDomain``.
 
 
