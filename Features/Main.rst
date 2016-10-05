@@ -7,7 +7,7 @@ Features
 .. struct-start
 
 This document describes the features of the FRED (and explains the conception
-logic beyond these features).
+logic behind these features).
 
 .. rubric:: Target audience
 
@@ -17,10 +17,9 @@ Acquirer, tester, (system administrator, developer)
 
 Determine if the system can satisfy your needs, compare with other products,
 find advanced or not-so-obvious usage, have checklist for verification,
-(be aware of the logic beyond the features).
+(be aware of the logic behind the features).
 
 .. struct-end
-
 
 .. rubric:: Terms & definitions
 
