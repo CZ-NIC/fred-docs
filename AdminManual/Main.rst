@@ -17,7 +17,7 @@ System administrator, customer support
 
 Make the system work and keep it operational (install, configure, customize,
 maintain), set automated tasks,
-use administrator interface and tools for manual intervention.
+be aware of the tools for manual intervention.
 
 .. struct-end
 

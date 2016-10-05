@@ -9,24 +9,26 @@ General features
    .. struct-start
 
    **Sources:** WEB/Features + WIKI/Dev + WIKI/Test :ref:`??? <src>` 
-   | **AoW:** 10 days
+   | **AoW:** 10 days = *5 days* + 5 days
 
    **Chapter outline:**
 
-   * RRR model, registrars
-   * Registrations
+   * *RRR model, registrars*
+   * *Registrations*
       * Registrable objects + relationships
       * Objects states, objects life cycle
       * Object sharing
       * Object history
-   * Zones
+   * *Zones*
       * generation
-   * Logging :sup:`src:NOTES`
+   * *Logging* :sup:`src:NOTES`
       * audit logging vs. process logging
          * explain difference, link to Admin/Config
    * Technical checks
+      * *general info*
       * types :sup:`src:WIKI/Test`
    * Notifications & Reports
+      * *general info*
       * (Mailing, Messaging...)
       * Delivery channels (email, sms, letters, poll msgs)
       * types  :sup:`src:DB`
@@ -36,9 +38,13 @@ General features
          * ...expirations, validations :sup:`ENUM`, changes, ...
          * Tech.check results (go into poll messages + contact email?)
    * IDN support (we can register domains in UTF-8 and display them, but we can't restrict the character set just to a local alphabet)
+      * *general info*
    * DNSSEC support (get keys from registrars + include them in zone file)
+      * *general info*
    * ENUM
+      * *general info*
    * Accounting (Pricing, Payments, Charging, Invoicing)
+      * *general info*
 
    .. struct-end
 
