@@ -57,3 +57,6 @@ Glossary of Terms
 
    tutorial
       a document that contains examples with specific data
+
+   VAT
+      value-added tax
