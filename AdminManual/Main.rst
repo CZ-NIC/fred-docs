@@ -21,6 +21,11 @@ be aware of the tools for manual intervention.
 
 .. struct-end
 
+.. rubric:: Prerequisities
+
+To understand this manual, you should already be familiar with the general
+:ref:`features <FRED-Features>` and the :ref:`architecture <FRED-Arch>` of the system.
+
 .. rubric:: Terms & definitions
 
 Terms and definitions can be found :ref:`in the glossary <glossary>`.

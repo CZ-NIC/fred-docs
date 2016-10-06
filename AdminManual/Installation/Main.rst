@@ -26,11 +26,35 @@ How the FRED is installed.
          * Installation steps
          * Initializing the system
    * From source
-      * Compilation tools
-
+      * Tarballs
+      * SRPMS packages
    * Testing the installation
    * Upgrades – :abbr:`TBD (to be developed)`
 
    .. struct-end
 
-:abbr:`TBD (to be developed)`
+.. rubric:: Chapter TOC
+
+.. toctree::
+
+   SystemReqs
+   BinsUbuntu
+   BinsFedora
+   SourceTar
+   SourceRPM
+   SystemInit
+   Test
+
+
+..
+   .. include:: SystemReqs.rst
+
+   .. include:: BinsUbuntu.rst
+
+   .. include:: BinsFedora.rst
+
+   .. include:: Source.rst
+
+   .. include:: SystemInit.rst
+
+   .. include:: Test.rst
