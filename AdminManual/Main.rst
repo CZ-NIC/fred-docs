@@ -46,4 +46,5 @@ Chapters
    Maintenance
    Customization
    Extensions
+   Appendices/Main
    ../Glossary
