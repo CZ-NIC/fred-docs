@@ -1,0 +1,36 @@
+stages:
+  - build
+  - deploy
+
+deploy_production:
+  stage: deploy
+  script:
+    #- mv _build/latex/FRED.pdf _build/
+    - /usr/local/bin/deploy fred-docs/${CI_PROJECT_ID}/.
+  only:
+    - /^\d+\.\d+\.\d+$/
+  tags:
+    - sphinx_docs
+
+deploy_test:
+  stage: deploy
+  script:
+    #- mv _build/latex/FRED.pdf _build/
+    - /usr/local/bin/deploy fred-docs/${CI_PROJECT_ID}_test/.
+  only:
+    - /^\d+\.\d+\.\d+$/
+    - /^\d+\.\d+\.\d+-rc\d+$/
+  tags:
+    - sphinx_docs
+
+build:
+  stage: build
+  script:
+      - source /usr/local/ve/bin/activate
+      - mkdir _build
+      - make html
+      - make singlehtml
+      #- make latexpdf
+  artifacts:
+      paths:
+        - _build/
