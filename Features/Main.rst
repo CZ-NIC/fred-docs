@@ -1,6 +1,7 @@
 
 .. _FRED-Features:
 
+========
 Features
 ========
 
