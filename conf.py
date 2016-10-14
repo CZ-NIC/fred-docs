@@ -126,6 +126,13 @@ todo_include_todos = True
 # Conditional inclusion tags
 tags.add('mode_structure')
 
+# Substitutions
+rst_epilog = """
+.. |br| raw:: html
+
+   <br />
+"""
+
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
