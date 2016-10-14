@@ -1,14 +1,14 @@
 
 .. _Source-Deps-Ubu14:
 
-Ubuntu 14 package list
-~~~~~~~~~~~~~~~~~~~~~~
+Ubuntu 14.04 LTS package list
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
+   apache2
    apache2-dev
    autoconf-archive
    ghostscript
-   git
    ldnsutils
    libapache2-mod-python
    libapache2-mod-wsgi
@@ -41,7 +41,7 @@ Ubuntu 14 package list
    p7zip-full
    ssmtp
    ttf-dejavu
-   ttf-mscorefonts-installer
    ttf-freefont
+   ttf-mscorefonts-installer
    whois
    xsltproc

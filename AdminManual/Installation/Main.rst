@@ -4,13 +4,13 @@
 Installation
 ============
 
-How the FRED is installed.
+This chapter describes how to install the FRED.
 
 .. only:: mode_structure
 
    .. struct-start
 
-   **Sources:** WEB/Install + NOTES :ref:`??? <src>` 
+   **Sources:** WEB/Install + NOTES :ref:`??? <src>`
    | **AoW:** (2 days) in CR + *1 day*
 
    **Chapter outline:**
@@ -33,9 +33,8 @@ How the FRED is installed.
 
    .. struct-end
 
-.. rubric:: Chapter TOC
-
 .. toctree::
+   :caption: Chapter TOC
 
    SystemReqs
    BinsUbuntu
@@ -44,17 +43,3 @@ How the FRED is installed.
    SourceRPM
    SystemInit
    Test
-
-
-..
-   .. include:: SystemReqs.rst
-
-   .. include:: BinsUbuntu.rst
-
-   .. include:: BinsFedora.rst
-
-   .. include:: Source.rst
-
-   .. include:: SystemInit.rst
-
-   .. include:: Test.rst

@@ -55,7 +55,7 @@ script to install software required for the operation of the FRED.
 
    .. code:: bash
 
-      apt-get --assume-yes install software-properties-common
+      apt-get install software-properties-common
 
 #. Add required repositories
 
@@ -64,7 +64,7 @@ script to install software required for the operation of the FRED.
       add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe multiverse"
       add-apt-repository "http://archive.nic.cz/ubuntu/"
 
-#. Add the CZ.NIC signing key to `apt` and update `apt` index
+#. Add the CZ.NIC signing key to ``apt`` and update ``apt`` index
 
    .. code:: bash
 
@@ -75,17 +75,17 @@ script to install software required for the operation of the FRED.
 
    .. code:: bash
 
-      apt-get --assume-yes install postfix
+      apt-get install postfix
 
 3. Install the actual FRED with all dependencies
 
    .. code:: bash
 
-      apt-get --assume-yes install fred
+      apt-get install fred
 
-#. Install the database schema of FRED
+#. Install the database schema of the FRED
 
-   The `db manager` installs table schemas and fills enumeration tables;
+   The *db manager* installs table schemas and fills enumeration tables;
    it does NOT initialize the system with basic data – that is described
    in the :ref:`System initialization <FRED-Admin-Install-SysInit>` section.
 
@@ -117,20 +117,18 @@ script to install software required for the operation of the FRED.
 
 #. Replace `mpm-event` with `mpm-prefork` in Apache and restart
 
-   .. Note:: This is a workaround for Ubuntu 14.04.
+   .. Note:: This is a workaround for Ubuntu 14.04 and 16.04.
 
       The `mod-whoisd` module is not compatible with the `mpm-event`
       Apache scheme that is installed by default, so it must be
       disabled and replaced with `mpm-prefork`.
 
-   .. only:: mode_structure
-
-      .. todo:: Apache workaround should be conditional
-         in the install script.
+   .. todo:: Apache workaround should be conditional
+      in the install script.
 
    .. code:: bash
 
-      apt-get --assume-yes install apache2-mpm-prefork
+      apt-get install apache2-mpm-prefork # only 14.04
       a2dismod mpm_event
       a2enmod mpm_prefork
       service apache2 restart

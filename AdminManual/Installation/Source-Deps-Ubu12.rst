@@ -1,8 +1,8 @@
 
 .. _Source-Deps-Ubu12:
 
-Ubuntu 12 package list
-~~~~~~~~~~~~~~~~~~~~~~
+Ubuntu 12.04 LTS package list
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
    apache2-threaded-dev
@@ -49,11 +49,7 @@ Ubuntu 12 package list
    xsltproc
 
 Known issues
-~~~~~~~~~~~~
-
-.. only:: mode_structure
-
-   .. todo:: Is this still an issue?
+............
 
 There may be a problem with installing :file:`libcurl4-openssl-dev`.
 
@@ -70,4 +66,4 @@ in this order::
    $ sudo apt-get install librtmp-dev
    $ sudo apt-get install libcurl4-openssl-dev
 
-.. NOTE The problematic library was installed from our repositories
+.. NOTE The problematic library is installed from our repositories.

@@ -9,13 +9,16 @@ Once the installation is finished, you may want to check that it was successful.
 There are several levels of testing the installation:
 
 * :ref:`a check of running processes <test-processes>`,
-* :ref:`a smoke test <test-smoke>` that will check that all FRED's interfaces are correctly configured and responding,
-* :ref:`a zone test <test-registrations>` that will check that a Registrar can access the zone, make registrations and that the registered domain is generated into the zone file and available via the public interface.
+* :ref:`a smoke test <test-smoke>` that will check that all FRED's interfaces
+  are correctly configured and responding,
+* :ref:`a zone test <test-registrations>` that will check that a Registrar
+  can access the zone, make registrations and that the registered domain
+  is generated into the zone file and available via the public interface.
 
 .. _test-processes:
 
-Running processes
-^^^^^^^^^^^^^^^^^
+Check of running processes
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The following daemons should start automatically after the FRED was installed:
 
@@ -29,34 +32,32 @@ The following daemons should start automatically after the FRED was installed:
 
 You can check the running FRED processes with the command ``ps -ef | grep "fred-"``.
 
-If a daemon was not started, start it manually using the ``service`` script, for example:
-
-.. code:: bash
-
-   sudo service fred-rifd start
-
 .. _test-smoke:
 
 Smoke test of an uninitialized system
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To test the plain installation (just check that all interfaces respond as they should), try to open these sites in a browser:
+To test the plain installation (just to check that all interfaces respond
+as they should), try to open these sites in a browser:
 
 * http://localhost/whois (Web Whois) and attempt a search
-   Desired result: loads without errors, search responds with the "Handle not found" message without errors
-* http://localhost:18456 (Web Admin) and log in with custom username/password (e.g. test/test)
+   Desired result: loads without errors, search responds with the "Handle not
+   found" message without errors
+* http://localhost:18456 (Web Admin) and log in with custom username/password
+  (e.g. test/test)
    Desired result: loads and logs in without errors
 
 and/or try to run these programs in a terminal:
 
 * ``fred-client -v 2``
-   Desired result: outputs Server ID and Return code 2501
+   Desired result: outputs Server ID and Return code: 2501
 * ``whois -h localhost whatever``
    Desired result: outputs Whoisd server version and ERROR:101
 * ``genzone_client whatever``
    Desired result: outputs this error: "Uknown zone requested"
 
-If everything goes smoothly (websites open and programs finish as desired), then all system interfaces are available.
+If everything goes smoothly (websites open and programs finish as desired),
+then all system interfaces are available.
 
 .. _test-registrations:
 

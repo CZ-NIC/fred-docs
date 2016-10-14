@@ -5,43 +5,36 @@ Installation from source tarballs
 ---------------------------------
 
 This section will guide you through the compilation of the FRED and
-the follow-up installation. This procedure is optimized for Ubuntu.
+the follow-up installation. This procedure is meant for Ubuntu.
 
-Add CZ.NIC repositories
-^^^^^^^^^^^^^^^^^^^^^^^
-
-.. only:: mode_structure
-
-   .. todo:: Will our repositories work for all 3 Ubu releases?
+Add the CZ.NIC repositories and signing key
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code:: bash
 
    add-apt-repository "deb http://archive.nic.cz/ubuntu $(lsb_release -sc) main"
    add-apt-repository "deb http://archive.nic.cz/private $(lsb_release -sc) main"
    add-apt-repository "deb http://archive.nic.cz/scratch $(lsb_release -sc) main"
+
+   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F20C079E020ADBB4
+
    apt-get update
 
-Install dependecies
+Satisfy dependecies
 ^^^^^^^^^^^^^^^^^^^
-
-.. only:: mode_structure
-
-   .. todo:: rename this section (Install dependencies)
 
 We prepared lists of all particular packages on which FRED's compilation,
 installation or operation depends (package names may slightly differ
 across OS versions):
 
-* :ref:`Ubuntu 12 <Source-Deps-Ubu12>`
-* :ref:`Ubuntu 14 <Source-Deps-Ubu14>`
-* :ref:`Ubuntu 16 <Source-Deps-Ubu16>`
+* :ref:`Ubuntu 12.04 LTS <Source-Deps-Ubu12>`
+* :ref:`Ubuntu 14.04 LTS <Source-Deps-Ubu14>`
+* :ref:`Ubuntu 16.04 LTS <Source-Deps-Ubu16>`
 
 Install all the packages from the appropriate list.
 
-.. only:: mode_structure
-
-   .. todo:: IDEA Separate dependencies for compilation, installation and
-      operation. Purpose?
+.. IDEA Separate dependencies for compilation, installation and operation.
+   Advantage?
 
 
 Download and unpack
@@ -73,15 +66,19 @@ Package list:
 
 For each package in the list, run this command sequence from its directory::
 
-    $ ./configure
-    $ make
-    $ sudo make install
+   ./configure
+   make
+   sudo make install
 
 The ``configure`` script prepares package files for compilation and
 installation by adapting them to a specific environment and checks
-if the required tools are available. The ``make`` command performs
+that the required tools are available.
+
+The ``make`` command performs
 the actual compilation. (Some packages have nothing to compile. In that case,
-the ``make`` reports "Nothing to be done...".) The last command just copies
+the ``make`` reports "Nothing to be done...".)
+
+The last command just copies
 files required for operation to the target directories. (You usually need
 administrator permissions if you install somewhere else than your home
 directory.)
@@ -91,17 +88,18 @@ The target directory (installation prefix), as well as other parameters
 to the :program:`configure` script or as environment variables.
 (See ``./configure --help`` for options.)
 
-.. QUESTION Jak zjistím, co se kam nainstalovalo?
+.. Note:: Note that the default prefix is used in examples
+   throughout this manual.
 
 .. [#] For more information about Autotools see
    the `GNU Automake Manual <http://www.gnu.org/software/automake/manual/>`_.
 
 Finish ``mod-corba`` installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Run :program:`libtool` (after ``make install``) to finish the ``mod-corba``
-installation::
+Run the :program:`libtool` script (after ``make install``) to finish
+the :file:`mod-corba` installation::
 
-   sudo libtool --finish /usr/lib/apache2/modules
+   sudo ./libtool --finish /usr/lib/apache2/modules
 
 
 Install (D) packages
@@ -113,11 +111,12 @@ the Distutils package must be installed before other (D) packages.
 
 Package list:
 
-* :file:`fred-distutils` *# install first*
+* :file:`fred-distutils` *# install first (in the Python path)*
 * :file:`fred-client`
 * :file:`fred-doc2pdf`
 * :file:`fred-pyfred`
 * :file:`fred-pylogger`
+* :file:`fred-rdap`
 * :file:`fred-transproc`
 * :file:`fred-webadmin`
 * :file:`fred-whois`
@@ -145,27 +144,31 @@ Finalization
 You need to finish the setup of the following parts to make
 the system operational:
 
-* enable Apache modules
-* set timezone in PostgreSQL
-* setup the database schema
-* DB client authentication
-* launch servers
-* Then test installation (link)
+* enable Apache modules,
+* set timezone in PostgreSQL,
+* setup the database schema,
+* DB client authentication,
+* launch servers.
+
+Then :ref:`test the installation <FRED-Admin-Install-Test>`
+and :ref:`initialize the system <FRED-Admin-Install-SysInit>`.
 
 Enable Apache modules
 ~~~~~~~~~~~~~~~~~~~~~
-
-.. only:: mode_structure
-
-   .. todo:: add RDAP module
 
 Enable :file:`mod_ssl` (not enabled by default)::
 
    sudo a2enmod ssl
 
-Configure Apache to load :file:`mod_corba`, :file:`mod_eppd` and
-:file:`mod_whoisd` and create virtual hosts
-to provide EPP server and Whois server:
+Configure Apache to load :file:`mod_eppd` and :file:`mod_whoisd`,
+create virtual hosts to provide EPP server and Web Whois server and
+configure directories to provide Unix Whois and RDAP server:
+
+* Correct RDAP Apache module configuration (comment or delete
+  the ``WSGISocketPrefix`` directive)::
+
+   sudo sed -i~ -e "s/^WSGISocketPrefix/#WSGISocketPrefix/" \
+      /usr/local/share/fred-rdap/apache.conf
 
 * Link configuration snippets (provided with the FRED) to Apache's virtual
   host directory::
@@ -175,6 +178,7 @@ to provide EPP server and Whois server:
    sudo ln -s /usr/local/share/fred-mod-whoisd/02-fred-mod-whoisd-apache.conf .
    sudo ln -s /usr/local/share/fred-mod-eppd/02-fred-mod-eppd-apache.conf .
    sudo ln -s /usr/local/share/doc/fred-whois/apache.conf 03-fred-whois.conf
+   sudo ln -s /usr/local/share/fred-rdap/apache.conf 04-fred-rdap.conf
 
 * Enable FRED sites::
 
@@ -182,6 +186,7 @@ to provide EPP server and Whois server:
    sudo a2ensite 02-fred-mod-whoisd-apache.conf
    sudo a2ensite 02-fred-mod-eppd-apache.conf
    sudo a2ensite 03-fred-whois.conf
+   sudo a2ensite 04-fred-rdap.conf
 
 * Set the Apache user (www-data) as the owner of the log directory
   to make logging possible::
@@ -196,14 +201,19 @@ to provide EPP server and Whois server:
    ~~~~~~~~~~~~~~~
    localhost -> ``/var/www/index.html``
 
-.. ??? FRED should contain its own index page with links to services in the default setup.
-.. include in fred-server package
-.. NOTE fred-manager knows to create one (http://archive.nic.cz/fred-sources/fred-manager)
-.. NOTE [Jirka] fred-managera nesirit :)
+.. FRED should contain its own index page with links to services
+   in the default setup.
+   The ``fred-manager`` (http://archive.nic.cz/fred-sources/fred-manager)
+   knows to create one but this is not a tool that is publicly available.
+..
 
 Set timezone in PostgreSQL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
-The FRED assumes database connections using UTC timezone, so configure PostgreSQL to handle connections using this timezone. Open :file:`/etc/postgresql/9.1/main/postgresql.conf` with a text editor and change the **timezone** parameter to UTC, e.g. ``sudo nano /etc/postgresql/9.1/main/postgresql.conf`` or use this script::
+The FRED assumes database connections using UTC timezone, so configure
+PostgreSQL to handle connections using this timezone.
+Open :file:`/etc/postgresql/9.1/main/postgresql.conf` with a text editor
+and change the **timezone** parameter to UTC,
+e.g. ``sudo nano /etc/postgresql/9.1/main/postgresql.conf`` or use this script::
 
    sudo sed -i~ -e "s/^#\?\s*timezone\s*=\s*[A-Za-z0-9_.-']*/timezone = 'UTC'/" \
       /etc/postgresql/9.1/main/postgresql.conf
@@ -215,17 +225,18 @@ Then restart PostgreSQL::
 Setup the database schema
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 .. To install the FRED database schema, run this command::
-   $ sudo su - postgres -c "/usr/local/sbin/fred-dbmanager install"
-   dbmanager funguje ok (vytvoří dbuser, db a nahraje tam strukturu),
-   ale tyto parametry jsou v něm "natvrdo" - je možné je alternovat při "kompilaci" balíku fred-db
-.. NOTE inicializuje automaticky pri prvnim spusteni CORBA serveru
+   sudo su - postgres -c "/usr/local/sbin/fred-dbmanager install"
+   dbmanager creates dbuser, db and installs the structure,
+   but these variables are embedded in the SQL script and can't be parametrized
+   in an other way than compilation of the fred-db package
 
 The FRED database schema is installed automatically with the default settings
  (user name and database name) on the first run of the CORBA servers.
 
 However, if you want to setup the database manually, you need to:
 
-* disable the auto-install by setting flag ``DB_INIT=0`` in :file:`/usr/local/etc/init.d/fred-server`
+* disable the auto-install by setting the flag ``DB_INIT=0``
+  in :file:`/usr/local/etc/init.d/fred-server`
 * setup the database settings (as the *postgres* user)::
 
    su - postgres
@@ -247,7 +258,10 @@ However, if you want to setup the database manually, you need to:
       psql
       postgres=# alter user {dbusername} password 'passwd';
 
-* adapt the PostgreSQL `client authentication <http://www.postgresql.org/docs/9.1/static/client-authentication.html>`_ configuration in :file:`/etc/postgresql/9.1/main/pg_hba.conf` to use plain password authentication method [#]_
+* adapt the PostgreSQL `client authentication
+  <http://www.postgresql.org/docs/9.1/static/client-authentication.html>`_
+  configuration in :file:`/etc/postgresql/9.1/main/pg_hba.conf`
+  to use the plain-password authentication method [#]_
 
    - for all databases and users::
 
@@ -278,7 +292,8 @@ However, if you want to setup the database manually, you need to:
 
       psql {dbname} -U {dbusername} -f /usr/local/share/fred-db/structure.sql
 
-* adapt the FRED configuration files accordingly (set the correct database name, user and password)
+* adapt the FRED configuration files accordingly
+  (set the correct database name, user and password)
 
    - :file:`/usr/local/etc/fred/server.conf`::
 
@@ -305,22 +320,25 @@ However, if you want to setup the database manually, you need to:
 
 Launch servers
 ~~~~~~~~~~~~~~
-To start FRED CORBA servers, you can use the :program:`service` script or run this command:
+To start the FRED CORBA servers, you can use the :program:`service` script
+or run this command:
+
 ::
 
    sudo /usr/local/etc/init.d/fred-server start
 
-To start FRED webadmin server (Daphne), you can use the :program:`service` script or run this command:
+To start the FRED webadmin server (Daphne), you can use the :program:`service`
+script or run this command:
 ::
 
    sudo /usr/etc/init.d/fred-webadmin-server start
 
-.. NOTE nejednotny prefix nahlasen v ticketu
-.. TODO stale problem?
-
-.. only:: mode_structure
-
-   .. todo:: check the prefix
+.. NOTE bad prefix reported in ticket #13929 (internal instance of Trac)
+.. TODO Still a problem? 2016-10: Yes
 
 Now, you can perform :ref:`the smoke test <test-smoke>` to make sure
 that all interfaces are available and working together.
+
+
+
+.. todo:: how to create service(s) and add it(them) to startup launch
