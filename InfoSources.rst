@@ -4,6 +4,13 @@
 Structure notes clarification
 =============================
 
+.. _todo-link:
+
+.. rubric:: TODO-LINK
+
+This pseudo-link must be replaced with a true reference
+which probably did not exist at the moment this link was created.
+
 .. rubric:: Abbreviations
 
 * AoW = Amount of work
