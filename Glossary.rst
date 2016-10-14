@@ -13,26 +13,27 @@ Glossary of Terms
 
 .. Note:: **Terminology: Accounting vs. Billing**
 
-   (from OxfordLearnersDictionaries.com)
+   (from `OxfordLearnersDictionaries.com <http://oxfordlearnersdictionaries.com/>`_)
 
    * accounting ... the process or work of keeping financial accounts
    * billing ... the act of preparing and sending bills to customers
    * bill is a synonym to invoice
 
-   (from WordNet)
+   (from `WordNet <http://wordnet.princeton.edu/>`_)
 
    * accounting ... a system that provides quantitative information about finances
    * billing ... request for payment of a debt, synonym: charge
 
    (mydef)
 
-   * accounting ?= pricing + billing + invoicing + keeping credit + banking
+   * accounting ?= pricing + charging + billing/invoicing + keeping credit + banking
 
 .. glossary::
    :sorted:
 
    $CZ-specific$ : $flags
-      Definition...
+      This feature, setting or component is specific to the CZ.NIC
+      and requires customization before it can be used in another environment.
 
    $CRITICAL$ : $flags
       Definition...
