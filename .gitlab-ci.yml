@@ -34,3 +34,5 @@ build:
   artifacts:
       paths:
         - _build/
+  tags:
+    - sphinx_docs
