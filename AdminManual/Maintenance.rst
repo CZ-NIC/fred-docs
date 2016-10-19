@@ -21,63 +21,87 @@ Maintenance
       * Logger database content archivation (archivation of old partitions)
 
    .. struct-end
+   
+   -----
 
-:abbr:`TBD (to be developed)`
+This chapter should help you with the maintenance of the system,
+especially the dynamic data that is generated during the system operation.
 
-Unfortunately, concrete maintenance practices depend greatly on the way you deploy the system. However, there are some general guidelines in this chapter that you may find useful.
+Unfortunately, specific maintenance practices depend greatly on the way
+you deploy the system. However, there are some general guidelines
+in this chapter that you may find useful.
+
+.. contents:: Chapter TOC
+   :local:
 
 Maintained dynamic data
 -----------------------
 
-There are several types of data that are generated during the operation of the system:
+There are several types of data that are generated during the operation
+of the system:
 
-* the main database,
-* the logger database,
+* the *main* database,
+* the *logger* database,
 * managed files,
 * syslog data.
 
-Some of these data should be duplicated as a safety precaution or archived if required.
+Some of these data should be duplicated as a safety precaution or archived
+if a release of system resources is required.
 
-Most of them can be packed by a compression archiver and moved to a backup location (i.e. backup server, archivation server).
+Most of them can be packed by a compression archiver and moved
+to a backup location (i.e. a backup server).
 
 Databases
 ---------
 
 We recommend these standard PostgreSQL's tools for database maintenance:
-   * `Backup and Restore <https://www.postgresql.org/docs/9.1/static/backup.html>`_ for database backups and
-   * `Automatic Vacuuming <https://www.postgresql.org/docs/9.1/static/runtime-config-autovacuum.html>`_ for database cleanup.
+   * `Backup and Restore
+     <https://www.postgresql.org/docs/9.1/static/backup.html>`_
+     for database backups and
+   * `Automatic Vacuuming
+     <https://www.postgresql.org/docs/9.1/static/runtime-config-autovacuum.html>`_
+     for database cleanup.
 
 Simple backup: pg_dump
-......................
+^^^^^^^^^^^^^^^^^^^^^^
 
-Textual backup of the whole database which you may want to perform daily using CRON. It might come in handy also in the case you need to migrate the data to a higher version of PostgreSQL.
+Textual backup of the whole database which you may want to perform daily
+using CRON. It also may come in handy in the case you need to migrate
+the data to a higher version of PostgreSQL.
 
-Recommended for both FRED databases—the *main* and *logger*—as a minimum crash-safety precaution.
+Recommended for both FRED databases—*main* and *logger*—as a minimum
+crash-safety precaution.
 
-See `PostgreSQL's documentation: SQL Dump <https://www.postgresql.org/docs/9.1/static/backup-dump.html>`_.
+See `PostgreSQL's documentation: SQL Dump
+<https://www.postgresql.org/docs/9.1/static/backup-dump.html>`_.
 
 Logger database content archivation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-(archivation of old partitions)
 
-* databaze `fredlog`
-* rozdělení db na partitions podle měsíce je soucasti schematu databaze (vyvojari)
-* archivace/zaloha mesicnich tabulek (partitions) z predesleho mesice lokalne do :file:`/var/lib/postgresql/backup/<YEAR>`
-* skript: `/var/lib/postgresql/backup/backup.sh` (spousteno cronem)
-* zaloha pouze dat z konkretnich mesicnich partitions :file:`/var/lib/postgresql/backup/<YEAR>` mezi servery `logdb-s-02.nic.cz` | `logdb-r-02.nic.cz` | `logdb-b-02.nic.cz` vzdy z mastera na slave servery
-* pomoci pg_dump (viz vyse) + podle data
-   * logovaci databaze si vlastne resi to ukladani do tabulek podle data mesice sama. a archivace pro nas znamena jen dump te tabulky podle cisla. takze my v podstate do kolecka pouzivame stejny princip, jen to mame obalene nejakym prenosem na jiny server atd. ale to je vec, co si stejne kazdej vyresi podle sebe
+The *logger* database is divided into partitions by months which is embedded
+in its schema. This allows you to dump only the data from a specified month
+(usually the previous one).
 
 .. TODO ukazkovy prikaz pro zalohovani konkretniho mesice
+   * databaze `fredlog`
+   * rozdělení db na partitions podle měsíce je soucasti schematu databaze (vyvojari)
+   * archivace/zaloha mesicnich tabulek (partitions) z predesleho mesice lokalne do :file:`/var/lib/postgresql/backup/<YEAR>`
+   * skript: `/var/lib/postgresql/backup/backup.sh` (spousteno cronem)
+   * zaloha pouze dat z konkretnich mesicnich partitions :file:`/var/lib/postgresql/backup/<YEAR>` mezi servery `logdb-s-02.nic.cz` | `logdb-r-02.nic.cz` | `logdb-b-02.nic.cz` vzdy z mastera na slave servery
+   * pomoci pg_dump (viz vyse) + podle data
+      * logovaci databaze si vlastne resi to ukladani do tabulek podle data mesice sama. a archivace pro nas znamena jen dump te tabulky podle cisla. takze my v podstate do kolecka pouzivame stejny princip, jen to mame obalene nejakym prenosem na jiny server atd. ale to je vec, co si stejne kazdej vyresi podle sebe
 
-Advanced backup: Continuous Archiving
-.....................................
+Advanced backup: continuous archiving
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Incremental binary backup that allows to recover the database to the most recent state at a minimum cost, since it backs up at a rate of minutes but it only records the difference from the previous backup.
+Incremental binary backup that allows to recover the database to the most
+recent state at a minimum cost, since it backs up at a rate of minutes
+but it only records the difference from the previous backup.
 
 Recommended for the *main* database as an advanced crash-safety precaution.
 
-See `PostgreSQL's documentation: Continuous Archiving <https://www.postgresql.org/docs/9.1/static/continuous-archiving.html>`_.
+See `PostgreSQL's documentation: Continuous Archiving
+<https://www.postgresql.org/docs/9.1/static/continuous-archiving.html>`_.
 
 
 .. Regular Vacuum
@@ -96,9 +120,11 @@ See `PostgreSQL's documentation: Continuous Archiving <https://www.postgresql.or
 Managed files
 -------------
 
-You may archive and/or remove the older content of :file:`/var/lib/pyfred/*`.
+You may archive and/or remove the older content of :file:`/var/lib/pyfred/*`
+where the files managed by the FRED are located.
 
-The system can handle this - When some part of the system requests a file, that is not available, from the file manager, it receives an exception.
+The system can handle missing files. When some part of the system requests
+a file, that has been removed, from the file manager, it reports an exception.
 
 .. NOTE backend throws a FileNotFound exception - how does the frontend handle this?
    * filemanager_client, - reports a missing file
@@ -111,6 +137,9 @@ The system can handle this - When some part of the system requests a file, that 
 Syslog data
 -----------
 
-Local syslog files can be maintained by the `logrotate` utility which is a part of the operating system.
+Local syslog files can be maintained by the `logrotate` utility
+which is a part of the operating system.
 
-Syslog data on a remote log server can be maintained for example by the `syslog-ng` application, see the `syslog-ng documentation <https://www.balabit.com/sites/default/files/documents/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html-single/index.html>`_
+Syslog data on a remote log server can be maintained for example
+by the `syslog-ng` application, see the `syslog-ng documentation
+<https://www.balabit.com/sites/default/files/documents/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html-single/index.html>`_
