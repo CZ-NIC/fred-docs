@@ -8,7 +8,7 @@ Registry initialization
 
    .. struct-start
 
-   **Sources:** NOTES :ref:`??? <src>` 
+   **Sources:** NOTES :ref:`??? <src>`
    | **AoW:** (1 day) for CR + *1 day*
 
    **Chapter outline:**
@@ -520,7 +520,7 @@ Setting parameters in the database
 ..  enum_parameters.regular_day_procedure_zone
 
 There is a table of customizable parameters in the main database.
-The most of them can be used with the default values, however the following
+Most of them can be used with default values, however the following
 parameter **must** be adapted to your environment:
 
 * the appropriate time zone for automated administration
@@ -535,7 +535,5 @@ parameter **must** be adapted to your environment:
   `in this list <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>`_
   (the *TZ* column), for example ``Europe/Prague`` (this is the default value).
 
-.. only:: mode_structure
-
-   .. todo:: You can customize also other parameters from this table,
-      see :ref:`blablabla <todo-link>` (the reference).
+.. Note:: You can customize also other parameters from this table,
+   see :ref:`config-rules`.
