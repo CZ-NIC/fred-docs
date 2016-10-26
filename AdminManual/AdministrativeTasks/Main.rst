@@ -29,8 +29,29 @@ Administrative tasks
 
       * Resolving public requests
 
-   * Object search (Daphne)
+   * Database search (Daphne)
 
    .. struct-end
 
-:abbr:`TBD (to be developed)`
+   -----
+
+This chapter will give you hints on how the typical administrative tasks are done.
+
+While some can be performed using the web administration application (WebAdmin),
+and we will guide you to the respective screen for each task, others must be
+executed with other administration utilities.
+
+To use the WebAdmin, you have to log in.
+
+If the WebAdmin is not providing some functionality described here,
+check the permissions of the user under which you login.
+
+
+
+.. toctree::
+   :caption: Chapter TOC
+
+   Registrars
+   Objects
+   Search
+   History
