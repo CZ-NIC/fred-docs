@@ -21,12 +21,14 @@ Glossary of Terms
 
    (from `WordNet <http://wordnet.princeton.edu/>`_)
 
-   * accounting ... a system that provides quantitative information about finances
+   * accounting ... a system that provides quantitative information
+     about finances
    * billing ... request for payment of a debt, synonym: charge
 
    (mydef)
 
-   * accounting ?= pricing + charging + billing/invoicing + keeping credit + banking
+   * accounting ?= pricing + charging + billing/invoicing + keeping credit
+     + banking
 
 .. glossary::
    :sorted:
