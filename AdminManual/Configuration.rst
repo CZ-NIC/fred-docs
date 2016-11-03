@@ -73,30 +73,37 @@ named :file:`server.conf`.
 
 * :file:`fred-adifd` – administration interface daemon – operations for
   administration (WebAdmin)
+
    * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-adifd.conf`
 
 * :file:`fred-rifd` – registrar interface daemon – operations for the
   EPP-protocol Apache module (mod-eppd)
+
    * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-rifd.conf`
 
 * :file:`fred-pifd` – public interface daemon – operations for Unix whois,
   web whois, RDAP and contact verification
+
    * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-pifd.conf`
 
 * :file:`fred-msgd` – messaging daemon – operations for sending SMS text
   messages and paper letters
+
    * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-msgd.conf`
 
 * :file:`fred-logd` – logging daemon (logger) – operations for the logging
   of user activity
+
    * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-logd.conf`
 
 * :file:`fred-mifd` – mojeID daemon (extension) – operations for the mojeID
   service
+
    * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-mifd.conf`
 
 * :file:`fred-dbifd` – domain browser daemon (extension) – operations for
   the Domain Browser web application
+
    * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-dbifd.conf`
 
 Python daemon(s)
@@ -109,6 +116,7 @@ configuration file named :file:`pyfred.conf`.
 
 * :file:`fred-pyfred` – a framework that integrates several Python CORBA
   servers as modules:
+
    * :file:`genzone` – operations for generating zone files,
    * :file:`mailer` – operations for sending email,
    * :file:`filemanager` – operations for managing files (mostly email attachments),
@@ -232,5 +240,5 @@ A description of parameters by name (also :ref:`see the figure below <fig-expira
 
 .. todo:: Pricing configurables
 
-   * table:request_fee_parameter
-   * table:request_fee_registrar_parameter
+   * table:request_fee_parameter (.count_free_base+.count_free_per_domain)
+   * table:request_fee_registrar_parameter (.request_price_limit)
