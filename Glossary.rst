@@ -31,14 +31,11 @@ Glossary of Terms
 .. glossary::
    :sorted:
 
-   $CZ-specific$ : $flags
+   $CZ-specific$
       This feature, setting or component is specific to the CZ.NIC
       and requires customization before it can be used in another environment.
 
-   $CRITICAL$ : $flags
-      Definition...
-
-   FQDN : F
+   FQDN
       Fully Qualified Domain Name
 
    feature
