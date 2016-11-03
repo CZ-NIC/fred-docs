@@ -180,8 +180,8 @@ Browse and assign payments
 
 
 
-Browse logs
------------
+Browse audit log
+----------------
 
 * Search/filter logs (from logger)
 * View log details
