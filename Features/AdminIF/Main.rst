@@ -28,5 +28,4 @@ Administration features
    :maxdepth: 1
 
    WebAdmin
-
-..   FredAdmin
+   CLIAdmin
