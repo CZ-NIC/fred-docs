@@ -60,3 +60,9 @@ Glossary of Terms
 
    VAT
       value-added tax
+
+   CLI
+      command line interface
+
+   ENUM
+      `telephone number mapping <http://icannwiki.com/ENUM>`_
