@@ -94,11 +94,11 @@ Regular procedure
 
 * updates the states of the registrable objects of all types; the states
   depend on the time and other states that are set manually
-* notifies Registrars and end-users (contacts) about state changes:
-   * generates poll messages to notify Registrars
+* notifies registrars and end-users (contacts) about state changes:
+   * generates poll messages to notify registrars
    * generates emails to notify contacts
    * generates letters for domain deletion warning
-* generates poll messages to notify Registrars about low credit
+* generates poll messages to notify registrars about low credit
 * deletes objects of selected types that have been marked for deletion
   – this activity can be disabled by omitting the ``--object_delete_types``
   argument and can be run in a separate task (see the next task)
@@ -198,14 +198,16 @@ Billing the fee for requests
 **Task activities**:
 
 * generates poll messages about the usage of free EPP requests and
-  if the Registrar exceeded the limit, calculates the price
+  if the registrar exceeded the limit, calculates the price
   for the requests over limit
 
 **Configuration**
 
 * in the database, table: ``request_fee_parameter``
 
-Blocking Registrars over limit
+.. _block-registrars-limit:
+
+Blocking registrars over limit
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Task command**::
@@ -226,15 +228,17 @@ Blocking Registrars over limit
 **Task activities**:
 
 * calculates the current usage of free EPP requests and if exceeded,
-  blocks the Registrar's access to the Registry
+  blocks the registrar's access to the Registry
    * blocks until the end of the current month
-   * only if the Registrar is not blocked yet and
-   * only if the Registrar was not unblocked in the current month yet
-* disconnects all EPP sessions of the blocked Registrar
-* if the ``--email`` address is given, sends a list of Registrars
-  who were blocked this day, (presumably) to the Registry customer support
+   * only if the registrar is not blocked yet and
+   * only if the registrar was not unblocked in the current month yet
+* disconnects all EPP sessions of the blocked registrars
+* if the ``--email`` address is given and registrars were blocked,
+  sends a notification with a list of registrars blocked in this batch
 
-.. Note:: In the CZ.NIC, the customer support calls the blocked Registrars
+   .. todo:: registrars blocked in this batch or on this day???
+
+.. Note:: In the CZ.NIC, the customer support calls the blocked registrars
    and unblocks their access on demand.
 
 **Configuration**
@@ -260,7 +264,7 @@ Import & pairing of payments
 **Task activities**:
 
 * imports payments from all configured sources into the database
-* if a payment is paired with a Registrar, increases credit
+* if a payment is paired with a registrar, increases credit
   and creates an advance invoice
 
 Invoicing
