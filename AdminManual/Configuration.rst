@@ -217,6 +217,9 @@ A description of parameters by name (also :ref:`see the figure below <fig-expira
   default: 0
 * ``regular_day_procedure_zone`` – time zone for periodic tasks,
   default: Europe/Prague
+
+   .. Important:: It is necessary to adapt the time zone to your area!
+
 * ``object_registration_protection_period`` – how many months an object
   (nsset, keyset) must be unedited and unassigned to be considered idle and
   marked for deletion,
