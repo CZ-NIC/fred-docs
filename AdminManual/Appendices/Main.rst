@@ -7,3 +7,4 @@ Appendices
 .. toctree::
 
    Dependencies
+   CSParams
