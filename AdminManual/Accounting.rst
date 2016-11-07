@@ -8,8 +8,8 @@ Accounting tasks
 
    .. struct-start
 
-   **Sources:** NOTES :ref:`??? <src>` 
-   | **AoW:** 1 day = *0 days (leave out)*
+   **Sources:** NOTES :ref:`??? <src>`
+   | **AoW:** 1 day
 
    **Chapter outline:**
 

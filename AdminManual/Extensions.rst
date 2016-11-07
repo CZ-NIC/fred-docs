@@ -8,11 +8,11 @@ Extensions
 
    .. struct-start
 
-   Leave for next phase?
+   **AoW:** unplanned
 
    .. struct-end
 
-:abbr:`TBD (to be developed)`
+:abbr:`TBP (to be planned)`
 
 The FRED has some extensions.
 

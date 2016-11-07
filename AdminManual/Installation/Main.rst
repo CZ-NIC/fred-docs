@@ -11,7 +11,7 @@ This chapter describes how to install the FRED.
    .. struct-start
 
    **Sources:** WEB/Install + NOTES :ref:`??? <src>`
-   | **AoW:** (2 days) in CR + *1 day*
+   | **AoW:** done & unplanned
 
    **Chapter outline:**
 
@@ -29,7 +29,7 @@ This chapter describes how to install the FRED.
       * Tarballs
       * SRPMS packages
    * Testing the installation
-   * Upgrades – :abbr:`TBD (to be developed)`
+   * Upgrades – :abbr:`TBP (to be planned)`
 
    .. struct-end
 

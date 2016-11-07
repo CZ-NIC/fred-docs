@@ -8,7 +8,7 @@ Maintenance
 
    .. struct-start
 
-   **Sources:** IVIEW + translate :ref:`??? <src>` | **AoW:** 1 day
+   **Sources:** IVIEW + translate :ref:`??? <src>` | **AoW:** done & unplanned
 
    **Chapter outline:**
 

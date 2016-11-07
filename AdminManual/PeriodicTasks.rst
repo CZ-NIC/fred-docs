@@ -9,7 +9,7 @@ Periodic tasks
    .. struct-start
 
    **Sources:** WIKI/Dev + IVIEW + translate :ref:`??? <src>`
-   | **AoW:** 7 days (translation) = *3 days* + 4 days
+   | **AoW:** 4 days (the rest)
 
    **Chapter outline:**
 

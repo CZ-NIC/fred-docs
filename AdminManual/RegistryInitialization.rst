@@ -9,7 +9,7 @@ Registry initialization
    .. struct-start
 
    **Sources:** NOTES :ref:`??? <src>`
-   | **AoW:** (1 day) for CR + *1 day*
+   | **AoW:** done & unplanned
 
    **Chapter outline:**
 

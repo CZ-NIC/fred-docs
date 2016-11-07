@@ -8,8 +8,8 @@ Blackbox model
 
    .. struct-start
 
-   **Sources:** OLDREPO + NOTES :ref:`??? <src>` 
-   | **AoW:** 3 days = *1 day (squash w/next or use old picture)*
+   **Sources:** OLDREPO + NOTES :ref:`??? <src>`
+   | **AoW:** (used old picture) 3 days to create a new picture
 
    **Chapter outline:**
 

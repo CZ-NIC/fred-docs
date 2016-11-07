@@ -8,8 +8,8 @@ General features
 
    .. struct-start
 
-   **Sources:** WEB/Features + WIKI/Dev + WIKI/Test :ref:`??? <src>` 
-   | **AoW:** 10 days = *5 days* + 5 days
+   **Sources:** WEB/Features + WIKI/Dev + WIKI/Test :ref:`??? <src>`
+   | **AoW:** 9 days (the rest)
 
    **Chapter outline:**
 
@@ -19,9 +19,9 @@ General features
       * Objects states, objects life cycle
       * Object sharing
       * Object history
-   * *Zones*
-      * generation
-   * *Logging* :sup:`src:NOTES`
+   * Zones
+      * *generation*
+   * Logging :sup:`src:NOTES`
       * audit logging vs. process logging
          * explain difference, link to Admin/Config
    * Technical checks

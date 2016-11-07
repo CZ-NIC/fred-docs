@@ -9,7 +9,7 @@ Customization
    .. struct-start
 
    **Sources:** WEB/Docs + IVIEW + translate :ref:`??? <src>`
-   | **AoW:** 2 days (translation)
+   | **AoW:** done & unplanned
 
    **Chapter outline:**
 
