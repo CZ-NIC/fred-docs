@@ -4,8 +4,6 @@
 Administration features
 =======================
 
-.. :abbr:`TBD (to be developed)`
-
 .. only:: mode_structure
 
    .. struct-start
@@ -24,6 +22,8 @@ Administration features
      transproc, fred-dbmanager, *genzone_client*, other?) :sup:`src:HELP`
 
    .. struct-end
+
+This chapter contains lists of FRED's features related to administration.
 
 .. contents:: Chapter TOC
    :local:

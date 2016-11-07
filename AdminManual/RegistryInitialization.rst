@@ -25,7 +25,7 @@ Registry initialization
 This chapter will help you initialize the Registry, i.e. introduce the crucial data that must be present in the system prior to registrations or
 any work with registrable objects.
 
-It is assumed that you have already installed the FRED's database schema
+It is assumed that you have installed the FRED's database schema already
 and that the database is blank (you have not input any data yet).
 
 To initialize the Registry, you need to perform these tasks:

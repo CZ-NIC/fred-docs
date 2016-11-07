@@ -48,7 +48,7 @@ of the system:
 Some of these data should be duplicated as a safety precaution or archived
 if a release of system resources is required.
 
-Most of them can be packed by a compression archiver and moved
+Most of them can be packed by a compressing archiver and moved
 to a backup location (i.e. a backup server).
 
 Databases

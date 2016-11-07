@@ -92,7 +92,7 @@ A Registrar can be unblocked via the WebAdmin:
    button.
 #. You will be prompted for an extra confirmation by retyping a number.
    Type it and hit :guilabel:`OK`.
-#. And you get a f***ing 500 error.
+#. And you get a 500 error.
 
 .. todo:: rewrite after the error is fixed
 

@@ -14,7 +14,7 @@ General
 * User authentication on login
 * User must be permitted to perform an action (read/change/block/unblock/delete/add)
 * Show/hide the history of details (set globally per session)
-* Extra confirmation for critical actions (e.g. Include domain in the zone, Block domain)
+* Extra confirmation for critical actions (e.g. domain blocking)
 * Referenced objects are linked by hypertext (object handles, attached files)
 
 Configurables
