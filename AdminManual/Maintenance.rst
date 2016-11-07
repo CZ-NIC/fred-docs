@@ -21,7 +21,7 @@ Maintenance
       * Logger database content archivation (archivation of old partitions)
 
    .. struct-end
-   
+
    -----
 
 This chapter should help you with the maintenance of the system,

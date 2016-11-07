@@ -41,10 +41,13 @@ To test the plain installation (just to check that all interfaces respond
 as they should), try to open these sites in a browser:
 
 * http://localhost/whois (Web Whois) and attempt a search
+
    Desired result: loads without errors, search responds with the "Handle not
    found" message without errors
+
 * http://localhost:18456 (Web Admin) and log in with custom username/password
   (e.g. test/test)
+
    Desired result: loads and logs in without errors
 
 and/or try to run these programs in a terminal:

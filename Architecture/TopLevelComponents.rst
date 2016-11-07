@@ -4,11 +4,11 @@
 Top-level components
 ===============================
 
-.. only:: mode_structure 
+.. only:: mode_structure
 
    .. struct-start
 
-   **Sources:** OLDREPO + NOTES :ref:`??? <src>` 
+   **Sources:** OLDREPO + NOTES :ref:`??? <src>`
    | **AoW:** 3 days = *2 days (base on old picture)*
 
    **Chapter outline:**
