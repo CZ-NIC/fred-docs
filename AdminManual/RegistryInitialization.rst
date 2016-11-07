@@ -413,13 +413,8 @@ This command adds a number prefix for invoices of a given type in a zone.
 * ``--invoice_type_name`` – the invoice type by name:
 
    * ``account`` – billing (balance between the deposit and the total
-     for provided services), usually monthly (?)
-
-   .. vyúčtování
-
-   * ``advance`` – depositing credit, when a payment was received (?)
-
-   .. zálohová faktura
+     for provided services), usually monthly
+   * ``advance`` – depositing credit, when a payment was received
 
 .. code:: bash
 

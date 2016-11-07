@@ -82,15 +82,6 @@ The *logger* database is divided into partitions by months which is embedded
 in its schema. This allows you to dump only the data from a specified month
 (usually the previous one).
 
-.. TODO ukazkovy prikaz pro zalohovani konkretniho mesice
-   * databaze `fredlog`
-   * rozdělení db na partitions podle měsíce je soucasti schematu databaze (vyvojari)
-   * archivace/zaloha mesicnich tabulek (partitions) z predesleho mesice lokalne do :file:`/var/lib/postgresql/backup/<YEAR>`
-   * skript: `/var/lib/postgresql/backup/backup.sh` (spousteno cronem)
-   * zaloha pouze dat z konkretnich mesicnich partitions :file:`/var/lib/postgresql/backup/<YEAR>` mezi servery `logdb-s-02.nic.cz` | `logdb-r-02.nic.cz` | `logdb-b-02.nic.cz` vzdy z mastera na slave servery
-   * pomoci pg_dump (viz vyse) + podle data
-      * logovaci databaze si vlastne resi to ukladani do tabulek podle data mesice sama. a archivace pro nas znamena jen dump te tabulky podle cisla. takze my v podstate do kolecka pouzivame stejny princip, jen to mame obalene nejakym prenosem na jiny server atd. ale to je vec, co si stejne kazdej vyresi podle sebe
-
 Advanced backup: continuous archiving
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -104,18 +95,6 @@ See `PostgreSQL's documentation: Continuous Archiving
 <https://www.postgresql.org/docs/9.1/static/continuous-archiving.html>`_.
 
 
-.. Regular Vacuum
-   ^^^^^^^^^^^^^^
-   See `Automatic Vacuuming <https://www.postgresql.org/docs/9.1/static/runtime-config-autovacuum.html>`_
-
-
-
-.. Regular cleanup
-   ---------------
-   (to keep the size of system low)
-
-.. ??? what can you delete when you run out of disk space
-
 
 Managed files
 -------------
@@ -126,12 +105,6 @@ where the files managed by the FRED are located.
 The system can handle missing files. When some part of the system requests
 a file, that has been removed, from the file manager, it reports an exception.
 
-.. NOTE backend throws a FileNotFound exception - how does the frontend handle this?
-   * filemanager_client, - reports a missing file
-   * mailer, - dunno, this is "backend", ???
-   * Daphne, - reports a missing object
-   * webwhois?, - why would this access files???
-   * (intranet) - dunno, not a part of FRED
 
 
 Syslog data
