@@ -25,6 +25,4 @@ and renewals and the total amount of money subtracted from the credit.
    essentials).
    Therefore it may not be fully (or at all) suitable for your environment.
 
-.. only:: mode_structure
-
-   .. todo:: negative credit
+.. todo:: negative credit

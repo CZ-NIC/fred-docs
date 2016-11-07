@@ -177,9 +177,7 @@ The data given in the examples above result in the following zone file header:
 Preparing registrars
 --------------------
 
-.. only:: mode_structure
-
-   .. todo:: Explain system/common reg. in Features, then rewrite
+.. todo:: Explain system/common reg. in Features, then rewrite
 
 There are two types of registrars:
 
@@ -199,9 +197,7 @@ Both types of registrars are prepared in the same way:
 
 .. Tip::
 
-   .. only:: mode_structure
-
-      .. todo:: rewrite
+   .. todo:: rewrite
 
    If you want to work only with the EPP communication, the system
    registrar will do. However, if it is the billing and invoicing subsystem
@@ -407,9 +403,7 @@ Creating default initial numbers
    $ fred-admin --add_invoice_number_prefix \
       --prefix=23 --zone_fqdn=cz --invoice_type_name=account
 
-.. only:: mode_structure
-
-   .. todo:: Explain invoice types in Features, then rewrite
+.. todo:: Explain invoice types in Features, then rewrite
 
 This command adds a number prefix for invoices of a given type in a zone.
 
@@ -438,9 +432,7 @@ initial numbers are created for the next year.
 Defining custom initial numbers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. only:: mode_structure
-
-   .. todo:: QUESTION Is okay or deprecated?
+.. todo:: QUESTION Is okay or deprecated?
 
 .. code:: bash
 

@@ -235,7 +235,7 @@ A description of parameters by name (also :ref:`see the figure below <fig-expira
   expiry the owner shoud be notified for the second time, negative integer,
   default: -15
 
-.. todo::
+.. todo:: Other values
 
    * roid_suffix (default: EPP)
    * regular_day_outzone_procedure_period (default: 14)
