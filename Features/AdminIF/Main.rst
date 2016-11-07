@@ -25,8 +25,9 @@ Administration features
 
    .. struct-end
 
-.. toctree::
-   :maxdepth: 1
+.. contents:: Chapter TOC
+   :local:
 
-   WebAdmin
-   CLIAdmin
+.. include:: WebAdmin.rst
+
+.. include:: CLIAdmin.rst

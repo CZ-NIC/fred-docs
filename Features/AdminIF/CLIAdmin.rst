@@ -2,17 +2,17 @@
 .. _FRED-Features-Admin-CLI:
 
 CLI admin features
-===================
+-------------------
 
 Manage zones
-------------
+^^^^^^^^^^^^
 
 * Create a zone
 * Assign name servers to a zone
 * Generate zone files (periodical)
 
 Manage registrars
------------------
+^^^^^^^^^^^^^^^^^
 
 * List all registrars
 * Add a registrar
@@ -26,14 +26,14 @@ Manage registrars
 * Block registrars over request-usage limit (periodical)
 
 Manage objects
---------------
+^^^^^^^^^^^^^^
 
 * Keep object states up-to-date and users notified about important events (periodical)
 * Remove expired and inactive objects (periodical)
 * Remind contacts to check their contact info (periodical)
 
 Manage finance
---------------
+^^^^^^^^^^^^^^
 
 * Set a price for an operation (with temporal validity)
 * Set invoice numbering

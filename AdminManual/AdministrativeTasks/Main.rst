@@ -48,10 +48,13 @@ check the permissions of the user under which you login.
 
 
 
-.. toctree::
-   :caption: Chapter TOC
+.. contents:: Chapter TOC
+   :local:
 
-   Registrars
-   Objects
-   Search
-   History
+.. include:: Registrars.rst
+
+.. include:: Objects.rst
+
+.. include:: Search.rst
+
+.. include:: History.rst

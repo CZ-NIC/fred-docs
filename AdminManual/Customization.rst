@@ -27,6 +27,9 @@ Customization
 The customization of the FRED mainly concerns the generated announcements,
 notifications and exported PDFs.
 
+.. contents:: Chapter TOC
+   :local:
+
 Email templates
 ---------------
 Email templates are located in the database tables :file:`mail_type`

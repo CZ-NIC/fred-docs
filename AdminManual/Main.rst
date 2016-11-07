@@ -30,12 +30,12 @@ To understand this manual, you should already be familiar with the general
 
 Terms and definitions can be found :ref:`in the glossary <glossary>`.
 
-Chapters
---------
+.. rubric:: Chapters
 
 .. toctree::
    :name: fred-admin-toc
    :numbered:
+   :maxdepth: 2
 
    Installation/Main
    Configuration

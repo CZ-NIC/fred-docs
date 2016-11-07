@@ -23,12 +23,12 @@ Know the basic top-level composition and organization of the system (reflects ge
 
 Terms and definitions can be found :ref:`in the glossary <glossary>`.
 
-Chapters
---------
+.. rubric:: Chapters
 
 .. toctree::
    :name: fred-arch-toc
    :numbered:
+   :maxdepth: 2
 
    BlackboxModel
    TopLevelComponents

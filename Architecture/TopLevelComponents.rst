@@ -19,3 +19,6 @@ Top-level components
    .. struct-end
 
 :abbr:`TBD (to be developed)`
+
+.. contents:: Chapter TOC
+   :local:

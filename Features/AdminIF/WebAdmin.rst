@@ -1,15 +1,15 @@
 
 .. _FRED-Features-Admin-Web:
 
-WebAdmin features
-=================
+Web admin features
+-------------------
 
 Webadmin features are divided into feature groups which also constitute
 the sections of this document.
 
 
-General WebAdmin features
--------------------------
+General
+^^^^^^^
 
 * User authentication on login
 * User must be permitted to perform an action (read/change/block/unblock/delete/add)
@@ -18,7 +18,7 @@ General WebAdmin features
 * Referenced objects are linked by hypertext (object handles, attached files)
 
 Configurables
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 
 * User authentication method
 * User authorization method and permissions
@@ -33,7 +33,7 @@ Configurables
 
 
 Result table properties
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 * Result tables paginated
    * With page navigation
@@ -48,7 +48,7 @@ Result table properties
 
 
 Compose a search filter
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 * Add a field (logical AND)
 * Remove a field
@@ -63,7 +63,7 @@ Compose a search filter
 
 
 Manage domains
---------------
+^^^^^^^^^^^^^^
 
 * Search/filter domains
 * Select domains
@@ -85,7 +85,7 @@ Manage domains
 
 
 Browse contacts
----------------
+^^^^^^^^^^^^^^^
 * Search/filter contacts
 * View contact details
    * List domains where this contact is an owner
@@ -104,7 +104,7 @@ Browse contacts
 
 
 Verify contacts
----------------
+^^^^^^^^^^^^^^^
 
 * List contact checks by type (automatic/manual/all)
 * View contact check details – Automatic
@@ -121,7 +121,7 @@ Verify contacts
 
 
 Browse NS sets
---------------
+^^^^^^^^^^^^^^
 
 * Search/filter NSSets
 * View NSSet details
@@ -132,7 +132,7 @@ Browse NS sets
 
 
 Browse key sets
----------------
+^^^^^^^^^^^^^^^
 
 * Search/filter KeySets
 * View KeySet details
@@ -143,7 +143,7 @@ Browse key sets
 
 
 Manage registrars
------------------
+^^^^^^^^^^^^^^^^^
 
 * List all registrars
 * Search/filter registrars
@@ -163,7 +163,7 @@ Manage registrars
 
 
 Browse invoices
----------------
+^^^^^^^^^^^^^^^
 
 * Search/filter invoices
 * View invoice details
@@ -171,7 +171,7 @@ Browse invoices
 
 
 Browse and assign payments
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Search/filter payments
 * View payment details
@@ -181,7 +181,7 @@ Browse and assign payments
 
 
 Browse audit log
-----------------
+^^^^^^^^^^^^^^^^
 
 * Search/filter logs (from logger)
 * View log details
@@ -189,7 +189,7 @@ Browse audit log
 
 
 Browse and resolve public requests
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Search/filter public requests
 * View request details
@@ -202,7 +202,7 @@ Browse and resolve public requests
 
 
 Browse sent emails
-------------------
+^^^^^^^^^^^^^^^^^^
 
 * Search/filter emails
 * View email details
@@ -210,7 +210,7 @@ Browse sent emails
 
 
 Browse sent messages
---------------------
+^^^^^^^^^^^^^^^^^^^^
 
 * Search/filter messages (emails, letters, sms texts, registered letters)
 * View message details
@@ -218,7 +218,7 @@ Browse sent messages
 
 
 Browse files
-------------
+^^^^^^^^^^^^
 
 * Search/filter files
 * (List domain expiration warning letters) (predefined filter)

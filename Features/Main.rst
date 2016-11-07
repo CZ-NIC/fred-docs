@@ -26,12 +26,12 @@ find advanced or not-so-obvious usage, have checklist for verification,
 
 Terms and definitions can be found :ref:`in the glossary <glossary>`.
 
-Chapters
---------
+.. rubric:: Chapters
 
 .. toctree::
    :name: fred-features-toc
    :numbered:
+   :maxdepth: 2
 
    General/Main
    AdminIF/Main
