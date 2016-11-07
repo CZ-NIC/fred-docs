@@ -144,12 +144,13 @@ procedure is finished)
 * deleting *by parts* with the ``--object_delete_parts`` option
   – this variant allows you to randomize deletion of objects by spreading it
   over several calls; this variant of the task means these activities:
+
    * creates a randomly-ordered list of objects (delete candidates)
      whose length is ``object_delete_count``
    * deletes ``object_delete_count / object_delete_parts`` objects from the
      list, repeatedly in iterations
-      * the value of ``object_delete_parts`` is calculated depending
-        on CRON configuration (how often the task is run)
+   * the value of ``object_delete_parts`` is calculated depending
+     on CRON configuration (how often the task is run)
    * finally deletes the rest (``--object_delete_parts=1`` – this is
      the default value if the parameter is omitted)
 
@@ -229,9 +230,11 @@ Blocking registrars over limit
 
 * calculates the current usage of free EPP requests and if exceeded,
   blocks the registrar's access to the Registry
+
    * blocks until the end of the current month
    * only if the registrar is not blocked yet and
    * only if the registrar was not unblocked in the current month yet
+
 * disconnects all EPP sessions of the blocked registrars
 * if the ``--email`` address is given and registrars were blocked,
   sends a notification with a list of registrars blocked in this batch

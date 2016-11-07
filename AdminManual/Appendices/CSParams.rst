@@ -206,6 +206,7 @@ Email type: ``notification_update``
    * Whether a change has occured or not, is indicated for each attribute
      of an object and parameters containing both the old and the new
      value of the attribute are passed in the following manner:
+
       * ``changes.*.attribute`` indicates a change in an attribute
         – if the attribute has changed, it contains the value "``1``";
         otherwise the parameter is not passed,
@@ -213,6 +214,7 @@ Email type: ``notification_update``
         before the change (passed only if the attribute has changed),
       * ``changes.*.attribute.new`` contains the value of the attribute
         after the change (passed only if the attribute has changed).
+
    * ``changes.object.authinfo`` – indicates that the object's transfer
      password has changed,
    * Indication of changes of other attributes is specific for each object type
