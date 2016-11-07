@@ -123,8 +123,8 @@ pygments_style = 'sphinx'
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
-# Conditional inclusion tags
-tags.add('mode_structure')
+# Conditional inclusion tags - uncomment to allow inclusion
+#tags.add('mode_structure')
 
 # Substitutions
 rst_epilog = """
