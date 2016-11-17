@@ -66,3 +66,6 @@ Glossary of Terms
 
    ENUM
       `telephone number mapping <http://icannwiki.com/ENUM>`_
+
+   EPP
+      extensible provisioning protocol (`RFC 5730 <https://tools.ietf.org/html/rfc5730>`)

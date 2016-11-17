@@ -19,4 +19,12 @@ Blackbox model
 
    .. struct-end
 
-:abbr:`TBD (to be developed)`
+.. _fig-arch-blackbox:
+
+.. figure:: _graphics/schema-basic.png
+   :alt: Basic model of the system
+   :align: center
+
+   Basic model of the system
+
+.. todo:: Replace this with a context diagram.
