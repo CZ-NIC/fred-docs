@@ -30,6 +30,10 @@ Glossary of Terms
    * accounting ?= pricing + charging + billing/invoicing + keeping credit
      + banking
 
+.. todo::
+
+   .. Note:: **Terminology: Register vs. Registry**
+
 .. glossary::
    :sorted:
 
@@ -40,23 +44,14 @@ Glossary of Terms
    FQDN
       Fully Qualified Domain Name
 
-   feature
+   Feature
       a user-visible aspect, quality or characteristic of software
 
-   acquirer
+   Acquirer
       a person or an organization that acquires the system
 
-   customer
-      a registrar or registrant or end-user
-
-   guide
-      a document that contains only glimpses of actions
-
-   manual
-      a document that contains full-fledged sets of instructions
-
-   tutorial
-      a document that contains examples with specific data
+   Customer
+      a registrar or registrant or end user
 
    VAT
       value-added tax
