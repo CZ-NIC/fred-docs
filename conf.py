@@ -36,11 +36,6 @@ extensions = [
     'sphinx.ext.ifconfig',
 ]
 
-# Extensions configuration - TODOs
-todo_include_todos = True
-#todo_link_only = True
-
-
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -59,7 +54,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'FRED'
-copyright = u'2016, CZ.NIC'
+copyright = u'2016, CZ.NIC, z. s. p. o.'
 author = u'CZ.NIC'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -120,8 +115,10 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 # keep_warnings = False
 
+# Extensions configuration - TODOs
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
+#todo_link_only = True
 
 # Conditional inclusion tags - uncomment to allow inclusion
 #tags.add('mode_structure')
