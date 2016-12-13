@@ -45,7 +45,7 @@ email text.
 There is a set of parameters which are passed to all emails (*defaults.\**)
 but the passing of other parameters depends on the type of email.
 For a detailed reference of the passed parameters according to email type see
-the :ref:`FRED-Admin-App-CSParams` appendix.
+:ref:`FRED-Admin-App-CSParams`.
 
 .. NOTE
    Header - table: mail_header_defaults ?

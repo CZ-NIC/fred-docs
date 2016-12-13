@@ -1,8 +1,8 @@
 
 .. _FRED-Admin-AdminTasks-Objects:
 
-Object administration
-------------------------
+Registrable objects administration
+----------------------------------
 
 All information about objects can be browsed and viewed via the WebAdmin
 after login.
@@ -52,8 +52,8 @@ Blocking statuses
 The blocking is achieved by setting various blocking statuses.
 Which statuses are suitable depends on the case and the purpose of blocking.
 Sometimes you may need to block even the owner together with the domain
-in which case the owner contact is applied the same blocking statuses
-as the domain.
+in which case the same blocking statuses are applied to both the owner contact
+and the domain.
 
 * *The domain is administratively kept out of zone* – forces the exclusion
   of a domain from the zone (overrides all rules for domain inclusion),

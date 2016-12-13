@@ -61,6 +61,8 @@ into so-called **registrable objects**.
 To ensure the authenticity of the data, only authorized entities (Registrars)
 can perform registrations and modify existing data in the Registry.
 
+.. todo:: hard-coded and configurable rules
+
 .. contents:: Chapter TOC
    :local:
 

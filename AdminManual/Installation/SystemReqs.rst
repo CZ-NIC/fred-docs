@@ -14,7 +14,7 @@ We recommend to run the FRED on **64-bit** architectures.
 Binaries are available only for 64-bit architectures.
 
 Sources can be compiled for both 32-bit and 64-bit architectures
-but the 32-bit variant is no longer tested.
+but the 32-bit variant is no longer tested or supported.
 
 
 Operating system

@@ -1,8 +1,8 @@
 
 .. _FRED-Admin-App-CSParams:
 
-ClearSilver parameters
-----------------------
+Appendix: ClearSilver parameters reference
+------------------------------------------
 
 This is a reference of available parameters which are passed to ClearSilver
 templates when generating email based on events in the FRED.

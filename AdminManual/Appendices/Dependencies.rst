@@ -1,8 +1,8 @@
 
 
 
-Dependencies
-------------
+Appendix: Dependencies
+----------------------
 
 .. toctree::
 
