@@ -6,7 +6,9 @@
 FRED |version| Documentation
 ============================
 
-Regenerated |today|
+This documentation aids the users of the **Free Registry for ENUM and Domains**,
+the domain name registry software developed by the `CZ.NIC <http://www.nic.cz>`_
+as an open-source solution.
 
 .. only:: mode_structure
 
@@ -14,26 +16,29 @@ Regenerated |today|
       which means that it contains authoring/editing/managing notes
       in addition to the actual content.
 
+.. rubric:: General information on this documentation
+
+.. toctree::
+   :name: fred-toc-info
+   :maxdepth: 1
+
+   TypographicConventions
+   Glossary
+
 .. rubric:: Publications
 
 .. toctree::
-   :name: fred-toc
-   :maxdepth: 1
+   :name: fred-toc-publications
+   :maxdepth: 2
 
    Features/Main
    Architecture/Main
    AdminManual/Main
 
-
 .. only:: mode_structure
 
    .. rubric:: Structure notes
 
-   .. toctree::
-      :name: structure-toc
-      :maxdepth: 1
-
-      InfoSources
-      InfoStructure
-      TODOList
-
+   * `InfoSources <InfoSources.html>`_
+   * `InfoStructure <InfoStructure.html>`_
+   * `TODO List <TODOList.html>`_
