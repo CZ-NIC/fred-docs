@@ -5,7 +5,7 @@ Notifications
 -------------
 
 The Registrars and Registrants are notified about important situations
-in the Registry. 
+in the Registry.
 
 The Registrars are notified using the EPP mechanism of poll messages.
 The Registrants are notified using email. Emails are constructed
@@ -15,4 +15,4 @@ in a searchable archive.
 Notification conditions include domain expiration, domain disabling,
 domain unregistration or any object modification using EPP.
 
-All time periods for domain disabling and unregistration are configurable. 
+All time periods for domain disabling and unregistration are configurable.

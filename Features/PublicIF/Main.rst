@@ -15,7 +15,7 @@ Public features
    * Anonymous end users
       * WebWhois, UnxWhois, RDAP
       * restrictions (CAPTCHA)
-   * Registrants (Dom.Owners), Administrative contacts (Dom.), 
+   * Registrants (Dom.Owners), Administrative contacts (Dom.),
      Technical contacts (NS/Keys)
 
       * Notifications? (see General features)
