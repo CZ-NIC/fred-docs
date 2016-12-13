@@ -87,7 +87,7 @@ To set a blocking of a single domain, follow this procedure:
       * ``Create copy of the holder`` will duplicate the contact and apply
         the same blocking statuses to the duplicate as to the domain being blocked
         while the other domains and the original contact remain intact.
-   * *Block to date* – on this date, the blocking will be canceled automatically,
+   * *Block to date* – on this date, the blocking will be cancelled automatically,
    * *Blocking statuses* – select which blocking statuses to turn on.
 
 #. Apply the blocking by clicking the :guilabel:`Block` button

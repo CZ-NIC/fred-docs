@@ -281,7 +281,7 @@ This command grants a registrar permissions to manage objects in a specified zon
 
 * ``--handle`` (*) – registrar's handle
 * ``--zone_fqdn`` (*) – name of a zone the registrar gains access to
-* ``--from_date`` – date since when is the access allowed – default: today
+* ``--from_date`` – date since when the access is allowed – default: today
 
 
 Preparing the accounting subsystem
