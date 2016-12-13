@@ -47,4 +47,3 @@ Terms and definitions can be found :ref:`in the glossary <glossary>`.
    Customization
    Extensions
    Appendices/Main
-   ../Glossary
