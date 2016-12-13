@@ -46,7 +46,7 @@ To initialize the Registry, you need to perform these tasks:
    * create a price list for operations,
    * define the parameters for invoice numbering,
    * set the VAT tax and coefficient,
-   * assign credit to registrars.
+   * assign credit to registrars,
 
 * set some parameters.
 
@@ -71,7 +71,7 @@ Preparing a zone
 ----------------
 
 Preparing a zone is the most crucial task. The information you enter
-about a zone, will appear in the header of a generated zone file.
+about a zone will appear in the header of a generated zone file.
 When you create a zone, you enter the fields of the SOA record,
 and in the next step, you add the zone name servers.
 An example of the resulting zone file header is given
@@ -148,8 +148,6 @@ This command assigns a name server to a zone.
 * ``--ns_fqdn`` (*) – name server's FQDN – fully qualified domain name
 * ``--addr`` – name server's IP address (glue) – it is required when the name server's FQDN is from the same zone to which it is added; you can list several IP addresses separated by a comma
 
-.. Note:: The name servers are not tested, only saved to the database.
-
 .. _FRED-Admin-reginit-zone-example:
 
 Zone file example
@@ -182,9 +180,11 @@ Preparing registrars
 There are two types of registrars:
 
 * a **common registrar** is an organization which provides domain
-  administration to end-users and pays for access to the Registry, and
+  administration to end users and pays for access to the Registry, and
 * the **system registrar** which is used by the Registry to manage
   domains manually and to perform automated administration procedures.
+  This registrar has full permissions (he can change any object regardless
+  of object's sponsoring registrar or its blocking of changes).
 
 Both types of registrars are prepared in the same way:
 
@@ -225,7 +225,8 @@ This command creates a new registrar with some data.
 * ``--country`` (*) – registrar's country by 2-letter country code (table enum_country)
 * ``--no_vat`` – flag this registrar as NOT a :term:`VAT`-payer
 * ``--system`` – designates this registrar to be the "system registrar"
-* many other parameters are available, see the program help.
+* many other parameters are available, see the program help
+  ``fred-admin --registrar_add --help``.
 
 .. Note:: Registrar information can be edited later via the WebAdmin.
 

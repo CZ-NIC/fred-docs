@@ -6,8 +6,7 @@ Technical checks
 
 There are several technical checks that are performed on registered
 name servers to diagnose potential domain delegation problems.
-Those checks are completely informational and they do not block
-the registration process.
+Those checks are completely informational.
 
 Technical checks are invoked regularly in a configurable interval and
 their results are sent using email to contacts associated with name servers.

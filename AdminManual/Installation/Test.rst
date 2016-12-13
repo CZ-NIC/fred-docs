@@ -57,7 +57,7 @@ and/or try to run these programs in a terminal:
 * ``whois -h localhost whatever``
    Desired result: outputs Whoisd server version and ERROR:101
 * ``genzone_client whatever``
-   Desired result: outputs this error: "Uknown zone requested"
+   Desired result: outputs this error: "Unknown zone requested"
 
 If everything goes smoothly (websites open and programs finish as desired),
 then all system interfaces are available.

@@ -32,7 +32,7 @@ Installation steps
 #. Install the database schema
 
    The setup script installs table schemas and fills enumeration tables;
-   it does NOT initialize the system with basic data – that is described
+   it does NOT initialize the system with basic data – the latter is described
    in the :ref:`System initialization <FRED-Admin-Install-SysInit>` section.
 
    .. code:: bash

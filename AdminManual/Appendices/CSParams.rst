@@ -338,7 +338,7 @@ in the table ``mail_defaults``.
 * ``defaults.tel`` – phone contact of the company operating the Registry
 * ``defaults.fax`` – fax contact of the company operating the Registry
 * ``defaults.emailsupport`` – email contact of the technical support
-* ``defaults.authinfopage`` – URL of the site from which the end-users can
+* ``defaults.authinfopage`` – URL of the site from which the end users can
   request the transfer password (authinfo)
 * ``defaults.whoispage`` – URL of the site from which the public can search
   in the Registry

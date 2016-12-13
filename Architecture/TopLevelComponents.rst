@@ -39,7 +39,10 @@ components and their relationships.
 * *green* components are developed by the CZ.NIC but they are not
   parts of the FRED software (they are of internal GINGER projects)
 * *arrows* signify direct cooperation of components (the arrow points
-  at the component which serves the other component)
+  at the component which serves the other component); the colors of arrows
+  carry no meaning.
+* the complete IDL-coupling of the components with an *asterisk* (\*)
+  is pictured separately.
 
 
 

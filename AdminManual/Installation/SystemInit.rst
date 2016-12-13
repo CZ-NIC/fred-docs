@@ -5,7 +5,7 @@ System initialization
 ---------------------
 
 The system is installed and running, however it still is not fully functional –
-domains can not be registered yet because the database does not contain
+domains cannot be registered yet because the database does not contain
 any information about zones or registrars. This initial data must be
 put in, first.
 

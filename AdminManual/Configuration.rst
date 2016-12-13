@@ -64,6 +64,10 @@ In the default deployment scheme, all daemons run
 on a single machine and they share an all-in-one configuration file
 named :file:`server.conf`.
 
+In the deployment scheme adopted in the CZ.NIC, separate configuration files
+are used for each daemon, therefore they are listed with the daemons below
+and marked [CZ.NIC].
+
 .. Note::
 
    If you decide to deploy servers on several machines,
@@ -212,6 +216,9 @@ A description of parameters by name (also :ref:`see the figure below <fig-expira
 
          Events and periods related to domain expiration
 
+         Vertical bars on the time line signify notification events and
+         the crosses mean action events taken on domains.
+
 * ``regular_day_procedure_period`` – an hour in a day to run the regular
   procedure (24-hour system, 0 means 00:00, 14 means 14:00 etc.),
   default: 0
@@ -219,6 +226,12 @@ A description of parameters by name (also :ref:`see the figure below <fig-expira
   default: Europe/Prague
 
    .. Important:: It is necessary to adapt the time zone to your area!
+
+   The format of a value is the standardized PostgreSQL name of a time zone
+   which can be found either in the Postgres table ``pg_timezone_names``
+   (the *name* column) or `in this Wikipedia list
+   <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>`_
+   (the *TZ* column).
 
 * ``object_registration_protection_period`` – how many months an object
   (nsset, keyset) must be unedited and unassigned to be considered idle and

@@ -85,7 +85,7 @@ To set a blocking of a single domain, follow this procedure:
         to the registrant as the blocked domain(s) (this option can be chosen
         only if you're blocking all domains of this registrant at once),
       * ``Create copy of the holder`` will duplicate the contact and apply
-        the same blocking statuses to the duplicate as the blocked domain
+        the same blocking statuses to the duplicate as to the domain being blocked
         while the other domains and the original contact remain intact.
    * *Block to date* – on this date, the blocking will be canceled automatically,
    * *Blocking statuses* – select which blocking statuses to turn on.
@@ -93,7 +93,7 @@ To set a blocking of a single domain, follow this procedure:
 #. Apply the blocking by clicking the :guilabel:`Block` button
    and confirm with :guilabel:`OK`.
 
-.. Note:: A blocked contact can not be restored, you will have to use another
+.. Note:: A blocked contact cannot be restored, you will have to use another one
    when unblocking the domain.
 
 Change blocking

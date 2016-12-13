@@ -46,14 +46,14 @@ Download and unpack
    wget -i https://fred.nic.cz/files/fred/fred-sources-list.txt
    for F in *.tar.gz; do tar -zxvf $F; done
 
-Install (A) packages
+Install "A" packages
 ^^^^^^^^^^^^^^^^^^^^
 These packages are configured, compiled and installed using **Autotools** [#]_
 (autoconf, automake and libtool).
 
 IDL definitions are required during compilation, therefore the IDL package
-must be installed before other (A) packages and before the :file:`fred-pyfred`
-(D) package.
+must be installed before other "A" packages and before the :file:`fred-pyfred`
+"D" package.
 
 Package list:
 
@@ -80,7 +80,7 @@ the ``make`` reports "Nothing to be done...".)
 
 The last command just copies
 files required for operation to the target directories. (You usually need
-administrator permissions if you install somewhere else than your home
+administrator permissions if you install somewhere else than to your home
 directory.)
 
 The target directory (installation prefix), as well as other parameters
@@ -102,12 +102,12 @@ the :file:`mod-corba` installation::
    sudo ./libtool --finish /usr/lib/apache2/modules
 
 
-Install (D) packages
+Install "D" packages
 ^^^^^^^^^^^^^^^^^^^^
 
 These packages use **Distutils** for installation which is a collection
 of Python scripts based on :file:`python-setuptools`, therefore
-the Distutils package must be installed before other (D) packages.
+the Distutils package must be installed before other "D" packages.
 
 Package list:
 
@@ -212,8 +212,7 @@ Set timezone in PostgreSQL
 The FRED assumes database connections using UTC timezone, so configure
 PostgreSQL to handle connections using this timezone.
 Open :file:`/etc/postgresql/9.1/main/postgresql.conf` with a text editor
-and change the **timezone** parameter to UTC,
-e.g. ``sudo nano /etc/postgresql/9.1/main/postgresql.conf`` or use this script::
+and change the **timezone** parameter to UTC, or use this script::
 
    sudo sed -i~ -e "s/^#\?\s*timezone\s*=\s*[A-Za-z0-9_.-']*/timezone = 'UTC'/" \
       /etc/postgresql/9.1/main/postgresql.conf

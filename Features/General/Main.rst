@@ -52,7 +52,7 @@ The main goal of the FRED is to administer authoritative information
 on domains, domain ownership and owners which is then distributed via the DNS
 (zone file) as well as served in response to public queries (whois).
 To accomplish this, the system allows to input the relevant information into
-its database through the registration proccess and comprises the means
+its database through the registration process and comprises the means
 to administrate existing data.
 
 The relevant information obtained by the registration process is grouped

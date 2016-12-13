@@ -12,7 +12,7 @@ Public features
 
    **Chapter outline:**
 
-   * Anonymous end-users
+   * Anonymous end users
       * WebWhois, UnxWhois, RDAP
       * restrictions (CAPTCHA)
    * Registrants (Dom.Owners), Administrative contacts (Dom.), 

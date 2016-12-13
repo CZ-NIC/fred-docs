@@ -77,7 +77,7 @@ script to install software required for the operation of the FRED.
 
       apt-get install postfix
 
-3. Install the actual FRED with all dependencies
+3. Install the FRED package with all dependencies
 
    .. code:: bash
 
@@ -86,7 +86,7 @@ script to install software required for the operation of the FRED.
 #. Install the database schema of the FRED
 
    The *db manager* installs table schemas and fills enumeration tables;
-   it does NOT initialize the system with basic data – that is described
+   it does NOT initialize the system with basic data – the latter is described
    in the :ref:`System initialization <FRED-Admin-Install-SysInit>` section.
 
    .. code:: bash

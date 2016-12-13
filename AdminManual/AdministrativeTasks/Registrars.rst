@@ -74,14 +74,14 @@ if they exceed their preset price limit for EPP requests and
 the :ref:`periodic task to block Registrars over limit <block-registrars-limit>`
 is set up.
 
-Registrars can not be blocked via the WebAdmin.
+Registrars cannot be blocked via the WebAdmin.
 
 In case of emergency, a Registrar can be blocked on the command line::
 
    sudo fred-admin --block_registrar_id <registrar_id>
 
 .. Note:: If a Registrar was unblocked this month,
-   they can not be blocked again till the next month.
+   they cannot be blocked again till the next month.
 
 Unblock a Registrar
 ~~~~~~~~~~~~~~~~~~~

@@ -12,7 +12,9 @@ General
 ^^^^^^^
 
 * User authentication on login
-* User must be permitted to perform an action (read/change/block/unblock/delete/add)
+* User must be permitted to perform an action (The granularity of permissions
+  corresponds with the atomic operations over objects: read, change, block,
+  unblock, delete, add.)
 * Show/hide the history of details (set globally per session)
 * Extra confirmation for critical actions (e.g. domain blocking)
 * Referenced objects are linked by hypertext (object handles, attached files)
@@ -191,13 +193,15 @@ Browse audit log
 Browse and resolve public requests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+What is a :term:`public request`?
+
 * Search/filter public requests
 * View request details
 * Resolve the request
    * Accept and send
    * Invalidate and close
-   * Resend PIN3 Letter (copy)
-   * Resend PIN2 SMS (copy)
+   * Resend a copy of PIN3 Letter (used in contact verification)
+   * Resend a copy of PIN2 SMS (used in contact verification)
 
 
 

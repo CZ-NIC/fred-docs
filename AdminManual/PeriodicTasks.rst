@@ -94,7 +94,7 @@ Regular procedure
 
 * updates the states of the registrable objects of all types; the states
   depend on the time and other states that are set manually
-* notifies registrars and end-users (contacts) about state changes:
+* notifies registrars and end users (contacts) about state changes:
    * generates poll messages to notify registrars
    * generates emails to notify contacts
    * generates letters for domain deletion warning
@@ -146,9 +146,11 @@ procedure is finished)
   over several calls; this variant of the task means these activities:
 
    * creates a randomly-ordered list of objects (delete candidates)
-     whose length is ``object_delete_count``
-   * deletes ``object_delete_count / object_delete_parts`` objects from the
-     list, repeatedly in iterations
+   * deletes a fraction of the list, repeatedly in iterations,
+     the size of the fraction is given in the  ``--object_delete_parts`` option,
+     e.g. if ``--object_delete_parts=2``, a half of the list is deleted
+     in a single iteration, if ``object_delete_parts=10``, a tenth of the list
+     is deleted in a single iteration and so on
    * the value of ``object_delete_parts`` is calculated depending
      on CRON configuration (how often the task is run)
    * finally deletes the rest (``--object_delete_parts=1`` – this is
@@ -305,9 +307,8 @@ Refer to ``fred-admin --help_dates`` for acceptable date formatting.
 
 * selects contacts which
    * are linked to objects,
-   * were created on the day and the month of the date ``<date> − 300 days``
-     and the year lower or equal to the year in the ``<date>``
-   * have not been changed in the interval ``[<date> − 300 days; <date>]``
+   * were created on the day and month 300 days ago (before the specified date)
+   * were not changed in the last 300 days (relatively to the specified date)
 * sends them an email of the ``annual_contact_reminder`` type
 
 Collect statistics :sup:`$CZ-specific$`

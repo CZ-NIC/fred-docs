@@ -22,7 +22,7 @@ Operating system
 
 To deploy binaries, you must have installed one of these **operating systems**:
 
-* Ubuntu 12.04 LTS (Precise Pangolin)
+* Ubuntu 12.04 LTS (Precise Pangolin) – supported only until April 2017
 * Ubuntu 14.04 LTS (Trusty Tahr)
 * Ubuntu 16.04 LTS (Xenial Xerus)
 * Fedora 23

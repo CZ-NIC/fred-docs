@@ -45,7 +45,7 @@ This is the general search procedure:
    directly.
 
 .. Note:: The column collection of the result table is hard-coded
-   and it can not be adjusted.
+   and it cannot be adjusted.
 
 .. NOTE
    * saved filters - are there any default ones?
