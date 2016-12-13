@@ -1,0 +1,28 @@
+div.admonition {
+
+}
+
+div.admonition-todo {
+   background-color: #CAE2B6;
+   border: solid 1px #439427;
+}
+
+div.warning {
+   /*background-color: #CAE2B6;
+   border: solid 1px #439427;*/
+}
+
+div.important {
+   background-color: #EBEABD;
+   border: solid 1px #948327;
+}
+
+div.note {
+   background-color: #EEEEEE; /* code bg color */
+   border: solid 1px #D1D3D4;
+}
+
+div.tip {
+   background-color: #D1C2E6;
+   border: solid 1px #D1D3D4;
+}
