@@ -20,8 +20,6 @@ Customization
 
    .. struct-end
 
-   -----
-
 .. NOTE adapt database values (like template translation) in db init script
 
 The customization of the FRED mainly concerns the generated announcements,

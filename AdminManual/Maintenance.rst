@@ -22,8 +22,6 @@ Maintenance
 
    .. struct-end
 
-   -----
-
 This chapter should help you with the maintenance of the system,
 especially the dynamic data that is generated during the system operation.
 

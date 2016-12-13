@@ -20,8 +20,6 @@ Registry initialization
 
    .. struct-end
 
-   -----
-
 This chapter will help you initialize the Registry, i.e. introduce the crucial data that must be present in the system prior to registrations or
 any work with registrable objects.
 

@@ -33,8 +33,6 @@ Administrative tasks
 
    .. struct-end
 
-   -----
-
 This chapter will give you hints on how the typical administrative tasks are done.
 
 While some can be performed using the web administration application (WebAdmin),
