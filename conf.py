@@ -185,7 +185,7 @@ html_short_title = u'FRED Docs'
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
 #
-html_logo = "_static/fred-logo-text.png" #None
+html_logo = "fred_theme/static/fred-logo.png" #None
 
 # The name of an image file (relative to this directory) to use as a favicon of
 # the docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
