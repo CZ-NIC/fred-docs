@@ -40,8 +40,7 @@ Email type: ``expiration_notify``
   :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`exregdate <csparams-exregdate>`,
   :ref:`statechangedate <csparams-statechangedate>`,
-  :ref:`registrar <csparams-registrar>`,
-  :ref:`??? administrators <csparams-administrators>`
+  :ref:`registrar <csparams-registrar>`
 * additional parameter concerning ENUM domains:
   :ref:`valdate <csparams-valdate>`
 
@@ -57,9 +56,7 @@ Email type: ``expiration_dns_owner``
   :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`exregdate <csparams-exregdate>`,
   :ref:`statechangedate <csparams-statechangedate>`,
-  :ref:`registrar <csparams-registrar>`,
-  :ref:`??? administrators <csparams-administrators>`,
-  :ref:`??? zone <csparams-zone>`
+  :ref:`registrar <csparams-registrar>`
 * additional parameter concerning ENUM domains:
   :ref:`valdate <csparams-valdate>`
 
@@ -350,11 +347,6 @@ in the table ``mail_defaults``.
 Common parameters
 ~~~~~~~~~~~~~~~~~
 
-   .. _csparams-administrators:
-
-   ``administrators``
-      ???
-
    .. _csparams-authinfo:
 
    ``authinfo``
@@ -439,8 +431,3 @@ Common parameters
 
    ``valdate``
       date till when the ENUM domain has been validated
-
-   .. _csparams-zone:
-
-   ``zone``
-      ???
