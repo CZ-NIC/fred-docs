@@ -66,6 +66,18 @@ div.sphinxsidebar ul {
 
 /* adendum for styles */
 
+a {
+   color: #990D1C;  /* FRED Red, darkened */
+}
+
+a:hover, a:visited:hover {
+   color: black;
+}
+
+a:visited {
+   color: #804D52;  /* FRED Red, darkened, faded */
+}
+
 code {
     font-size: 1.1em;
     font-family: monospace;
@@ -115,4 +127,5 @@ div.sphinxsidebar #searchbox input[type="submit"] {
     /* background-color: #CF2F44; FRED Red */
     width: auto;
     text-transform: uppercase;
+    margin-top: 2px;
 }
