@@ -54,10 +54,10 @@ Databases
 
 We recommend these standard PostgreSQL's tools for database maintenance:
    * `Backup and Restore
-     <https://www.postgresql.org/docs/9.1/static/backup.html>`_
+     <https://www.postgresql.org/docs/current/static/backup.html>`_
      for database backups and
    * `Automatic Vacuuming
-     <https://www.postgresql.org/docs/9.1/static/runtime-config-autovacuum.html>`_
+     <https://www.postgresql.org/docs/current/static/runtime-config-autovacuum.html>`_
      for database cleanup.
 
 Simple backup: pg_dump
@@ -71,7 +71,7 @@ Recommended for both FRED databases—*main* and *logger*—as a minimum
 crash-safety precaution.
 
 See `PostgreSQL's documentation: SQL Dump
-<https://www.postgresql.org/docs/9.1/static/backup-dump.html>`_.
+<https://www.postgresql.org/docs/current/static/backup-dump.html>`_.
 
 Logger database content archivation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -90,7 +90,7 @@ but it only records the difference from the previous backup.
 Recommended for the *main* database as an advanced crash-safety precaution.
 
 See `PostgreSQL's documentation: Continuous Archiving
-<https://www.postgresql.org/docs/9.1/static/continuous-archiving.html>`_.
+<https://www.postgresql.org/docs/current/static/continuous-archiving.html>`_.
 
 
 
