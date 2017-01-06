@@ -6,7 +6,7 @@ Invoicing and banking
 
 The FRED implements the prepaid-invoicing model.
 
-Bank accounts are queried for incoming payments using out-of-the-box scripts
+Bank accounts are queried for incoming payments using bank-specific scripts
 and these payments are matched to Registrars using pairing symbols.
 If a payment matches, an advance invoice is issued and credit is extended
 to the matching Registrar by a corresponding amount.
@@ -19,7 +19,7 @@ and renewals and the total amount of money subtracted from the credit.
 
 .. Warning::
 
-   Work with the accounting subsystem might be a little tricky
+   Work with the accounting subsystem may be tricky
    because it is tightly tied to the context of the financial and commercial
    laws of the Czech Republic (esp. the :term:`VAT` handling and invoice
    essentials).
