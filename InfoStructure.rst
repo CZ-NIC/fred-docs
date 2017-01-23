@@ -1,3 +1,4 @@
+:orphan:
 
 .. _structure-overview:
 
