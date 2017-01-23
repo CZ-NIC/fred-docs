@@ -36,7 +36,7 @@ Zone SOA parameters are extracted from the real DNS.
 
 Here is an example of usage with the CZ zone:
 
-.. code:: bash
+.. code-block:: bash
 
    wget https://fred.nic.cz/files/fred/fred-config-zone.py
    python fred-config-zone.py cz > fred-config-cz.sh

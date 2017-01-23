@@ -26,7 +26,7 @@ Installation script
 To install the FRED and associated software with the installation script,
 follow this procedure:
 
-.. code:: bash
+.. code-block:: bash
 
    # Switch to root
    sudo su -
@@ -47,39 +47,39 @@ script to install software required for the operation of the FRED.
 
 #. Switch to root before you begin
 
-   .. code:: bash
+   .. code-block:: bash
 
       sudo su -
 
 #. Enable the `add-apt-repository` command
 
-   .. code:: bash
+   .. code-block:: bash
 
       apt-get install software-properties-common
 
 #. Add required repositories
 
-   .. code:: bash
+   .. code-block:: bash
 
       add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe multiverse"
       add-apt-repository "http://archive.nic.cz/ubuntu/"
 
 #. Add the CZ.NIC signing key to ``apt`` and update ``apt`` index
 
-   .. code:: bash
+   .. code-block:: bash
 
       apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F20C079E020ADBB4
       apt-get update
 
 #. Install the Postfix mail server
 
-   .. code:: bash
+   .. code-block:: bash
 
       apt-get install postfix
 
 3. Install the FRED package with all dependencies
 
-   .. code:: bash
+   .. code-block:: bash
 
       apt-get install fred
 
@@ -89,13 +89,13 @@ script to install software required for the operation of the FRED.
    it does NOT initialize the system with basic data – the latter is described
    in the :ref:`System initialization <FRED-Admin-Install-SysInit>` section.
 
-   .. code:: bash
+   .. code-block:: bash
 
       su - postgres -c "/usr/sbin/fred-dbmanager install"
 
 #. Enable the FRED sites in Apache and reload configuration
 
-   .. code:: bash
+   .. code-block:: bash
 
       a2ensite 02-fred-mod-eppd-apache.conf
       a2ensite 02-fred-mod-whoisd-apache.conf
@@ -105,7 +105,7 @@ script to install software required for the operation of the FRED.
 
 #. Start the FRED services
 
-   .. code:: bash
+   .. code-block:: bash
 
       service fred-rifd start
       service fred-adifd start
@@ -126,7 +126,7 @@ script to install software required for the operation of the FRED.
    .. todo:: Apache workaround should be conditional
       in the install script.
 
-   .. code:: bash
+   .. code-block:: bash
 
       apt-get install apache2-mpm-prefork # only 14.04
       a2dismod mpm_event

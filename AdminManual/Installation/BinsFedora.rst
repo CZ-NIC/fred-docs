@@ -19,13 +19,13 @@ Installation steps
 
 #. Get information about the FRED repository
 
-   .. code:: bash
+   .. code-block:: bash
 
       dnf install http://archive.nic.cz/yum/fred/23/x86_64/fred-repo-1.0-1.noarch.rpm
 
 #. Install all FRED packages
 
-   .. code:: bash
+   .. code-block:: bash
 
       dnf install fred-*
 
@@ -35,13 +35,13 @@ Installation steps
    it does NOT initialize the system with basic data – the latter is described
    in the :ref:`System initialization <FRED-Admin-Install-SysInit>` section.
 
-   .. code:: bash
+   .. code-block:: bash
 
       /usr/bin/postgresql-setup initdb
 
 #. Start services
 
-   .. code:: bash
+   .. code-block:: bash
 
       service postgresql start
       service omniNames start

@@ -79,7 +79,7 @@ An example of the resulting zone file header is given
 
 Creating a zone
 ^^^^^^^^^^^^^^^
-.. code:: bash
+.. code-block:: bash
 
    $ fred-admin --zone_add \
       --zone_fqdn=cz \
@@ -134,7 +134,7 @@ for example to **go.to**, **com.tw** or ENUM zones (like **0.2.4.e164.arpa**).
 
 Adding zone name servers
 ^^^^^^^^^^^^^^^^^^^^^^^^
-.. code:: bash
+.. code-block:: bash
 
    $ fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=a.ns.nic.cz
    $ fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=b.ns.nic.cz --addr=1.2.3.4
@@ -152,7 +152,7 @@ Zone file example
 ^^^^^^^^^^^^^^^^^
 The data given in the examples above result in the following zone file header:
 
-.. code:: bash
+.. code-block:: bash
 
    $TTL 18000 ;default TTL for all records in zone
    cz.             IN      SOA     a.ns.nic.cz.    hostmaster.nic.cz. (1445442458 900 300 604800 900)
@@ -203,7 +203,7 @@ Both types of registrars are prepared in the same way:
 
 Creating a registrar
 ^^^^^^^^^^^^^^^^^^^^
-.. code:: bash
+.. code-block:: bash
 
    # adding a common registrar:
    $ fred-admin --registrar_add \
@@ -233,7 +233,7 @@ Setting authentication data
 
 Authentication data allows registrars to connect to the Registry securely.
 
-.. code:: bash
+.. code-block:: bash
 
    $ fred-admin --registrar_acl_add \
       --handle=REG-FRED_A \
@@ -269,7 +269,7 @@ This command assigns the given access control data to a registrar.
 
 Granting access to a zone
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-.. code:: bash
+.. code-block:: bash
 
    $ fred-admin --registrar_add_zone \
       --zone_fqdn=cz --handle=REG-FRED_A \
@@ -331,7 +331,7 @@ Chargeable operations include:
    * [Future?] ``Fee`` – fee for the access to a zone, pricing period: per year
 
 
-.. code:: bash
+.. code-block:: bash
 
    $ fred-admin --price_add --operation='CreateDomain' --zone_fqdn=cz \
       --valid_from='2014-12-31 23:00:00' \
@@ -395,7 +395,7 @@ You have two ways of defining initial invoice numbers:
 
 Creating default initial numbers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. code:: bash
+.. code-block:: bash
 
    $ fred-admin --add_invoice_number_prefix \
       --prefix=24 --zone_fqdn=cz --invoice_type_name=advance
@@ -415,7 +415,7 @@ This command adds a number prefix for invoices of a given type in a zone.
      for provided services), usually monthly
    * ``advance`` – depositing credit, when a payment was received
 
-.. code:: bash
+.. code-block:: bash
 
    $ fred-admin --create_invoice_prefixes --for_current_year
 
@@ -428,7 +428,7 @@ Defining custom initial numbers
 
 .. todo:: QUESTION Is okay or deprecated?
 
-.. code:: bash
+.. code-block:: bash
 
    $ fred-admin --invoice_add_prefix --zone_fqdn=cz --type 0 --year 2017 --prefix 401700001
 
@@ -454,7 +454,7 @@ places, e.g. for 21 % VAT: 21 / (21 + 100) = 0.1736.
 Since there is no command to change the VAT rate, you must run an SQL script
 directly:
 
-.. code:: bash
+.. code-block:: bash
 
    $ psql -U fred
    fred=> begin;
@@ -470,7 +470,7 @@ This SQL script will:
 
 Assigning credit to a registrar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. code:: bash
+.. code-block:: bash
 
    $ fred-admin --invoice_credit \
       --zone_id=1 --registrar_id=1 --price=15000
@@ -488,13 +488,13 @@ amount is subtracted automatically.
 .. Tip:: To find an *id* of a zone or a registrar, you must run an SQL query
    against the database, for example:
 
-   .. code:: bash
+   .. code-block:: bash
 
        $ psql -U fred -c "SELECT id FROM registrar where handle = 'REG-FRED_A';"
 
    This command will find a registrar by its handle and return its identifier.
 
-   .. code:: bash
+   .. code-block:: bash
 
        $ psql -U fred -c "SELECT id FROM zone where fqdn = 'cz';"
 

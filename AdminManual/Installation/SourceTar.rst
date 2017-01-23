@@ -10,7 +10,7 @@ the follow-up installation. This procedure is meant for Ubuntu.
 Add the CZ.NIC repositories and signing key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. code:: bash
+.. code-block:: bash
 
    add-apt-repository "deb http://archive.nic.cz/ubuntu $(lsb_release -sc) main"
    add-apt-repository "deb http://archive.nic.cz/private $(lsb_release -sc) main"

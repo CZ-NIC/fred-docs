@@ -72,7 +72,7 @@ after the :ref:`initialization with the config-zone script <init-zone-script>`.
 
 .. TODO Add link to zone semi-automatic initialization with a script
 
-.. code:: bash
+.. code-block:: bash
 
    # Connect to the server via EPP and login with the specified username and password
    fred-client -u REG-CZ -w passwd
