@@ -123,7 +123,6 @@ Email type: ``expiration_validation_before``
   :ref:`exregdate <csparams-exregdate>`,
   :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`registrar <csparams-registrar>`,
-  :ref:`administrators <csparams-administrators>`,
   :ref:`valdate <csparams-valdate>`
 
 Email type: ``expiration_validation``
@@ -140,7 +139,6 @@ Email type: ``expiration_validation``
   :ref:`exregdate <csparams-exregdate>`,
   :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`registrar <csparams-registrar>`,
-  :ref:`administrators <csparams-administrators>`,
   :ref:`valdate <csparams-valdate>`
 
 Email type: ``notification_create``
