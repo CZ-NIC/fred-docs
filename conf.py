@@ -144,7 +144,8 @@ html_theme = 'fred_theme'
 html_theme_options = {
     "bgcolor"    : "white",
     "textcolor"  : "#666666",
-    "linkcolor"  : "#339fc7",
+    "linkcolor"  : "#990D1C", # FRED Red, darkened
+    "visitedlinkcolor": "#804D52", # FRED Red, darkened, faded
     "relbarbgcolor"   : "#444444",
     "relbartextcolor" : "white",
     #"sidebarbgcolor"   : "#white",
