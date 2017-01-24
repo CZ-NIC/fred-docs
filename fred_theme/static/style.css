@@ -117,4 +117,5 @@ div.sphinxsidebar #searchbox input[type="submit"] {
     width: auto;
     text-transform: uppercase;
     margin-top: 2px;
+    margin-bottom: 2px;
 }
