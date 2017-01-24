@@ -8,8 +8,13 @@ div.admonition-todo {
 }
 
 div.warning {
-   /*background-color: #CAE2B6;
-   border: solid 1px #439427;*/
+   background-color: #FFE4E4;
+   border: solid 3px #990D1C;
+}
+
+div.caution {
+   background-color: #FFE4E4;
+   border: solid 1px #990D1C;
 }
 
 div.important {
