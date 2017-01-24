@@ -51,7 +51,7 @@ script to install software required for the operation of the FRED.
 
       sudo su -
 
-#. Enable the `add-apt-repository` command
+#. Enable the ``add-apt-repository`` command
 
    .. code-block:: bash
 
@@ -85,7 +85,8 @@ script to install software required for the operation of the FRED.
 
 #. Install the database schema of the FRED
 
-   The *db manager* installs table schemas and fills enumeration tables;
+   The :program:`fred-dbmanager` installs table schemas and fills enumeration
+   tables;
    it does NOT initialize the system with basic data – the latter is described
    in the :ref:`System initialization <FRED-Admin-Install-SysInit>` section.
 
@@ -115,13 +116,13 @@ script to install software required for the operation of the FRED.
       service fred-pyfred start
       service fred-webadmin start
 
-#. Replace `mpm-event` with `mpm-prefork` in Apache and restart
+#. Replace ``mpm-event`` with ``mpm-prefork`` in Apache and restart
 
    .. Note:: This is a workaround for Ubuntu 14.04 and 16.04.
 
-      The `mod-whoisd` module is not compatible with the `mpm-event`
+      The ``mod-whoisd`` module is not compatible with the ``mpm-event``
       Apache scheme that is installed by default, so it must be
-      disabled and replaced with `mpm-prefork`.
+      disabled and replaced with ``mpm-prefork``.
 
    .. todo:: Apache workaround should be conditional
       in the install script.

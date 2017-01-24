@@ -152,38 +152,38 @@ Email type: ``notification_create``
   :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
 
 * additional parameters concerning new objects:
-   * fresh.object.authinfo – transfer password
+   * ``fresh.object.authinfo`` – transfer password
 
 * additional parameters concerning a new **contact**:
-   * fresh.contact.name – name of contact person
-   * fresh.contact.org – organization name
-   * fresh.contact.address.permanent – permanent personal address / organization
+   * ``fresh.contact.name`` – name of contact person
+   * ``fresh.contact.org`` – organization name
+   * ``fresh.contact.address.permanent`` – permanent personal address / organization
      headquarters address
-   * fresh.contact.address.mailing – mailing address
-   * fresh.contact.address.billing – billing address
-   * fresh.contact.address.shipping – 1\ :sup:`st` shipping address
-   * fresh.contact.address.shipping_2 – 2\ :sup:`nd` shipping address
-   * fresh.contact.address.shipping_3 – 3\ :sup:`rd` shipping address
-   * fresh.contact.telephone – phone/mobile number
-   * fresh.contact.fax – fax number
-   * fresh.contact.email – email address
-   * fresh.contact.notify_email – notification email address
-   * fresh.contact.ident_type – type of personal identification
-   * fresh.contact.ident – personal identifier
-   * fresh.contact.vat – VAT-payer registration number (DIČ)
-   * fresh.contact.disclose.name – name disclosure setting (show/hide)
-   * fresh.contact.disclose.org – organization disclosure setting (show/hide)
-   * fresh.contact.disclose.email – email disclosure setting (show/hide)
-   * fresh.contact.disclose.address – address disclosure setting (show/hide)
-   * fresh.contact.disclose.notify_email – notification email disclosure setting
-     (show/hide)
-   * fresh.contact.disclose.ident – personal identifier disclosure setting
-     (show/hide)
-   * fresh.contact.disclose.vat – VAT-payer identification number disclosure
+   * ``fresh.contact.address.mailing`` – mailing address
+   * ``fresh.contact.address.billing`` – billing address
+   * ``fresh.contact.address.shipping`` – 1\ :sup:`st` shipping address
+   * ``fresh.contact.address.shipping_2`` – 2\ :sup:`nd` shipping address
+   * ``fresh.contact.address.shipping_3`` – 3\ :sup:`rd` shipping address
+   * ``fresh.contact.telephone`` – phone/mobile number
+   * ``fresh.contact.fax`` – fax number
+   * ``fresh.contact.email`` – email address
+   * ``fresh.contact.notify_email`` – notification email address
+   * ``fresh.contact.ident_type`` – type of personal identification
+   * ``fresh.contact.ident`` – personal identifier
+   * ``fresh.contact.vat`` – VAT-payer registration number (DIČ)
+   * ``fresh.contact.disclose.name`` – name disclosure setting (show/hide)
+   * ``fresh.contact.disclose.org`` – organization disclosure setting (show/hide)
+   * ``fresh.contact.disclose.email`` – email disclosure setting (show/hide)
+   * ``fresh.contact.disclose.address`` – address disclosure setting (show/hide)
+   * ``fresh.contact.disclose.notify_email`` – notification email disclosure
      setting (show/hide)
-   * fresh.contact.disclose.telephone – phone number disclosure setting
+   * ``fresh.contact.disclose.ident`` – personal identifier disclosure setting
      (show/hide)
-   * fresh.contact.disclose.fax – fax number disclosure setting (show/hide)
+   * ``fresh.contact.disclose.vat`` – VAT-payer identification number disclosure
+     setting (show/hide)
+   * ``fresh.contact.disclose.telephone`` – phone number disclosure setting
+     (show/hide)
+   * ``fresh.contact.disclose.fax`` – fax number disclosure setting (show/hide)
 
 * There are no additional parameters concerning new objects of other types
   (nsset, domain, keyset).
