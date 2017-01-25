@@ -148,7 +148,6 @@ html_theme_options = {
     "visitedlinkcolor": "#804D52", # FRED Red, darkened, faded
     "relbarbgcolor"   : "#444444",
     "relbartextcolor" : "white",
-    #"sidebarbgcolor"   : "#white",
     "sidebartextcolor" : "#666666",
     "sidebarlinkcolor" : "#339fc7",
     "codebgcolor"   : "#EEEEEE",
@@ -158,7 +157,6 @@ html_theme_options = {
     "headlinkcolor"   : "black",
     "footerbgcolor"   : "white",
     "footertextcolor" : "#878787",
-    # "stickysidebar" : True,
     "externalrefs" : True
 }
 
