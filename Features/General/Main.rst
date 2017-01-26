@@ -83,3 +83,9 @@ can perform registrations and modify existing data in the Registry.
 .. include:: DNSSECSupport.rst
 
 .. include:: InvoicingBanking.rst
+
+.. include:: ENUM.rst
+
+.. include:: ContactVerification.rst
+
+.. include:: ObjectLocking.rst
