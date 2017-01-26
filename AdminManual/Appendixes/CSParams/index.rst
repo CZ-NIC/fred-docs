@@ -46,6 +46,7 @@ Email type: ``expiration_notify``
   :ref:`exdate <csparams-exdate>`,
   :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`exregdate <csparams-exregdate>`,
+  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
   :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`registrar <csparams-registrar>`,
   :ref:`administrators <csparams-administrators>`
@@ -61,6 +62,7 @@ Email type: ``expiration_dns_warning_owner``
   :ref:`owner <csparams-owner>`,
   :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`exregdate <csparams-exregdate>`,
+  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
   :ref:`registrar <csparams-registrar>`,
   :ref:`administrators <csparams-administrators>`,
   :ref:`zone <csparams-zone>`
@@ -84,6 +86,7 @@ Email type: ``expiration_dns_owner``
   :ref:`exdate <csparams-exdate>`,
   :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`exregdate <csparams-exregdate>`,
+  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
   :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`registrar <csparams-registrar>`,
   :ref:`administrators <csparams-administrators>`,
@@ -102,6 +105,7 @@ Email type: ``expiration_register_owner``
   :ref:`exdate <csparams-exdate>`,
   :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`exregdate <csparams-exregdate>`,
+  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
   :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`registrar <csparams-registrar>`
 * additional parameter concerning ENUM domains:
@@ -119,6 +123,7 @@ Email type: ``expiration_dns_tech``
   :ref:`exdate <csparams-exdate>`,
   :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`exregdate <csparams-exregdate>`,
+  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
   :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`registrar <csparams-registrar>`
 * additional parameter concerning ENUM domains:
@@ -135,6 +140,7 @@ Email type: ``expiration_register_tech``
   :ref:`exdate <csparams-exdate>`,
   :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`exregdate <csparams-exregdate>`,
+  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
   :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`registrar <csparams-registrar>`
 * additional parameter concerning ENUM domains:
@@ -152,6 +158,7 @@ Email type: ``expiration_validation_before``
   :ref:`exdate <csparams-exdate>`,
   :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`exregdate <csparams-exregdate>`,
+  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
   :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`registrar <csparams-registrar>`,
   :ref:`valdate <csparams-valdate>`
@@ -168,6 +175,7 @@ Email type: ``expiration_validation``
   :ref:`exdate <csparams-exdate>`,
   :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`exregdate <csparams-exregdate>`,
+  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
   :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`registrar <csparams-registrar>`,
   :ref:`valdate <csparams-valdate>`
@@ -507,6 +515,12 @@ Common parameters
    ``exregdate``
       date from which the domain can be registered by another subject
       (domain is unguarded)
+
+   .. _csparams-day_before_exregdate:
+
+   ``day_before_exregdate``
+      date of the last day the domain is guarded
+      (one day before registration cancellation)
 
    .. _csparams-handle:
 
