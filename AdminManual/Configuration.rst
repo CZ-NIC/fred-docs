@@ -143,7 +143,7 @@ Located in :file:`@PREFIX@/bin`
 * :file:`fred-admin` – Automated administration tasks, especially those
   performed periodically
   (see also :ref:`Periodic tasks <FRED-Admin-PeriodicTasks>`)
-* :file:`fred-client` – Tool for Registrars (:file:`/etc/fred/fred-client.conf`)
+* :file:`fred-client` – Tool for registrars (:file:`/etc/fred/fred-client.conf`)
 * :file:`fred-doc2pdf` – Rendering the standard input (RML) into the PDF
   (:file:`/etc/fred/fred-doc2pdf.conf`)
 * :file:`genzone_client` – Generating zones (:file:`/etc/fred/genzone.conf`)

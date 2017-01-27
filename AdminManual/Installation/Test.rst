@@ -11,7 +11,7 @@ There are several levels of testing the installation:
 * :ref:`a check of running processes <test-processes>`,
 * :ref:`a smoke test <test-smoke>` that will check that all FRED's interfaces
   are correctly configured and responding,
-* :ref:`a zone test <test-registrations>` that will check that a Registrar
+* :ref:`a zone test <test-registrations>` that will check that a registrar
   can access the zone, make registrations and that the registered domain
   is generated into the zone file and available via the public interface.
 

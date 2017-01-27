@@ -4,12 +4,12 @@
 Notifications
 -------------
 
-The Registrars and Registrants are notified about important situations
+The registrars and registrants are notified about important situations
 in the Registry.
 
-The Registrars are notified using the EPP mechanism of poll messages.
+The registrars are notified using the EPP mechanism of poll messages.
 
-The Registrants are notified using email or printed letters.
+The registrants are notified using email or printed letters.
 All mail is constructed from predefined configurable templates.
 All outgoing mail is stored in a searchable archive.
 The email messages produced by the system comply

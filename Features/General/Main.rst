@@ -58,7 +58,7 @@ to administrate existing data.
 The relevant information obtained by the registration process is grouped
 into so-called **registrable objects**.
 
-To ensure the authenticity of the data, only authorized entities (Registrars)
+To ensure the authenticity of the data, only authorized entities (registrars)
 can perform registrations and modify existing data in the Registry.
 
 .. todo:: hard-coded and configurable rules

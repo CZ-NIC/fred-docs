@@ -286,7 +286,7 @@ Preparing the accounting subsystem
 ----------------------------------
 
 The accounting subsystem allows you to set prices for operations,
-charge Registrars for these operations, keep track of their credit
+charge registrars for these operations, keep track of their credit
 and create bills (invoices) for them.
 
 All these functions are built-in and on by default.

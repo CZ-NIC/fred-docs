@@ -4,26 +4,26 @@
 Registrar administration
 ------------------------
 
-All Registrar information can be managed via the WebAdmin after login.
+All registrar information can be managed via the WebAdmin after login.
 
-List all Registrars
+List all registrars
 ^^^^^^^^^^^^^^^^^^^
 
 Select in the WebAdmin menu: :menuselection:`Registrars --> List`
 
 Or run on the command line ``sudo fred-admin --registrar_list`` (XML output
-containing all Registrars' details).
+containing all registrars' details).
 
-View Registrar's details
+View registrar's details
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-`List all Registrars`_ or :ref:`search <FRED-Admin-AdminTasks-Search>`
-for a Registrar in the WebAdmin and then click on its *handle* to display
+`List all registrars`_ or :ref:`search <FRED-Admin-AdminTasks-Search>`
+for a registrar in the WebAdmin and then click on its *handle* to display
 the details.
 
-Add a Registrar
+Add a registrar
 ^^^^^^^^^^^^^^^
-To add a new Registrar in the WebAdmin, follow this procedure:
+To add a new registrar in the WebAdmin, follow this procedure:
 
 #. Select :menuselection:`Registrars --> Create new` from the menu
    to display the edit form and fill it in:
@@ -34,13 +34,13 @@ To add a new Registrar in the WebAdmin, follow this procedure:
    * Zones – grant access to zones
    * Groups – assign membership in groups
      (you may need to `create a group`_ first)
-   * Certifications – evaluation of Registrar's retail services
-     (it can be used in the public overview of Registrars (default location:
+   * Certifications – evaluation of registrar's retail services
+     (it can be used in the public overview of registrars (default location:
      http://localhost/whois/registrars.py,
      see also the `Certification programme in the CZ.NIC
      <https://www.nic.cz/page/928/>`_)
 
-#. Click the :guilabel:`Save` button to save the new Registrar.
+#. Click the :guilabel:`Save` button to save the new registrar.
 
 Or provide the details on the command line. (See the program help
 for command parameters.)
@@ -51,48 +51,48 @@ for command parameters.)
 * Groups: ``sudo fred-admin --registrar_into_group <parameters>``
 * Certifications: ``sudo fred-admin --registrar_create_certification <parameters>``
 
-Edit Registrar's details
+Edit registrar's details
 ^^^^^^^^^^^^^^^^^^^^^^^^
-To modify Registrar's information, use the WebAdmin:
+To modify registrar's information, use the WebAdmin:
 
-#. `View Registrar's details`_, then scroll to the bottom and click
+#. `View registrar's details`_, then scroll to the bottom and click
    :guilabel:`Edit` to display the edit form.
-#. Edit the details (see `Add a Registrar`_ for a description of the details).
+#. Edit the details (see `Add a registrar`_ for a description of the details).
 #. Click the :guilabel:`Save` button, when you finish, to save the changes.
 
 Registrar blocking
 ^^^^^^^^^^^^^^^^^^
-Blocking a Registrar means that their EPP access is suspended
-until the end of the current month. The usual reason is that a Registrar
+Blocking a registrar means that their EPP access is suspended
+until the end of the current month. The usual reason is that a registrar
 wants to cease activity when their monthly budget for EPP requests is exhausted.
 
-Block a Registrar
+Block a registrar
 ~~~~~~~~~~~~~~~~~
 
 Registrars are blocked by the system automatically
 if they exceed their preset price limit for EPP requests and
-the :ref:`periodic task to block Registrars over limit <block-registrars-limit>`
+the :ref:`periodic task to block registrars over limit <block-registrars-limit>`
 is set up.
 
 Registrars cannot be blocked via the WebAdmin.
 
-In case of emergency, a Registrar can be blocked on the command line::
+In case of emergency, a registrar can be blocked on the command line::
 
    sudo fred-admin --block_registrar_id <registrar_id>
 
-.. Note:: If a Registrar was unblocked this month,
+.. Note:: If a registrar was unblocked this month,
    they cannot be blocked again till the next month.
 
-Unblock a Registrar
+Unblock a registrar
 ~~~~~~~~~~~~~~~~~~~
 
-A Registrar can be unblocked via the WebAdmin:
+A registrar can be unblocked via the WebAdmin:
 
-#. `View Registrar's details`_, scroll down and click the :guilabel:`Unblock`
+#. `View registrar's details`_, scroll down and click the :guilabel:`Unblock`
    button.
 #. You will be prompted for an extra confirmation by retyping a number.
    Type it and hit :guilabel:`OK`.
-#. The Registrar is unblocked.
+#. The registrar is unblocked.
 
 Or on the command line::
 
@@ -100,13 +100,13 @@ Or on the command line::
 
 Registrar groups
 ^^^^^^^^^^^^^^^^
-Registrar groups are handy when you want to categorize the Registrars,
+Registrar groups are handy when you want to categorize the registrars,
 e.g. to mark which of them support DNSSEC or IPv6.
 
 To view the list of groups, select in the WebAdmin menu:
 :menuselection:`Registrars --> Groups`
 
-You can **change membership in a group** when you `edit Registrar's details`_.
+You can **change membership in a group** when you `edit registrar's details`_.
 
 Create a group
 ~~~~~~~~~~~~~~
@@ -132,11 +132,11 @@ the :guilabel:`Delete` checkbox and click :guilabel:`Save`.
 
 .. Note:: The WebAdmin lets you remove only empty groups.
 
-Assign a payment to a Registrar
+Assign a payment to a registrar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If a payment was imported to the database but it could not be matched
-with a Registrar automatically, you can do so manually in the WebAdmin:
+with a registrar automatically, you can do so manually in the WebAdmin:
 
 #. To view the list of payments, select in the WebAdmin menu:
    :menuselection:`Registrars --> Payments`
@@ -152,7 +152,7 @@ with a Registrar automatically, you can do so manually in the WebAdmin:
    You will be prompted for an extra confirmation by retyping a number.
    Type it and hit :guilabel:`OK`.
 
-#. The pairing is saved. (If the payment was sufficient, Registrar's credit
+#. The pairing is saved. (If the payment was sufficient, registrar's credit
    is increased.)
 
 .. NOTE The type of payment must correspond with an appropriate destination

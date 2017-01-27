@@ -17,7 +17,7 @@ Database search
    * Show a saved filter
 
 The WebAdmin allows you to search any objects in the database,
-typically Registrars or registrable objects but also archived mail and messages,
+typically registrars or registrable objects but also archived mail and messages,
 public requests or the audit log.
 
 This is the general search procedure:

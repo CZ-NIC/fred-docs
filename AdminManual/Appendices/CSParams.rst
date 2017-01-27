@@ -323,24 +323,20 @@ Registry information (defaults)
 These parameters are passed to all email types and can be found and adapted
 in the table ``mail_defaults``.
 
-* ``defaults.company`` – name of the company operating the Registry
-* ``defaults.street`` – street in the headquarters address of the company
-  operating the Registry
+* ``defaults.company`` – name of the Registry
+* ``defaults.street`` – street in the headquarters address of the Registry
 * ``defaults.postalcode`` – postal code in the headquarters address of the
-  company operating the Registry
-* ``defaults.city`` – city in the headquarters address of the company operating
-  the Registry
-* ``defaults.tel`` – phone contact of the company operating the Registry
-* ``defaults.fax`` – fax contact of the company operating the Registry
+  Registry
+* ``defaults.city`` – city in the headquarters address of the Registry
+* ``defaults.tel`` – phone contact of the Registry
+* ``defaults.fax`` – fax contact of the Registry
 * ``defaults.emailsupport`` – email contact of the technical support
-* ``defaults.authinfopage`` – URL of the site from which the end users can
+* ``defaults.authinfopage`` – URL of the site from which registrants can
   request the transfer password (authinfo)
 * ``defaults.whoispage`` – URL of the site from which the public can search
   in the Registry
-* ``defaults.company_cs`` – Czech variant of the name of the company
-  operating the Registry
-* ``defaults.company_en`` – English variant of the name of the company
-  operating the Registry
+* ``defaults.company_cs`` – Czech variant of the company name of the Registry
+* ``defaults.company_en`` – English variant of the company name of the Registry
 
 Common parameters
 ~~~~~~~~~~~~~~~~~

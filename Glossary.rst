@@ -67,6 +67,6 @@ Glossary of Terms
       (`RFC 5730 <https://tools.ietf.org/html/rfc5730>`_)
 
    Public request
-      This is a request by an end user that is submitted directly
+      This is a request by a registrant that is submitted directly
       to the Registry, e.g. a request for a transfer password or an enhanced
       security setting. See also https://www.nic.cz/whois/publicrequest/

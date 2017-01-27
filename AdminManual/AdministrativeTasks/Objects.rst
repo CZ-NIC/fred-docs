@@ -22,7 +22,7 @@ The operations for object modification encompass:
 * transfer – perform a transfer,
 * update – change object's details.
 
-These operations typically are performed by the Registrars
+These operations typically are performed by the registrars
 and they can be achieved only through the EPP interface.
 If you need to do any of these as the Registry, it is what
 the **system registrar** is for.
@@ -80,7 +80,7 @@ To set a blocking of a single domain, follow this procedure:
    * *Holder blocking* – decide what to do with the domain's owner:
       * ``Do not block the holder`` will not do anything with the registrant,
         they will be able to change any contact information or
-        the sponsoring Registrar or to be deleted,
+        the sponsoring registrar or to be deleted,
       * ``Block the holder`` will apply the same blocking statuses
         to the registrant as the blocked domain(s) (this option can be chosen
         only if you're blocking all domains of this registrant at once),
