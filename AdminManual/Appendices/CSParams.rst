@@ -155,8 +155,8 @@ Email type: ``notification_create``
 * additional parameters concerning a new **contact**:
    * ``fresh.contact.name`` – name of contact person
    * ``fresh.contact.org`` – organization name
-   * ``fresh.contact.address.permanent`` – permanent personal address / organization
-     headquarters address
+   * ``fresh.contact.address.permanent`` – permanent personal address
+     / organization headquarters address
    * ``fresh.contact.address.mailing`` – mailing address
    * ``fresh.contact.address.billing`` – billing address
    * ``fresh.contact.address.shipping`` – 1\ :sup:`st` shipping address
@@ -419,7 +419,8 @@ Common parameters
    .. _csparams-type:
 
    ``type``
-      object type by number: ``1`` – contact, ``2`` – nsset, ``3`` – domain, ``4`` – keyset
+      object type by number: ``1`` – contact, ``2`` – nsset, ``3`` – domain,
+      ``4`` – keyset
 
    .. _csparams-valdate:
 

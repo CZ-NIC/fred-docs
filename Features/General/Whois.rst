@@ -17,6 +17,6 @@ There is even a possibility to enable CAPTCHA protection against robots.
 
 Both versions contain the security feature of hiding personal data of contacts.
 
-Additionally, FRED contains a prototype implementation of the RDAP protocol
+Additionally, the FRED contains a prototype implementation of the RDAP protocol
 which allows client applications to obtain results in a more recent,
 machine-readable format (JSON).

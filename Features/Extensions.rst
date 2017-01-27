@@ -1,10 +1,12 @@
 
 .. _FRED-Features-Extensions:
 
-Extensions features
+Extending features
 ======================
 
-The FRED has some extensions.
+The FRED functionality is enriched by some extensions.
+
+.. Note:: So far, these extensions are specific to the Czech Registry.
 
 MojeID
 ------
@@ -21,5 +23,5 @@ Domain Browser
 
 `Domain Browser <https://www.domenovyprohlizec.cz/>`_
 is a web application that allows authenticated users to display
-data from the domain registry to which a user is related as a contact.
+data from the domain register to which a user is related as a contact.
 It uses the MojeID service for user authentication.

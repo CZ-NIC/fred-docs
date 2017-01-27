@@ -20,7 +20,8 @@ Registry initialization
 
    .. struct-end
 
-This chapter will help you initialize the Registry, i.e. introduce the crucial data that must be present in the system prior to registrations or
+This chapter will help you initialize the Registry, i.e. introduce
+the crucial data that must be present in the system prior to registrations or
 any work with registrable objects.
 
 It is assumed that you have installed the FRED's database schema already
@@ -144,7 +145,9 @@ This command assigns a name server to a zone.
 
 * ``--zone_fqdn`` (*) – the zone a name server is added to
 * ``--ns_fqdn`` (*) – name server's FQDN – fully qualified domain name
-* ``--addr`` – name server's IP address (glue) – it is required when the name server's FQDN is from the same zone to which it is added; you can list several IP addresses separated by a comma
+* ``--addr`` – name server's IP address (glue) – it is required
+  when the nameserver's FQDN is from the same zone to which it is added;
+  you can list several IP addresses separated by a comma
 
 .. _FRED-Admin-reginit-zone-example:
 
@@ -220,7 +223,7 @@ This command creates a new registrar with some data.
 * ``--handle`` (*) – handle of the registrar to be added
 * ``--reg_name`` – registrar's name – you may set it the same as ``--organization``
 * ``--organization`` – registrar's organization or company
-* ``--country`` (*) – registrar's country by 2-letter country code (table enum_country)
+* ``--country`` (*) – registrar's country by 2-letter country code (table ``enum_country``)
 * ``--no_vat`` – flag this registrar as NOT a :term:`VAT`-payer
 * ``--system`` – designates this registrar to be the "system registrar"
 * many other parameters are available, see the program help
@@ -321,7 +324,7 @@ Chargeable operations include:
   EPP commands: create_domain, renew_domain), pricing period:
   per unit (:ref:`ex_period_min <FRED-Admin-reginit-zone-add>`)
 
-.. QUESTION RenewDomain - per unit nebo natvrdo per year?
+.. QUESTION RenewDomain - per unit or hard-coded per year?
 
 * ``GeneralEppOperation`` – operation over request-usage limit (charged only
   after all uncharged requests were exhausted), pricing period: per operation

@@ -16,6 +16,6 @@ The email messages produced by the system comply
 with the `RFC 2387 <https://tools.ietf.org/html/rfc2387>`_ standard.
 
 Notification conditions include domain expiration, domain disabling,
-domain unregistration or any object modification using EPP.
+domain unregistration or any object modification via EPP.
 
 All time periods for domain disabling and unregistration are configurable.

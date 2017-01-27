@@ -1,8 +1,8 @@
 
 
 
-Invoicing and banking
----------------------
+Invoicing and banking :sup:`$CZ-specific$`
+------------------------------------------
 
 The FRED implements the prepaid-invoicing model.
 
@@ -17,12 +17,13 @@ At some point in time, it's possible to create an accounting invoice
 for a particular registrar containing a list of all its registrations
 and renewals and the total amount of money subtracted from the credit.
 
-.. Warning::
+.. Note::
 
    Work with the accounting subsystem may be tricky
    because it is tightly tied to the context of the financial and commercial
    laws of the Czech Republic (esp. the :term:`VAT` handling and invoice
    essentials).
+
    Therefore it may not be fully (or at all) suitable for your environment.
 
-.. todo:: negative credit
+.. todo:: update with the postpaid model (negative credit)

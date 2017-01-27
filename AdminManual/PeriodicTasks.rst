@@ -63,8 +63,8 @@ Zone file generation
 * generates a zone file for each configured zone
 
 
-Administration of registry objects
-----------------------------------
+Administration of registrable objects
+-------------------------------------
 
 Regular procedure
 ^^^^^^^^^^^^^^^^^
