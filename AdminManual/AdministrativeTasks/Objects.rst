@@ -80,7 +80,7 @@ To set a blocking of a single domain, follow this procedure:
    * *Holder blocking* – decide what to do with the domain's owner:
       * ``Do not block the holder`` will not do anything with the registrant,
         they will be able to change any contact information or
-        the sponsoring registrar or to be deleted,
+        the designated registrar or to be deleted,
       * ``Block the holder`` will apply the same blocking statuses
         to the registrant as the blocked domain(s) (this option can be chosen
         only if you're blocking all domains of this registrant at once),

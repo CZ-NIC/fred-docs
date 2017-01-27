@@ -392,8 +392,8 @@ Common parameters
    .. _csparams-registrar:
 
    ``registrar``
-      name and website of the current sponsoring registrar
-      (in case of transfer, the new sponsoring registrar)
+      name and website of the current designated registrar
+      (in case of transfer, the new designated registrar)
 
    .. _csparams-reqdate:
 

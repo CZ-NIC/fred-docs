@@ -182,7 +182,7 @@ There are two types of registrars:
 * the **system registrar** which is used by the Registry to manage
   domains manually and to perform automated administration procedures.
   This registrar has full permissions (he can change any object regardless
-  of object's sponsoring registrar or its blocking of changes).
+  of object's designated registrar or its blocking of changes).
 
 Both types of registrars are prepared in the same way:
 
