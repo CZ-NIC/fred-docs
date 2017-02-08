@@ -31,9 +31,9 @@ as an open-source solution.
    :name: fred-toc-publications
    :maxdepth: 2
 
-   Features/Main
-   Architecture/Main
-   AdminManual/Main
+   Features/index
+   Architecture/index
+   AdminManual/index
 
 .. only:: mode_structure and format_html
 

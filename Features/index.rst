@@ -33,8 +33,8 @@ Terms and definitions can be found :ref:`in the glossary <glossary>`.
    :numbered:
    :maxdepth: 2
 
-   General/Main
-   AdminIF/Main
-   RegIF/Main
-   PublicIF/Main
+   General/index
+   AdminIF/index
+   RegIF/index
+   PublicIF/index
    Extensions

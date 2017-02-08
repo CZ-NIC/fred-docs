@@ -37,11 +37,11 @@ Terms and definitions can be found :ref:`in the glossary <glossary>`.
    :numbered:
    :maxdepth: 2
 
-   Installation/Main
+   Installation/index
    Configuration
    RegistryInitialization
    PeriodicTasks
-   AdministrativeTasks/Main
+   AdministrativeTasks/index
    Accounting
    Maintenance
    Customization
