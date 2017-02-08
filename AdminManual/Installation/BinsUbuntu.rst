@@ -14,7 +14,7 @@ You can install the binaries in two ways:
 
 * download and run our `installation script`_ that will take care
   of everything that needs to be done, or
-* you can follow the `installation steps <install-steps-ubuntu>`_
+* you can follow the :ref:`installation steps <install-steps-ubuntu>`
   one-by-one manually. The steps basically describe what the script does.
 
 .. Note:: During installation, you will be prompted about Postfix configuration
