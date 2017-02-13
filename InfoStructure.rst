@@ -11,63 +11,63 @@ Structure overview
 
 Features
 --------
-.. include:: Features/Main.rst
-   :start-after: .. struct-start 
+.. include:: Features/index.rst
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 General features
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: Features/General/Main.rst
-   :start-after: .. struct-start 
+.. include:: Features/General/index.rst
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 Admin features
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: Features/AdminIF/Main.rst
-   :start-after: .. struct-start 
+.. include:: Features/AdminIF/index.rst
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 Registrar features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: Features/RegIF/Main.rst
-   :start-after: .. struct-start 
+.. include:: Features/RegIF/index.rst
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 Public features
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: Features/PublicIF/Main.rst
-   :start-after: .. struct-start 
+.. include:: Features/PublicIF/index.rst
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 Architecture
 ------------
-.. include:: Architecture/Main.rst
-   :start-after: .. struct-start 
+.. include:: Architecture/index.rst
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 Blackbox model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: Architecture/BlackboxModel.rst
-   :start-after: .. struct-start 
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 Top-level components
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: Architecture/TopLevelComponents.rst
-   :start-after: .. struct-start 
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 Administration manual
 ---------------------
-.. include:: AdminManual/Main.rst
-   :start-after: .. struct-start 
+.. include:: AdminManual/index.rst
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 Installation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. include:: AdminManual/Installation/Main.rst
-   :start-after: .. struct-start 
+.. include:: AdminManual/Installation/index.rst
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 
@@ -75,7 +75,7 @@ Configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/Configuration.rst
-   :start-after: .. struct-start 
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 
@@ -83,7 +83,7 @@ Registry initialization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/RegistryInitialization.rst
-   :start-after: .. struct-start 
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 
@@ -91,15 +91,15 @@ Periodic tasks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/PeriodicTasks.rst
-   :start-after: .. struct-start 
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 
 Administrative tasks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. include:: AdminManual/AdministrativeTasks/Main.rst
-   :start-after: .. struct-start 
+.. include:: AdminManual/AdministrativeTasks/index.rst
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 
@@ -107,14 +107,14 @@ Accounting tasks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/Accounting.rst
-   :start-after: .. struct-start 
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 Maintenance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/Maintenance.rst
-   :start-after: .. struct-start 
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 
@@ -122,7 +122,7 @@ Customization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/Customization.rst
-   :start-after: .. struct-start 
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 
@@ -130,13 +130,13 @@ Extensions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: AdminManual/Extensions.rst
-   :start-after: .. struct-start 
+   :start-after: .. struct-start
    :end-before: .. struct-end
 
 Client user guide
 -----------------
 
-.. include:: ClientUser/Main.rst
+.. include:: ClientUser/index.rst
    :start-after: .. struct-start
    :end-before: .. struct-end
 
@@ -145,7 +145,7 @@ Client user guide
 Client implementation guide
 ---------------------------
 
-.. include:: ClientImpl/Main.rst
+.. include:: ClientImpl/index.rst
    :start-after: .. struct-start
    :end-before: .. struct-end
 
@@ -154,7 +154,7 @@ Client implementation guide
 WebAdmin user guide
 -------------------
 
-.. include:: WebAdminUser/Main.rst
+.. include:: WebAdminUser/index.rst
    :start-after: .. struct-start
    :end-before: .. struct-end
 
@@ -191,4 +191,3 @@ User guides for public services
 -------------------------------
 
 (only suggested)
-
