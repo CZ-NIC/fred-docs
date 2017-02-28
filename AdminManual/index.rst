@@ -7,7 +7,8 @@ Administration Manual
 
 .. struct-start
 
-This document provides guidance on operation and maintenance of the system.
+This document provides guidance on installation, operation and maintenance
+of the system.
 
 .. rubric:: Target audience
 
@@ -24,7 +25,11 @@ be aware of the tools for manual intervention.
 .. rubric:: Prerequisities
 
 To understand this manual, you should already be familiar with the general
-:ref:`features <FRED-Features>` and the :ref:`architecture <FRED-Arch>` of the system.
+:ref:`features <FRED-Features>` and the :ref:`architecture <FRED-Arch>`
+of the system.
+
+The procedures of this manual expect at least basic experience
+in the usual tasks of a Un*x/Linux-like environment.
 
 .. rubric:: Terms & definitions
 
