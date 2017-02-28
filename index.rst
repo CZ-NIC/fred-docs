@@ -16,6 +16,12 @@ as an open-source solution.
       which means that it contains authoring/editing/managing notes
       in addition to the actual content.
 
+.. rubric:: Source & Contributions
+
+The source code of this documentation is open and can be found on `GitHub
+<https://github.com/CZ-NIC/fred-docs>`_.
+Contributions may be submitted using the pull-request mechanism.
+
 .. rubric:: General information on this documentation
 
 .. toctree::
