@@ -5,7 +5,7 @@ This documentation aids the users of the [Free Registry for ENUM and
 Domains](https://fred.nic.cz), the domain name registry software
 developed by CZ.NIC.
 
-The documentation is essentially divided into 3 publications:
+The documentation contains 3 essential publications:
 
 * Features,
 * Architecture description,
