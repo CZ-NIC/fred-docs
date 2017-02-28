@@ -39,6 +39,6 @@ as an open-source solution.
 
    .. rubric:: Structure notes
 
-   * `InfoSources <InfoSources.html>`_
-   * `InfoStructure <InfoStructure.html>`_
-   * `TODO List <TODOList.html>`_
+   * :doc:`/InfoSources`
+   * :doc:`/InfoStructure`
+   * :doc:`/TODOList`
