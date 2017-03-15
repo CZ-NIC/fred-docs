@@ -21,10 +21,8 @@ Blackbox model
 
 .. _fig-arch-blackbox:
 
-.. figure:: _graphics/schema-basic.png
-   :alt: Basic model of the system
+.. figure:: _graphics/schema-context.png
+   :alt: Context diagram
    :align: center
 
-   Basic model of the system
-
-.. todo:: Replace this with a context diagram.
+   Context diagram – Overview of users and general data flows
