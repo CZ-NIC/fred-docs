@@ -40,6 +40,7 @@ Contributions may be submitted using the pull-request mechanism.
    Features/index
    Architecture/index
    AdminManual/index
+   EPPReference/index
 
 .. only:: mode_structure and format_html
 
