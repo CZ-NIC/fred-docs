@@ -31,7 +31,7 @@ Installation steps
    .. code-block:: bash
 
       dnf install fred-*
-      # in ase of Redhat/Centos use yum
+      # in case of Redhat/Centos use yum
       # yum install fred-*
 
 #. Install the database schema
