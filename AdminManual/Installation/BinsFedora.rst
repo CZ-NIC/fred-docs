@@ -1,8 +1,8 @@
 
 
 
-Installation of binaries on Fedora
-----------------------------------
+Installation of binaries on Fedora or RHEL/Centos
+-------------------------------------------------
 
 This section will guide you through installation of pre-compiled binaries
 on Fedora or RHEL/Centos systems.
