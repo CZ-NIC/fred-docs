@@ -22,7 +22,7 @@ This chapter describes how to install the FRED.
          * Installation steps
          * Starting services
          * Initializing the system
-      * Fedora 23
+      * Fedora 24, 25 and RHEL/Centos 7
          * Installation steps
          * Initializing the system
    * From source

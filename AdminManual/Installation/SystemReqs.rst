@@ -22,10 +22,12 @@ Operating system
 
 To deploy binaries, you must have installed one of these **operating systems**:
 
-* Ubuntu 12.04 LTS (Precise Pangolin) – supported only until April 2017
 * Ubuntu 14.04 LTS (Trusty Tahr)
 * Ubuntu 16.04 LTS (Xenial Xerus)
-* Fedora 23
+* Fedora 24
+* Fedora 25
+* RHEL 7
+* Centos 7
 
 To compile sources from tarballs, you can use any Linux distribution of your
 choice in theory but the compilation/installation procedure
