@@ -51,5 +51,4 @@ Terms and definitions can be found :ref:`in the glossary <glossary>`.
    Maintenance
    Customization
    Extensions
-   Appendices/Dependencies
-   Appendices/CSParams
+   Appendices/index

@@ -1,14 +1,16 @@
 
 .. _FRED-Admin-App-CSParams:
 
-Appendix: ClearSilver parameters reference
-------------------------------------------
+ClearSilver parameters reference
+--------------------------------
 
 This is a reference of available parameters which are passed to ClearSilver
 templates when generating email based on events in the FRED.
 The parameters are listed for each email type and there is an index
 with short descriptions of common parameters at the end of this appendix.
 
+.. contents:: Chapter TOC
+   :local:
 
 Email type: ``sendauthinfo_pif``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

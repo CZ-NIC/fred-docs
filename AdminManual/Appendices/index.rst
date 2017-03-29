@@ -5,7 +5,7 @@ Appendices
 ==========
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
 
-   Dependencies
-   CSParams
+   Dependencies/index
+   CSParams/index
