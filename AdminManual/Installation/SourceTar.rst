@@ -27,7 +27,6 @@ We prepared lists of all particular packages on which FRED's compilation,
 installation or operation depends (package names may slightly differ
 across OS versions):
 
-* :ref:`Ubuntu 12.04 LTS <Source-Deps-Ubu12>`
 * :ref:`Ubuntu 14.04 LTS <Source-Deps-Ubu14>`
 * :ref:`Ubuntu 16.04 LTS <Source-Deps-Ubu16>`
 
