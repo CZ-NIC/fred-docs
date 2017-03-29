@@ -44,11 +44,11 @@ Auxiliary software
 
 To make use of all FRED features, the following auxiliary tools are required:
 
-* (essential) CORBA naming server (OmniNames)
+* (essential) CORBA naming server (OmniNames),
 * (essential) PostgreSQL database server (PG>9),
 * (essential) Apache web server (Apache>2.2),
 * mail server (Postfix, Sendmail, Exim or other),
-* DNS server (KnotDNS, Bind, NSD or other),
+* DNS server (KnotDNS, Bind, NSD or other).
 
 .. Note:: All of these tools are installed automatically when installing
    from binaries but they must be installed manually when you decide to compile
