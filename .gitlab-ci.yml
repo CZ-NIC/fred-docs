@@ -35,5 +35,6 @@ build:
   artifacts:
       paths:
         - _build/
+      expire_in: 7d
   tags:
     - sphinx_docs
