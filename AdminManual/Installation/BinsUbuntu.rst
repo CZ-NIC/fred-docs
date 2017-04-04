@@ -20,6 +20,11 @@ You can install the binaries in two ways:
 .. Note:: During installation, you will be prompted about Postfix configuration
    and MS core fonts license agreement.
 
+.. Important:: Remember to :ref:`set the timezone in PostgreSQL <set-pg>`
+   to ``UTC``.
+
+
+
 Installation script
 ^^^^^^^^^^^^^^^^^^^
 

@@ -10,6 +10,9 @@ on Fedora or RHEL/Centos systems.
 Before you start, make sure that all system requirements are met,
 see :ref:`System requirements <system-reqs>`.
 
+.. Important:: Remember to :ref:`set the timezone in PostgreSQL <set-pg>`
+   to ``UTC``.
+
 You can install the binaries by following these installation steps:
 
 .. _install-steps-fedora:

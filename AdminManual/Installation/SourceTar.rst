@@ -144,10 +144,11 @@ You need to finish the setup of the following parts to make
 the system operational:
 
 * enable Apache modules,
-* set timezone in PostgreSQL,
 * setup the database schema,
-* DB client authentication,
 * launch servers.
+
+.. Important:: Remember to :ref:`set the timezone in PostgreSQL <set-pg>`
+   to ``UTC``.
 
 Then :ref:`test the installation <FRED-Admin-Install-Test>`
 and :ref:`initialize the system <FRED-Admin-Install-SysInit>`.
@@ -206,20 +207,6 @@ configure directories to provide Unix Whois and RDAP server:
    knows to create one but this is not a tool that is publicly available.
 ..
 
-Set timezone in PostgreSQL
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-The FRED assumes database connections using UTC timezone, so configure
-PostgreSQL to handle connections using this timezone.
-Open :file:`/etc/postgresql/9.1/main/postgresql.conf` with a text editor
-and change the **timezone** parameter to UTC, or use this script::
-
-   sudo sed -i~ -e "s/^#\?\s*timezone\s*=\s*[A-Za-z0-9_.-']*/timezone = 'UTC'/" \
-      /etc/postgresql/9.1/main/postgresql.conf
-
-Then restart PostgreSQL::
-
-   sudo service postgresql restart
-
 Setup the database schema
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 .. To install the FRED database schema, run this command::
@@ -257,7 +244,7 @@ However, if you want to setup the database manually, you need to:
       postgres=# alter user {dbusername} password 'passwd';
 
 * adapt the PostgreSQL `client authentication
-  <http://www.postgresql.org/docs/9.1/static/client-authentication.html>`_
+  <http://www.postgresql.org/docs/current/static/client-authentication.html>`_
   configuration in :file:`/etc/postgresql/9.1/main/pg_hba.conf`
   to use the plain-password authentication method [#]_
 
@@ -281,7 +268,7 @@ However, if you want to setup the database manually, you need to:
 
       sudo service postgresql restart
 
-.. [#] We use the plain password method only as an illustration of alternate
+.. [#] We use the plain-password method only as an illustration of simple
    settings, however we do not suggest that this method is secure.
    We recommend you to consult the PostgreSQL documentation and your
    local security policy.

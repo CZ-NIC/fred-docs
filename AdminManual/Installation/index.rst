@@ -46,6 +46,8 @@ This chapter describes how to install the FRED.
 
 .. include:: SourceRPM.rst
 
+.. include:: AuxConfig.rst
+
 .. include:: SystemInit.rst
 
 .. include:: Test.rst
