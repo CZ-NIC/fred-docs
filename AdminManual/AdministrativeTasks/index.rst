@@ -23,7 +23,7 @@ Administrative tasks
       * register(create+renew)/extend(renew) (client)
       * inclusion in a zone/exclusion from a zone
 
-      * Contact administration :sup:`$CZ-specific$`
+      * Contact administration :sup:`CZ-specific`
          * View automatic verification results
          * Resolve manual verification
 

@@ -185,7 +185,7 @@ this procedure:
 
 .. Contacts
 
-Contact verification :sup:`$CZ-specific$`
+Contact verification :sup:`CZ-specific`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 :abbr:`TBD (to be developed)`
 

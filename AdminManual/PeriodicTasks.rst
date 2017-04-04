@@ -14,20 +14,20 @@ Periodic tasks
    **Chapter outline:**
 
    * *Generate zone file*
-   * *Regular procedure* :sup:`$CRITICAL$`
+   * *Regular procedure* :sup:`CRITICAL`
       * +Delete unused objects
-      * +Export notification letters (to PostServis) :sup:`$CZ-specific$`
+      * +Export notification letters (to PostServis) :sup:`CZ-specific`
       * +more (see fred-admin help)
    * *Removal of inactive records*
-      * Delete expired domains :sup:`$CRITICAL$`
-   * Perform automatic contact verifications :sup:`$CZ-specific$`
-   * Export notification letters (to Optys) :sup:`$CZ-specific$`
-   * Export (and send) notification SMS texts :sup:`$CZ-specific$`
-   * Export registered letters (for manual dispatch) :sup:`$CZ-specific$`
+      * Delete expired domains :sup:`CRITICAL`
+   * Perform automatic contact verifications :sup:`CZ-specific`
+   * Export notification letters (to Optys) :sup:`CZ-specific`
+   * Export (and send) notification SMS texts :sup:`CZ-specific`
+   * Export registered letters (for manual dispatch) :sup:`CZ-specific`
    * *Generate poll messages about request usage*
    * *Block registrars over request-usage limit*
-   * *Import payments and attempt pairing* :sup:`$CZ-specific$`
-   * Invoicing :sup:`$CZ-specific$`
+   * *Import payments and attempt pairing* :sup:`CZ-specific`
+   * Invoicing :sup:`CZ-specific`
       * Generate prefixes
       * Archive (create PDF-version and assemble emails)
       * Bill registrars (charge fees and create invoice)
@@ -168,15 +168,15 @@ procedure is finished)
 
      **Real run time** [CZ.NIC]: ~ 5 s (one iteration)
 
-Automatic contact verification :sup:`$CZ-specific$`
+Automatic contact verification :sup:`CZ-specific`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Communication
 -------------
-* Letters Postservis :sup:`$CZ-specific$`
-* Letters Optys :sup:`$CZ-specific$`
-* SMS Texts :sup:`$CZ-specific$`
-* Registered Letters :sup:`$CZ-specific$`
+* Letters Postservis :sup:`CZ-specific`
+* Letters Optys :sup:`CZ-specific`
+* SMS Texts :sup:`CZ-specific`
+* Registered Letters :sup:`CZ-specific`
 
 Registrars
 ----------
@@ -311,7 +311,7 @@ Refer to ``fred-admin --help_dates`` for acceptable date formatting.
    * were not changed in the last 300 days (relatively to the specified date)
 * sends them an email of the ``annual_contact_reminder`` type
 
-Collect statistics :sup:`$CZ-specific$`
+Collect statistics :sup:`CZ-specific`
 ---------------------------------------
 
 The statistics collector program is used in CZ.NIC to collect and export data

@@ -1,7 +1,7 @@
 
 
 
-Contact verification :sup:`$CZ-specific$`
+Contact verification :sup:`CZ-specific`
 -----------------------------------------
 
 There is a method to minimize occurrence of fake contact data by performing

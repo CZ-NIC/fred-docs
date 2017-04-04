@@ -1,7 +1,7 @@
 
 
 
-Invoicing and banking :sup:`$CZ-specific$`
+Invoicing and banking :sup:`CZ-specific`
 ------------------------------------------
 
 The FRED implements the prepaid-invoicing model.
