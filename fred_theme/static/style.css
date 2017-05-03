@@ -119,3 +119,8 @@ div.sphinxsidebar #searchbox input[type="submit"] {
     margin-top: 2px;
     margin-bottom: 2px;
 }
+
+li.current > a, a.current {
+   color: #555555;
+   font-weight: bold!important;
+}
