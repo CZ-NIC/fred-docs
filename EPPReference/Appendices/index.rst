@@ -5,7 +5,7 @@ Appendices
 ==========
 
 .. toctree::
-   ReturnCodes
+   ResultCodes
    FREDTypes
    EPPTypes
    XSTypes
