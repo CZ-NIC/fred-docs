@@ -4,6 +4,9 @@
 Login
 =====
 
+A login command is a ``login`` element in the ``epp`` namespace
+(``urn:ietf:params:xml:ns:epp-1.0``).
+
 The login command is used to establish and authenticate a session
 with the EPP server. The login command must be sent to the server
 before any other EPP command and identifies and authenticates
@@ -42,7 +45,7 @@ The ``<epp:login>`` element contains the following child elements:
     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
       <command>
          <login>
-            <clID>REG-FRED_A</clID>
+            <clID>REG-MYREG</clID>
             <pw>passwd</pw>
             <options>
                <version>1.0</version>
@@ -66,7 +69,7 @@ The ``<epp:login>`` element contains the following child elements:
 
 .. code-block:: shell
 
-   > login REG-FRED_A passwd
+   > login REG-MYREG passwd
 
 Response element structure
 --------------------------
