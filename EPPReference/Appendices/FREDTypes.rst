@@ -9,10 +9,10 @@ Used simple data types defined in the FRED namespaces.
 .. glossary::
    :sorted:
 
-   fred:authInfoType
+   fredcom:authInfoType
       a :term:`xs:normalizedString` of the length between 0 and 300 characters
 
-   fred:objIDType
+   fredcom:objIDType
       a :term:`xs:token` of the length between 1 and 63 characters
 
    contact:identValueT
@@ -48,3 +48,9 @@ Used simple data types defined in the FRED namespaces.
 
    contact:optPostalLineType
       a :term:`xs:normalizedString` of the length between 0 and 255 characters
+
+   contact:pcType
+      a :term:`xs:token` of the maximum length of 16 characters
+
+   contact:ccType
+      a :term:`xs:token` of the length of 2 characters

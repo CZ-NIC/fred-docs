@@ -33,3 +33,6 @@ Used simple data types defined in the XML Schema namespace.
    xs:anyURI
       an Internationalized Resource Identifier Reference (IRI)
       https://www.w3.org/TR/xmlschema11-2/#anyURI
+
+   xs:dateTime
+      https://www.w3.org/TR/xmlschema11-2/#dateTime
