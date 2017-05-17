@@ -14,9 +14,9 @@ Registrar features
 
    * EPP protocol features (standard)
       * check/create/delete... domain/contact
-      * request authinfo, request tech.test (a part of std.EPP)
-      * Poll messages (a part of std.EPP)
-      * change registrar info? (a part of std.EPP???)
+      * request authinfo, request tech.test (a part of std.EPP)
+      * Poll messages (a part of std.EPP)
+      * change registrar info? (a part of std.EPP???)
    * extended
       * check/create/delete... keyset/nsset
 

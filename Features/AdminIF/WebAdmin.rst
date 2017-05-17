@@ -29,8 +29,8 @@ Configurables
 * Table maximum row limit (general and object-specific)
 * Calendar date format for viewing and editing
 * Utility for calculating termination dates of domain blocking and blacklisting
-* Lock duration to resolve a verification check
-* Limit of the wait for a response to a manual verification check request
+* Lock duration to resolve a verification check
+* Limit of the wait for a response to a manual verification check request
 
 
 
@@ -40,27 +40,27 @@ Result table properties
 * Result tables paginated
    * With page navigation
       * Go to the first / previous / next / last page
-      * Go to a page by number
+      * Go to a page by number
 * Even and odd table rows distinguished (different background color)
 * Table row highlighted when hovered over
 * Sort table by any column (ascending or descending)
-* If the result contains only a single record, view its details directly
+* If the result contains only a single record, view its details directly
 * Export results to TXT or CSV
 
 
 
-Compose a search filter
+Compose a search filter
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-* Add a field (logical AND)
-* Remove a field
+* Add a field (logical AND)
+* Remove a field
 * Add an alternative statement (logical OR)
 * Remove an alternative statement
-* Negate a field (logical NOT)
-* Un-negate a field
-* Save the current filter using a custom name
-* Use a saved filter
-* Show a saved filter
+* Negate a field (logical NOT)
+* Un-negate a field
+* Save the current filter using a custom name
+* Use a saved filter
+* Show a saved filter
 
 
 
@@ -93,8 +93,8 @@ Browse contacts
    * List domains where this contact is an owner
    * List domains where this contact is an admin
    * List all domains where this contact appears in any role (owner/admin/temp)
-   * List all NSSets where this contact is a technical contact
-   * List all KeySets where this contact is a technical contact
+   * List all NSSets where this contact is a technical contact
+   * List all KeySets where this contact is a technical contact
    * List emails from the last month where this contact is mentioned
    * List public requests concerning this contact
    * List all messages for this contact
@@ -150,7 +150,7 @@ Manage registrars
 * List all registrars
 * Search/filter registrars
 * View registrar details
-* Add a new registrar
+* Add a new registrar
 * Edit registrar details
    * Registrar data (contact and billing info)
    * Authentication
@@ -177,8 +177,8 @@ Browse and assign payments
 
 * Search/filter payments
 * View payment details
-   * Assign a type to a not-assigned payment
-      * Associate a not-assigned payment with a registrar
+   * Assign a type to a not-assigned payment
+      * Associate a not-assigned payment with a registrar
 
 
 
@@ -193,15 +193,15 @@ Browse audit log
 Browse and resolve public requests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-What is a :term:`public request`?
+What is a :term:`public request`?
 
 * Search/filter public requests
 * View request details
 * Resolve the request
    * Accept and send
    * Invalidate and close
-   * Resend a copy of PIN3 Letter (used in contact verification)
-   * Resend a copy of PIN2 SMS (used in contact verification)
+   * Resend a copy of PIN3 Letter (used in contact verification)
+   * Resend a copy of PIN2 SMS (used in contact verification)
 
 
 
@@ -226,4 +226,4 @@ Browse files
 
 * Search/filter files
 * (List domain expiration warning letters) (predefined filter)
-* Download a file
+* Download a file

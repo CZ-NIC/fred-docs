@@ -18,12 +18,12 @@ View registrar's details
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 `List all registrars`_ or :ref:`search <FRED-Admin-AdminTasks-Search>`
-for a registrar in the WebAdmin and then click on its *handle* to display
+for a registrar in the WebAdmin and then click on its *handle* to display
 the details.
 
-Add a registrar
+Add a registrar
 ^^^^^^^^^^^^^^^
-To add a new registrar in the WebAdmin, follow this procedure:
+To add a new registrar in the WebAdmin, follow this procedure:
 
 #. Select :menuselection:`Registrars --> Create new` from the menu
    to display the edit form and fill it in:
@@ -33,7 +33,7 @@ To add a new registrar in the WebAdmin, follow this procedure:
    * Authentication – password and MD5 sum of the certificate for EPP connection
    * Zones – grant access to zones
    * Groups – assign membership in groups
-     (you may need to `create a group`_ first)
+     (you may need to `create a group`_ first)
    * Certifications – evaluation of registrar's retail services
      (it can be used in the public overview of registrars (default location:
      http://localhost/whois/registrars.py,
@@ -57,16 +57,16 @@ To modify registrar's information, use the WebAdmin:
 
 #. `View registrar's details`_, then scroll to the bottom and click
    :guilabel:`Edit` to display the edit form.
-#. Edit the details (see `Add a registrar`_ for a description of the details).
+#. Edit the details (see `Add a registrar`_ for a description of the details).
 #. Click the :guilabel:`Save` button, when you finish, to save the changes.
 
 Registrar blocking
 ^^^^^^^^^^^^^^^^^^
-Blocking a registrar means that their EPP access is suspended
-until the end of the current month. The usual reason is that a registrar
+Blocking a registrar means that their EPP access is suspended
+until the end of the current month. The usual reason is that a registrar
 wants to cease activity when their monthly budget for EPP requests is exhausted.
 
-Block a registrar
+Block a registrar
 ~~~~~~~~~~~~~~~~~
 
 Registrars are blocked by the system automatically
@@ -76,21 +76,21 @@ is set up.
 
 Registrars cannot be blocked via the WebAdmin.
 
-In case of emergency, a registrar can be blocked on the command line::
+In case of emergency, a registrar can be blocked on the command line::
 
    sudo fred-admin --block_registrar_id <registrar_id>
 
-.. Note:: If a registrar was unblocked this month,
+.. Note:: If a registrar was unblocked this month,
    they cannot be blocked again till the next month.
 
-Unblock a registrar
+Unblock a registrar
 ~~~~~~~~~~~~~~~~~~~
 
-A registrar can be unblocked via the WebAdmin:
+A registrar can be unblocked via the WebAdmin:
 
 #. `View registrar's details`_, scroll down and click the :guilabel:`Unblock`
    button.
-#. You will be prompted for an extra confirmation by retyping a number.
+#. You will be prompted for an extra confirmation by retyping a number.
    Type it and hit :guilabel:`OK`.
 #. The registrar is unblocked.
 
@@ -106,25 +106,25 @@ e.g. to mark which of them support DNSSEC or IPv6.
 To view the list of groups, select in the WebAdmin menu:
 :menuselection:`Registrars --> Groups`
 
-You can **change membership in a group** when you `edit registrar's details`_.
+You can **change membership in a group** when you `edit registrar's details`_.
 
-Create a group
+Create a group
 ~~~~~~~~~~~~~~
 
 In the list of groups, find the last (empty) form field, enter the name
-of a new group and click :guilabel:`Save`.
+of a new group and click :guilabel:`Save`.
 
 Or provide the details on the command line:
 ``sudo fred-admin --registrar_create_group <parameters>``
 (see the program help for parameters).
 
-Rename a group
+Rename a group
 ~~~~~~~~~~~~~~
 
 In the list of groups, find the group you want to rename, rewrite the name
 in the form field and click :guilabel:`Save`.
 
-Remove a group
+Remove a group
 ~~~~~~~~~~~~~~
 
 In the list of groups, find the group you want to delete, check
@@ -132,24 +132,24 @@ the :guilabel:`Delete` checkbox and click :guilabel:`Save`.
 
 .. Note:: The WebAdmin lets you remove only empty groups.
 
-Assign a payment to a registrar
+Assign a payment to a registrar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If a payment was imported to the database but it could not be matched
-with a registrar automatically, you can do so manually in the WebAdmin:
+If a payment was imported to the database but it could not be matched
+with a registrar automatically, you can do so manually in the WebAdmin:
 
 #. To view the list of payments, select in the WebAdmin menu:
    :menuselection:`Registrars --> Payments`
 
 #. Search for the *Not assigned* payments or restrict the search further,
-   should there be too many results, and choose a payment to view its details.
+   should there be too many results, and choose a payment to view its details.
 
 #. Select the *From/to registrar* type of payment.
 
 #. Enter the *Registrar's handle* to pair the payment with.
 
 #. Confirm the input by clicking :guilabel:`Save`.
-   You will be prompted for an extra confirmation by retyping a number.
+   You will be prompted for an extra confirmation by retyping a number.
    Type it and hit :guilabel:`OK`.
 
 #. The pairing is saved. (If the payment was sufficient, registrar's credit

@@ -1,7 +1,7 @@
 Installation from source RPMs
 -----------------------------
 
-We also provide SRPM packages for a rebuild with the RedHat package manager.
+We also provide SRPM packages for a rebuild with the RedHat package manager.
 
 You can download them from http://archive.nic.cz/yum/fred/SRPMS/
 

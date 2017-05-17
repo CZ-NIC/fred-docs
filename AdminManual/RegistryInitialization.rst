@@ -13,7 +13,7 @@ Registry initialization
 
    **Chapter outline:**
 
-   * Setting up a zone
+   * Setting up a zone
    * Setting up Registrars
    * Setting up the invoicing subsystem
      (price list, invoice numbering, VAT tax, credit)
@@ -29,9 +29,9 @@ and that the database is blank (you have not input any data yet).
 
 To initialize the Registry, you need to perform these tasks:
 
-* prepare a zone:
+* prepare a zone:
 
-   * create a zone,
+   * create a zone,
    * assign name servers to the zone,
 
 * prepare registrars:
@@ -42,7 +42,7 @@ To initialize the Registry, you need to perform these tasks:
 
 * prepare the accounting subsystem:
 
-   * create a price list for operations,
+   * create a price list for operations,
    * define the parameters for invoice numbering,
    * set the VAT tax and coefficient,
    * assign credit to registrars,
@@ -66,19 +66,19 @@ If you omit an optional parameter, the default value is assigned.
 
 .. _FRED-Admin-reginit-zone:
 
-Preparing a zone
+Preparing a zone
 ----------------
 
-Preparing a zone is the most crucial task. The information you enter
-about a zone will appear in the header of a generated zone file.
-When you create a zone, you enter the fields of the SOA record,
+Preparing a zone is the most crucial task. The information you enter
+about a zone will appear in the header of a generated zone file.
+When you create a zone, you enter the fields of the SOA record,
 and in the next step, you add the zone name servers.
 An example of the resulting zone file header is given
 :ref:`below <FRED-Admin-reginit-zone-example>`.
 
 .. _FRED-Admin-reginit-zone-add:
 
-Creating a zone
+Creating a zone
 ^^^^^^^^^^^^^^^
 .. code-block:: bash
 
@@ -94,19 +94,19 @@ Creating a zone
       --minimum=900 \
       --ns_fqdn=a.ns.nic.cz
 
-This command creates a new zone in the Registry.
-It does not have to be only a TLD zone of course, you might provide access
+This command creates a new zone in the Registry.
+It does not have to be only a TLD zone of course, you might provide access
 for example to **go.to**, **com.tw** or ENUM zones (like **0.2.4.e164.arpa**).
 
 .. Important:: Consider thoroughly which parameters you set,
    there is no command for editing zones.
 
 * ``--zone_fqdn`` (*) – FQDN of the zone to be added
-  – it also serves as a key in subsequent commands
+  – it also serves as a key in subsequent commands
 * ``--ex_period_min``, ``--ex_period_max`` – minimum and maximum number
-  of months for which a domain in the zone can be registered
+  of months for which a domain in the zone can be registered
 
-  .. Note:: The ``ex_period_min`` number is also used as a unit
+  .. Note:: The ``ex_period_min`` number is also used as a unit
      for registration periods which are then defined as multiples
      of this number, i.e. with ``--ex_period_min=12`` domains can be
      registered (and renewed) for whole years, not e.g. year and half.
@@ -129,7 +129,7 @@ for example to **go.to**, **com.tw** or ENUM zones (like **0.2.4.e164.arpa**).
   - ``--minimum=900``
   - ``--ns_fqdn=localhost``
 
-.. NOTE Vychozi hodnoty by mely byt v referencni prirucce a zde jen odkaz.
+.. NOTE Vychozi hodnoty by mely byt v referencni prirucce a zde jen odkaz.
 
 .. _FRED-Admin-reginit-zone-ns:
 
@@ -141,13 +141,13 @@ Adding zone name servers
    $ fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=b.ns.nic.cz --addr=1.2.3.4
    $ fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=c.ns.nic.cz --addr=5.6.7.8,9.0.1.2
 
-This command assigns a name server to a zone.
+This command assigns a name server to a zone.
 
-* ``--zone_fqdn`` (*) – the zone a name server is added to
+* ``--zone_fqdn`` (*) – the zone a name server is added to
 * ``--ns_fqdn`` (*) – name server's FQDN – fully qualified domain name
 * ``--addr`` – name server's IP address (glue) – it is required
   when the nameserver's FQDN is from the same zone to which it is added;
-  you can list several IP addresses separated by a comma
+  you can list several IP addresses separated by a comma
 
 .. _FRED-Admin-reginit-zone-example:
 
@@ -180,7 +180,7 @@ Preparing registrars
 
 There are two types of registrars:
 
-* a **common registrar** is an organization which provides domain
+* a **common registrar** is an organization which provides domain
   administration to end users and pays for access to the Registry, and
 * the **system registrar** which is used by the Registry to manage
   domains manually and to perform automated administration procedures.
@@ -189,9 +189,9 @@ There are two types of registrars:
 
 Both types of registrars are prepared in the same way:
 
-* create a registrar,
+* create a registrar,
 * assign them authentication data,
-* permit them to operate in a zone (or zones).
+* permit them to operate in a zone (or zones).
 
 .. Important:: For the system to work properly, exactly one system registrar
    must be present.
@@ -202,29 +202,29 @@ Both types of registrars are prepared in the same way:
 
    If you want to work only with the EPP communication, the system
    registrar will do. However, if it is the billing and invoicing subsystem
-   you want to work with, we recommend adding a (testing) common registrar, too.
+   you want to work with, we recommend adding a (testing) common registrar, too.
 
-Creating a registrar
+Creating a registrar
 ^^^^^^^^^^^^^^^^^^^^
 .. code-block:: bash
 
-   # adding a common registrar:
+   # adding a common registrar:
    $ fred-admin --registrar_add \
       --handle=REG-FRED_A --reg_name="Testing registrar A" \
       --organization="Company l.t.d." --country=CZ
 
-   # adding a system registrar:
+   # adding a system registrar:
    $ fred-admin --registrar_add \
       --handle=REG-SYS --reg_name="System registrar" \
       --country=CZ --system
 
-This command creates a new registrar with some data.
+This command creates a new registrar with some data.
 
 * ``--handle`` (*) – handle of the registrar to be added
 * ``--reg_name`` – registrar's name – you may set it the same as ``--organization``
 * ``--organization`` – registrar's organization or company
 * ``--country`` (*) – registrar's country by 2-letter country code (table ``enum_country``)
-* ``--no_vat`` – flag this registrar as NOT a :term:`VAT`-payer
+* ``--no_vat`` – flag this registrar as NOT a :term:`VAT`-payer
 * ``--system`` – designates this registrar to be the "system registrar"
 * many other parameters are available, see the program help
   ``fred-admin --registrar_add --help``.
@@ -243,7 +243,7 @@ Authentication data allows registrars to connect to the Registry securely.
       --certificate="39:D1:0C:CA:05:3A:CC:C0:0B:EC:6F:3F:81:0D:C7:9E" \
       --password=passwd
 
-This command assigns the given access control data to a registrar.
+This command assigns the given access control data to a registrar.
 
 * ``--handle`` (*) – registrar's handle
 * ``--password`` (*) – registrar's password – both the password and
@@ -262,7 +262,7 @@ This command assigns the given access control data to a registrar.
       from this example.
 
 .. NOTE On production, registrars are asked to supply their own certificate
-   which is usually signed by a qualified certification authority.
+   which is usually signed by a qualified certification authority.
    (In CZ there are 3 official qualif. CAs. Consult your local authorities
    to enquire about applicable legislation.)
    Another approach is to create your own certification authority
@@ -270,7 +270,7 @@ This command assigns the given access control data to a registrar.
    see `Registrar certification`_
 
 
-Granting access to a zone
+Granting access to a zone
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 .. code-block:: bash
 
@@ -278,10 +278,10 @@ Granting access to a zone
       --zone_fqdn=cz --handle=REG-FRED_A \
       --from_date="2007-01-01"
 
-This command grants a registrar permissions to manage objects in a specified zone.
+This command grants a registrar permissions to manage objects in a specified zone.
 
 * ``--handle`` (*) – registrar's handle
-* ``--zone_fqdn`` (*) – name of a zone the registrar gains access to
+* ``--zone_fqdn`` (*) – name of a zone the registrar gains access to
 * ``--from_date`` – date since when the access is allowed – default: today
 
 
@@ -300,15 +300,15 @@ need to do anything else from this section and you can skip the rest of it.
 
 Otherwise you need to prepare the subsystem for use by doing these tasks:
 
-* create a price list for operations,
+* create a price list for operations,
 * define initial numbers for invoice numbering,
-* set a custom VAT tax rate,
+* set a custom VAT tax rate,
 * assign initial credit to common registrars.
 
 
 Creating price list
 ^^^^^^^^^^^^^^^^^^^
-A price list is created by listing prices for operations individually.
+A price list is created by listing prices for operations individually.
 The price lists are defined for each zone separately.
 
 .. _list-charge-ops:
@@ -317,7 +317,7 @@ Chargeable operations include:
 
 .. https://admin.nic.cz/wiki/developers/fred/accounting#%C3%9A%C4%8Dtovan%C3%A9polo%C5%BEky
 
-* ``CreateDomain`` – domain creation (one-time payment when a new domain
+* ``CreateDomain`` – domain creation (one-time payment when a new domain
   is introduced to the Registry, corresponding EPP command: create_domain),
   pricing period: one-time
 * ``RenewDomain`` – domain renewal (renewal per unit, corresponding
@@ -330,8 +330,8 @@ Chargeable operations include:
   after all uncharged requests were exhausted), pricing period: per operation
 
 ..
-   * [Future?] ``Fine`` – minimum advancement for operations in a zone, pricing period: per year
-   * [Future?] ``Fee`` – fee for the access to a zone, pricing period: per year
+   * [Future?] ``Fine`` – minimum advancement for operations in a zone, pricing period: per year
+   * [Future?] ``Fee`` – fee for the access to a zone, pricing period: per year
 
 
 .. code-block:: bash
@@ -356,7 +356,7 @@ Chargeable operations include:
       --valid_from='2015-05-31 22:00:00' --zone_fqdn=cz \
       --operation_price 0.10 --period 1 --enable_postpaid_operation
 
-This command adds a price of an operation in a zone valid in a given time span.
+This command adds a price of an operation in a zone valid in a given time span.
 The amount is currency-independent, decimals are allowed.
 If you don't want to charge for an operation, just set the price to zero.
 
@@ -370,8 +370,8 @@ If you don't want to charge for an operation, just set the price to zero.
   credit (allows negative credit)
 
 .. Note:: The first domain renewal is made upon domain registration that means
-   that a registration of a new domain is in fact billed as 2 operations:
-   ``CreateDomain + RenewDomain`` whereas a renewal of an existing domain
+   that a registration of a new domain is in fact billed as 2 operations:
+   ``CreateDomain + RenewDomain`` whereas a renewal of an existing domain
    is billed only as one operation ``RenewDomain``.
 
 
@@ -388,7 +388,7 @@ You have two ways of defining initial invoice numbers:
   following the fixed pattern **PPYY00001**:
 
    * **PP** – 2-digit invoice number prefix
-   * **YY** – 2 last digits of a year
+   * **YY** – 2 last digits of a year
    * **00001** – the 5-digit order number
 
    .. Tip:: This way is recommended if you have many zones to administer.
@@ -407,16 +407,16 @@ Creating default initial numbers
 
 .. todo:: Explain invoice types in Features, then rewrite
 
-This command adds a number prefix for invoices of a given type in a zone.
+This command adds a number prefix for invoices of a given type in a zone.
 
-* ``--prefix`` – the prefix value for the given combination of a zone and
+* ``--prefix`` – the prefix value for the given combination of a zone and
   invoice type
 * ``--zone_fqdn`` – the zone FQDN for which the prefix is designated
 * ``--invoice_type_name`` – the invoice type by name:
 
    * ``account`` – billing (balance between the deposit and the total
      for provided services), usually monthly
-   * ``advance`` – depositing credit, when a payment was received
+   * ``advance`` – depositing credit, when a payment was received
 
 .. code-block:: bash
 
@@ -435,8 +435,8 @@ Defining custom initial numbers
 
    $ fred-admin --invoice_add_prefix --zone_fqdn=cz --type 0 --year 2017 --prefix 401700001
 
-This command adds a custom initial number (prefix) for the given combination
-of a year, zone and invoice type (0 – advance, 1 – account).
+This command adds a custom initial number (prefix) for the given combination
+of a year, zone and invoice type (0 – advance, 1 – account).
 
 
 Value-added tax
@@ -471,15 +471,15 @@ This SQL script will:
 * add the new coefficient and the new percentage.
 
 
-Assigning credit to a registrar
+Assigning credit to a registrar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. code-block:: bash
 
    $ fred-admin --invoice_credit \
       --zone_id=1 --registrar_id=1 --price=15000
 
-This command adds some credit to a registrar in a zone and creates an advance
-invoice in the system. If the registrar is a VAT-payer, then an appropriate
+This command adds some credit to a registrar in a zone and creates an advance
+invoice in the system. If the registrar is a VAT-payer, then an appropriate
 amount is subtracted automatically.
 
 * ``--zone_id`` – zone id,
@@ -488,27 +488,27 @@ amount is subtracted automatically.
 * ``--taxdate`` – tax date, default is today, for arg format
   see ``fred-admin --help_dates``
 
-.. Tip:: To find an *id* of a zone or a registrar, you must run an SQL query
+.. Tip:: To find an *id* of a zone or a registrar, you must run an SQL query
    against the database, for example:
 
    .. code-block:: bash
 
        $ psql -U fred -c "SELECT id FROM registrar where handle = 'REG-FRED_A';"
 
-   This command will find a registrar by its handle and return its identifier.
+   This command will find a registrar by its handle and return its identifier.
 
    .. code-block:: bash
 
        $ psql -U fred -c "SELECT id FROM zone where fqdn = 'cz';"
 
-   This command will find a zone by its FQDN and return its identifier.
+   This command will find a zone by its FQDN and return its identifier.
 
 
 Setting parameters in the database
 ----------------------------------
 ..  enum_parameters.regular_day_procedure_zone
 
-There is a table of customizable parameters in the main database.
+There is a table of customizable parameters in the main database.
 Most of them can be used with default values, however the following
 parameter **must** be adapted to your environment:
 

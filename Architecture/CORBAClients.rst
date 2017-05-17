@@ -9,7 +9,7 @@ The CORBA clients constitute the frontend interfaces that serve actual users.
 Registrar interface
 ^^^^^^^^^^^^^^^^^^^^
 
-This interface provides only a single service to the registrars.
+This interface provides only a single service to the registrars.
 
 .. _FRED-Arch-clients-epp:
 
@@ -29,7 +29,7 @@ and can be validated.
 The communication is secured with the SSL using the :program:`mod-ssl`
 Apache module. Transportation is provided by the TCP/IP protocols.
 
-The service is built on a web server engine (Apache). It has its own
+The service is built on a web server engine (Apache). It has its own
 configuration in the Apache config. syntax.
 
 
@@ -53,14 +53,14 @@ This component is coded in Python using the CherryPy framework.
 
 The service has its own configuration file.
 
-The service is built on a web server engine (any).
+The service is built on a web server engine (any).
 
 .. _FRED-Arch-clients-genzone:
 
 Genzone client
 ~~~~~~~~~~~~~~
 
-The genzone client is a command-line application functioning as the client
+The genzone client is a command-line application functioning as the client
 counterpart of the GenZone server. It is used to request and receive data
 to generate the actual zone file.
 
@@ -72,8 +72,8 @@ Transproc
 ~~~~~~~~~
 
 This Python script is used to download and analyze transcripts
-of bank transactions or simple payments. It parses a downloaded transcript,
-whose format is specific to each bank, using a *processor* (configurable
+of bank transactions or simple payments. It parses a downloaded transcript,
+whose format is specific to each bank, using a *processor* (configurable
 script), transforms it into the internal XML format recognized by the FRED
 and calls the :program:`fred-admin` to import this data into the database.
 
@@ -126,7 +126,7 @@ responses do not contain the link to the web whois because the rules
 of information disclosure that apply to ENUM domains are different from those
 of common domains.
 
-The service is built on a web server engine (Apache). It has its own
+The service is built on a web server engine (Apache). It has its own
 configuration in the Apache config. syntax.
 
 .. _FRED-Arch-clients-webwhois:
@@ -140,7 +140,7 @@ The web site is protected against data mining with CAPTCHA.
 
 This service does not allow to browse information about ENUM domains.
 
-The service is built on a web server engine (any).
+The service is built on a web server engine (any).
 
 .. _FRED-Arch-clients-rdap:
 
@@ -150,13 +150,13 @@ RDAP service
 This service processes queries sent via the HTTP protocol using the REST API.
 If the query is successful, the response contains JSON-formatted data.
 
-The service is built on a web server engine (any).
+The service is built on a web server engine (any).
 
 
 
 Extending services
 ^^^^^^^^^^^^^^^^^^
-Extensions are optional applications which are not a part of the FRED
+Extensions are optional applications which are not a part of the FRED
 as such. As standalone applications, they use the FRED daemons (CORBA
 servers) to access the FRED database.
 
@@ -164,18 +164,18 @@ servers) to access the FRED database.
 
 MojeID
 ~~~~~~
-This service allows users to log in with a single username and password to any
+This service allows users to log in with a single username and password to any
 web service that supports the MojeID authentication, from any computer or
 mobile device.
 
-The service is built on a web server engine (any).
+The service is built on a web server engine (any).
 
 .. _FRED-Arch-clients-db:
 
 Domain browser
 ~~~~~~~~~~~~~~
 This service gives an overview of domains, name server sets
-and DNS key sets which are linked to the contact of a logged-in user
+and DNS key sets which are linked to the contact of a logged-in user
 in the Registry. The user logs in using the MojeID service.
 
-The service is built on a web server engine (any).
+The service is built on a web server engine (any).

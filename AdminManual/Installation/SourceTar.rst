@@ -70,7 +70,7 @@ For each package in the list, run this command sequence from its directory::
    sudo make install
 
 The ``configure`` script prepares package files for compilation and
-installation by adapting them to a specific environment and checks
+installation by adapting them to a specific environment and checks
 that the required tools are available.
 
 The ``make`` command performs
@@ -104,7 +104,7 @@ the :file:`mod-corba` installation::
 Install "D" packages
 ^^^^^^^^^^^^^^^^^^^^
 
-These packages use **Distutils** for installation which is a collection
+These packages use **Distutils** for installation which is a collection
 of Python scripts based on :file:`python-setuptools`, therefore
 the Distutils package must be installed before other "D" packages.
 
@@ -133,7 +133,7 @@ The target directory (installation prefix) or other parameters can be
 passed as arguments. Refer to ``python ./setup.py --help install``
 for installation parameters.
 
-The installer writes a list of installed files (with their full path)
+The installer writes a list of installed files (with their full path)
 to the :file:`install.log` file when it finishes.
 
 
@@ -204,7 +204,7 @@ configure directories to provide Unix Whois and RDAP server:
 .. FRED should contain its own index page with links to services
    in the default setup.
    The ``fred-manager`` (http://archive.nic.cz/fred-sources/fred-manager)
-   knows to create one but this is not a tool that is publicly available.
+   knows to create one but this is not a tool that is publicly available.
 ..
 
 Setup the database schema
@@ -226,11 +226,11 @@ However, if you want to setup the database manually, you need to:
 
    su - postgres
 
-  - create a user and set his privileges::
+  - create a user and set his privileges::
 
       createuser -SDR -l {dbusername}
 
-  - create a database, set the owner and encoding::
+  - create a database, set the owner and encoding::
 
       createdb {dbname} -O {dbusername} -E UTF8
 
@@ -238,7 +238,7 @@ However, if you want to setup the database manually, you need to:
 
       createlang plpgsql {dbname}
 
-  - set a password for the user (from the psql console)::
+  - set a password for the user (from the psql console)::
 
       psql
       postgres=# alter user {dbusername} password 'passwd';
@@ -319,7 +319,7 @@ script or run this command:
    sudo /usr/etc/init.d/fred-webadmin-server start
 
 .. NOTE bad prefix reported in ticket #13929 (internal instance of Trac)
-.. TODO Still a problem? 2016-10: Yes
+.. TODO Still a problem? 2016-10: Yes
 
 Now, you can perform :ref:`the smoke test <test-smoke>` to make sure
 that all interfaces are available and working together.

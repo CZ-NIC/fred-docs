@@ -4,7 +4,7 @@
 ClearSilver parameters reference
 --------------------------------
 
-This is a reference of available parameters which are passed to ClearSilver
+This is a reference of available parameters which are passed to ClearSilver
 templates when generating email based on events in the FRED.
 The parameters are listed for each email type and there is an index
 with short descriptions of common parameters at the end of this appendix.
@@ -14,7 +14,7 @@ with short descriptions of common parameters at the end of this appendix.
 
 Email type: ``sendauthinfo_pif``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* sent in response to a request for a transfer password
+* sent in response to a request for a transfer password
   which was placed through the Registry website
 * passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`registrar <csparams-registrar>`, :ref:`reqdate <csparams-reqdate>`,
@@ -23,8 +23,8 @@ Email type: ``sendauthinfo_pif``
 
 Email type: ``sendauthinfo_epp``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* sent in response to a request for a transfer password
-  which was placed through a registrar
+* sent in response to a request for a transfer password
+  which was placed through a registrar
 * passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`registrar <csparams-registrar>`, :ref:`reqdate <csparams-reqdate>`,
   :ref:`reqid <csparams-reqid>`, :ref:`type <csparams-type>`,
@@ -145,7 +145,7 @@ Email type: ``expiration_validation``
 
 Email type: ``notification_create``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* sent when a new object (domain, contact, nsset, keyset) is created,
+* sent when a new object (domain, contact, nsset, keyset) is created,
   to the email contact of the created object
 * common passed parameters:  :ref:`defaults.* <csparams-defaults>`,
   :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
@@ -154,7 +154,7 @@ Email type: ``notification_create``
 * additional parameters concerning new objects:
    * ``fresh.object.authinfo`` – transfer password
 
-* additional parameters concerning a new **contact**:
+* additional parameters concerning a new **contact**:
    * ``fresh.contact.name`` – name of contact person
    * ``fresh.contact.org`` – organization name
    * ``fresh.contact.address.permanent`` – permanent personal address
@@ -200,11 +200,11 @@ Email type: ``notification_update``
 
    * ``changes`` – general indication of changes: ``0`` – there are **no**
      changes, ``1`` – there are some changes
-   * Whether a change has occured or not, is indicated for each attribute
+   * Whether a change has occured or not, is indicated for each attribute
      of an object and parameters containing both the old and the new
      value of the attribute are passed in the following manner:
 
-      * ``changes.*.attribute`` indicates a change in an attribute
+      * ``changes.*.attribute`` indicates a change in an attribute
         – if the attribute has changed, it contains the value "``1``";
         otherwise the parameter is not passed,
       * ``changes.*.attribute.old`` contains the value of the attribute
@@ -217,7 +217,7 @@ Email type: ``notification_update``
    * Indication of changes of other attributes is specific for each object type
      as follows.
 
-* additional parameters concerning changes in a **contact**:
+* additional parameters concerning changes in a **contact**:
    * ``changes.contact.name`` – contact name has changed
    * ``changes.contact.org`` – organization name has changed
    * ``changes.contact.address.permanent`` – permanent (headquarters) address
@@ -254,7 +254,7 @@ Email type: ``notification_update``
      has changed
    * ``changes.contact.disclose.fax`` – fax number disclosure setting has
      changed
-* additional parameters concerning changes in a **nsset**:
+* additional parameters concerning changes in a **nsset**:
    * ``changes.nsset.check_level`` – level of technical checks has changed
    * ``changes.nsset.tech_c`` – list of technical contacts has changed
    * ``changes.nsset.dns`` – list of name servers has changed
@@ -265,7 +265,7 @@ Email type: ``notification_update``
         before the change,
       * ``changes.nsset.dns.new.1`` – the value of the second name server
         after the change.
-* additional parameters concerning changes in a **domain**:
+* additional parameters concerning changes in a **domain**:
    * ``changes.domain.registrant`` – domain owner has changed
    * ``changes.domain.nsset`` – nsset assignment has changed
    * ``changes.domain.keyset`` – keyset assignment has changed
@@ -274,7 +274,7 @@ Email type: ``notification_update``
      has changed
    * ``changes.domain.publish`` :sup:`ENUM` – publication in telephone
      directory has changed
-* additional parameters concerning changes in a **keyset**:
+* additional parameters concerning changes in a **keyset**:
    * ``changes.keyset.tech_c`` – list of technical contacts has changed
    * ``changes.keyset.dnskey`` – list of DNS keys has changed
 
@@ -282,14 +282,14 @@ Email type: ``notification_update``
 Email type: ``notification_transfer``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent after an object (domain, contact, nsset, keyset) is transferred
-  to a new registrar, to the email contact of the transferred object
+  to a new registrar, to the email contact of the transferred object
 * passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
 
 Email type: ``notification_renew``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* sent after a domain is renewed, to its owner's email
+* sent after a domain is renewed, to its owner's email
 * passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`

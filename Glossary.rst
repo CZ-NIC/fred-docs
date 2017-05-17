@@ -22,13 +22,13 @@ Glossary of Terms
 
       * accounting ... the process or work of keeping financial accounts
       * billing ... the act of preparing and sending bills to customers
-      * bill is a synonym to invoice
+      * bill is a synonym to invoice
 
       (from `WordNet <http://wordnet.princeton.edu/>`_)
 
-      * accounting ... a system that provides quantitative information
+      * accounting ... a system that provides quantitative information
         about finances
-      * billing ... request for payment of a debt, synonym: charge
+      * billing ... request for payment of a debt, synonym: charge
 
       (mydef)
 
@@ -54,13 +54,13 @@ Glossary of Terms
       Fully Qualified Domain Name
 
    Feature
-      a user-visible aspect, quality or characteristic of software
+      a user-visible aspect, quality or characteristic of software
 
    Acquirer
-      a person or an organization that acquires the system
+      a person or an organization that acquires the system
 
    Customer
-      a registrar or registrant or end user
+      a registrar or registrant or end user
 
    VAT
       value-added tax
@@ -77,7 +77,7 @@ Glossary of Terms
       `RFC 5730 <https://tools.ietf.org/html/rfc5730>`_
 
    Public request
-      This is a request by a registrant that is submitted directly
-      to the Registry, e.g. a request for a transfer password or an enhanced
+      This is a request by a registrant that is submitted directly
+      to the Registry, e.g. a request for a transfer password or an enhanced
       security setting (object lock).
       See also https://www.nic.cz/whois/publicrequest/

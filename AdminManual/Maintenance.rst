@@ -43,11 +43,11 @@ of the system:
 * managed files,
 * syslog data.
 
-Some of these data should be duplicated as a safety precaution or archived
-if a release of system resources is required.
+Some of these data should be duplicated as a safety precaution or archived
+if a release of system resources is required.
 
-Most of them can be packed by a compressing archiver and moved
-to a backup location (i.e. a backup server).
+Most of them can be packed by a compressing archiver and moved
+to a backup location (i.e. a backup server).
 
 Databases
 ---------
@@ -65,9 +65,9 @@ Simple backup: pg_dump
 
 Textual backup of the whole database which you may want to perform daily
 using CRON. It also may come in handy in the case you need to migrate
-the data to a higher version of PostgreSQL.
+the data to a higher version of PostgreSQL.
 
-Recommended for both FRED databases—*main* and *logger*—as a minimum
+Recommended for both FRED databases—*main* and *logger*—as a minimum
 crash-safety precaution.
 
 See `PostgreSQL's documentation: SQL Dump
@@ -77,14 +77,14 @@ Logger database content archivation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The *logger* database is divided into partitions by months which is embedded
-in its schema. This allows you to dump only the data from a specified month
+in its schema. This allows you to dump only the data from a specified month
 (usually the previous one).
 
 Advanced backup: continuous archiving
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Incremental binary backup that allows to recover the database to the most
-recent state at a minimum cost, since it backs up at a rate of minutes
+recent state at a minimum cost, since it backs up at a rate of minutes
 but it only records the difference from the previous backup.
 
 Recommended for the *main* database as an advanced crash-safety precaution.
@@ -101,7 +101,7 @@ You may archive and/or remove the older content of :file:`/var/lib/pyfred/*`
 where the files managed by the FRED are located.
 
 The system can handle missing files. When some part of the system requests
-a file, that has been removed, from the file manager, it reports an exception.
+a file, that has been removed, from the file manager, it reports an exception.
 
 
 
@@ -109,8 +109,8 @@ Syslog data
 -----------
 
 Local syslog files can be maintained by the `logrotate` utility
-which is a part of the operating system.
+which is a part of the operating system.
 
-Syslog data on a remote log server can be maintained for example
+Syslog data on a remote log server can be maintained for example
 by the `syslog-ng` application, see the `syslog-ng documentation
 <https://www.balabit.com/sites/default/files/documents/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html-single/index.html>`_

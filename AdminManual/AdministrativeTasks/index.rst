@@ -14,14 +14,14 @@ Administrative tasks
 
    * Registrar administration
       * add/delete/details/edit/block/unblock
-         * access to a zone
+         * access to a zone
          * authentication data
-      * assign a payment
+      * assign a payment
 
    * Objects administration
       * cancel(blacklist and delete)/block/unblock (Daphne)
       * register(create+renew)/extend(renew) (client)
-      * inclusion in a zone/exclusion from a zone
+      * inclusion in a zone/exclusion from a zone
 
       * Contact administration :sup:`CZ-specific`
          * View automatic verification results

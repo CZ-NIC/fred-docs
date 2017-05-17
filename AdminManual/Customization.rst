@@ -37,12 +37,12 @@ We recommend to replace the Czech variant of texts with the variant in your
 language and keep the English variant for common understanding.
 
 Texts are processed with the `ClearSilver <http://www.clearsilver.net/>`_
-tool which takes a template and passed parameters and creates the resulting
+tool which takes a template and passed parameters and creates the resulting
 email text.
 
-There is a set of parameters which are passed to all emails (*defaults.\**)
+There is a set of parameters which are passed to all emails (*defaults.\**)
 but the passing of other parameters depends on the type of email.
-For a detailed reference of the passed parameters according to email type see
+For a detailed reference of the passed parameters according to email type see
 :ref:`FRED-Admin-App-CSParams`.
 
 .. NOTE
@@ -72,7 +72,7 @@ The templates (.xsl) can be found in the directory
 The static strings (.xml) are available in Czech and English localizations and
 the localization is selected in each template with the ``lang`` parameter.
 
-.. todo:: What must be done for a new localization?
+.. todo:: What must be done for a new localization?
    static strings + modify templates?
 
 The easiest way to customize PDFs is to **adapt the headers and footers**

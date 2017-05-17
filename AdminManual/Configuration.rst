@@ -21,7 +21,7 @@ Configuration
 
    .. struct-end
 
-This chapter contains an overview of executable files that are a part of the FRED
+This chapter contains an overview of executable files that are a part of the FRED
 and the location and names of their default configuration files.
 
 There are also some :ref:`configurable database values <config-rules>` related
@@ -54,14 +54,14 @@ The default configuration files are located in :file:`@PREFIX@/etc/fred`.
 CORBA servers
 ^^^^^^^^^^^^^
 
-The CORBA servers are located in a system-binaries directory (:file:`@PREFIX@/sbin`).
+The CORBA servers are located in a system-binaries directory (:file:`@PREFIX@/sbin`).
 
 C++ daemons
 ~~~~~~~~~~~
 These daemons provide operations via the IDL interface implemented in C++.
 
 In the default deployment scheme, all daemons run
-on a single machine and they share an all-in-one configuration file
+on a single machine and they share an all-in-one configuration file
 named :file:`server.conf`.
 
 In the deployment scheme adopted in the CZ.NIC, separate configuration files
@@ -115,10 +115,10 @@ Python daemon(s)
 This daemon provides operations via the IDL interface implemented in Python.
 
 In the default deployment scheme, the daemon loads all modules and runs
-in a single process (on a single machine) and all modules share an all-in-one
+in a single process (on a single machine) and all modules share an all-in-one
 configuration file named :file:`pyfred.conf`.
 
-* :file:`fred-pyfred` – a framework that integrates several Python CORBA
+* :file:`fred-pyfred` – a framework that integrates several Python CORBA
   servers as modules:
 
    * :file:`genzone` – operations for generating zone files,
@@ -138,7 +138,7 @@ CLI utilities
 ^^^^^^^^^^^^^
 Located in :file:`@PREFIX@/bin`
 
-* :file:`filemanager_client` – Inserting a new file into the system
+* :file:`filemanager_client` – Inserting a new file into the system
   (uses :file:`pyfred.conf`)
 * :file:`fred-admin` – Automated administration tasks, especially those
   performed periodically
@@ -175,32 +175,32 @@ Located in :file:`@PREFIX@/bin`
 Rules-related configurables
 ----------------------------
 
-A part of configuration relates to the rules of registration, it states e.g.
-when to send a notification to a contact before their domain expires or
-how long after expiration can be a domain re-registered.
+A part of configuration relates to the rules of registration, it states e.g.
+when to send a notification to a contact before their domain expires or
+how long after expiration can be a domain re-registered.
 
-There is a table in the *main* database dedicated to this kind of configuration
+There is a table in the *main* database dedicated to this kind of configuration
 called ``enum_parameters``.
 
-Command to change a parameter::
+Command to change a parameter::
 
    fred-admin --enum_parameter_change \
       --parameter_name=<name> \
       --parameter_value=<value>
 
-A description of parameters by name (also :ref:`see the figure below <fig-expiration-events>` for an illustration of domain expiration periods):
+A description of parameters by name (also :ref:`see the figure below <fig-expiration-events>` for an illustration of domain expiration periods):
 
-* ``expiration_notify_period`` – how many days before a domain expiration
+* ``expiration_notify_period`` – how many days before a domain expiration
   is the owner notified about the expiration, negative integer,
   default: -30
 * ``expiration_dns_protection_period`` – for how many days after expiration
-  is a domain still generated in a zone, integer,
+  is a domain still generated in a zone, integer,
   default: 30
 * ``expiration_letter_warning_period`` – how many days after expiration
   is the owner warned about domain deletion, integer,
   default: 34
 * ``expiration_registration_protection_period`` – for how many days
-  after expiration is a domain protected before it is deleted and
+  after expiration is a domain protected before it is deleted and
   can be re-registered, integer,
   default: 61
 
@@ -219,7 +219,7 @@ A description of parameters by name (also :ref:`see the figure below <fig-expira
          Vertical bars on the time line signify notification events and
          the crosses mean action events taken on domains.
 
-* ``regular_day_procedure_period`` – an hour in a day to run the regular
+* ``regular_day_procedure_period`` – an hour in a day to run the regular
   procedure (24-hour system, 0 means 00:00, 14 means 14:00 etc.),
   default: 0
 * ``regular_day_procedure_zone`` – time zone for periodic tasks,
@@ -227,7 +227,7 @@ A description of parameters by name (also :ref:`see the figure below <fig-expira
 
    .. Important:: It is necessary to adapt the time zone to your area!
 
-   The format of a value is the standardized PostgreSQL name of a time zone
+   The format of a value is the standardized PostgreSQL name of a time zone
    which can be found either in the Postgres table ``pg_timezone_names``
    (the *name* column) or `in this Wikipedia list
    <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>`_
@@ -237,7 +237,7 @@ A description of parameters by name (also :ref:`see the figure below <fig-expira
   (nsset, keyset) must be unedited and unassigned to be considered idle and
   marked for deletion,
   default: 6
-* ``handle_registration_protection_period`` – for how many months is a handle
+* ``handle_registration_protection_period`` – for how many months is a handle
   (contact, nsset, keyset) protected before it is deleted and
   can be re-registered,
   default: 2

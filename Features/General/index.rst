@@ -37,7 +37,7 @@ General features
          * Domain Deletion Warning
          * ...expirations, validations :sup:`ENUM`, changes, ...
          * Tech.check results (go into poll messages + contact email?)
-   * IDN support (we can register domains in UTF-8 and display them, but we can't restrict the character set just to a local alphabet)
+   * IDN support (we can register domains in UTF-8 and display them, but we can't restrict the character set just to a local alphabet)
       * *general info*
    * DNSSEC support (get keys from registrars + include them in zone file)
       * *general info*

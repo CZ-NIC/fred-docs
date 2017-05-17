@@ -38,7 +38,7 @@ External and internal links are differentiated with the following styling:
 Code snippets
 -------------
 
-Code snippets are set in a monospace font and they are highlighted
+Code snippets are set in a monospace font and they are highlighted
 according to the language of the snippet. Example:
 
 .. code-block:: bash
@@ -50,16 +50,16 @@ according to the language of the snippet. Example:
 Special characters
 ------------------
 
-The only characters that have a special meaning are angle brackets < >
+The only characters that have a special meaning are angle brackets < >
 used in some code illustrations, like this:
 
 .. code-block:: bash
 
-   # Running a program
+   # Running a program
    program-name <arguments>
 
 The ``<arguments>`` part suggests that program arguments should follow.
-The text inside the brackets gives a hint on the type of arguments, however
+The text inside the brackets gives a hint on the type of arguments, however
 if you are uncertain, consult the program help.
 
 .. Note:: Concrete arguments are usually entered *without* the brackets!
@@ -67,7 +67,7 @@ if you are uncertain, consult the program help.
 Admonitions
 -----------
 
-Admonitions are used to highlight a block of text that has special importance.
+Admonitions are used to highlight a block of text that has special importance.
 Several types of admonitions are distinguished by their severity/importance:
 
 .. Warning:: advisory information that states that performing some action
@@ -77,20 +77,20 @@ Several types of admonitions are distinguished by their severity/importance:
    may lead to consequences that are unwanted or undefined, such as loss of data
    or an equipment problem (what the user should not do)
 
-.. Important:: advisory information that states that a certain action must
+.. Important:: advisory information that states that a certain action must
    be performed where inaction may lead to unwanted or undefined consequences
    (what the user must do)
 
 .. Note:: advisory information in addition to the surrounding text
    (what the user should know)
 
-.. Tip:: advisory information how to use a product more efficiently or in a way
+.. Tip:: advisory information how to use a product more efficiently or in a way
    that is not apparent (what the user can do or know)
 
 Authoring notes
 ---------------
 
-If turned on during the compilation of a deliverable, the text can contain
+If turned on during the compilation of a deliverable, the text can contain
 authoring notes in the form of TODOs. These usually hold suggestions
 for new topics or notes about pending improvements.
 
@@ -109,5 +109,5 @@ In-line:
 * :guilabel:`Cancel` – GUI label (:rst:role:`guilabel`)
 * :menuselection:`Menu --> Submenu --> Option` – menu selection (:rst:role:`menuselection`)
 * :program:`script.sh` – program name (:rst:role:`program`)
-* :term:`FQDN` – link to a term definition in the glossary (:rst:role:`term`)
+* :term:`FQDN` – link to a term definition in the glossary (:rst:role:`term`)
 * :code:`in-line code` or ``in-line code`` – in-line code (:rst:role:`code` role or ````literal````)

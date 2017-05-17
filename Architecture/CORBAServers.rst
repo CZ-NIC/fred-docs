@@ -3,7 +3,7 @@
 
 CORBA servers
 -------------
-This is a set of components which implement the backend of the Registry and
+This is a set of components which implement the backend of the Registry and
 which can run independently of each other.
 All of them use the same ORB implementation
 (`omniORB <http://omniorb.sourceforge.net>`_) which takes care
@@ -15,8 +15,8 @@ C++ daemons
 ^^^^^^^^^^^
 These backend components are coded in C++.
 
-Each of them is launched in a separate process and they may share
-a single configuration file.
+Each of them is launched in a separate process and they may share
+a single configuration file.
 
 .. _FRED-Arch-servers-rif:
 
@@ -26,12 +26,12 @@ The registrar interface daemon.
 
 This daemon implements operations over the database defined in the EPP protocol
 and it is used by the :ref:`EPP service <FRED-Arch-clients-epp>`.
-Every EPP operation is mapped to a corresponding CORBA method.
+Every EPP operation is mapped to a corresponding CORBA method.
 Operations over objects are *idempotent*, i.e. if the same operation is invoked
 repeatedly, it does not change the state of object in the Registry.
 
-The daemon is aware of all connected clients; if a client connects
-in a new session, a unique identifier is generated to identify the session
+The daemon is aware of all connected clients; if a client connects
+in a new session, a unique identifier is generated to identify the session
 in EPP communication and in the audit log.
 
 All clients' activity is recorded in the database including the original
@@ -40,7 +40,7 @@ request and response XML files.
 Object-altering operations make the system record the object in the history
 before the change is applied.
 
-A database connection is opened during each EPP operation (and closed
+A database connection is opened during each EPP operation (and closed
 at the end). Therefore the :program:`pgpool` tool is utilized to cache
 the connections, thus reducing the connection overhead.
 
@@ -120,7 +120,7 @@ PYFRED daemon(s)
 ^^^^^^^^^^^^^^^^
 These backend components are coded in Python.
 
-The PYFRED is a framework which provides common functions to several modules
+The PYFRED is a framework which provides common functions to several modules
 that act as standalone CORBA servers and implement various operations
 over the database.
 
@@ -128,19 +128,19 @@ The common functions provided by the framework encompass:
 
 * process logging,
 * database connection management,
-* parsing of a configuration file,
+* parsing of a configuration file,
 * ORB initialization and registration of objects with the CORBA naming service,
 * launching of periodic tasks registered by the modules.
 
-The modules can run either in a single process or in several processes and
-they may share a single configuration file.
+The modules can run either in a single process or in several processes and
+they may share a single configuration file.
 
-.. A module in the context of PYFRED is a Python module containing the ``init``
+.. A module in the context of PYFRED is a Python module containing the ``init``
    function which is called when the module is loaded. The initialization function
-   returns a CORBA object and the name under which the object is registered
+   returns a CORBA object and the name under which the object is registered
    with the naming service, and the framework takes care of making the module
    accessible from the outside. The module interracts with the framework
-   only during initialization and after that, it has a life of its own.
+   only during initialization and after that, it has a life of its own.
 
 .. _FRED-Arch-servers-genzone:
 
@@ -152,10 +152,10 @@ The zone generator daemon.
 This daemon implements operations over the database used during zone file
 generation.
 
-A generation is requested by the :ref:`client application
+A generation is requested by the :ref:`client application
 <FRED-Arch-clients-genzone>` that can run on another
-machine. The client receives a portion of data of a fixed size, first,
-and then orders the remaining data in small chunks. (The total size of a zone
+machine. The client receives a portion of data of a fixed size, first,
+and then orders the remaining data in small chunks. (The total size of a zone
 file can reach hundreds of MB.)
 
 .. _FRED-Arch-servers-mailer:
@@ -166,12 +166,12 @@ Mailer
 The mailer daemon.
 
 This daemon implements the part of the notification system that delivers
-messages through email. It integrates a templating system for email
+messages through email. It integrates a templating system for email
 assembly, operations for sending and archivation of outgoing email and search
 in archived messages.
 
 .. Note:: The mailer does not send email by itself, it just hands all email over
-   to a mail transfer agent.
+   to a mail transfer agent.
 
 Attachments are either constructed from templates or retrieved from the file
 manager.
@@ -214,7 +214,7 @@ The technical checks daemon.
 This daemon implements operations for performing technical tests on name server
 sets.
 
-The tests are either launched periodically and a report is sent to the
+The tests are either launched periodically and a report is sent to the
 corresponding technical contact of the nsset by email, or they are requested
 by registrars and the reports are included in EPP poll messages.
 

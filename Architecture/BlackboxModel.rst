@@ -9,7 +9,7 @@ Blackbox model
    .. struct-start
 
    **Sources:** OLDREPO + NOTES :ref:`??? <src>`
-   | **AoW:** (used old picture) 3 days to create a new picture
+   | **AoW:** (used old picture) 3 days to create a new picture
 
    **Chapter outline:**
 

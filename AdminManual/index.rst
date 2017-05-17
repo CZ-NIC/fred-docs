@@ -29,7 +29,7 @@ To understand this manual, you should already be familiar with the general
 of the system.
 
 The procedures of this manual expect at least basic experience
-in the usual tasks of a Un*x/Linux-like environment.
+in the usual tasks of a Un*x/Linux-like environment.
 
 .. rubric:: Terms & definitions
 

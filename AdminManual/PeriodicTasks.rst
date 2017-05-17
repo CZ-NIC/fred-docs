@@ -60,7 +60,7 @@ Zone file generation
 
 **Task activities**:
 
-* generates a zone file for each configured zone
+* generates a zone file for each configured zone
 
 
 Administration of registrable objects
@@ -101,7 +101,7 @@ Regular procedure
 * generates poll messages to notify registrars about low credit
 * deletes objects of selected types that have been marked for deletion
   – this activity can be disabled by omitting the ``--object_delete_types``
-  argument and can be run in a separate task (see the next task)
+  argument and can be run in a separate task (see the next task)
 
 
 Separate object deletion
@@ -115,7 +115,7 @@ Separate object deletion
 
    /usr/sbin/fred-admin --object_delete_candidates <options>
 
-**Typically launched**: at least once a day (if you delete all at once,
+**Typically launched**: at least once a day (if you delete all at once,
 you can include it with the regular procedure or launch it after the regular
 procedure is finished)
 
@@ -145,18 +145,18 @@ procedure is finished)
   – this variant allows you to randomize deletion of objects by spreading it
   over several calls; this variant of the task means these activities:
 
-   * creates a randomly-ordered list of objects (delete candidates)
-   * deletes a fraction of the list, repeatedly in iterations,
+   * creates a randomly-ordered list of objects (delete candidates)
+   * deletes a fraction of the list, repeatedly in iterations,
      the size of the fraction is given in the  ``--object_delete_parts`` option,
-     e.g. if ``--object_delete_parts=2``, a half of the list is deleted
-     in a single iteration, if ``object_delete_parts=10``, a tenth of the list
-     is deleted in a single iteration and so on
+     e.g. if ``--object_delete_parts=2``, a half of the list is deleted
+     in a single iteration, if ``object_delete_parts=10``, a tenth of the list
+     is deleted in a single iteration and so on
    * the value of ``object_delete_parts`` is calculated depending
      on CRON configuration (how often the task is run)
    * finally deletes the rest (``--object_delete_parts=1`` – this is
      the default value if the parameter is omitted)
 
-   * *Example*: spread the deletion of domains over a whole day::
+   * *Example*: spread the deletion of domains over a whole day::
 
       # Iteration
       */10 1-22 * * *  sleep $[$RANDOM\%300]
@@ -166,7 +166,7 @@ procedure is finished)
       # Finalization
       45 23 * * *  /usr/sbin/fred-admin --object_delete_candidates --object_delete_types="3" --object_delete_parts=1
 
-     **Real run time** [CZ.NIC]: ~ 5 s (one iteration)
+     **Real run time** [CZ.NIC]: ~ 5 s (one iteration)
 
 Automatic contact verification :sup:`CZ-specific`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -188,7 +188,7 @@ Billing the fee for requests
 
    /usr/sbin/fred-admin --poll_create_request_fee_messages
 
-**Typically launched**: once a day (night time recommended, e.g. 1 AM)
+**Typically launched**: once a day (night time recommended, e.g. 1 AM)
 
 **Real run time** [CZ.NIC]: ~ 10 min
 
@@ -217,7 +217,7 @@ Blocking registrars over limit
 
    /usr/sbin/fred-admin --block_registrars_over_limit [--email support@nic.tld]
 
-**Typically launched**: once a day
+**Typically launched**: once a day
 
 **Real run time** [CZ.NIC]: ~ 10 min
 
@@ -239,7 +239,7 @@ Blocking registrars over limit
 
 * disconnects all EPP sessions of the blocked registrars
 * if the ``--email`` address is given and registrars were blocked,
-  sends a notification with a list of registrars blocked in this batch
+  sends a notification with a list of registrars blocked in this batch
 
    .. todo:: registrars blocked in this batch or on this day???
 
@@ -269,7 +269,7 @@ Import & pairing of payments
 **Task activities**:
 
 * imports payments from all configured sources into the database
-* if a payment is paired with a registrar, increases credit
+* if a payment is paired with a registrar, increases credit
   and creates an advance invoice
 
 Invoicing
@@ -293,7 +293,7 @@ about objects linked to their contact.
 The default ``<date>`` is today.
 Refer to ``fred-admin --help_dates`` for acceptable date formatting.
 
-**Typically launched**: once a day
+**Typically launched**: once a day
 
 **Real run time** [CZ.NIC]: ~ 2 min
 
@@ -315,13 +315,13 @@ Collect statistics :sup:`CZ-specific`
 ---------------------------------------
 
 The statistics collector program is used in CZ.NIC to collect and export data
-for the statistics server which is not a part of the FRED.
+for the statistics server which is not a part of the FRED.
 
 **Task command**::
 
    /usr/bin/collect_stats.py -s fred_daily[,mojeid_daily]
 
-**Typically launched**: once a day (night time)
+**Typically launched**: once a day (night time)
 
 **Required FRED components**: none (database access)
 

@@ -17,8 +17,8 @@ Beside the standard commands, there are further auxiliary
 functions, such as information about credit or bulk list operations.
 
 EPP communication is secured by the standard login-and-password authentication
-together with the verification of a client SSL certificate.
+together with the verification of a client SSL certificate.
 
 To ease EPP communication, the FRED distribution contains
-a `Python <http://www.python.org/>`_ client library
-and a command-line client application.
+a `Python <http://www.python.org/>`_ client library
+and a command-line client application.
