@@ -10,13 +10,13 @@ Font styles
 
 *italics*
 
-* general light emphasis
+* general light in-line emphasis
 * labels of elements in user interfaces (button names, form field labels,
   tab and window titles, menu selections)
 
 **bold**
 
-* general strong emphasis
+* general strong in-line emphasis
 * names of executables (programs, scripts)
 
 ``monospace``
@@ -67,7 +67,7 @@ if you are uncertain, consult the program help.
 Admonitions
 -----------
 
-Admonitions are used to highlight a portion of text that has special importance.
+Admonitions are used to highlight a block of text that has special importance.
 Several types of admonitions are distinguished by their severity/importance:
 
 .. Warning:: advisory information that states that performing some action
@@ -99,12 +99,12 @@ for new topics or notes about pending improvements.
 Semantic markup overview
 ------------------------
 
-This overview exists just for checking that the semantic markup has the correct
+This overview exists just for checking that semantic markup has correct
 styling.
 
 In-line:
 
-* :abbr:`ABBR (explanation)` – abbreviation with explanation (:rst:role:`abbr`)
+* :abbr:`ABBR (explanation)` – abbreviation with an explanation (:rst:role:`abbr`)
 * :file:`file.txt` – file name (:rst:role:`file`)
 * :guilabel:`Cancel` – GUI label (:rst:role:`guilabel`)
 * :menuselection:`Menu --> Submenu --> Option` – menu selection (:rst:role:`menuselection`)
