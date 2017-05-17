@@ -120,6 +120,12 @@ div.sphinxsidebar #searchbox input[type="submit"] {
     margin-bottom: 2px;
 }
 
+/* Table settings */
+table {
+   margin-bottom: 2ex;
+}
+
+/* Emphasize current topic in sidebar menu */
 li.current > a, a.current {
    color: #555555;
    font-weight: bold!important;
