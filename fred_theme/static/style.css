@@ -46,6 +46,14 @@ div.sphinxsidebarwrapper {
     padding :0 10px 0 41px;
 }
 
+div.sphinxsidebarwrapper li {
+    margin-top: 2ex;
+}
+
+div.sphinxsidebarwrapper li a {
+    line-height: 1.0;
+}
+
 div.sphinxsidebarwrapper p.logo {
     background-color: #878786;
     margin: 0 -10px 0 -41px;
