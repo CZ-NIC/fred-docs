@@ -1,0 +1,20 @@
+@startuml
+skinparam monochrome true
+
+participant "Object owner" as Owner
+participant "Current registrar" as Preg
+participant "New registrar" as Nreg
+participant "Registry" as Ry
+
+Owner -> Preg : request AuthInfo
+Preg -> Ry: request AuthInfo
+Ry -> Preg: provide AuthInfo
+Preg -> Owner: provide AuthInfo
+Owner -> Nreg : request transfer + provide AuthInfo
+Nreg -> Ry: request transfer + provide AuthInfo
+Ry -> Ry: transfer
+Ry -> Preg: notification about transfer (poll)
+Ry -> Owner: notification about transfer (email)
+@enduml
+
+' http://www.plantuml.com/plantuml/uml/VP91JiCm44NtFiMegoB41Rf0HQpOf2WtcAOJQeWzOJocokqxTLf4IDJTsF_z-T-IjqbHD8VEfIyVUnGC43XoSnGE12gPdBDhzOtlCIgiTljFQXJu54bMW0bsbsdAl6OHia7emoSL7C5tEqwvYax_c6h6rAC-5BaUd2jvyFHSzi765dndIWelMOzliMLNxaslXmMn7cxM3VJ2F_v0SsU9MD1_ewjfjDMFgJNfSUwf5jhSuyU25_f6JJf7Lj_w1jLp1Dnp_hDjtNFNFLpnwnlkyXJGcs5ByM1Vu0m0

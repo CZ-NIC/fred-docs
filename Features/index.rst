@@ -38,3 +38,4 @@ Terms and definitions can be found :ref:`in the glossary <glossary>`.
    RegIF/index
    PublicIF/index
    Extensions
+   Concepts/index
