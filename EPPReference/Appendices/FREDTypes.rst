@@ -15,6 +15,13 @@ Used simple data types defined in the FRED namespaces.
    fredcom:objIDType
       a :term:`xs:token` of the length between 1 and 63 characters
 
+   fredcom:msgType
+      an unbounded :term:`xs:normalizedString`
+
+   fred:amountType
+      a :term:`xs:decimal` of the maximum length of 10 digits
+      of which at most 2 digits are the fraction
+
    contact:identValueT
       a :term:`xs:token` of the maximum length of 32 characters
 

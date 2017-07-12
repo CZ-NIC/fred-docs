@@ -20,3 +20,6 @@ Used simple data types defined in the standard EPP namespaces.
 
    epp:pwType
       a :term:`xs:token` of the length between 6 and 16 characters
+
+   epp:trIDStringType
+      a :term:`xs:token` of the length between 3 and 64 characters

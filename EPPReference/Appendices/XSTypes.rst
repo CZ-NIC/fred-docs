@@ -31,8 +31,11 @@ Used simple data types defined in the XML Schema namespace.
       https://www.w3.org/TR/xmlschema11-2/#language
 
    xs:anyURI
-      an Internationalized Resource Identifier Reference (IRI)
+      an Internationalized Resource Identifier reference (IRI)
       https://www.w3.org/TR/xmlschema11-2/#anyURI
 
    xs:dateTime
       https://www.w3.org/TR/xmlschema11-2/#dateTime
+
+   xs:decimal
+      https://www.w3.org/TR/xmlschema11-2/#decimal
