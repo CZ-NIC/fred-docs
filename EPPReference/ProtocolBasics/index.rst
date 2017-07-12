@@ -1,53 +1,65 @@
 
-
+.. _FRED-EPPRef-Basics:
 
 Protocol basics
 ===============
 
-...
+Extensible Provisioning Protocol (EPP) is an application-layer client-server
+protocol which was designed for the provisioning and management of objects
+stored in a shared central repository. It is a standard (:rfc:`5730`)
+that is usually chosen
+for communication between registrars (clients) and a domain registry (server).
 
-Message structure
------------------
+The communication between a client and the EPP server is performed
+as an exchange of XML documents (further referred to as *messages*)
+whose structure and content are defined by a :doc:`series of schemas
+<../SchemasNamespaces/index>`.
+EPP takes advantage of XML namespaces which make extensions easy.
 
-Command message
-^^^^^^^^^^^^^^^
+.. _FRED-EPPRef-Basics-class:
 
-Contains the command with arguments.
+A message sent from a client to the server is called a *request message*
+which the server answers with what is called a *reply message*.
 
-Response message
-^^^^^^^^^^^^^^^^
+.. rubric:: Transport & security
 
-Contains the response to the called command with a
-:doc:`return code and message </EPPReference/Appendices/ReturnCodes>`,
-and sometimes even return values (``resData``).
+In the FRED implementation, XML messages are transported over the Transmission
+Control Protocol (TCP) with Transport Layer Security (TLS)
+using a client's certificate. (See also :rfc:`5734`.)
 
-.. _plain-result:
+.. NOTE A hash of the client certificate must be provided in the Registry.
+   (for login)
 
-Plain result message
-~~~~~~~~~~~~~~~~~~~~
+.. rubric:: General features of the EPP protocol
 
-def. "plain result" message = response that does not contain any resData
+* EPP is a stateful protocol. (The server retains session information
+  about each client.)
+* All comunication is initiated by a client. (The server does not send anything
+  to a client unless it was requested by the client.)
+* The server responds to client-initiated communication (which
+  can be either a TCP connection request or an EPP service
+  discovery request (``hello``)) by returning a ``greeting`` to the client.
+* The server responds to each EPP command with a coordinated response
+  that describes the results of processing the command. (See also
+  `EPP Server State Machine <https://tools.ietf.org/html/rfc5730#page-5>`_
+  for a more detailed description of server's behaviour.)
+* Commands are processed by the server in the order they are received
+  from clients.
+* Commands are atomic. (There is no partial success or partial failure.)
+* The FRED EPP server does not allow delayed execution of commands (pending),
+  commands are performed immediately.
 
-.. rubric:: Example
+.. * Commands are idempotent. (Executing a command more than once has the same
+  net effect on object state as successfully executing the command once.)
+  NOTE Some are not. (example?)
 
-.. code-block:: xml
+.. rubric:: Chapter TOC
 
-   <?xml version="1.0" encoding="UTF-8"?>
-   <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
-      <response>
-         <result code="1000">
-            <msg>Command completed successfully</msg>
-         </result>
-         <trID>
-            <clTRID>sdmj001#17-03-06at18:48:03</clTRID>
-            <svTRID>ReqID-0000126633</svTRID>
-         </trID>
-      </response>
-   </epp>
+.. toctree::
 
-Implemented commands
---------------------
-
-* transfer, op="request"
+   HowEPPWorks
+   GenericMessage
+   ServiceDiscovery
+   Commands
+   ManagedObjects
+   ProtocolExtensions

@@ -1,0 +1,22 @@
+@startuml
+skinparam monochrome true
+participant "Client" as C
+participant "EPP Server" as S
+
+C --> S : TCP connect
+C <- S : send greeting
+
+C -> S : request login
+C <- S : confirm login
+activate S
+
+group Transaction (may repeat)
+   C -> S : command
+   C <- S : response
+end
+
+C -> S : request logout
+deactivate S
+C <- S : confirm logout
+@enduml
+' http://www.plantuml.com/plantuml/uml/RP3DQiD038Jl-nH3Jkt1Br1A29ZU3SuBYBNgBlLAhbORwDjdxOJ-GAxVZ6O6dOgJUSrBA9z9LZBAo2eQFqmpmwroQDHJJ2k9uz0lYSKFe8B-l_8s31ZPBcoxEeRGe-kE6F62SpyWgWX7R_Irss5XcJ0RioUPT_VDRFnLkJWMdPFysjlzUx9ynnGzNSXvwvbDwugpaPGDg-0fqtVBMPdyEG3uoOwQCybqO_TWuxAg50vjp-CPMZrC_AVoqQZDT6eHspEl
