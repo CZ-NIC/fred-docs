@@ -7,8 +7,8 @@ EPP Reference Manual
 
 .. struct-start
 
-This document provides a reference of XML-formatted commands and responses
-in the EPP protocol which has been implemented with extensions
+This document provides a reference of XML-formatted requests and replies
+in the EPP protocol which has been implemented in the FRED with extensions
 to suit FRED particularities.
 
 .. rubric:: Target audience
@@ -37,8 +37,8 @@ Terms and definitions can be found :doc:`in the glossary </Glossary>`.
    :maxdepth: 2
 
    Introduction/index
-   SchemasNamespaces/index
    ProtocolBasics/index
+   SchemasNamespaces/index
    CommandOverview
    CommandStructure/index
    Appendices/index
