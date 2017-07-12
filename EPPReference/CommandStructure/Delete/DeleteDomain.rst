@@ -5,12 +5,12 @@
 Delete domain
 ==============
 
+A domain delete command is used to delete a single domain whose status allows it to be deleted.
+
 A domain delete command is a ``delete`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
 
-It is used to delete a domain whose status allows it to be deleted.
-
-.. index:: Ⓔdelete, Ⓔid
+.. index:: Ⓔdelete, Ⓔname
 
 Command element structure
 -------------------------
@@ -18,7 +18,7 @@ Command element structure
 The ``<domain:delete>`` element must declare the ``domain`` namespace
 and schema and it must contain the following child element:
 
-* ``<domain:name>`` **(1)** the domain handle as :term:`eppcom:labelType`.
+* ``<domain:name>`` **(1)**  – the domain name as :term:`eppcom:labelType`.
 
 .. rubric:: Example
 
@@ -48,5 +48,7 @@ and schema and it must contain the following child element:
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result <plain-result>` message
-which does not contain any return values (no ``resData``).
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+which does not contain any response data (no ``<resData>``).
+
+See also :ref:`succ-fail`.

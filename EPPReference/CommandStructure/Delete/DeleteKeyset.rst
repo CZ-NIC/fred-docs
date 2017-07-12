@@ -5,10 +5,10 @@
 Delete keyset
 ==============
 
+A keyset delete command is used to delete a single keyset whose status allows it to be deleted.
+
 A keyset delete command is a ``delete`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
-
-It is used to delete a keyset whose status allows it to be deleted.
 
 .. index:: Ⓔdelete, Ⓔid
 
@@ -48,5 +48,7 @@ and schema and it must contain the following child element:
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result <plain-result>` message
-which does not contain any return values (no ``resData``).
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+which does not contain any response data (no ``<resData>``).
+
+See also :ref:`succ-fail`.

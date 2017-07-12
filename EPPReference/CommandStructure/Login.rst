@@ -4,36 +4,44 @@
 Login
 =====
 
-A login command is a ``login`` element in the ``epp`` namespace
-(``urn:ietf:params:xml:ns:epp-1.0``).
-
-The login command is used to establish and authenticate a session
+A login command is used to establish and authenticate a session
 with the EPP server. The login command must be sent to the server
 before any other EPP command and identifies and authenticates
 the client identifier to be used by the session.
 
 An EPP session is terminated by a :doc:`Logout` command.
 
+The login command is a ``login`` element in the ``epp`` namespace
+(``urn:ietf:params:xml:ns:epp-1.0``).
+
 Command element structure
 -------------------------
 
-The ``<epp:login>`` element contains the following child elements:
+The ``<login>`` element contains the following child elements:
 
 .. index:: Ⓔlogin, ⒺclID, Ⓔpw, ⒺnewPW, Ⓔoptions, Ⓔversion, Ⓔlang, Ⓔsvcs,
    ⒺobjURI, ⒺsvcExtension, ⒺextURI
 
-* ``<epp:clID>`` **(1)** – the client identifier as a :term:`xs:token` of the length between 3 and 16 characters,
-* ``<epp:pw>`` **(1)** – the client's plain-text password as a :term:`xs:token` of the length between 6 and 16 characters, case sensitive,
-* ``<epp:newPW>`` **(0..1)** – a new password to be used for subsequent login commands as a :term:`xs:token` of the length between 6 and 16 characters, case sensitive,
-* ``<epp:options>`` **(1)** – options of the EPP communication with the server:
-   * ``<epp:version>`` **(1)** – the protocol version to be used; this must be ``1.0``,
-   * ``<epp:lang>`` **(1)** – the text response language to be used; this must be ``en`` or ``cs``,
-* ``<epp:svcs>`` **(1)** – list of services to be used during the session – declare the schemas for all the objects that will be manipulated during the session:
-   * ``<epp:objURI>`` **(1..n)** – an object namespace URI as :term:`xs:anyURI`. Further details on the namespace URIs can be found in the :doc:`/EPPReference/SchemasNamespaces/index` section.
-   * ``<epp:svcExtension>`` **(0..1)** – list of service extensions – declare the schema extensions for all the objects that will be manipulated during the session:
-      * ``<epp:extURI>`` **(1..n)** – an extension namespace URI as :term:`xs:anyURI`.
-
-.. Note:: If 'epp' is set as the default namespace then the 'epp:' prefix can be omitted.
+* ``<clID>`` **(1)** – the client identifier as :term:`eppcom:clIDType`,
+* ``<pw>`` **(1)** – the client's plain-text password as :term:`epp:pwType`,
+  case sensitive,
+* ``<newPW>`` **(0..1)** – a new password to be used for subsequent login
+  commands as :term:`epp:pwType`, case sensitive,
+* ``<options>`` **(1)** – options of the EPP communication with the server:
+   * ``<version>`` **(1)** – the protocol version to be used;
+     this must be ``1.0``,
+   * ``<lang>`` **(1)** – the response-text language to be used;
+     this must be one of the values that are announced in the greeting
+     (typically ``en`` or ``cs``),
+* ``<svcs>`` **(1)** – list of services to be used during the session – declare
+  the schemas for all the objects that will be manipulated during the session:
+   * ``<objURI>`` **(1..n)** – an object namespace URI as :term:`xs:anyURI`.
+     Further details on the namespace URIs can be found in the
+     :doc:`/EPPReference/SchemasNamespaces/index` section.
+   * ``<svcExtension>`` **(0..1)** – list of service extensions – declare
+     the schema extensions for all the objects that will be manipulated during
+     the session:
+      * ``<extURI>`` **(1..n)** – an extension namespace URI as :term:`xs:anyURI`.
 
 .. rubric:: Example
 
@@ -74,5 +82,7 @@ The ``<epp:login>`` element contains the following child elements:
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result <plain-result>` message
-which does not contain any return values (no ``resData``).
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+which does not contain any response data (no ``<resData>``).
+
+See also :ref:`succ-fail`.

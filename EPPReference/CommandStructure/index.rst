@@ -1,5 +1,5 @@
 
-
+.. _FRED-EPPRef-CmdStruct:
 
 Command & response structure
 ============================
@@ -9,9 +9,19 @@ Command & response structure
 
 
 .. toctree::
+   :maxdepth: 1
+
    Login
    Logout
+   Check/index
    Info/index
-   Poll
+   Poll/index
    Create/index
    Update/index
+   Delete/index
+   Transfer/index
+   RenewDomain
+   CreditInfo
+   SendAuthInfo/index
+   Test/index
+   List/index

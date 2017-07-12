@@ -4,16 +4,16 @@
 Logout
 ======
 
-A logout command is a ``logout`` element in the ``epp`` namespace
-(``urn:ietf:params:xml:ns:epp-1.0``).
-
-The logout command is used to end a session with the EPP server
+A logout command is used to end a session with the EPP server
 established by a :doc:`Login` command.
+
+The logout command is a ``logout`` element in the ``epp`` namespace
+(``urn:ietf:params:xml:ns:epp-1.0``).
 
 Command element structure
 -------------------------
 
-The ``<epp:logout>`` element does not contain any child elements.
+The ``<logout>`` element does not contain any child elements.
 
 .. rubric:: Example
 
@@ -38,7 +38,10 @@ The ``<epp:logout>`` element does not contain any child elements.
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result <plain-result>` message.
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+which does not contain any response data (no ``<resData>``).
+
+See also :ref:`succ-fail`.
 
 .. rubric:: Example
 
