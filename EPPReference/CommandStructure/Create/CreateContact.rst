@@ -69,6 +69,11 @@ Command element structure
 Response element structure
 --------------------------
 
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+which does not contain any response data (no ``<resData>``).
+
+See also :ref:`succ-fail`.
+
 .. rubric:: Example
 
 .. code-block:: xml

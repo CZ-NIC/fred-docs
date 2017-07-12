@@ -48,6 +48,8 @@ Response element structure
 
 The response contains the standard result, response data and transaction identification.
 
+See also :ref:`succ-fail`.
+
 The response data element (``<resData>``) contains a single child element
 ``<fred:resCreditInfo>`` which contains the following child elements:
 

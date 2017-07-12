@@ -1,10 +1,11 @@
+:orphan:
 
-.. index:: update; nsset
+.. index:: keyword
 
-Update nsset
-=============
+.. http://www.sphinx-doc.org/en/1.5.1/markup/misc.html#index-generating-markup
 
-.. todo:: TODO
+CommandName
+===========
 
 Command element structure
 -------------------------
@@ -24,7 +25,8 @@ Command element structure
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
-which does not contain any response data (no ``<resData>``).
+.. rubric:: Example
 
-See also :ref:`succ-fail`.
+.. code-block:: xml
+
+   <epp/>

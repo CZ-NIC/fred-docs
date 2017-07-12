@@ -1,10 +1,10 @@
 
-.. index:: update; nsset
+.. index::
+   pair: renew; domain
 
-Update nsset
-=============
 
-.. todo:: TODO
+Renew domain
+============
 
 Command element structure
 -------------------------
@@ -28,3 +28,9 @@ The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.
+
+.. rubric:: Example
+
+.. code-block:: xml
+
+   <epp/>

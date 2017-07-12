@@ -5,8 +5,10 @@
 Update contact
 ==============
 
-Contact update is an ``update`` element in the ``contact`` namespace
+A contact update command is an ``update`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
+
+It is used to alter the data of a contact.
 
 .. index:: Ⓔupdate, Ⓔid, Ⓔchg, ⒺpostalInfo, Ⓔname, Ⓔorg, Ⓔaddr, Ⓔstreet,
    Ⓔcity, Ⓔsp, Ⓔpc, Ⓔcc, Ⓔvoice, Ⓔfax, Ⓔemail, ⒺauthInfo,
@@ -18,8 +20,8 @@ Command element structure
 The ``<contact:update>`` element must declare the ``contact`` namespace
 and schema and it must contain the following child elements:
 
-* ``<contact:id>`` **(1)** the contact handle as :term:`fred:objIDType`.
-* ``<contact:chg>`` **(0..1)** comprises the new values of contact data
+* ``<contact:id>`` **(1)** the contact handle as :term:`fredcom:objIDType`.
+* ``<contact:chg>`` **(0..1)** comprises the new values of contact properties
   that will be changed by this update. Omitted properties will remain unchanged.
 
    * ``<contact:postalInfo>`` **(0..1)** – change contact's postal information:
@@ -29,12 +31,12 @@ and schema and it must contain the following child elements:
          * ``<contact:street>`` **(1..3)** – street line 1–3 as :term:`contact:optPostalLineType`,
          * ``<contact:city>`` **(1)** – city as :term:`contact:postalLineType`,
          * ``<contact:sp>`` **(0..1)** – state or province as :term:`contact:optPostalLineType`,
-         * ``<contact:pc>`` **(1)** – postal code as :term:`xs:token` of the maximum length of 16 characters,
-         * ``<contact:cc>`` **(1)** – country code as :term:`xs:token` of the length of 2 characters,
+         * ``<contact:pc>`` **(1)** – postal code as :term:`contact:pcType`,
+         * ``<contact:cc>`` **(1)** – country code as :term:`contact:ccType`,
    * ``<contact:voice>`` **(0..1)** – change phone number as :term:`contact:e164StringType`,
    * ``<contact:fax>`` **(0..1)** – change fax number as :term:`contact:e164StringType`,
    * ``<contact:email>`` **(0..1)** – change email as :term:`contact:emailCommaListType`,
-   * ``<contact:authInfo>`` **(0..1)** – change authorization information as :term:`fred:authInfoType`
+   * ``<contact:authInfo>`` **(0..1)** – change authorization information (transfer password) as :term:`fredcom:authInfoType`
    * ``<contact:disclose>`` **(0..1)** – change contact information disclosure settings:
       * ``@flag`` **(R)** attribute (disclose flag) as a :term:`xs:boolean`: ``0`` – hide listed items, ``1`` – publish listed items,
       * ``<contact:addr/>`` **(0..1)** – address disclosure setting as an empty element,
@@ -54,7 +56,7 @@ and schema and it must contain the following child elements:
         ``passport`` (passport number),
         ``mpsv`` (number from the Ministry of Labour and Social Affairs),
         ``ico`` (company number), ``birthday`` (birthday date),
-      * an identification number as a :term:`contact:identValueT`,
+      * element content: an identification number as a :term:`contact:identValueT`,
    * ``<contact:notifyEmail>`` **(0..1)** – change notification email as :term:`contact:emailUpdCommaListType`.
 
 .. rubric:: Example
@@ -89,5 +91,7 @@ and schema and it must contain the following child elements:
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result <plain-result>` message
-which does not contain any return values (no ``resData``).
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+which does not contain any response data (no ``<resData>``).
+
+See also :ref:`succ-fail`.
