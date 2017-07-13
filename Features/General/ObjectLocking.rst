@@ -4,8 +4,9 @@
 Object locking
 --------------
 
-Object locking stands for enhanced security settings of registrable objects
-that a registrant can request from the Registry directly.
+Object locking (also known as Registry lock) stands for enhanced security
+settings of registrable objects that a registrant can request from the Registry
+directly.
 
 To submit a request to lock an object, a registrant uses the "Public Request"
 website form. However, an extra electronically signed email or
