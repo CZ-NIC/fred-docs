@@ -4,16 +4,26 @@
 Polling
 =======
 
-* request messages
-* acknowledge a message
+Polling is used by the client to manage notifications about relevant events
+in the Registry.
 
-message queue - count / message list (first message in the queue?)
+First, the client orders the notification messages by issuing a poll request.
+In response, the server informs about the status of the message queue
+(the message count), includes contents of the first (oldest) message
+and provides its identifier for acknowledgement.
 
-FRED poll message types (also by object type)
+Then the client is supposed to confirm the receipt of this message by issuing
+a poll acknowledgement with the identifier of the read message.
+The server removes the acknowledged message from the message queue and responds
+with a new message count and the identification of the next message in the queue.
 
-??? do we provide msgQ for other commands than poll? No.
+The process can be repeated to read the remaining messages until the count is
+reduced to zero.
+
+.. ??? does FRED EPP server provide msgQ for other commands than poll? No.
 
 .. toctree::
 
    PollReq
    PollAck
+   MessageTypes

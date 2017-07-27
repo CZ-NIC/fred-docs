@@ -4,8 +4,24 @@
 Poll acknowledge
 ================
 
+A poll acknowledge command is used to confirm that a message has been
+received by the client and can be removed from the queue on the server.
+
+The poll command is a ``poll`` element in the default namespace
+(``urn:ietf:params:xml:ns:epp-1.0``).
+
+.. index:: Ⓔpoll, ⓐop, ⓐmsgID
+
 Command element structure
 -------------------------
+
+* ``<poll/>`` **(1)** as an empty element,
+   * ``@op`` **(R)** poll operation; must equal ``ack`` to acknowledge the reading
+     of the message,
+   * ``@msgID`` identification number of the message to be confirmed;
+     required with ``@op = 'ack'``;
+     this is the current message identifier returned in :ref:`response to
+     a poll request <struct-pollreq-response>`.
 
 .. rubric:: Example
 
@@ -16,8 +32,8 @@ Command element structure
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
       <command>
-         <poll msgID="18856172" op="ack"/>
-         <clTRID>kkel002#17-03-08at16:12:47</clTRID>
+         <poll msgID="19596173" op="ack"/>
+         <clTRID>cmmp003#17-07-21at11:21:41</clTRID>
       </command>
    </epp>
 
@@ -25,10 +41,20 @@ Command element structure
 
 .. code-block:: shell
 
-   > poll ack 18856172
+   > poll ack 19596173
+
+.. index:: ⒺmsgQ, ⓐcount, ⓐid
 
 Response element structure
 --------------------------
+
+The :ref:`response <struct-response>` from the FRED EPP server contains
+the standard result, message queue and transaction identification.
+
+See also :ref:`succ-fail`.
+
+* ``<msgQ/>`` **(0..1)** – message queue info as an empty element; present only
+  if there are some messages in the queue.
 
 .. rubric:: Example
 
@@ -40,12 +66,12 @@ Response element structure
     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
       <response>
          <result code="1000">
-            <msg lang="cs">Příkaz úspěšně proveden</msg>
+            <msg>Command completed successfully</msg>
          </result>
-         <msgQ count="1" id="18862843"/>
+         <msgQ count="6" id="19603978"/>
          <trID>
-            <clTRID>kkel002#17-03-08at16:12:47</clTRID>
-            <svTRID>ReqID-0000126713</svTRID>
+            <clTRID>cmmp003#17-07-21at11:21:41</clTRID>
+            <svTRID>ReqID-0000140401</svTRID>
          </trID>
       </response>
    </epp>
