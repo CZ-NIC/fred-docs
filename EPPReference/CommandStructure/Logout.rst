@@ -7,7 +7,7 @@ Logout
 A logout command is used to end a session with the EPP server
 established by a :doc:`Login` command.
 
-The logout command is a ``logout`` element in the ``epp`` namespace
+The logout command is a ``logout`` element in the default namespace
 (``urn:ietf:params:xml:ns:epp-1.0``).
 
 Command element structure

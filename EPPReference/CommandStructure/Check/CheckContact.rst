@@ -51,20 +51,28 @@ and schema and it must contain the following child elements:
 Response element structure
 --------------------------
 
-The response contains the standard result, response data and transaction identification.
+The :ref:`response <struct-response>` from the FRED EPP server contains
+the standard result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<contact:chkData>`` which contains the following child elements:
+``<contact:chkData>``  which declares the ``contact`` namespace and schema
+and it contains the following child elements:
 
 * ``<contact:cd>`` **(1..n)** – the check resolution of a single contact handle:
+
    * ``<contact:id>`` **(1)** – the contact handle as :term:`fredcom:objIDType`,
-      * ``@avail`` **(R)** – availability as :term:`xs:boolean`,
+
+      * ``@avail`` **(R)** – availability as :term:`xs:boolean`;
+        ``true`` – available, ``false`` – not available,
+
    * ``<contact:reason>`` **(0..1)** – if the availability is negative,
      this element contains an explanation why the contact handle is not available,
      as :term:`fredcom:msgType`.
-      * ``@lang`` – language of the reason as :term:`xs:language`; default is ``en`` (English).
+
+      * ``@lang`` – language of the reason as :term:`xs:language`;
+        default is ``en`` (English).
 
 
 .. rubric:: Example

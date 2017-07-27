@@ -11,7 +11,7 @@ the client identifier to be used by the session.
 
 An EPP session is terminated by a :doc:`Logout` command.
 
-The login command is a ``login`` element in the ``epp`` namespace
+The login command is a ``login`` element in the default namespace
 (``urn:ietf:params:xml:ns:epp-1.0``).
 
 Command element structure
@@ -28,19 +28,23 @@ The ``<login>`` element contains the following child elements:
 * ``<newPW>`` **(0..1)** – a new password to be used for subsequent login
   commands as :term:`epp:pwType`, case sensitive,
 * ``<options>`` **(1)** – options of the EPP communication with the server:
+
    * ``<version>`` **(1)** – the protocol version to be used;
      this must be ``1.0``,
    * ``<lang>`` **(1)** – the response-text language to be used;
      this must be one of the values that are announced in the greeting
      (typically ``en`` or ``cs``),
+
 * ``<svcs>`` **(1)** – list of services to be used during the session – declare
   the schemas for all the objects that will be manipulated during the session:
+
    * ``<objURI>`` **(1..n)** – an object namespace URI as :term:`xs:anyURI`.
      Further details on the namespace URIs can be found in the
      :doc:`/EPPReference/SchemasNamespaces/index` section.
    * ``<svcExtension>`` **(0..1)** – list of service extensions – declare
      the schema extensions for all the objects that will be manipulated during
      the session:
+
       * ``<extURI>`` **(1..n)** – an extension namespace URI as :term:`xs:anyURI`.
 
 .. rubric:: Example

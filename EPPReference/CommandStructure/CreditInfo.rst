@@ -8,6 +8,9 @@ Credit info
 The credit info command is used to find out about the current credit amounts
 of the authenticated registrar in all zones for which the registrar is accredited.
 
+This command is a :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
+defined by the FRED EPP server.
+
 The credit info command is a ``creditInfo`` element in the ``fred`` namespace
 (``http://www.nic.cz/xml/epp/fred-1.5``).
 
@@ -46,12 +49,14 @@ The ``<fred:creditInfo/>`` element does not contain any child elements.
 Response element structure
 --------------------------
 
-The response contains the standard result, response data and transaction identification.
+The :ref:`response <struct-response>` from the FRED EPP server contains
+the standard result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<fred:resCreditInfo>`` which contains the following child elements:
+``<fred:resCreditInfo>`` which declares the ``fred`` namespace and schema
+and it contains the following child elements:
 
 * ``<fred:zoneCredit>`` **(0..n)** – the credit information of a single zone:
    * ``<fred:zone>`` **(1)** – the zone FQDN as :term:`eppcom:labelType`,

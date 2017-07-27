@@ -51,20 +51,28 @@ and schema and it must contain the following child elements:
 Response element structure
 --------------------------
 
-The response contains the standard result, response data and transaction identification.
+The :ref:`response <struct-response>` from the FRED EPP server contains
+the standard result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<nsset:chkData>`` which contains the following child elements:
+``<nsset:chkData>`` which declares the ``nsset`` namespace and schema
+and it contains the following child elements:
 
 * ``<nsset:cd>`` **(1..n)** – the check resolution of a single nsset handle:
+
    * ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDType`,
-      * ``@avail`` **(R)** – availability as :term:`xs:boolean`,
+
+      * ``@avail`` **(R)** – availability as :term:`xs:boolean`;
+        ``true`` – available, ``false`` – not available,
+
    * ``<nsset:reason>`` **(0..1)** – if the availability is negative,
      this element contains an explanation why the nsset handle is not available,
      as :term:`fredcom:msgType`.
-      * ``@lang`` – language of the reason as :term:`xs:language`; default is ``en`` (English).
+
+      * ``@lang`` – language of the reason as :term:`xs:language`;
+        default is ``en`` (English).
 
 
 .. rubric:: Example
