@@ -5,10 +5,10 @@
 Update contact
 ==============
 
+A contact update command is used to alter the data of a contact.
+
 A contact update command is an ``update`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
-
-It is used to alter the data of a contact.
 
 .. index:: Ⓔupdate, Ⓔid, Ⓔchg, ⒺpostalInfo, Ⓔname, Ⓔorg, Ⓔaddr, Ⓔstreet,
    Ⓔcity, Ⓔsp, Ⓔpc, Ⓔcc, Ⓔvoice, Ⓔfax, Ⓔemail, ⒺauthInfo,
@@ -20,8 +20,8 @@ Command element structure
 The ``<contact:update>`` element must declare the ``contact`` namespace
 and schema and it must contain the following child elements:
 
-* ``<contact:id>`` **(1)** the contact handle as :term:`fredcom:objIDType`.
-* ``<contact:chg>`` **(0..1)** comprises the new values of contact properties
+* ``<contact:id>`` **(1)** – the contact handle as :term:`fredcom:objIDType`.
+* ``<contact:chg>`` **(0..1)** – comprises the new values of contact attributes
   that will be changed by this update. Omitted properties will remain unchanged.
 
    * ``<contact:postalInfo>`` **(0..1)** – change contact's postal information:
@@ -65,28 +65,30 @@ and schema and it must contain the following child elements:
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
-   <command>
-   <update>
-      <contact:update
-       xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
-       xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.xsd">
-      <contact:id>CID-BEBA</contact:id>
-      <contact:chg>
-         <contact:notifyEmail>change.only@notify-email.cz</contact:notifyEmail>
-      </contact:chg>
-      </contact:update>
-   </update>
-   <clTRID>mhvo002#17-03-31at15:00:34</clTRID>
-   </command>
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
+      <command>
+         <update>
+            <contact:update xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.xsd">
+               <contact:id>CID-MYOWN</contact:id>
+               <contact:chg>
+                  <contact:voice>+420.222333444</contact:voice>
+                  <contact:disclose flag="0">
+                     <contact:voice/>
+                  </contact:disclose>
+               </contact:chg>
+            </contact:update>
+         </update>
+         <clTRID>rxzw005#17-07-18at12:03:30</clTRID>
+      </command>
    </epp>
 
 .. rubric:: FRED-client equivalent
 
 .. code-block:: shell
 
-   > update_contact CID-BEBA (() NULL NULL NULL NULL () NULL () change.only@notify-email.cz)
+   > update_contact CID-MYOWN (() +420.222333444 NULL NULL NULL (n voice))
 
 Response element structure
 --------------------------
