@@ -30,5 +30,5 @@ objects through the FRED EPP.
 
 :doc:`CommandStructure/CreditInfo`
 | :doc:`CommandStructure/SendAuthInfo/index`
-| :doc:`CommandStructure/Test/index`
+| :doc:`CommandStructure/TestNsset`
 | :doc:`CommandStructure/List/index`

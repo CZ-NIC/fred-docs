@@ -305,7 +305,7 @@ For command-response mapping see a specific command syntax description:
 * :doc:`nsset:info <../CommandStructure/Info/InfoNsset>`
 * :doc:`nsset:transfer <../CommandStructure/Transfer/TransferNsset>`
 * :doc:`nsset:update <../CommandStructure/Update/UpdateNsset>`
-* :doc:`nsset:test <../CommandStructure/Test/TestNsset>`
+* :doc:`nsset:test <../CommandStructure/TestNsset>`
 * :doc:`nsset:sendAuthInfo <../CommandStructure/SendAuthInfo/SendAuthInfoNsset>`
 
 
@@ -368,5 +368,4 @@ For command-response mapping see a specific command syntax description:
 * :doc:`keyset:info <../CommandStructure/Info/InfoKeyset>`
 * :doc:`keyset:transfer <../CommandStructure/Transfer/TransferKeyset>`
 * :doc:`keyset:update <../CommandStructure/Update/UpdateKeyset>`
-* :doc:`keyset:test <../CommandStructure/Test/TestKeyset>`
 * :doc:`keyset:sendAuthInfo <../CommandStructure/SendAuthInfo/SendAuthInfoKeyset>`

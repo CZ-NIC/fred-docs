@@ -23,5 +23,5 @@ Command & response structure
    RenewDomain
    CreditInfo
    SendAuthInfo/index
-   Test/index
+   TestNsset
    List/index
