@@ -1,7 +1,7 @@
 
 
 
-SendAuthInfo
+Send auth.info
 ===============
 
 Commands for requesting passwords for object transfers.
