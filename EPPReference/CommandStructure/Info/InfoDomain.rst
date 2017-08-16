@@ -15,10 +15,10 @@ A domain info command is an ``info`` element in the ``domain`` namespace
 Command element structure
 -------------------------
 
-The ``<domain:check>`` element must declare the ``domain`` namespace
+The ``<domain:info>`` element must declare the ``domain`` namespace
 and schema and it must contain the following child elements:
 
-* ``<domain:name>`` **(1..n)**  – a domain name as :term:`eppcom:labelType`.
+* ``<domain:name>`` **(1)**  – a domain name as :term:`eppcom:labelType`.
 
 .. rubric:: Example
 
@@ -65,9 +65,9 @@ The response data element (``<resData>``) contains a single child element
 ``<domain:infData>``  which declares the ``domain`` namespace and schema
 and it contains the following child elements:
 
-* ``<domain:name>`` **(1)** the domain name as :term:`eppcom:labelType`,
-* ``<domain:roid>`` **(1)** the domain repository identifier as :term:`eppcom:roidType`,
-* ``<domain:status>`` **(0..13)** the :ref:`domain object state(s) <mng-domain-stat>`:
+* ``<domain:name>`` **(1)** – the domain name as :term:`eppcom:labelType`,
+* ``<domain:roid>`` **(1)** – the domain repository identifier as :term:`eppcom:roidType`,
+* ``<domain:status>`` **(0..13)** – the :ref:`domain object state(s) <mng-domain-stat>`:
    * ``@s`` **(R)** – the state name as one of values:
       * ``ok``
       * ``serverDeleteProhibited``
@@ -91,9 +91,10 @@ and it contains the following child elements:
 * ``<domain:clID>`` **(1)** – the designated registrar handle as :term:`eppcom:clIDType`,
 * ``<domain:crID>`` **(0..1)** – the handle of the registrar who created this domain as :term:`eppcom:clIDType`,
 * ``<domain:crDate>`` **(0..1)** – the date and time of creation as :term:`xs:dateTime`,
-* ``<domain:upID>`` **(0..1)** – the handle of the registrar who was the last to update this domain as :term:`eppcom:clIDType`,
+* ``<domain:upID>`` **(0..1)** – the handle of the registrar who was the last
+  to update this domain as :term:`eppcom:clIDType`,
 * ``<domain:upDate>`` **(0..1)** – the date and time of the last update as :term:`xs:dateTime`,
-* ``<domain:exDate>`` **(0..1)** – the date of expiration as :term:`xs:dateTime`,
+* ``<domain:exDate>`` **(0..1)** – the date of expiration as :term:`xs:date`,
 * ``<domain:trDate>`` **(0..1)** – the date and time of the last transfer as :term:`xs:dateTime`,
 * ``<domain:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
 * ``<domain:tempcontact>`` **(0..n)** – a temporary contact handle as :term:`fredcom:objIDType`.

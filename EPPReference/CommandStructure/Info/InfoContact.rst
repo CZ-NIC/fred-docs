@@ -76,6 +76,7 @@ and it contains the following child elements:
       * ``serverTransferProhibited``
       * ``serverDeleteProhibited``
       * ``serverUpdateProhibited``
+      * ``serverBlocked``
       * ``deleteCandidate``
       * ``conditionallyIdentifiedContact``
       * ``identifiedContact``
@@ -101,7 +102,7 @@ and it contains the following child elements:
 * ``<contact:crDate>`` **(1)** – the date and time of creation as :term:`xs:dateTime`,
 * ``<contact:upID>`` **(0..1)** – the handle of the registrar who was the last to update this contact as :term:`eppcom:clIDType`,
 * ``<contact:upDate>`` **(0..1)** – the date and time of the last update as :term:`xs:dateTime`,
-* ``<contact:trDate>`` **(1)** – the date and time of the last transfer as :term:`xs:dateTime`,
+* ``<contact:trDate>`` **(0..1)** – the date and time of the last transfer as :term:`xs:dateTime`,
 * ``<contact:disclose>`` **(0..1)** – contact information disclosure settings:
    * ``@flag`` **(R)** – disclose flag as a :term:`xs:boolean`: ``0`` – listed items are hidden, ``1`` – listed items are published,
    * ``<contact:addr/>`` **(0..1)** – the address disclosure setting as an empty element,
