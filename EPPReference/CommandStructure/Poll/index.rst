@@ -1,5 +1,5 @@
 
-.. index:: poll
+.. index:: poll, notification
 
 Polling
 =======
@@ -7,20 +7,32 @@ Polling
 Polling is used by the client to manage notifications about relevant events
 in the Registry.
 
-First, the client orders the notification messages by issuing a poll request.
-In response, the server informs about the status of the message queue
-(the message count), includes contents of the first (oldest) message
-and provides its identifier for acknowledgement.
+The relevant events are mostly those that are not triggered by the client,
+such as time-based events (expiration, deletion of idle objects),
+asynchronous responses (technical check results),
+events that are triggered by other registrars (transfer)
+or by the Registry itself (consequences of merging contacts).
 
-Then the client is supposed to confirm the receipt of this message by issuing
-a poll acknowledgement with the identifier of the read message.
-The server removes the acknowledged message from the message queue and responds
-with a new message count and the identification of the next message in the queue.
+The workflow is following:
 
-The process can be repeated to read the remaining messages until the count is
-reduced to zero.
+#. The client orders the notification messages by issuing a poll request.
 
-.. ??? does FRED EPP server provide msgQ for other commands than poll? No.
+#. In response, the server informs about the status of the message queue
+   (the message count), includes contents of the first (oldest) message
+   and provides its identifier for acknowledgement.
+
+#. Then the client is supposed to confirm the receipt of this message by issuing
+   a poll acknowledgement with the identifier of the read message.
+
+#. The server removes the acknowledged message from the message queue and responds
+   with a new message count and the identification of the next message in the queue.
+
+#. The previous steps can be repeated to read the remaining messages
+   until the count is reduced to zero.
+
+.. Note:: The EPP standard allows to announce a non-empty message queue
+   (``<msgQ>``) in response to any command, however the FRED EPP server gives
+   such response exclusively to an explicit poll request.
 
 .. toctree::
 

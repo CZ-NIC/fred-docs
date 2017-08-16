@@ -15,7 +15,8 @@ The poll command is a ``poll`` element in the default namespace
 Command element structure
 -------------------------
 
-* ``<poll/>`` **(1)** as an empty element,
+The ``<poll/>`` **(1)** element must be empty and contain only this attribute:
+
    * ``@op`` **(R)** poll operation; must equal ``req`` to make the request.
 
 .. rubric:: Example
@@ -63,7 +64,9 @@ Structure of the message queue:
       * **one of** the messages such as ``<fred:lowCreditData>``,
         ``<fred:requestFeeInfoData>`` or other, see :doc:`MessageTypes`.
 
-     .. Note:: There is always just one message contained.
+     .. Note:: There is always just one message contained in the ``<msg>`` element.
+
+        The content of the ``<msg>`` element is not processed for validity.
 
 
 

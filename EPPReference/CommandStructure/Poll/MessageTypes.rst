@@ -4,19 +4,24 @@
 Poll message types
 ==================
 
-FRED poll message types:
+..
+   FRED poll message types:
 
-* object-independent: ``<fred:lowCreditData>``, ``<fred:requestFeeInfoData>``,
-* domains: ``<domain:trnData>``, ``<domain:impendingExpData>``, ``<domain:expData>``,
-  ``<domain:dnsOutageData>``, ``<domain:delData>``, ``<domain:updateData>``
-  + ENUM: ``<enumval:impendingValExpData>``, ``<enumval:valExpData>``
-* contacts: ``<contact:trnData>``, ``<contact:idleDelData>``, ``<contact:updateData>``
-* nssets: ``<nsset:trnData>``, ``<nsset:idleDelData>``, ``<nsset:updateData>``, ``<nsset:testData>``
-* keysets: ``<keyset:trnData>``, ``<keyset:idleDelData>``, ``<keyset:updateData>``
+   * object-independent: ``<fred:lowCreditData>``, ``<fred:requestFeeInfoData>``,
+   * domains: ``<domain:trnData>``, ``<domain:impendingExpData>``, ``<domain:expData>``,
+     ``<domain:dnsOutageData>``, ``<domain:delData>``, ``<domain:updateData>``
+     + ENUM: ``<enumval:impendingValExpData>``, ``<enumval:valExpData>``
+   * contacts: ``<contact:trnData>``, ``<contact:idleDelData>``, ``<contact:updateData>``
+   * nssets: ``<nsset:trnData>``, ``<nsset:idleDelData>``, ``<nsset:updateData>``, ``<nsset:testData>``
+   * keysets: ``<keyset:trnData>``, ``<keyset:idleDelData>``, ``<keyset:updateData>``
 
+.. Note:: The content of messages is not processed for validity,
+   the markup has a formatting purpose.
 
 .. contents::
    :local:
+
+.. index:: ⒺlowCreditData, Ⓔzone, Ⓔlimit, Ⓔcredit
 
 Low credit
 ----------
@@ -69,20 +74,23 @@ and contains:
       </response>
    </epp>
 
+.. index:: ⒺrequestFeeInfoData, ⒺperiodFrom, ⒺperiodTo, ⒺtotalFreeCount,
+   ⒺusedCount, Ⓔprice
+
 Request usage
 -------------
 
-**Event:** Daily report of how many requests of the prepaid amount have been
-used this month so far, and how much the client will be charged for the requests
-that exceed the prepaid amount.
+**Event:** Daily report of how many free requests have been used this month
+so far, and how much the client will be charged for the requests
+that exceed the limit.
 
 ``<fred:requestFeeInfoData>`` **(1)** declares the ``fred`` namespace and
 schema, and contains:
 
 * ``<fred:periodFrom>`` **(1)** – start of the period as :term:`xs:dateTime`,
 * ``<fred:periodTo>`` **(1)** – end of the period as :term:`xs:dateTime`,
-* ``<fred:totalFreeCount>`` **(1)** – the amount of prepaid requests (the limit)
-  per month as :term:`xs:unsignedLong`,
+* ``<fred:totalFreeCount>`` **(1)** – the amount of free requests (the limit)
+  for this month as :term:`xs:unsignedLong`,
 * ``<fred:usedCount>`` **(1)** – the total of requests used during the period
   as :term:`xs:unsignedLong`,
 * ``<fred:price>`` **(1)** – additional charge for requests over limit
@@ -118,7 +126,8 @@ schema, and contains:
       </response>
    </epp>
 
-
+.. index:: ⒺimpendingExpData, ⒺexpData, ⒺdnsOutageData, ⒺdelData,
+   Ⓔname, ⒺexDate
 
 Domain life cycle
 -----------------
@@ -129,7 +138,8 @@ that have the same content but are issued on different **events**:
 * ``<domain:impendingExpData>`` – the domain is going to expire (by default 30 days before expiration),
 * ``<domain:expData>`` – the domain has expired (on the date of expiration),
 * ``<domain:dnsOutageData>`` – the domain has been excluded from the zone (by default 30 days after expiration),
-* ``<domain:delData>`` – the domain has been deleted (by default 62 days after expiration or deleted by the Registry???).
+* ``<domain:delData>`` – the domain has been deleted (by default 61 days
+  after expiration or deleted by the Registry for another reason).
 
 Only one of these elements can occur in a single poll message.
 
@@ -169,15 +179,17 @@ and contain the following child elements:
       </response>
    </epp>
 
-
+.. index:: ⒺimpendingValExpData, ⒺvalExpData, Ⓔname, ⒺvalExDate
 
 ENUM domain validation
 ----------------------
 
 Notifications concerning the validation of ENUM domains for **events**:
 
-* ``<enumval:impendingValExpData>`` – domain's validation is going to expire (by default X days before validation expiration),
-* ``<enumval:valExpData>`` – domain's validation has expired (on the day of validation expiration).
+* ``<enumval:impendingValExpData>`` – domain's validation is going to expire
+  (by default 30 days before validation expiration),
+* ``<enumval:valExpData>`` – domain's validation has expired (on the day
+  of validation expiration).
 
 Only one of these elements can occur in a single poll message.
 
@@ -189,12 +201,41 @@ and contain the same child elements:
 * ``<enumval:valExDate>`` **(1)** – the expiration date of domain validation
   as :term:`xs:date`.
 
+.. code-block:: xml
+   :caption: Example of a notification of ENUM validation expiration
 
+   <?xml version="1.0" encoding="UTF-8"?>
+   <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
+      <response>
+         <result code="1301">
+            <msg>Command completed successfully; ack to dequeue</msg>
+         </result>
+         <msgQ count="1" id="19847350">
+            <qDate>2017-08-14T13:19:29+02:00</qDate>
+            <msg>
+               <enumval:impendingValExpData xmlns:enumval="http://www.nic.cz/xml/epp/enumval-1.2"
+                xsi:schemaLocation="http://www.nic.cz/xml/epp/enumval-1.2 enumval-1.2.0.xsd">
+                  <enumval:name>1.1.1.7.4.5.2.2.2.0.2.4.e164.arpa</enumval:name>
+                  <enumval:valExDate>2017-08-15</enumval:valExDate>
+               </enumval:impendingValExpData>
+            </msg>
+         </msgQ>
+         <trID>
+            <clTRID>fmvu002#17-08-14at13:23:05</clTRID>
+            <svTRID>ReqID-0000141213</svTRID>
+         </trID>
+      </response>
+   </epp>
+
+
+.. index:: ⒺtrnData, Ⓔname, Ⓔid, ⒺclID
 
 Object transfer
 ---------------
 
-**Event:** An object has been transferred.
+**Event:** An object has been transferred to another registrar.
 
 ``<*:trnData>`` **(1)** declares the object namespace and schema,
 and contains:
@@ -207,7 +248,8 @@ and contains:
 * ``<*:clID>`` **(1)** – the handle of the registrar who requested the transfer
   as :term:`eppcom:clIDType`.
 
-This message type appears in all 4 object namespaces: ``domain``, ``contact``, ``nsset``, ``keyset``.
+This message type appears in all 4 object namespaces: ``domain``, ``contact``,
+``nsset``, ``keyset``.
 
 .. code-block:: xml
    :caption: Example of transfer notification
@@ -238,21 +280,107 @@ This message type appears in all 4 object namespaces: ``domain``, ``contact``, `
       </response>
    </epp>
 
-
+.. index:: ⒺupdateData, ⒺopTRID, ⒺoldData, ⒺnewData
 
 Object update
 ---------------
 
-**Event:** An object has been updated.
+**Event:** An object has been updated (in consequence of a server-side operation).
 
 ``<*:updateData>`` **(1)** declares the object namespace and schema,
 and contains:
 
-* ``<*:opTRID>`` **(1)** – ??? as :term:`domain:trIDStringType`,
-* ``<*:oldData>`` **(1)** – data before the update, contents same as info command resData...,
-* ``<*:newData>`` **(1)** – data after the update, contents same as info command resData....
+* ``<*:opTRID>`` **(1)** – operation transaction identifier (an identification
+  of the operation in the Registry that has caused this notification)
+  as :term:`domain:trIDStringType`,
+* ``<*:oldData>`` **(1)** – data before the update, the content is presented
+  as an ``infData`` element (the same as in response to the ``info`` command:
+  :ref:`domain:infData <domain-infdata>`, :ref:`nsset:infData <nsset-infdata>`,
+  :ref:`keyset:infData <keyset-infdata>`),
+* ``<*:newData>`` **(1)** – data after the update, the content is presented
+  as an ``infData`` element (the same as in response to the ``info`` command:
+  :ref:`domain:infData <domain-infdata>`, :ref:`nsset:infData <nsset-infdata>`,
+  :ref:`keyset:infData <keyset-infdata>`).
 
-This message type appears in the following object namespaces: ``domain``, ``nsset``, ``keyset``.
+This message type appears in the following object namespaces: ``domain``,
+``nsset``, ``keyset``.
+
+.. code-block:: xml
+   :caption: Example of a notification of an updated object
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
+      <response>
+         <result code="1301">
+            <msg>Command completed successfully; ack to dequeue</msg>
+         </result>
+         <msgQ count="1" id="19852593">
+            <qDate>2017-08-14T13:29:06+02:00</qDate>
+            <msg>
+               <domain:updateData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
+                xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+                  <domain:opTRID>ReqID-0000141228</domain:opTRID>
+                  <domain:oldData>
+                     <domain:infData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
+                      xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+                        <domain:name>mydomain.cz</domain:name>
+                        <domain:roid>D0009907597-CZ</domain:roid>
+                        <domain:status s="serverBlocked">Domain blocked</domain:status>
+                        <domain:status s="serverDeleteProhibited">Deletion forbidden</domain:status>
+                        <domain:status s="serverRenewProhibited">Registration renewal forbidden</domain:status>
+                        <domain:status s="serverRegistrantChangeProhibited">Registrant change forbidden</domain:status>
+                        <domain:status s="serverTransferProhibited">Sponsoring registrar change forbidden</domain:status>
+                        <domain:status s="serverUpdateProhibited">Update forbidden</domain:status>
+                        <domain:registrant>CID-MYOWN</domain:registrant>
+                        <domain:admin>CID-ADMIN1</domain:admin>
+                        <domain:admin>CID-ADMIN2</domain:admin>
+                        <domain:nsset>NID-MYNSSET</domain:nsset>
+                        <domain:clID>REG-MYREG</domain:clID>
+                        <domain:crID>REG-MYREG</domain:crID>
+                        <domain:crDate>2017-07-11T13:28:48+02:00</domain:crDate>
+                        <domain:upID>REG-FRED_C</domain:upID>
+                        <domain:upDate>2017-08-11T10:46:14+02:00</domain:upDate>
+                        <domain:exDate>2020-07-11</domain:exDate>
+                        <domain:authInfo>rvBcaTVq</domain:authInfo>
+                     </domain:infData>
+                  </domain:oldData>
+                  <domain:newData>
+                     <domain:infData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
+                      xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+                        <domain:name>mydomain.cz</domain:name>
+                        <domain:roid>D0009907597-CZ</domain:roid>
+                        <domain:status s="serverBlocked">Domain blocked</domain:status>
+                        <domain:status s="serverDeleteProhibited">Deletion forbidden</domain:status>
+                        <domain:status s="serverRenewProhibited">Registration renewal forbidden</domain:status>
+                        <domain:status s="serverRegistrantChangeProhibited">Registrant change forbidden</domain:status>
+                        <domain:status s="serverTransferProhibited">Sponsoring registrar change forbidden</domain:status>
+                        <domain:status s="serverUpdateProhibited">Update forbidden</domain:status>
+                        <domain:registrant>CID-MYCONTACT</domain:registrant>
+                        <domain:admin>CID-ADMIN1</domain:admin>
+                        <domain:admin>CID-ADMIN2</domain:admin>
+                        <domain:nsset>NID-MYNSSET</domain:nsset>
+                        <domain:clID>REG-MYREG</domain:clID>
+                        <domain:crID>REG-MYREG</domain:crID>
+                        <domain:crDate>2017-07-11T13:28:48+02:00</domain:crDate>
+                        <domain:upID>REG-CZNIC</domain:upID>
+                        <domain:upDate>2017-08-14T13:29:06+02:00</domain:upDate>
+                        <domain:exDate>2020-07-11</domain:exDate>
+                        <domain:authInfo>rvBcaTVq</domain:authInfo>
+                     </domain:infData>
+                  </domain:newData>
+               </domain:updateData>
+            </msg>
+         </msgQ>
+         <trID>
+            <clTRID>fmvu004#17-08-14at13:29:27</clTRID>
+            <svTRID>ReqID-0000141230</svTRID>
+         </trID>
+      </response>
+   </epp>
+
+.. index:: ⒺidleDelData, Ⓔid
 
 Idle object deletion
 --------------------
@@ -264,7 +392,8 @@ and contains:
 
 * ``<*:id>`` **(1)** – the handle of the deleted object as :term:`fredcom:objIDType`.
 
-This message type appears in the following object namespaces: ``contact``, ``nsset``, ``keyset``.
+This message type appears in the following object namespaces: ``contact``,
+``nsset``, ``keyset``.
 
 .. code-block:: xml
    :caption: Example of a notification of a deleted idle object
@@ -294,6 +423,7 @@ This message type appears in the following object namespaces: ``contact``, ``nss
    </epp>
 
 
+..index:: ⒺtestData, Ⓔid, Ⓔname, Ⓔresult, Ⓔtestname, Ⓔstatus, Ⓔnote
 
 .. _struct-poll-test:
 
@@ -305,14 +435,18 @@ Technical check results
 ``<nsset:testData>`` **(1)** declares the ``nsset`` namespace and schema,
 and contains:
 
-* ``<nsset:cltestid>`` **(0..1)** – ??? as :term:`nsset:trIDStringType`,
-* ``<nsset:id>`` **(1)** – nsset handle as :term:`fredcom:objIDType`,
-* ``<nsset:name>`` **(0..n)** – a listing of domains that ??? as :term:`eppcom:labelType`,
+.. * ``<nsset:cltestid>`` **(0..1)** – clTRID of the request???
+     as :term:`nsset:trIDStringType`, // probably unused
+
+* ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDType`,
+* ``<nsset:name>`` **(0..n)** – a listing of additional domain names that have
+  been tested with the nsset as :term:`eppcom:labelType`,
 * ``<nsset:result>`` **(0..n)** – the result of a single test:
    * ``<nsset:testname>`` **(1)** – the name of the test as :term:`eppcom:labelType`,
    * ``<nsset:status>`` **(1)** – success of the test as :term:`xs:boolean`:
      ``true`` – passed, ``false`` – failed,
-   * ``<nsset:note>`` **(0..1)** – note ??? as :term:`xs:string`.
+   * ``<nsset:note>`` **(0..1)** – extended information about the result
+     from the test implementation as :term:`xs:string`.
 
 .. code-block:: xml
    :caption: Example of notification with the results of a technical check

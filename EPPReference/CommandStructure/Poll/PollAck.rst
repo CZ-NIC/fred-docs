@@ -1,10 +1,10 @@
 
 
 
-Poll acknowledge
-================
+Poll acknowledgement
+====================
 
-A poll acknowledge command is used to confirm that a message has been
+A poll acknowledgement command is used to confirm that a message has been
 received by the client and can be removed from the queue on the server.
 
 The poll command is a ``poll`` element in the default namespace
@@ -15,13 +15,14 @@ The poll command is a ``poll`` element in the default namespace
 Command element structure
 -------------------------
 
-* ``<poll/>`` **(1)** as an empty element,
-   * ``@op`` **(R)** poll operation; must equal ``ack`` to acknowledge the reading
-     of the message,
-   * ``@msgID`` identification number of the message to be confirmed;
-     required with ``@op = 'ack'``;
-     this is the current message identifier returned in :ref:`response to
-     a poll request <struct-pollreq-response>`.
+The ``<poll/>`` **(1)** element must be empty and contain only attributes:
+
+* ``@op`` **(R)** – poll operation; must equal ``ack`` to acknowledge the reading
+  of the message,
+* ``@msgID`` – the identification number of a message to be confirmed
+  as :term:`eppcom:minTokenType`; required with ``@op = 'ack'``;
+  this is the current message identifier returned in :ref:`response to
+  a poll request <struct-pollreq-response>`.
 
 .. rubric:: Example
 
@@ -49,12 +50,19 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, message queue and transaction identification.
+the standard result, message queue information and transaction identification.
 
 See also :ref:`succ-fail`.
 
-* ``<msgQ/>`` **(0..1)** – message queue info as an empty element; present only
-  if there are some messages in the queue.
+Structure of message queue information:
+
+* ``<msgQ/>`` **(0..1)** – message queue information as an empty element;
+  present only if there are some messages in the queue,
+
+   * ``@count`` **(R)** – the count of messages in the queue
+     as :term:`xs:unsignedLong`,
+   * ``@id`` **(R)** – the identification number of the first message
+     in the queue as :term:`eppcom:minTokenType`.
 
 .. rubric:: Example
 
