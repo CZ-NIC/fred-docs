@@ -4,7 +4,7 @@
 Create
 ===============
 
-Commands for object creation.
+Commands for the registrations of new objects.
 
 .. toctree::
    :maxdepth: 1
