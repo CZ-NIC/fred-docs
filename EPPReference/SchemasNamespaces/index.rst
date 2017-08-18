@@ -1,47 +1,75 @@
 
 .. _FRED-EPPRef-XMLNS:
 
-Schemas & namespaces
+Namespaces & schemas
 ====================
 
-.. todo:: add schemas
+.. todo:: This segment still has to undergo a review by a SME (fact-checking and proof-reading).
 
-Standard namespaces
--------------------
+A namespace must be identified for each prefix using the :samp:`@xmlns:{prefix}` attribute.
 
-* \urn:ietf:params:xml:ns:epp-1.0 – Extensible Provisioning Protocol v1.0
-  – base protocol namespace (generic message structure), schema: ``epp-1.0.xsd``
-* \urn:ietf:params:xml:ns:eppcom-1.0 – Extensible Provisioning Protocol v1.0
-  shared structures, schema: ``eppcom-1.0.xsd``
+.. Important:: The client must use the same version of a namespace as the server!
+   The current namespace versions are listed in the ``greeting``
+   (see :doc:`/EPPReference/ProtocolBasics/ServiceDiscovery`).
 
-Struktura XML dokumentů je
-definována pomocí dvou XML schémat.
-Namespace urn:ietf:params:xml:ns:epp-1.0 je definován základním schématem EPP.
-Druhé schéma vedlejšího významu definuje namespace urn:ietf:params:xml:ns:eppcom-1.0
-a jedná se o definici několika používaných jednoduchých datových typů,
-u kterých se předpokládá, že budou sdíleny se schématy, které
-EPP protokol rozšiřují. Jakékoliv úpravy EPP, které by znamenaly změnu těchto
-dvou schémat, nejsou kompatibilní a protokol,
-na nich postavený, nesmí být názvem EPP označován.
+To enable XML validation on the client side, depending on the selected
+XML-validation tool, there are 2 options:
 
-FRED-defined namespaces
------------------------
+* to link a namespace to the location of a schema (see the table below)
+  inside messages using the ``@xsi:schemaLocation`` attribute,
+  for the tool to locate the schema from here – *this option is illustrated
+  in structure descriptions*, or
+* to pass the location of the global schema as an argument
+  to the XML-validation tool directly, such as:
 
-* \http://www.nic.cz/xml/epp/fred-1.5 – protocol extensions (new commands), schema: :samp:`fred-1.5.{x}.xsd` vs. ``fred-1.5.xsd`` ???
-* \http://www.nic.cz/xml/epp/fredcom-1.2 – protocol extension structures, schema: fredcom-1.2.x.xsd
-* \http://www.nic.cz/xml/epp/domain-1.4 – Extension to Extensible Provisioning
-  Protocol v1.0 domain – object extension, command-response mapping and data types
-  for domains, schema: domain-1.4.x.xsd
-* \http://www.nic.cz/xml/epp/contact-1.6 – Extension to Extensible Provisioning
-  Protocol v1.0 contact provisioning – object extension and data types
-  for contacts, schema: contact-1.6.x.xsd
-* \http://www.nic.cz/xml/epp/nsset-1.2 – Extension to Extensible Provisioning
-  Protocol v1.0 nameserver set provisioning – object extension and data
-  types for nameserver sets, schema: nsset-1.2.x.xsd
-* \http://www.nic.cz/xml/epp/keyset-1.3 – Extension to Extensible Provisioning
-  Protocol v1.0 DNS-key set provisioning – object extension and data
-  types for DNSSEC-key sets, schema: keyset-1.3.x.xsd
-* \http://www.nic.cz/xml/epp/enumval-1.2 – extension for properties related
-  to ENUM domain validation, schema: enumval-1.2.x.xsd
+  .. code-block:: shell
 
-.. Note:: Documentation does not include elements that are deprecated.
+     xmllint --noout --schema "/usr/share/fred-client/schemas/all.xsd" -
+
+The FRED EPP server as such does NOT require schema locations inside messages
+and ignores them if they are present.
+
+The global schema ``all-2.3.2.xsd`` (alias ``all.xsd``) imports the following partial schemas and
+thus provides the definitions of all namespaces in a single file.
+
+..
+   tabularcolumns:: |p{0.075\textwidth}|p{0.25\textwidth}|p{0.575\textwidth}|
+
+.. list-table:: Namespaces & schemas
+   :header-rows: 1
+   :widths: 25, 15, 60
+
+   * - Namespace identifier
+     - Schema file (partial)
+     - Description
+   * - ``urn:ietf:params:xml:ns:epp-1.0``
+     - ``epp-1.0.xsd``
+     - Extensible Provisioning Protocol v1.0 – protocol base (generic message structure)
+   * - ``urn:ietf:params:xml:ns:eppcom-1.0``
+     - ``eppcom-1.0.xsd``
+     - Extensible Provisioning Protocol v1.0 – shared structures
+   * - ``http://www.nic.cz/xml/epp/fred-1.5``
+     - :samp:`fred-1.5.0.xsd`
+     - FRED protocol extensions
+   * - ``http://www.nic.cz/xml/epp/fredcom-1.2``
+     - :samp:`fredcom-1.2.1.xsd`
+     - FRED protocol extensions – shared structures
+   * - ``http://www.nic.cz/xml/epp/domain-1.4``
+     - :samp:`domain-1.4.2.xsd`
+     - FRED object extension for domain provisioning – command-response mapping and structures
+   * - ``http://www.nic.cz/xml/epp/contact-1.6``
+     - :samp:`contact-1.6.2.xsd`
+     - FRED object extension for contact provisioning – command-response mapping and structures
+   * - ``http://www.nic.cz/xml/epp/nsset-1.2``
+     - :samp:`nsset-1.2.2.xsd`
+     - FRED object extension for nsset provisioning – command-response mapping and structures
+   * - ``http://www.nic.cz/xml/epp/keyset-1.3``
+     - :samp:`keyset-1.3.2.xsd`
+     - FRED object extension for keyset provisioning – command-response mapping and structures
+   * - ``http://www.nic.cz/xml/epp/enumval-1.2``
+     - :samp:`enumval-1.2.0.xsd`
+     - FRED command/response extensions for ENUM domains
+   * - ``http://www.w3.org/2001/XMLSchema-instance``
+     - N/A
+     - Namespace for the XML Schema instance prefix ``xsi`` |br|
+       (required when the ``@xsi:schemaLocation`` attribute is used)
