@@ -15,12 +15,25 @@ Used simple data types defined in the FRED namespaces.
    fredcom:objIDType
       a :term:`xs:token` of the length between 1 and 63 characters
 
+   fredcom:objIDCreateType
+      a :term:`xs:token` of the length between 1 and 30 characters
+      matching the ``[a-zA-Z0-9](-?[a-zA-Z0-9])*`` pattern
+
+   fredcom:objIDChgType
+      a :term:`xs:token` of the length between 0 and 63 characters
+
    fredcom:msgType
       an unbounded :term:`xs:normalizedString`
 
    fred:amountType
       a :term:`xs:decimal` of the maximum length of 10 digits
       of which at most 2 digits are the fraction
+
+   domain:pLimitType
+      an :term:`xs:unsignedShort` ranging from 1 to 99 (inclusive)
+
+   domain:trIDStringType
+      a :term:`xs:token` of the length between 3 and 64 characters
 
    contact:identValueT
       a :term:`xs:token` of the maximum length of 32 characters
@@ -61,3 +74,15 @@ Used simple data types defined in the FRED namespaces.
 
    contact:ccType
       a :term:`xs:token` of the length of 2 characters
+
+   nsset:addrStringType
+      a :term:`xs:token` of the length between 3 and 45 characters
+
+   nsset:reportlevelType
+      an :term:`xs:unsignedByte` ranging from 0 to 10 (inclusive)
+
+   nsset:trIDStringType
+      a :term:`xs:token` of the length between 3 and 64 characters
+
+   keyset:keyT
+      a :term:`xs:base64Binary` string, non-empty

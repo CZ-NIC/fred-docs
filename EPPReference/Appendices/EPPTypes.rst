@@ -18,6 +18,9 @@ Used simple data types defined in the standard EPP namespaces.
    eppcom:labelType
       a :term:`xs:token` of the length between 1 and 255 characters
 
+   eppcom:minTokenType
+      a :term:`xs:token` of the length at least 1
+
    epp:pwType
       a :term:`xs:token` of the length between 6 and 16 characters
 

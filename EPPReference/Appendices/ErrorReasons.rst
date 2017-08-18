@@ -1,36 +1,10 @@
 
-
+.. _error-reasons:
 
 Error reasons
 =============
 
-.. https://admin.nic.cz/wiki/developers/fred/EPP/backend/spec#NewGetReasonMessages
-
-.. Which belong to which result code?
-
-.. .. code-block:: xml
-   <?xml version="1.0" encoding="UTF-8"?>
-   <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
-   <response>
-      <result code="2306">
-      <msg>Parameter value policy error</msg>
-      <extValue>
-         <value>
-         <domain:admin xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4">CID-ADMIN</domain:admin>
-         </value>
-         <reason>Administrative contact is already assigned to this object.</reason>
-      </extValue>
-      </result>
-      <trID>
-         <clTRID>zmge003#17-05-04at12:11:25</clTRID>
-         <svTRID>ReqID-0000132808</svTRID>
-      </trID>
-   </response>
-   </epp>
-
-The possible :ref:`reasons` of errors are:
+Possible reasons of errors are:
 
 * An invalid format of the contact handle
 * An invalid format of the nsset handle
