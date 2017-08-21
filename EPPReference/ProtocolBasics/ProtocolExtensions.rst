@@ -11,13 +11,16 @@ The FRED EPP extends the protocol in such way that the ``<extension>`` element
 
 * ``<fred:extcommand>`` **(1)** – container for extending commands which must declare
   the FRED namespace and schema and can contain **one of** the custom commands:
+
    * ``<fred:creditInfo/>`` – request information about the credit of the
-     current client, see :doc:`../CommandStructure/CreditInfo`,
-   * ``<fred:sendAuthInfo>`` – request a transfer password of an object,
+     current client (object-independent command), see :doc:`../CommandStructure/CreditInfo`,
+   * ``<fred:sendAuthInfo>`` – request a transfer password of an object
+     (custom command class for object-related commands),
      see :doc:`../CommandStructure/SendAuthInfo/index`,
-   * ``<fred:test>`` – request a technical check,
-     see :doc:`../CommandStructure/Test/index`,
-   * or one of the listing commands, e.g. ``<fred:listDomains/>``,
+   * ``<fred:test>`` – request a technical check
+     (custom command class for object-related commands),
+     see :doc:`../CommandStructure/TestNsset`,
+   * or one of the listing commands (object-independent), e.g. ``<fred:listDomains/>``,
      for the complete reference of listing commands see :doc:`../CommandStructure/List/index`.
 
   The custom command may be followed by the ``<fred:clTRID>`` element **(0..1)**

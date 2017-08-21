@@ -79,9 +79,10 @@ It contains the following child elements:
          * ``<public/>`` **(1)** – The collected data is intended for public forums.
       * ``<retention>`` **(1)**
          * ``<stated/>`` **(1)** – The server retains data to meet the stated purpose.
+
   More about DCP in :rfc:`5730#page-9`.
 
-.. Note:: The contents of a ``<greeting>`` from the FRED EPP server are fixed.
+.. Note:: The contents of a ``<greeting>`` described above from the FRED EPP server are fixed.
 
 .. rubric:: Example
 

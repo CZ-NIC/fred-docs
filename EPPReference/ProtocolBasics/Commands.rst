@@ -26,35 +26,20 @@ Transactions are always described together as a whole in this manual.
 Implemented standard commands
 -----------------------------
 
-* Session management: login, logout
+* Session management commands: login, logout
 
-* Query commands: check, info, poll (request and acknowledge)
+* Query commands: check, info, poll (``request`` and ``acknowledge`` operations)
 
-  .. Note:: The FRED EPP does not implement the transfer query.
-
-* Transform commands: create, update, transfer (request only), renew, delete
+* Transform commands: create, update, transfer (``request`` operation only), renew, delete
 
 See also :doc:`../CommandOverview` for implemented non-standard (custom) commands,
-or  :doc:`ProtocolExtensions` for the generic syntax of custom commands.
+or :doc:`ProtocolExtensions` for the generic syntax of custom commands.
 
-.. _succ-fail:
+.. Note:: The standard suggests a more complex handling of object transfer
+   which is not applicable in the FRED. Therefore the other transfer operations
+   (query, cancel, approve, reject) are not implemented in the FRED EPP.
 
-Success or failure of a command
--------------------------------
-
-A response always contains the result of executing the command and each result
-is described by both a code and a textual message.
-
-If the execution succeeded, a code of 1xxx series is returned.
-If the execution failed, a code of 2xxx series is returned.
-See :doc:`/EPPReference/Appendices/ResultCodes` for an overview.
-
-.. Important:: The **response element structure** of particular commands is
-   described only for cases when the execution is **successful** and therefore
-   it is expected that it may contain some return data, depending on the command.
-
-.. index::
-   single: trID; clTRID; svTRID
+.. index:: ⒺtrID, ⒺclTRID, ⒺsvTRID
    pair: transaction; identifier
 
 .. _trans-ident:
@@ -82,40 +67,38 @@ A **response** will be assigned by the server:
 
 Transaction identifiers should be logged, retained and protected.
 
-Standard element structure
+
+
+.. _struct-command:
+
+Command element structure
 --------------------------
 
-The standard defines several command classes that are used to declare
-which operation to perform but the object-specific details of each command are
-mapped by the managed object.
-
-Command messages
-^^^^^^^^^^^^^^^^
-
 The ``<command>`` element is a child of ``<epp>`` and defined in the standard
-EPP namespace. It contains a command class, also in the standard namespace,
+EPP namespace. It contains a command class of object-related commands or
+an actual object-independent command, also in the standard namespace,
 which must be a **singular** occurrence of **one of** the following:
 
 * ``<login>`` – client login (establish a session), an object-independent
   command, see :doc:`../CommandStructure/Login`,
 * ``<logout>`` – client logout (end the session), an object-independent
   command, see :doc:`../CommandStructure/Logout`,
-* ``<check>`` – object availability checks, an object-related command,
-* ``<create>`` – object registrations, an object-related command,
-* ``<delete>`` – object unregistrations, an object-related command,
-* ``<info>`` – requests for object details, an object-related command,
-* ``<renew>`` – object registration renewals (to be used only with domains), an object-related command,
-* ``<transfer>`` – object transfer requests, an object-related command:
-   * ``@op`` **(R)** attribute (transfer operation) –
+* ``<check>`` – object availability checks, an object-related command class,
+* ``<create>`` – object registrations, an object-related command class,
+* ``<delete>`` – object unregistrations, an object-related command class,
+* ``<info>`` – requests for object details, an object-related command class,
+* ``<renew>`` – object registration renewals (to be used only with domains), an object-related command class,
+* ``<transfer>`` – object transfer requests, an object-related command class:
+   * ``@op`` **(R)** – transfer operation –
      Because of :doc:`the concept of transfer </Features/Concepts/Transfer>`
      in the FRED, only one value is permitted and that is ``request``
      which is used to request a transfer.
-* ``<update>`` – updates of object details, an object-related command,
+* ``<update>`` – updates of object details, an object-related command class,
 * ``<poll>`` – polling for notifications from the Registry, an object-independent command, see :doc:`../CommandStructure/Poll/index`.
-   * ``@op`` **(R)** attribute (poll operation) as one of values:
-      * ``req`` - request poll messages,
-      * ``ack`` - acknowledge reading of a message,
-   * ``@msgID`` attribute (identifier of the message to be acknowledged)
+   * ``@op`` **(R)** – poll operation as one of values:
+      * ``req`` – request poll messages,
+      * ``ack`` – acknowledge reading of a message,
+   * ``@msgID`` – identifier of the message to be acknowledged
      as a :term:`xs:token`. Use only with ``@op = 'ack'``.
 
 Each object-related command class may contain elements from any namespace.
@@ -150,11 +133,13 @@ The command class may be followed by:
       </command>
    </epp>
 
-Command contents are described separately for each reasonable combination
-of a command class and managed object.
+Command contents are described separately for each justified combination
+of a command class and a managed object.
 
-Response messages
-^^^^^^^^^^^^^^^^^
+.. _struct-response:
+
+Response element structure
+--------------------------
 
 The ``<response>`` element is a child of ``<epp>`` and defined in the standard
 EPP namespace. It contains the following child elements:
@@ -163,7 +148,7 @@ EPP namespace. It contains the following child elements:
    * ``@code`` **(R)** – result code (4-digit number), for a list of possible
      values see :doc:`result codes </EPPReference/Appendices/ResultCodes>`,
    * ``<msg>`` **(1)** – human-readable description of the result,
-      * ``@lang`` attribute (language of the result description)
+      * ``@lang`` – language of the result description
         as :term:`xs:language`; default is ``en`` (English),
    * ``<value>`` **(0..n)** – identification of a client-provided element
      or other information that caused a server error condition,
@@ -172,8 +157,10 @@ EPP namespace. It contains the following child elements:
         or other information that caused a server error condition,
       * ``<reason>`` **(1)** – human readable message that describes the reason
         for the error (see :doc:`../Appendices/ErrorReasons` for a complete list),
-         * ``@lang`` attribute (language of the reason description)
+
+         * ``@lang`` – language of the reason description
            as :term:`xs:language`; default is ``en`` (English),
+
 * ``<msgQ>`` **(0..1)** – description of queued poll messages; in the FRED EPP,
   this element is present only in a response to a ``poll`` command,
   for detailed syntax and usage see :doc:`../CommandStructure/Poll/index`,
@@ -201,7 +188,7 @@ EPP namespace. It contains the following child elements:
          <resData>
             <!-- Data container -->
             <object:someData xmlns:object="object:namespace:id"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+             xsi:schemaLocation="object:namespace:id path/to/schema.xsd">
                <!-- Object-defined content -->
             </object:someData>
          </resData>
@@ -242,98 +229,51 @@ EPP namespace. It contains the following child elements:
          </response>
       </epp>
 
+.. _succ-fail:
 
-ENUM domain validation extensions
----------------------------------
+Success or failure of a command
+-------------------------------
 
-.. _command-ext:
+A response always contains the result of executing the command and each result
+is described by both a code and a textual message.
 
-FRED command extensions
-^^^^^^^^^^^^^^^^^^^^^^^
+If the execution succeeded, a code of 1xxx series is returned.
+If the execution failed, a code of 2xxx series is returned.
+See :doc:`/EPPReference/Appendices/ResultCodes` for an overview.
 
-Command extensions are extensions in the XPath :samp:`/epp/command[{std-cmd}]/extension/*:*`.
+The standard allows to return several results, but the FRED EPP server
+returns exactly one result and therefore one result code at a time.
 
-Extensions for ENUM domains - TLE: enumval:create, enumval:update, enumval:renew.
-
-A good example is a creation of an ENUM domain, i.e. ``domain:create`` command
-with an ENUM domain as an argument.
-
-.. or update validation expiration date?
-
-.. rubric:: Example
-
-.. code-block:: xml
-   :caption: Example of a command with an extension
+.. Important:: The **response element structure** of specific commands is
+   described only for cases when the execution is **successful** and therefore
+   it is expected that it may contain some response data, depending on the command.
 
 .. code-block:: xml
-   :caption: Example response
-
-.. _response-ext:
-
-FRED response extensions
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-Response extensions are extensions in the XPath :samp:`/epp/response[result]/extension/*:*`.
-
-Extensions for ENUM domains - TLE: enumval:infData.
-
-A good example is a reponse to ``domain:info`` command with an ENUM domain as an argument.
-
-.. rubric:: Example
-
-.. code-block:: xml
-   :caption: Example command
-
-   <?xml version="1.0" encoding="utf-8" standalone="no"?>
-   <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
-      <command>
-         <info>
-            <domain:info xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
-               <domain:name>1.2.2.4.5.0.2.4.e164.arpa</domain:name>
-            </domain:info>
-         </info>
-         <clTRID>klde004#17-05-30at15:28:16</clTRID>
-      </command>
-   </epp>
-
-.. code-block:: xml
-   :caption: Example of a response with an extension
+   :caption: Example of a response (failure)
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
       <response>
-         <result code="1000">
-            <msg>Command completed successfully</msg>
+         <result code="2306">
+            <msg>Parameter value policy error</msg>
+            <extValue>
+               <value>
+                  <nsset:tech xmlns:nsset="http://www.nic.cz/xml/epp/nsset-1.2">C12-58326</nsset:tech>
+               </value>
+               <reason>Duplicity contact</reason>
+            </extValue>
+            <extValue>
+               <value>
+                  <nsset:tech xmlns:nsset="http://www.nic.cz/xml/epp/nsset-1.2">C17-58326</nsset:tech>
+               </value>
+               <reason>Duplicity contact</reason>
+            </extValue>
          </result>
-         <resData>
-            <domain:infData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
-               <domain:name>1.2.2.4.5.0.2.4.e164.arpa</domain:name>
-               <domain:roid>D0009770598-CZ</domain:roid>
-               <domain:status s="outzone">The domain isn't generated in the zone</domain:status>
-               <domain:registrant>C0-79371</domain:registrant>
-               <domain:clID>REG-MYREG</domain:clID>
-               <domain:crID>REG-MYREG</domain:crID>
-               <domain:crDate>2017-05-18T17:04:29+02:00</domain:crDate>
-               <domain:exDate>2018-05-18</domain:exDate>
-               <domain:authInfo>LmpdDXW2</domain:authInfo>
-            </domain:infData>
-         </resData>
-         <extension>
-            <enumval:infData xmlns:enumval="http://www.nic.cz/xml/epp/enumval-1.2"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/enumval-1.2 enumval-1.2.0.xsd">
-               <enumval:valExDate>2017-10-08</enumval:valExDate>
-               <enumval:publish>0</enumval:publish>
-            </enumval:infData>
-         </extension>
          <trID>
-            <clTRID>klde004#17-05-30at15:28:16</clTRID>
-            <svTRID>ReqID-0000135159</svTRID>
+            <clTRID>znmw008#17-08-11at16:20:05</clTRID>
+            <svTRID>ReqID-0000512432</svTRID>
          </trID>
       </response>
    </epp>
