@@ -4,7 +4,7 @@
 Nssets
 ------
 
-A group of name servers.
+A set of name servers.
 
 Namespace: \http://www.nic.cz/xml/epp/nsset-1.2 |br|
 Schema: nsset-1.2.2.xsd

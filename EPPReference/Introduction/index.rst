@@ -4,16 +4,30 @@
 Introduction
 ============
 
+This is a reference manual for the EPP protocol as implemented by the FRED.
+
+The global XSD schema ``all-2.3.2`` was taken as the **baseline** for the reference.
+
+The manual describes protocol basics and the generic structure of messages
+in a nutshell (based on the main RFC standard), introduces registrable objects
+managed in the FRED, contains basic guidelines on the use of the namespaces
+and schemas and finally embraces an overview and a detailed reference
+of specific commands and responses, all interleaved with examples.
+Appendices contain overviews of result codes, error reasons and simple data
+types from schemas.
 
 
-...
 
 Conventions for describing XML structures
 -------------------------------------------------
 
+To describe XML structures, the following notation is used.
+
 **Element names** are represented enclosed between the lower-than
 and the greater-than sign in a similar way as in actual XML documents,
-e.g. ``<nameSpace:elementName>``.
+e.g. ``<nameSpace:elementName>``. If a namespace prefix is collapsed
+into an asterisk, e.g. ``<*:elementName>``, it means that the element is used
+(similarly) in several namespaces and these should be listed somewhere nearby.
 
 After the element name, the number of allowed
 **occurrences** of the element is stated within parentheses and in bold,

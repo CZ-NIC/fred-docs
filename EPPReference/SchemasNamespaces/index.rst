@@ -71,5 +71,5 @@ thus provides the definitions of all namespaces in a single file.
      - FRED command/response extensions for ENUM domains
    * - ``http://www.w3.org/2001/XMLSchema-instance``
      - N/A
-     - Namespace for the XML Schema instance prefix ``xsi`` |br|
-       (required when the ``@xsi:schemaLocation`` attribute is used)
+     - Namespace for the XML Schema instance (``xsi`` prefix) |br|
+       Required when the ``@xsi:schemaLocation`` attribute is used.

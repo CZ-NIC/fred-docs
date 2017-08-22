@@ -4,7 +4,7 @@
 Keysets
 -------
 
-A group of DNSSEC keys.
+A set of DNSSEC keys.
 
 Namespace: \http://www.nic.cz/xml/epp/keyset-1.3 |br|
 Schema: keyset-1.3.2.xsd

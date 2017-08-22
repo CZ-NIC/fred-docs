@@ -1,8 +1,8 @@
 
 
 
-FRED protocol extensions
-========================
+FRED protocol extension
+=======================
 
 Protocol-level extensions are extensions in the XPath ``/epp/extension/*:*``.
 
@@ -10,7 +10,7 @@ The FRED EPP extends the protocol in such way that the ``<extension>`` element
 *if used*, must contain only a single child:
 
 * ``<fred:extcommand>`` **(1)** – container for extending commands which must declare
-  the FRED namespace and schema and can contain **one of** the custom commands:
+  the FRED :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and can contain **one of** the custom commands:
 
    * ``<fred:creditInfo/>`` – request information about the credit of the
      current client (object-independent command), see :doc:`../CommandStructure/CreditInfo`,
@@ -23,9 +23,10 @@ The FRED EPP extends the protocol in such way that the ``<extension>`` element
    * or one of the listing commands (object-independent), e.g. ``<fred:listDomains/>``,
      for the complete reference of listing commands see :doc:`../CommandStructure/List/index`.
 
-  The custom command may be followed by the ``<fred:clTRID>`` element **(0..1)**
-  (like the standard commands but from the ``fred`` namespace), which contains
-  a client :ref:`transaction identifier <trans-ident>` as :term:`epp:trIDStringType`.
+  The custom command may be followed by the ``<fred:clTRID>`` element **(0..1)**,
+  which contains a client :ref:`transaction identifier <trans-ident>`
+  as :term:`epp:trIDStringType`.
+  (Same as with the standard commands but the element is in the ``fred`` namespace.)
 
 
 

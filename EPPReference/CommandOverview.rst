@@ -7,7 +7,7 @@ Command overview
 The following commands are used to register and maintain domains and other
 objects through the FRED EPP.
 
-.. rubric:: Session management
+.. rubric:: Session management commands
 
 :doc:`CommandStructure/Login`
 | :doc:`CommandStructure/Logout`

@@ -9,21 +9,18 @@ replies with a *greeting* message which contains the service information.
 
 The server also replies with a *greeting* when a TCP connection is initiated.
 
-.. index:: hello
+.. index:: hello, Ⓔhello
 
 Hello element structure
 -----------------------
-
-.. index:: Ⓔhello
 
 The ``<hello/>`` element is a child of ``<epp>`` and defined in the standard
 EPP namespace.
 
 The element must not contain any child elements nor attributes.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -34,18 +31,15 @@ The element must not contain any child elements nor attributes.
 
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > hello
 
-.. index:: greeting
+.. index:: greeting, Ⓔgreeting
 
 Greeting element structure
 --------------------------
-
-.. index:: Ⓔgreeting
 
 The ``<greeting>`` element is a child of ``<epp>`` and defined in the standard
 EPP namespace.
@@ -54,39 +48,96 @@ It contains the following child elements:
 
 * ``<svID>`` – the name of the EPP server
   as a :term:`xs:normalizedString` of the length between 3 and 64 characters,
-* ``<svDate>`` – the server's current date and time in UTC as :term:`xs:dateTime`,
+* ``<svDate>`` – the server's :ref:`timestamp <mngobj-timestamps>` as :term:`xs:dateTime`,
 * ``<svcMenu>`` – services supported by the EPP server:
+
    * ``<version>`` **(1..n)** – listing of protocol versions supported by the server;
      the FRED EPP server supports only one version and that is ``1.0``,
    * ``<lang>`` **(1..n)** – listing of the available localizations of response texts;
      the FRED EPP server provides two localizations by default: ``en`` and ``cs``,
-   * ``<objURI>`` **(1..n)** – listing of a :doc:`managed object <ManagedObjects>`
+   * ``<objURI>`` **(1..n)** – listing of a :doc:`managed object <../ManagedObjects/index>`
      identified by its namespace as :term:`xs:anyURI`,
    * ``<svcExtension>`` **(0..1)** – a list of :ref:`command/response-level
      extensions <command-ext>` of objects supported by the server:
-      ``<extURI>`` **(1..n)** – an extension namespace as :term:`xs:anyURI`,
+
+      * ``<extURI>`` **(1..n)** – an extension namespace as :term:`xs:anyURI`,
+
 * ``<dcp>`` – data collection policy that describes the server's privacy policy
   for data collection and management:
-   * ``<access>`` **(1)**
-      * ``<all/>`` **(1)** – Clients are given access to all data.
-   * ``<statement>`` **(1..n)**
-      * ``<purpose>`` **(1)**
-         * ``<admin/>`` **(0..1)** – The server collects data for administrative
-           and technical support of the provisioning system.
-         * ``<prov/>`` **(0..1)** – The server collects data to identify objects
-           and inter-object relationships.
-      * ``<recipient>`` **(1)**
-         * ``<public/>`` **(1)** – The collected data is intended for public forums.
-      * ``<retention>`` **(1)**
-         * ``<stated/>`` **(1)** – The server retains data to meet the stated purpose.
+
+   * ``<access>`` **(1)** – describes the access provided by the server
+     to the client on behalf of the originating data source; must contain
+     **one of** the following child elements:
+
+      + ``<all/>`` – Access is given to all identified data.
+      + ``<none/>`` – No access is provided to identified data.
+      + ``<null/>`` – Data is not persistent, so no access is
+        possible.
+      + ``<personal/>`` – Access is given to identified data relating
+        to individuals and organizational entities.
+      + ``<personalAndOther/>`` – Access is given to identified data
+        relating to individuals, organizational entities, and
+        other data of a non-personal nature.
+      + ``<other/>`` – Access is given to other identified data of a
+        non-personal nature.
+
+   * ``<statement>`` **(1..n)** – describe data collection purposes,
+     data recipients, and data retention:
+
+      * ``<purpose>`` **(1)** – describes the purposes for which data is
+        collected; must contain **one or more of** the following child elements:
+
+         + ``<admin/>`` – Administrative purposes.  Information can be
+           used for administrative and technical support of the
+           provisioning system.
+         + ``<contact/>`` – Contact for marketing purposes.  Information
+           can be used to contact individuals, through a
+           communications channel other than the protocol, for the
+           promotion of a product or service.
+         + ``<prov/>`` – Object-provisioning purposes.  Information can
+           be used to identify objects and inter-object
+           relationships.
+         + ``<other/>`` – Other purposes.  Information may be used in
+           other ways not captured by the above definitions.
+
+      * ``<recipient>`` **(1)** – describes the recipients of collected data;
+        must contain **one or more of** the following child elements:
+
+         + ``<other/>`` – Other entities following unknown practices.
+         + ``<ours>`` – Server operator and/or entities acting as agents
+           or entities for whom the server operator is acting as an
+           agent.  An agent in this instance is defined as a third
+           party that processes data only on behalf of the service
+           provider for the completion of the stated purposes.  The
+           ``<ours>`` element may contain a ``<recDesc>`` element **(0..1)**
+           that can be used to describe the recipient.
+         + ``<public/>`` – Public forums.
+         + ``<same/>`` – Other entities following server practices.
+         + ``<unrelated/>`` – Unrelated third parties.
+
+      * ``<retention>`` **(1)** – describes data retention practices; must
+        contain **one of** the following child elements:
+
+         + ``<business/>`` – Data persists per business practices.
+         + ``<indefinite/>`` – Data persists indefinitely.
+         + ``<legal/>`` – Data persists per legal requirements.
+         + ``<none/>`` – Data is not persistent and is not retained for
+           more than a brief period of time necessary to make use of
+           it during the course of a single online interaction.
+         + ``<stated/>`` – Data persists to meet the stated purpose.
+
+      * ``<expiry>`` **(0..1)** – describes the lifetime of the policy; must
+        contain **one of** the following child elements:
+
+         + ``<absolute/>`` – The policy is valid from the current date
+           and time until it expires on the specified date and time.
+         + ``<relative/>`` – The policy is valid from the current date
+           and time until the end of the specified duration.
 
   More about DCP in :rfc:`5730#page-9`.
 
-.. Note:: The contents of a ``<greeting>`` described above from the FRED EPP server are fixed.
-
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

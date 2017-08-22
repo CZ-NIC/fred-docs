@@ -102,5 +102,5 @@ Use of the extension framework in FRED EPP
      ``/epp/extension/fred:extcommand/fred:{ext-cmd}/{object}:{ext-cmd}``
 * command/response-level extensions
    * define command-response mapping for additional attributes that extend some managed objects
-   * :ref:`command extension <command-ext>` – XPath location: ``/epp/command[{std-cmd}]/extension/*:*``
-   * :ref:`response extension <response-ext>` – XPath location: ``/epp/response[result]/extension/*:*``
+   * :ref:`command extensions <command-ext>` – XPath location: ``/epp/command[{std-cmd}]/extension/*:*`` where std-cmd can be any standard command
+   * :ref:`response extensions <response-ext>` – XPath location: ``/epp/response[result]/extension/*:*``
