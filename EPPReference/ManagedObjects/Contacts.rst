@@ -9,6 +9,9 @@ Contact information of a person or a company.
 Namespace: \http://www.nic.cz/xml/epp/contact-1.6 |br|
 Schema: contact-1.6.2.xsd
 
+.. Note:: Contact mapping is based on the standard :rfc:`5733`
+   but it is not entirely compliant.
+
 ..
    todo:: https://tools.ietf.org/html/rfc5733#section-2
 
@@ -36,7 +39,7 @@ postalInfo
       The real-world contact address, consisting of:
 
       street
-         Street line.
+         1–3 street line(s).
 
       city
          City.

@@ -4,7 +4,7 @@
 Nssets
 ------
 
-A set of name servers.
+Information representing a set of name servers.
 
 Namespace: \http://www.nic.cz/xml/epp/nsset-1.2 |br|
 Schema: nsset-1.2.2.xsd
@@ -32,37 +32,33 @@ id
    The nsset handle. See :ref:`mngobj-handle-syntax`.
 
 ns
-   The nameserver(s), consisting of:
+   The 2–10 name servers, consisting of:
 
    name
-      Nameserver hostname. See :ref:`mngobj-domain-syntax`.
+      Name-server hostname. See :ref:`mngobj-domain-syntax`.
 
    addr
-      Nameserver IP address(es). (Glue.)
+      Name-server IP address(es). (Glue.)
 
       At least one IP address must be present if and only if the hostname is in the generated zone.
 
       Both IPv4 and IPv6 are allowed, accepted in textual representation:
 
       * The syntax of an IPv4 address:
-        Four decimal numbers (0–255) separated by periods, leading zeroes are optional.
+        Four decimal integers (0–255) separated by periods, leading zeroes are optional.
 
-      * The syntax of an IPv6 address:
-        Eight hexadecimal numbers (0000–ffff) separated by colons,
-        leading zeroes are optional. Two consecutive zero groups can be collapsed
-        into ``::`` but this can appear only once in an address.
-        See :rfc:`4291#section-2.2`.
+      * The syntax of an IPv6 address is described in :rfc:`4291#section-2.2`.
 
       An IP address must not belong to an invalid range.
       See the *Prohibited networks* section in `IANA's Technical requirements
       for authoritative name servers <https://www.iana.org/help/nameserver-requirements>`_.
 
 tech
-   The :ref:`handle <mngobj-handle-syntax>`\ (s) of technical contact(s).
+   The :ref:`handle <mngobj-handle-syntax>`\ (s) of 1–10 technical contact(s).
 
 reportlevel
    The highest level of technical tests to be performed and reported.
-   A higher number is more detail, zero means no tests???.
+   A higher number is more detail, zero means no tests.
 
 .. _mng-nsset-stat:
 

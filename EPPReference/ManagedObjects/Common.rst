@@ -22,16 +22,20 @@ crID
    The handle of the registrar who created this object as :term:`eppcom:clIDType`.
 
 upID
-   The handle of the registrar who was the last to update this object as :term:`eppcom:clIDType`.
+   The handle of the registrar who was the last to update this object
+   as :term:`eppcom:clIDType`.
 
 crDate
-   Date and time of the creation of this object in the repository as :term:`xs:dateTime`.
+   The :ref:`timestamp <mngobj-timestamps>` of the creation of this
+   object in the repository as :term:`xs:dateTime`.
 
 upDate
-   Date and time of the last update of this object as :term:`xs:dateTime`.
+   The :ref:`timestamp <mngobj-timestamps>` of the last update
+   of this object as :term:`xs:dateTime`.
 
 trDate
-   Date and time of the last transfer of this object as :term:`xs:dateTime`.
+   The :ref:`timestamp <mngobj-timestamps>` of the last transfer
+   of this object as :term:`xs:dateTime`.
 
 authInfo
    Authorization information (transfer password) as :term:`fredcom:authInfoType`.
@@ -51,13 +55,19 @@ must be in the :term:`FQDN` form.
 
 A domain name or a hostname must comply with the following syntax:
 
-* it may contain only characters [a-z,0-9], hyphen ``-`` (`U+002D
+* it may contain only characters [a-z,A-Z,0-9], hyphen ``-`` (`U+002D
   <http://www.fileformat.info/info/unicode/char/2d/index.htm>`_),
   and dot ``.`` as the delimiter of labels,
+
+  .. Note:: The capitalization of letters is irrelevant, the server converts
+     upper-case letters to their lower-case variant.
+
 * it may end with a dot,
 * its labels must not begin nor end with a hyphen ``-``,
 * its labels must have the length of 1–63 characters,
 * its total length (including dot delimiters) must not exceed 255 characters.
+
+Labels of ENUM domains must be single decimal digits.
 
 A domain name must belong to one of the zones that is managed by the Registry,
 that is, it must end with the FQDN of one of these zones.
@@ -66,8 +76,8 @@ Additional CZ.NIC rules for domain names:
 
 * their labels must not contain two consecutive hyphens ``--`` (IDN not allowed),
 * the number of allowed labels:
-   * 2 labels in the FQDN in the case of the ``.cz`` zone, and
-   * 6–15 labels in the FQDN in the case of the ``.0.2.4.e164.arpa`` ENUM zone.
+   * 2 labels in a FQDN in the case of the ``.cz`` zone, and
+   * 6–15 labels in a FQDN in the case of the ``.0.2.4.e164.arpa`` ENUM zone.
 
 .. _mngobj-handle-syntax:
 
@@ -78,13 +88,18 @@ A handle may contain only characters [a-z,A-Z,0-9] and hyphen ``-`` (`U+002D
 <http://www.fileformat.info/info/unicode/char/2d/index.htm>`_) which must
 not appear at the beginning or the end of the handle.
 
-The capitalization of letters is irrelevant, the server converts lower-case letters to upper case.
+.. Note:: The capitalization of letters is irrelevant, the server converts
+   lower-case letters to their upper-case variant.
 
-The length of a new handle must not exceed 30 characters (:term:`fredcom:objIDCreateType`)
-but an older handle may be up to 63 characters long (:term:`fredcom:objIDType`
+The length of a handle which is an argument to a ``create`` command, must not
+exceed 30 characters (:term:`fredcom:objIDCreateType`), in other cases,
+a handle may be up to 63 characters long (:term:`fredcom:objIDType`
 or :term:`fredcom:objIDChgType`).
 
-Dates and times
-^^^^^^^^^^^^^^^
+.. _mngobj-timestamps:
 
-All dates and times are provided and expected in **UTC**\ . ??? or relative to UTC???
+Timestamps
+^^^^^^^^^^
+
+Timestamps are provided in local time of the FRED EPP server with an offset
+from UTC in compliance with :rfc:`3339` and :term:`xs:dateTime` syntax.

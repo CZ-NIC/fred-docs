@@ -4,7 +4,7 @@
 Keysets
 -------
 
-A set of DNSSEC keys.
+Information representing a set of DNSSEC keys.
 
 Namespace: \http://www.nic.cz/xml/epp/keyset-1.3 |br|
 Schema: keyset-1.3.2.xsd
@@ -33,7 +33,7 @@ id
    The keyset handle. See :ref:`mngobj-handle-syntax`.
 
 dnskey
-   The DNSSEC key(s), consisting of:
+   The 1–10 DNSSEC key(s), consisting of:
 
    flags
       Flags. Allowed values are: ``0``, ``256``, ``257``.
@@ -47,13 +47,13 @@ dnskey
       The FRED EPP server does not allow to use ``0``, ``1``, ``2`` and ``252`` by default.
 
    pubKey
-      Public key as :term:`keyset:keyT`. Other requirements on the key???
+      Public key as :term:`keyset:keyT`.
 
-   .. Note:: A DNSSEC key corresponds to a DNSKEY RR,
+   .. Note:: A DNSSEC key corresponds to a DNSKEY Resource Record,
       see :rfc:`4034#section-2`.
 
 tech
-   The :ref:`handle <mngobj-handle-syntax>`\ (s) of technical contact(s).
+   The :ref:`handle <mngobj-handle-syntax>`\ (s) of 1–10 technical contact(s).
 
 .. _mng-keyset-stat:
 

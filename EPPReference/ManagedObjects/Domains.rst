@@ -9,6 +9,9 @@ Domain information representing a regular domain or an :term:`ENUM` domain.
 Namespace: \http://www.nic.cz/xml/epp/domain-1.4 |br|
 Schema: domain-1.4.2.xsd
 
+.. Note:: Domain name mapping is based on the standard :rfc:`5731`
+   but it is not entirely compliant.
+
 ..
    todo:: https://tools.ietf.org/html/rfc5731#section-2
 
@@ -21,13 +24,13 @@ In addition to the :ref:`common attributes <common-attrs>`, domains also have
 the following attributes:
 
 name
-   The domain name handle. See :ref:`mngobj-domain-syntax`.
+   The domain name. See :ref:`mngobj-domain-syntax`.
 
 registrant
    The :ref:`handle <mngobj-handle-syntax>` of the domain owner contact.
 
 admin
-   The :ref:`handle <mngobj-handle-syntax>`\ (s) of an administrative contact(s).
+   The :ref:`handle <mngobj-handle-syntax>`\ (s) of zero or more administrative contact(s).
 
 nsset
    The :ref:`handle <mngobj-handle-syntax>` of a nameserver set.
@@ -44,7 +47,7 @@ valExDate :sup:`ENUM only`
 publish :sup:`ENUM only` :sup:`+ DEPRECATED`
    Flag of publishing an ENUM domain in a public ENUM directory.
 
-   This attribute currently has no meaning for the server and it will be removed
+   This attribute has currently no meaning for the server and it will be removed
    in the future. Use of this attribute is discouraged.
 
 .. _mng-domain-stat:

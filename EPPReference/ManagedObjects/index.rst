@@ -12,7 +12,8 @@ The FRED EPP uses custom representations of registrable objects:
 * keyset = a set of DNSSEC keys.
 
 Each registrable object is defined by its associated attributes that can be
-viewed and modified by the client (the :term:`designated registrar`) or the server.
+viewed and modified by the client (the :term:`designated registrar`) or the server,
+and by command-response mapping.
 
 Attribute values are defined by the data types of schemas (syntax, that is
 allowed characters, length, pattern),
