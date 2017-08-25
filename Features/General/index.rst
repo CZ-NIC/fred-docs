@@ -76,7 +76,7 @@ can perform registrations and modify existing data in the Registry.
 
 .. include:: Notifications.rst
 
-.. include:: TechChecks.rst
+.. include:: TecChecks.rst
 
 .. include:: MultiLanguage.rst
 

@@ -7,3 +7,4 @@ Concept descriptions
 .. toctree::
 
    Transfer
+   Teccheck
