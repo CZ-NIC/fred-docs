@@ -5,10 +5,12 @@
 Create domain
 =============
 
-A domain create command is used to register a new domain.
+A domain create :ref:`command <struct-command>` is used to register a new domain.
 
-A contact create command is a ``create`` element in the ``domain`` namespace
+The contact create command is a ``create`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
+
+The command must be contained in the ``<create>`` command class.
 
 .. index:: Ⓔcreate, Ⓔname, Ⓔperiod, Ⓔnsset, Ⓔkeyset, Ⓔregistrant, Ⓔadmin,
    ⒺauthInfo, ⓐunit
@@ -16,8 +18,7 @@ A contact create command is a ``create`` element in the ``domain`` namespace
 Command element structure
 -------------------------
 
-The ``<domain:create>`` element must declare the ``domain`` namespace
-and schema, and it must contain the following child elements:
+The ``<domain:create>`` element must declare the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
 
 * ``<domain:name>`` **(1)**  – a domain name as :term:`eppcom:labelType`,
 * ``<domain:period>`` **(0..1)**  – the registration period
@@ -36,9 +37,8 @@ and schema, and it must contain the following child elements:
   as :term:`fredcom:authInfoType`; if omitted, the password will be generated
   by the server.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -58,9 +58,8 @@ and schema, and it must contain the following child elements:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > create_domain thisdomain.cz CID-MYOWN NULL NID-MYNSSET NULL () CID-ADMIN1
 
@@ -80,7 +79,7 @@ command.
 
 The command's ``<extension>`` element must contain a **single** ``<enumval:renew>``
 element which declares the ``enumval`` namespace (``http://www.nic.cz/xml/epp/enumval-1.2``)
-and schema and contains:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 
 * ``<enumval:valExDate>`` **(0..1)**  – a validation expiration date as :term:`xs:date`;
   the date must range from ``tomorrow`` to ``today + max. validation period``,
@@ -89,9 +88,8 @@ and schema and contains:
   domain in a public directory as :term:`xs:boolean`; ``true`` – display,
   ``false`` – hide (default).
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -116,9 +114,8 @@ and schema and contains:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > create_domain 2.1.1.7.4.5.2.2.2.0.2.4.e164.arpa CID-MYOWN NULL NULL NULL (1 y) () 2018-02-09
 
@@ -128,22 +125,20 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<domain:creData>``  which declares the ``domain`` namespace and schema
+``<domain:creData>``  which declares the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
 * ``<domain:name>`` **(1)** – the domain name as :term:`eppcom:labelType`,
-* ``<domain:crDate>`` **(1)** – the date and time of creation as :term:`xs:dateTime`,
+* ``<domain:crDate>`` **(1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`,
 * ``<domain:exDate>`` **(0..1)** – the date of expiration as :term:`xs:date`.
 
-
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

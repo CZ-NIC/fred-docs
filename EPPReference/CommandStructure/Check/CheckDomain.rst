@@ -5,24 +5,25 @@
 Check domain
 ============
 
-A domain check command is used to check the availability of one or more domain names.
+A domain check :ref:`command <struct-command>` is used to check
+the availability of one or more domain names.
 
-A domain check command is a ``check`` element in the ``domain`` namespace
+The domain check command is a ``check`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
+
+The command must be contained in the ``<check>`` command class.
 
 .. index:: Ⓔcheck, Ⓔname
 
 Command element structure
 -------------------------
 
-The ``<domain:check>`` element must declare the ``domain`` namespace
-and schema and it must contain the following child elements:
+The ``<domain:check>`` element must declare the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<domain:name>`` **(1..n)**  – a domain name as :term:`eppcom:labelType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -32,19 +33,18 @@ and schema and it must contain the following child elements:
       <check>
          <domain:check xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
           xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
-            <domain:name>jedna.cz</domain:name>
-            <domain:name>dva.cz</domain:name>
+            <domain:name>mydomain.cz</domain:name>
+            <domain:name>somedomain.cz</domain:name>
          </domain:check>
       </check>
       <clTRID>dnix002#17-07-11at11:23:46</clTRID>
    </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
-   > check_domain jedna.cz dva.cz
+   > check_domain mydomain.cz somedomain.cz
 
 .. index:: ⒺchkData, Ⓔcd, Ⓔname, Ⓔreason, ⓐavail, ⓐlang
 
@@ -52,12 +52,12 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<domain:chkData>`` which declares the ``domain`` namespace and schema
+``<domain:chkData>`` which declares the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
 * ``<domain:cd>`` **(1..n)** – the check resolution of a single domain name:
@@ -74,9 +74,8 @@ and it contains the following child elements:
       * ``@lang`` – language of the reason as :term:`xs:language`;
         default is ``en`` (English).
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -90,10 +89,10 @@ and it contains the following child elements:
          <domain:chkData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
           xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
             <domain:cd>
-               <domain:name avail="1">jedna.cz</domain:name>
+               <domain:name avail="1">mydomain.cz</domain:name>
             </domain:cd>
             <domain:cd>
-               <domain:name avail="0">dva.cz</domain:name>
+               <domain:name avail="0">somedomain.cz</domain:name>
                <domain:reason>already registered.</domain:reason>
             </domain:cd>
          </domain:chkData>

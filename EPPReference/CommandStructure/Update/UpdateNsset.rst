@@ -5,10 +5,12 @@ Update nsset
 =============
 
 
-A nsset update command is used to alter the data of a nsset.
+A nsset update :ref:`command <struct-command>` is used to alter details of a nsset.
 
-A nsset update command is an ``update`` element in the ``nsset`` namespace
+The nsset update command is an ``update`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
+
+The command must be contained in the ``<update>`` command class.
 
 .. index:: Ⓔupdate, Ⓔid, Ⓔadd, Ⓔrem, Ⓔchg, Ⓔns, Ⓔname, Ⓔaddr, Ⓔtech,
    ⒺauthInfo, Ⓔreportlevel
@@ -17,7 +19,7 @@ Command element structure
 -------------------------
 
 The ``<nsset:update>`` element must declare the ``nsset`` namespace
-and schema and it must contain the following child elements:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<nsset:id>`` **(1)**  – a nsset handle as :term:`fredcom:objIDType`,
 * ``<nsset:add>`` **(0..1)** – a list of items that will be added to this nsset:
@@ -42,10 +44,8 @@ and schema and it must contain the following child elements:
    * ``<nsset:reportlevel>`` **(0..1)** – change the level of technical checks
      to be reported as :term:`nsset:reportlevelType`.
 
-
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -77,9 +77,8 @@ and schema and it must contain the following child elements:
    </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > update_nsset NID-MYNSSET (((ns.otherdomain.cz (217.31.207.130, 217.31.207.131))) CID-TECH2) (ns2.mydomain.cz CID-TECH1) NULL 4
 

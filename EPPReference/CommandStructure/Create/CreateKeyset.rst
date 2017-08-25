@@ -5,10 +5,12 @@
 Create keyset
 ==============
 
-A keyset create command is used to register a new keyset.
+A keyset create :ref:`command <struct-command>` is used to register a new keyset.
 
-A keyset create command is an ``create`` element in the ``keyset`` namespace
+The keyset create command is an ``create`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
+
+The command must be contained in the ``<create>`` command class.
 
 .. index:: Ⓔcreate, Ⓔid, Ⓔdnskey, Ⓔflags, Ⓔprotocol,
    Ⓔalg, ⒺpubKey, Ⓔtech, ⒺauthInfo
@@ -16,8 +18,7 @@ A keyset create command is an ``create`` element in the ``keyset`` namespace
 Command element structure
 -------------------------
 
-The ``<keyset:create>`` element must declare the ``keyset`` namespace
-and schema, and it must contain the following child elements:
+The ``<keyset:create>`` element must declare the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
 
 * ``<keyset:id>`` **(1)** – the keyset handle as :term:`fredcom:objIDCreateType`.
 * ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
@@ -32,10 +33,8 @@ and schema, and it must contain the following child elements:
   as :term:`fredcom:authInfoType`; if omitted, the password will be generated
   by the server.
 
-
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -65,10 +64,8 @@ and schema, and it must contain the following child elements:
       </command>
    </epp>
 
-
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > create_keyset KID-AKEYSET ((257 3 5 AwEAAddt2AkLfYGKgiEZB5SmIF8EvrjxNMH6HtxWEA4RJ9Ao6LCWheg8), (257 3 5 AwEAAddt2AkLfYGKgiEZB5SmIF8EvrjxNMH6HtxWEA4RJ9Ao6LCWheg9)) () CID-TECH2
 
@@ -78,20 +75,19 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<keyset:creData>``  which declares the ``keyset`` namespace and schema,
+``<keyset:creData>``  which declares the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and it contains the following child elements:
 
 * ``<keyset:id>`` **(1)** – the keyset handle as :term:`fredcom:objIDType`,
-* ``<keyset:crDate>`` **(1)** – the date and time of creation as :term:`xs:dateTime`.
-
-.. rubric:: Example
+* ``<keyset:crDate>`` **(1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`.
 
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

@@ -5,24 +5,25 @@
 Check contact
 =============
 
-A contact check command is used to check the availability of one or more contact handles.
+A contact check :ref:`command <struct-command>` is used to check
+the availability of one or more contact handles.
 
-A contact check command is a ``check`` element in the ``contact`` namespace
+The contact check command is a ``check`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
+
+The command must be contained in the ``<check>`` command class.
 
 .. index:: Ⓔcheck, Ⓔid
 
 Command element structure
 -------------------------
 
-The ``<contact:check>`` element must declare the ``contact`` namespace
-and schema and it must contain the following child elements:
+The ``<contact:check>`` element must declare the ``contact`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<contact:id>`` **(1..n)**  – a contact handle as :term:`fredcom:objIDType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -40,9 +41,8 @@ and schema and it must contain the following child elements:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > check_contact CID-MYOWN CID-NONE
 
@@ -52,12 +52,12 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<contact:chkData>``  which declares the ``contact`` namespace and schema
+``<contact:chkData>``  which declares the ``contact`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
 * ``<contact:cd>`` **(1..n)** – the check resolution of a single contact handle:
@@ -74,10 +74,8 @@ and it contains the following child elements:
       * ``@lang`` – language of the reason as :term:`xs:language`;
         default is ``en`` (English).
 
-
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

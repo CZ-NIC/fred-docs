@@ -4,7 +4,7 @@
 Info
 =============
 
-Commands for retrieving object details.
+Commands for viewing object details.
 
 .. toctree::
 

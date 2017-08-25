@@ -4,15 +4,16 @@
 Prepare a list
 ==============
 
-These commands are used to prepare lists of objects which are managed
-by the authenticated client.
-(In other words, of which the client is the designated registrar.)
-
-This command is a :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
-defined by the FRED EPP server.
+These commands are used to prepare lists of objects
+which are managed by the authenticated client.
+(In other words, of which the client is the :term:`designated registrar`.)
 
 All list commands are elements in the ``fred`` namespace
 (``http://www.nic.cz/xml/epp/fred-1.5``).
+
+These commands are a part of the :doc:`protocol extension
+</EPPReference/ProtocolBasics/ProtocolExtensions>`
+defined by the FRED EPP server.
 
 .. index:: ⒺlistDomains, ⒺlistContacts, ⒺlistNssets, ⒺlistKeysets,
    ⒺdomainsByContact, ⒺdomainsByNsset, ⒺdomainsByKeyset,
@@ -41,9 +42,8 @@ The list command can be **one of** the following:
 * ``<fred:nssetsByNs>`` **(1)** – select nssets by a name server,
    * ``<fred:name>`` **(1)** – a nameserver hostname as :term:`eppcom:labelType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -60,9 +60,8 @@ The list command can be **one of** the following:
    </extension>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > prep_domains_by_contact CID-ADMIN1
 
@@ -72,19 +71,18 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<fred:infoResponse>`` which declares the ``fred`` namespace and schema
+``<fred:infoResponse>`` which declares the ``fred`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
 * ``<fred:count>`` **(1)** – the count of prepared items as :term:`xs:unsignedLong`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

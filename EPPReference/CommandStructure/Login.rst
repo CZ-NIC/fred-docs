@@ -4,8 +4,8 @@
 Login
 =====
 
-A login command is used to establish and authenticate a session
-with the EPP server. The login command must be sent to the server
+A login :ref:`command <struct-command>` is used to establish and authenticate
+a session with the EPP server. The login command must be sent to the server
 before any other EPP command and identifies and authenticates
 the client identifier to be used by the session.
 
@@ -14,13 +14,13 @@ An EPP session is terminated by a :doc:`Logout` command.
 The login command is a ``login`` element in the default namespace
 (``urn:ietf:params:xml:ns:epp-1.0``).
 
+.. index:: Ⓔlogin, ⒺclID, Ⓔpw, ⒺnewPW, Ⓔoptions, Ⓔversion, Ⓔlang, Ⓔsvcs,
+   ⒺobjURI, ⒺsvcExtension, ⒺextURI
+
 Command element structure
 -------------------------
 
 The ``<login>`` element contains the following child elements:
-
-.. index:: Ⓔlogin, ⒺclID, Ⓔpw, ⒺnewPW, Ⓔoptions, Ⓔversion, Ⓔlang, Ⓔsvcs,
-   ⒺobjURI, ⒺsvcExtension, ⒺextURI
 
 * ``<clID>`` **(1)** – the client identifier as :term:`eppcom:clIDType`,
 * ``<pw>`` **(1)** – the client's plain-text password as :term:`epp:pwType`,
@@ -47,9 +47,8 @@ The ``<login>`` element contains the following child elements:
 
       * ``<extURI>`` **(1..n)** – an extension namespace URI as :term:`xs:anyURI`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -77,9 +76,8 @@ The ``<login>`` element contains the following child elements:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > login REG-MYREG passwd
 

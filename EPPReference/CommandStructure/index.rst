@@ -4,7 +4,9 @@
 Command & response structure
 ============================
 
-
+This chapter contains the detailed reference of all FRED EPP commands,
+both object-independent and related to managed objects, and
+the responses mapped to these commands.
 
 
 

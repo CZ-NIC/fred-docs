@@ -11,10 +11,10 @@ A contact sendAuthInfo command is used to provide the transfer password of a con
 The client sends only the request for the provision to the Registry and
 the Registry sends the password to the email of the contact.
 
-This command is a :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
+This command is a part of the :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
 defined by the FRED EPP server.
 
-The command must be contained in the ``fred:sendAuthInfo`` command class.
+The command must be contained in the ``<fred:sendAuthInfo>`` command class.
 
 .. index:: Ⓔextcommand, ⒺsendAuthInfo, Ⓔid
 
@@ -22,13 +22,12 @@ Command element structure
 -------------------------
 
 The ``<contact:sendAuthInfo>`` element must declare the ``contact`` namespace
-and schema and it must contain the following child elements:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<contact:id>`` **(1)** – a contact handle as :term:`fredcom:objIDType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -50,9 +49,8 @@ and schema and it must contain the following child elements:
    </extension>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > sendauthinfo_contact CID-MYOWN
 

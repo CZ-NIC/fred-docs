@@ -4,17 +4,20 @@
 Test nsset
 ===========
 
-A nsset test command is used to request a :doc:`technical check
-</Features/Concepts/Techcheck>` (tests) over a nsset.
+A nsset test command is used to request
+a :doc:`technical check </Features/Concepts/Techcheck>` of a nsset.
 
 The check is not performed immediately but it is scheduled for execution.
 After the tests have finished, a report is provided to the client
 in :ref:`poll messages <struct-poll-test>`.
 
-This command is a :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
-defined by the FRED EPP server.
+The nsset test command is a ``test`` element in the ``nsset`` namespace
+(``http://www.nic.cz/xml/epp/nsset-1.2``).
 
-The command must be contained in the ``fred:test`` command class.
+The command must be contained in the ``<fred:test>`` command class.
+
+This command is a part of the :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
+defined by the FRED EPP server.
 
 .. index:: Ⓔextcommand, Ⓔtest, Ⓔid, Ⓔlevel, Ⓔname
 
@@ -22,7 +25,7 @@ Command element structure
 -------------------------
 
 The ``<nsset:test>`` element must declare the ``nsset`` namespace
-and schema and it must contain the following child elements:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDType`,
 * ``<nsset:level>`` **(0..1)** – the highest level of tests to be performed
@@ -30,9 +33,8 @@ and schema and it must contain the following child elements:
 * ``<nsset:name>`` **(0..n)** – additional domain names to be tested
   with the nsset as :term:`eppcom:labelType` (applies only to some tests).
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -57,9 +59,8 @@ and schema and it must contain the following child elements:
       </extension>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > technical_test NID-MYNSSET 5 (mydomain.cz,somedomain.cz)
 

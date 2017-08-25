@@ -5,10 +5,12 @@
 Create nsset
 ==============
 
-A nsset create command is used to register a new nsset.
+A nsset create :ref:`command <struct-command>` is used to register a new nsset.
 
-A nsset create command is an ``create`` element in the ``nsset`` namespace
+The nsset create command is an ``create`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
+
+The command must be contained in the ``<create>`` command class.
 
 .. index:: Ⓔcreate, Ⓔid, Ⓔns, Ⓔname, Ⓔaddr, Ⓔtech,
    ⒺauthInfo, Ⓔreportlevel
@@ -16,8 +18,7 @@ A nsset create command is an ``create`` element in the ``nsset`` namespace
 Command element structure
 -------------------------
 
-The ``<nsset:create>`` element must declare the ``nsset`` namespace
-and schema, and it must contain the following child elements:
+The ``<nsset:create>`` element must declare the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
 
 * ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDCreateType`.
 * ``<nsset:ns>`` **(1..10)** – a nameserver given by:
@@ -31,9 +32,8 @@ and schema, and it must contain the following child elements:
 * ``<nsset:reportlevel>`` **(0..1)** – the default highest level of technical checks
   to be performed as :term:`nsset:reportlevelType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -63,10 +63,8 @@ and schema, and it must contain the following child elements:
       </command>
    </epp>
 
-
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > create_nsset NID-ANSSET ((ns1.domain.cz), (ns2.domain.cz), (ns.indomain.cz (217.31.207.130, 217.31.207.131))) CID-TECH1 NULL 1
 
@@ -76,20 +74,19 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<nsset:creData>``  which declares the ``nsset`` namespace and schema,
+``<nsset:creData>``  which declares the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and it contains the following child elements:
 
 * ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDType`,
-* ``<nsset:crDate>`` **(1)** – the date and time of creation as :term:`xs:dateTime`.
-
-.. rubric:: Example
+* ``<nsset:crDate>`` **(1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`.
 
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

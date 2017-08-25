@@ -4,7 +4,7 @@
 Send auth.info
 ===============
 
-Commands for requesting passwords for object transfers.
+Commands for provision of passwords for object transfers.
 
 .. toctree::
    :maxdepth: 1

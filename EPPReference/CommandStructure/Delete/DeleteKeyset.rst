@@ -5,10 +5,13 @@
 Delete keyset
 ==============
 
-A keyset delete command is used to delete a single keyset whose status allows it to be deleted.
+A keyset delete :ref:`command <struct-command>` is used to delete a keyset
+whose status allows it to be deleted.
 
-A keyset delete command is a ``delete`` element in the ``keyset`` namespace
+The keyset delete command is a ``delete`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
+
+The command must be contained in the ``<delete>`` command class.
 
 .. index:: Ⓔdelete, Ⓔid
 
@@ -16,13 +19,12 @@ Command element structure
 -------------------------
 
 The ``<keyset:delete>`` element must declare the ``keyset`` namespace
-and schema and it must contain the following child element:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
-* ``<keyset:id>`` **(1)** the keyset handle as :term:`fredcom:objIDType`.
-
-.. rubric:: Example
+* ``<keyset:id>`` **(1)** – the keyset handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -39,9 +41,8 @@ and schema and it must contain the following child element:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > delete_keyset KID-MYKEYSET
 

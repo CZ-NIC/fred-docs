@@ -4,7 +4,7 @@
 Update
 ===============
 
-Commands for updating object details.
+Commands for altering object details.
 
 .. toctree::
    :maxdepth: 1

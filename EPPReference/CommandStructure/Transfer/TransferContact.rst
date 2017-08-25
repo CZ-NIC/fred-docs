@@ -5,30 +5,31 @@
 Transfer contact
 ================
 
-A contact transfer command is used to take over the management of a contact.
+A contact transfer :ref:`command <struct-command>` is used to take over
+sponsorship of a contact.
 The transfer password of the contact must be provided for authorization.
 
-.. todo:: vygenerovani noveho hesla
+A new password is generated for the contact by the server after a successful transfer.
 
-A contact transfer command is a ``transfer`` element in the ``contact`` namespace
+The contact transfer command is a ``transfer`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
+
+The command must be contained in the ``<transfer>`` command class.
+The command class must specify the request operation (``@op = 'request'``).
 
 .. index:: Ⓔtransfer, Ⓔid, ⒺauthInfo
 
 Command element structure
 -------------------------
 
-The command class must specify the request operation (``@op = 'request'``).
-
 The ``<contact:transfer>`` element must declare the ``contact`` namespace
-and schema and it must contain the following child elements:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<contact:id>`` **(1)** – the contact handle as :term:`fredcom:objIDType`,
 * ``<contact:authInfo>`` **(1)**  – the transfer password as :term:`fredcom:authInfoType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -46,9 +47,8 @@ and schema and it must contain the following child elements:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > transfer_contact CID-TRCONT trpwd
 

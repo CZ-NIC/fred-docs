@@ -5,7 +5,8 @@
 Transfer domain
 ===============
 
-A domain transfer command is used to take over the management of a domain.
+A domain transfer :ref:`command <struct-command>` is used to take over
+sponsorship of a domain.
 A transfer password must be provided for authorization.
 It can be the transfer password of:
 
@@ -13,25 +14,27 @@ It can be the transfer password of:
 * the domain owner contact, or
 * an administrative contact of the domain.
 
-A domain transfer command is a ``transfer`` element in the ``domain`` namespace
+A new password is generated for the domain by the server after a successful transfer.
+
+The domain transfer command is a ``transfer`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
+
+The command must be contained in the ``<transfer>`` command class.
+The command class must specify the request operation (``@op = 'request'``).
 
 .. index:: Ⓔtransfer, Ⓔname, ⒺauthInfo
 
 Command element structure
 -------------------------
 
-The command class must specify the request operation.
-
 The ``<domain:transfer>`` element must declare the ``domain`` namespace
-and schema and it must contain the following child elements:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<domain:name>`` **(1)**  – a domain name as :term:`eppcom:labelType`,
 * ``<domain:authInfo>`` **(1)**  – the transfer password as :term:`fredcom:authInfoType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -49,9 +52,8 @@ and schema and it must contain the following child elements:
    </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > transfer_domain trdomain.cz trpwd
 

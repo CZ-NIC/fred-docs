@@ -4,8 +4,9 @@
 Poll acknowledgement
 ====================
 
-A poll acknowledgement command is used to confirm that a message has been
-received by the client and can be removed from the queue on the server.
+A poll acknowledgement :ref:`command <struct-command>` is used to confirm
+that a message has been received by the client and can be removed
+from the queue on the server.
 
 The poll command is a ``poll`` element in the default namespace
 (``urn:ietf:params:xml:ns:epp-1.0``).
@@ -24,9 +25,8 @@ The ``<poll/>`` **(1)** element must be empty and contain only attributes:
   this is the current message identifier returned in :ref:`response to
   a poll request <struct-pollreq-response>`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -38,9 +38,8 @@ The ``<poll/>`` **(1)** element must be empty and contain only attributes:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > poll ack 19596173
 
@@ -64,9 +63,8 @@ Structure of message queue information:
    * ``@id`` **(R)** – the identification number of the first message
      in the queue as :term:`eppcom:minTokenType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

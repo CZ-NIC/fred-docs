@@ -4,8 +4,9 @@
 Poll request
 =============
 
-A poll request command is used to obtain the message queue status (message count)
-and contents of the first message in the queue (the oldest one).
+A poll request :ref:`command <struct-command>` is used to obtain the message
+queue status (message count) and contents of the first message in the queue
+(the oldest one).
 
 The poll command is a ``poll`` element in the default namespace
 (``urn:ietf:params:xml:ns:epp-1.0``).
@@ -19,9 +20,8 @@ The ``<poll/>`` **(1)** element must be empty and contain only this attribute:
 
    * ``@op`` **(R)** poll operation; must equal ``req`` to make the request.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -33,9 +33,8 @@ The ``<poll/>`` **(1)** element must be empty and contain only this attribute:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > poll req
 
@@ -56,8 +55,8 @@ Structure of the message queue:
 * ``<msgQ>`` **(0..1)** – the message queue:
    * ``@count`` **(R)** – number of messages in the queue as :term:`xs:unsignedLong`,
    * ``@id`` **(R)** – current message identifier as :term:`eppcom:minTokenType`,
-   * ``<qDate>`` **(0..1)** – the date and time that the message was enqueued
-     as :term:`xs:dateTime`,
+   * ``<qDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>`
+     when the message was enqueued as :term:`xs:dateTime`,
    * ``<msg>`` **(0..1)** – the container of the current message,
       * ``@lang`` – language of the message text as :term:`xs:language`;
         default is ``en`` (English),
@@ -68,11 +67,8 @@ Structure of the message queue:
 
         The content of the ``<msg>`` element is not processed for validity.
 
-
-
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

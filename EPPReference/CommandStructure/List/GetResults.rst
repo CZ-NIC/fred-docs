@@ -4,23 +4,22 @@
 Get the results
 ===============
 
-This command is used to retrieve the list of objects that was prepared
-in the previous step with a list command.
-
-This command is a :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
-defined by the FRED EPP server.
+This command is used to retrieve the list of objects
+that was prepared in the previous step with a :doc:`list command <Prepare>`.
 
 The command is a ``getResults`` element in the ``fred`` namespace
 (``http://www.nic.cz/xml/epp/fred-1.5``).
+
+This command is a part of the :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
+defined by the FRED EPP server.
 
 Command element structure
 -------------------------
 
 The ``<fred:getResults/>`` element does not contain any child elements.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -35,9 +34,8 @@ The ``<fred:getResults/>`` element does not contain any child elements.
    </extension>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > get_results
 
@@ -45,19 +43,18 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<fred:resultsList>`` which declares the ``fred`` namespace and schema
+``<fred:resultsList>`` which declares the ``fred`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
 * ``<fred:item>`` **(0..n)** – an item of the results list as :term:`xs:token`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

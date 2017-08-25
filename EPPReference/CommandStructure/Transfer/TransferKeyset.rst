@@ -5,32 +5,35 @@
 Transfer keyset
 ================
 
-A keyset transfer command is used to take over the management of a keyset.
+A keyset transfer :ref:`command <struct-command>` is used to take over
+sponsorship of a keyset.
 A transfer password must be provided for authorization.
 It can be the transfer password of:
 
 * the keyset, or
 * a technical contact of the keyset.
 
-A keyset transfer command is a ``transfer`` element in the ``keyset`` namespace
+A new password is generated for the keyset by the server after a successful transfer.
+
+The keyset transfer command is a ``transfer`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
+
+The command must be contained in the ``<transfer>`` command class.
+The command class must specify the request operation (``@op = 'request'``).
 
 .. index:: Ⓔtransfer, Ⓔid, ⒺauthInfo
 
 Command element structure
 -------------------------
 
-The command class must specify the request operation (``@op = 'request'``).
-
 The ``<keyset:transfer>`` element must declare the ``keyset`` namespace
-and schema and it must contain the following child elements:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<keyset:id>`` **(1)** – the keyset handle as :term:`fredcom:objIDType`,
 * ``<keyset:authInfo>`` **(1)**  – the transfer password as :term:`fredcom:authInfoType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -48,9 +51,8 @@ and schema and it must contain the following child elements:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > transfer_keyset KID-TRKEYSET trpwd
 

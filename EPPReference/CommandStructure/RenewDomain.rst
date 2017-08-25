@@ -6,24 +6,27 @@
 Renew domain
 ============
 
-A domain renew command is used to prolong the registration of a domain name.
+A domain renew :ref:`command <struct-command>` is used to prolong
+the registration of a domain name.
 
 The domain renew command is a ``renew`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
+
+The command must be contained in the ``<renew>`` command class.
 
 .. index:: Ⓔrenew, Ⓔname, ⒺcurExpDate, Ⓔperiod, ⓐunit
 
 Command element structure
 -------------------------
 
-The ``<domain:renew>`` element must declare the ``domain`` namespace
-and schema and it must contain the following child elements:
+The ``<domain:renew>`` element must declare the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<domain:name>`` **(1)**  – the domain name as :term:`eppcom:labelType`,
 * ``<domain:curExpDate>`` **(1)**  – the domain's current expiration date
   as :term:`xs:date`,
 * ``<domain:period>`` **(0..1)**  – the prolongation period
   as :term:`domain:pLimitType`,
+
    * ``@unit`` **(R)**  – the unit in which the period is counted; it can be
      either ``m`` for months or ``y`` for years.
 
@@ -34,10 +37,8 @@ and schema and it must contain the following child elements:
      The FRED's default minimum and the allowed step is 1 year. The FRED's default
      maximum is 10 years.
 
-
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -56,9 +57,8 @@ and schema and it must contain the following child elements:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > renew_domain mydomain.cz 2018-07-11 (2 y)
 
@@ -76,7 +76,7 @@ to change the validation independently, use the
 
 The command's ``<extension>`` element must contain a **single** ``<enumval:renew>``
 element which declares the ``enumval`` namespace (``http://www.nic.cz/xml/epp/enumval-1.2``)
-and schema and contains:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 
 * ``<enumval:valExDate>`` **(0..1)**  – a new validation expiration date as :term:`xs:date`,
 
@@ -104,9 +104,8 @@ and schema and contains:
   domain in a public directory as :term:`xs:boolean`;
   ``true`` – display, ``false`` – hide.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -131,9 +130,8 @@ and schema and contains:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > renew_domain 1.1.1.7.4.5.2.2.2.0.2.4.e164.arpa 2018-07-14 (1 y) 2018-01-14
 
@@ -147,16 +145,15 @@ the standard result, response data and transaction identification.
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<domain:renData>`` which declares the ``domain`` namespace and schema
+``<domain:renData>`` which declares the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
 * ``<domain:name>`` **(1)** – the domain name as :term:`eppcom:labelType`,
 * ``<domain:exDate>`` **(0..1)** – the new expiration date of the domain name
   after renewal as :term:`xs:date`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

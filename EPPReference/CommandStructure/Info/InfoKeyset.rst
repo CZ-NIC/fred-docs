@@ -5,24 +5,24 @@
 Info keyset
 =============
 
-A keyset info command is used to retrieve the data of a keyset.
+A keyset info :ref:`command <struct-command>` is used to view details of a keyset.
 
-A keyset info command is an ``info`` element in the ``keyset`` namespace
+The keyset info command is an ``info`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
+
+The command must be contained in the ``<info>`` command class.
 
 .. index:: Ⓔinfo, Ⓔid
 
 Command element structure
 -------------------------
 
-The ``<keyset:check>`` element must declare the ``keyset`` namespace
-and schema and it must contain the following child elements:
+The ``<keyset:check>`` element must declare the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<keyset:id>`` **(1..n)**  – a keyset handle as :term:`fredcom:objIDType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -39,9 +39,8 @@ and schema and it must contain the following child elements:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > info_keyset NID-MYNSSET
 
@@ -54,14 +53,14 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 .. _keyset-infdata:
 
 The response data element (``<resData>``) contains a single child element
-``<keyset:infData>``  which declares the ``keyset`` namespace and schema
+``<keyset:infData>``  which declares the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
 * ``<keyset:id>`` **(1)** the keyset handle as :term:`fredcom:objIDType`,
@@ -78,10 +77,10 @@ and it contains the following child elements:
    * element content: the state description as a :term:`xs:normalizedString`,
 * ``<keyset:clID>`` **(1)** – the designated registrar handle as :term:`eppcom:clIDType`,
 * ``<keyset:crID>`` **(0..1)** – the handle of the registrar who created this keyset as :term:`eppcom:clIDType`,
-* ``<keyset:crDate>`` **(0..1)** – the date and time of creation as :term:`xs:dateTime`,
+* ``<keyset:crDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`,
 * ``<keyset:upID>`` **(0..1)** – the handle of the registrar who was the last to update this keyset as :term:`eppcom:clIDType`,
-* ``<keyset:upDate>`` **(0..1)** – the date and time of the last update as :term:`xs:dateTime`,
-* ``<keyset:trDate>`` **(0..1)** – the date and time of the last transfer as :term:`xs:dateTime`,
+* ``<keyset:upDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last update as :term:`xs:dateTime`,
+* ``<keyset:trDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last transfer as :term:`xs:dateTime`,
 * ``<keyset:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
 * ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
   for allowed values <mng-keyset-attr>`) given by:
@@ -91,9 +90,8 @@ and it contains the following child elements:
    * ``<keyset:pubKey>`` **(1)** – public key as :term:`keyset:keyT`,
 * ``<keyset:tech>`` **(1..n)** – a technical contact handle as :term:`fredcom:objIDType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

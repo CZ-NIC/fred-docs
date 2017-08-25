@@ -5,14 +5,15 @@
 Credit info
 ===========
 
-The credit info command is used to find out about the current credit amounts
-of the authenticated registrar in all zones for which the registrar is accredited.
-
-This command is a :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
-defined by the FRED EPP server.
+A credit info command is used to find out about
+the current credit amounts of the authenticated registrar in all zones
+for which the registrar is accredited.
 
 The credit info command is a ``creditInfo`` element in the ``fred`` namespace
 (``http://www.nic.cz/xml/epp/fred-1.5``).
+
+This command is a part of the :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
+defined by the FRED EPP server.
 
 .. index:: ⒺcreditInfo
 
@@ -21,9 +22,8 @@ Command element structure
 
 The ``<fred:creditInfo/>`` element does not contain any child elements.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -38,9 +38,8 @@ The ``<fred:creditInfo/>`` element does not contain any child elements.
       </extension>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > credit_info
 
@@ -55,16 +54,15 @@ the standard result, response data and transaction identification.
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<fred:resCreditInfo>`` which declares the ``fred`` namespace and schema
+``<fred:resCreditInfo>`` which declares the ``fred`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
 * ``<fred:zoneCredit>`` **(0..n)** – the credit information of a single zone:
    * ``<fred:zone>`` **(1)** – the zone FQDN as :term:`eppcom:labelType`,
    * ``<fred:credit>`` **(1)** – the amount of credit in this zone as :term:`fred:amountType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

@@ -5,24 +5,25 @@
 Check nsset
 =============
 
-A nsset check command is used to check the availability of one or more nsset handles.
+A nsset check :ref:`command <struct-command>` is used to check
+the availability of one or more nsset handles.
 
-A nsset check command is a ``check`` element in the ``nsset`` namespace
+The nsset check command is a ``check`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
+
+The command must be contained in the ``<check>`` command class.
 
 .. index:: Ⓔcheck, Ⓔid
 
 Command element structure
 -------------------------
 
-The ``<nsset:check>`` element must declare the ``nsset`` namespace
-and schema and it must contain the following child elements:
+The ``<nsset:check>`` element must declare the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<nsset:id>`` **(1..n)**  – a nsset handle as :term:`fredcom:objIDType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -40,9 +41,8 @@ and schema and it must contain the following child elements:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > check_nsset NID-MYNSSET NID-NONE
 
@@ -52,12 +52,12 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<nsset:chkData>`` which declares the ``nsset`` namespace and schema
+``<nsset:chkData>`` which declares the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
 * ``<nsset:cd>`` **(1..n)** – the check resolution of a single nsset handle:
@@ -74,10 +74,8 @@ and it contains the following child elements:
       * ``@lang`` – language of the reason as :term:`xs:language`;
         default is ``en`` (English).
 
-
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

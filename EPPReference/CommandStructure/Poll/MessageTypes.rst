@@ -28,7 +28,7 @@ Low credit
 
 **Event:** Client's credit has dropped below the stated limit.
 
-``<fred:lowCreditData>`` **(1)** declares the ``fred`` namespace and schema,
+``<fred:lowCreditData>`` **(1)** declares the ``fred`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contains:
 
 * ``<fred:zone>`` **(1)** – FQDN of the zone in question as :term:`eppcom:labelType`,
@@ -40,7 +40,7 @@ and contains:
    * ``<fred:credit>`` **(1)** – current client's credit as :term:`fred:amountType`.
 
 .. code-block:: xml
-   :caption: Example of low credit notification
+   :caption: Example of a notification of low credit
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -84,11 +84,12 @@ Request usage
 so far, and how much the client will be charged for the requests
 that exceed the limit.
 
-``<fred:requestFeeInfoData>`` **(1)** declares the ``fred`` namespace and
-schema, and contains:
+``<fred:requestFeeInfoData>`` **(1)** declares the ``fred`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`, and contains:
 
-* ``<fred:periodFrom>`` **(1)** – start of the period as :term:`xs:dateTime`,
-* ``<fred:periodTo>`` **(1)** – end of the period as :term:`xs:dateTime`,
+* ``<fred:periodFrom>`` **(1)** – the :ref:`timestamp <mngobj-timestamps>`
+  of the start of the period as :term:`xs:dateTime`,
+* ``<fred:periodTo>`` **(1)** – the :ref:`timestamp <mngobj-timestamps>`
+  of the end of the period as :term:`xs:dateTime`,
 * ``<fred:totalFreeCount>`` **(1)** – the amount of free requests (the limit)
   for this month as :term:`xs:unsignedLong`,
 * ``<fred:usedCount>`` **(1)** – the total of requests used during the period
@@ -97,7 +98,7 @@ schema, and contains:
   that the client will be billed as :term:`fred:amountType`.
 
 .. code-block:: xml
-   :caption: Example of a notification about the request usage
+   :caption: Example of a notification of request usage
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -143,7 +144,7 @@ that have the same content but are issued on different **events**:
 
 Only one of these elements can occur in a single poll message.
 
-All of these elements declare the ``domain`` namespace and schema,
+All of these elements declare the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contain the following child elements:
 
 * ``<domain:name>`` **(1)** – the domain name to which they are referring
@@ -193,7 +194,7 @@ Notifications concerning the validation of ENUM domains for **events**:
 
 Only one of these elements can occur in a single poll message.
 
-Both of these elements declare the ``enumval`` namespace and schema,
+Both of these elements declare the ``enumval`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contain the same child elements:
 
 * ``<enumval:name>`` **(1)** – the domain name to which they are referring
@@ -237,7 +238,7 @@ Object transfer
 
 **Event:** An object has been transferred to another registrar.
 
-``<*:trnData>`` **(1)** declares the object namespace and schema,
+``<*:trnData>`` **(1)** declares the object :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contains:
 
 * an object identifier **(1)** which is **one of**:
@@ -252,7 +253,7 @@ This message type appears in all 4 object namespaces: ``domain``, ``contact``,
 ``nsset``, ``keyset``.
 
 .. code-block:: xml
-   :caption: Example of transfer notification
+   :caption: Example of a transfer notification
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -287,7 +288,7 @@ Object update
 
 **Event:** An object has been updated (in consequence of a server-side operation).
 
-``<*:updateData>`` **(1)** declares the object namespace and schema,
+``<*:updateData>`` **(1)** declares the object :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contains:
 
 * ``<*:opTRID>`` **(1)** – operation transaction identifier (an identification
@@ -387,7 +388,7 @@ Idle object deletion
 
 **Event:** An object has been deleted because it had not been used for a long time.
 
-``<*:idleDelData>`` **(1)** declares the object namespace and schema,
+``<*:idleDelData>`` **(1)** declares the object :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contains:
 
 * ``<*:id>`` **(1)** – the handle of the deleted object as :term:`fredcom:objIDType`.
@@ -432,10 +433,10 @@ Technical check results
 
 **Event:** A technical check that the client has requested, has finished.
 
-``<nsset:testData>`` **(1)** declares the ``nsset`` namespace and schema,
+``<nsset:testData>`` **(1)** declares the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contains:
 
-.. * ``<nsset:cltestid>`` **(0..1)** – clTRID of the request???
+.. * ``<nsset:cltestid>`` **(0..1)** – clTRID of the tec.check request???
      as :term:`nsset:trIDStringType`, // probably unused
 
 * ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDType`,
@@ -449,7 +450,7 @@ and contains:
      from the test implementation as :term:`xs:string`.
 
 .. code-block:: xml
-   :caption: Example of notification with the results of a technical check
+   :caption: Example of a notification with the results of a technical check
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

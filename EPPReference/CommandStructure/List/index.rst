@@ -4,6 +4,8 @@
 Listing
 ===============
 
+.. todo:: This segment still has to undergo a review by a SME (fact-checking and proof-reading).
+
 Commands for object listing.
 
 Object listing is done in two steps that are performed separately in this order:

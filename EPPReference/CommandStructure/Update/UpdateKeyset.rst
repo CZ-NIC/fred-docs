@@ -4,25 +4,28 @@
 Update keyset
 =============
 
-A keyset update command is used to alter the data of a keyset.
+A keyset update :ref:`command <struct-command>` is used to alter details of a keyset.
 
-A keyset update command is an ``update`` element in the ``keyset`` namespace
+The keyset update command is an ``update`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
 
-.. index:: Ⓔupdate, Ⓔid,, Ⓔadd, Ⓔrem, Ⓔchg, Ⓔdnskey, Ⓔflags, Ⓔprotocol,
+The command must be contained in the ``<update>`` command class.
+
+.. index:: Ⓔupdate, Ⓔid, Ⓔadd, Ⓔrem, Ⓔchg, Ⓔdnskey, Ⓔflags, Ⓔprotocol,
    Ⓔalg, ⒺpubKey, Ⓔtech, ⒺauthInfo
 
 Command element structure
 -------------------------
 
 The ``<keyset:update>`` element must declare the ``keyset`` namespace
-and schema and it must contain the following child elements:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<keyset:id>`` **(1)**  – a keyset handle as :term:`fredcom:objIDType`,
 * ``<keyset:add>`` **(0..1)** – a list of items that will be added to this keyset:
 
    * ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
      for allowed values <mng-keyset-attr>`) given by:
+
       * ``<keyset:flags>`` **(1)** – flags as :term:`xs:unsignedShort`,
       * ``<keyset:protocol>`` **(1)** – protocol as :term:`xs:unsignedByte`,
       * ``<keyset:alg>`` **(1)** – algorithm as :term:`xs:unsignedByte`,
@@ -35,6 +38,7 @@ and schema and it must contain the following child elements:
 
    * ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
      for allowed values <mng-keyset-attr>`) given by:
+
       * ``<keyset:flags>`` **(1)** – flags as :term:`xs:unsignedShort`,
       * ``<keyset:protocol>`` **(1)** – protocol as :term:`xs:unsignedByte`,
       * ``<keyset:alg>`` **(1)** – algorithm as :term:`xs:unsignedByte`,
@@ -48,9 +52,8 @@ and schema and it must contain the following child elements:
    * ``<keyset:authInfo>`` **(0..1)** – change the keyset's authorization
      information (transfer password) as :term:`fredcom:authInfoType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -88,9 +91,8 @@ and schema and it must contain the following child elements:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > update_keyset KID-MYKEYSET (((257 3 5 eGVmbmZrY3lvcXFwamJ6aGt2YXhteXdkc2tjeXBp), (257 3 5 aXN4Y2lpd2ZicWtkZHF4dnJyaHVtc3BreXN6ZGZy)) () CID-TECH2) (() () CID-TECH1) aBcD234
 

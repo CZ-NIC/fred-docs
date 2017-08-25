@@ -5,24 +5,24 @@
 Info nsset
 =============
 
-A nsset info command is used to retrieve the data of a nsset.
+A nsset info :ref:`command <struct-command>` is used to view details of a nsset.
 
-A nsset info command is an ``info`` element in the ``nsset`` namespace
+The nsset info command is an ``info`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
+
+The command must be contained in the ``<info>`` command class.
 
 .. index:: Ⓔinfo, Ⓔid
 
 Command element structure
 -------------------------
 
-The ``<nsset:check>`` element must declare the ``nsset`` namespace
-and schema and it must contain the following child elements:
+The ``<nsset:check>`` element must declare the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<nsset:id>`` **(1..n)**  – a nsset handle as :term:`fredcom:objIDType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -39,9 +39,8 @@ and schema and it must contain the following child elements:
    </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > info_nsset NID-MYNSSET
 
@@ -54,14 +53,14 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 .. _nsset-infdata:
 
 The response data element (``<resData>``) contains a single child element
-``<nsset:infData>``  which declares the ``nsset`` namespace and schema
+``<nsset:infData>``  which declares the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
 * ``<nsset:id>`` **(1)** the nsset handle as :term:`fredcom:objIDType`,
@@ -78,10 +77,10 @@ and it contains the following child elements:
    * element content: the state description as a :term:`xs:normalizedString`,
 * ``<nsset:clID>`` **(1)** – the designated registrar handle as :term:`eppcom:clIDType`,
 * ``<nsset:crID>`` **(0..1)** – the handle of the registrar who created this nsset as :term:`eppcom:clIDType`,
-* ``<nsset:crDate>`` **(0..1)** – the date and time of creation as :term:`xs:dateTime`,
+* ``<nsset:crDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`,
 * ``<nsset:upID>`` **(0..1)** – the handle of the registrar who was the last to update this nsset as :term:`eppcom:clIDType`,
-* ``<nsset:upDate>`` **(0..1)** – the date and time of the last update as :term:`xs:dateTime`,
-* ``<nsset:trDate>`` **(0..1)** – the date and time of the last transfer as :term:`xs:dateTime`,
+* ``<nsset:upDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last update as :term:`xs:dateTime`,
+* ``<nsset:trDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last transfer as :term:`xs:dateTime`,
 * ``<nsset:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
 * ``<nsset:ns>`` **(0..10)** – a nameserver given by:
    * ``<nsset:name>`` **(1)** – a nameserver hostname as :term:`eppcom:labelType`,
@@ -89,9 +88,8 @@ and it contains the following child elements:
 * ``<nsset:tech>`` **(1..n)** – a technical contact handle as :term:`fredcom:objIDType`,
 * ``<nsset:reportlevel>`` **(1)** – the report level of technical checks as :term:`nsset:reportlevelType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

@@ -5,24 +5,25 @@
 Check keyset
 =============
 
-A keyset check command is used to check the availability of one or more keyset handles.
+A keyset check :ref:`command <struct-command>` is used to check
+the availability of one or more keyset handles.
 
-A keyset check command is a ``check`` element in the ``keyset`` namespace
+The keyset check command is a ``check`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
+
+The command must be contained in the ``<check>`` command class.
 
 .. index:: Ⓔcheck, Ⓔid
 
 Command element structure
 -------------------------
 
-The ``<keyset:check>`` element must declare the ``keyset`` namespace
-and schema and it must contain the following child elements:
+The ``<keyset:check>`` element must declare the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<keyset:id>`` **(1..n)**  – a keyset handle as :term:`fredcom:objIDType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -40,9 +41,8 @@ and schema and it must contain the following child elements:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > check_keyset KID-MYKEYSET KID-NONE
 
@@ -52,12 +52,12 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 The response data element (``<resData>``) contains a single child element
-``<keyset:chkData>`` which declares the ``keyset`` namespace and schema
+``<keyset:chkData>`` which declares the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
 * ``<keyset:cd>`` **(1..n)** – the check resolution of a single keyset handle:
@@ -75,9 +75,8 @@ and it contains the following child elements:
         default is ``en`` (English).
 
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

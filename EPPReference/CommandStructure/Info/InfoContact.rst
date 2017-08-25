@@ -5,24 +5,24 @@
 Info contact
 =============
 
-A contact info command is used to retrieve the data of a contact.
+A contact info :ref:`command <struct-command>` is used to view details of a contact.
 
-A contact info command is an ``info`` element in the ``contact`` namespace
+The contact info command is an ``info`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
+
+The command must be contained in the ``<info>`` command class.
 
 .. index:: Ⓔinfo, Ⓔid
 
 Command element structure
 -------------------------
 
-The ``<contact:info>`` element must declare the ``contact`` namespace
-and schema and it must contain the following child element:
+The ``<contact:info>`` element must declare the ``contact`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
 * ``<contact:id>`` **(1)** the contact handle as :term:`fredcom:objIDType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -39,9 +39,8 @@ and schema and it must contain the following child element:
    </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > info_contact CID-MYCONTACT
 
@@ -57,14 +56,14 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
 .. _contact-infdata:
 
 The response data element (``<resData>``) contains a single child element
-``<contact:infData>``  which declares the ``contact`` namespace and schema
+``<contact:infData>``  which declares the ``contact`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
 * ``<contact:id>`` **(1)** the contact handle as :term:`fredcom:objIDType`,
@@ -99,10 +98,10 @@ and it contains the following child elements:
 * ``<contact:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
 * ``<contact:clID>`` **(1)** – the designated registrar handle as :term:`eppcom:clIDType`,
 * ``<contact:crID>`` **(1)** – the handle of the registrar who created this contact as :term:`eppcom:clIDType`,
-* ``<contact:crDate>`` **(1)** – the date and time of creation as :term:`xs:dateTime`,
+* ``<contact:crDate>`` **(1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`,
 * ``<contact:upID>`` **(0..1)** – the handle of the registrar who was the last to update this contact as :term:`eppcom:clIDType`,
-* ``<contact:upDate>`` **(0..1)** – the date and time of the last update as :term:`xs:dateTime`,
-* ``<contact:trDate>`` **(0..1)** – the date and time of the last transfer as :term:`xs:dateTime`,
+* ``<contact:upDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last update as :term:`xs:dateTime`,
+* ``<contact:trDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last transfer as :term:`xs:dateTime`,
 * ``<contact:disclose>`` **(0..1)** – contact information disclosure settings:
    * ``@flag`` **(R)** – disclose flag as a :term:`xs:boolean`: ``0`` – listed items are hidden, ``1`` – listed items are published,
    * ``<contact:addr/>`` **(0..1)** – the address disclosure setting as an empty element,
@@ -121,10 +120,8 @@ and it contains the following child elements:
    * element content: the identification number as a :term:`contact:identValueT`,
 * ``<contact:notifyEmail>`` **(0..1)** – a comma-separated list of email addresses for notification as :term:`contact:emailCommaListType`.
 
-
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

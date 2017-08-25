@@ -4,10 +4,12 @@
 Update domain
 =============
 
-A domain update command is used to alter the data of a domain.
+A domain update :ref:`command <struct-command>` is used to alter details of a domain.
 
-A domain update command is an ``update`` element in the ``domain`` namespace
+The domain update command is an ``update`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
+
+The command must be contained in the ``<update>`` command class.
 
 .. index:: Ⓔupdate, Ⓔname, Ⓔadd, Ⓔrem, Ⓔchg, Ⓔadmin, Ⓔtempcontact, Ⓔnsset,
    Ⓔkeyset, Ⓔregistrant, ⒺauthInfo
@@ -16,7 +18,7 @@ Command element structure
 -------------------------
 
 The ``<domain:update>`` element must declare the ``domain`` namespace
-and schema and it must contain the following child elements:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<domain:name>`` **(1)** – the domain name as :term:`eppcom:labelType`,
 * ``<domain:add>`` **(0..1)** – a list of contact handles that will
@@ -39,10 +41,8 @@ and schema and it must contain the following child elements:
    * ``<domain:authInfo>`` **(0..1)** – change the domain's authorization
      information (transfer password) as :term:`fredcom:authInfoType`.
 
-
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -69,9 +69,8 @@ and schema and it must contain the following child elements:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > update_domain mydomain.cz CID-ADMIN2 CID-ADMIN1 () (NID-MYNSSET NULL CID-MYOWN)
 
@@ -87,7 +86,7 @@ of an ENUM domain and/or its publish flag.
 
 The command's ``<extension>`` element must contain a **single** ``<enumval:update>``
 element which declares the ``enumval`` namespace (``http://www.nic.cz/xml/epp/enumval-1.2``)
-and schema and contains:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 
 * ``<enumval:valExDate>`` **(0..1)**  – a new validation expiration date as :term:`xs:date`;
   the new date must be within range – see :ref:`the explanation in RenewDomain <new-valexdate>`,
@@ -95,9 +94,8 @@ and schema and contains:
 * ``<enumval:publish>`` **(0..1)** – a new setting for publishing the ENUM
   domain in a public directory as :term:`xs:boolean`; ``true`` – display, ``false`` – hide.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -122,9 +120,8 @@ and schema and contains:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > update_domain 1.1.1.7.4.5.2.2.2.0.2.4.e164.arpa () () () () 2018-01-02
 

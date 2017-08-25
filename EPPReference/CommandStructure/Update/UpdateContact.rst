@@ -5,10 +5,12 @@
 Update contact
 ==============
 
-A contact update command is used to alter the data of a contact.
+A contact update :ref:`command <struct-command>` is used to alter details of a contact.
 
-A contact update command is an ``update`` element in the ``contact`` namespace
+The contact update command is an ``update`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
+
+The command must be contained in the ``<update>`` command class.
 
 .. index:: Ⓔupdate, Ⓔid, Ⓔchg, ⒺpostalInfo, Ⓔname, Ⓔorg, Ⓔaddr, Ⓔstreet,
    Ⓔcity, Ⓔsp, Ⓔpc, Ⓔcc, Ⓔvoice, Ⓔfax, Ⓔemail, ⒺauthInfo,
@@ -18,7 +20,7 @@ Command element structure
 -------------------------
 
 The ``<contact:update>`` element must declare the ``contact`` namespace
-and schema and it must contain the following child elements:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<contact:id>`` **(1)** – the contact handle as :term:`fredcom:objIDType`.
 * ``<contact:chg>`` **(0..1)** – comprises the new values of contact attributes
@@ -38,7 +40,7 @@ and schema and it must contain the following child elements:
    * ``<contact:email>`` **(0..1)** – change email as :term:`contact:emailCommaListType`,
    * ``<contact:authInfo>`` **(0..1)** – change authorization information (transfer password) as :term:`fredcom:authInfoType`
    * ``<contact:disclose>`` **(0..1)** – change contact information disclosure settings:
-      * ``@flag`` **(R)** attribute (disclose flag) as a :term:`xs:boolean`: ``0`` – hide listed items, ``1`` – publish listed items,
+      * ``@flag`` **(R)** – disclose flag as a :term:`xs:boolean`: ``0`` – hide listed items, ``1`` – publish listed items,
       * ``<contact:addr/>`` **(0..1)** – address disclosure setting as an empty element,
       * ``<contact:voice/>`` **(0..1)** – voice disclosure setting as an empty element,
       * ``<contact:fax/>`` **(0..1)** – fax disclosure setting as an empty element,
@@ -51,7 +53,7 @@ and schema and it must contain the following child elements:
 
    * ``<contact:vat>`` **(0..1)** – change :term:`VAT`-payer identifier as a :term:`contact:vatT`,
    * ``<contact:ident>`` **(0..1)** – change identity-document identification:
-      * ``@type`` **(R)** attribute (the type of the identity document)
+      * ``@type`` **(R)** – the type of the identity document
         as one of values: ``op`` (identity card number),
         ``passport`` (passport number),
         ``mpsv`` (number from the Ministry of Labour and Social Affairs),
@@ -59,9 +61,8 @@ and schema and it must contain the following child elements:
       * element content: an identification number as a :term:`contact:identValueT`,
    * ``<contact:notifyEmail>`` **(0..1)** – change notification email as :term:`contact:emailUpdCommaListType`.
 
-.. rubric:: Example
-
 .. code-block:: xml
+   :caption: Example
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -84,9 +85,8 @@ and schema and it must contain the following child elements:
       </command>
    </epp>
 
-.. rubric:: FRED-client equivalent
-
 .. code-block:: shell
+   :caption: FRED-client equivalent
 
    > update_contact CID-MYOWN (() +420.222333444 NULL NULL NULL (n voice))
 
