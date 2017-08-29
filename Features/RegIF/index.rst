@@ -22,8 +22,6 @@ Registrar features
 
    .. struct-end
 
-.. todo:: This segment still has to undergo a review by a SME (fact-checking and proof-reading).
-
 These are the features that the FRED EPP server provides to registrars.
 
 They are common to both the FRED-client command-line interface and the API library.
@@ -50,7 +48,7 @@ Manage domains
 * Renew a domain
 * Transfer a domain
 * Update a domain
-* Send authorization information of a domain
+* Send authorization information of a domain to emails of the contacts linked with the domain
 
 Manage contacts
 ---------------
@@ -61,7 +59,7 @@ Manage contacts
 * Delete a contact
 * Transfer a contact
 * Update a contact
-* Send authorization information of a contact
+* Send authorization information of a contact to emails of the contact
 
 Manage nssets
 --------------
@@ -73,7 +71,7 @@ Manage nssets
 * Transfer a nsset
 * Update a nsset
 * Request a technical check of a nsset
-* Send authorization information of a nsset
+* Send authorization information of a nsset to emails of the contacts linked with the nsset
 
 Manage keysets
 --------------
@@ -84,7 +82,7 @@ Manage keysets
 * Delete a keyset
 * Transfer a keyset
 * Update a keyset
-* Send authorization information of a keyset
+* Send authorization information of a keyset to emails of the contacts linked with the keyset
 
 .. _fred-client-extras:
 
