@@ -4,7 +4,8 @@
 EPP-defined data types
 ======================
 
-Used simple data types defined in the standard EPP namespaces.
+Simple data types defined in the standard EPP :doc:`namespaces
+</EPPReference/SchemasNamespaces/index>`.
 
 .. glossary::
    :sorted:

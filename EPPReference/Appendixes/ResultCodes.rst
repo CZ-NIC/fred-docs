@@ -4,9 +4,11 @@
 Result codes & messages
 =======================
 
-.. https://admin.nic.cz/wiki/developers/fred/EPP/backend/spec#GetErrorMessage
+The result codes and messages are taken from the :rfc:`5730#section-3`
+where they are described in detail.
 
-The result codes and messages are taken from the :rfc:`5730#section-3` where they are described in detail.
+The result messages are provided in the language of :doc:`the session
+</EPPReference/CommandStructure/Login>`.
 
 Successful command completion responses
 ---------------------------------------

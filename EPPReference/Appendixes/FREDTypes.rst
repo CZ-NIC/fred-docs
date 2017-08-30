@@ -4,7 +4,8 @@
 FRED-defined data types
 =======================
 
-Used simple data types defined in the FRED namespaces.
+Simple data types defined in the FRED :doc:`namespaces
+</EPPReference/SchemasNamespaces/index>`.
 
 .. glossary::
    :sorted:

@@ -4,7 +4,8 @@
 XMLSchema-defined data types
 ============================
 
-Used simple data types defined in the XML Schema namespace.
+Simple data types defined in the XML Schema :doc:`namespace
+</EPPReference/SchemasNamespaces/index>`.
 
 .. glossary::
    :sorted:

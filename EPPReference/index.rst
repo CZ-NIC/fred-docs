@@ -42,4 +42,4 @@ Terms and definitions can be found :doc:`in the glossary </Glossary>`.
    SchemasNamespaces/index
    CommandOverview
    CommandStructure/index
-   Appendices/index
+   Appendixes/index
