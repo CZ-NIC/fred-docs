@@ -30,6 +30,7 @@ Contributions may be submitted using the pull-request mechanism.
    :name: fred-toc-info
    :maxdepth: 1
 
+   RecordOfChanges
    TypographicConventions
    Glossary
 
