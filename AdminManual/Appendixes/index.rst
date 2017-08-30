@@ -1,7 +1,7 @@
 
 .. _FRED-Admin-App:
 
-Appendices
+Appendixes
 ==========
 
 .. toctree::
