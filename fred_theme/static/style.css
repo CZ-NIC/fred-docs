@@ -28,9 +28,17 @@ div.body {
 
 div.body h1 {
     background-color: #878786;
-    padding: 59px 0 49px 40px;
+    padding: 59px 0 49px 20px;
     display: block;
     height: 26px;
+}
+
+div.body h2,
+div.body h3,
+div.body h4,
+div.body h5,
+div.body h6 {
+    padding-left: 19px;
 }
 
 a.headerlink {
@@ -43,7 +51,7 @@ div.sphinxsidebar {
 
 div.sphinxsidebarwrapper {
     margin :0;
-    padding :0 10px 0 41px;
+    padding :0 10px 40px 41px;
 }
 
 div.sphinxsidebarwrapper li {
@@ -131,6 +139,27 @@ div.sphinxsidebar #searchbox input[type="submit"] {
 /* Table settings */
 table {
    margin-bottom: 2ex;
+}
+
+table caption {
+   padding: 2px 0 4px 0;
+}
+
+table .caption-text {
+   font-weight: bold;
+}
+
+th {
+   background-color: #D1D3D4;
+}
+
+/* Code-block caption */
+div.code-block-caption {
+   background-color: #878786;
+}
+
+.code-block-caption .caption-text {
+   /*font-weight: bold;*/
 }
 
 /* Emphasize current topic in sidebar menu */
