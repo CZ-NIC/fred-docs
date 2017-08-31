@@ -40,6 +40,5 @@ Terms and definitions can be found :doc:`in the glossary </Glossary>`.
    ProtocolBasics/index
    ManagedObjects/index
    SchemasNamespaces/index
-   CommandOverview
    CommandStructure/index
    Appendixes/index
