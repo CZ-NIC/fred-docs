@@ -14,8 +14,8 @@ A new password is generated for the contact by the server after a successful tra
 The contact transfer command is a ``transfer`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
 
-The command must be contained in the ``<transfer>`` command class.
-The command class must specify the request operation (``@op = 'request'``).
+The command must be contained in the ``<transfer>`` command type.
+The command type must specify the request operation (``@op = 'request'``).
 
 .. index:: Ⓔtransfer, Ⓔid, ⒺauthInfo
 

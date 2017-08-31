@@ -10,7 +10,7 @@ A domain create :ref:`command <struct-command>` is used to register a new domain
 The contact create command is a ``create`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
 
-The command must be contained in the ``<create>`` command class.
+The command must be contained in the ``<create>`` command type.
 
 .. index:: Ⓔcreate, Ⓔname, Ⓔperiod, Ⓔnsset, Ⓔkeyset, Ⓔregistrant, Ⓔadmin,
    ⒺauthInfo, ⓐunit
@@ -18,13 +18,14 @@ The command must be contained in the ``<create>`` command class.
 Command element structure
 -------------------------
 
-The ``<domain:create>`` element must declare the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
+The ``<domain:create>`` element must declare the ``domain`` :doc:`namespace and
+schema </EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
 
 * ``<domain:name>`` **(1)**  – a domain name as :term:`eppcom:labelType`,
 * ``<domain:period>`` **(0..1)**  – the registration period
   as :term:`domain:pLimitType`,
 
-   * ``@unit`` **(R)**  – the unit in which the period is counted; it can be
+   * ``@unit`` **(R)**  – the unit the period is counted in; it can be
      either ``m`` for months or ``y`` for years.
 
   If omitted, the domain expiration is set to the minimum. (FRED's default: 1 year)

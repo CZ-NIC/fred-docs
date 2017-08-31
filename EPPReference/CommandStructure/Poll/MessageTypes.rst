@@ -20,6 +20,7 @@ Poll message types
 
 .. contents::
    :local:
+   :backlinks: none
 
 .. index:: ⒺlowCreditData, Ⓔzone, Ⓔlimit, Ⓔcredit
 
@@ -80,11 +81,12 @@ and contains:
 Request usage
 -------------
 
-**Event:** Daily report of how many free requests have been used this month
+**Event:** Daily report of how many free requests have been made this month
 so far, and how much the client will be charged for the requests
 that exceed the limit.
 
-``<fred:requestFeeInfoData>`` **(1)** declares the ``fred`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`, and contains:
+``<fred:requestFeeInfoData>`` **(1)** declares the ``fred`` :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>`, and contains:
 
 * ``<fred:periodFrom>`` **(1)** – the :ref:`timestamp <mngobj-timestamps>`
   of the start of the period as :term:`xs:dateTime`,
@@ -147,7 +149,7 @@ Only one of these elements can occur in a single poll message.
 All of these elements declare the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contain the following child elements:
 
-* ``<domain:name>`` **(1)** – the domain name to which they are referring
+* ``<domain:name>`` **(1)** – the domain name they are referring to
   as :term:`eppcom:labelType`,
 * ``<domain:exDate>`` **(1)** – the expiration date of the domain name
   as :term:`xs:date`.
@@ -424,17 +426,17 @@ This message type appears in the following object namespaces: ``contact``,
    </epp>
 
 
-..index:: ⒺtestData, Ⓔid, Ⓔname, Ⓔresult, Ⓔtestname, Ⓔstatus, Ⓔnote
+.. index:: ⒺtestData, Ⓔid, Ⓔname, Ⓔresult, Ⓔtestname, Ⓔstatus, Ⓔnote
 
 .. _struct-poll-test:
 
 Technical check results
 -----------------------
 
-**Event:** A technical check that the client has requested, has finished.
+**Event:** A technical check that the client had requested, has finished.
 
-``<nsset:testData>`` **(1)** declares the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
-and contains:
+``<nsset:testData>`` **(1)** declares the ``nsset`` :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>`, and contains:
 
 .. * ``<nsset:cltestid>`` **(0..1)** – clTRID of the tec.check request???
      as :term:`nsset:trIDStringType`, // probably unused

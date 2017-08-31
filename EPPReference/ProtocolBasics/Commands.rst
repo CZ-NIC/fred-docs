@@ -32,7 +32,8 @@ Implemented standard commands
 
 * Transform commands: create, update, transfer (``request`` operation only), renew, delete
 
-See also :doc:`../CommandOverview` for implemented non-standard (custom) commands,
+See also :doc:`command overview <../CommandStructure/index>` for implemented
+non-standard (custom) commands,
 or :doc:`ProtocolExtensions` for the generic syntax of custom commands.
 
 .. Note:: The standard suggests a more complex handling of object transfer
@@ -52,8 +53,8 @@ and state-management records, both commands and responses should be marked
 with unique identifiers.
 
 A **command** should be assigned a ``clTRID`` (client transaction identifier)
-by the client that uniquely identifies the command to the client.
-The client is supposed to maintain their own transaction identifier
+by the client which uniquely identifies the command to the client.
+The client is supposed to maintain its own transaction identifier
 space to ensure uniqueness. Also the format of the identifier is arbitrary
 as long as it complies with the restrictions of the XML schema
 (:term:`epp:trIDStringType`).
@@ -74,8 +75,8 @@ Transaction identifiers should be logged, retained and protected.
 Command element structure
 --------------------------
 
-The ``<command>`` element is a child of ``<epp>`` and defined in the standard
-EPP namespace. It contains a command class of object-related commands or
+The ``<command>`` element is a child of ``<epp>`` and is defined in the standard
+EPP namespace. It contains a command type of object-related commands or
 an actual object-independent command, also in the standard namespace,
 which must be a **singular** occurrence of **one of** the following:
 
@@ -83,30 +84,30 @@ which must be a **singular** occurrence of **one of** the following:
   command, see :doc:`../CommandStructure/Login`,
 * ``<logout>`` – client logout (end the session), an object-independent
   command, see :doc:`../CommandStructure/Logout`,
-* ``<check>`` – object availability checks, an object-related command class,
-* ``<create>`` – object registrations, an object-related command class,
-* ``<delete>`` – object unregistrations, an object-related command class,
-* ``<info>`` – requests for object details, an object-related command class,
-* ``<renew>`` – object registration renewals (to be used only with domains), an object-related command class,
-* ``<transfer>`` – object transfer requests, an object-related command class:
+* ``<check>`` – object availability checks, an object-related command type,
+* ``<create>`` – object registrations, an object-related command type,
+* ``<delete>`` – object unregistrations, an object-related command type,
+* ``<info>`` – requests for object details, an object-related command type,
+* ``<renew>`` – object registration renewals (to be used only with domains), an object-related command type,
+* ``<transfer>`` – object transfer requests, an object-related command type:
    * ``@op`` **(R)** – transfer operation –
      Because of :doc:`the concept of transfer </Features/Concepts/Transfer>`
      in the FRED, only one value is permitted and that is ``request``
      which is used to request a transfer.
-* ``<update>`` – updates of object details, an object-related command class,
+* ``<update>`` – updates of object details, an object-related command type,
 * ``<poll>`` – polling for notifications from the Registry, an object-independent command, see :doc:`../CommandStructure/Poll/index`.
    * ``@op`` **(R)** – poll operation as one of values:
-      * ``req`` – request poll messages,
-      * ``ack`` – acknowledge reading of a message,
+      * ``req`` – requests poll messages,
+      * ``ack`` – acknowledges reading of a message,
    * ``@msgID`` – identifier of the message to be acknowledged
      as a :term:`xs:token`. Use only with ``@op = 'ack'``.
 
-Each object-related command class may contain elements from any namespace.
+Each object-related command type may contain elements from any namespace.
 This is where the namespaces and appropriate top-level elements of :doc:`managed
-objects <ManagedObjects>` come in. The object's top-level element must
-correspond with the command class.
+objects <../ManagedObjects/index>` come in. The object's top-level element must
+correspond with the command type.
 
-The command class may be followed by:
+The command type may be followed by:
 
 * ``<extension>`` **(0..1)** – command extension container (see :ref:`command-ext`),
 * ``<clTRID>`` **(0..1)** – client :ref:`transaction identifier <trans-ident>`
@@ -121,7 +122,7 @@ The command class may be followed by:
     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
       <!-- Command container -->
       <command>
-         <!-- Command class: info, check, create, delete... -->
+         <!-- Command type: info, check, create, delete... -->
          <info>
             <!-- Command arguments container -->
             <object:info>
@@ -134,19 +135,19 @@ The command class may be followed by:
    </epp>
 
 Command contents are described separately for each justified combination
-of a command class and a managed object.
+of a command type and a managed object.
 
 .. _struct-response:
 
 Response element structure
 --------------------------
 
-The ``<response>`` element is a child of ``<epp>`` and defined in the standard
+The ``<response>`` element is a child of ``<epp>`` and is defined in the standard
 EPP namespace. It contains the following child elements:
 
 * ``<result>`` **(1..n)** – report of the :ref:`success or failure of command <succ-fail>` execution:
    * ``@code`` **(R)** – result code (4-digit number), for a list of possible
-     values see :doc:`result codes </EPPReference/Appendices/ResultCodes>`,
+     values see :doc:`result codes </EPPReference/Appendixes/ResultCodes>`,
    * ``<msg>`` **(1)** – human-readable description of the result,
       * ``@lang`` – language of the result description
         as :term:`xs:language`; default is ``en`` (English),
@@ -156,7 +157,7 @@ EPP namespace. It contains the following child elements:
       * ``<value>`` **(1)** – identification of a client-provided element
         or other information that caused a server error condition,
       * ``<reason>`` **(1)** – human readable message that describes the reason
-        for the error (see :doc:`../Appendices/ErrorReasons` for a complete list),
+        for the error (see :doc:`/EPPReference/Appendixes/ErrorReasons` for a complete list),
 
          * ``@lang`` – language of the reason description
            as :term:`xs:language`; default is ``en`` (English),
@@ -208,7 +209,7 @@ EPP namespace. It contains the following child elements:
 
    A response is called a "plain result message" when it contains only
    the result (``<result>``) and transaction identification (``<trID>``)
-   and nothing else.
+   and nothing else. The result can be either a success or failure.
 
    .. rubric:: Example
 
@@ -239,10 +240,10 @@ is described by both a code and a textual message.
 
 If the execution succeeded, a code of 1xxx series is returned.
 If the execution failed, a code of 2xxx series is returned.
-See :doc:`/EPPReference/Appendices/ResultCodes` for an overview.
+See :doc:`/EPPReference/Appendixes/ResultCodes` for an overview.
 
 The standard allows to return several results, but the FRED EPP server
-returns exactly one result and therefore one result code at a time.
+returns exactly one result at a time.
 
 .. Important:: The **response element structure** of specific commands is
    described only for cases when the execution is **successful** and therefore

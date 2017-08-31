@@ -9,7 +9,7 @@ A keyset update :ref:`command <struct-command>` is used to alter details of a ke
 The keyset update command is an ``update`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
 
-The command must be contained in the ``<update>`` command class.
+The command must be contained in the ``<update>`` command type.
 
 .. index:: Ⓔupdate, Ⓔid, Ⓔadd, Ⓔrem, Ⓔchg, Ⓔdnskey, Ⓔflags, Ⓔprotocol,
    Ⓔalg, ⒺpubKey, Ⓔtech, ⒺauthInfo

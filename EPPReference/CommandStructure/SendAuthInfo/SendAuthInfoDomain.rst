@@ -16,7 +16,7 @@ of all administrative contacts.
 This command is a part of the :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
 defined by the FRED EPP server.
 
-The command must be contained in the ``<fred:sendAuthInfo>`` command class.
+The command must be contained in the ``<fred:sendAuthInfo>`` command type.
 
 .. index:: Ⓔextcommand, ⒺsendAuthInfo, Ⓔname
 
@@ -24,7 +24,7 @@ Command element structure
 -------------------------
 
 The ``<domain:sendAuthInfo>`` element must declare the ``domain`` namespace
-and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
 * ``<domain:name>`` **(1)**  – a domain name as :term:`eppcom:labelType`.
 
@@ -38,7 +38,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
       <extension>
          <fred:extcommand xmlns:fred="http://www.nic.cz/xml/epp/fred-1.5"
           xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.xsd">
-            <!-- Custom command class -->
+            <!-- Custom command type -->
             <fred:sendAuthInfo>
                <!-- The object-defined command -->
                <domain:sendAuthInfo xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"

@@ -19,8 +19,8 @@ A new password is generated for the domain by the server after a successful tran
 The domain transfer command is a ``transfer`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
 
-The command must be contained in the ``<transfer>`` command class.
-The command class must specify the request operation (``@op = 'request'``).
+The command must be contained in the ``<transfer>`` command type.
+The command type must specify the request operation (``@op = 'request'``).
 
 .. index:: Ⓔtransfer, Ⓔname, ⒺauthInfo
 

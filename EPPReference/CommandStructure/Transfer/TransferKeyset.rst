@@ -18,8 +18,8 @@ A new password is generated for the keyset by the server after a successful tran
 The keyset transfer command is a ``transfer`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
 
-The command must be contained in the ``<transfer>`` command class.
-The command class must specify the request operation (``@op = 'request'``).
+The command must be contained in the ``<transfer>`` command type.
+The command type must specify the request operation (``@op = 'request'``).
 
 .. index:: Ⓔtransfer, Ⓔid, ⒺauthInfo
 

@@ -10,7 +10,7 @@ A contact create :ref:`command <struct-command>` is used to register a new conta
 The contact create command is a ``create`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
 
-The command must be contained in the ``<create>`` command class.
+The command must be contained in the ``<create>`` command type.
 
 .. index:: Ⓔcreate, Ⓔid, ⒺpostalInfo, Ⓔname, Ⓔorg, Ⓔaddr, Ⓔstreet,
    Ⓔcity, Ⓔsp, Ⓔpc, Ⓔcc, Ⓔvoice, Ⓔfax, Ⓔemail, ⒺauthInfo,
@@ -52,7 +52,7 @@ The ``<contact:create>`` element must declare the ``contact`` :doc:`namespace an
      as one of values: ``op`` (identity card number),
      ``passport`` (passport number),
      ``mpsv`` (number from the Ministry of Labour and Social Affairs),
-     ``ico`` (company number), ``birthday`` (birthday date),
+     ``ico`` (company number), ``birthday`` (the date of birth),
    * element content: an identification number as a :term:`contact:identValueT`,
 * ``<contact:notifyEmail>`` **(0..1)** – notification email address(es) as :term:`contact:emailUpdCommaListType`.
 

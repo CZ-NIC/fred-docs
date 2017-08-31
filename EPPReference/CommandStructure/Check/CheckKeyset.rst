@@ -11,7 +11,7 @@ the availability of one or more keyset handles.
 The keyset check command is a ``check`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
 
-The command must be contained in the ``<check>`` command class.
+The command must be contained in the ``<check>`` command type.
 
 .. index:: Ⓔcheck, Ⓔid
 

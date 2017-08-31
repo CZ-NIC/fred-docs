@@ -6,7 +6,7 @@ Introduction
 
 This is a reference manual for the EPP protocol as implemented by the FRED.
 
-The global XSD schema ``all-2.3.2`` was taken as the **baseline** for the reference.
+The global XSD schema ``all-2.3.2`` has been taken as the **baseline** for the reference.
 
 The manual describes protocol basics and the generic structure of messages
 in a nutshell (based on the main RFC standard), introduces registrable objects
@@ -49,6 +49,7 @@ if it is different from the default (attributes are optional), that is
 **(R)** if the attribute is required or **(P)** if the attribute is prohibited.
 
 Element and attribute names are also generated to the **index**
-under the Symbols section. They are prefixed either with an Ⓔ for elements
+`under the Symbols section <../../genindex.html#Symbols>`_.
+They are prefixed either with an Ⓔ for elements
 or with an ⓐ for attributes, so that they are distinguished
 from general index keys.

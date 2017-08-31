@@ -7,10 +7,10 @@ Create nsset
 
 A nsset create :ref:`command <struct-command>` is used to register a new nsset.
 
-The nsset create command is an ``create`` element in the ``nsset`` namespace
+The nsset create command is a ``create`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
 
-The command must be contained in the ``<create>`` command class.
+The command must be contained in the ``<create>`` command type.
 
 .. index:: Ⓔcreate, Ⓔid, Ⓔns, Ⓔname, Ⓔaddr, Ⓔtech,
    ⒺauthInfo, Ⓔreportlevel
@@ -18,7 +18,8 @@ The command must be contained in the ``<create>`` command class.
 Command element structure
 -------------------------
 
-The ``<nsset:create>`` element must declare the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
+The ``<nsset:create>`` element must declare the ``nsset`` :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
 
 * ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDCreateType`.
 * ``<nsset:ns>`` **(1..10)** – a nameserver given by:

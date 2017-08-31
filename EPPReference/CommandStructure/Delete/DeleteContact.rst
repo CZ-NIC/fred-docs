@@ -11,7 +11,7 @@ whose status allows it to be deleted.
 The contact delete command is a ``delete`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
 
-The command must be contained in the ``<delete>`` command class.
+The command must be contained in the ``<delete>`` command type.
 
 .. index:: Ⓔdelete, Ⓔid
 

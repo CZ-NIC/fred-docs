@@ -11,7 +11,7 @@ the availability of one or more domain names.
 The domain check command is a ``check`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
 
-The command must be contained in the ``<check>`` command class.
+The command must be contained in the ``<check>`` command type.
 
 .. index:: Ⓔcheck, Ⓔname
 

@@ -18,8 +18,8 @@ A new password is generated for the nsset by the server after a successful trans
 The nsset transfer command is a ``transfer`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
 
-The command must be contained in the ``<transfer>`` command class.
-The command class must specify the request operation (``@op = 'request'``).
+The command must be contained in the ``<transfer>`` command type.
+The command type must specify the request operation (``@op = 'request'``).
 
 .. index:: Ⓔtransfer, Ⓔid, ⒺauthInfo
 

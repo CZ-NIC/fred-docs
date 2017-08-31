@@ -10,7 +10,7 @@ A nsset update :ref:`command <struct-command>` is used to alter details of a nss
 The nsset update command is an ``update`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
 
-The command must be contained in the ``<update>`` command class.
+The command must be contained in the ``<update>`` command type.
 
 .. index:: Ⓔupdate, Ⓔid, Ⓔadd, Ⓔrem, Ⓔchg, Ⓔns, Ⓔname, Ⓔaddr, Ⓔtech,
    ⒺauthInfo, Ⓔreportlevel

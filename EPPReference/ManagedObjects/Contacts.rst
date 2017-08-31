@@ -4,16 +4,13 @@
 Contacts
 --------
 
-Contact information of a person or a company.
+A contact contains information which represents a person or a company.
 
 Namespace: \http://www.nic.cz/xml/epp/contact-1.6 |br|
 Schema: contact-1.6.2.xsd
 
 .. Note:: Contact mapping is based on the standard :rfc:`5733`
    but it is not entirely compliant.
-
-..
-   todo:: https://tools.ietf.org/html/rfc5733#section-2
 
 .. _mng-contact-attr:
 
@@ -23,70 +20,59 @@ Object attributes
 In addition to the :ref:`common attributes <common-attrs>`, contacts also have
 the following attributes:
 
-id
+``id``
    The contact handle. See :ref:`mngobj-handle-syntax`.
 
-postalInfo
+``postalInfo``
    Information for the purpose of ordinary mailing, consisting of:
 
-   name
+   ``name``
       The contact name. (personal or company)
 
-   org
+   ``org``
       The name of an organization.
 
-   addr
+   ``addr``
       The real-world contact address, consisting of:
 
-      street
+      ``street``
          1–3 street line(s).
 
-      city
+      ``city``
          City.
 
-      sp
+      ``sp``
          State or province.
 
-      pc
+      ``pc``
          Postal code.
 
-      cc
+      ``cc``
          Country code.
 
-voice
+``voice``
    Phone number.
 
-fax
+``fax``
    Fax number.
 
-email
-   Email address(es).
+``email``
+   A list of email addresses.
 
-notifyEmail
-   Notification email address(es).
+``notifyEmail``
+   A list of notification email addresses.
 
-vat
+``vat``
    VAT-payer identifier.
 
-ident
+``ident``
    Identity-document type and number. (A document that proves the contact's identity.)
 
-disclose
-   Disclosure preference for: addr, voice, fax, email, vat, ident, notifyEmail.
+``disclose``
+   Disclosure preference for: ``addr``, ``voice``, ``fax``, ``email``, ``vat``,
+   ``ident``, ``notifyEmail``.
 
    .. Note:: The contact handle, name and organization are always disclosed.
-
-.. top-level elements
-
-   * command TLE: ``<contact:check>``, ``<contact:create>``, ``<contact:delete>``,
-     ``<contact:info>``, ``<contact:transfer>``, ``<contact:update>``,
-     ``<contact:sendAuthInfo>``
-
-   * response data TLE: ``<contact:chkData>``, ``<contact:creData>``,
-     ``<contact:infData>``
-
-   * poll msg TLE: ``<contact:trnData>``, ``<contact:idleDelData>``,
-     ``<contact:updateData>``
 
 .. _mng-contact-stat:
 
@@ -122,3 +108,15 @@ For command-response mapping see a specific command syntax description:
 * :doc:`contact:transfer </EPPReference/CommandStructure/Transfer/TransferContact>`
 * :doc:`contact:update </EPPReference/CommandStructure/Update/UpdateContact>`
 * :doc:`contact:sendAuthInfo </EPPReference/CommandStructure/SendAuthInfo/SendAuthInfoContact>`
+
+.. top-level elements
+
+   * command TLE: ``<contact:check>``, ``<contact:create>``, ``<contact:delete>``,
+     ``<contact:info>``, ``<contact:transfer>``, ``<contact:update>``,
+     ``<contact:sendAuthInfo>``
+
+   * response data TLE: ``<contact:chkData>``, ``<contact:creData>``,
+     ``<contact:infData>``
+
+   * poll msg TLE: ``<contact:trnData>``, ``<contact:idleDelData>``,
+     ``<contact:updateData>``

@@ -10,14 +10,15 @@ A domain info :ref:`command <struct-command>` is used to view details of a domai
 The domain info command is an ``info`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
 
-The command must be contained in the ``<info>`` command class.
+The command must be contained in the ``<info>`` command type.
 
 .. index:: Ⓔinfo, Ⓔname
 
 Command element structure
 -------------------------
 
-The ``<domain:info>`` element must declare the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
+The ``<domain:info>`` element must declare the ``domain`` :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
 * ``<domain:name>`` **(1)**  – a domain name as :term:`eppcom:labelType`.
 
@@ -87,7 +88,7 @@ and it contains the following child elements:
 * ``<domain:admin>`` **(0..n)** – an administrative contact handle as :term:`fredcom:objIDType`,
 * ``<domain:nsset>`` **(0..1)** – the nsset handle as :term:`eppcom:labelType`,
 * ``<domain:keyset>`` **(0..1)** – the keyset handle as :term:`eppcom:labelType`,
-* ``<domain:clID>`` **(1)** – the designated registrar handle as :term:`eppcom:clIDType`,
+* ``<domain:clID>`` **(1)** – the designated registrar's handle as :term:`eppcom:clIDType`,
 * ``<domain:crID>`` **(0..1)** – the handle of the registrar who created this domain as :term:`eppcom:clIDType`,
 * ``<domain:crDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`,
 * ``<domain:upID>`` **(0..1)** – the handle of the registrar who was the last

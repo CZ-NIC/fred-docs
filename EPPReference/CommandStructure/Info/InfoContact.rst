@@ -10,16 +10,17 @@ A contact info :ref:`command <struct-command>` is used to view details of a cont
 The contact info command is an ``info`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
 
-The command must be contained in the ``<info>`` command class.
+The command must be contained in the ``<info>`` command type.
 
 .. index:: Ⓔinfo, Ⓔid
 
 Command element structure
 -------------------------
 
-The ``<contact:info>`` element must declare the ``contact`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
+The ``<contact:info>`` element must declare the ``contact`` :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
-* ``<contact:id>`` **(1)** the contact handle as :term:`fredcom:objIDType`.
+* ``<contact:id>`` **(1)** – the contact handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example
@@ -66,9 +67,9 @@ The response data element (``<resData>``) contains a single child element
 ``<contact:infData>``  which declares the ``contact`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
-* ``<contact:id>`` **(1)** the contact handle as :term:`fredcom:objIDType`,
-* ``<contact:roid>`` **(1)** the contact repository identifier as :term:`eppcom:roidType`,
 * ``<contact:status>`` **(0..10)** the :ref:`contact object state(s) <mng-contact-stat>`:
+* ``<contact:id>`` **(1)** – the contact handle as :term:`fredcom:objIDType`,
+* ``<contact:roid>`` **(1)** – the contact repository identifier as :term:`eppcom:roidType`,
    * ``@s`` **(R)** – state name as one of values:
       * ``ok``
       * ``linked``
@@ -96,7 +97,7 @@ and it contains the following child elements:
 * ``<contact:fax>`` **(0..1)** – the fax number as :term:`contact:e164StringType`,
 * ``<contact:email>`` **(0..1)** – a comma-separated list of email addresses as :term:`contact:emailCommaListType`,
 * ``<contact:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
-* ``<contact:clID>`` **(1)** – the designated registrar handle as :term:`eppcom:clIDType`,
+* ``<contact:clID>`` **(1)** – the designated registrar's handle as :term:`eppcom:clIDType`,
 * ``<contact:crID>`` **(1)** – the handle of the registrar who created this contact as :term:`eppcom:clIDType`,
 * ``<contact:crDate>`` **(1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`,
 * ``<contact:upID>`` **(0..1)** – the handle of the registrar who was the last to update this contact as :term:`eppcom:clIDType`,
@@ -116,7 +117,7 @@ and it contains the following child elements:
    * ``@type`` **(R)** – the type of the identity document as one of values:
      ``op`` (identity card number), ``passport`` (passport number),
      ``mpsv`` (number from the Ministry of Labour and Social Affairs),
-     ``ico`` (company number), ``birthday`` (birthday date),
+     ``ico`` (company number), ``birthday`` (the date of birth),
    * element content: the identification number as a :term:`contact:identValueT`,
 * ``<contact:notifyEmail>`` **(0..1)** – a comma-separated list of email addresses for notification as :term:`contact:emailCommaListType`.
 

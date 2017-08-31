@@ -4,16 +4,14 @@
 Domains
 -------
 
-Domain information representing a regular domain or an :term:`ENUM` domain.
+A domain contains information which represents a regular domain or
+an :term:`ENUM` domain.
 
 Namespace: \http://www.nic.cz/xml/epp/domain-1.4 |br|
 Schema: domain-1.4.2.xsd
 
 .. Note:: Domain name mapping is based on the standard :rfc:`5731`
    but it is not entirely compliant.
-
-..
-   todo:: https://tools.ietf.org/html/rfc5731#section-2
 
 .. _mng-domain-attr:
 
@@ -23,28 +21,28 @@ Object attributes
 In addition to the :ref:`common attributes <common-attrs>`, domains also have
 the following attributes:
 
-name
+``name``
    The domain name. See :ref:`mngobj-domain-syntax`.
 
-registrant
+``registrant``
    The :ref:`handle <mngobj-handle-syntax>` of the domain owner contact.
 
-admin
+``admin``
    The :ref:`handle <mngobj-handle-syntax>`\ (s) of zero or more administrative contact(s).
 
-nsset
+``nsset``
    The :ref:`handle <mngobj-handle-syntax>` of a nameserver set.
 
-keyset
+``keyset``
    The :ref:`handle <mngobj-handle-syntax>` of a DNSSEC-key set.
 
-exDate
+``exDate``
    The date of domain name expiration.
 
-valExDate :sup:`ENUM only`
+``valExDate`` :sup:`ENUM only`
    The date of the expiration of ENUM domain validation.
 
-publish :sup:`ENUM only` :sup:`+ DEPRECATED`
+``publish`` :sup:`ENUM only` :sup:`+ DEPRECATED`
    Flag of publishing an ENUM domain in a public ENUM directory.
 
    This attribute has currently no meaning for the server and it will be removed

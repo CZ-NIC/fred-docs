@@ -10,7 +10,7 @@ A contact update :ref:`command <struct-command>` is used to alter details of a c
 The contact update command is an ``update`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
 
-The command must be contained in the ``<update>`` command class.
+The command must be contained in the ``<update>`` command type.
 
 .. index:: Ⓔupdate, Ⓔid, Ⓔchg, ⒺpostalInfo, Ⓔname, Ⓔorg, Ⓔaddr, Ⓔstreet,
    Ⓔcity, Ⓔsp, Ⓔpc, Ⓔcc, Ⓔvoice, Ⓔfax, Ⓔemail, ⒺauthInfo,
@@ -57,7 +57,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
         as one of values: ``op`` (identity card number),
         ``passport`` (passport number),
         ``mpsv`` (number from the Ministry of Labour and Social Affairs),
-        ``ico`` (company number), ``birthday`` (birthday date),
+        ``ico`` (company number), ``birthday`` (the date of birth),
       * element content: an identification number as a :term:`contact:identValueT`,
    * ``<contact:notifyEmail>`` **(0..1)** – change notification email as :term:`contact:emailUpdCommaListType`.
 

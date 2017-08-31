@@ -32,8 +32,8 @@ The ``<login>`` element contains the following child elements:
    * ``<version>`` **(1)** – the protocol version to be used;
      this must be ``1.0``,
    * ``<lang>`` **(1)** – the response-text language to be used;
-     this must be one of the values that are announced in the greeting
-     (typically ``en`` or ``cs``),
+     this must be one of the values that are announced in :doc:`the greeting
+     </EPPReference/ProtocolBasics/ServiceDiscovery>` (usually ``en`` or ``cs``),
 
 * ``<svcs>`` **(1)** – list of services to be used during the session – declare
   the schemas for all the objects that will be manipulated during the session:

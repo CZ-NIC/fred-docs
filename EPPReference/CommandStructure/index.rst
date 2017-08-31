@@ -49,8 +49,8 @@ the responses mapped to these commands.
    Poll/index
    Create/index
    Update/index
-   Delete/index
    Transfer/index
+   Delete/index
    RenewDomain
    CreditInfo
    SendAuthInfo/index

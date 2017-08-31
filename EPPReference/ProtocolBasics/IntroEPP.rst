@@ -22,9 +22,9 @@ EPP has the following basic service aspects:
 **Service discovery** allows a client to be aware of managed objects,
 supported services, extensions and policy of the EPP server.
 
-**Commands** are used by a client either to establish and to end a session,
-or to request standard operations over objects managed in the Registry
-to which the server replies with coordinated
+**Commands** are used by a client either to establish and to end a session
+or to request standard operations over objects managed in the Registry.
+The server replies to the commands with coordinated
 **responses**, each containing the result of the requested operation.
 
 The **extension framework** allows the protocol to be extended on several levels:
@@ -46,8 +46,8 @@ Protocol characteristics
   about each client.)
 * All comunication is initiated by a client. (The server does not send anything
   to a client unless it was requested by the client.)
-* The server responds to client-initiated communication (which
-  can be either a TCP connection request or an EPP service
+* The server responds to a communication-initiating request made by a client
+  (which can be either a TCP connection request or an EPP service
   discovery request (``hello``)) by returning a ``greeting`` to the client.
 * The server responds to each EPP command with a coordinated response
   that describes the results of processing the command. (See also
@@ -68,16 +68,20 @@ Protocol characteristics
 Normal communication
 --------------------
 
-Normal communication between a client and the EPP server will be:
+Normal communication between a client and the EPP server is:
 
-* Client connects to server over TCP+TLS.
-* Server identifies itself and the commands and extensions that it supports.
+* The client connects to the server over TCP+TLS.
+* The server identifies itself and the commands and extensions that it supports.
   (Sends the ``greeting``.)
-* Client logs in by supplying login name, password and session options.
-* Client issues commands to server, which replies immediately with a result.
-* Client then idles until it has more commands to send, querying periodically
-  for poll notifications.
-* Client logs out (or times out).
+* The client logs in by supplying login name, password and session options.
+* The server establishes a session and confirms the login.
+* The client issues commands to the server, which replies immediately with a result.
+* The client then idles until it has more commands to send, querying periodically
+  for :doc:`poll notifications </EPPReference/CommandStructure/Poll/index>`.
+* The client logs out (or times out).
+* The server terminates the session and confirms the logout.
+* If a session has not been established for a client, the server rejects
+  all commands from the client (except for the login).
 
 .. _fig-epp-conversation:
 
@@ -98,9 +102,12 @@ Use of the extension framework in FRED EPP
    * XPath location: ``/epp/extension/*:*``
 * :doc:`object-level extensions <../ManagedObjects/index>`
    * define custom managed objects (attributes, command-response mapping)
-   * XPath locations: ``/epp/command/{std-cmd}/{object}:{std-cmd}`` and
-     ``/epp/extension/fred:extcommand/fred:{ext-cmd}/{object}:{ext-cmd}``
+   * XPath locations:
+      * :samp:`/epp/command/{std-cmd}/{object}:{std-cmd}` where ``std-cmd`` can
+        be any standard command, and
+      * :samp:`/epp/extension/fred:extcommand/fred:{ext-cmd}/{object}:{ext-cmd}`
+        where ``ext-cmd`` can be any protocol-extension command
 * command/response-level extensions
    * define command-response mapping for additional attributes that extend some managed objects
-   * :ref:`command extensions <command-ext>` – XPath location: ``/epp/command[{std-cmd}]/extension/*:*`` where std-cmd can be any standard command
-   * :ref:`response extensions <response-ext>` – XPath location: ``/epp/response[result]/extension/*:*``
+   * :ref:`command extensions <command-ext>` – XPath location: :samp:`/epp/command[{std-cmd}]/extension/*:*` where ``std-cmd`` can be any standard command
+   * :ref:`response extensions <response-ext>` – XPath location: :samp:`/epp/response[result]/extension/*:*`

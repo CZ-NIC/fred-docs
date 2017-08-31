@@ -14,7 +14,7 @@ The server also replies with a *greeting* when a TCP connection is initiated.
 Hello element structure
 -----------------------
 
-The ``<hello/>`` element is a child of ``<epp>`` and defined in the standard
+The ``<hello/>`` element is a child of ``<epp>`` and is defined in the standard
 EPP namespace.
 
 The element must not contain any child elements nor attributes.
@@ -41,7 +41,7 @@ The element must not contain any child elements nor attributes.
 Greeting element structure
 --------------------------
 
-The ``<greeting>`` element is a child of ``<epp>`` and defined in the standard
+The ``<greeting>`` element is a child of ``<epp>`` and is defined in the standard
 EPP namespace.
 
 It contains the following child elements:

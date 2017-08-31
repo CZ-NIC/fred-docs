@@ -10,15 +10,16 @@ The FRED EPP extends the protocol in such way that the ``<extension>`` element
 *if used*, must contain only a single child:
 
 * ``<fred:extcommand>`` **(1)** – container for extending commands which must declare
-  the FRED :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and can contain **one of** the custom commands:
+  the FRED :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
+  and can contain **one of** the custom commands:
 
-   * ``<fred:creditInfo/>`` – request information about the credit of the
+   * ``<fred:creditInfo/>`` – requests information about the credit of the
      current client (object-independent command), see :doc:`../CommandStructure/CreditInfo`,
-   * ``<fred:sendAuthInfo>`` – request a transfer password of an object
-     (custom command class for object-related commands),
+   * ``<fred:sendAuthInfo>`` – requests a transfer password of an object
+     (custom command type for object-related commands),
      see :doc:`../CommandStructure/SendAuthInfo/index`,
-   * ``<fred:test>`` – request a technical check
-     (custom command class for object-related commands),
+   * ``<fred:test>`` – requests a technical check
+     (custom command type for object-related commands),
      see :doc:`../CommandStructure/TestNsset`,
    * or one of the listing commands (object-independent), e.g. ``<fred:listDomains/>``,
      for the complete reference of listing commands see :doc:`../CommandStructure/List/index`.
@@ -56,5 +57,5 @@ The FRED EPP extends the protocol in such way that the ``<extension>`` element
 
    </epp>
 
-The examples of responses are illustrated for each specific command with its
+Examples of responses are illustrated for each specific command with its
 structure description in further chapters.

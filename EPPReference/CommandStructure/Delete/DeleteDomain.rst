@@ -11,7 +11,7 @@ whose status allows it to be deleted.
 The domain delete command is a ``delete`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
 
-The command must be contained in the ``<delete>`` command class.
+The command must be contained in the ``<delete>`` command type.
 
 .. index:: Ⓔdelete, Ⓔname
 

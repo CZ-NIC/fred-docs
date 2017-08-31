@@ -4,15 +4,19 @@
 Listing
 ===============
 
-.. todo:: This segment still has to undergo a review by a SME (fact-checking and proof-reading).
-
 Commands for object listing.
 
-Object listing is done in two steps that are performed separately in this order:
+Object listing is done in two steps which are performed separately in this order:
 
-#. Request for the listing of objects – objects are selected and prepared
+#. Prepare a list – objects are selected and prepared
    on the server, the client receives only the count of prepared objects,
-#. Get results – handles of the prepared objects are delivered to the client.
+#. Get results – a chunk of handles of the prepared objects is delivered to the client.
+   This command must be repeated to retrieve the remaining chunks
+   until it returns an empty results list.
+
+The list of objects remaining on the server is retained between sessions.
+
+Calling another list preparation resets the list of unretrieved results on the server!
 
 ..
    Simple commands: ``<fred:listDomains/>``, ``<fred:listContacts/>``, ``<fred:listNssets/>``,
@@ -23,7 +27,6 @@ Object listing is done in two steps that are performed separately in this order:
    ``<fred:keysetsByContact>``, ``<fred:nssetsByNs>``
 
 .. toctree::
-   :maxdepth: 1
 
    Prepare
    GetResults

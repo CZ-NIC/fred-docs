@@ -4,8 +4,10 @@
 Get the results
 ===============
 
-This command is used to retrieve the list of objects
-that was prepared in the previous step with a :doc:`list command <Prepare>`.
+This command is used to retrieve a chunk of the results
+that were prepared in a previous step with a :doc:`list command <Prepare>`.
+The command must be called repeatedly to collect all results until the returned
+results list is empty.
 
 The command is a ``getResults`` element in the ``fred`` namespace
 (``http://www.nic.cz/xml/epp/fred-1.5``).

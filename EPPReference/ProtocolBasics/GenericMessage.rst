@@ -38,7 +38,8 @@ All messages must begin with an **XML prolog** to:
 After the prolog, the **root element** follows and identifies the protocol and
 its version. This is always ``<epp>`` in the standard base EPP namespace
 (``urn:ietf:params:xml:ns:epp-1.0``) which must be declared at the ``<epp>``
-element together with the base EPP schema to allow message validation.
+element. See also :doc:`/EPPReference/SchemasNamespaces/index` on how to enable
+client-side XML validation.
 
 .. code-block:: xml
    :caption: Example of the root element
@@ -54,7 +55,8 @@ element together with the base EPP schema to allow message validation.
    </epp>
 
 .. Note:: It is customary in the FRED and in the examples of this publication
-   to declare this namespace as the default namespace, that is without a prefix.
+   to declare this namespace as the default namespace (the one which does not
+   have a prefix).
 
    A namespace can be used for the element, at which it was declared,
    and all its descendants and their attributes.

@@ -4,21 +4,10 @@
 Nssets
 ------
 
-Information representing a set of name servers.
+A nsset contains information which represents a set of name servers.
 
 Namespace: \http://www.nic.cz/xml/epp/nsset-1.2 |br|
 Schema: nsset-1.2.2.xsd
-
-.. top-level elements
-
-   * command TLE: ``<nsset:check>``, ``<nsset:create>``, ``<nsset:delete>``,
-     ``<nsset:info>``, ``<nsset:transfer>``, ``<nsset:update>``,
-     ``<nsset:sendAuthInfo>``, ``<nsset:test>``
-
-   * response data TLE: ``<nsset:chkData>``, ``<nsset:creData>``, ``<nsset:infData>``
-
-   * poll msg TLE: ``<nsset:trnData>``, ``<nsset:idleDelData>``,
-     ``<nsset:updateData>``, ``<nsset:testData>``
 
 .. _mng-nsset-attr:
 
@@ -28,16 +17,16 @@ Object attributes
 In addition to the :ref:`common attributes <common-attrs>`, nssets also have
 the following attributes:
 
-id
+``id``
    The nsset handle. See :ref:`mngobj-handle-syntax`.
 
-ns
+``ns``
    The 2–10 name servers, consisting of:
 
-   name
+   ``name``
       Name-server hostname. See :ref:`mngobj-domain-syntax`.
 
-   addr
+   ``addr``
       Name-server IP address(es). (Glue.)
 
       At least one IP address must be present if and only if the hostname is in the generated zone.
@@ -45,7 +34,7 @@ ns
       Both IPv4 and IPv6 are allowed, accepted in textual representation:
 
       * The syntax of an IPv4 address:
-        Four decimal integers (0–255) separated by periods, leading zeroes are optional.
+        Four decimal integers 0–255 separated by periods, leading zeroes are optional.
 
       * The syntax of an IPv6 address is described in :rfc:`4291#section-2.2`.
 
@@ -53,12 +42,12 @@ ns
       See the *Prohibited networks* section in `IANA's Technical requirements
       for authoritative name servers <https://www.iana.org/help/nameserver-requirements>`_.
 
-tech
+``tech``
    The :ref:`handle <mngobj-handle-syntax>`\ (s) of 1–10 technical contact(s).
 
-reportlevel
+``reportlevel``
    The highest level of technical tests to be performed and reported.
-   A higher number is more detail, zero means no tests.
+   A higher number means more detail, zero means no tests.
 
 .. _mng-nsset-stat:
 
@@ -89,3 +78,14 @@ For command-response mapping see a specific command syntax description:
 * :doc:`nsset:update </EPPReference/CommandStructure/Update/UpdateNsset>`
 * :doc:`nsset:test </EPPReference/CommandStructure/TestNsset>`
 * :doc:`nsset:sendAuthInfo </EPPReference/CommandStructure/SendAuthInfo/SendAuthInfoNsset>`
+
+.. top-level elements
+
+   * command TLE: ``<nsset:check>``, ``<nsset:create>``, ``<nsset:delete>``,
+     ``<nsset:info>``, ``<nsset:transfer>``, ``<nsset:update>``,
+     ``<nsset:sendAuthInfo>``, ``<nsset:test>``
+
+   * response data TLE: ``<nsset:chkData>``, ``<nsset:creData>``, ``<nsset:infData>``
+
+   * poll msg TLE: ``<nsset:trnData>``, ``<nsset:idleDelData>``,
+     ``<nsset:updateData>``, ``<nsset:testData>``

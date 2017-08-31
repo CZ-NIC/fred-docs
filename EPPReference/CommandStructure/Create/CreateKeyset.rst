@@ -7,10 +7,10 @@ Create keyset
 
 A keyset create :ref:`command <struct-command>` is used to register a new keyset.
 
-The keyset create command is an ``create`` element in the ``keyset`` namespace
+The keyset create command is a ``create`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
 
-The command must be contained in the ``<create>`` command class.
+The command must be contained in the ``<create>`` command type.
 
 .. index:: Ⓔcreate, Ⓔid, Ⓔdnskey, Ⓔflags, Ⓔprotocol,
    Ⓔalg, ⒺpubKey, Ⓔtech, ⒺauthInfo
@@ -18,11 +18,13 @@ The command must be contained in the ``<create>`` command class.
 Command element structure
 -------------------------
 
-The ``<keyset:create>`` element must declare the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
+The ``<keyset:create>`` element must declare the ``keyset`` :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
 
 * ``<keyset:id>`` **(1)** – the keyset handle as :term:`fredcom:objIDCreateType`.
 * ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
   for allowed values <mng-keyset-attr>`) given by:
+
    * ``<keyset:flags>`` **(1)** – flags as :term:`xs:unsignedShort`,
    * ``<keyset:protocol>`` **(1)** – protocol as :term:`xs:unsignedByte`,
    * ``<keyset:alg>`` **(1)** – algorithm as :term:`xs:unsignedByte`,

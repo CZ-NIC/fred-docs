@@ -11,7 +11,7 @@ the availability of one or more nsset handles.
 The nsset check command is a ``check`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
 
-The command must be contained in the ``<check>`` command class.
+The command must be contained in the ``<check>`` command type.
 
 .. index:: Ⓔcheck, Ⓔid
 

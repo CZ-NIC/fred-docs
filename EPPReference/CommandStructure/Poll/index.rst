@@ -11,7 +11,7 @@ The relevant events are mostly those that are not triggered by the client,
 such as time-based events (expiration, deletion of idle objects),
 asynchronous responses (technical check results),
 events that are triggered by other registrars (transfer)
-or by the Registry itself (consequences of merging contacts).
+or by the Registry itself (consequences of contacts' merger).
 
 The workflow is following:
 
@@ -21,7 +21,7 @@ The workflow is following:
    (the message count), includes contents of the first (oldest) message
    and provides its identifier for acknowledgement.
 
-#. Then the client is supposed to confirm the receipt of this message by issuing
+#. The client is supposed to confirm the receipt of this message by issuing
    a poll acknowledgement with the identifier of the read message.
 
 #. The server removes the acknowledged message from the message queue and responds

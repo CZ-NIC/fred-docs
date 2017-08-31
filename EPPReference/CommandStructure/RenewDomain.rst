@@ -12,7 +12,7 @@ the registration of a domain name.
 The domain renew command is a ``renew`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
 
-The command must be contained in the ``<renew>`` command class.
+The command must be contained in the ``<renew>`` command type.
 
 .. index:: Ⓔrenew, Ⓔname, ⒺcurExpDate, Ⓔperiod, ⓐunit
 
@@ -140,7 +140,7 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the standard result, response data and transaction identification.
+the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 

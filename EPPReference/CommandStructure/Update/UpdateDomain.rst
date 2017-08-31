@@ -9,7 +9,7 @@ A domain update :ref:`command <struct-command>` is used to alter details of a do
 The domain update command is an ``update`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
 
-The command must be contained in the ``<update>`` command class.
+The command must be contained in the ``<update>`` command type.
 
 .. index:: Ⓔupdate, Ⓔname, Ⓔadd, Ⓔrem, Ⓔchg, Ⓔadmin, Ⓔtempcontact, Ⓔnsset,
    Ⓔkeyset, Ⓔregistrant, ⒺauthInfo

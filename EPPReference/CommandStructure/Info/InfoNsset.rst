@@ -10,16 +10,17 @@ A nsset info :ref:`command <struct-command>` is used to view details of a nsset.
 The nsset info command is an ``info`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
 
-The command must be contained in the ``<info>`` command class.
+The command must be contained in the ``<info>`` command type.
 
 .. index:: Ⓔinfo, Ⓔid
 
 Command element structure
 -------------------------
 
-The ``<nsset:check>`` element must declare the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
+The ``<nsset:info>`` element must declare the ``nsset`` :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
-* ``<nsset:id>`` **(1..n)**  – a nsset handle as :term:`fredcom:objIDType`.
+* ``<nsset:id>`` **(1)**  – a nsset handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example
@@ -63,9 +64,9 @@ The response data element (``<resData>``) contains a single child element
 ``<nsset:infData>``  which declares the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
-* ``<nsset:id>`` **(1)** the nsset handle as :term:`fredcom:objIDType`,
-* ``<nsset:roid>`` **(1)** the nsset repository identifier as :term:`eppcom:roidType`,
 * ``<nsset:status>`` **(0..6)** the :ref:`nsset object state(s) <mng-nsset-stat>`:
+* ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDType`,
+* ``<nsset:roid>`` **(1)** – the nsset repository identifier as :term:`eppcom:roidType`,
    * ``@s`` **(R)** – the state name as one of values:
       * ``ok``
       * ``linked``
@@ -75,7 +76,7 @@ and it contains the following child elements:
       * ``deleteCandidate``
    * ``@lang`` – the language of the state description as a :term:`xs:language` (default: ``en``),
    * element content: the state description as a :term:`xs:normalizedString`,
-* ``<nsset:clID>`` **(1)** – the designated registrar handle as :term:`eppcom:clIDType`,
+* ``<nsset:clID>`` **(1)** – the designated registrar's handle as :term:`eppcom:clIDType`,
 * ``<nsset:crID>`` **(0..1)** – the handle of the registrar who created this nsset as :term:`eppcom:clIDType`,
 * ``<nsset:crDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`,
 * ``<nsset:upID>`` **(0..1)** – the handle of the registrar who was the last to update this nsset as :term:`eppcom:clIDType`,

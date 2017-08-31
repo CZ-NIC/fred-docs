@@ -10,16 +10,17 @@ A keyset info :ref:`command <struct-command>` is used to view details of a keyse
 The keyset info command is an ``info`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
 
-The command must be contained in the ``<info>`` command class.
+The command must be contained in the ``<info>`` command type.
 
 .. index:: Ⓔinfo, Ⓔid
 
 Command element structure
 -------------------------
 
-The ``<keyset:check>`` element must declare the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
+The ``<keyset:info>`` element must declare the ``keyset`` :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
-* ``<keyset:id>`` **(1..n)**  – a keyset handle as :term:`fredcom:objIDType`.
+* ``<keyset:id>`` **(1)**  – a keyset handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example
@@ -63,9 +64,9 @@ The response data element (``<resData>``) contains a single child element
 ``<keyset:infData>``  which declares the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
-* ``<keyset:id>`` **(1)** the keyset handle as :term:`fredcom:objIDType`,
-* ``<keyset:roid>`` **(1)** the keyset repository identifier as :term:`eppcom:roidType`,
 * ``<keyset:status>`` **(0..6)** the :ref:`keyset object state(s) <mng-keyset-stat>`:
+* ``<keyset:id>`` **(1)** – the keyset handle as :term:`fredcom:objIDType`,
+* ``<keyset:roid>`` **(1)** – the keyset repository identifier as :term:`eppcom:roidType`,
    * ``@s`` **(R)** – the state name as one of values:
       * ``ok``
       * ``linked``
@@ -75,7 +76,7 @@ and it contains the following child elements:
       * ``deleteCandidate``
    * ``@lang`` – the language of the state description as a :term:`xs:language` (default: ``en``),
    * element content: the state description as a :term:`xs:normalizedString`,
-* ``<keyset:clID>`` **(1)** – the designated registrar handle as :term:`eppcom:clIDType`,
+* ``<keyset:clID>`` **(1)** – the designated registrar's handle as :term:`eppcom:clIDType`,
 * ``<keyset:crID>`` **(0..1)** – the handle of the registrar who created this keyset as :term:`eppcom:clIDType`,
 * ``<keyset:crDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`,
 * ``<keyset:upID>`` **(0..1)** – the handle of the registrar who was the last to update this keyset as :term:`eppcom:clIDType`,
@@ -84,10 +85,12 @@ and it contains the following child elements:
 * ``<keyset:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
 * ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
   for allowed values <mng-keyset-attr>`) given by:
+
    * ``<keyset:flags>`` **(1)** – flags as :term:`xs:unsignedShort`,
    * ``<keyset:protocol>`` **(1)** – protocol as :term:`xs:unsignedByte`,
    * ``<keyset:alg>`` **(1)** – algorithm as :term:`xs:unsignedByte`,
    * ``<keyset:pubKey>`` **(1)** – public key as :term:`keyset:keyT`,
+
 * ``<keyset:tech>`` **(1..n)** – a technical contact handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml

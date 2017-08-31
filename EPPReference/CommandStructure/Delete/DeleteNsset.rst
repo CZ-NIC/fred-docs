@@ -11,7 +11,7 @@ whose status allows it to be deleted.
 The nsset delete command is a ``delete`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
 
-The command must be contained in the ``<delete>`` command class.
+The command must be contained in the ``<delete>`` command type.
 
 .. index:: Ⓔdelete, Ⓔid
 

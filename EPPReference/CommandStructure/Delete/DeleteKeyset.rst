@@ -11,7 +11,7 @@ whose status allows it to be deleted.
 The keyset delete command is a ``delete`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
 
-The command must be contained in the ``<delete>`` command class.
+The command must be contained in the ``<delete>`` command type.
 
 .. index:: Ⓔdelete, Ⓔid
 
