@@ -1,6 +1,6 @@
 
 .. index::
-   pair: transfer, process
+   pair: transfer; process
 
 Object transfer
 ===============
