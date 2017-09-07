@@ -6,10 +6,10 @@
 Renew domain
 ============
 
-A domain renew :ref:`command <struct-command>` is used to prolong
-the registration of a domain name.
+A domain renew :ref:`command <struct-command>` is used to prolong
+the registration of a domain name.
 
-The domain renew command is a ``renew`` element in the ``domain`` namespace
+The domain renew command is a ``renew`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
 
 The command must be contained in the ``<renew>`` command type.
@@ -30,7 +30,7 @@ The ``<domain:renew>`` element must declare the ``domain`` :doc:`namespace and s
    * ``@unit`` **(R)**  – the unit in which the period is counted; it can be
      either ``m`` for months or ``y`` for years.
 
-  .. Note:: The prolongation period must be a multiple of the allowed step
+  .. Note:: The prolongation period must be a multiple of the allowed step
      and it must be in the allowed range for prolongation in the zone according
      to the registration rules of the Registry.
 
@@ -74,17 +74,17 @@ of an ENUM domain together with prolongation of expiration. If you need
 to change the validation independently, use the
 :doc:`domain:update <Update/UpdateDomain>` command.
 
-The command's ``<extension>`` element must contain a **single** ``<enumval:renew>``
+The command's ``<extension>`` element must contain a **single** ``<enumval:renew>``
 element which declares the ``enumval`` namespace (``http://www.nic.cz/xml/epp/enumval-1.2``)
 and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 
-* ``<enumval:valExDate>`` **(0..1)**  – a new validation expiration date as :term:`xs:date`,
+* ``<enumval:valExDate>`` **(0..1)**  – a new validation expiration date as :term:`xs:date`,
 
   .. _new-valexdate:
 
   .. Note::
 
-     Before the actual validation expiration date, there is a period of time
+     Before the actual validation expiration date, there is a period of time
      which allows to prolong the validation relatively to the old validation
      expiration date and thus seemingly exceed the allowed maximum for validation.
      This period is called the "continuation window"
@@ -100,8 +100,8 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
      * otherwise the ``new valExDate`` can range from ``tomorrow``
        to ``today + validation period`` (inclusive).
 
-* ``<enumval:publish>`` **(0..1)** – a new setting for publishing the ENUM
-  domain in a public directory as :term:`xs:boolean`;
+* ``<enumval:publish>`` **(0..1)** – a new setting for publishing the ENUM
+  domain in a public directory as :term:`xs:boolean`;
   ``true`` – display, ``false`` – hide.
 
 .. code-block:: xml
@@ -144,7 +144,7 @@ the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<domain:renData>`` which declares the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 

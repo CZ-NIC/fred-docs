@@ -5,10 +5,10 @@
 Check contact
 =============
 
-A contact check :ref:`command <struct-command>` is used to check
+A contact check :ref:`command <struct-command>` is used to check
 the availability of one or more contact handles.
 
-The contact check command is a ``check`` element in the ``contact`` namespace
+The contact check command is a ``check`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
 
 The command must be contained in the ``<check>`` command type.
@@ -20,7 +20,7 @@ Command element structure
 
 The ``<contact:check>`` element must declare the ``contact`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
-* ``<contact:id>`` **(1..n)** – a contact handle as :term:`fredcom:objIDType`.
+* ``<contact:id>`` **(1..n)** – a contact handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example
@@ -56,11 +56,11 @@ the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<contact:chkData>``  which declares the ``contact`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
-* ``<contact:cd>`` **(1..n)** – the check resolution of a single contact handle:
+* ``<contact:cd>`` **(1..n)** – the check resolution of a single contact handle:
 
    * ``<contact:id>`` **(1)** – the contact handle as :term:`fredcom:objIDType`,
 

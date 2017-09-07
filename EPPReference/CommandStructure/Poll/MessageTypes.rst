@@ -16,7 +16,7 @@ Poll message types
    * keysets: ``<keyset:trnData>``, ``<keyset:idleDelData>``, ``<keyset:updateData>``
 
 .. Note:: The content of messages is not processed for validity,
-   the markup has a formatting purpose.
+   the markup has a formatting purpose.
 
 .. contents::
    :local:
@@ -41,7 +41,7 @@ and contains:
    * ``<fred:credit>`` **(1)** – current client's credit as :term:`fred:amountType`.
 
 .. code-block:: xml
-   :caption: Example of a notification of low credit
+   :caption: Example of a notification of low credit
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -100,7 +100,7 @@ that exceed the limit.
   that the client will be billed as :term:`fred:amountType`.
 
 .. code-block:: xml
-   :caption: Example of a notification of request usage
+   :caption: Example of a notification of request usage
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -144,7 +144,7 @@ that have the same content but are issued on different **events**:
 * ``<domain:delData>`` – the domain has been deleted (by default 61 days
   after expiration or deleted by the Registry for another reason).
 
-Only one of these elements can occur in a single poll message.
+Only one of these elements can occur in a single poll message.
 
 All of these elements declare the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contain the following child elements:
@@ -155,7 +155,7 @@ and contain the following child elements:
   as :term:`xs:date`.
 
 .. code-block:: xml
-   :caption: Example of a notification of impending domain expiration
+   :caption: Example of a notification of impending domain expiration
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -194,7 +194,7 @@ Notifications concerning the validation of ENUM domains for **events**:
 * ``<enumval:valExpData>`` – domain's validation has expired (on the day
   of validation expiration).
 
-Only one of these elements can occur in a single poll message.
+Only one of these elements can occur in a single poll message.
 
 Both of these elements declare the ``enumval`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contain the same child elements:
@@ -205,7 +205,7 @@ and contain the same child elements:
   as :term:`xs:date`.
 
 .. code-block:: xml
-   :caption: Example of a notification of ENUM validation expiration
+   :caption: Example of a notification of ENUM validation expiration
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -244,7 +244,7 @@ Object transfer
 and contains:
 
 * an object identifier **(1)** which is **one of**:
-   * ``<domain:name>`` – a domain name as :term:`eppcom:labelType`,
+   * ``<domain:name>`` – a domain name as :term:`eppcom:labelType`,
    * ``<*:id>`` – an object handle as :term:`fredcom:objIDType` (for objects
      other than domains),
 * ``<*:trDate>`` **(1)** – the date of the transfer as :term:`xs:dateTime`,
@@ -255,7 +255,7 @@ This message type appears in all 4 object namespaces: ``domain``, ``contact``,
 ``nsset``, ``keyset``.
 
 .. code-block:: xml
-   :caption: Example of a transfer notification
+   :caption: Example of a transfer notification
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -288,7 +288,7 @@ This message type appears in all 4 object namespaces: ``domain``, ``contact``,
 Object update
 ---------------
 
-**Event:** An object has been updated (in consequence of a server-side operation).
+**Event:** An object has been updated (in consequence of a server-side operation).
 
 ``<*:updateData>`` **(1)** declares the object :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contains:
@@ -309,7 +309,7 @@ This message type appears in the following object namespaces: ``domain``,
 ``nsset``, ``keyset``.
 
 .. code-block:: xml
-   :caption: Example of a notification of an updated object
+   :caption: Example of a notification of an updated object
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -388,7 +388,7 @@ This message type appears in the following object namespaces: ``domain``,
 Idle object deletion
 --------------------
 
-**Event:** An object has been deleted because it had not been used for a long time.
+**Event:** An object has been deleted because it had not been used for a long time.
 
 ``<*:idleDelData>`` **(1)** declares the object :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contains:
@@ -399,7 +399,7 @@ This message type appears in the following object namespaces: ``contact``,
 ``nsset``, ``keyset``.
 
 .. code-block:: xml
-   :caption: Example of a notification of a deleted idle object
+   :caption: Example of a notification of a deleted idle object
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -433,7 +433,7 @@ This message type appears in the following object namespaces: ``contact``,
 Technical check results
 -----------------------
 
-**Event:** A technical check that the client had requested, has finished.
+**Event:** A technical check that the client had requested, has finished.
 
 ``<nsset:testData>`` **(1)** declares the ``nsset`` :doc:`namespace and schema
 </EPPReference/SchemasNamespaces/index>`, and contains:
@@ -442,9 +442,9 @@ Technical check results
      as :term:`nsset:trIDStringType`, // probably unused
 
 * ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDType`,
-* ``<nsset:name>`` **(0..n)** – a listing of additional domain names that have
+* ``<nsset:name>`` **(0..n)** – a listing of additional domain names that have
   been tested with the nsset as :term:`eppcom:labelType`,
-* ``<nsset:result>`` **(0..n)** – the result of a single test:
+* ``<nsset:result>`` **(0..n)** – the result of a single test:
    * ``<nsset:testname>`` **(1)** – the name of the test as :term:`eppcom:labelType`,
    * ``<nsset:status>`` **(1)** – success of the test as :term:`xs:boolean`:
      ``true`` – passed, ``false`` – failed,
@@ -452,7 +452,7 @@ Technical check results
      from the test implementation as :term:`xs:string`.
 
 .. code-block:: xml
-   :caption: Example of a notification with the results of a technical check
+   :caption: Example of a notification with the results of a technical check
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

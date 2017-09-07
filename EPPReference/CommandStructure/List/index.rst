@@ -8,9 +8,9 @@ Commands for object listing.
 
 Object listing is done in two steps which are performed separately in this order:
 
-#. Prepare a list – objects are selected and prepared
+#. Prepare a list – objects are selected and prepared
    on the server, the client receives only the count of prepared objects,
-#. Get results – a chunk of handles of the prepared objects is delivered to the client.
+#. Get results – a chunk of handles of the prepared objects is delivered to the client.
    This command must be repeated to retrieve the remaining chunks
    until it returns an empty results list.
 

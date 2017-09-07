@@ -4,7 +4,7 @@
 Update domain
 =============
 
-A domain update :ref:`command <struct-command>` is used to alter details of a domain.
+A domain update :ref:`command <struct-command>` is used to alter details of a domain.
 
 The domain update command is an ``update`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
@@ -21,14 +21,14 @@ The ``<domain:update>`` element must declare the ``domain`` namespace
 and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
 * ``<domain:name>`` **(1)** – the domain name as :term:`eppcom:labelType`,
-* ``<domain:add>`` **(0..1)** – a list of contact handles that will
+* ``<domain:add>`` **(0..1)** – a list of contact handles that will
   be added to the list of administration contacts of this domain:
 
-   * ``<domain:admin>`` **(0..n)** – a contact handle as :term:`fredcom:objIDType`,
-* ``<domain:rem>`` **(0..1)** – a list of contact handles that will
+   * ``<domain:admin>`` **(0..n)** – a contact handle as :term:`fredcom:objIDType`,
+* ``<domain:rem>`` **(0..1)** – a list of contact handles that will
   be removed from the list of administration contacts of this domain:
 
-   * ``<domain:admin>`` **(0..n)** – a contact handle as :term:`fredcom:objIDType`,
+   * ``<domain:admin>`` **(0..n)** – a contact handle as :term:`fredcom:objIDType`,
 * ``<domain:chg>`` **(0..1)** – the new values of domain attributes
   that will be changed by this update. Omitted attributes will remain unchanged.
 
@@ -84,15 +84,15 @@ The ``<domain:update>`` element is used in the same way as described above.
 The :ref:`command extension <command-ext>` can be used to change the validation
 of an ENUM domain and/or its publish flag.
 
-The command's ``<extension>`` element must contain a **single** ``<enumval:update>``
+The command's ``<extension>`` element must contain a **single** ``<enumval:update>``
 element which declares the ``enumval`` namespace (``http://www.nic.cz/xml/epp/enumval-1.2``)
 and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 
-* ``<enumval:valExDate>`` **(0..1)**  – a new validation expiration date as :term:`xs:date`;
+* ``<enumval:valExDate>`` **(0..1)**  – a new validation expiration date as :term:`xs:date`;
   the new date must be within range – see :ref:`the explanation in RenewDomain <new-valexdate>`,
 
-* ``<enumval:publish>`` **(0..1)** – a new setting for publishing the ENUM
-  domain in a public directory as :term:`xs:boolean`; ``true`` – display, ``false`` – hide.
+* ``<enumval:publish>`` **(0..1)** – a new setting for publishing the ENUM
+  domain in a public directory as :term:`xs:boolean`; ``true`` – display, ``false`` – hide.
 
 .. code-block:: xml
    :caption: Example
@@ -128,7 +128,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.

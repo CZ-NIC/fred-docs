@@ -4,15 +4,15 @@
 Get the results
 ===============
 
-This command is used to retrieve a chunk of the results
-that were prepared in a previous step with a :doc:`list command <Prepare>`.
+This command is used to retrieve a chunk of the results
+that were prepared in a previous step with a :doc:`list command <Prepare>`.
 The command must be called repeatedly to collect all results until the returned
 results list is empty.
 
-The command is a ``getResults`` element in the ``fred`` namespace
+The command is a ``getResults`` element in the ``fred`` namespace
 (``http://www.nic.cz/xml/epp/fred-1.5``).
 
-This command is a part of the :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
+This command is a part of the :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
 defined by the FRED EPP server.
 
 Command element structure
@@ -49,7 +49,7 @@ the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<fred:resultsList>`` which declares the ``fred`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 

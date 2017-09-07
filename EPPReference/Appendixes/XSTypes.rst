@@ -11,18 +11,18 @@ Simple data types defined in the XML Schema :doc:`namespace
    :sorted:
 
    xs:string
-      a generic non-restricted character string
+      a generic non-restricted character string
 
       https://www.w3.org/TR/xmlschema11-2/#string
 
    xs:normalizedString
-      a :term:`xs:string` which does not contain carriage return, line feed
+      a :term:`xs:string` which does not contain carriage return, line feed
       nor tab characters
 
       https://www.w3.org/TR/xmlschema11-2/#normalizedString
 
    xs:token
-      a :term:`xs:normalizedString` which has no leading nor trailing spaces
+      a :term:`xs:normalizedString` which has no leading nor trailing spaces
       and no internal sequence of 2 or more spaces
 
       https://www.w3.org/TR/xmlschema11-2/#token
@@ -33,7 +33,7 @@ Simple data types defined in the XML Schema :doc:`namespace
       https://www.w3.org/TR/xmlschema11-2/#boolean
 
    xs:language
-      a :term:`xs:token` matching the ``[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*``
+      a :term:`xs:token` matching the ``[a-zA-Z]{1,8}(-[a-zA-Z0-9]{1,8})*``
       pattern
 
       https://www.w3.org/TR/xmlschema11-2/#language
@@ -44,22 +44,22 @@ Simple data types defined in the XML Schema :doc:`namespace
       https://www.w3.org/TR/xmlschema11-2/#anyURI
 
    xs:dateTime
-      a date and time
+      a date and time
 
       https://www.w3.org/TR/xmlschema11-2/#dateTime
 
    xs:date
-      a date
+      a date
 
       https://www.w3.org/TR/xmlschema11-2/#date
 
    xs:decimal
-      a real number represented by decimal numerals (low precision)
+      a real number represented by decimal numerals (low precision)
 
       https://www.w3.org/TR/xmlschema11-2/#decimal
 
    xs:unsignedLong
-      a potentially big non-negative integer
+      a potentially big non-negative integer
 
       https://www.w3.org/TR/xmlschema11-2/#unsignedLong
 
@@ -69,7 +69,7 @@ Simple data types defined in the XML Schema :doc:`namespace
       https://www.w3.org/TR/xmlschema11-2/#unsignedShort
 
    xs:unsignedByte
-      a small non-negative integer (up to 255 incl.)
+      a small non-negative integer (up to 255 incl.)
 
       https://www.w3.org/TR/xmlschema11-2/#unsignedByte
 

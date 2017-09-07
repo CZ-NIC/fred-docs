@@ -4,17 +4,17 @@
 Service discovery
 =================
 
-To request service information, the client sends a *hello* message and the server
-replies with a *greeting* message which contains the service information.
+To request service information, the client sends a *hello* message and the server
+replies with a *greeting* message which contains the service information.
 
-The server also replies with a *greeting* when a TCP connection is initiated.
+The server also replies with a *greeting* when a TCP connection is initiated.
 
 .. index:: hello, Ⓔhello
 
 Hello element structure
 -----------------------
 
-The ``<hello/>`` element is a child of ``<epp>`` and is defined in the standard
+The ``<hello/>`` element is a child of ``<epp>`` and is defined in the standard
 EPP namespace.
 
 The element must not contain any child elements nor attributes.
@@ -41,13 +41,13 @@ The element must not contain any child elements nor attributes.
 Greeting element structure
 --------------------------
 
-The ``<greeting>`` element is a child of ``<epp>`` and is defined in the standard
+The ``<greeting>`` element is a child of ``<epp>`` and is defined in the standard
 EPP namespace.
 
 It contains the following child elements:
 
 * ``<svID>`` – the name of the EPP server
-  as a :term:`xs:normalizedString` of the length between 3 and 64 characters,
+  as a :term:`xs:normalizedString` of the length between 3 and 64 characters,
 * ``<svDate>`` – the server's :ref:`timestamp <mngobj-timestamps>` as :term:`xs:dateTime`,
 * ``<svcMenu>`` – services supported by the EPP server:
 
@@ -55,9 +55,9 @@ It contains the following child elements:
      the FRED EPP server supports only one version and that is ``1.0``,
    * ``<lang>`` **(1..n)** – listing of the available localizations of response texts;
      the FRED EPP server provides two localizations by default: ``en`` and ``cs``,
-   * ``<objURI>`` **(1..n)** – listing of a :doc:`managed object <../ManagedObjects/index>`
+   * ``<objURI>`` **(1..n)** – listing of a :doc:`managed object <../ManagedObjects/index>`
      identified by its namespace as :term:`xs:anyURI`,
-   * ``<svcExtension>`` **(0..1)** – a list of :ref:`command/response-level
+   * ``<svcExtension>`` **(0..1)** – a list of :ref:`command/response-level
      extensions <command-ext>` of objects supported by the server:
 
       * ``<extURI>`` **(1..n)** – an extension namespace as :term:`xs:anyURI`,
@@ -77,9 +77,9 @@ It contains the following child elements:
         to individuals and organizational entities.
       + ``<personalAndOther/>`` – Access is given to identified data
         relating to individuals, organizational entities, and
-        other data of a non-personal nature.
-      + ``<other/>`` – Access is given to other identified data of a
-        non-personal nature.
+        other data of a non-personal nature.
+      + ``<other/>`` – Access is given to other identified data of
+        a non-personal nature.
 
    * ``<statement>`` **(1..n)** – describe data collection purposes,
      data recipients, and data retention:
@@ -91,9 +91,8 @@ It contains the following child elements:
            used for administrative and technical support of the
            provisioning system.
          + ``<contact/>`` – Contact for marketing purposes.  Information
-           can be used to contact individuals, through a
-           communications channel other than the protocol, for the
-           promotion of a product or service.
+           can be used to contact individuals, through a communications
+           channel other than the protocol, for the promotion of a product or service.
          + ``<prov/>`` – Object-provisioning purposes.  Information can
            be used to identify objects and inter-object
            relationships.
@@ -106,10 +105,10 @@ It contains the following child elements:
          + ``<other/>`` – Other entities following unknown practices.
          + ``<ours>`` – Server operator and/or entities acting as agents
            or entities for whom the server operator is acting as an
-           agent.  An agent in this instance is defined as a third
+           agent.  An agent in this instance is defined as a third
            party that processes data only on behalf of the service
            provider for the completion of the stated purposes.  The
-           ``<ours>`` element may contain a ``<recDesc>`` element **(0..1)**
+           ``<ours>`` element may contain a ``<recDesc>`` element **(0..1)**
            that can be used to describe the recipient.
          + ``<public/>`` – Public forums.
          + ``<same/>`` – Other entities following server practices.
@@ -122,8 +121,8 @@ It contains the following child elements:
          + ``<indefinite/>`` – Data persists indefinitely.
          + ``<legal/>`` – Data persists per legal requirements.
          + ``<none/>`` – Data is not persistent and is not retained for
-           more than a brief period of time necessary to make use of
-           it during the course of a single online interaction.
+           more than a brief period of time necessary to make use of
+           it during the course of a single online interaction.
          + ``<stated/>`` – Data persists to meet the stated purpose.
 
       * ``<expiry>`` **(0..1)** – describes the lifetime of the policy; must

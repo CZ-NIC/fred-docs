@@ -5,10 +5,10 @@
 Check nsset
 =============
 
-A nsset check :ref:`command <struct-command>` is used to check
+A nsset check :ref:`command <struct-command>` is used to check
 the availability of one or more nsset handles.
 
-The nsset check command is a ``check`` element in the ``nsset`` namespace
+The nsset check command is a ``check`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
 
 The command must be contained in the ``<check>`` command type.
@@ -20,7 +20,7 @@ Command element structure
 
 The ``<nsset:check>`` element must declare the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
-* ``<nsset:id>`` **(1..n)**  – a nsset handle as :term:`fredcom:objIDType`.
+* ``<nsset:id>`` **(1..n)**  – a nsset handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example
@@ -56,11 +56,11 @@ the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<nsset:chkData>`` which declares the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
-* ``<nsset:cd>`` **(1..n)** – the check resolution of a single nsset handle:
+* ``<nsset:cd>`` **(1..n)** – the check resolution of a single nsset handle:
 
    * ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDType`,
 

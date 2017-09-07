@@ -4,7 +4,7 @@
 Contacts
 --------
 
-A contact contains information which represents a person or a company.
+A contact contains information which represents a person or a company.
 
 Namespace: \http://www.nic.cz/xml/epp/contact-1.6 |br|
 Schema: contact-1.6.2.xsd
@@ -57,16 +57,16 @@ the following attributes:
    Fax number.
 
 ``email``
-   A list of email addresses.
+   A list of email addresses.
 
 ``notifyEmail``
-   A list of notification email addresses.
+   A list of notification email addresses.
 
 ``vat``
    VAT-payer identifier.
 
 ``ident``
-   Identity-document type and number. (A document that proves the contact's identity.)
+   Identity-document type and number. (A document that proves the contact's identity.)
 
 ``disclose``
    Disclosure preference for: ``addr``, ``voice``, ``fax``, ``email``, ``vat``,
@@ -79,7 +79,7 @@ the following attributes:
 Object states
 ^^^^^^^^^^^^^^^^^
 
-A contact can have one or more of the following statuses:
+A contact can have one or more of the following statuses:
 
 * ``ok`` – no other states are set
 * ``linked`` – the contact has relation to other records in the Registry
@@ -92,14 +92,14 @@ A contact can have one or more of the following statuses:
 * ``identifiedContact`` – the contact's identity is fully verified
 * ``validatedContact`` – the contact is validated
 * ``mojeidContact`` – the contact is used in the mojeID extension and has more
-  attributes and possibilities than a regular contact
+  attributes and possibilities than a regular contact
 
 .. _mng-contact-map:
 
 Command-response mapping
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-For command-response mapping see a specific command syntax description:
+For command-response mapping see a specific command syntax description:
 
 * :doc:`contact:check </EPPReference/CommandStructure/Check/CheckContact>`
 * :doc:`contact:create </EPPReference/CommandStructure/Create/CreateContact>`

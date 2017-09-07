@@ -7,7 +7,7 @@ EPP Reference Manual
 
 .. struct-start
 
-This document provides a reference of XML-formatted requests and replies
+This document provides a reference of XML-formatted requests and replies
 in the EPP protocol which has been implemented in the FRED with extensions
 to suit FRED particularities.
 
@@ -17,13 +17,13 @@ Developer, tester
 
 .. rubric:: Purpose
 
-Have reference information for implementing and debugging a custom EPP client.
+Have reference information for implementing and debugging a custom EPP client.
 
 .. struct-end
 
 .. rubric:: Prerequisities
 
-You should have a basic understanding of XML terminology and principles.
+You should have a basic understanding of XML terminology and principles.
 
 .. rubric:: Terms & definitions
 

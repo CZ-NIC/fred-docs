@@ -5,10 +5,10 @@
 Delete domain
 ==============
 
-A domain delete :ref:`command <struct-command>` is used to delete a domain
+A domain delete :ref:`command <struct-command>` is used to delete a domain
 whose status allows it to be deleted.
 
-The domain delete command is a ``delete`` element in the ``domain`` namespace
+The domain delete command is a ``delete`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
 
 The command must be contained in the ``<delete>`` command type.
@@ -49,7 +49,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.

@@ -4,8 +4,8 @@
 Error reasons
 =============
 
-If a :ref:`response <struct-response>` was returned with an error result code,
-the response may also contain a reason that explains further why the error occurred.
+If a :ref:`response <struct-response>` was returned with an error result code,
+the response may also contain a reason that explains further why the error occurred.
 
 The reason is provided in the language of :doc:`the session
 </EPPReference/CommandStructure/Login>`.
@@ -91,13 +91,13 @@ Possible reasons of errors are:
    #. Within the protection period
    #. An invalid IP address
    #. An invalid nameserver hostname
-   #. A duplicate nameserver address
+   #. A duplicate nameserver address
    #. Glue IP address not applicable
    #. The validity period exceeds the allowed maximum
    #. The validity period is not an integer multiple of the allowed step
    #. An unknown country code
    #. An unknown message ID
-   #. A validation expiration date not applicable
+   #. A validation expiration date not applicable
    #. The validation expiration date is not valid
    #. The technical contact cannot be removed
    #. The technical contact is assigned to the object already
@@ -110,11 +110,11 @@ Possible reasons of errors are:
    #. The nameserver is not included in the nsset
    #. The domain expiration date does not match recorded data
    #. The "transfer" element is missing an "op" attribute
-   #. The "ident" element is missing a "type" attribute
+   #. The "ident" element is missing a "type" attribute
    #. The "poll" element is missing an "msgID" attribute
    #. Registration is prohibited
    #. XML validation error:
-   #. A duplicate contact
+   #. A duplicate contact
    #. An invalid format of the keyset handle
    #. The keyset does not exist
    #. Unauthorized access to the object
@@ -129,9 +129,9 @@ Possible reasons of errors are:
    #. The "key" field contains an invalid character
    #. The DNSKEY exists for the keyset already
    #. The DNSKEY does not exist for the keyset
-   #. A duplicate DNSKEY
-   #. The keyset must have a DNSKEY record or a DS record
-   #. A duplicate nameserver hostname
+   #. A duplicate DNSKEY
+   #. The keyset must have a DNSKEY record or a DS record
+   #. A duplicate nameserver hostname
    #. The administrative contact is not assigned to the object
    #. Temporary contacts are discontinued
    #. The validity period is shorter than the allowed minimum

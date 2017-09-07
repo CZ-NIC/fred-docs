@@ -5,7 +5,7 @@
 Info domain
 ===========
 
-A domain info :ref:`command <struct-command>` is used to view details of a domain.
+A domain info :ref:`command <struct-command>` is used to view details of a domain.
 
 The domain info command is an ``info`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
@@ -20,7 +20,7 @@ Command element structure
 The ``<domain:info>`` element must declare the ``domain`` :doc:`namespace and schema
 </EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
-* ``<domain:name>`` **(1)**  – a domain name as :term:`eppcom:labelType`.
+* ``<domain:name>`` **(1)**  – a domain name as :term:`eppcom:labelType`.
 
 .. code-block:: xml
    :caption: Example
@@ -61,7 +61,7 @@ See also :ref:`succ-fail`.
 
 .. _domain-infdata:
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<domain:infData>``  which declares the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
@@ -82,8 +82,8 @@ and it contains the following child elements:
       * ``outzone``
       * ``notValidated`` :sup:`ENUM only`
       * ``deleteCandidate``
-   * ``@lang`` – the language of the state description as a :term:`xs:language` (default: ``en``),
-   * element content: the state description as a :term:`xs:normalizedString`,
+   * ``@lang`` – the language of the state description as a :term:`xs:language` (default: ``en``),
+   * element content: the state description as a :term:`xs:normalizedString`,
 * ``<domain:registrant>`` **(0..1)** – the domain owner handle as :term:`fredcom:objIDType`,
 * ``<domain:admin>`` **(0..n)** – an administrative contact handle as :term:`fredcom:objIDType`,
 * ``<domain:nsset>`` **(0..1)** – the nsset handle as :term:`eppcom:labelType`,
@@ -97,7 +97,7 @@ and it contains the following child elements:
 * ``<domain:exDate>`` **(0..1)** – the date of expiration as :term:`xs:date`,
 * ``<domain:trDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last transfer as :term:`xs:dateTime`,
 * ``<domain:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
-* ``<domain:tempcontact>`` **(0..n)** – a temporary contact handle as :term:`fredcom:objIDType`.
+* ``<domain:tempcontact>`` **(0..n)** – a temporary contact handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example
@@ -142,14 +142,14 @@ The ``<domain:infData>`` element is used in the same way as described above.
 The :ref:`response extension <response-ext>` is used to display the validation
 of an ENUM domain and/or its publish flag.
 
-The response's ``<extension>`` element contains a **single** ``<enumval:infData>``
+The response's ``<extension>`` element contains a **single** ``<enumval:infData>``
 element which declares the ``enumval`` namespace (``http://www.nic.cz/xml/epp/enumval-1.2``)
 and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 
 * ``<enumval:valExDate>`` **(0..1)**  – the validation expiration date as :term:`xs:date`,
 
 * ``<enumval:publish>`` **(0..1)** – the setting for publishing the ENUM
-  domain in a public directory as :term:`xs:boolean`; ``true`` – display, ``false`` – hide.
+  domain in a public directory as :term:`xs:boolean`; ``true`` – display, ``false`` – hide.
 
 .. code-block:: xml
    :caption: Example

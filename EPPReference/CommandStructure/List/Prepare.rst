@@ -1,7 +1,7 @@
 
 .. index:: list
 
-Prepare a list
+Prepare a list
 ==============
 
 These commands are used to prepare lists of objects
@@ -11,7 +11,7 @@ which are managed by the authenticated client.
 All list commands are elements in the ``fred`` namespace
 (``http://www.nic.cz/xml/epp/fred-1.5``).
 
-These commands are a part of the :doc:`protocol extension
+These commands are a part of the :doc:`protocol extension
 </EPPReference/ProtocolBasics/ProtocolExtensions>`
 defined by the FRED EPP server.
 
@@ -29,21 +29,21 @@ The list command can be **one of** the following:
 * ``<fred:listContacts/>`` **(1)** – select all contacts as an empty element,
 * ``<fred:listNssets/>`` **(1)** – select all nssets as an empty element,
 * ``<fred:listKeysets/>`` **(1)** – select all keysets as an empty element,
-* ``<fred:domainsByContact>`` **(1)** – select domains by a contact (registrant or administrative contact),
-   * ``<fred:id>`` **(1)** – a contact handle as :term:`fredcom:objIDType`,
-* ``<fred:domainsByNsset>`` **(1)** – select domains by a nsset,
-   * ``<fred:id>`` **(1)** – a nsset handle as :term:`fredcom:objIDType`,
-* ``<fred:domainsByKeyset>`` **(1)** – select domains by a keyset,
-   * ``<fred:id>`` **(1)** – a keyset handle as :term:`fredcom:objIDType`,
-* ``<fred:nssetsByContact>`` **(1)** – select nssets by a technical contact,
-   * ``<fred:id>`` **(1)** – a contact handle as :term:`fredcom:objIDType`,
-* ``<fred:keysetsByContact>`` **(1)** – select keysets by a technical contact,
-   * ``<fred:id>`` **(1)** – a contact handle as :term:`fredcom:objIDType`,
-* ``<fred:nssetsByNs>`` **(1)** – select nssets by a name server,
-   * ``<fred:name>`` **(1)** – a name-server hostname as :term:`eppcom:labelType`.
+* ``<fred:domainsByContact>`` **(1)** – select domains by a contact (registrant or administrative contact),
+   * ``<fred:id>`` **(1)** – a contact handle as :term:`fredcom:objIDType`,
+* ``<fred:domainsByNsset>`` **(1)** – select domains by a nsset,
+   * ``<fred:id>`` **(1)** – a nsset handle as :term:`fredcom:objIDType`,
+* ``<fred:domainsByKeyset>`` **(1)** – select domains by a keyset,
+   * ``<fred:id>`` **(1)** – a keyset handle as :term:`fredcom:objIDType`,
+* ``<fred:nssetsByContact>`` **(1)** – select nssets by a technical contact,
+   * ``<fred:id>`` **(1)** – a contact handle as :term:`fredcom:objIDType`,
+* ``<fred:keysetsByContact>`` **(1)** – select keysets by a technical contact,
+   * ``<fred:id>`` **(1)** – a contact handle as :term:`fredcom:objIDType`,
+* ``<fred:nssetsByNs>`` **(1)** – select nssets by a name server,
+   * ``<fred:name>`` **(1)** – a name-server hostname as :term:`eppcom:labelType`.
 
 .. code-block:: xml
-   :caption: Example of a parametrized listing command
+   :caption: Example of a parametrized listing command
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -66,7 +66,7 @@ The list command can be **one of** the following:
    > prep_domains_by_contact CID-ADMIN1
 
 .. code-block:: xml
-   :caption: Example of a simple listing command
+   :caption: Example of a simple listing command
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -96,7 +96,7 @@ the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<fred:infoResponse>`` which declares the ``fred`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child element:
 

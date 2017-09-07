@@ -5,17 +5,17 @@
 Transfer keyset
 ================
 
-A keyset transfer :ref:`command <struct-command>` is used to take over
-sponsorship of a keyset.
-A transfer password must be provided for authorization.
+A keyset transfer :ref:`command <struct-command>` is used to take over
+sponsorship of a keyset.
+A transfer password must be provided for authorization.
 It can be the transfer password of:
 
 * the keyset, or
-* a technical contact of the keyset.
+* a technical contact of the keyset.
 
-A new password is generated for the keyset by the server after a successful transfer.
+A new password is generated for the keyset by the server after a successful transfer.
 
-The keyset transfer command is a ``transfer`` element in the ``keyset`` namespace
+The keyset transfer command is a ``transfer`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
 
 The command must be contained in the ``<transfer>`` command type.
@@ -59,7 +59,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.

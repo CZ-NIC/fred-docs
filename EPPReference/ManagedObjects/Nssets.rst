@@ -4,7 +4,7 @@
 Nssets
 ------
 
-A nsset contains information which represents a set of name servers.
+A nsset contains information which represents a set of name servers.
 
 Namespace: \http://www.nic.cz/xml/epp/nsset-1.2 |br|
 Schema: nsset-1.2.2.xsd
@@ -48,14 +48,14 @@ the following attributes:
 
 ``reportlevel``
    The highest level of technical tests to be performed and reported.
-   A higher number means more detail, zero means no tests.
+   A higher number means more detail, zero means no tests.
 
 .. _mng-nsset-stat:
 
 Object states
 ^^^^^^^^^^^^^
 
-A nsset can have one or more of the following statuses:
+A nsset can have one or more of the following statuses:
 
 * ``ok`` – no other states are set
 * ``linked`` – the nsset has relation to other records in the Registry
@@ -69,7 +69,7 @@ A nsset can have one or more of the following statuses:
 Command-response mapping
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-For command-response mapping see a specific command syntax description:
+For command-response mapping see a specific command syntax description:
 
 * :doc:`nsset:check </EPPReference/CommandStructure/Check/CheckNsset>`
 * :doc:`nsset:create </EPPReference/CommandStructure/Create/CreateNsset>`

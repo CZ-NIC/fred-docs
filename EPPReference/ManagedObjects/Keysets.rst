@@ -4,7 +4,7 @@
 Keysets
 -------
 
-A keyset contains information which represents a set of DNSSEC keys.
+A keyset contains information which represents a set of DNSSEC keys.
 
 Namespace: \http://www.nic.cz/xml/epp/keyset-1.3 |br|
 Schema: keyset-1.3.2.xsd
@@ -38,7 +38,7 @@ the following attributes:
    ``pubKey``
       Public key as :term:`keyset:keyT`.
 
-   .. Note:: A DNSSEC key corresponds to a DNSKEY Resource Record,
+   .. Note:: A DNSSEC key corresponds to a DNSKEY Resource Record,
       see :rfc:`4034#section-2`.
 
 ``tech``
@@ -49,7 +49,7 @@ the following attributes:
 Object states
 ^^^^^^^^^^^^^^^^^
 
-A keyset can have one or more of the following statuses:
+A keyset can have one or more of the following statuses:
 
 * ``ok`` – no other states are set
 * ``linked`` – the keyset has relation to other records in the Registry
@@ -63,7 +63,7 @@ A keyset can have one or more of the following statuses:
 Command-response mapping
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-For command-response mapping see a specific command syntax description:
+For command-response mapping see a specific command syntax description:
 
 * :doc:`keyset:check </EPPReference/CommandStructure/Check/CheckKeyset>`
 * :doc:`keyset:create </EPPReference/CommandStructure/Create/CreateKeyset>`

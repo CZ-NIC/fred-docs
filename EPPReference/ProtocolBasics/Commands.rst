@@ -4,7 +4,7 @@
 Commands & responses
 ====================
 
-A command is an :ref:`EPP request <FRED-EPPRef-Basics-class>`.
+A command is an :ref:`EPP request <FRED-EPPRef-Basics-class>`.
 
 EPP commands fall into three categories: session management commands,
 query commands, and object transform commands.
@@ -17,10 +17,10 @@ query commands, and object transform commands.
 
 * *Transform commands* are used to perform read-write object management operations.
 
-A response is an :ref:`EPP reply <FRED-EPPRef-Basics-class>` coordinated with the command.
+A response is an :ref:`EPP reply <FRED-EPPRef-Basics-class>` coordinated with the command.
 
-The command-response pair is also called a **transaction**.
-Transactions are always described together as a whole in this manual.
+The command-response pair is also called a **transaction**.
+Transactions are always described together as a whole in this manual.
 
 
 Implemented standard commands
@@ -36,7 +36,7 @@ See also :doc:`command overview <../CommandStructure/index>` for implemented
 non-standard (custom) commands,
 or :doc:`ProtocolExtensions` for the generic syntax of custom commands.
 
-.. Note:: The standard suggests a more complex handling of object transfer
+.. Note:: The standard suggests a more complex handling of object transfer
    which is not applicable in the FRED. Therefore the other transfer operations
    (query, cancel, approve, reject) are not implemented in the FRED EPP.
 
@@ -52,14 +52,14 @@ To make sure that both the client and the EPP server have consistent temporal
 and state-management records, both commands and responses should be marked
 with unique identifiers.
 
-A **command** should be assigned a ``clTRID`` (client transaction identifier)
+A **command** should be assigned a ``clTRID`` (client transaction identifier)
 by the client which uniquely identifies the command to the client.
 The client is supposed to maintain its own transaction identifier
 space to ensure uniqueness. Also the format of the identifier is arbitrary
 as long as it complies with the restrictions of the XML schema
 (:term:`epp:trIDStringType`).
 
-A **response** will be assigned by the server:
+A **response** will be assigned by the server:
 
 * the ``clTRID`` of the command for which the response is being returned
   *if provided by the client*,
@@ -75,12 +75,12 @@ Transaction identifiers should be logged, retained and protected.
 Command element structure
 --------------------------
 
-The ``<command>`` element is a child of ``<epp>`` and is defined in the standard
-EPP namespace. It contains a command type of object-related commands or
+The ``<command>`` element is a child of ``<epp>`` and is defined in the standard
+EPP namespace. It contains a command type of object-related commands or
 an actual object-independent command, also in the standard namespace,
-which must be a **singular** occurrence of **one of** the following:
+which must be a **singular** occurrence of **one of** the following:
 
-* ``<login>`` – client login (establish a session), an object-independent
+* ``<login>`` – client login (establish a session), an object-independent
   command, see :doc:`../CommandStructure/Login`,
 * ``<logout>`` – client logout (end the session), an object-independent
   command, see :doc:`../CommandStructure/Logout`,
@@ -93,14 +93,14 @@ which must be a **singular** occurrence of **one of** the following:
    * ``@op`` **(R)** – transfer operation –
      Because of :doc:`the concept of transfer </Features/Concepts/Transfer>`
      in the FRED, only one value is permitted and that is ``request``
-     which is used to request a transfer.
+     which is used to request a transfer.
 * ``<update>`` – updates of object details, an object-related command type,
 * ``<poll>`` – polling for notifications from the Registry, an object-independent command, see :doc:`../CommandStructure/Poll/index`.
    * ``@op`` **(R)** – poll operation as one of values:
       * ``req`` – requests poll messages,
-      * ``ack`` – acknowledges reading of a message,
+      * ``ack`` – acknowledges reading of a message,
    * ``@msgID`` – identifier of the message to be acknowledged
-     as a :term:`xs:token`. Use only with ``@op = 'ack'``.
+     as a :term:`xs:token`. Use only with ``@op = 'ack'``.
 
 Each object-related command type may contain elements from any namespace.
 This is where the namespaces and appropriate top-level elements of :doc:`managed
@@ -114,7 +114,7 @@ The command type may be followed by:
   as :term:`epp:trIDStringType`.
 
 .. code-block:: xml
-   :caption: Example of a standard command
+   :caption: Example of a standard command
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -135,35 +135,35 @@ The command type may be followed by:
    </epp>
 
 Command contents are described separately for each justified combination
-of a command type and a managed object.
+of a command type and a managed object.
 
 .. _struct-response:
 
 Response element structure
 --------------------------
 
-The ``<response>`` element is a child of ``<epp>`` and is defined in the standard
+The ``<response>`` element is a child of ``<epp>`` and is defined in the standard
 EPP namespace. It contains the following child elements:
 
 * ``<result>`` **(1..n)** – report of the :ref:`success or failure of command <succ-fail>` execution:
-   * ``@code`` **(R)** – result code (4-digit number), for a list of possible
+   * ``@code`` **(R)** – result code (4-digit number), for a list of possible
      values see :doc:`result codes </EPPReference/Appendixes/ResultCodes>`,
    * ``<msg>`` **(1)** – human-readable description of the result,
       * ``@lang`` – language of the result description
         as :term:`xs:language`; default is ``en`` (English),
-   * ``<value>`` **(0..n)** – identification of a client-provided element
-     or other information that caused a server error condition,
+   * ``<value>`` **(0..n)** – identification of a client-provided element
+     or other information that caused a server error condition,
    * ``<extValue>`` **(0..n)** – additional error diagnostic information:
-      * ``<value>`` **(1)** – identification of a client-provided element
-        or other information that caused a server error condition,
+      * ``<value>`` **(1)** – identification of a client-provided element
+        or other information that caused a server error condition,
       * ``<reason>`` **(1)** – human readable message that describes the reason
-        for the error (see :doc:`/EPPReference/Appendixes/ErrorReasons` for a complete list),
+        for the error (see :doc:`/EPPReference/Appendixes/ErrorReasons` for a complete list),
 
          * ``@lang`` – language of the reason description
            as :term:`xs:language`; default is ``en`` (English),
 
 * ``<msgQ>`` **(0..1)** – description of queued poll messages; in the FRED EPP,
-  this element is present only in a response to a ``poll`` command,
+  this element is present only in a response to a ``poll`` command,
   for detailed syntax and usage see :doc:`../CommandStructure/Poll/index`,
 * ``<resData>`` **(0..1)** – response data element that contains child elements
   specific to the command and/or associated object,
@@ -173,7 +173,7 @@ EPP namespace. It contains the following child elements:
    * ``<svTRID>`` **(1)** – server transaction identifier.
 
 .. code-block:: xml
-   :caption: Example of a response (successful execution)
+   :caption: Example of a response (successful execution)
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -207,9 +207,9 @@ EPP namespace. It contains the following child elements:
 
    .. rubric:: Plain result message
 
-   A response is called a "plain result message" when it contains only
+   A response is called a "plain result message" when it contains only
    the result (``<result>``) and transaction identification (``<trID>``)
-   and nothing else. The result can be either a success or failure.
+   and nothing else. The result can be either a success or failure.
 
    .. rubric:: Example
 
@@ -232,25 +232,25 @@ EPP namespace. It contains the following child elements:
 
 .. _succ-fail:
 
-Success or failure of a command
+Success or failure of a command
 -------------------------------
 
-A response always contains the result of executing the command and each result
-is described by both a code and a textual message.
+A response always contains the result of executing the command and each result
+is described by both a code and a textual message.
 
-If the execution succeeded, a code of 1xxx series is returned.
-If the execution failed, a code of 2xxx series is returned.
+If the execution succeeded, a code of 1xxx series is returned.
+If the execution failed, a code of 2xxx series is returned.
 See :doc:`/EPPReference/Appendixes/ResultCodes` for an overview.
 
 The standard allows to return several results, but the FRED EPP server
-returns exactly one result at a time.
+returns exactly one result at a time.
 
 .. Important:: The **response element structure** of specific commands is
    described only for cases when the execution is **successful** and therefore
    it is expected that it may contain some response data, depending on the command.
 
 .. code-block:: xml
-   :caption: Example of a response (failure)
+   :caption: Example of a response (failure)
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

@@ -5,7 +5,7 @@
 Info keyset
 =============
 
-A keyset info :ref:`command <struct-command>` is used to view details of a keyset.
+A keyset info :ref:`command <struct-command>` is used to view details of a keyset.
 
 The keyset info command is an ``info`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
@@ -20,7 +20,7 @@ Command element structure
 The ``<keyset:info>`` element must declare the ``keyset`` :doc:`namespace and schema
 </EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
-* ``<keyset:id>`` **(1)**  – a keyset handle as :term:`fredcom:objIDType`.
+* ``<keyset:id>`` **(1)**  – a keyset handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example
@@ -60,7 +60,7 @@ See also :ref:`succ-fail`.
 
 .. _keyset-infdata:
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<keyset:infData>``  which declares the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
@@ -74,8 +74,8 @@ and it contains the following child elements:
       * ``serverTransferProhibited``
       * ``serverUpdateProhibited``
       * ``deleteCandidate``
-   * ``@lang`` – the language of the state description as a :term:`xs:language` (default: ``en``),
-   * element content: the state description as a :term:`xs:normalizedString`,
+   * ``@lang`` – the language of the state description as a :term:`xs:language` (default: ``en``),
+   * element content: the state description as a :term:`xs:normalizedString`,
 * ``<keyset:clID>`` **(1)** – the designated registrar's handle as :term:`eppcom:clIDType`,
 * ``<keyset:crID>`` **(0..1)** – the handle of the registrar who created this keyset as :term:`eppcom:clIDType`,
 * ``<keyset:crDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`,
@@ -83,7 +83,7 @@ and it contains the following child elements:
 * ``<keyset:upDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last update as :term:`xs:dateTime`,
 * ``<keyset:trDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last transfer as :term:`xs:dateTime`,
 * ``<keyset:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
-* ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
+* ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
   for allowed values <mng-keyset-attr>`) given by:
 
    * ``<keyset:flags>`` **(1)** – flags as :term:`xs:unsignedShort`,
@@ -91,7 +91,7 @@ and it contains the following child elements:
    * ``<keyset:alg>`` **(1)** – algorithm as :term:`xs:unsignedByte`,
    * ``<keyset:pubKey>`` **(1)** – public key as :term:`keyset:keyT`,
 
-* ``<keyset:tech>`` **(1..n)** – a technical contact handle as :term:`fredcom:objIDType`.
+* ``<keyset:tech>`` **(1..n)** – a technical contact handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example

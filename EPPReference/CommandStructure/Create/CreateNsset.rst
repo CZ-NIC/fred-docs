@@ -5,9 +5,9 @@
 Create nsset
 ==============
 
-A nsset create :ref:`command <struct-command>` is used to register a new nsset.
+A nsset create :ref:`command <struct-command>` is used to register a new nsset.
 
-The nsset create command is a ``create`` element in the ``nsset`` namespace
+The nsset create command is a ``create`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
 
 The command must be contained in the ``<create>`` command type.
@@ -22,11 +22,11 @@ The ``<nsset:create>`` element must declare the ``nsset`` :doc:`namespace and sc
 </EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
 
 * ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDCreateType`.
-* ``<nsset:ns>`` **(1..10)** – a nameserver given by:
+* ``<nsset:ns>`` **(1..10)** – a nameserver given by:
    * ``<nsset:name>`` **(1)** – the nameserver hostname as :term:`eppcom:labelType`,
    * ``<nsset:addr>`` **(0..n)** – the namesever's IP address(es) as :term:`nsset:addrStringType`,
-* ``<nsset:tech>`` **(1..10)** –  a handle of a contact that will be assigned
-  as a technical contact as :term:`fredcom:objIDType`,
+* ``<nsset:tech>`` **(1..10)** –  a handle of a contact that will be assigned
+  as a technical contact as :term:`fredcom:objIDType`,
 * ``<nsset:authInfo>`` **(0..1)** – authorization information (transfer password)
   as :term:`fredcom:authInfoType`; if omitted, the password will be generated
   by the server,
@@ -79,7 +79,7 @@ the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<nsset:creData>``  which declares the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and it contains the following child elements:
 

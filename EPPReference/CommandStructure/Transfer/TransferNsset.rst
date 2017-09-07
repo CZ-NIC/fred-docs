@@ -5,17 +5,17 @@
 Transfer nsset
 ================
 
-A nsset transfer :ref:`command <struct-command>` is used to take over
-sponsorship of a nsset.
-A transfer password must be provided for authorization.
+A nsset transfer :ref:`command <struct-command>` is used to take over
+sponsorship of a nsset.
+A transfer password must be provided for authorization.
 It can be the transfer password of:
 
 * the nsset, or
-* a technical contact of the nsset.
+* a technical contact of the nsset.
 
-A new password is generated for the nsset by the server after a successful transfer.
+A new password is generated for the nsset by the server after a successful transfer.
 
-The nsset transfer command is a ``transfer`` element in the ``nsset`` namespace
+The nsset transfer command is a ``transfer`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
 
 The command must be contained in the ``<transfer>`` command type.
@@ -59,7 +59,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.

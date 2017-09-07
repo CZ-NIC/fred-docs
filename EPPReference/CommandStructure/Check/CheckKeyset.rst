@@ -5,10 +5,10 @@
 Check keyset
 =============
 
-A keyset check :ref:`command <struct-command>` is used to check
+A keyset check :ref:`command <struct-command>` is used to check
 the availability of one or more keyset handles.
 
-The keyset check command is a ``check`` element in the ``keyset`` namespace
+The keyset check command is a ``check`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
 
 The command must be contained in the ``<check>`` command type.
@@ -20,7 +20,7 @@ Command element structure
 
 The ``<keyset:check>`` element must declare the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
-* ``<keyset:id>`` **(1..n)**  – a keyset handle as :term:`fredcom:objIDType`.
+* ``<keyset:id>`` **(1..n)**  – a keyset handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example
@@ -56,11 +56,11 @@ the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<keyset:chkData>`` which declares the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
-* ``<keyset:cd>`` **(1..n)** – the check resolution of a single keyset handle:
+* ``<keyset:cd>`` **(1..n)** – the check resolution of a single keyset handle:
 
    * ``<keyset:id>`` **(1)** – the keyset handle as :term:`fredcom:objIDType`,
 

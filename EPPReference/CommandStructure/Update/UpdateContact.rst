@@ -5,7 +5,7 @@
 Update contact
 ==============
 
-A contact update :ref:`command <struct-command>` is used to alter details of a contact.
+A contact update :ref:`command <struct-command>` is used to alter details of a contact.
 
 The contact update command is an ``update`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
@@ -40,7 +40,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
    * ``<contact:email>`` **(0..1)** – change email as :term:`contact:emailCommaListType`,
    * ``<contact:authInfo>`` **(0..1)** – change authorization information (transfer password) as :term:`fredcom:authInfoType`
    * ``<contact:disclose>`` **(0..1)** – change contact information disclosure settings:
-      * ``@flag`` **(R)** – disclose flag as a :term:`xs:boolean`: ``0`` – hide listed items, ``1`` – publish listed items,
+      * ``@flag`` **(R)** – disclose flag as a :term:`xs:boolean`: ``0`` – hide listed items, ``1`` – publish listed items,
       * ``<contact:addr/>`` **(0..1)** – address disclosure setting as an empty element,
       * ``<contact:voice/>`` **(0..1)** – voice disclosure setting as an empty element,
       * ``<contact:fax/>`` **(0..1)** – fax disclosure setting as an empty element,
@@ -53,14 +53,14 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 
          Whether the new disclosure settings will have an effect, also depends on the server's policy.
 
-   * ``<contact:vat>`` **(0..1)** – change :term:`VAT`-payer identifier as a :term:`contact:vatT`,
+   * ``<contact:vat>`` **(0..1)** – change :term:`VAT`-payer identifier as a :term:`contact:vatT`,
    * ``<contact:ident>`` **(0..1)** – change identity-document identification:
       * ``@type`` **(R)** – the type of the identity document
         as one of values: ``op`` (identity card number),
         ``passport`` (passport number),
         ``mpsv`` (number from the Ministry of Labour and Social Affairs),
         ``ico`` (company number), ``birthday`` (the date of birth),
-      * element content: an identification number as a :term:`contact:identValueT`,
+      * element content: an identification number as a :term:`contact:identValueT`,
    * ``<contact:notifyEmail>`` **(0..1)** – change notification email as :term:`contact:emailUpdCommaListType`.
 
 .. code-block:: xml
@@ -95,7 +95,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.

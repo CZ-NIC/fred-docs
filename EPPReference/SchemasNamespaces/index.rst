@@ -4,9 +4,9 @@
 Namespaces & schemas
 ====================
 
-A namespace must be identified for each prefix using the :samp:`@xmlns:{prefix}` attribute.
+A namespace must be identified for each prefix using the :samp:`@xmlns:{prefix}` attribute.
 
-.. Important:: The client must use the same version of a namespace as the server!
+.. Important:: The client must use the same version of a namespace as the server!
    The current namespace versions are listed in the ``greeting``
    (see :doc:`/EPPReference/ProtocolBasics/ServiceDiscovery`).
 
@@ -16,7 +16,7 @@ A namespace must be identified for each prefix using the :samp:`@xmlns:{prefix}`
 To enable XML validation on the client side, depending on the selected
 XML-validation tool, there are 2 options:
 
-* to link a namespace to the location of a schema (see the table below)
+* to link a namespace to the location of a schema (see the table below)
   inside messages using the ``@xsi:schemaLocation`` attribute,
   for the tool to locate the schema from here – *this option is illustrated
   in structure descriptions*, or
@@ -31,7 +31,7 @@ The FRED EPP server as such does NOT require schema locations inside messages
 and ignores them if they are present.
 
 The global schema ``all-2.3.2.xsd`` (alias ``all.xsd``) imports the following
-partial schemas and thus provides the definitions of all namespaces in a single file.
+partial schemas and thus provides the definitions of all namespaces in a single file.
 
 ..
    tabularcolumns:: |p{0.075\textwidth}|p{0.25\textwidth}|p{0.575\textwidth}|

@@ -4,19 +4,19 @@
 Test nsset
 ===========
 
-A nsset test command is used to request
-a :doc:`technical check </Features/Concepts/Teccheck>` of a nsset.
+A nsset test command is used to request
+a :doc:`technical check </Features/Concepts/Teccheck>` of a nsset.
 
 The check is not performed immediately but it is scheduled for execution.
-After the tests have finished, a report is provided to the client
+After the tests have finished, a report is provided to the client
 in :ref:`poll messages <struct-poll-test>`.
 
-The nsset test command is a ``test`` element in the ``nsset`` namespace
+The nsset test command is a ``test`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
 
 The command must be contained in the ``<fred:test>`` command type.
 
-This command is a part of the :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
+This command is a part of the :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
 defined by the FRED EPP server.
 
 .. index:: Ⓔextcommand, Ⓔtest, Ⓔid, Ⓔlevel, Ⓔname
@@ -67,7 +67,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.

@@ -5,10 +5,10 @@
 Check domain
 ============
 
-A domain check :ref:`command <struct-command>` is used to check
+A domain check :ref:`command <struct-command>` is used to check
 the availability of one or more domain names.
 
-The domain check command is a ``check`` element in the ``domain`` namespace
+The domain check command is a ``check`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
 
 The command must be contained in the ``<check>`` command type.
@@ -20,7 +20,7 @@ Command element structure
 
 The ``<domain:check>`` element must declare the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
-* ``<domain:name>`` **(1..n)**  – a domain name as :term:`eppcom:labelType`.
+* ``<domain:name>`` **(1..n)**  – a domain name as :term:`eppcom:labelType`.
 
 .. code-block:: xml
    :caption: Example
@@ -56,11 +56,11 @@ the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<domain:chkData>`` which declares the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
-* ``<domain:cd>`` **(1..n)** – the check resolution of a single domain name:
+* ``<domain:cd>`` **(1..n)** – the check resolution of a single domain name:
 
    * ``<domain:name>`` **(1)** – the domain name as :term:`eppcom:labelType`,
 

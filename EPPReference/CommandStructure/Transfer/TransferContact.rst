@@ -5,13 +5,13 @@
 Transfer contact
 ================
 
-A contact transfer :ref:`command <struct-command>` is used to take over
-sponsorship of a contact.
+A contact transfer :ref:`command <struct-command>` is used to take over
+sponsorship of a contact.
 The transfer password of the contact must be provided for authorization.
 
-A new password is generated for the contact by the server after a successful transfer.
+A new password is generated for the contact by the server after a successful transfer.
 
-The contact transfer command is a ``transfer`` element in the ``contact`` namespace
+The contact transfer command is a ``transfer`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
 
 The command must be contained in the ``<transfer>`` command type.
@@ -55,7 +55,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.

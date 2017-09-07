@@ -4,7 +4,7 @@
 Update keyset
 =============
 
-A keyset update :ref:`command <struct-command>` is used to alter details of a keyset.
+A keyset update :ref:`command <struct-command>` is used to alter details of a keyset.
 
 The keyset update command is an ``update`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
@@ -20,30 +20,30 @@ Command element structure
 The ``<keyset:update>`` element must declare the ``keyset`` namespace
 and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
-* ``<keyset:id>`` **(1)**  – a keyset handle as :term:`fredcom:objIDType`,
-* ``<keyset:add>`` **(0..1)** – a list of items that will be added to this keyset:
+* ``<keyset:id>`` **(1)**  – a keyset handle as :term:`fredcom:objIDType`,
+* ``<keyset:add>`` **(0..1)** – a list of items that will be added to this keyset:
 
-   * ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
+   * ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
      for allowed values <mng-keyset-attr>`) given by:
 
       * ``<keyset:flags>`` **(1)** – flags as :term:`xs:unsignedShort`,
       * ``<keyset:protocol>`` **(1)** – protocol as :term:`xs:unsignedByte`,
       * ``<keyset:alg>`` **(1)** – algorithm as :term:`xs:unsignedByte`,
       * ``<keyset:pubKey>`` **(1)** – public key as :term:`keyset:keyT`,
-   * ``<keyset:tech>`` **(0..n)** –  a handle of a contact that will be added
+   * ``<keyset:tech>`` **(0..n)** –  a handle of a contact that will be added
      to technical contacts as :term:`fredcom:objIDType`,
 
-* ``<keyset:rem>`` **(0..1)** – a list of items that will be removed
+* ``<keyset:rem>`` **(0..1)** – a list of items that will be removed
   from this keyset:
 
-   * ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
+   * ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
      for allowed values <mng-keyset-attr>`) given by:
 
       * ``<keyset:flags>`` **(1)** – flags as :term:`xs:unsignedShort`,
       * ``<keyset:protocol>`` **(1)** – protocol as :term:`xs:unsignedByte`,
       * ``<keyset:alg>`` **(1)** – algorithm as :term:`xs:unsignedByte`,
       * ``<keyset:pubKey>`` **(1)** – public key as :term:`keyset:keyT`,
-   * ``<keyset:tech>`` **(0..n)** – a handle of keyset's technical contact
+   * ``<keyset:tech>`` **(0..n)** – a handle of keyset's technical contact
      as :term:`fredcom:objIDType`,
 
 * ``<keyset:chg>`` **(0..1)** – the new values of keyset attributes
@@ -99,7 +99,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.

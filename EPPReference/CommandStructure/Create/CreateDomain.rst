@@ -5,9 +5,9 @@
 Create domain
 =============
 
-A domain create :ref:`command <struct-command>` is used to register a new domain.
+A domain create :ref:`command <struct-command>` is used to register a new domain.
 
-The contact create command is a ``create`` element in the ``domain`` namespace
+The contact create command is a ``create`` element in the ``domain`` namespace
 (``http://www.nic.cz/xml/epp/domain-1.4``).
 
 The command must be contained in the ``<create>`` command type.
@@ -21,7 +21,7 @@ Command element structure
 The ``<domain:create>`` element must declare the ``domain`` :doc:`namespace and
 schema </EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
 
-* ``<domain:name>`` **(1)**  – a domain name as :term:`eppcom:labelType`,
+* ``<domain:name>`` **(1)**  – a domain name as :term:`eppcom:labelType`,
 * ``<domain:period>`` **(0..1)**  – the registration period
   as :term:`domain:pLimitType`,
 
@@ -30,7 +30,7 @@ schema </EPPReference/SchemasNamespaces/index>`, and it must contain the followi
 
   If omitted, the domain expiration is set to the minimum. (FRED's default: 1 year)
 
-* ``<domain:nsset>`` **(0..1)** – a nsset handle to associate as :term:`fredcom:objIDType`,
+* ``<domain:nsset>`` **(0..1)** – a nsset handle to associate as :term:`fredcom:objIDType`,
 * ``<domain:keyset>`` **(0..1)** – the keyset handle to associate as :term:`fredcom:objIDType`,
 * ``<domain:registrant>`` **(1)** – the domain owner handle as :term:`fredcom:objIDType`,
 * ``<domain:admin>`` **(0..n)** – an administrative contact handle as :term:`fredcom:objIDType`,
@@ -78,15 +78,15 @@ with the :doc:`domain:update <../Update/UpdateDomain>`, or you can change the
 validation when renewing the domain with the :doc:`domain:renew <../RenewDomain>`
 command.
 
-The command's ``<extension>`` element must contain a **single** ``<enumval:renew>``
+The command's ``<extension>`` element must contain a **single** ``<enumval:renew>``
 element which declares the ``enumval`` namespace (``http://www.nic.cz/xml/epp/enumval-1.2``)
 and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 
-* ``<enumval:valExDate>`` **(0..1)**  – a validation expiration date as :term:`xs:date`;
+* ``<enumval:valExDate>`` **(0..1)**  – a validation expiration date as :term:`xs:date`;
   the date must range from ``tomorrow`` to ``today + max. validation period``,
 
-* ``<enumval:publish>`` **(0..1)** – a setting for publishing the ENUM
-  domain in a public directory as :term:`xs:boolean`; ``true`` – display,
+* ``<enumval:publish>`` **(0..1)** – a setting for publishing the ENUM
+  domain in a public directory as :term:`xs:boolean`; ``true`` – display,
   ``false`` – hide (default).
 
 .. code-block:: xml
@@ -130,7 +130,7 @@ the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<domain:creData>``  which declares the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 

@@ -4,11 +4,11 @@
 Poll request
 =============
 
-A poll request :ref:`command <struct-command>` is used to obtain the message
+A poll request :ref:`command <struct-command>` is used to obtain the message
 queue status (message count) and contents of the first message in the queue
 (the oldest one).
 
-The poll command is a ``poll`` element in the default namespace
+The poll command is a ``poll`` element in the default namespace
 (``urn:ietf:params:xml:ns:epp-1.0``).
 
 .. index:: Ⓔpoll, ⓐop

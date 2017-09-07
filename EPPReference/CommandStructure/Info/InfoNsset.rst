@@ -5,7 +5,7 @@
 Info nsset
 =============
 
-A nsset info :ref:`command <struct-command>` is used to view details of a nsset.
+A nsset info :ref:`command <struct-command>` is used to view details of a nsset.
 
 The nsset info command is an ``info`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
@@ -20,7 +20,7 @@ Command element structure
 The ``<nsset:info>`` element must declare the ``nsset`` :doc:`namespace and schema
 </EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
-* ``<nsset:id>`` **(1)**  – a nsset handle as :term:`fredcom:objIDType`.
+* ``<nsset:id>`` **(1)**  – a nsset handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example
@@ -60,7 +60,7 @@ See also :ref:`succ-fail`.
 
 .. _nsset-infdata:
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<nsset:infData>``  which declares the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
@@ -74,8 +74,8 @@ and it contains the following child elements:
       * ``serverTransferProhibited``
       * ``serverUpdateProhibited``
       * ``deleteCandidate``
-   * ``@lang`` – the language of the state description as a :term:`xs:language` (default: ``en``),
-   * element content: the state description as a :term:`xs:normalizedString`,
+   * ``@lang`` – the language of the state description as a :term:`xs:language` (default: ``en``),
+   * element content: the state description as a :term:`xs:normalizedString`,
 * ``<nsset:clID>`` **(1)** – the designated registrar's handle as :term:`eppcom:clIDType`,
 * ``<nsset:crID>`` **(0..1)** – the handle of the registrar who created this nsset as :term:`eppcom:clIDType`,
 * ``<nsset:crDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`,
@@ -83,10 +83,10 @@ and it contains the following child elements:
 * ``<nsset:upDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last update as :term:`xs:dateTime`,
 * ``<nsset:trDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last transfer as :term:`xs:dateTime`,
 * ``<nsset:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
-* ``<nsset:ns>`` **(0..10)** – a nameserver given by:
-   * ``<nsset:name>`` **(1)** – a nameserver hostname as :term:`eppcom:labelType`,
-   * ``<nsset:addr>`` **(0..n)** – a namesever's IP address as :term:`nsset:addrStringType`,
-* ``<nsset:tech>`` **(1..n)** – a technical contact handle as :term:`fredcom:objIDType`,
+* ``<nsset:ns>`` **(0..10)** – a nameserver given by:
+   * ``<nsset:name>`` **(1)** – a nameserver hostname as :term:`eppcom:labelType`,
+   * ``<nsset:addr>`` **(0..n)** – a namesever's IP address as :term:`nsset:addrStringType`,
+* ``<nsset:tech>`` **(1..n)** – a technical contact handle as :term:`fredcom:objIDType`,
 * ``<nsset:reportlevel>`` **(1)** – the report level of technical checks as :term:`nsset:reportlevelType`.
 
 .. code-block:: xml

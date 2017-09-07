@@ -5,7 +5,7 @@
 Info contact
 =============
 
-A contact info :ref:`command <struct-command>` is used to view details of a contact.
+A contact info :ref:`command <struct-command>` is used to view details of a contact.
 
 The contact info command is an ``info`` element in the ``contact`` namespace
 (``http://www.nic.cz/xml/epp/contact-1.6``).
@@ -63,7 +63,7 @@ See also :ref:`succ-fail`.
 
 .. _contact-infdata:
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<contact:infData>``  which declares the ``contact`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
@@ -82,8 +82,8 @@ and it contains the following child elements:
       * ``identifiedContact``
       * ``validatedContact``
       * ``mojeidContact``
-   * ``@lang`` – language of the state description as a :term:`xs:language` (default: ``en``),
-   * element content: the state description as a :term:`xs:normalizedString`,
+   * ``@lang`` – language of the state description as a :term:`xs:language` (default: ``en``),
+   * element content: the state description as a :term:`xs:normalizedString`,
 * ``<contact:postalInfo>`` **(1)** – contact's postal information:
    * ``<contact:name>`` **(0..1)** – the person name as :term:`contact:postalLineType`,
    * ``<contact:org>`` **(0..1)** – the organization name as :term:`contact:optPostalLineType`,
@@ -95,7 +95,7 @@ and it contains the following child elements:
       * ``<contact:cc>`` **(0..1)** – the country code as :term:`contact:ccType`,
 * ``<contact:voice>`` **(0..1)** – the phone number as :term:`contact:e164StringType`,
 * ``<contact:fax>`` **(0..1)** – the fax number as :term:`contact:e164StringType`,
-* ``<contact:email>`` **(0..1)** – a comma-separated list of email addresses as :term:`contact:emailCommaListType`,
+* ``<contact:email>`` **(0..1)** – a comma-separated list of email addresses as :term:`contact:emailCommaListType`,
 * ``<contact:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
 * ``<contact:clID>`` **(1)** – the designated registrar's handle as :term:`eppcom:clIDType`,
 * ``<contact:crID>`` **(1)** – the handle of the registrar who created this contact as :term:`eppcom:clIDType`,
@@ -104,7 +104,7 @@ and it contains the following child elements:
 * ``<contact:upDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last update as :term:`xs:dateTime`,
 * ``<contact:trDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last transfer as :term:`xs:dateTime`,
 * ``<contact:disclose>`` **(0..1)** – contact information disclosure settings:
-   * ``@flag`` **(R)** – disclose flag as a :term:`xs:boolean`: ``0`` – listed items are hidden, ``1`` – listed items are published,
+   * ``@flag`` **(R)** – disclose flag as a :term:`xs:boolean`: ``0`` – listed items are hidden, ``1`` – listed items are published,
    * ``<contact:addr/>`` **(0..1)** – the address disclosure setting as an empty element,
    * ``<contact:voice/>`` **(0..1)** – the voice disclosure setting as an empty element,
    * ``<contact:fax/>`` **(0..1)** – the fax disclosure setting as an empty element,
@@ -112,14 +112,14 @@ and it contains the following child elements:
    * ``<contact:vat/>`` **(0..1)** – the VAT number disclosure setting as an empty element,
    * ``<contact:ident/>`` **(0..1)** – the identity document disclosure setting as an empty element,
    * ``<contact:notifyEmail/>`` **(0..1)** – the notification email disclosure setting as an empty element,
-* ``<contact:vat>`` **(0..1)** – the :term:`VAT`-payer identifier as a :term:`contact:vatT`,
+* ``<contact:vat>`` **(0..1)** – the :term:`VAT`-payer identifier as a :term:`contact:vatT`,
 * ``<contact:ident>`` **(0..1)** – identity-document identification:
    * ``@type`` **(R)** – the type of the identity document as one of values:
      ``op`` (identity card number), ``passport`` (passport number),
      ``mpsv`` (number from the Ministry of Labour and Social Affairs),
      ``ico`` (company number), ``birthday`` (the date of birth),
-   * element content: the identification number as a :term:`contact:identValueT`,
-* ``<contact:notifyEmail>`` **(0..1)** – a comma-separated list of email addresses for notification as :term:`contact:emailCommaListType`.
+   * element content: the identification number as a :term:`contact:identValueT`,
+* ``<contact:notifyEmail>`` **(0..1)** – a comma-separated list of email addresses for notification as :term:`contact:emailCommaListType`.
 
 .. code-block:: xml
    :caption: Example

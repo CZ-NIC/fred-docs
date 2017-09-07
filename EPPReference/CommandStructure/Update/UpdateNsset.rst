@@ -5,7 +5,7 @@ Update nsset
 =============
 
 
-A nsset update :ref:`command <struct-command>` is used to alter details of a nsset.
+A nsset update :ref:`command <struct-command>` is used to alter details of a nsset.
 
 The nsset update command is an ``update`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
@@ -21,20 +21,20 @@ Command element structure
 The ``<nsset:update>`` element must declare the ``nsset`` namespace
 and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
-* ``<nsset:id>`` **(1)**  – a nsset handle as :term:`fredcom:objIDType`,
-* ``<nsset:add>`` **(0..1)** – a list of items that will be added to this nsset:
+* ``<nsset:id>`` **(1)**  – a nsset handle as :term:`fredcom:objIDType`,
+* ``<nsset:add>`` **(0..1)** – a list of items that will be added to this nsset:
 
-   * ``<nsset:ns>`` **(0..10)** – a nameserver given by:
-      * ``<nsset:name>`` **(1)** – a nameserver hostname as :term:`eppcom:labelType`,
-      * ``<nsset:addr>`` **(0..n)** – a namesever's IP address as :term:`nsset:addrStringType`,
-   * ``<nsset:tech>`` **(0..n)** –  a handle of a contact that will be added
-     as a technical contact as :term:`fredcom:objIDType`,
+   * ``<nsset:ns>`` **(0..10)** – a nameserver given by:
+      * ``<nsset:name>`` **(1)** – a nameserver hostname as :term:`eppcom:labelType`,
+      * ``<nsset:addr>`` **(0..n)** – a namesever's IP address as :term:`nsset:addrStringType`,
+   * ``<nsset:tech>`` **(0..n)** –  a handle of a contact that will be added
+     as a technical contact as :term:`fredcom:objIDType`,
 
-* ``<nsset:rem>`` **(0..1)** – a list of items that will be removed
+* ``<nsset:rem>`` **(0..1)** – a list of items that will be removed
   from this nsset:
 
-   * ``<nsset:name>`` **(0..n)** – a nameserver hostname as :term:`eppcom:labelType`,
-   * ``<nsset:tech>`` **(0..n)** – a handle of nsset's technical contact as :term:`fredcom:objIDType`,
+   * ``<nsset:name>`` **(0..n)** – a nameserver hostname as :term:`eppcom:labelType`,
+   * ``<nsset:tech>`` **(0..n)** – a handle of nsset's technical contact as :term:`fredcom:objIDType`,
 
 * ``<nsset:chg>`` **(0..1)** – the new values of nsset attributes
   that will be replaced by this update. Omitted attributes will remain unchanged.
@@ -85,7 +85,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.

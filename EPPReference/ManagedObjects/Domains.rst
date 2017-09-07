@@ -4,7 +4,7 @@
 Domains
 -------
 
-A domain contains information which represents a regular domain or
+A domain contains information which represents a regular domain or
 an :term:`ENUM` domain.
 
 Namespace: \http://www.nic.cz/xml/epp/domain-1.4 |br|
@@ -31,10 +31,10 @@ the following attributes:
    The :ref:`handle <mngobj-handle-syntax>`\ (s) of zero or more administrative contact(s).
 
 ``nsset``
-   The :ref:`handle <mngobj-handle-syntax>` of a nameserver set.
+   The :ref:`handle <mngobj-handle-syntax>` of a nameserver set.
 
 ``keyset``
-   The :ref:`handle <mngobj-handle-syntax>` of a DNSSEC-key set.
+   The :ref:`handle <mngobj-handle-syntax>` of a DNSSEC-key set.
 
 ``exDate``
    The date of domain name expiration.
@@ -43,7 +43,7 @@ the following attributes:
    The date of the expiration of ENUM domain validation.
 
 ``publish`` :sup:`ENUM only` :sup:`+ DEPRECATED`
-   Flag of publishing an ENUM domain in a public ENUM directory.
+   Flag of publishing an ENUM domain in a public ENUM directory.
 
    This attribute has currently no meaning for the server and it will be removed
    in the future. Use of this attribute is discouraged.
@@ -53,7 +53,7 @@ the following attributes:
 Object states
 ^^^^^^^^^^^^^^^^^
 
-A domain can have one or more of the following statuses:
+A domain can have one or more of the following statuses:
 
 * ``ok`` – no other states are set
 * ``serverDeleteProhibited`` – deletion of the domain is forbidden
@@ -74,7 +74,7 @@ A domain can have one or more of the following statuses:
 Command-response mapping
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-For command-response mapping see a specific command syntax description:
+For command-response mapping see a specific command syntax description:
 
 * :doc:`domain:check </EPPReference/CommandStructure/Check/CheckDomain>`
 * :doc:`domain:create </EPPReference/CommandStructure/Create/CreateDomain>`
@@ -119,9 +119,9 @@ Command extensions
 Command extensions are extensions in the XPath :samp:`/epp/command/extension/*:*`.
 
 According to the general requirements of the standard, the ``<extension>``
-element is optional but if used then it must contain a sequence of one or more
+element is optional but if used then it must contain a sequence of one or more
 elements (any namespace). The FRED EPP server requires the ``<extension>``
-element to have a single child at most.
+element to have a single child at most.
 
 These extensions are used with the following commands:
 
@@ -130,7 +130,7 @@ These extensions are used with the following commands:
 * :doc:`domain:renew </EPPReference/CommandStructure/RenewDomain>`.
 
 .. code-block:: xml
-   :caption: Example of a command with an extension
+   :caption: Example of a command with an extension
 
    <?xml version="1.0" encoding="utf-8" standalone="no"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -164,15 +164,15 @@ Response extensions
 Response extensions are extensions in the XPath :samp:`/epp/response/extension/*:*`.
 
 According to the general requirements of the standard, the ``<extension>``
-element is optional but if used then it must contain a sequence of one or more
+element is optional but if used then it must contain a sequence of one or more
 elements (any namespace). The FRED EPP server requires the ``<extension>``
-element to have a single child at most.
+element to have a single child at most.
 
 These extensions are used only in response to the
 :doc:`domain:info </EPPReference/CommandStructure/Info/InfoDomain>` command.
 
 .. code-block:: xml
-   :caption: Example of a response with an extension
+   :caption: Example of a response with an extension
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"

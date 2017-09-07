@@ -5,10 +5,10 @@
 Delete keyset
 ==============
 
-A keyset delete :ref:`command <struct-command>` is used to delete a keyset
+A keyset delete :ref:`command <struct-command>` is used to delete a keyset
 whose status allows it to be deleted.
 
-The keyset delete command is a ``delete`` element in the ``keyset`` namespace
+The keyset delete command is a ``delete`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
 
 The command must be contained in the ``<delete>`` command type.
@@ -49,7 +49,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.

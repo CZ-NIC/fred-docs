@@ -5,10 +5,10 @@
 Delete nsset
 ==============
 
-A nsset delete :ref:`command <struct-command>` is used to delete a nsset
+A nsset delete :ref:`command <struct-command>` is used to delete a nsset
 whose status allows it to be deleted.
 
-The nsset delete command is a ``delete`` element in the ``nsset`` namespace
+The nsset delete command is a ``delete`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
 
 The command must be contained in the ``<delete>`` command type.
@@ -49,7 +49,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.

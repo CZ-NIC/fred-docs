@@ -12,7 +12,7 @@ All messages must begin with an **XML prolog** to:
 * identify the version of XML that is being used (`1.0 or 1.1
   <https://www.w3.org/TR/xml11/#sec-xml11>`_),
 * identify the character encoding of the message (optional), and
-* provide a hint to an XML parser that an external schema file is needed
+* provide a hint to an XML parser that an external schema file is needed
   to validate the XML instance (optional).
 
 .. code-block:: xml
@@ -21,10 +21,10 @@ All messages must begin with an **XML prolog** to:
    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 
 .. TODO vyzkoušet, jestli server zvládne zpracovat jinou verzi XML
-   a jiné kódování
-   + doporučení co používat a co ne
+   a jiné kódování
+   + doporučení co používat a co ne
    NOTE omezeno knihovnou libxml2
-   NOTE vetsinu kodovani to zvladne, problem byl s GB...cosi, nejakymi asijskymi,
+   NOTE vetsinu kodovani to zvladne, problem byl s GB...cosi, nejakymi asijskymi,
    evropska (Windows/IBM/ISO/UTF) to zvlada
 
 .. Note::
@@ -32,7 +32,7 @@ All messages must begin with an **XML prolog** to:
    UTF-8 is the recommended and default character encoding for use with EPP.
 
    If the document requires an external definition
-   (such as a schema) to be complete (for example to determine default values
+   (such as a schema) to be complete (for example to determine default values
    for absent optional attributes), then it is *not standalone*.
 
 After the prolog, the **root element** follows and identifies the protocol and
@@ -56,25 +56,25 @@ client-side XML validation.
 
 .. Note:: It is customary in the FRED and in the examples of this publication
    to declare this namespace as the default namespace (the one which does not
-   have a prefix).
+   have a prefix).
 
-   A namespace can be used for the element, at which it was declared,
+   A namespace can be used for the element, at which it was declared,
    and all its descendants and their attributes.
    `More on the scoping of namespaces.
    <https://www.w3.org/TR/REC-xml-names/#scoping-defaulting>`_
 
 
 
-The singular child of the ``<epp>`` element determines the **type of a message**
+The singular child of the ``<epp>`` element determines the **type of a message**
 and it must be **one of** the following:
 
 * ``<hello>`` – service discovery request (contents and use described
   in :doc:`ServiceDiscovery`),
 * ``<greeting>`` – service discovery reply (contents and use described
   in :doc:`ServiceDiscovery`),
-* ``<command>`` – container for a standard EPP command (contents and use
+* ``<command>`` – container for a standard EPP command (contents and use
   described in :doc:`Commands`),
-* ``<response>`` – reply to a command (contents and use described
+* ``<response>`` – reply to a command (contents and use described
   in :doc:`Commands`),
 * ``<extension>`` – protocol extension (non-standard request). The protocol
   extensions are described in :doc:`ProtocolExtensions`.
@@ -84,7 +84,7 @@ and it must be **one of** the following:
 .. rubric:: Request-reply mapping of message types
 
 The following table contains an illustration of relationships
-between the message types to clarify which types are *requests* sent by a client
+between the message types to clarify which types are *requests* sent by a client
 and which are *replies* sent by the server.
 
 .. list-table::
@@ -104,8 +104,8 @@ and which are *replies* sent by the server.
      - ``extension``
      - ``response`` [*]_
 
-.. [*] The content of a reply to a protocol extension is defined
-   by the FRED EPP server as a standard response.
+.. [*] The content of a reply to a protocol extension is defined
+   by the FRED EPP server as a standard response.
 
    All FRED protocol extensions are just commands, therefore having
-   the standard response as a reply is sufficient.
+   the standard response as a reply is sufficient.

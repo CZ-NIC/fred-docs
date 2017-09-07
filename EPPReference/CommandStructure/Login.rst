@@ -4,14 +4,14 @@
 Login
 =====
 
-A login :ref:`command <struct-command>` is used to establish and authenticate
-a session with the EPP server. The login command must be sent to the server
+A login :ref:`command <struct-command>` is used to establish and authenticate
+a session with the EPP server. The login command must be sent to the server
 before any other EPP command and identifies and authenticates
 the client identifier to be used by the session.
 
-An EPP session is terminated by a :doc:`Logout` command.
+An EPP session is terminated by a :doc:`Logout` command.
 
-The login command is a ``login`` element in the default namespace
+The login command is a ``login`` element in the default namespace
 (``urn:ietf:params:xml:ns:epp-1.0``).
 
 .. index:: Ⓔlogin, ⒺclID, Ⓔpw, ⒺnewPW, Ⓔoptions, Ⓔversion, Ⓔlang, Ⓔsvcs,
@@ -25,7 +25,7 @@ The ``<login>`` element contains the following child elements:
 * ``<clID>`` **(1)** – the client identifier as :term:`eppcom:clIDType`,
 * ``<pw>`` **(1)** – the client's plain-text password as :term:`epp:pwType`,
   case sensitive,
-* ``<newPW>`` **(0..1)** – a new password to be used for subsequent login
+* ``<newPW>`` **(0..1)** – a new password to be used for subsequent login
   commands as :term:`epp:pwType`, case sensitive,
 * ``<options>`` **(1)** – options of the EPP communication with the server:
 
@@ -84,7 +84,7 @@ The ``<login>`` element contains the following child elements:
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.

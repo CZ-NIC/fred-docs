@@ -4,11 +4,11 @@
 Poll acknowledgement
 ====================
 
-A poll acknowledgement :ref:`command <struct-command>` is used to confirm
-that a message has been received by the client and can be removed
+A poll acknowledgement :ref:`command <struct-command>` is used to confirm
+that a message has been received by the client and can be removed
 from the queue on the server.
 
-The poll command is a ``poll`` element in the default namespace
+The poll command is a ``poll`` element in the default namespace
 (``urn:ietf:params:xml:ns:epp-1.0``).
 
 .. index:: Ⓔpoll, ⓐop, ⓐmsgID
@@ -20,10 +20,10 @@ The ``<poll/>`` **(1)** element must be empty and contain only attributes:
 
 * ``@op`` **(R)** – poll operation; must equal ``ack`` to acknowledge the reading
   of the message,
-* ``@msgID`` – the identification number of a message to be confirmed
+* ``@msgID`` – the identification number of a message to be confirmed
   as :term:`eppcom:minTokenType`; required with ``@op = 'ack'``;
   this is the current message identifier returned in :ref:`response to
-  a poll request <struct-pollreq-response>`.
+  a poll request <struct-pollreq-response>`.
 
 .. code-block:: xml
    :caption: Example

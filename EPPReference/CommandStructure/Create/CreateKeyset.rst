@@ -5,9 +5,9 @@
 Create keyset
 ==============
 
-A keyset create :ref:`command <struct-command>` is used to register a new keyset.
+A keyset create :ref:`command <struct-command>` is used to register a new keyset.
 
-The keyset create command is a ``create`` element in the ``keyset`` namespace
+The keyset create command is a ``create`` element in the ``keyset`` namespace
 (``http://www.nic.cz/xml/epp/keyset-1.3``).
 
 The command must be contained in the ``<create>`` command type.
@@ -22,15 +22,15 @@ The ``<keyset:create>`` element must declare the ``keyset`` :doc:`namespace and 
 </EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
 
 * ``<keyset:id>`` **(1)** – the keyset handle as :term:`fredcom:objIDCreateType`.
-* ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
+* ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
   for allowed values <mng-keyset-attr>`) given by:
 
    * ``<keyset:flags>`` **(1)** – flags as :term:`xs:unsignedShort`,
    * ``<keyset:protocol>`` **(1)** – protocol as :term:`xs:unsignedByte`,
    * ``<keyset:alg>`` **(1)** – algorithm as :term:`xs:unsignedByte`,
    * ``<keyset:pubKey>`` **(1)** – public key as :term:`keyset:keyT`,
-* ``<keyset:tech>`` **(1..10)** –  a handle of a contact that will be assigned
-  as a technical contact as :term:`fredcom:objIDType`,
+* ``<keyset:tech>`` **(1..10)** –  a handle of a contact that will be assigned
+  as a technical contact as :term:`fredcom:objIDType`,
 * ``<keyset:authInfo>`` **(0..1)** – authorization information (transfer password)
   as :term:`fredcom:authInfoType`; if omitted, the password will be generated
   by the server.
@@ -81,7 +81,7 @@ the result, response data and transaction identification.
 
 See also :ref:`succ-fail`.
 
-The response data element (``<resData>``) contains a single child element
+The response data element (``<resData>``) contains a single child element
 ``<keyset:creData>``  which declares the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and it contains the following child elements:
 

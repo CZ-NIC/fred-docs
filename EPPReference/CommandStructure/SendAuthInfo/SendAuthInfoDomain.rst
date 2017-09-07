@@ -6,14 +6,14 @@
 Send auth.info for domain
 =========================
 
-A domain sendAuthInfo command is used to provide the transfer password
-of a domain to the registrant and the administrative contacts of the domain.
+A domain sendAuthInfo command is used to provide the transfer password
+of a domain to the registrant and the administrative contacts of the domain.
 
 The client sends only the request for the provision to the Registry and
 the Registry sends the password to the email of the registrant and
 of all administrative contacts.
 
-This command is a part of the :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
+This command is a part of the :doc:`protocol extension </EPPReference/ProtocolBasics/ProtocolExtensions>`
 defined by the FRED EPP server.
 
 The command must be contained in the ``<fred:sendAuthInfo>`` command type.
@@ -26,7 +26,7 @@ Command element structure
 The ``<domain:sendAuthInfo>`` element must declare the ``domain`` namespace
 and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
-* ``<domain:name>`` **(1)**  – a domain name as :term:`eppcom:labelType`.
+* ``<domain:name>`` **(1)**  – a domain name as :term:`eppcom:labelType`.
 
 .. code-block:: xml
    :caption: Example
@@ -59,7 +59,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 Response element structure
 --------------------------
 
-The FRED EPP server responds with a :ref:`plain result message <plain-result>`
+The FRED EPP server responds with a :ref:`plain result message <plain-result>`
 which does not contain any response data (no ``<resData>``).
 
 See also :ref:`succ-fail`.
