@@ -49,7 +49,9 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
       * ``<contact:ident/>`` **(0..1)** – identity document disclosure setting as an empty element,
       * ``<contact:notifyEmail/>`` **(0..1)** – notification email disclosure setting as an empty element.
 
-      .. Note:: Whether the new disclosure settings will have an effect, depends on the disclosure policy of the server.
+      .. Note:: Omitted items will be reset by the server according to its data-collection policy.
+
+         Whether the new disclosure settings will have an effect, also depends on the server's policy.
 
    * ``<contact:vat>`` **(0..1)** – change :term:`VAT`-payer identifier as a :term:`contact:vatT`,
    * ``<contact:ident>`` **(0..1)** – change identity-document identification:

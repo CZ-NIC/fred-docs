@@ -67,7 +67,7 @@ and it contains the following child elements:
 
 * ``<domain:name>`` **(1)** – the domain name as :term:`eppcom:labelType`,
 * ``<domain:roid>`` **(1)** – the domain repository identifier as :term:`eppcom:roidType`,
-* ``<domain:status>`` **(0..13)** – the :ref:`domain object state(s) <mng-domain-stat>`:
+* ``<domain:status>`` **(1..n)** – the :ref:`domain object state(s) <mng-domain-stat>`:
    * ``@s`` **(R)** – the state name as one of values:
       * ``ok``
       * ``serverDeleteProhibited``

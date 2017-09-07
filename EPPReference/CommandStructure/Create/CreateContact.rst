@@ -44,7 +44,9 @@ The ``<contact:create>`` element must declare the ``contact`` :doc:`namespace an
    * ``<contact:ident/>`` **(0..1)** – identity document disclosure setting as an empty element,
    * ``<contact:notifyEmail/>`` **(0..1)** – notification email disclosure setting as an empty element.
 
-   .. Note:: Whether the disclosure settings will have an effect, depends on the disclosure policy of the server.
+   .. Note:: Omitted items will be set by the server according to its data-collection policy.
+
+      Whether the new disclosure settings will have an effect, also depends on the server's policy.
 
 * ``<contact:vat>`` **(0..1)** – :term:`VAT`-payer identifier as a :term:`contact:vatT`,
 * ``<contact:ident>`` **(0..1)** – identity-document identification:

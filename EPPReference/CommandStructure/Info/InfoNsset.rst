@@ -64,9 +64,9 @@ The response data element (``<resData>``) contains a single child element
 ``<nsset:infData>``  which declares the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
-* ``<nsset:status>`` **(0..6)** the :ref:`nsset object state(s) <mng-nsset-stat>`:
 * ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDType`,
 * ``<nsset:roid>`` **(1)** – the nsset repository identifier as :term:`eppcom:roidType`,
+* ``<nsset:status>`` **(1..n)** – the :ref:`nsset object state(s) <mng-nsset-stat>`:
    * ``@s`` **(R)** – the state name as one of values:
       * ``ok``
       * ``linked``

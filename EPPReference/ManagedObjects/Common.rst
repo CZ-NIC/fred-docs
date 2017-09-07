@@ -41,9 +41,12 @@ Each managed object has the following attributes:
    Authorization information (transfer password) as :term:`fredcom:authInfoType`.
 
 ``status``
-   Current object status (possible values are object-specific).
+   Current object status(es) (possible values are object-specific).
 
-   Statuses are set by the server and cannot be altered by a client.
+   Statuses are set by the server and cannot be directly altered by a client.
+
+   An object can have one or more statuses but they can appear only in certain
+   combinations which are not contradictory.
 
 .. _mngobj-domain-syntax:
 

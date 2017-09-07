@@ -27,7 +27,8 @@ the following attributes:
       Name-server hostname. See :ref:`mngobj-domain-syntax`.
 
    ``addr``
-      Name-server IP address(es). (Glue.)
+      Name-server IP address(es). (`Glue record.
+      <https://en.wikipedia.org/wiki/Domain_Name_System#Circular_dependencies_and_glue_records>`_)
 
       At least one IP address must be present if and only if the hostname is in the generated zone.
 

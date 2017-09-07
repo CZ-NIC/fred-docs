@@ -64,9 +64,9 @@ The response data element (``<resData>``) contains a single child element
 ``<keyset:infData>``  which declares the ``keyset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
-* ``<keyset:status>`` **(0..6)** the :ref:`keyset object state(s) <mng-keyset-stat>`:
 * ``<keyset:id>`` **(1)** – the keyset handle as :term:`fredcom:objIDType`,
 * ``<keyset:roid>`` **(1)** – the keyset repository identifier as :term:`eppcom:roidType`,
+* ``<keyset:status>`` **(1..n)** – the :ref:`keyset object state(s) <mng-keyset-stat>`:
    * ``@s`` **(R)** – the state name as one of values:
       * ``ok``
       * ``linked``

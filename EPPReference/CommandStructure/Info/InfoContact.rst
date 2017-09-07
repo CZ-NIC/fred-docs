@@ -67,9 +67,9 @@ The response data element (``<resData>``) contains a single child element
 ``<contact:infData>``  which declares the ``contact`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`
 and it contains the following child elements:
 
-* ``<contact:status>`` **(0..10)** the :ref:`contact object state(s) <mng-contact-stat>`:
 * ``<contact:id>`` **(1)** – the contact handle as :term:`fredcom:objIDType`,
 * ``<contact:roid>`` **(1)** – the contact repository identifier as :term:`eppcom:roidType`,
+* ``<contact:status>`` **(1..n)** – the :ref:`contact object state(s) <mng-contact-stat>`:
    * ``@s`` **(R)** – state name as one of values:
       * ``ok``
       * ``linked``
