@@ -50,7 +50,7 @@ Zone file generation
 
 **Typically launched**: every 30 minutes
 
-**Real run time** [CZ.NIC]: ?
+**Real run time** [CZ.NIC]: ~ 5 min (.cz zone)
 
 **Required FRED components**:
 
