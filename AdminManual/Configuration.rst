@@ -238,8 +238,7 @@ A description of parameters by name (also :ref:`see the figure below <fig-expir
   marked for deletion,
   default: 6
 * ``handle_registration_protection_period`` – for how many months is a handle
-  (contact, nsset, keyset) protected before it is deleted and
-  can be re-registered,
+  (of a contact, nsset or keyset) protected before it can be re-registered,
   default: 2
 * ``validation_notify1_period`` :sup:`ENUM` – how many days before validation
   expiry the owner shoud be notified for the first time, negative integer,
