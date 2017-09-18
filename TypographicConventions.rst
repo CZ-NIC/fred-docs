@@ -50,8 +50,9 @@ according to the language of the snippet. Example:
 Special characters
 ------------------
 
-The only characters that have a special meaning are angle brackets < >
-used in some code illustrations, like this:
+.. rubric:: Angle brackets < >
+
+Angle brackets are sometimes used in code illustrations, like this:
 
 .. code-block:: bash
 
@@ -62,7 +63,13 @@ The ``<arguments>`` part suggests that program arguments should follow.
 The text inside the brackets gives a hint on the type of arguments, however
 if you are uncertain, consult the program help.
 
-.. Note:: Concrete arguments are usually entered *without* the brackets!
+Concrete arguments are usually entered *without* the brackets!
+
+.. rubric:: Square brackets [ ]
+
+Square brackets usually signify something optional, like command arguments
+that may be used (or not used), unless specified otherwise. Again, if you decide
+to use an optional argument, enter it *without* the brackets.
 
 Admonitions
 -----------
