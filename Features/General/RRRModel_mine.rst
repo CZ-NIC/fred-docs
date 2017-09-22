@@ -1,4 +1,4 @@
-
+:orphan:
 
 .. DNS requires an association of two or more nameservers (primary and backup)
    with a domain => nameserver set
