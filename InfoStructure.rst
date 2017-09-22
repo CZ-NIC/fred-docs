@@ -53,7 +53,7 @@ Blackbox model
 
 Top-level components
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: Architecture/TopLevelComponents.rst
+.. include:: Architecture/TopLevelComponents/index.rst
    :start-after: .. struct-start
    :end-before: .. struct-end
 

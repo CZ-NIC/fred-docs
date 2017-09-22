@@ -89,7 +89,7 @@ through FRED applications and modules (i.e. CORBA clients, see the figure below)
 
 .. _fig-arch-logger:
 
-.. figure:: _graphics/schema-logger.png
+.. figure:: /Architecture/_graphics/schema-logger.png
    :alt:
    :align: center
    :figwidth: 100%
@@ -182,7 +182,7 @@ also by the CORBA clients :ref:`WebAdmin <FRED-Arch-clients-webadmin>` and
 
 .. _fig-arch-mailer:
 
-.. figure:: _graphics/schema-mailer.png
+.. figure:: /Architecture/_graphics/schema-mailer.png
    :alt:
    :align: center
    :figwidth: 100%

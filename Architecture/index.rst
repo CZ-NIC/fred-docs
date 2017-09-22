@@ -31,4 +31,4 @@ Terms and definitions can be found :ref:`in the glossary <glossary>`.
    :maxdepth: 2
 
    BlackboxModel
-   TopLevelComponents
+   TopLevelComponents/index

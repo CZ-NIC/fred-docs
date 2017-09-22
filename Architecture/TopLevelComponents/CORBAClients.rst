@@ -94,7 +94,7 @@ This program shares configuration with C++ daemons.
 
 .. _fig-arch-fred-admin:
 
-.. figure:: _graphics/schema-fred-admin.png
+.. figure:: /Architecture/_graphics/schema-fred-admin.png
    :alt:
    :align: center
    :figwidth: 100%
