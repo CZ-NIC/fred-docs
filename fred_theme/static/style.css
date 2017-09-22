@@ -162,6 +162,11 @@ div.code-block-caption {
    /*font-weight: bold;*/
 }
 
+/* TOCtree caption */
+.toctree-wrapper .caption-text {
+   font-weight: bold;
+}
+
 /* Emphasize current topic in sidebar menu */
 li.current > a, a.current {
    color: #555555;
