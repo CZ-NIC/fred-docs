@@ -66,6 +66,8 @@ Zone file generation
 Administration of registrable objects
 -------------------------------------
 
+.. _cronjob-regular:
+
 Regular procedure
 ^^^^^^^^^^^^^^^^^
 

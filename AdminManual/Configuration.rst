@@ -122,9 +122,21 @@ configuration file named :file:`pyfred.conf`.
   servers as modules:
 
    * :file:`genzone` – operations for generating zone files,
+
+      * standalone configuration file [CZ.NIC]: :file:`/etc/fred/pyfred-genzone.conf`
+
    * :file:`mailer` – operations for sending email,
+
+      * standalone configuration file [CZ.NIC]: :file:`/etc/fred/pyfred-mailer.conf`
+
    * :file:`filemanager` – operations for managing files (mostly email attachments),
+
+      * standalone configuration file [CZ.NIC]: :file:`/etc/fred/pyfred-filemanager.conf`
+
    * :file:`techcheck` – operations for running technical checks of name servers.
+
+      * standalone configuration file [CZ.NIC]: :file:`/etc/fred/pyfred-techcheck.conf`
+
 
 
 Web administration server
@@ -156,7 +168,7 @@ Located in :file:`@PREFIX@/bin`
 Database management
 ~~~~~~~~~~~~~~~~~~~
 * :file:`fred-dbmanager` (in :file:`@PREFIX@/sbin`) – Basic database management
-  script (no config.file)
+  script (no config. file)
 
 Database search
 ~~~~~~~~~~~~~~~
@@ -166,13 +178,15 @@ Located in :file:`@PREFIX@/bin`
 * :file:`mailer_admin_client` – search in sent email
 * :file:`techcheck_admin_client` – search in executed technical checks
 
+TODO: Apache modules
+^^^^^^^^^^^^^^^^^^^^
 
 .. todo:: where to find configuration of Apache modules
 
 
 .. _config-rules:
 
-Rules-related configurables
+Configurable database values
 ----------------------------
 
 A part of configuration relates to the rules of registration, it states e.g.
@@ -188,7 +202,9 @@ Command to change a parameter::
       --parameter_name=<name> \
       --parameter_value=<value>
 
-A description of parameters by name (also :ref:`see the figure below <fig-expiration-events>` for an illustration of domain expiration periods):
+Descriptions of parameters ordered by name (also :ref:`see the figure below
+<fig-domain-lifecycle>` for an illustration of periods related to the domain
+life cycle):
 
 * ``expiration_notify_period`` – how many days before a domain expiration
   is the owner notified about the expiration, negative integer,
@@ -205,22 +221,34 @@ A description of parameters by name (also :ref:`see the figure below <fig-expir
   default: 61
 
    .. Note:: The system does not check that these intervals correctly follow
-      each other. The following figure, however, gives an idea about how
+      one another. The following figure, however, gives an idea about how
       the intervals should be organized in time.
 
-      .. _fig-expiration-events:
+      .. _fig-domain-lifecycle:
 
-      .. figure:: _graphics/expiration_events.png
-         :alt: Illustration of events and periods related to domain expiration
+      .. figure:: _graphics/domain_lifecycle.png
+         :alt: Illustration of events and periods related to the domain life cycle
          :align: center
 
-         Events and periods related to domain expiration
+         Events and periods related to the domain life cycle
 
-         Vertical bars on the time line signify notification events and
-         the crosses mean action events taken on domains.
+         *Vertical bars* on the time line signify notification events and
+         *crosses* mean action events taken on domains.
 
-* ``regular_day_procedure_period`` – an hour in a day to run the regular
-  procedure (24-hour system, 0 means 00:00, 14 means 14:00 etc.),
+* ``handle_registration_protection_period`` – for how many months is a handle
+  (of a contact, nsset or keyset) protected before it can be re-registered,
+  default: 2
+* ``object_registration_protection_period`` – how many months an object
+  (nsset, keyset) must be unedited and unassigned to be considered idle and
+  marked for deletion,
+  default: 6
+* ``outzone_unguarded_email_warning_period`` – for how many days after expiration
+  may customer support enter additional email addresses in Daphne before the system
+  starts sending warnings about domain exclusion from the zone to them, integer,
+  default: 25
+* ``regular_day_procedure_period`` – an hour in the day when the daily
+  procedure is run (24-hour system, 0 means 00:00, 14 means 14:00 etc.),
+  ??? the value must agree with the :ref:`CRON job setting <cronjob-regular>`,
   default: 0
 * ``regular_day_procedure_zone`` – time zone for periodic tasks,
   default: Europe/Prague
@@ -233,27 +261,24 @@ A description of parameters by name (also :ref:`see the figure below <fig-expir
    <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>`_
    (the *TZ* column).
 
-* ``object_registration_protection_period`` – how many months an object
-  (nsset, keyset) must be unedited and unassigned to be considered idle and
-  marked for deletion,
-  default: 6
-* ``handle_registration_protection_period`` – for how many months is a handle
-  (of a contact, nsset or keyset) protected before it can be re-registered,
-  default: 2
-* ``validation_notify1_period`` :sup:`ENUM` – how many days before validation
-  expiry the owner shoud be notified for the first time, negative integer,
+* ``regular_day_outzone_procedure_period`` – an hour in the day when the outzone
+  procedure is run (24-hour system, 0 means 00:00, 14 means 14:00 etc.),
+  ??? the value must agree with a CRON job setting,
+  default: 14
+* ``roid_suffix`` – suffix used in **r**\ epository **o**\ bject **id**\ entifiers
+  which are :doc:`assigned to registrable objects </EPPReference/ManagedObjects/Common>`
+  by the Registry;
+  this suffix must be unique world-wide and therefore it is usually allocated
+  to the Registry by the IANA organization,
+  default: EPP
+* ``validation_notify1_period`` :sup:`ENUM domains` – how many days before validation
+  expiry the owner should be notified for the first time, negative integer,
   default: -30
-* ``validation_notify2_period`` :sup:`ENUM` – how many days before validation
-  expiry the owner shoud be notified for the second time, negative integer,
+* ``validation_notify2_period`` :sup:`ENUM domains` – how many days before validation
+  expiry the owner should be notified for the second time, negative integer,
   default: -15
 
-.. todo:: Other values
-
-   * roid_suffix (default: EPP)
-   * regular_day_outzone_procedure_period (default: 14)
-   * outzone_unguarded_email_warning_period (default: 25)
-
-.. todo:: Pricing configurables
+.. todo:: Request usage configurables
 
    * table:request_fee_parameter (.count_free_base+.count_free_per_domain)
    * table:request_fee_registrar_parameter (.request_price_limit)

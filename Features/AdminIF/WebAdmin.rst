@@ -83,7 +83,7 @@ Manage domains
    * Change blocking of this domain
    * Unblock this domain
    * Blacklist and delete this domain
-
+* Import emails for out-of-zone notification
 
 
 Browse contacts
