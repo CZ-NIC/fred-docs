@@ -8,3 +8,4 @@ Concept descriptions
 
    Transfer
    Teccheck
+   ContactMerger

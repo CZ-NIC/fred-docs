@@ -88,6 +88,8 @@ can perform registrations and modify existing data in the Registry.
 
 .. include:: ContactVerification.rst
 
+.. include:: ContactMerger.rst
+
 .. include:: ObjectLocking.rst
 
 .. include:: DomainNameRestrictions.rst

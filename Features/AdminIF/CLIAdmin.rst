@@ -31,6 +31,8 @@ Manage objects
 * Keep object states up-to-date and users notified about important events (periodical)
 * Remove expired and inactive objects (periodical)
 * Remind contacts to review their contact details (periodical)
+* Merge a pair of duplicate contacts (manual)
+* Merge a set of duplicate contacts (automatic)
 
 Manage finance
 ^^^^^^^^^^^^^^

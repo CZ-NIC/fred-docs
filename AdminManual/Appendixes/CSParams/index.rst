@@ -445,6 +445,28 @@ Email type: ``annual_contact_reminder``
    * ``nssets`` – list of nssets where the contact is a technical contact,
    * ``keysets`` – list of keysets where the contact is a technical contact.
 
+Email type: ``merge_contacts_auto``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* sent to the contact after an automatic merger of its duplicates
+* common passed parameters: :ref:`defaults.* <csparams-defaults>`
+* additional parameters:
+   * ``dst_contact_handle`` – handle of the destination contact into which the
+     duplicates have been merged,
+   * ``domain_registrant_list`` – list of handles of domains in which the
+     registrant contact had to be replaced with the destination contact,
+   * ``domain_admin_list`` – list of handles of domains in which some
+     administrative contacts had to be replaced with the destination contact,
+   * ``nsset_tech_list`` – list of handles of nssets in which some technical
+     contacts had to be replaced with the destination contact,
+   * ``keyset_tech_list`` – list of handles of keysets in which some technical
+     contacts had to be replaced with the destination contact,
+   * ``removed_list`` – list of contacts which have been deleted as a result
+     of the merger.
+
+  Values of the lists can be accessed by adding an index number at the end
+  of the parameter name, counting from zero, for example: ``domain_registrant_list.0``
+  for the first item.
+
 .. _csparams-description:
 
 Description of parameters

@@ -170,6 +170,11 @@ procedure is finished)
 
      **Real run time** [CZ.NIC]: ~ 5 s (one iteration)
 
+Automatic contact merger
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. todo:: v2.30 - Contact merger cronjob
+
 Automatic contact verification :sup:`CZ-specific`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
