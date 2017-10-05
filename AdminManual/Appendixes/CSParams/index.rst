@@ -4,8 +4,10 @@
 ClearSilver parameters reference
 --------------------------------
 
-This is a reference of available parameters which are passed to ClearSilver
-templates when generating email based on events in the FRED.
+This is a reference of available parameters which are passed to `ClearSilver
+templates <http://www.clearsilver.net/docs/man_templates.hdf>`_ when generating
+email based on events in the FRED.
+
 The parameters are listed for each email type and there is an index
 with short descriptions of common parameters at the end of this appendix.
 
@@ -349,7 +351,9 @@ Common parameters
    .. _csparams-administrators:
 
    ``administrators``
-      list of administrative contacts
+      list of administrative contacts (items are accessed by adding index
+      number at the end of the parameter name, counting from zero,
+      for example: ``administrators.0`` for the first item)
 
    .. _csparams-authinfo:
 
@@ -440,4 +444,4 @@ Common parameters
    .. _csparams-zone:
 
    ``zone``
-      zone to which the domain in question belongs
+      zone in question (FQDN with the leading dot) ???
