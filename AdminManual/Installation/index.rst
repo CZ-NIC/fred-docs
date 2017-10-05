@@ -33,21 +33,15 @@ This chapter describes how to install the FRED.
 
    .. struct-end
 
-.. contents:: Chapter TOC
-   :local:
+.. toctree::
+   :maxdepth: 2
+   :caption: Chapter TOC
 
-.. include:: SystemReqs.rst
-
-.. include:: BinsUbuntu.rst
-
-.. include:: BinsFedora.rst
-
-.. include:: SourceTar.rst
-
-.. include:: SourceRPM.rst
-
-.. include:: AuxConfig.rst
-
-.. include:: SystemInit.rst
-
-.. include:: Test.rst
+   SystemReqs
+   BinsUbuntu
+   BinsFedora
+   SourceTar
+   SourceRPM
+   AuxConfig
+   SystemInit
+   Test

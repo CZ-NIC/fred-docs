@@ -25,9 +25,9 @@ Administration features
 
 This chapter contains lists of FRED's features related to administration.
 
-.. contents:: Chapter TOC
-   :local:
+.. toctree::
+   :maxdepth: 2
+   :caption: Chapter TOC
 
-.. include:: WebAdmin.rst
-
-.. include:: CLIAdmin.rst
+   WebAdmin
+   CLIAdmin
