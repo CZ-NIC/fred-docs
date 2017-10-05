@@ -30,7 +30,7 @@ Manage objects
 
 * Keep object states up-to-date and users notified about important events (periodical)
 * Remove expired and inactive objects (periodical)
-* Remind contacts to check their contact info (periodical)
+* Remind contacts to review their contact details (periodical)
 
 Manage finance
 ^^^^^^^^^^^^^^

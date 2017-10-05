@@ -183,8 +183,8 @@ Communication
 Registrars
 ----------
 
-Billing the fee for requests
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Generating poll messages about request usage
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Task command**::
 
@@ -204,7 +204,7 @@ Billing the fee for requests
 
 * generates poll messages about the usage of free EPP requests and
   if the registrar exceeded the limit, calculates the price
-  for the requests over limit
+  of the requests over limit
 
 **Configuration**
 
@@ -283,7 +283,7 @@ Invoicing
 Annual contact reminder
 -----------------------
 
-The goal is to remind users to check their contact data and to inform them
+The goal is to remind users to review their contact details and to inform them
 about objects linked to their contact.
 
 **Task command**::
