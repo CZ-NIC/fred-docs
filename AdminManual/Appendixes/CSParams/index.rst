@@ -4,12 +4,15 @@
 ClearSilver parameters reference
 --------------------------------
 
-This is a reference of available parameters which are passed to `ClearSilver
-templates <http://www.clearsilver.net/docs/man_templates.hdf>`_ when generating
-email based on events in the FRED.
+This is a reference of available parameters which are passed to ClearSilver
+templates when generating email based on events in the FRED.
+See also `template syntax in ClearSilver <http://www.clearsilver.net/docs/man_templates.hdf>`_.
 
 The parameters are listed for each email type and there is an index
 with short descriptions of common parameters at the end of this appendix.
+
+Email types can be found by their names in the table ``mail_type`` and
+the templates for each type can be found in the table ``mail_templates``.
 
 .. contents:: Chapter TOC
    :local:
@@ -49,9 +52,30 @@ Email type: ``expiration_notify``
 * additional parameter concerning ENUM domains:
   :ref:`valdate <csparams-valdate>`
 
+Email type: ``expiration_dns_warning_owner``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* sent to the domain owner in response to the upcoming exclusion of a domain
+  from the zone
+* passed parameters: :ref:`defaults.* <csparams-defaults>`,
+  :ref:`domain <csparams-domain>`,
+  :ref:`owner <csparams-owner>`,
+  :ref:`dnsdate <csparams-dnsdate>`,
+  :ref:`exregdate <csparams-exregdate>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`administrators <csparams-administrators>`,
+  :ref:`zone <csparams-zone>`
+* additional parameter concerning ENUM domains:
+  :ref:`valdate <csparams-valdate>`
+
+.. ??? maybe also:
+     :ref:`checkdate <csparams-checkdate>`,
+     :ref:`exdate <csparams-exdate>`,
+     :ref:`nsset <csparams-nsset>`,
+     :ref:`statechangedate <csparams-statechangedate>`,
+
 Email type: ``expiration_dns_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* sent to the domain owner in response to the exclusion of the domain from zone
+* sent to the domain owner in response to the exclusion of a domain from the zone
 * passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
   :ref:`domain <csparams-domain>`,
@@ -209,15 +233,15 @@ Email type: ``notification_update``
      of an object and parameters containing both the old and the new
      value of the attribute are passed in the following manner:
 
-      * ``changes.*.attribute`` indicates a change in an attribute
+      * :samp:`changes.{*}.{attribute}` indicates a change in an attribute
         – if the attribute has changed, it contains the value "``1``";
         otherwise the parameter is not passed,
-      * ``changes.*.attribute.old`` contains the value of the attribute
+      * :samp:`changes.{*}.{attribute}.old` contains the value of the attribute
         before the change (passed only if the attribute has changed),
-      * ``changes.*.attribute.new`` contains the value of the attribute
+      * :samp:`changes.{*}.{attribute}.new` contains the value of the attribute
         after the change (passed only if the attribute has changed).
 
-   * ``changes.object.authinfo`` – indicates that the object's transfer
+   * :samp:`changes.{object}.authinfo` – indicates that the object's transfer
      password has changed,
    * Indication of changes of other attributes is specific for each object type
      as follows.
@@ -315,6 +339,103 @@ Email type: ``notification_delete``
   :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
 
+Email type: ``techcheck``
+^^^^^^^^^^^^^^^^^^^^^^^^^
+* sent if a test in a technical check of a nsset has failed, as a report
+  to technical contacts of the nsset
+* common passed parameters: :ref:`defaults.* <csparams-defaults>`
+* additional parameters:
+   * ``handle`` – handle of the nsset
+   * ``checkdate`` – date on which the technical check was performed
+   * ``ticket`` – check number
+   * ``tests`` – list of datasets with results of the tests which
+     have failed; items in the list have the following attributes:
+
+      * :samp:`tests.*.type` – severity of the test result (``error``/``warning``/``notice``),
+      * :samp:`tests.*.name` – subject of the test,
+      * :samp:`tests.*.ns` – further information about the test result
+        whose content depends on the test subject.
+
+     The content of further information about the result according to the test subject
+     (value of the ``name`` attribute):
+
+      * ``glue_ok`` – the required glue record is missing for the following name servers:
+         - :samp:`tests.*.ns` – list of the name servers,
+      * ``existence`` – following name servers in the nsset are unreachable:
+         - :samp:`tests.*.ns` – list of the name servers,
+      * ``autonomous`` – the nsset does not contain at least two name servers in different autonomous systems:
+         - no more content,
+      * ``presence`` – name server(s) exists which does not contain a record for any of the domains:
+         - :samp:`tests.*.ns` – list of the name servers,
+         - :samp:`tests.*.ns.*.fqdn` – list of the domains for a particular
+           name server of which this name server does not contain a record,
+         - :samp:`tests.*.ns.overfull` – the list of domains is incomplete /
+           there are more domains in the test input for which this name server
+           does not contain a record but they are not all listed (this
+           can be used to insert an ellipsis  - ..." conditionally),
+      * ``authoritative`` – name server is not authoritative for domains:
+         - :samp:`tests.*.ns` – list of the name servers,
+         - :samp:`tests.*.ns.*.fqdn` – list of the domains for a particular
+           name server of which this name server is not authoritative,
+         - :samp:`tests.*.ns.overfull` – the list of domains is incomplete /
+           there are more domains in the test input for which this name server
+           is not authoritative but they are not all listed (this
+           can be used to insert an ellipsis "..." conditionally),
+      * ``heterogenous`` – all name servers in the nsset use the same implementation of dns server:
+         - no more content,
+      * ``notrecursive`` – following name servers in the nsset are recursive:
+         - :samp:`tests.*.ns` – list of the name servers,
+      * ``notrecursive4all`` – following name servers in the nsset answered a query recursively:
+         - :samp:`tests.*.ns` – list of the name servers,
+      * ``dnsseckeychase`` – for the following domains belonging to the nsset, the validity of the dnssec signature could not be verified:
+         - :samp:`tests.*.ns` – list of the domains.
+
+     The original template defines and uses the ``printtest()`` macro which accepts
+     a result dataset (an item from the ``tests`` list) as an argument and
+     prints the results according to the subject (``name``) of the test. Print
+     of the test results is then grouped by severity of failure.
+
+Email type: ``request_block``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* sent to the domain owner / the contact / technical contacts of an object
+  after a :term:`public request` for object (un)blocking has been carried out
+* common passed parameters: :ref:`defaults.* <csparams-defaults>`,
+  :ref:`reqdate <csparams-reqdate>`, :ref:`reqid <csparams-reqid>`,
+  :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
+* additional parameters:
+   * ``otype`` – operation type: ``1`` – blocking, ``2`` – unblocking,
+   * ``rtype`` – request type: ``1`` – all object changes, ``2`` – object transfer.
+
+Email type: ``annual_contact_reminder``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* sent to a contact in response to the upcoming contact registration anniversary
+  as a reminder to check accuracy of contact information in the registry
+* common passed parameters: :ref:`defaults.* <csparams-defaults>`,
+  :ref:`handle <csparams-handle>`
+* additional parameters:
+   * ``organization`` – name of contact's organization,
+   * ``name`` – personal or company name,
+   * ``address`` – address (in a single line),
+   * ``ident_type`` – identity-document identification type:
+      * ``RC`` – birth number,
+      * ``OP`` – personal ID card number,
+      * ``PASS`` – passport number,
+      * ``ICO`` – organization ID number,
+      * ``MPSV`` – MPSV ID (number from the Ministry of Labour and Social Affairs),
+      * ``BIRTHDAY`` – the date of birth,
+   * ``ident_value`` – identity-document identification number,
+   * ``dic`` – VAT-payer identifier,
+   * ``telephone`` – phone number,
+   * ``fax`` – fax number,
+   * ``email`` – email address,
+   * ``notify_email`` – notification email address,
+   * ``registrar_name`` – name of the :term:`designated registrar`,
+   * ``registrar_url`` – website address of the :term:`designated registrar`,
+   * ``registrar_memo_cz`` – additional information provided by the registrar (Czech variant),
+   * ``registrar_memo_en`` – additional information provided by the registrar (English variant),
+   * ``domains`` – list of domains where the contact is the owner,
+   * ``nssets`` – list of nssets where the contact is a technical contact,
+   * ``keysets`` – list of keysets where the contact is a technical contact.
 
 .. _csparams-description:
 
@@ -374,7 +495,7 @@ Common parameters
    .. _csparams-domain:
 
    ``domain``
-      handle of the domain in question
+      domain name in question
 
    .. _csparams-exdate:
 
@@ -390,7 +511,7 @@ Common parameters
    .. _csparams-handle:
 
    ``handle``
-      string object identifier
+      string identifier of the object in question
 
    .. _csparams-owner:
 
@@ -412,12 +533,12 @@ Common parameters
    .. _csparams-reqdate:
 
    ``reqdate``
-      the date when the request was placed (date format dd.mm.YYYY)
+      the date when the public request was placed (date format dd.mm.YYYY)
 
    .. _csparams-reqid:
 
    ``reqid``
-      the identification number of the request by which it can be traced
+      the identification number of the public request by which it can be traced
       in the Registry
 
    .. _csparams-statechangedate:
