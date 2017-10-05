@@ -241,9 +241,7 @@ Blocking registrars over limit
 
 * disconnects all EPP sessions of the blocked registrars
 * if the ``--email`` address is given and registrars were blocked,
-  sends a notification with a list of registrars blocked in this batch
-
-   .. todo:: registrars blocked in this batch or on this day???
+  sends a notification with a list of registrars blocked on this day
 
 .. Note:: In the CZ.NIC, the customer support calls the blocked registrars
    and unblocks their access on demand.
