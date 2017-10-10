@@ -46,14 +46,13 @@ for Registry administration.
 WebAdmin service (Daphne)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This service provides web access for Registry administration. Typically, it is
-used by the Registry customer service.
+This service provides web access to Registry administration. It can be used
+by the Registry customer service for manual administrative tasks.
 
-This component is coded in Python using the CherryPy framework.
+This component is coded in Python using the CherryPy framework which provides
+a self-contained web server.
 
 The service has its own configuration file.
-
-The service is built on a web server engine (any).
 
 .. _FRED-Arch-clients-genzone:
 
