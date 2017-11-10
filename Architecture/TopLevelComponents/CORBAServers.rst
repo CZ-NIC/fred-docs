@@ -96,16 +96,8 @@ fred-logd
 The audit logging daemon or "logger".
 
 This daemon creates audit trail of all user activity that passes
-through FRED applications and modules (i.e. CORBA clients, see the figure below).
-
-.. _fig-arch-logger:
-
-.. figure:: /Architecture/_graphics/schema-logger.png
-   :alt:
-   :align: center
-   :figwidth: 100%
-
-   Diagram of logger IDL-coupling with other components
+through FRED applications and modules (i.e. CORBA clients, see the
+:ref:`fig-arch-components`).
 
 .. _FRED-Arch-servers-mif:
 
@@ -190,15 +182,6 @@ manager.
 The mailer is used by the CORBA servers `fred-rifd`_ and `fred-adifd`_ and
 also by the CORBA clients :ref:`WebAdmin <FRED-Arch-clients-webadmin>` and
 :ref:`MojeID <FRED-Arch-clients-mid>`.
-
-.. _fig-arch-mailer:
-
-.. figure:: /Architecture/_graphics/schema-mailer.png
-   :alt:
-   :align: center
-   :figwidth: 100%
-
-   Diagram of mailer IDL-coupling with other components
 
 .. _FRED-Arch-servers-filemanager:
 

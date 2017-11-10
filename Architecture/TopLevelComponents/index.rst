@@ -39,10 +39,8 @@ components and their relationships.
    * *Green* components are developed by the CZ.NIC but they are not
      parts of the FRED software.
    * *Arrows* signify direct cooperation of components (the arrow points
-     at the component which serves the other component); the colors of arrows
-     carry no meaning.
-   * The complete IDL-coupling of the components with an *asterisk* (\*)
-     is pictured separately.
+     at the component which serves the other component); neither the colour
+     nor the style of arrows carry any meaning.
 
 .. toctree::
    :maxdepth: 2
