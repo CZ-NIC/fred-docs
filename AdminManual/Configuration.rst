@@ -24,7 +24,7 @@ Configuration
 This chapter contains an overview of executable files that are a part of the FRED
 and the location and names of their default configuration files.
 
-There are also some :ref:`configurable database values <config-rules>` related
+There are also some :ref:`configurable database values <config-db>` related
 to the rules of registration that you should consider revising.
 
 .. Note:: The descriptions of configurable values are contained in the default
@@ -306,7 +306,7 @@ life cycle):
    * table:request_fee_parameter (.count_free_base+.count_free_per_domain)
    * table:request_fee_registrar_parameter (.request_price_limit)
 
-.. _restrict-dn:
+.. _config-restrict-dn:
 
 Restricting domain names
 ^^^^^^^^^^^^^^^^^^^^^^^^

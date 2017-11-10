@@ -525,4 +525,4 @@ parameter **must** be adapted to your environment:
   (the *TZ* column), for example ``Europe/Prague`` (this is the default value).
 
 .. Note:: You can customize also other parameters from this table,
-   see :ref:`config-rules`.
+   see :ref:`config-dbparams`.
