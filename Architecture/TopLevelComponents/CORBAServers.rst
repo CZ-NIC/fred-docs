@@ -26,7 +26,7 @@ The registrar interface :ref:`daemon <FRED-Arch-servers-cpp>`.
 
 This daemon implements operations over the database defined in the EPP protocol
 and it is used by the :ref:`EPP service <FRED-Arch-clients-epp>`.
-Every EPP operation is mapped to a corresponding CORBA method.
+Every EPP operation is mapped to a corresponding CORBA operation.
 Operations over objects are *idempotent*, i.e. if the same operation is invoked
 repeatedly, it does not change the state of object in the Registry.
 
