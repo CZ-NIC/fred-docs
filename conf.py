@@ -302,10 +302,11 @@ latex_documents = [
 #
 # latex_logo = None
 
-# For "manual" documents, if this is true, then toplevel headings are parts,
-# not chapters.
+# This value determines the topmost sectioning unit. It should be chosen from
+# part, chapter or section.
 #
-latex_use_parts = True
+#latex_toplevel_sectioning = None
+
 
 # If true, show page references after internal links.
 #
