@@ -467,6 +467,50 @@ Email type: ``merge_contacts_auto``
   of the parameter name, counting from zero, for example: ``domain_registrant_list.0``
   for the first item.
 
+.. _email-type-akm-ok:
+
+Email type: ``akm_candidate_state_ok``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* sent after valid CDNSKEY records are discovered on a insecured domain
+  and the acceptance period is initiated,
+  to technical contacts of the domain's nsset
+* common passed parameters: :ref:`defaults.* <csparams-defaults>`,
+  :ref:`domain <csparams-domain>`, :ref:`zone <csparams-zone>`
+
+* additional parameters:
+
+   * ``keys`` – list of discovered CDNSKEY records (the first item of the list as ``keys.0`` etc.),
+     a single key item looks like this::
+
+        [flags: 257, protocol: 3, algorithm: 13, key: "mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ=="]
+
+   * ``datetime`` – date and time of the discovery,
+
+   * ``days_to_left`` – how many days the acceptance period is going to last.
+
+.. _email-type-akm-ko:
+
+Email type: ``akm_candidate_state_ko``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* sent when the acceptance period is broken by absence of the CDNSKEY records
+  or by discovery of changed records, to technical contacts of the domain's nsset
+* common passed parameters: :ref:`defaults.* <csparams-defaults>`
+* additional parameters:
+   * ``datetime`` – date and time of the discovery.
+
+.. _email-type-akm-upd:
+
+Email type: ``akm_keyset_update``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* sent when an auto-managed keyset is updated from new CDNSKEY records,
+  to technical contacts of the domain's nsset
+* common passed parameters: :ref:`defaults.* <csparams-defaults>`,
+  :ref:`domain <csparams-domain>`, :ref:`zone <csparams-zone>`
+* additional parameters:
+   * ``keys`` – list of discovered CDNSKEY records (the first item of the list
+     as ``keys.0`` etc.),
+   * ``datetime`` – date and time of the discovery.
+
 .. _csparams-description:
 
 Description of parameters

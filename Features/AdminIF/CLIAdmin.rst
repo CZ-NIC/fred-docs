@@ -33,6 +33,7 @@ Manage objects
 * Remind contacts to review their contact details (periodical)
 * Merge a pair of duplicate contacts (manual)
 * Merge a set of duplicate contacts (automatic)
+* Update DNSSEC keys from CDNSKEY records (AKM) (periodical)
 
 Manage finance
 ^^^^^^^^^^^^^^

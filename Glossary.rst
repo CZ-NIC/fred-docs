@@ -60,3 +60,6 @@ Glossary of Terms
 
    Domain owner
       See :term:`Registrant`.
+
+   AKM
+      automatic keyset management, see also the :doc:`AKM concept </Features/Concepts/AKM>`

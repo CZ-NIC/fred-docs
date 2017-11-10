@@ -178,6 +178,63 @@ Automatic contact merger
 Automatic contact verification :sup:`CZ-specific`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+.. _cronjob-akm:
+
+Automatic keyset management
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+See also the :doc:`AKM concept </Features/Concepts/AKM>`.
+
+**Task command**::
+
+   /usr/bin/fred-akm load --wipe-queue --no-secure-noauto && \
+      /usr/bin/fred-akm scan && \
+      /usr/bin/fred-akm notify && \
+      /usr/bin/fred-akm update && \
+      /usr/bin/fred-akm clean
+
+**Typically launched**: once a day
+
+**Real run time** [CZ.NIC]: ~ 3.5 hours
+
+**Required FRED components**:
+
+* ``fred-akmd``: AKM interface
+
+**Other required components**: cdnskey-scanner
+
+**Task activities**:
+
+* :program:`load` – prepares a queue of domains (and corresponding name servers)
+  which will be scanned for the presence of CDNSKEY records;
+  Domains will be loaded either from the CORBA server (default) or an
+  input file, and they can be filtered through a white list (optional).
+
+  Domains can be selected according to their security status group:
+
+   * insecure – domains without a keyset,
+   * secure-noauto – domains secured with a manually managed keyset,
+   * secure-auto – domains secured with an automatically managed keyset.
+
+  By default, domains are selected according to all three groups but some
+  of these groups can be excluded from the load with command options,
+  e.g. ``--no-secure-noauto``.
+
+  The ``--wipe-queue`` argument clears the scan queue before new tasks are enqueued.
+  See also ``fred-akm load --help``.
+
+* :program:`scan` – scans the enqueued domains by running an external tool and
+  saves the scan results,
+* :program:`notify` – sends notifications about initiated or broken acceptance
+  period (insecure domains only),
+* :program:`update` – performs requested changes on keysets and/or domains,
+  notifies about key updates,
+* :program:`clean` – removes scan results made obsolete by the update.
+
+**Configuration**:
+
+* in a configuration file
+
 Communication
 -------------
 * Letters Postservis :sup:`CZ-specific`

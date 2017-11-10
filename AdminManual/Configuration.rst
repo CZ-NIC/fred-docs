@@ -90,6 +90,11 @@ and marked [CZ.NIC].
 
    * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-pifd.conf`
 
+* :file:`fred-akmd` – automatic keyset management daemon – operations
+  for managing keysets automatically
+
+   * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-akmd.conf`
+
 * :file:`fred-msgd` – messaging daemon – operations for sending SMS text
   messages and paper letters
 
@@ -150,8 +155,10 @@ CLI utilities
 ^^^^^^^^^^^^^
 Located in :file:`@PREFIX@/bin`
 
+* :file:`cdnskey-scanner` – CDNSKEY resource record mining utility (no config. file)
 * :file:`filemanager_client` – Inserting a new file into the system
   (uses :file:`pyfred.conf`)
+* :file:`fred-akm` – Automatic keyset management client (:file:`/etc/fred/fred-akm.conf`)
 * :file:`fred-admin` – Automated administration tasks, especially those
   performed periodically
   (see also :ref:`Periodic tasks <FRED-Admin-PeriodicTasks>`)

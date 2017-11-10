@@ -62,6 +62,8 @@ Package list:
 * :file:`fred-mod-whoisd`
 * :file:`fred-server`
 * :file:`fred-db`
+* :file:`fred-akm`
+* :file:`cdnskey-scanner`
 
 For each package in the list, run this command sequence from its directory::
 

@@ -23,6 +23,7 @@ Check of running processes
 The following daemons should start automatically after the FRED was installed:
 
 * fred-adifd
+* fred-akmd
 * fred-logd
 * fred-msgd
 * fred-pifd
