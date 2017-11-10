@@ -129,9 +129,6 @@ script to install software required for the operation of the FRED.
       Apache scheme that is installed by default, so it must be
       disabled and replaced with ``mpm-prefork``.
 
-   .. todo:: Apache workaround should be conditional
-      in the install script.
-
    .. code-block:: bash
 
       apt-get install apache2-mpm-prefork # only 14.04
