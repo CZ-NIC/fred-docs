@@ -71,8 +71,8 @@ and marked [CZ.NIC].
 .. Note::
 
    If you decide to deploy servers on several machines,
-   you must specify the common configuration settings on each machine,
-   namely the sections: [database], [nameservice], [log] and [registry],
+   you must specify the common configuration settings on each machine, namely
+   the sections: ``[database]``, ``[nameservice]``, ``[log]`` and ``[registry]``,
    plus the daemon-specific settings for each daemon that runs on that machine.
 
 * :file:`fred-adifd` – administration interface daemon – operations for
@@ -123,6 +123,10 @@ In the default deployment scheme, the daemon loads all modules and runs
 in a single process (on a single machine) and all modules share an all-in-one
 configuration file named :file:`pyfred.conf`.
 
+In the deployment scheme adopted in the CZ.NIC, separate configuration files
+are used for each daemon, therefore they are listed with the daemons below
+and marked [CZ.NIC].
+
 * :file:`fred-pyfred` – a framework that integrates several Python CORBA
   servers as modules:
 
@@ -130,7 +134,7 @@ configuration file named :file:`pyfred.conf`.
 
       * standalone configuration file [CZ.NIC]: :file:`/etc/fred/pyfred-genzone.conf`
 
-   * :file:`mailer` – operations for sending email,
+   * :file:`mailer` – operations for email assembly and dispatch,
 
       * standalone configuration file [CZ.NIC]: :file:`/etc/fred/pyfred-mailer.conf`
 
@@ -191,10 +195,17 @@ TODO: Apache modules
 .. todo:: where to find configuration of Apache modules
 
 
-.. _config-rules:
+.. _config-db:
 
-Configurable database values
-----------------------------
+Database tables
+---------------
+
+Some parts of the Registry behaviour can be configured by modifying or adding
+values in certain database tables.
+
+
+Basic parameters
+^^^^^^^^^^^^^^^^
 
 A part of configuration relates to the rules of registration, it states e.g.
 when to send a notification to a contact before their domain expires or
@@ -291,7 +302,7 @@ life cycle):
 .. _restrict-dn:
 
 Restricting domain names
-------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 To configure a forbidden pattern for domain names, connect to the database and
 insert a new regular expression with a validity period into the
@@ -303,8 +314,9 @@ insert a new regular expression with a validity period into the
    INSERT INTO domain_blacklist (regexp, valid_from, reason)
       VALUES ('^..\.cz$', '2017-07-01 07:00:00', 'restriction by rule no. 6');
 
-The syntax for these patterns is POSIX regular expressions and pattern matching
-is case insensitive (the ``~*`` operator).
+The syntax for these patterns is `POSIX regular expressions
+<https://www.postgresql.org/docs/current/static/functions-matching.html#POSIX-SYNTAX-DETAILS>`_
+and pattern matching is case insensitive (the ``~*`` operator).
 
 Temporal validity (``valid_from``–``valid_to``) must be specified for each pattern,
 however the ``valid_to`` datetime can be left empty and then the validity is unbounded
