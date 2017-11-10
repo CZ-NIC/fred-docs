@@ -42,8 +42,8 @@ Glossary of Terms
       http://icannwiki.com/ENUM
 
    EPP
-      extensible provisioning protocol, see also
-      `RFC 5730 <https://tools.ietf.org/html/rfc5730>`_
+      extensible provisioning protocol, see also the :doc:`/EPPReference/index`
+      or :rfc:`5730`
 
    Public request
       This is a request by a registrant that is submitted directly
