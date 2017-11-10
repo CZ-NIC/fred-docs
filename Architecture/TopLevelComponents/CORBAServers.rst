@@ -16,13 +16,13 @@ C++ daemons
 These backend components are coded in C++.
 
 Each of them is launched in a separate process and they may share
-a single configuration file.
+a single :ref:`configuration <config-servers-cpp>` file.
 
 .. _FRED-Arch-servers-rif:
 
 fred-rifd
 ~~~~~~~~~
-The registrar interface daemon.
+The registrar interface :ref:`daemon <FRED-Arch-servers-cpp>`.
 
 This daemon implements operations over the database defined in the EPP protocol
 and it is used by the :ref:`EPP service <FRED-Arch-clients-epp>`.
@@ -48,7 +48,7 @@ the connections, thus reducing the connection overhead.
 
 fred-pifd
 ~~~~~~~~~
-The public interface daemon.
+The public interface :ref:`daemon <FRED-Arch-servers-cpp>`.
 
 This daemon implements operations over the database which make information
 about domains accessible to the public; it functions as the backend for
@@ -60,7 +60,7 @@ the :ref:`unix whois <FRED-Arch-clients-unixwhois>`,
 
 fred-adifd
 ~~~~~~~~~~
-The administration interface daemon.
+The administration interface :ref:`daemon <FRED-Arch-servers-cpp>`.
 
 This daemon implements administration operations over the database which allow
 to browse any information in the Registry (including the history and audit log)
@@ -84,7 +84,7 @@ notifying contacts); it functions as the backend for the :ref:`AKM client
 
 fred-msgd
 ~~~~~~~~~
-The messaging daemon.
+The messaging :ref:`daemon <FRED-Arch-servers-cpp>`.
 
 This daemon implements operations for generating and sending text messages (SMS)
 and printed letters.
@@ -93,7 +93,7 @@ and printed letters.
 
 fred-logd
 ~~~~~~~~~
-The audit logging daemon or "logger".
+The audit logging :ref:`daemon <FRED-Arch-servers-cpp>` or "logger".
 
 This daemon creates audit trail of all user activity that passes
 through FRED applications and modules (i.e. CORBA clients, see the
@@ -103,7 +103,7 @@ through FRED applications and modules (i.e. CORBA clients, see the
 
 fred-mifd
 ~~~~~~~~~
-The daemon of the MojeID extension.
+The :ref:`daemon <FRED-Arch-servers-cpp>` of the MojeID extension.
 
 This daemon implements operations for the :ref:`MojeID service
 <FRED-Arch-clients-mid>`.
@@ -112,7 +112,7 @@ This daemon implements operations for the :ref:`MojeID service
 
 fred-dbifd
 ~~~~~~~~~~
-The daemon of the Domain Browser extension.
+The :ref:`daemon <FRED-Arch-servers-cpp>` of the Domain Browser extension.
 
 This daemon implements operations for the :ref:`DomainBrowser service
 <FRED-Arch-clients-db>`.
@@ -136,7 +136,7 @@ The common functions provided by the framework encompass:
 * launching of periodic tasks registered by the modules.
 
 The modules can run either in a single process or in several processes and
-they may share a single configuration file.
+they may share a single :ref:`configuration <config-servers-py>` file.
 
 .. A module in the context of PYFRED is a Python module containing the ``init``
    function which is called when the module is loaded. The initialization function
@@ -150,7 +150,7 @@ they may share a single configuration file.
 GenZone
 ~~~~~~~
 
-The zone generator daemon.
+The zone generator :ref:`daemon <FRED-Arch-servers-py>`.
 
 This daemon implements operations over the database used during zone file
 generation.
@@ -166,7 +166,7 @@ file can reach hundreds of MB.)
 Mailer
 ~~~~~~
 
-The mailer daemon.
+The mailer :ref:`daemon <FRED-Arch-servers-py>`.
 
 This daemon implements the part of the notification system that delivers
 messages through email. It integrates a templating system for email
@@ -179,8 +179,8 @@ in archived messages.
 Attachments are either constructed from templates or retrieved from the file
 manager.
 
-The mailer is used by the CORBA servers `fred-rifd`_ and `fred-adifd`_ and
-also by the CORBA clients :ref:`WebAdmin <FRED-Arch-clients-webadmin>` and
+The mailer is used by the CORBA servers `fred-rifd`_, `fred-adifd`_, `TechCheck`_,
+and also by the CORBA clients :ref:`WebAdmin <FRED-Arch-clients-webadmin>` and
 :ref:`MojeID <FRED-Arch-clients-mid>`.
 
 .. _FRED-Arch-servers-filemanager:
@@ -188,7 +188,7 @@ also by the CORBA clients :ref:`WebAdmin <FRED-Arch-clients-webadmin>` and
 FileManager
 ~~~~~~~~~~~
 
-The file manager daemon.
+The file manager :ref:`daemon <FRED-Arch-servers-py>`.
 
 This daemon implements operations for managing files, namely the upload,
 download and search of managed files.
@@ -203,7 +203,7 @@ The file manager is used by :ref:`mailer <FRED-Arch-servers-mailer>`,
 TechCheck
 ~~~~~~~~~
 
-The technical checks daemon.
+The technical checks :ref:`daemon <FRED-Arch-servers-py>`.
 
 This daemon implements operations for performing technical tests on name server
 sets.
