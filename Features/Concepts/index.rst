@@ -1,7 +1,7 @@
 
 .. _FRED-Features-Concepts:
 
-Concept descriptions
+Concepts
 ====================
 
 .. toctree::
