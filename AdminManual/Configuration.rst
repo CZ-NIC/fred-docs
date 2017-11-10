@@ -56,6 +56,8 @@ CORBA servers
 
 The CORBA servers are located in a system-binaries directory (:file:`@PREFIX@/sbin`).
 
+.. _config-servers-cpp:
+
 C++ daemons
 ~~~~~~~~~~~
 These daemons provide operations via the IDL interface implemented in C++.
@@ -115,6 +117,8 @@ and marked [CZ.NIC].
 
    * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-dbifd.conf`
 
+.. _config-servers-py:
+
 Python daemon(s)
 ~~~~~~~~~~~~~~~~
 This daemon provides operations via the IDL interface implemented in Python.
@@ -146,7 +150,7 @@ and marked [CZ.NIC].
 
       * standalone configuration file [CZ.NIC]: :file:`/etc/fred/pyfred-techcheck.conf`
 
-
+.. _config-webadmin:
 
 Web administration server
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -154,6 +158,8 @@ Web administration server
 * :file:`fred-webadmin` – server for the web administration of the FRED
 
 Default config.file: :file:`@PREFIX@/etc/fred/webadmin_cfg.py`
+
+.. _config-cliutils:
 
 CLI utilities
 ^^^^^^^^^^^^^
@@ -203,6 +209,7 @@ Database tables
 Some parts of the Registry behaviour can be configured by modifying or adding
 values in certain database tables.
 
+.. _config-dbparams:
 
 Basic parameters
 ^^^^^^^^^^^^^^^^

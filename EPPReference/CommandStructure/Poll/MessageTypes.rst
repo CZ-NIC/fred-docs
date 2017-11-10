@@ -283,6 +283,8 @@ This message type appears in all 4 object namespaces: ``domain``, ``contact``,
       </response>
    </epp>
 
+.. _epp-poll-type-update:
+
 .. index:: ⒺupdateData, ⒺopTRID, ⒺoldData, ⒺnewData
 
 Object update

@@ -180,6 +180,8 @@ Email type: ``expiration_validation``
   :ref:`registrar <csparams-registrar>`,
   :ref:`valdate <csparams-valdate>`
 
+.. _email-type-notify-create:
+
 Email type: ``notification_create``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent when a new object (domain, contact, nsset, keyset) is created,
@@ -224,6 +226,8 @@ Email type: ``notification_create``
 
 * There are no additional parameters concerning new objects of other types
   (nsset, domain, keyset).
+
+.. _email-type-notify-update:
 
 Email type: ``notification_update``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -315,6 +319,7 @@ Email type: ``notification_update``
    * ``changes.keyset.tech_c`` – list of technical contacts has changed
    * ``changes.keyset.dnskey`` – list of DNS keys has changed
 
+.. _email-type-notify-transfer:
 
 Email type: ``notification_transfer``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -324,12 +329,16 @@ Email type: ``notification_transfer``
   :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
 
+.. _email-type-notify-renew:
+
 Email type: ``notification_renew``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent after a domain is renewed, to its owner's email
 * passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
+
+.. _email-type-notify-idle:
 
 Email type: ``notification_unused``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -338,6 +347,8 @@ Email type: ``notification_unused``
 * passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
+
+.. _email-type-notify-delete:
 
 Email type: ``notification_delete``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
