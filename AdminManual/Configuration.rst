@@ -274,9 +274,7 @@ life cycle):
   default: 14
 * ``roid_suffix`` – suffix used in **r**\ epository **o**\ bject **id**\ entifiers
   which are :doc:`assigned to registrable objects </EPPReference/ManagedObjects/Common>`
-  by the Registry;
-  this suffix must be unique world-wide and therefore it is usually allocated
-  to the Registry by the IANA organization,
+  by the Registry, see also :term:`ROID`,
   default: EPP
 * ``validation_notify1_period`` :sup:`ENUM domains` – how many days before validation
   expiry the owner should be notified for the first time, negative integer,
