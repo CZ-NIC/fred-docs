@@ -10,3 +10,4 @@ Concepts
    Teccheck
    ContactMerger
    AKM
+   Genzone
