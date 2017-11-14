@@ -336,3 +336,66 @@ The patterns can be used in various ways:
 * to force length of domain names, for example: pattern ``^..\.cz$`` will refuse
   registrations of 2-character domain names in the cz TLD,
 * or any other that regular expressions can express.
+
+For a domain name to be valid, it must not match any pattern that is currently applicable.
+
+.. _config-handles:
+
+Handle format validation
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+The format of handles can be prescribed for non-domain object types—contacts,
+nssets and keysets—with settings in two database tables:
+
+* ``regex_handle_validation_checker`` – contains all patterns but does not
+  specify which of them have to be matched,
+* ``regex_object_type_handle_validation_checker_map`` – determines which
+  patterns will have to be matched for which object types.
+
+To configure a new allowed pattern, connect to the database and insert a new
+regular expression into the ``regex_handle_validation_checker`` table, such as:
+
+.. code-block:: sql
+   :caption: Example of SQL insertion of a handle format pattern
+
+   INSERT INTO regex_handle_validation_checker (regex, description)
+      values ('^[Cc]', 'must start with the letter c or C');
+
+Now, associate the new pattern to object types using the map table, such as:
+
+.. code-block:: sql
+   :caption: Example of SQL insertion of format association with an object type
+
+   INSERT INTO regex_object_type_handle_validation_checker_map (type_id, checker_id)
+      values (1, 3);
+
+where ``checker_id`` is the id of our new pattern and ``type_id`` is the id
+of the desired object type from the ``enum_object_type`` table,
+in our case contact. A regex pattern can be associated with several object types.
+In our example, the pattern will make sure that contact handles start with the letter c or C.
+
+In case an invalid regular expression was set up in the database,
+then the corresponding :samp:`check_{object}`, :samp:`create_{object}` and :samp:`info_{object}`
+operations will respond with the ``2400 Command failed`` result code.
+
+For a handle to be valid, it must match all patterns assigned to its object type.
+
+If a handle is not valid according to db settings, the EPP client receives
+a response with the ``2005 Parameter value syntax error`` result code.
+
+.. Important::
+
+   It may be necessary to adapt the XML schemas of EPP as well.
+   Handle formats are defined in the :file:`fredcom-1.2.1.xsd` file with the
+   following *simple types*:
+
+      * ``objIDCreateType`` – handles of objects being created – must correspond
+        with the current db setting,
+      * ``objIDType`` – handles of objects occurring elsewhere – must correspond
+        with the current setting and allow all historical db settings
+        so that handles conforming previous formatting rules can still be used,
+      * ``objIDChgType`` – same as ``objIDType`` but allowing an empty string.
+
+   If a handle is not valid according to XML schemas, the EPP client receives
+   a response with the ``2001 Command syntax error`` result code due to failed
+   XML validation.
