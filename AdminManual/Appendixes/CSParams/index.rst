@@ -523,6 +523,18 @@ Email type: ``akm_keyset_update``
      as ``keys.0`` etc.),
    * ``datetime`` – date and time of the discovery.
 
+.. _email-type-rs:
+
+Email type: ``record_statement``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* sent in response to a request for a registry record statement about an object,
+  to the email of the domain owner / the contact / technical contacts
+* common passed parameters: :ref:`defaults.* <csparams-defaults>`,
+* additional parameters:
+   * ``request_day`` – the day of the request date,
+   * ``request_month`` – the month of the request date,
+   * ``request_year`` – the year of the request date.
+
 .. _csparams-description:
 
 Description of parameters

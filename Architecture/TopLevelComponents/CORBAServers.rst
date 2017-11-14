@@ -56,6 +56,18 @@ the :ref:`unix whois <FRED-Arch-clients-unixwhois>`,
 :ref:`web whois <FRED-Arch-clients-webwhois>` and
 :ref:`RDAP <FRED-Arch-clients-rdap>`.
 
+.. _FRED-Arch-servers-rsif:
+
+fred-rsifd
+~~~~~~~~~~
+The record statement interface :ref:`daemon <FRED-Arch-servers-cpp>`.
+
+This daemon implements operations over the database which allow generation
+of signed PDF documents with information about registrable objects;
+it functions as another backend for
+:ref:`web whois <FRED-Arch-clients-webwhois>` and
+:ref:`Domain Browser <FRED-Arch-clients-db>`.
+
 .. _FRED-Arch-servers-adif:
 
 fred-adifd
@@ -179,8 +191,10 @@ in archived messages.
 Attachments are either constructed from templates or retrieved from the file
 manager.
 
-The mailer is used by the CORBA servers `fred-rifd`_, `fred-adifd`_, `TechCheck`_,
-and also by the CORBA clients :ref:`WebAdmin <FRED-Arch-clients-webadmin>` and
+The mailer is used by the CORBA servers `fred-rifd`_, `fred-adifd`_,
+`fred-pifd`_, `TechCheck`_, `fred-rsifd`_, `fred-mifd`_,
+and also by the CORBA clients :ref:`AKM <FRED-Arch-clients-akm>`,
+:ref:`WebAdmin <FRED-Arch-clients-webadmin>`, and
 :ref:`MojeID <FRED-Arch-clients-mid>`.
 
 .. _FRED-Arch-servers-filemanager:

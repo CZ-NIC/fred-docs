@@ -93,6 +93,11 @@ and marked [CZ.NIC].
 
    * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-pifd.conf`
 
+* :file:`fred-rsifd` – record statement interface daemon – operations
+  for the provision of registry record statements
+
+   * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-rsifd.conf`
+
 * :file:`fred-akmd` – automatic keyset management daemon – operations
   for managing keysets automatically
 
