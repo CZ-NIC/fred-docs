@@ -169,9 +169,9 @@ Located in :file:`@PREFIX@/bin`
 * :file:`filemanager_client` – Inserting a new file into the system
   (uses :file:`pyfred.conf`)
 * :file:`fred-akm` – Automatic keyset management client (:file:`/etc/fred/fred-akm.conf`)
-* :file:`fred-admin` – Automated administration tasks, especially those
-  performed periodically
-  (see also :ref:`Periodic tasks <FRED-Admin-PeriodicTasks>`)
+* :file:`fred-admin` – Automated administration tasks (:file:`server.conf`),
+  especially those performed periodically,
+  see also :ref:`Periodic tasks <FRED-Admin-PeriodicTasks>`
 * :file:`fred-client` – Tool for registrars (:file:`/etc/fred/fred-client.conf`)
 * :file:`fred-doc2pdf` – Rendering the standard input (RML) into the PDF
   (:file:`/etc/fred/fred-doc2pdf.conf`)
