@@ -306,38 +306,28 @@ life cycle):
    * table:request_fee_parameter (.count_free_base+.count_free_per_domain)
    * table:request_fee_registrar_parameter (.request_price_limit)
 
-.. _config-restrict-dn:
+.. _config-dn:
 
-Restricting domain names
-^^^^^^^^^^^^^^^^^^^^^^^^
+Domain name format validation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To configure a forbidden pattern for domain names, connect to the database and
-insert a new regular expression with a validity period into the
-``domain_blacklist`` table, such as:
+The implemented rules for domain-name formatting are enumerated in the table
+``enum_domain_name_validation_checker``. The Registry operator can turn them on or off
+by adding or removing an association in the table ``zone_domain_name_validation_checker_map``,
+such as:
 
 .. code-block:: sql
-   :caption: Example of SQL insertion in domain blacklist (minimum query)
+   :caption: Example of SQL insertion of format association with a zone
 
-   INSERT INTO domain_blacklist (regexp, valid_from, reason)
-      VALUES ('^..\.cz$', '2017-07-01 07:00:00', 'restriction by rule no. 6');
+   INSERT INTO zone_domain_name_validation_checker_map (checker_id, zone_id)
+      values (2, 1);
 
-The syntax for these patterns is `POSIX regular expressions
-<https://www.postgresql.org/docs/current/static/functions-matching.html#POSIX-SYNTAX-DETAILS>`_
-and pattern matching is case insensitive (the ``~*`` operator).
+where ``checker_id`` is an id of a formatting rule and ``zone_id`` is an id of a zone.
 
-Temporal validity (``valid_from``–``valid_to``) must be specified for each pattern,
-however the ``valid_to`` datetime can be left empty and then the validity is unbounded
-(the pattern is valid forever).
+For a domain name to be valid, it must comply with all rules assigned to its zone.
 
-The patterns can be used in various ways:
-
-* to list forbidden words, for example: pattern ``(good|bad|ugly)`` will refuse
-  registrations of any domain names that contain one of the words "good", "bad" or "ugly",
-* to force length of domain names, for example: pattern ``^..\.cz$`` will refuse
-  registrations of 2-character domain names in the cz TLD,
-* or any other that regular expressions can express.
-
-For a domain name to be valid, it must not match any pattern that is currently applicable.
+:ref:`Further restrictions on domain names <config-restrict-dn>` may be required
+by the domain blacklist.
 
 .. _config-handles:
 
@@ -399,3 +389,36 @@ a response with the ``2005 Parameter value syntax error`` result code.
    If a handle is not valid according to XML schemas, the EPP client receives
    a response with the ``2001 Command syntax error`` result code due to failed
    XML validation.
+
+.. _config-restrict-dn:
+
+Restricting domain names
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+A forbidden pattern for domain names can be configured by inserting a new pattern
+with a validity period (i.e. when the pattern is applicable)
+into the ``domain_blacklist`` table, such as:
+
+.. code-block:: sql
+   :caption: Example of SQL insertion in domain blacklist (minimum query)
+
+   INSERT INTO domain_blacklist (regexp, valid_from, reason)
+      VALUES ('^..\.cz$', '2017-07-01 07:00:00', 'forbid 2-char length in cz zone');
+
+The syntax for these patterns is `POSIX regular expressions
+<https://www.postgresql.org/docs/current/static/functions-matching.html#POSIX-SYNTAX-DETAILS>`_
+and pattern matching is case insensitive (the ``~*`` operator).
+
+Temporal validity (``valid_from``–``valid_to``) must be specified for each pattern,
+however the ``valid_to`` datetime can be left empty and then the validity is unbounded
+(the pattern is applicable forever).
+
+The patterns can be used in various ways:
+
+* to list forbidden words, for example: pattern ``good|bad|ugly`` will refuse
+  registrations of any domain names that contain one of the words "good", "bad" or "ugly",
+* to force length of domain names, for example: pattern ``^..\.cz$`` will refuse
+  registrations of 2-character domain names in the cz TLD,
+* or any other that regular expressions can express.
+
+For a domain name to be valid, it must not match any pattern that is currently applicable.
