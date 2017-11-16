@@ -195,10 +195,11 @@ Located in :file:`@PREFIX@/bin`
 * :file:`mailer_admin_client` – search in sent email
 * :file:`techcheck_admin_client` – search in executed technical checks
 
-TODO: Apache modules
-^^^^^^^^^^^^^^^^^^^^
+Apache modules
+^^^^^^^^^^^^^^
 
-.. todo:: where to find configuration of Apache modules
+Configuration of FRED Apache modules and FRED sites can be found in Apache
+configuration subdirectories, usually under :file:`/etc/apache2/`.
 
 
 .. _config-db:
