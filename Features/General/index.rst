@@ -92,6 +92,6 @@ can perform registrations and modify existing data in the Registry.
 
 .. include:: ObjectLocking.rst
 
-.. include:: DomainNameRestrictions.rst
+.. include:: DomainHandleValidation.rst
 
 .. include:: AKM.rst
