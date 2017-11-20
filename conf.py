@@ -62,7 +62,7 @@ author = u'CZ.NIC'
 # built documents.
 #
 # The short X.Y version.
-version = u'2.32'
+version = u'2.33'
 # The full version, including alpha/beta/rc tags.
 release = version
 

@@ -33,3 +33,11 @@ Record of Changes
      -
      - :ref:`config-dn`
      - Added configurable domain name format validation
+   * - **2.33**
+     - **1.0**
+     - :doc:`/EPPReference/index`
+     - Added mailing address extension of contacts
+   * -
+     -
+     - :doc:`/EPPReference/Appendixes/ErrorReasons`
+     - New texts of EPP error reasons
