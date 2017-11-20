@@ -78,6 +78,13 @@ Additional CZ.NIC rules for domain names:
    * 2 labels in a FQDN in the case of the ``.cz`` zone, and
    * 6–15 labels in a FQDN in the case of the ``.0.2.4.e164.arpa`` ENUM zone.
 
+.. Note::
+
+   Validation of the format of domain names may be configured by the Registry
+   operator differently. The Registry operator is supposed to publish
+   a document that declares the rules of registrar communication with the Registry,
+   including a definition of valid domain names.
+
 .. _mngobj-handle-syntax:
 
 Handles of contacts, nssets and keysets
@@ -94,6 +101,13 @@ The length of a handle that is an argument to a ``create`` command, must not
 exceed 30 characters (:term:`fredcom:objIDCreateType`), in other cases,
 a handle may be up to 63 characters long (:term:`fredcom:objIDType`
 or :term:`fredcom:objIDChgType`).
+
+.. Note::
+
+   Validation of the format of handles may be configured by the Registry
+   operator differently. The Registry operator is supposed to publish
+   a document that declares the rules of registrar communication with the Registry,
+   including a definition of valid handles.
 
 .. _mngobj-timestamps:
 
