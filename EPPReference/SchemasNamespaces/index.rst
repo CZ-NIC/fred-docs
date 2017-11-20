@@ -30,7 +30,7 @@ XML-validation tool, there are 2 options:
 The FRED EPP server as such does NOT require schema locations inside messages
 and ignores them if they are present.
 
-The global schema ``all-2.3.2.xsd`` (alias ``all.xsd``) imports the following
+The global schema ``all-2.4.0.xsd`` (alias ``all.xsd``) imports the following
 partial schemas and thus provides the definitions of all namespaces in a single file.
 
 ..
@@ -87,6 +87,10 @@ partial schemas and thus provides the definitions of all namespaces in a single
      - ``http://www.nic.cz/xml/epp/enumval-1.2``
      - :samp:`enumval-1.2.0.xsd`
      - FRED command/response extensions for ENUM domains
+   * - ``extra-addr``
+     - ``http://www.nic.cz/xml/epp/extra-addr-1.0``
+     - :samp:`extra-addr-1.0.0.xsd`
+     - FRED command/response extensions for a mailing address in contacts
    * - ``xsi``
      - ``http://www.w3.org/2001/XMLSchema-instance``
      - N/A

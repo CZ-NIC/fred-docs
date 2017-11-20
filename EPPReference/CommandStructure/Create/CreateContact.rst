@@ -19,7 +19,9 @@ The command must be contained in the ``<create>`` command type.
 Command element structure
 -------------------------
 
-The ``<contact:create>`` element must declare the ``contact`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
+The ``<contact:create>`` element must declare the ``contact`` :doc:`namespace
+and schema </EPPReference/SchemasNamespaces/index>`, and it must contain
+the following child elements:
 
 * ``<contact:id>`` **(1)** – the contact handle as :term:`fredcom:objIDCreateType`.
 * ``<contact:postalInfo>`` **(1)** – contact's postal information:
@@ -102,6 +104,76 @@ The ``<contact:create>`` element must declare the ``contact`` :doc:`namespace an
 
    > create_contact CID-MYCONTACT 'John Doe' john@doe.cz 'Street 123' City 12300 CZ NULL 'Company X Ltd.' trnpwd +420.222123456 NULL (y (voice, email)) 1312112029 () notify-john@doe.cz
 
+.. index:: Ⓔmailing, Ⓔaddr
+
+Mailing address extension
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The ``<contact:create>`` element is used in the same way as described above.
+
+The :ref:`command extension <command-ext>` can be used to set the mailing address
+at the time of creation. Otherwise you can set the mailing address later
+with the :doc:`contact:update <../Update/UpdateContact>`.
+
+The command's ``<extension>`` element must contain a **single** ``<extra-addr:create>``
+element which declares the ``extra-addr`` namespace (``http://www.nic.cz/xml/epp/extra-addr-1.0``)
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
+
+* ``<extra-addr:mailing>`` **(1)**  – mailing address container:
+   * ``<extra-addr:addr>`` **(1)** – address:
+      * ``<extra-addr:street>`` **(1..3)** – street line 1–3 as :term:`extra-addr:postalLineType`,
+      * ``<extra-addr:city>`` **(1)** – city as :term:`extra-addr:postalLineType`,
+      * ``<extra-addr:sp>`` **(0..1)** – state or province as :term:`extra-addr:postalLineType`,
+      * ``<extra-addr:pc>`` **(1)** – postal code as :term:`extra-addr:pcType`,
+      * ``<extra-addr:cc>`` **(1)** – country code as :term:`extra-addr:ccType`.
+
+.. code-block:: xml
+   :caption: Example
+
+   <?xml version="1.0" encoding="utf-8" standalone="no"?>
+   <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
+      <command>
+         <create>
+            <contact:create xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.xsd">
+               <contact:id>CID-EXTRAADDR</contact:id>
+               <contact:postalInfo>
+                  <contact:name>Foo Bar</contact:name>
+                  <contact:addr>
+                     <contact:street>Kratka 42</contact:street>
+                     <contact:city>Praha</contact:city>
+                     <contact:pc>11150</contact:pc>
+                     <contact:cc>CZ</contact:cc>
+                  </contact:addr>
+               </contact:postalInfo>
+               <contact:email>foobar@nic.cz</contact:email>
+            </contact:create>
+         </create>
+         <extension>
+            <extra-addr:create
+             xmlns:extra-addr="http://www.nic.cz/xml/epp/extra-addr-1.0"
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/extra-addr-1.0 extra-addr-1.0.xsd">
+               <extra-addr:mailing>
+                  <extra-addr:addr>
+                     <extra-addr:street>Dlouha 24</extra-addr:street>
+                     <extra-addr:city>Lysa nad Labem</extra-addr:city>
+                     <extra-addr:pc>28922</extra-addr:pc>
+                     <extra-addr:cc>CZ</extra-addr:cc>
+                  </extra-addr:addr>
+               </extra-addr:mailing>
+            </extra-addr:create>
+         </extension>
+         <clTRID>hehr010#15-08-25at17:03:10</clTRID>
+      </command>
+   </epp>
+
+.. code-block:: shell
+   :caption: FRED-client equivalent
+
+   > # This command does not have a FRED-client equivalent in this version.
+
 .. index:: ⒺcreData, Ⓔid, ⒺcrDate
 
 Response element structure
@@ -143,3 +215,8 @@ and it contains the following child elements:
          </trID>
       </response>
    </epp>
+
+Mailing address extension
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+:ref:`Response extension <response-ext>` is not used in reply to this command.

@@ -65,15 +65,18 @@ Simple data types defined in the FRED :doc:`namespaces
       and having the maximum length of 17 characters)
 
    contact:postalLineType
+   extra-addr:postalLineType
       a :term:`xs:normalizedString` of the length between 1 and 255 characters
 
    contact:optPostalLineType
       a :term:`xs:normalizedString` of the length between 0 and 255 characters
 
    contact:pcType
+   extra-addr:pcType
       a :term:`xs:token` of the maximum length of 16 characters
 
    contact:ccType
+   extra-addr:ccType
       a :term:`xs:token` of the length of 2 characters
 
    nsset:addrStringType

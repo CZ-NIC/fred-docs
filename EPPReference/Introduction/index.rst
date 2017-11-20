@@ -6,7 +6,7 @@ Introduction
 
 This is a reference manual for the EPP protocol as implemented by the FRED.
 
-The global XSD schema ``all-2.3.2`` has been taken as the **baseline** for the reference.
+The global XSD schema ``all-2.4.0`` has been taken as the **baseline** for the reference.
 
 The manual describes protocol basics and the generic structure of messages
 in a nutshell (based on the main RFC standard), introduces registrable objects

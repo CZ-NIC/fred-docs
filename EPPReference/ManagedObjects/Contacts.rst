@@ -74,6 +74,10 @@ the following attributes:
 
    .. Note:: The contact handle, name and organization are always disclosed.
 
+``mailing``/``addr``
+   An additional :ref:`mailing address <mng-contact-ext>` which consists
+   of the same items as the ``addr`` address in ``postalInfo``.
+
 .. _mng-contact-stat:
 
 Object states
@@ -120,3 +124,22 @@ For command-response mapping see a specific command syntax description:
 
    * poll msg TLE: ``<contact:trnData>``, ``<contact:idleDelData>``,
      ``<contact:updateData>``
+
+.. _mng-contact-ext:
+
+Mailing address
+^^^^^^^^^^^^^^^
+
+:doc:`Command & response extensions </EPPReference/ProtocolBasics/ComResExtensions>`
+allow to manage an additional address with a contact.
+
+Namespace: \http://www.nic.cz/xml/epp/extra-addr-1.0 |br|
+Schema: extra-addr-1.0.0.xsd
+
+These extensions are used with the following commands:
+
+* :doc:`contact:create </EPPReference/CommandStructure/Create/CreateContact>`,
+* :doc:`contact:update </EPPReference/CommandStructure/Update/UpdateContact>`.
+
+and with responses to the
+:doc:`contact:info </EPPReference/CommandStructure/Info/InfoContact>` command.

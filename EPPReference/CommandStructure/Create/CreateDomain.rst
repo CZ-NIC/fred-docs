@@ -78,7 +78,7 @@ with the :doc:`domain:update <../Update/UpdateDomain>`, or you can change the
 validation when renewing the domain with the :doc:`domain:renew <../RenewDomain>`
 command.
 
-The command's ``<extension>`` element must contain a **single** ``<enumval:renew>``
+The command's ``<extension>`` element must contain a **single** ``<enumval:create>``
 element which declares the ``enumval`` namespace (``http://www.nic.cz/xml/epp/enumval-1.2``)
 and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 

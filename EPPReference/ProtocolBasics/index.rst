@@ -39,3 +39,4 @@ using a client's certificate. (See also :rfc:`5734`.)
    ServiceDiscovery
    Commands
    ProtocolExtensions
+   ComResExtensions

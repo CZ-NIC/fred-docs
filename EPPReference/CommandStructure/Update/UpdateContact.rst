@@ -24,7 +24,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 
 * ``<contact:id>`` **(1)** – the contact handle as :term:`fredcom:objIDType`.
 * ``<contact:chg>`` **(0..1)** – comprises the new values of contact attributes
-  that will be changed by this update. Omitted properties will remain unchanged.
+  that will be changed by this update. Omitted attributes will remain unchanged.
 
    * ``<contact:postalInfo>`` **(0..1)** – change contact's postal information:
       * ``<contact:name>`` **(0..1)** – personal name as :term:`contact:postalLineType`,
@@ -91,6 +91,109 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
    :caption: FRED-client equivalent
 
    > update_contact CID-MYOWN (() +420.222333444 NULL NULL NULL (n voice))
+
+.. index:: Ⓔmailing, Ⓔaddr
+
+Mailing address extension
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The ``<contact:update>`` element is used in the same way as described above.
+
+The :ref:`command extension <command-ext>` can be used to set or remove the mailing address.
+
+The command's ``<extension>`` element must contain a **single** ``<extra-addr:update>``
+element which declares the ``extra-addr`` namespace (``http://www.nic.cz/xml/epp/extra-addr-1.0``)
+and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
+
+* ``<extra-addr:set>`` **(0..1)** – a new address will be set;
+  if the contact already has a mailing address, it will be replaced:
+
+   * ``<extra-addr:mailing>`` **(1)**  – mailing address container:
+      * ``<extra-addr:addr>`` **(1)** – address:
+         * ``<extra-addr:street>`` **(1..3)** – street line 1–3 as :term:`extra-addr:postalLineType`,
+         * ``<extra-addr:city>`` **(1)** – city as :term:`extra-addr:postalLineType`,
+         * ``<extra-addr:sp>`` **(0..1)** – state or province as :term:`extra-addr:postalLineType`,
+         * ``<extra-addr:pc>`` **(1)** – postal code as :term:`extra-addr:pcType`,
+         * ``<extra-addr:cc>`` **(1)** – country code as :term:`extra-addr:ccType`,
+
+* ``<extra-addr:rem>`` **(0..1)** – an address will be removed from the contact:
+   * ``<extra-addr:mailing/>`` **(1)**  – the mailing address must be specified as an empty element.
+
+
+.. code-block:: xml
+   :caption: Example (set)
+
+   <?xml version="1.0" encoding="utf-8" standalone="no"?>
+   <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
+      <command>
+         <update>
+            <contact:update
+             xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.xsd">
+               <contact:id>CID-EXTRAADDR</contact:id>
+               <contact:chg>
+                  <contact:voice>+420.000000001</contact:voice>
+                  <contact:notifyEmail>foobar-notify@nic.cz</contact:notifyEmail>
+               </contact:chg>
+            </contact:update>
+         </update>
+         <extension>
+            <extra-addr:update
+             xmlns:extra-addr="http://www.nic.cz/xml/epp/extra-addr-1.0"
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/extra-addr-1.0 extra-addr-1.0.xsd">
+               <extra-addr:set>
+                  <extra-addr:mailing>
+                     <extra-addr:addr>
+                        <extra-addr:street>Kratka 24</extra-addr:street>
+                        <extra-addr:city>Praha</extra-addr:city>
+                        <extra-addr:pc>11150</extra-addr:pc>
+                        <extra-addr:cc>CZ</extra-addr:cc>
+                     </extra-addr:addr>
+                  </extra-addr:mailing>
+               </extra-addr:set>
+            </extra-addr:update>
+         </extension>
+         <clTRID>zbab002#15-08-25at17:37:28</clTRID>
+      </command>
+   </epp>
+
+.. code-block:: xml
+   :caption: Example (remove)
+
+   <?xml version="1.0" encoding="utf-8" standalone="no"?>
+   <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
+      <command>
+         <update>
+            <contact:update xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.xsd">
+               <contact:id>CID-EXTRAADDR</contact:id>
+               <contact:chg>
+                  <contact:voice>+420.000000001</contact:voice>
+                  <contact:notifyEmail>foobar-notify@nic.cz</contact:notifyEmail>
+               </contact:chg>
+            </contact:update>
+         </update>
+         <extension>
+            <extra-addr:update
+             xmlns:extra-addr="http://www.nic.cz/xml/epp/extra-addr-1.0"
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/extra-addr-1.0 extra-addr-1.0.xsd">
+               <extra-addr:rem>
+                  <extra-addr:mailing/>
+               </extra-addr:rem>
+            </extra-addr:update>
+         </extension>
+         <clTRID>zbab002#15-08-25at17:37:28</clTRID>
+      </command>
+   </epp>
+
+.. code-block:: shell
+   :caption: FRED-client equivalent
+
+   > # This command does not have a FRED-client equivalent in this version.
 
 Response element structure
 --------------------------
