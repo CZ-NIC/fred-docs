@@ -1,29 +1,23 @@
 
 
 
-Record of changes
+Record of Changes
 =================
 
-.. tabularcolumns:: |p{0.075\textwidth}|p{0.25\textwidth}|p{0.575\textwidth}|
+.. tabularcolumns:: |p{0.075\textwidth}|p{0.075\textwidth}|p{0.25\textwidth}|p{0.575\textwidth}|
 .. list-table::
    :header-rows: 1
-   :widths: 8, 30, 62
+   :widths: 8, 8, 26, 58
 
-   * - Edition
+   * - Version
+     - Edition
      - Segment
      - Change description
-   * - **2.0**
-     - Record of changes
-     - Added Record of changes
+   * - **2.30**
+     -
+     - :doc:`/Features/Concepts/ContactMerger`
+     - Added contact merger concept, tasks and email template
    * -
-     - :doc:`/EPPReference/index`
-     - Added a new publication
-   * -
-     - :doc:`/Features/RegIF/index`
-     - Completed the list of registrar features
-   * -
-     - :doc:`/Features/Concepts/index`
-     - Added some concept descriptions (object transfer, technical checks)
-   * -
-     - :doc:`/Features/General/index`
-     - Enhanced some texts
+     -
+     - :doc:`/AdminManual/Appendixes/CSParams/index`
+     - Added a new CS parameter
