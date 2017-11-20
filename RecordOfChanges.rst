@@ -21,3 +21,8 @@ Record of Changes
      -
      - :doc:`/AdminManual/Appendixes/CSParams/index`
      - Added a new CS parameter
+
+   * - **2.31**
+     -
+     - :doc:`/Features/Concepts/AKM`
+     - Added :term:`AKM` concept, components, task and email templates
