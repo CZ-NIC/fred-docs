@@ -21,8 +21,15 @@ Record of Changes
      -
      - :doc:`/AdminManual/Appendixes/CSParams/index`
      - Added a new CS parameter
-
    * - **2.31**
      -
      - :doc:`/Features/Concepts/AKM`
      - Added :term:`AKM` concept, components, task and email templates
+   * - **2.32**
+     -
+     - :ref:`config-handles`
+     - Added configurable handle format validation
+   * -
+     -
+     - :ref:`config-dn`
+     - Added configurable domain name format validation
