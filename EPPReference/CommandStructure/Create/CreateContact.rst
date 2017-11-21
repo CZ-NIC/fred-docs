@@ -180,7 +180,7 @@ Response element structure
 --------------------------
 
 The :ref:`response <struct-response>` from the FRED EPP server contains
-the result, response data and transaction identification.
+the result, response data, and transaction identification.
 
 See also :ref:`succ-fail`.
 
