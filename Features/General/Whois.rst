@@ -6,8 +6,7 @@ Whois & RDAP
 
 There are two versions of the WHOIS service.
 
-The first version is a classical Unix WHOIS service as specified
-in `RFC 1834 <https://tools.ietf.org/html/rfc1834>`_.
+The first version is a classical Unix WHOIS service as specified in :rfc:`1834`.
 This service features recursive results for all associated objects
 and inverse queries.
 

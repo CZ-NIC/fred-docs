@@ -11,6 +11,6 @@ and store these phone number domains in DNS.
 In comparison to regular domains, ENUM domains have an additional attribute,
 the validation expiration date, as a means of verification of number ownership.
 
-ENUM is defined in  `RFC 3761 <https://tools.ietf.org/html/rfc3761>`_.
+ENUM is defined in :rfc:`3761`.
 
 `More about ENUM in the Czech Registry. <https://www.nic.cz/enum/>`_

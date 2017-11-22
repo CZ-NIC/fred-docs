@@ -5,11 +5,10 @@ EPP protocol
 ------------
 
 The registrars communicate with the Registry using the EPP protocol
-(`RFC 5730 <https://tools.ietf.org/html/rfc5730>`_)
+(:rfc:`5730`)
 with extensions for individual objects.
 The extensions are slightly modified versions of the standard specifications
-for domains (`RFC 5731 <https://tools.ietf.org/html/rfc5731>`_)
-and contacts (`RFC 5733 <https://tools.ietf.org/html/rfc5733>`_).
+for domains (:rfc:`5731`) and contacts (:rfc:`5733`).
 
 The FRED contains unique extensions for nssets and keysets.
 

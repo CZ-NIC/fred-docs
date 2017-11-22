@@ -134,8 +134,7 @@ This interface provides information services to the public.
 Unix whois service
 ~~~~~~~~~~~~~~~~~~
 
-This service implements the WHOIS protocol as described in `RFC 3912
-<https://tools.ietf.org/html/rfc3912>`_.
+This service implements the WHOIS protocol as described in :rfc:`3912`.
 The protocol allows to query the Registry about registrable objects.
 
 The :program:`mod-whoisd` module translates incoming WHOIS requests
