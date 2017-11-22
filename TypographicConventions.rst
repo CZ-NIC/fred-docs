@@ -97,11 +97,13 @@ Several types of admonitions are distinguished by their severity/importance:
 Authoring notes
 ---------------
 
-If turned on during the compilation of a deliverable, the text can contain
-authoring notes in the form of TODOs. These usually hold suggestions
-for new topics or notes about pending improvements.
+Authoring notes—or TODOs—usually hold suggestions for new topics or notes
+about pending improvements. The TODOs are visible in the text if their output
+is allowed in project configuration.
 
 .. todo:: This is an authoring note. The TODOs are turned on.
+
+If you cannot see a green frame here, the TODOs are turned off.
 
 Semantic markup overview
 ------------------------
