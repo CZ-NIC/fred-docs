@@ -31,6 +31,7 @@ in this chapter that you may find useful.
 
 .. contents:: Chapter TOC
    :local:
+   :backlinks: none
 
 Maintained dynamic data
 -----------------------

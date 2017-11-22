@@ -63,6 +63,7 @@ If you omit an optional parameter, the default value is assigned.
 
 .. contents:: Chapter TOC
    :local:
+   :backlinks: none
 
 .. _FRED-Admin-reginit-zone:
 

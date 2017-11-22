@@ -27,6 +27,7 @@ notifications and exported PDFs.
 
 .. contents:: Chapter TOC
    :local:
+   :backlinks: none
 
 Email templates
 ---------------

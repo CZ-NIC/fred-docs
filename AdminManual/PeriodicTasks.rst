@@ -40,6 +40,7 @@ This chapter should help you with the setting of automated tasks in CRON.
 
 .. contents:: Chapter TOC
    :local:
+   :backlinks: none
 
 Zone file generation
 --------------------

@@ -65,6 +65,7 @@ can perform registrations and modify existing data in the Registry.
 
 .. contents:: Chapter TOC
    :local:
+   :backlinks: none
 
 .. include:: RRRModel.rst
 

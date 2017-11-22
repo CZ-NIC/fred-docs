@@ -16,6 +16,7 @@ the templates for each type can be found in the table ``mail_templates``.
 
 .. contents:: Chapter TOC
    :local:
+   :backlinks: none
 
 Email type: ``sendauthinfo_pif``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -32,6 +32,7 @@ to the rules of registration that you should consider revising.
 
 .. contents:: Chapter TOC
    :local:
+   :backlinks: none
 
 Security notice
 ---------------
