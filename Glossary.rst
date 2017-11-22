@@ -71,6 +71,6 @@ Glossary of Terms
       This identifier should uniquely identify the object world-wide. It is composed
       of two parts separated with a hyphen, e.g. ``D0010123116-CZ``.
       The first part is unique within the Registry and is defined by the Registry.
-      The second part ("Repository id" suffix) must be unique world-wide and
-      it is assigned to the Registry by the `IANA organization
+      The second part (Repository id suffix) must be unique world-wide and
+      it is assigned to the Registry by `IANA organization
       <https://www.iana.org/assignments/epp-repository-ids/epp-repository-ids.xhtml>`_.

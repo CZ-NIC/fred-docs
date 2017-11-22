@@ -13,6 +13,10 @@ Record of Changes
      - Edition
      - Segment
      - Change description
+   * - older
+     -
+     - :doc:`/AdminManual/Appendixes/CSParams/index`
+     - Added more email templates
    * - **2.30**
      -
      - :doc:`/Features/Concepts/ContactMerger`
