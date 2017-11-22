@@ -41,7 +41,7 @@ These extensions are used with the following commands:
       <command>
          <create>
             <domain:create xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                <domain:name>1.1.1.7.4.5.2.2.2.0.2.4.e164.arpa</domain:name>
                <domain:period unit="y">1</domain:period>
                <domain:registrant>CID-MYOWN</domain:registrant>
@@ -50,7 +50,7 @@ These extensions are used with the following commands:
          <!-- Extension of the standard command -->
          <extension>
             <enumval:create xmlns:enumval="http://www.nic.cz/xml/epp/enumval-1.2"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/enumval-1.2 enumval-1.2.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/enumval-1.2 enumval-1.2.0.xsd">
                <enumval:valExDate>2018-01-14</enumval:valExDate>
             </enumval:create>
          </extension>
@@ -88,7 +88,7 @@ These extensions are used in response to the following commands:
          </result>
          <resData>
             <domain:infData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                <domain:name>1.2.2.4.5.0.2.4.e164.arpa</domain:name>
                <domain:roid>D0009770598-CZ</domain:roid>
                <domain:status s="outzone">The domain isn't generated in the zone</domain:status>

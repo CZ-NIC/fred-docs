@@ -32,7 +32,7 @@ The ``<nsset:check>`` element must declare the ``nsset`` :doc:`namespace and sch
       <command>
          <check>
             <nsset:check xmlns:nsset="http://www.nic.cz/xml/epp/nsset-1.2"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.2.xsd">
                <nsset:id>NID-MYNSSET</nsset:id>
                <nsset:id>NID-NONE</nsset:id>
             </nsset:check>
@@ -87,7 +87,7 @@ and it contains the following child elements:
          </result>
          <resData>
             <nsset:chkData xmlns:nsset="http://www.nic.cz/xml/epp/nsset-1.2"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.1.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.2.xsd">
                <nsset:cd>
                   <nsset:id avail="0">NID-MYNSSET</nsset:id>
                   <nsset:reason>already registered.</nsset:reason>

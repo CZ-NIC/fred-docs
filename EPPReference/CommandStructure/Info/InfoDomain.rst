@@ -32,7 +32,7 @@ The ``<domain:info>`` element must declare the ``domain`` :doc:`namespace and sc
       <command>
          <info>
             <domain:info xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                <domain:name>mydomain.cz</domain:name>
             </domain:info>
          </info>
@@ -112,7 +112,7 @@ and it contains the following child elements:
       </result>
       <resData>
          <domain:infData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-          xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+          xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
             <domain:name>mydomain.cz</domain:name>
             <domain:roid>D0009907597-CZ</domain:roid>
             <domain:status s="ok">Object is without restrictions</domain:status>
@@ -164,7 +164,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
          </result>
          <resData>
             <domain:infData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                <domain:name>1.1.1.7.4.5.2.2.2.0.2.4.e164.arpa</domain:name>
                <domain:roid>D0009907598-CZ</domain:roid>
                <domain:status s="ok">Object is without restrictions</domain:status>

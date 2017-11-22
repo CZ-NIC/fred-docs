@@ -32,7 +32,7 @@ The ``<keyset:info>`` element must declare the ``keyset`` :doc:`namespace and sc
       <command>
          <info>
             <keyset:info xmlns:keyset="http://www.nic.cz/xml/epp/keyset-1.3"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.2.xsd">
                <keyset:id>KID-MYKEYSET</keyset:id>
             </keyset:info>
          </info>
@@ -106,7 +106,7 @@ and it contains the following child elements:
          </result>
          <resData>
             <keyset:infData xmlns:keyset="http://www.nic.cz/xml/epp/keyset-1.3"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.1.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.2.xsd">
                <keyset:id>KID-MYKEYSET</keyset:id>
                <keyset:roid>K0009907596-CZ</keyset:roid>
                <keyset:status s="linked">Has relation to other records in the registry</keyset:status>

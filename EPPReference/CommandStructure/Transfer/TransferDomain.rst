@@ -43,7 +43,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
    <command>
       <transfer op="request">
          <domain:transfer xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-          xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
+          xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
             <domain:name>trdomain.cz</domain:name>
             <domain:authInfo>trpwd</domain:authInfo>
          </domain:transfer>

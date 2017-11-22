@@ -43,7 +43,7 @@ The ``<nsset:create>`` element must declare the ``nsset`` :doc:`namespace and sc
       <command>
          <create>
             <nsset:create xmlns:nsset="http://www.nic.cz/xml/epp/nsset-1.2"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.2.xsd">
                <nsset:id>NID-ANSSET</nsset:id>
                <nsset:ns>
                   <nsset:name>ns1.domain.cz</nsset:name>
@@ -99,7 +99,7 @@ and it contains the following child elements:
          </result>
          <resData>
             <nsset:creData xmlns:nsset="http://www.nic.cz/xml/epp/nsset-1.2"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.1.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.2.xsd">
                <nsset:id>NID-ANSSET</nsset:id>
                <nsset:crDate>2017-08-09T15:53:15+02:00</nsset:crDate>
             </nsset:creData>

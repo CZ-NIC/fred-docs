@@ -42,12 +42,12 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
       <extension>
          <fred:extcommand xmlns:fred="http://www.nic.cz/xml/epp/fred-1.5"
-          xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.xsd">
+          xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.0.xsd">
             <!-- Custom command type -->
             <fred:test>
                <!-- The object-defined command -->
                <nsset:test xmlns:nsset="http://www.nic.cz/xml/epp/nsset-1.2"
-                xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.xsd">
+                xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.2.xsd">
                   <nsset:id>NID-MYNSSET</nsset:id>
                   <nsset:level>5</nsset:level>
                   <nsset:name>mydomain.cz</nsset:name>

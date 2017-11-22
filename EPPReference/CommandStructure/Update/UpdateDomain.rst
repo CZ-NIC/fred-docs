@@ -51,7 +51,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
       <command>
          <update>
             <domain:update xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                <domain:name>mydomain.cz</domain:name>
                <domain:add>
                   <domain:admin>CID-ADMIN2</domain:admin>
@@ -104,13 +104,13 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
       <command>
          <update>
             <domain:update xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                <domain:name>1.1.1.7.4.5.2.2.2.0.2.4.e164.arpa</domain:name>
             </domain:update>
          </update>
          <extension>
             <enumval:update xmlns:enumval="http://www.nic.cz/xml/epp/enumval-1.2"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/enumval-1.2 enumval-1.2.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/enumval-1.2 enumval-1.2.0.xsd">
                <enumval:chg>
                   <enumval:valExDate>2018-01-02</enumval:valExDate>
                </enumval:chg>

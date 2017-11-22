@@ -32,7 +32,7 @@ The ``<contact:info>`` element must declare the ``contact`` :doc:`namespace and 
    <command>
    <info>
       <contact:info xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
-       xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.xsd">
+       xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.2.xsd">
          <contact:id>CID-MYCONTACT</contact:id>
       </contact:info>
    </info>
@@ -134,7 +134,7 @@ and it contains the following child elements:
       </result>
       <resData>
       <contact:infData xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
-       xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.1.xsd">
+       xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.2.xsd">
          <contact:id>CID-MYCONTACT</contact:id>
          <contact:roid>C0009746170-CZ</contact:roid>
          <contact:status s="linked">Has relation to other records in the registry</contact:status>
@@ -225,7 +225,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
          <extension>
             <extra-addr:infData
              xmlns:extra-addr="http://www.nic.cz/xml/epp/extra-addr-1.0"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/extra-addr-1.0 extra-addr-1.0.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/extra-addr-1.0 extra-addr-1.0.0.xsd">
                <extra-addr:mailing>
                   <extra-addr:addr>
                      <extra-addr:street>Dlouha 24</extra-addr:street>

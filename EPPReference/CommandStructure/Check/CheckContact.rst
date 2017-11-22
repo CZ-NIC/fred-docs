@@ -32,7 +32,7 @@ The ``<contact:check>`` element must declare the ``contact`` :doc:`namespace and
       <command>
          <check>
             <contact:check xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.2.xsd">
                <contact:id>CID-MYOWN</contact:id>
                <contact:id>CID-NONE</contact:id>
             </contact:check>
@@ -87,7 +87,7 @@ and it contains the following child elements:
          </result>
          <resData>
             <contact:chkData xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.1.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.2.xsd">
                <contact:cd>
                   <contact:id avail="0">CID-MYOWN</contact:id>
                   <contact:reason>already registered.</contact:reason>

@@ -32,7 +32,7 @@ The ``<domain:check>`` element must declare the ``domain`` :doc:`namespace and s
    <command>
       <check>
          <domain:check xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-          xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
+          xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
             <domain:name>mydomain.cz</domain:name>
             <domain:name>somedomain.cz</domain:name>
          </domain:check>
@@ -87,7 +87,7 @@ and it contains the following child elements:
       </result>
       <resData>
          <domain:chkData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-          xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+          xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
             <domain:cd>
                <domain:name avail="1">mydomain.cz</domain:name>
             </domain:cd>

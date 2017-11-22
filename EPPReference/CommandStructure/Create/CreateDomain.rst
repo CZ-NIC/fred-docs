@@ -48,7 +48,7 @@ schema </EPPReference/SchemasNamespaces/index>`, and it must contain the followi
       <command>
          <create>
             <domain:create xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                <domain:name>thisdomain.cz</domain:name>
                <domain:nsset>NID-MYNSSET</domain:nsset>
                <domain:registrant>CID-MYOWN</domain:registrant>
@@ -99,7 +99,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
       <command>
          <create>
             <domain:create xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                <domain:name>2.1.1.7.4.5.2.2.2.0.2.4.e164.arpa</domain:name>
                <domain:period unit="y">1</domain:period>
                <domain:registrant>CID-MYOWN</domain:registrant>
@@ -107,7 +107,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
          </create>
          <extension>
             <enumval:create xmlns:enumval="http://www.nic.cz/xml/epp/enumval-1.2"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/enumval-1.2 enumval-1.2.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/enumval-1.2 enumval-1.2.0.xsd">
                <enumval:valExDate>2018-02-09</enumval:valExDate>
             </enumval:create>
          </extension>
@@ -151,7 +151,7 @@ and it contains the following child elements:
          </result>
          <resData>
             <domain:creData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                <domain:name>thisdomain.cz</domain:name>
                <domain:crDate>2017-08-09T12:31:49+02:00</domain:crDate>
                <domain:exDate>2018-08-09</domain:exDate>

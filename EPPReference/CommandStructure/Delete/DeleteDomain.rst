@@ -33,7 +33,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
       <command>
       <delete>
          <domain:delete xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-          xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
+          xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
             <domain:name>mydomain.cz</domain:name>
          </domain:delete>
       </delete>

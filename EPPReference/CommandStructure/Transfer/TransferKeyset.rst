@@ -42,7 +42,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
       <command>
          <transfer op="request">
             <keyset:transfer xmlns:keyset="http://www.nic.cz/xml/epp/keyset-1.3"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.2.xsd">
                <keyset:id>KID-TRKEYSET</keyset:id>
                <keyset:authInfo>trpwd</keyset:authInfo>
             </keyset:transfer>

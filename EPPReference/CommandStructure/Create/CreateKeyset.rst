@@ -45,7 +45,7 @@ The ``<keyset:create>`` element must declare the ``keyset`` :doc:`namespace and 
       <command>
          <create>
             <keyset:create xmlns:keyset="http://www.nic.cz/xml/epp/keyset-1.3"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.2.xsd">
                <keyset:id>KID-AKEYSET</keyset:id>
                <keyset:dnskey>
                   <keyset:flags>257</keyset:flags>
@@ -101,7 +101,7 @@ and it contains the following child elements:
          </result>
          <resData>
             <keyset:creData xmlns:keyset="http://www.nic.cz/xml/epp/keyset-1.3"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.1.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.2.xsd">
                <keyset:id>KID-AKEYSET</keyset:id>
                <keyset:crDate>2017-08-09T16:13:50+02:00</keyset:crDate>
             </keyset:creData>

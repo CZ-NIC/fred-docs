@@ -54,7 +54,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
    <command>
       <update>
          <nsset:update xmlns:nsset="http://www.nic.cz/xml/epp/nsset-1.2"
-          xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.xsd">
+          xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.2.xsd">
             <nsset:id>NID-MYNSSET</nsset:id>
             <nsset:add>
                <nsset:ns>

@@ -31,7 +31,7 @@ The ``<fred:creditInfo/>`` element does not contain any child elements.
     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
       <extension>
       <fred:extcommand xmlns:fred="http://www.nic.cz/xml/epp/fred-1.5"
-       xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.xsd">
+       xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.0.xsd">
          <fred:creditInfo/>
          <fred:clTRID>hlxk002#17-05-18at16:55:06</fred:clTRID>
       </fred:extcommand>

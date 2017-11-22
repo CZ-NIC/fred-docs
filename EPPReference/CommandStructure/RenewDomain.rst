@@ -47,7 +47,7 @@ The ``<domain:renew>`` element must declare the ``domain`` :doc:`namespace and s
       <command>
          <renew>
             <domain:renew xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                <domain:name>mydomain.cz</domain:name>
                <domain:curExpDate>2018-07-11</domain:curExpDate>
                <domain:period unit="y">2</domain:period>
@@ -114,7 +114,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
       <command>
          <renew>
             <domain:renew xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                <domain:name>1.1.1.7.4.5.2.2.2.0.2.4.e164.arpa</domain:name>
                <domain:curExpDate>2018-07-14</domain:curExpDate>
                <domain:period unit="y">1</domain:period>
@@ -122,7 +122,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
          </renew>
          <extension>
             <enumval:renew xmlns:enumval="http://www.nic.cz/xml/epp/enumval-1.2"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/enumval-1.2 enumval-1.2.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/enumval-1.2 enumval-1.2.0.xsd">
                <enumval:valExDate>2018-01-14</enumval:valExDate>
             </enumval:renew>
          </extension>
@@ -165,7 +165,7 @@ and it contains the following child elements:
          </result>
          <resData>
             <domain:renData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                <domain:name>mydomain.cz</domain:name>
                <domain:exDate>2020-07-11</domain:exDate>
             </domain:renData>

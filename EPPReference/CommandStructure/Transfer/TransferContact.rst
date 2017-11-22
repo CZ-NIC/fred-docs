@@ -38,7 +38,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
       <command>
          <transfer op="request">
             <contact:transfer xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.2.xsd">
                <contact:id>CID-TRCONT</contact:id>
                <contact:authInfo>trpwd</contact:authInfo>
             </contact:transfer>

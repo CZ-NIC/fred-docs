@@ -37,12 +37,12 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
       <extension>
          <fred:extcommand xmlns:fred="http://www.nic.cz/xml/epp/fred-1.5"
-          xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.xsd">
+          xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.0.xsd">
             <!-- Custom command type -->
             <fred:sendAuthInfo>
                <!-- The object-defined command -->
                <domain:sendAuthInfo xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-                xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.xsd">
+                xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                   <domain:name>mydomain.cz</domain:name>
                </domain:sendAuthInfo>
             </fred:sendAuthInfo>

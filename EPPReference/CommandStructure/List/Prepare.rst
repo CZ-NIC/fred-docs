@@ -51,7 +51,7 @@ The list command can be **one of** the following:
     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
    <extension>
       <fred:extcommand xmlns:fred="http://www.nic.cz/xml/epp/fred-1.5"
-       xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.xsd">
+       xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.0.xsd">
          <fred:domainsByContact>
             <fred:id>CID-ADMIN1</fred:id>
          </fred:domainsByContact>
@@ -74,7 +74,7 @@ The list command can be **one of** the following:
     xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
       <extension>
          <fred:extcommand xmlns:fred="http://www.nic.cz/xml/epp/fred-1.5"
-          xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.xsd">
+          xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.0.xsd">
             <fred:listContacts/>
             <fred:clTRID>egrx002#17-08-30at18:49:12</fred:clTRID>
          </fred:extcommand>

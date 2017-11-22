@@ -32,7 +32,7 @@ The ``<keyset:check>`` element must declare the ``keyset`` :doc:`namespace and s
       <command>
          <check>
             <keyset:check xmlns:keyset="http://www.nic.cz/xml/epp/keyset-1.3"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.2.xsd">
                <keyset:id>KID-MYKEYSET</keyset:id>
                <keyset:id>KID-NONE</keyset:id>
             </keyset:check>
@@ -88,7 +88,7 @@ and it contains the following child elements:
          </result>
          <resData>
             <keyset:chkData xmlns:keyset="http://www.nic.cz/xml/epp/keyset-1.3"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.1.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/keyset-1.3 keyset-1.3.2.xsd">
                <keyset:cd>
                   <keyset:id avail="0">KID-MYKEYSET</keyset:id>
                   <keyset:reason>already registered.</keyset:reason>

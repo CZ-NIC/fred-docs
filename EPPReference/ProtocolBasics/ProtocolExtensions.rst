@@ -44,7 +44,7 @@ The FRED EPP extends the protocol in such way that the ``<extension>`` element
 
       <!-- FRED's container for extending commands -->
       <fred:extcommand xmlns:fred="http://www.nic.cz/xml/epp/fred-1.5"
-       xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.xsd">
+       xsi:schemaLocation="http://www.nic.cz/xml/epp/fred-1.5 fred-1.5.0.xsd">
 
          <!-- An extending command (some have descendants) -->
          <fred:listDomains/>

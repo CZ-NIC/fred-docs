@@ -32,7 +32,7 @@ The ``<nsset:info>`` element must declare the ``nsset`` :doc:`namespace and sche
    <command>
       <info>
          <nsset:info xmlns:nsset="http://www.nic.cz/xml/epp/nsset-1.2"
-          xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.xsd">
+          xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.2.xsd">
             <nsset:id>NID-MYNSSET</nsset:id>
          </nsset:info>
       </info>
@@ -102,7 +102,7 @@ and it contains the following child elements:
       </result>
       <resData>
          <nsset:infData xmlns:nsset="http://www.nic.cz/xml/epp/nsset-1.2"
-          xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.1.xsd">
+          xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.2.xsd">
             <nsset:id>NID-MYNSSET</nsset:id>
             <nsset:roid>N0009907595-CZ</nsset:roid>
             <nsset:status s="linked">Has relation to other records in the registry</nsset:status>

@@ -34,7 +34,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
       <delete>
          <contact:delete
           xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
-          xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.xsd">
+          xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.2.xsd">
             <contact:id>CID-MYCONTACT</contact:id>
          </contact:delete>
       </delete>

@@ -169,7 +169,7 @@ and contain the following child elements:
             <qDate>2017-07-27T12:13:55+02:00</qDate>
             <msg>
                <domain:impendingExpData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-                xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+                xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                   <domain:name>somedomain.cz</domain:name>
                   <domain:exDate>2017-08-26</domain:exDate>
                </domain:impendingExpData>
@@ -269,7 +269,7 @@ This message type appears in all 4 object namespaces: ``domain``, ``contact``,
             <qDate>2017-07-25T16:34:42+02:00</qDate>
             <msg>
                <domain:trnData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-                xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+                xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                   <domain:name>trdomain.cz</domain:name>
                   <domain:trDate>2017-07-25</domain:trDate>
                   <domain:clID>REG-FRED_A</domain:clID>
@@ -325,11 +325,11 @@ This message type appears in the following object namespaces: ``domain``,
             <qDate>2017-08-14T13:29:06+02:00</qDate>
             <msg>
                <domain:updateData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-                xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+                xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                   <domain:opTRID>ReqID-0000141228</domain:opTRID>
                   <domain:oldData>
                      <domain:infData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-                      xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+                      xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                         <domain:name>mydomain.cz</domain:name>
                         <domain:roid>D0009907597-CZ</domain:roid>
                         <domain:status s="serverBlocked">Domain blocked</domain:status>
@@ -353,7 +353,7 @@ This message type appears in the following object namespaces: ``domain``,
                   </domain:oldData>
                   <domain:newData>
                      <domain:infData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
-                      xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+                      xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.2.xsd">
                         <domain:name>mydomain.cz</domain:name>
                         <domain:roid>D0009907597-CZ</domain:roid>
                         <domain:status s="serverBlocked">Domain blocked</domain:status>
@@ -415,7 +415,7 @@ This message type appears in the following object namespaces: ``contact``,
             <qDate>2017-07-26T18:28:55+02:00</qDate>
             <msg>
                <contact:idleDelData xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
-                xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.1.xsd">
+                xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.2.xsd">
                   <contact:id>CID-IDLE</contact:id>
                </contact:idleDelData>
             </msg>
@@ -468,7 +468,7 @@ Technical check results
             <qDate>2017-07-24T17:33:43+02:00</qDate>
             <msg>
                <nsset:testData xmlns:nsset="http://www.nic.cz/xml/epp/nsset-1.2"
-                xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.1.xsd">
+                xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.2.xsd">
                   <nsset:id>NID-MYNSSET</nsset:id>
                   <nsset:name>'mydomain.cz'</nsset:name>
                   <nsset:result>

@@ -42,7 +42,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
       <command>
          <transfer op="request">
             <nsset:transfer xmlns:nsset="http://www.nic.cz/xml/epp/nsset-1.2"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/nsset-1.2 nsset-1.2.2.xsd">
                <nsset:id>NID-TRNSSET</nsset:id>
                <nsset:authInfo>trpwd</nsset:authInfo>
             </nsset:transfer>

@@ -73,7 +73,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
       <command>
          <update>
             <contact:update xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.2.xsd">
                <contact:id>CID-MYOWN</contact:id>
                <contact:chg>
                   <contact:voice>+420.222333444</contact:voice>
@@ -131,7 +131,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
          <update>
             <contact:update
              xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.2.xsd">
                <contact:id>CID-EXTRAADDR</contact:id>
                <contact:chg>
                   <contact:voice>+420.000000001</contact:voice>
@@ -142,7 +142,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
          <extension>
             <extra-addr:update
              xmlns:extra-addr="http://www.nic.cz/xml/epp/extra-addr-1.0"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/extra-addr-1.0 extra-addr-1.0.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/extra-addr-1.0 extra-addr-1.0.0.xsd">
                <extra-addr:set>
                   <extra-addr:mailing>
                      <extra-addr:addr>
@@ -169,7 +169,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
       <command>
          <update>
             <contact:update xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.2.xsd">
                <contact:id>CID-EXTRAADDR</contact:id>
                <contact:chg>
                   <contact:voice>+420.000000001</contact:voice>
@@ -180,7 +180,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
          <extension>
             <extra-addr:update
              xmlns:extra-addr="http://www.nic.cz/xml/epp/extra-addr-1.0"
-             xsi:schemaLocation="http://www.nic.cz/xml/epp/extra-addr-1.0 extra-addr-1.0.xsd">
+             xsi:schemaLocation="http://www.nic.cz/xml/epp/extra-addr-1.0 extra-addr-1.0.0.xsd">
                <extra-addr:rem>
                   <extra-addr:mailing/>
                </extra-addr:rem>
