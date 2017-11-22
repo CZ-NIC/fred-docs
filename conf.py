@@ -117,7 +117,7 @@ pygments_style = 'sphinx'
 
 # Extensions configuration - TODOs
 # If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = True
+todo_include_todos = False
 #todo_link_only = True
 
 # Conditional inclusion tags - uncomment to allow inclusion
