@@ -202,7 +202,7 @@ Contact merger
 ^^^^^^^^^^^^^^
 
 The contact merger allows to fuse together two or more contacts that appear
-to represent the same identity and that are in a merge-able state.
+to represent the same identity and that are in a merge-able state.
 
 The contact merger can be used from the command line only.
 
@@ -211,14 +211,14 @@ operation can be found in the :doc:`/Features/Concepts/ContactMerger` concept.
 
 .. _contact-merge-manual:
 
-Merge a pair of duplicate contacts (manual)
+Merge a pair of duplicate contacts (manual)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Registry operator can use a manual merge if they select a pair of duplicate
+The Registry operator can use a manual merge if they select a pair of duplicate
 contacts themself. The operator must also decide which contact will be
 the *destination* contact.
 
-A pair of merge-able contacts can be then merged by running a command like this:
+A pair of merge-able contacts can be then merged by running a command like this:
 
 .. code-block:: shell
 
@@ -232,10 +232,10 @@ Also see the program ``--help`` for more options.
 
 .. _contact-merge-auto:
 
-Merge a set of duplicate contacts (automatic)
+Merge a set of duplicate contacts (automatic)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Duplicate contacts can be selected automatically as a whole set
+Duplicate contacts can be selected automatically as a whole set
 which may contain more than two duplicates.
 
 Selection may be restricted by inclusion or exclusion of registrars.
@@ -245,9 +245,9 @@ The *destination* contact is determined by filtering the set with various criter
 which make the outcome the best possible choice.
 Other contacts in the set are treated as *source* contacts.
 
-Priority of the criteria can be changed in a command-line option.
+Priority of the criteria can be changed in a command-line option.
 
-The automatic merge procedure may be setup as a :doc:`periodic task
+The automatic merge procedure may be setup as a :doc:`periodic task
 </AdminManual/PeriodicTasks>` in Cron.
 
 An automatic selection of duplicates and merger can be run like this:
@@ -258,7 +258,7 @@ An automatic selection of duplicates and merger can be run like this:
       --selection_filter_order mcs_filter_max_objects_bound,mcs_filter_recently_created,mcs_filter_identified_contact \
       [--dry_run]
 
-This command will select a set of duplicate contacts which are managed
+This command will select a set of duplicate contacts which are managed
 by the registrar given by its handle, and :ref:`merge <merge-operation>`
 all *source* contacts into the best *destination* contact.
 

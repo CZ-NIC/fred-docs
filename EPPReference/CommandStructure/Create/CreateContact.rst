@@ -172,7 +172,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 .. code-block:: shell
    :caption: FRED-client equivalent
 
-   > # This command does not have a FRED-client equivalent in this version.
+   > # This command does not have a FRED-client equivalent in this version.
 
 .. index:: ⒺcreData, Ⓔid, ⒺcrDate
 

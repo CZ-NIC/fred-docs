@@ -49,7 +49,7 @@ Each managed object has the following attributes:
 Domain names and hostnames
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A domain name being registered or a nameserver hostname being assigned to a nsset
+A domain name being registered or a name-server hostname being assigned to a nsset
 must be in the :term:`FQDN` form.
 
 A domain name or a hostname must comply with the following syntax:
@@ -82,8 +82,8 @@ Additional CZ.NIC rules for domain names:
 
    Validation of the format of domain names may be configured by the Registry
    operator differently. The Registry operator is supposed to publish
-   a document that declares the rules of registrar communication with the Registry,
-   including a definition of valid domain names.
+   a document that declares the rules of registrar communication with the Registry,
+   including a definition of valid domain names.
 
 .. _mngobj-handle-syntax:
 
@@ -106,8 +106,8 @@ or :term:`fredcom:objIDChgType`).
 
    Validation of the format of handles may be configured by the Registry
    operator differently. The Registry operator is supposed to publish
-   a document that declares the rules of registrar communication with the Registry,
-   including a definition of valid handles.
+   a document that declares the rules of registrar communication with the Registry,
+   including a definition of valid handles.
 
 .. _mngobj-timestamps:
 

@@ -8,19 +8,19 @@ The purpose of contact merger is to minimize duplicate contacts
 in the Registry.
 
 The core of the merger is the :ref:`merge operation <merge-operation>`
-which allows to merge a pair of identical and merge-able contacts,
-from a *source* contact to a *destination* contact.
+which allows to merge a pair of identical and merge-able contacts,
+from a *source* contact to a *destination* contact.
 If the contacts are linked to other objects, then the *source* contact is
 replaced with the *destination* contact in every linked object.
 The *source* contact is then deleted from the Registry.
 
-The Registry operator may choose a pair of duplicate contacts themself and
+The Registry operator may choose a pair of duplicate contacts themself and
 merge just the two them if the two contacts are :ref:`merge-able <mergeable-contacts>`.
 (See the task :ref:`contact-merge-manual`.)
 
 The other option is to use the automatic merge procedure which can select
-a whole set of duplicate contacts automatically and merge them
-into a single *destination* contact.
+a whole set of duplicate contacts automatically and merge them
+into a single *destination* contact.
 (See the task :ref:`contact-merge-auto`.)
 
 
@@ -97,7 +97,7 @@ Contacts must be identical [*]_ and comply with the following conditions:
 * the *source* contact(s):
    * must not be administratively blocked (``serverBlocked`` status active), and
    * must not have the ``serverDeleteProhibited`` status active, and
-   * must not belong to a mojeID account (``mojeidContact`` status active), and
+   * must not belong to a mojeID account (``mojeidContact`` status active), and
    * must not have the ``contactInManualVerification`` status active, and
    * must not have the ``contactFailedManualVerification`` status active,
 * and the *destination* contact:
@@ -118,7 +118,7 @@ Contacts must be identical [*]_ and comply with the following conditions:
 Merge operation
 ---------------
 
-The procedure of merging a pair of duplicate contacts performs as follows:
+The procedure of merging a pair of duplicate contacts performs as follows:
 
 #. Checks that the contacts are :ref:`merge-able <mergeable-contacts>`.
 #. In objects linked to the *source* contact, replaces the *source* contact

@@ -50,7 +50,7 @@ This service provides web access to Registry administration. It can be used
 by the Registry customer service for manual administrative tasks.
 
 This component is coded in Python using the CherryPy framework which provides
-a self-contained web server.
+a self-contained web server.
 
 The service has its own configuration file.
 
@@ -103,7 +103,7 @@ Refer to ``fred-akm --help`` for all available commands.
 
 The program has its own :ref:`configuration <config-cliutils>` file.
 
-The program uses a local SQLite database to store internal intermediary data
+The program uses a local SQLite database to store internal intermediary data
 (scan state) between runs.
 
 .. _FRED-Arch-clients-cdnskeyscanner:
@@ -113,7 +113,7 @@ CDNSKEY scanner
 
 This command-line utility is used during automatic management of keysets
 to scan specified name servers for requests to update DNSSEC keys
-of specified domains. The utility spreads queries over a specified run time
+of specified domains. The utility spreads queries over a specified run time
 to avoid overloading the DNS infrastructure and distributes queries per
 name server.
 

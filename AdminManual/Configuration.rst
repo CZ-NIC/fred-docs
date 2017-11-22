@@ -289,7 +289,7 @@ life cycle):
 
 * ``regular_day_outzone_procedure_period`` – an hour in the day when the outzone
   procedure is run (24-hour system, 0 means 00:00, 14 means 14:00 etc.),
-  ??? the value must agree with a CRON job setting,
+  ??? the value must agree with a CRON job setting,
   default: 14
 * ``roid_suffix`` – suffix used in **r**\ epository **o**\ bject **id**\ entifiers
   which are :doc:`assigned to registrable objects </EPPReference/ManagedObjects/Common>`
@@ -318,14 +318,14 @@ by adding or removing an association in the table ``zone_domain_name_validation_
 such as:
 
 .. code-block:: sql
-   :caption: Example of SQL insertion of format association with a zone
+   :caption: Example of SQL insertion of format association with a zone
 
    INSERT INTO zone_domain_name_validation_checker_map (checker_id, zone_id)
       values (2, 1);
 
-where ``checker_id`` is an id of a formatting rule and ``zone_id`` is an id of a zone.
+where ``checker_id`` is an id of a formatting rule and ``zone_id`` is an id of a zone.
 
-For a domain name to be valid, it must comply with all rules assigned to its zone.
+For a domain name to be valid, it must comply with all rules assigned to its zone.
 
 :ref:`Further restrictions on domain names <config-restrict-dn>` may be required
 by the domain blacklist.
@@ -343,11 +343,11 @@ nssets and keysets—with settings in two database tables:
 * ``regex_object_type_handle_validation_checker_map`` – determines which
   patterns will have to be matched for which object types.
 
-To configure a new allowed pattern, connect to the database and insert a new
+To configure a new allowed pattern, connect to the database and insert a new
 regular expression into the ``regex_handle_validation_checker`` table, such as:
 
 .. code-block:: sql
-   :caption: Example of SQL insertion of a handle format pattern
+   :caption: Example of SQL insertion of a handle format pattern
 
    INSERT INTO regex_handle_validation_checker (regex, description)
       values ('^[Cc]', 'must start with the letter c or C');
@@ -362,17 +362,17 @@ Now, associate the new pattern to object types using the map table, such as:
 
 where ``checker_id`` is the id of our new pattern and ``type_id`` is the id
 of the desired object type from the ``enum_object_type`` table,
-in our case contact. A regex pattern can be associated with several object types.
+in our case contact. A regex pattern can be associated with several object types.
 In our example, the pattern will make sure that contact handles start with the letter c or C.
 
 In case an invalid regular expression was set up in the database,
 then the corresponding :samp:`check_{object}`, :samp:`create_{object}` and :samp:`info_{object}`
 operations will respond with the ``2400 Command failed`` result code.
 
-For a handle to be valid, it must match all patterns assigned to its object type.
+For a handle to be valid, it must match all patterns assigned to its object type.
 
-If a handle is not valid according to db settings, the EPP client receives
-a response with the ``2005 Parameter value syntax error`` result code.
+If a handle is not valid according to db settings, the EPP client receives
+a response with the ``2005 Parameter value syntax error`` result code.
 
 .. Important::
 
@@ -387,8 +387,8 @@ a response with the ``2005 Parameter value syntax error`` result code.
         so that handles conforming previous formatting rules can still be used,
       * ``objIDChgType`` – same as ``objIDType`` but allowing an empty string.
 
-   If a handle is not valid according to XML schemas, the EPP client receives
-   a response with the ``2001 Command syntax error`` result code due to failed
+   If a handle is not valid according to XML schemas, the EPP client receives
+   a response with the ``2001 Command syntax error`` result code due to failed
    XML validation.
 
 .. _config-restrict-dn:
@@ -396,8 +396,8 @@ a response with the ``2005 Parameter value syntax error`` result code.
 Restricting domain names
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-A forbidden pattern for domain names can be configured by inserting a new pattern
-with a validity period (i.e. when the pattern is applicable)
+A forbidden pattern for domain names can be configured by inserting a new pattern
+with a validity period (i.e. when the pattern is applicable)
 into the ``domain_blacklist`` table, such as:
 
 .. code-block:: sql
@@ -422,4 +422,4 @@ The patterns can be used in various ways:
   registrations of 2-character domain names in the cz TLD,
 * or any other that regular expressions can express.
 
-For a domain name to be valid, it must not match any pattern that is currently applicable.
+For a domain name to be valid, it must not match any pattern that is currently applicable.

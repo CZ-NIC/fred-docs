@@ -5,10 +5,10 @@
 Object transfer
 ===============
 
-Object transfer is a mechanism that allows to change the designated registrar
+Object transfer is a mechanism that allows to change the designated registrar
 of an object.
 
-Each object has **authorization information** (or authInfo, also called a transfer password)
+Each object has **authorization information** (or authInfo, also called a transfer password)
 that must be provided with the transfer request to authorize the transfer.
 
 The transfer process in the FRED is different from the standard one
@@ -16,7 +16,7 @@ The transfer process in the FRED is different from the standard one
 
 #. Object owner requests auth.info of the object intended for transfer.
    He can do so via the current registrar, via the new registrar or
-   by submitting a public request to the Registry directly.
+   by submitting a public request to the Registry directly.
 #. The auth.info is provided to the owner either through one of the involved
    registrars or sent from the Registry.
 #. Object owner requests the transfer from the new registrar and provides
@@ -31,7 +31,7 @@ This model favours the end user (registrant) because it does not allow
 the current designated registrar to reject nor inhibit the transfer.
 
 .. NOTE Public request and Domain browser provide direct access to AuthInfo
-   without involving a registrar
+   without involving a registrar
 
 .. NOTE Tech/Admin-contacts can use their contact password to transfer linked objects
    of other types (even domains),

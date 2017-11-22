@@ -18,7 +18,7 @@ Registrants are supposed to ask their DNS operators to do so or not to do so.
    The KnotDNS can be easily configured to support `automatic key management
    <https://www.knot-dns.cz/docs/2.6/html/configuration.html#automatic-dnssec-signing>`_.
 
-A CDNSKEY contains the KSK of a child zone (domain) solely for the purpose to request
+A CDNSKEY contains the KSK of a child zone (domain) solely for the purpose to request
 updates to DS records in the parent zone (Registry). DS records are calculated
 by the Registry; see also :doc:`zone generation concept </Features/Concepts/Genzone>`.
 
@@ -26,40 +26,40 @@ The CDNSKEY resource records are recognized by the FRED as **valid** when they c
 with the same constraints as the rest of managed keysets – see
 :ref:`keyset attributes in the EPP Reference Manual <mng-keyset-attr>`.
 
-A special case is the "delete key" (``CDNSKEY 0 3 0 AA==``) which can be
-published to request removal of a domain from AKM.
+A special case is the "delete key" (``CDNSKEY 0 3 0 AA==``) which can be
+published to request removal of a domain from AKM.
 
 .. [*] The FRED does not support CDS resource records.
 
 Security status cases
 ---------------------
 
-The Registry handles the request for update according to the security status of a domain:
+The Registry handles the request for update according to the security status of a domain:
 
-* an insecured domain (registered without a keyset) requests to be included in AKM,
-* a domain secured with a manually-managed keyset requests to be switched to AKM,
-* a domain secured with an auto-managed keyset requests to update the keys.
+* an insecured domain (registered without a keyset) requests to be included in AKM,
+* a domain secured with a manually-managed keyset requests to be switched to AKM,
+* a domain secured with an auto-managed keyset requests to update the keys.
 
 Acceptance of new keys
 ----------------------
 
-When introducing a new domain in AKM, the Registry handles differently domains
-which do not register yet as DNSSEC-enabled (without a keyset, insecured)
-and those that are secured with a keyset:
+When introducing a new domain in AKM, the Registry handles differently domains
+which do not register yet as DNSSEC-enabled (without a keyset, insecured)
+and those that are secured with a keyset:
 
-* When a domain is already secured with a keyset, adoption of new keys happens
+* When a domain is already secured with a keyset, adoption of new keys happens
   immediately because the new keys can be authenticated using the old keys,
   and the domain is switched to AKM.
 
-* When a domain is not secured yet, the detected keys must undergo the **acceptance
+* When a domain is not secured yet, the detected keys must undergo the **acceptance
   period** during which they must remain valid and unchanged on all name servers
   in the associated nsset.
-  The acceptance period acts as a security measure instead of key authentication.
+  The acceptance period acts as a security measure instead of key authentication.
   After the keys pass the acceptance period successfully, then they are adopted
   and the domain is switched to AKM.
 
 The **acceptance period** is initiated when valid CDNSKEY resource records are found
-for the first time during a scan. In subsequent scans, the records must be found
+for the first time during a scan. In subsequent scans, the records must be found
 again in exactly the same state and on all the name servers as before, otherwise
 the acceptance period is broken and the whole process must be restarted.
 
@@ -72,10 +72,10 @@ The task of keyset management is performed in several steps:
    from their nssets, and sorts them in the scan queue.
 #. Scans domains in the scan queue:
 
-   - if a domain is insecured, name servers are asked by the scanner directly
+   - if a domain is insecured, name servers are asked by the scanner directly
      via TCP queries whether they have CDNSKEY records for domains,
-   - if a domain is secured, the CDNSKEY records are requested via a local resolver
-     and a response is validated with DNSSEC inside the scanner,
+   - if a domain is secured, the CDNSKEY records are requested via a local resolver
+     and a response is validated with DNSSEC inside the scanner,
 
    and saves the results.
 

@@ -106,7 +106,7 @@ element which declares the ``extra-addr`` namespace (``http://www.nic.cz/xml/epp
 and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 
 * ``<extra-addr:set>`` **(0..1)** – a new address will be set;
-  if the contact already has a mailing address, it will be replaced:
+  if the contact already has a mailing address, it will be replaced:
 
    * ``<extra-addr:mailing>`` **(1)**  – mailing address container:
       * ``<extra-addr:addr>`` **(1)** – address:
@@ -193,7 +193,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 .. code-block:: shell
    :caption: FRED-client equivalent
 
-   > # This command does not have a FRED-client equivalent in this version.
+   > # This command does not have a FRED-client equivalent in this version.
 
 Response element structure
 --------------------------

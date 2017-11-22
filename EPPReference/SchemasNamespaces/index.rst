@@ -90,7 +90,7 @@ partial schemas and thus provides the definitions of all namespaces in a single
    * - ``extra-addr``
      - ``http://www.nic.cz/xml/epp/extra-addr-1.0``
      - :samp:`extra-addr-1.0.0.xsd`
-     - FRED command/response extensions for a mailing address in contacts
+     - FRED command/response extensions for a mailing address in contacts
    * - ``xsi``
      - ``http://www.w3.org/2001/XMLSchema-instance``
      - N/A

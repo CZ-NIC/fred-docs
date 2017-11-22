@@ -205,15 +205,15 @@ See also the :doc:`AKM concept </Features/Concepts/AKM>`.
 
 **Task activities**:
 
-* :program:`load` – prepares a queue of domains (and corresponding name servers)
+* :program:`load` – prepares a queue of domains (and corresponding name servers)
   which will be scanned for the presence of CDNSKEY records;
   Domains will be loaded either from the CORBA server (default) or an
-  input file, and they can be filtered through a white list (optional).
+  input file, and they can be filtered through a white list (optional).
 
   Domains can be selected according to their security status group:
 
-   * insecure – domains without a keyset,
-   * secure-noauto – domains secured with a manually managed keyset,
+   * insecure – domains without a keyset,
+   * secure-noauto – domains secured with a manually managed keyset,
    * secure-auto – domains secured with an automatically managed keyset.
 
   By default, domains are selected according to all three groups but some
@@ -233,7 +233,7 @@ See also the :doc:`AKM concept </Features/Concepts/AKM>`.
 
 **Configuration**:
 
-* in a configuration file
+* in a configuration file
 
 Communication
 -------------

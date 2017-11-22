@@ -55,7 +55,7 @@ Email type: ``expiration_notify``
 
 Email type: ``expiration_dns_warning_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* sent to the domain owner in response to the upcoming exclusion of a domain
+* sent to the domain owner in response to the upcoming exclusion of a domain
   from the zone
 * passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`domain <csparams-domain>`,
@@ -77,7 +77,7 @@ Email type: ``expiration_dns_warning_owner``
 
 Email type: ``expiration_dns_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* sent to the domain owner in response to the exclusion of a domain from the zone
+* sent to the domain owner in response to the exclusion of a domain from the zone
 * passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
   :ref:`domain <csparams-domain>`,
@@ -360,7 +360,7 @@ Email type: ``notification_delete``
 
 Email type: ``techcheck``
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-* sent if a test in a technical check of a nsset has failed, as a report
+* sent if a test in a technical check of a nsset has failed, as a report
   to technical contacts of the nsset
 * common passed parameters: :ref:`defaults.* <csparams-defaults>`
 * additional parameters:
@@ -384,17 +384,17 @@ Email type: ``techcheck``
          - :samp:`tests.*.ns` – list of the name servers,
       * ``autonomous`` – the nsset does not contain at least two name servers in different autonomous systems:
          - no more content,
-      * ``presence`` – name server(s) exists which does not contain a record for any of the domains:
+      * ``presence`` – name server(s) exists which does not contain a record for any of the domains:
          - :samp:`tests.*.ns` – list of the name servers,
-         - :samp:`tests.*.ns.*.fqdn` – list of the domains for a particular
-           name server of which this name server does not contain a record,
+         - :samp:`tests.*.ns.*.fqdn` – list of the domains for a particular
+           name server of which this name server does not contain a record,
          - :samp:`tests.*.ns.overfull` – the list of domains is incomplete /
            there are more domains in the test input for which this name server
-           does not contain a record but they are not all listed (this
+           does not contain a record but they are not all listed (this
            can be used to insert an ellipsis  - ..." conditionally),
       * ``authoritative`` – name server is not authoritative for domains:
          - :samp:`tests.*.ns` – list of the name servers,
-         - :samp:`tests.*.ns.*.fqdn` – list of the domains for a particular
+         - :samp:`tests.*.ns.*.fqdn` – list of the domains for a particular
            name server of which this name server is not authoritative,
          - :samp:`tests.*.ns.overfull` – the list of domains is incomplete /
            there are more domains in the test input for which this name server
@@ -404,20 +404,20 @@ Email type: ``techcheck``
          - no more content,
       * ``notrecursive`` – following name servers in the nsset are recursive:
          - :samp:`tests.*.ns` – list of the name servers,
-      * ``notrecursive4all`` – following name servers in the nsset answered a query recursively:
+      * ``notrecursive4all`` – following name servers in the nsset answered a query recursively:
          - :samp:`tests.*.ns` – list of the name servers,
       * ``dnsseckeychase`` – for the following domains belonging to the nsset, the validity of the dnssec signature could not be verified:
          - :samp:`tests.*.ns` – list of the domains.
 
      The original template defines and uses the ``printtest()`` macro which accepts
-     a result dataset (an item from the ``tests`` list) as an argument and
+     a result dataset (an item from the ``tests`` list) as an argument and
      prints the results according to the subject (``name``) of the test. Print
      of the test results is then grouped by severity of failure.
 
 Email type: ``request_block``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the domain owner / the contact / technical contacts of an object
-  after a :term:`public request` for object (un)blocking has been carried out
+  after a :term:`public request` for object (un)blocking has been carried out
 * common passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`reqdate <csparams-reqdate>`, :ref:`reqid <csparams-reqid>`,
   :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
@@ -427,14 +427,14 @@ Email type: ``request_block``
 
 Email type: ``annual_contact_reminder``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* sent to a contact in response to the upcoming contact registration anniversary
-  as a reminder to check accuracy of contact information in the registry
+* sent to a contact in response to the upcoming contact registration anniversary
+  as a reminder to check accuracy of contact information in the registry
 * common passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`handle <csparams-handle>`
 * additional parameters:
    * ``organization`` – name of contact's organization,
    * ``name`` – personal or company name,
-   * ``address`` – address (in a single line),
+   * ``address`` – address (in a single line),
    * ``ident_type`` – identity-document identification type:
       * ``RC`` – birth number,
       * ``OP`` – personal ID card number,
@@ -453,8 +453,8 @@ Email type: ``annual_contact_reminder``
    * ``registrar_memo_cz`` – additional information provided by the registrar (Czech variant),
    * ``registrar_memo_en`` – additional information provided by the registrar (English variant),
    * ``domains`` – list of domains where the contact is the owner,
-   * ``nssets`` – list of nssets where the contact is a technical contact,
-   * ``keysets`` – list of keysets where the contact is a technical contact.
+   * ``nssets`` – list of nssets where the contact is a technical contact,
+   * ``keysets`` – list of keysets where the contact is a technical contact.
 
 Email type: ``merge_contacts_auto``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -471,7 +471,7 @@ Email type: ``merge_contacts_auto``
      contacts had to be replaced with the destination contact,
    * ``keyset_tech_list`` – list of handles of keysets in which some technical
      contacts had to be replaced with the destination contact,
-   * ``removed_list`` – list of contacts which have been deleted as a result
+   * ``removed_list`` – list of contacts which have been deleted as a result
      of the merger.
 
   Values of the lists can be accessed by adding an index number at the end
@@ -482,7 +482,7 @@ Email type: ``merge_contacts_auto``
 
 Email type: ``akm_candidate_state_ok``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* sent after valid CDNSKEY records are discovered on a insecured domain
+* sent after valid CDNSKEY records are discovered on a insecured domain
   and the acceptance period is initiated,
   to technical contacts of the domain's nsset
 * common passed parameters: :ref:`defaults.* <csparams-defaults>`,
@@ -491,7 +491,7 @@ Email type: ``akm_candidate_state_ok``
 * additional parameters:
 
    * ``keys`` – list of discovered CDNSKEY records (the first item of the list as ``keys.0`` etc.),
-     a single key item looks like this::
+     a single key item looks like this::
 
         [flags: 257, protocol: 3, algorithm: 13, key: "mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ=="]
 

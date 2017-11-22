@@ -6,7 +6,7 @@ Client implementation guide
 
 .. struct-start
 
-This document guides you through the implementation of a custom EPP-client.
+This document guides you through the implementation of a custom EPP-client.
 
 .. rubric:: Target audience
 

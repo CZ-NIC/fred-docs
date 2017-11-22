@@ -5,6 +5,7 @@ Record of Changes
 =================
 
 .. tabularcolumns:: |p{0.075\textwidth}|p{0.075\textwidth}|p{0.25\textwidth}|p{0.575\textwidth}|
+
 .. list-table::
    :header-rows: 1
    :widths: 8, 8, 26, 58
@@ -24,7 +25,7 @@ Record of Changes
    * -
      -
      - :doc:`/AdminManual/Appendixes/CSParams/index`
-     - Added a new CS parameter
+     - Added a new CS parameter
    * - **2.31**
      -
      - :doc:`/Features/Concepts/AKM`

@@ -131,7 +131,7 @@ Mailing address
 ^^^^^^^^^^^^^^^
 
 :doc:`Command & response extensions </EPPReference/ProtocolBasics/ComResExtensions>`
-allow to manage an additional address with a contact.
+allow to manage an additional address with a contact.
 
 Namespace: \http://www.nic.cz/xml/epp/extra-addr-1.0 |br|
 Schema: extra-addr-1.0.0.xsd
