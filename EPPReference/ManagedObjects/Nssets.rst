@@ -9,6 +9,13 @@ A nsset contains information which represents a set of name servers.
 Namespace: \http://www.nic.cz/xml/epp/nsset-1.2 |br|
 Schema: nsset-1.2.2.xsd
 
+.. Note:: Name-server host mapping is partially based on the standard :rfc:`5732`
+   but implemented with the following modifications:
+
+   * host names are grouped in a set that is identified by a handle,
+   * addition of the report level,
+   * association with technical contacts.
+
 .. _mng-nsset-attr:
 
 Object attributes

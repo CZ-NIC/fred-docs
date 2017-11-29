@@ -11,7 +11,11 @@ Namespace: \http://www.nic.cz/xml/epp/domain-1.4 |br|
 Schema: domain-1.4.2.xsd
 
 .. Note:: Domain name mapping is based on the standard :rfc:`5731`
-   but it is not entirely compliant.
+   but implemented with the following modifications:
+
+   * replacement of a list of name servers with a nsset,
+   * addition of a keyset,
+   * simplification of the list of contacts to just one type of contact (admin).
 
 .. _mng-domain-attr:
 
@@ -39,10 +43,10 @@ the following attributes:
 ``exDate``
    The date of domain name expiration.
 
-``valExDate`` :sup:`ENUM only`
+``valExDate`` :sup:`ENUM extension`
    The date of the expiration of ENUM domain validation.
 
-``publish`` :sup:`ENUM only` :sup:`+ DEPRECATED`
+``publish`` :sup:`ENUM extension` :sup:`+ DEPRECATED`
    Flag of publishing an ENUM domain in a public ENUM directory.
 
    This attribute has currently no meaning for the server and it will be removed

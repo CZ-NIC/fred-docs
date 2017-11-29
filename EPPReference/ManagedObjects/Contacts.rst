@@ -10,7 +10,10 @@ Namespace: \http://www.nic.cz/xml/epp/contact-1.6 |br|
 Schema: contact-1.6.2.xsd
 
 .. Note:: Contact mapping is based on the standard :rfc:`5733`
-   but it is not entirely compliant.
+   but implemented with the following modifications:
+
+   * addition of notification email, VAT identification number, personal identification number and the type thereof,
+   * replacement of two postal addresses with just one postal address.
 
 .. _mng-contact-attr:
 
@@ -33,7 +36,7 @@ the following attributes:
       The name of an organization.
 
    ``addr``
-      The real-world contact address, consisting of:
+      The postal address, consisting of:
 
       ``street``
          1–3 street line(s).
@@ -74,9 +77,9 @@ the following attributes:
 
    .. Note:: The contact handle, name and organization are always disclosed.
 
-``mailing``/``addr``
+``mailing``/``addr`` :sup:`extension`
    An additional :ref:`mailing address <mng-contact-ext>` which consists
-   of the same items as the ``addr`` address in ``postalInfo``.
+   of the same items as the postal address (``postalInfo``/``addr``).
 
 .. _mng-contact-stat:
 

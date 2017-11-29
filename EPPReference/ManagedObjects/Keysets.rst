@@ -9,6 +9,14 @@ A keyset contains information which represents a set of DNSSEC keys.
 Namespace: \http://www.nic.cz/xml/epp/keyset-1.3 |br|
 Schema: keyset-1.3.2.xsd
 
+.. Note:: DNSSEC keys mapping is partially based on the standard :rfc:`5910`
+   but implemented with the following modifications:
+
+   * keys are grouped in a set that is identified by a handle,
+   * a standalone object instead of just a domain extension,
+   * custom element structure for DNSSEC key representation,
+   * association with technical contacts.
+
 .. _mng-keyset-attr:
 
 Object attributes
