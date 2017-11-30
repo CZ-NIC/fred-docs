@@ -172,7 +172,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
 .. code-block:: shell
    :caption: FRED-client equivalent
 
-   > # This command does not have a FRED-client equivalent in this version.
+   > create_contact CID-EXTRAADDR 'Foo Bar' foobar@nic.cz 'Kratka 42' Praha 11150 CZ NULL NULL NULL NULL NULL () NULL () NULL (('Dlouha 24' 'Lysa nad Labem' 28922 CZ))
 
 .. index:: ⒺcreData, Ⓔid, ⒺcrDate
 

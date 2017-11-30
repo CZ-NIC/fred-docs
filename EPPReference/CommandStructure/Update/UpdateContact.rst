@@ -159,6 +159,11 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
       </command>
    </epp>
 
+.. code-block:: shell
+   :caption: FRED-client equivalent (set)
+
+   > update_contact CID-EXTRAADDR (() +420.000000001 NULL NULL NULL () NULL () foobar-notify@nic.cz) ((('Kratka 24' Praha 11150 CZ)))
+
 .. code-block:: xml
    :caption: Example (remove)
 
@@ -191,9 +196,9 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
    </epp>
 
 .. code-block:: shell
-   :caption: FRED-client equivalent
+   :caption: FRED-client equivalent (remove)
 
-   > # This command does not have a FRED-client equivalent in this version.
+   > update_contact CID-EXTRAADDR (() +420.000000001 NULL NULL NULL () NULL () foobar-notify@nic.cz) (() mailing_addr)
 
 Response element structure
 --------------------------
