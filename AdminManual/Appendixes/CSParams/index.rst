@@ -359,6 +359,8 @@ Email type: ``notification_delete``
   :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
 
+.. _email-type-techcheck:
+
 Email type: ``techcheck``
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent if a test in a technical check of a nsset has failed, as a report
