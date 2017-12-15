@@ -46,3 +46,7 @@ Record of Changes
      -
      - :doc:`/EPPReference/Appendixes/ErrorReasons`
      - New texts of EPP error reasons
+   * -
+     - **1.1**
+     - :doc:`/Features/General/index`
+     - Added record statements feature, component and email template
