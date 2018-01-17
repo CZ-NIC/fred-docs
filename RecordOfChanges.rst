@@ -4,6 +4,8 @@
 Record of Changes
 =================
 
+Overview of changes from the previous edition of documentation.
+
 .. tabularcolumns:: |p{0.075\textwidth}|p{0.075\textwidth}|p{0.25\textwidth}|p{0.575\textwidth}|
 
 .. list-table::
@@ -58,3 +60,15 @@ Record of Changes
      -
      - :doc:`/Features/Concepts/Teccheck`
      - Expanded on the concept of technical checks
+   * - **2.34**
+     - **1.0**
+     - :doc:`/ReleaseNotes/index`
+     - Added release notes
+   * -
+     -
+     - :doc:`Diagram of FRED components </Architecture/TopLevelComponents/index>`
+     - Removed dependency on ``fred-logd`` from ``fred-pifd``
+   * -
+     -
+     - :ref:`cronjob-regular` and :ref:`cronjob-object-deletion`
+     - Procedures accept object types by name, new argument, removed dependency on ``fred-rifd``

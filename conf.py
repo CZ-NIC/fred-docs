@@ -63,7 +63,7 @@ author = u'Technical department of CZ.NIC'
 # built documents.
 #
 # The short X.Y version.
-version = u'2.33'
+version = u'2.34'
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -86,7 +86,7 @@ today_fmt = u'%d %B %Y'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This patterns also effect to html_static_path and html_extra_path
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_*', 'Thumbs.db', '.DS_Store']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
