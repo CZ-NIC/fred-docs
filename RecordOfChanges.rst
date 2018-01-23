@@ -50,3 +50,11 @@ Record of Changes
      - **1.1**
      - :doc:`/Features/General/index`
      - Added record statements feature, component and email template
+   * -
+     - **1.2**
+     - :doc:`/EPPReference/ManagedObjects/index`
+     - Added divergence from the standards of object mapping in FRED EPP
+   * -
+     -
+     - :doc:`/Features/Concepts/Teccheck`
+     - Expanded on the concept of technical checks

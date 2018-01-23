@@ -18,6 +18,7 @@
 #
 # import os
 # import sys
+import time
 # sys.path.insert(0, os.path.abspath('.'))
 #import sphinx_rtd_theme
 
@@ -54,8 +55,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'FRED'
-copyright = u'2016–2017, CZ.NIC, z. s. p. o.'
-author = u'CZ.NIC'
+copyright = u'2016–%d, CZ.NIC, z.s.p.o.' % time.localtime().tm_year
+author = u'Technical department of CZ.NIC'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
