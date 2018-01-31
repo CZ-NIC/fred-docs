@@ -53,6 +53,8 @@ or an archived version list, such as https://fred.nic.cz/files/fred/fred-sources
    done
    for F in *.tar.gz; do tar -zxvf $F; done
 
+.. _install-auto:
+
 Install "A" packages
 ^^^^^^^^^^^^^^^^^^^^
 These packages are configured, compiled and installed using **Autotools** [#]_
@@ -111,6 +113,7 @@ the :file:`mod-corba` installation::
 
    sudo ./libtool --finish /usr/lib/apache2/modules
 
+.. _install-dist:
 
 Install "D" packages
 ^^^^^^^^^^^^^^^^^^^^
