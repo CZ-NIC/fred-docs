@@ -1,11 +1,11 @@
 
 
 
-Installation of binaries on Fedora or RHEL/Centos
+Installation of binaries on Fedora or RHEL/CentOS
 -------------------------------------------------
 
 This section will guide you through installation of pre-compiled binaries
-on Fedora or RHEL/Centos systems.
+on Fedora or RHEL/CentOS systems.
 
 Before you start, make sure that all system requirements are met,
 see :ref:`System requirements <system-reqs>`.
@@ -25,16 +25,16 @@ Installation steps
    .. code-block:: bash
 
       dnf config-manager --add-repo http://archive.nic.cz/yum/fred/fedora/fred.repo
-      # in case of Redhat/Centos 7 enable epel and use yum
+      # in case of Redhat/CentOS 7 enable epel and use yum
       # yum install epel-release
       # yum-config-manager --add-repo http://archive.nic.cz/yum/fred/epel/fred.repo
-      
+
 #. Install all FRED packages
 
    .. code-block:: bash
 
       dnf install fred-*
-      # in case of Redhat/Centos use yum
+      # in case of Redhat/CentOS use yum
       # yum install fred-*
 
 #. Install the database schema
