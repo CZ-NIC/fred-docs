@@ -76,7 +76,7 @@ Regular procedure
 
 **Task command**::
 
-   /usr/sbin/fred-admin --object_regular_procedure [--object_delete_types="1,2,3,4"]
+   /usr/sbin/fred-admin --object_regular_procedure [--object_delete_types="contact,domain,keyset,nsset"]
 
 **Typically launched**: at midnight (00:00) and noon (12:00)
 
@@ -86,7 +86,6 @@ Regular procedure
 
 * ``pyfred``: Mailer module – email generation,
   FileManager module + filemanager_client – saving expiration letters (pdf)
-* ``fred-rifd``: EPP interface for deleting objects
 * ``fred-doc2pdf``: letter templates + PDF generation
 
 **Other required components**:
@@ -96,7 +95,7 @@ Regular procedure
 **Task activities**:
 
 * updates the states of the registrable objects of all types; the states
-  depend on the time and other states that are set manually
+  depend on time and other states that are set manually
 * notifies registrars and end users (contacts) about state changes:
    * generates poll messages to notify registrars
    * generates emails to notify contacts
@@ -106,6 +105,7 @@ Regular procedure
   – this activity can be disabled by omitting the ``--object_delete_types``
   argument and can be run in a separate task (see the next task)
 
+.. _cronjob-object-deletion:
 
 Separate object deletion
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -122,29 +122,23 @@ Separate object deletion
 you can include it with the regular procedure or launch it after the regular
 procedure is finished)
 
-**Required FRED components**:
-
-* ``fred-rifd``: EPP interface for deleting objects
+**Required FRED components**: none
 
 **Other required components**: none
 
 **Task activities**:
 
-* deletes objects of selected types that have been marked for deletion, types:
-   * 1 = contacts,
-   * 2 = nssets,
-   * 3 = domains,
-   * 4 = keysets
+* deletes objects of selected types that have been marked for deletion
 
 **Task variants**:
 
-* deleting *all at once*
+* deleting *all at once* (suitable for non-domains), for example:
 
   ::
 
-      /usr/sbin/fred-admin --object_delete_candidates --object_delete_types="1,2,3,4"
+      /usr/sbin/fred-admin --object_delete_candidates --object_delete_types="contact,keyset,nsset"
 
-* deleting *by parts* with the ``--object_delete_parts`` option
+* deleting *by parts* (suitable for domains) with the ``--object_delete_parts`` option
   – this variant allows you to randomize deletion of objects by spreading it
   over several calls; this variant of the task means these activities:
 
@@ -154,22 +148,22 @@ procedure is finished)
      e.g. if ``--object_delete_parts=2``, a half of the list is deleted
      in a single iteration, if ``object_delete_parts=10``, a tenth of the list
      is deleted in a single iteration and so on
+   * single iteration can be spread over a period of time specified in the
+     ``--object_delete_spread_during_time`` argument in seconds
    * the value of ``object_delete_parts`` is calculated depending
      on CRON configuration (how often the task is run)
-   * finally deletes the rest (``--object_delete_parts=1`` – this is
+   * finally, deletes the rest (``--object_delete_parts=1`` – this is
      the default value if the parameter is omitted)
 
    * *Example*: spread the deletion of domains over a whole day::
 
       # Iteration
-      */10 1-22 * * *  sleep $[$RANDOM\%300]
-         && /usr/sbin/fred-admin --object_delete_candidates --object_delete_types="3"
-         --object_delete_parts=$((((24 * 60 - (10#$(date \+"\%H") * 60 + 10#$(date \+"\%M")))/10) - 6))
+      */10 1-22 * * *  /usr/sbin/fred-admin --object_delete_candidates --object_delete_types="domain" --object_delete_parts=$((((24 * 60 - (10#$(date \+"\%H") * 60 + 10#$(date \+"\%M")))/10) - 6)) --object_delete_spread_during_time=600
 
       # Finalization
-      45 23 * * *  /usr/sbin/fred-admin --object_delete_candidates --object_delete_types="3" --object_delete_parts=1
+      45 23 * * *  /usr/sbin/fred-admin --object_delete_candidates --object_delete_types="domain" --object_delete_parts=1
 
-     **Real run time** [CZ.NIC]: ~ 5 s (one iteration)
+     **Real run time** [CZ.NIC]: ~ 5 s (one iteration)
 
 Automatic contact merger
 ^^^^^^^^^^^^^^^^^^^^^^^^
