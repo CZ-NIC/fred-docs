@@ -7,16 +7,15 @@ Release Notes
 
 .. struct-start
 
-Overview of changes from the previous version(s).
+Overview of changes in software from preceding versions.
 
 .. struct-end
 
-.. rubric:: Version overview
-
-.. contents::
+.. contents:: History
    :local:
    :backlinks: none
 
+.. include:: release-2-35-0.rst
 
 .. include:: release-2-34-0.rst
 
