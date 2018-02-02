@@ -27,7 +27,7 @@ The project is open for contributions (pull requests).
 
 ## History
 
-The `master` head always points at the newest edition of documentation of the
-last public release of FRED.
-Documentation editions for older FRED releases are available under tags like `v2.33`.
-The oldest historical version tagged is `v2.29`.
+The `master` always contains the newest edition of the documentation of the
+last FRED release.
+The documentation of older FRED releases is available under tags like `v2.33`.
+The oldest historical version is `v2.29`.
