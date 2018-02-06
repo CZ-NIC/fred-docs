@@ -33,9 +33,11 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
   that will be changed by this update. Omitted attributes will remain unchanged.
 
    * ``<domain:nsset>`` **(0..1)** – change the domain's nsset by its handle
-     as :term:`fredcom:objIDChgType`,
+     as :term:`fredcom:objIDChgType`; if the element is empty, the current nsset
+     will be unlinked from the domain,
    * ``<domain:keyset>`` **(0..1)** – change the domain's keyset by its handle
-     as :term:`fredcom:objIDChgType`,
+     as :term:`fredcom:objIDChgType`; if the element is empty, the current keyset
+     will be unlinked from the domain,
    * ``<domain:registrant>`` **(0..1)** – change the domain's registrant by its
      handle as :term:`fredcom:objIDType`,
    * ``<domain:authInfo>`` **(0..1)** – change the domain's authorization
@@ -60,7 +62,10 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
                   <domain:admin>CID-ADMIN1</domain:admin>
                </domain:rem>
                <domain:chg>
-                  <domain:nsset>NID-MYNSSET</domain:nsset>
+                  <!-- do nothing with nsset (absent element) ~ NULL -->
+                  <!-- remove keyset ~ empty string -->
+                  <domain:keyset/>
+                  <!-- change registrant -->
                   <domain:registrant>CID-MYOWN</domain:registrant>
                </domain:chg>
             </domain:update>
@@ -72,7 +77,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 .. code-block:: shell
    :caption: FRED-client equivalent
 
-   > update_domain mydomain.cz CID-ADMIN2 CID-ADMIN1 () (NID-MYNSSET NULL CID-MYOWN)
+   > update_domain mydomain.cz CID-ADMIN2 CID-ADMIN1 () (NULL '' CID-MYOWN)
 
 .. index:: ⒺvalExDate, Ⓔpublish
 
