@@ -74,3 +74,6 @@ Glossary of Terms
       The second part (Repository id suffix) must be unique world-wide and
       it is assigned to the Registry by `IANA organization
       <https://www.iana.org/assignments/epp-repository-ids/epp-repository-ids.xhtml>`_.
+
+   Sponsoring registrar
+      See :term:`designated registrar`.
