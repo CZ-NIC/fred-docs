@@ -22,7 +22,7 @@ The operations for object modification encompass:
 * transfer – perform a transfer,
 * update – change object's details.
 
-These operations typically are performed by the registrars
+These operations are typically performed by registrars
 and they can be achieved only through the EPP interface.
 If you need to do any of these as the Registry, it is what
 the **system registrar** is for.
@@ -198,7 +198,7 @@ Resolve manual verification
 
 .. _contact-merge:
 
-Contact merger
+Merge contacts
 ^^^^^^^^^^^^^^
 
 The contact merger allows to fuse together two or more contacts that appear
@@ -214,9 +214,9 @@ operation can be found in the :doc:`/Features/Concepts/ContactMerger` concept.
 Merge a pair of duplicate contacts (manual)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The Registry operator can use a manual merge if they select a pair of duplicate
-contacts themself. The operator must also decide which contact will be
-the *destination* contact.
+The Registry operator can use a manual merge and select a pair of duplicate
+contacts by themself. The operator must also decide which contact will be
+the *destination contact*.
 
 A pair of merge-able contacts can be then merged by running a command like this:
 
@@ -224,8 +224,8 @@ A pair of merge-able contacts can be then merged by running a command like thi
 
    fred-admin --contact_merge --src <src-contact-handle> --dst <dst-contact-handle> [--dry_run]
 
-This command will :ref:`merge <merge-operation>` the *source* contact given
-by its handle into the *destination* contact given by its handle.
+This command will :ref:`merge <merge-operation>` the *source contact* given
+by its handle into the *destination contact* given by its handle.
 
 The ``--dry_run`` option is available to preview what the command will do.
 Also see the program ``--help`` for more options.
@@ -238,12 +238,12 @@ Merge a set of duplicate contacts (automatic)
 Duplicate contacts can be selected automatically as a whole set
 which may contain more than two duplicates.
 
-Selection may be restricted by inclusion or exclusion of registrars.
+Mergers are performed per registrar. Specific registrars can be excluded or included
+using command-line options.
 
-The *destination* contact is determined by filtering the set with various criteria
-(such as "contact has the most linked objects" or "contact is identified")
-which make the outcome the best possible choice.
-Other contacts in the set are treated as *source* contacts.
+The *destination contact* is determined by filtering the set with various criteria
+(see :ref:`merge-auto-criteria`) which make the outcome the best possible choice.
+Other contacts in the set are treated as *source contacts*.
 
 Priority of the criteria can be changed in a command-line option.
 
@@ -258,9 +258,9 @@ An automatic selection of duplicates and merger can be run like this:
       --selection_filter_order mcs_filter_max_objects_bound,mcs_filter_recently_created,mcs_filter_identified_contact \
       [--dry_run]
 
-This command will select a set of duplicate contacts which are managed
+This command will attempt to detect a set of duplicate contacts which are managed
 by the registrar given by its handle, and :ref:`merge <merge-operation>`
-all *source* contacts into the best *destination* contact.
+all *source contacts* into the best *destination contact*.
 
 The ``--dry_run`` option is available to preview what the command will do.
 Also see the program ``--help`` for more options.
