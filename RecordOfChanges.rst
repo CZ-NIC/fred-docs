@@ -72,3 +72,11 @@ Overview of changes from the previous edition of documentation.
      -
      - :ref:`cronjob-regular` and :ref:`cronjob-object-deletion`
      - Procedures accept object types by name, new argument, removed dependency on ``fred-rifd``
+   * -
+     - **1.1**
+     - :doc:`/Features/Concepts/ContactMerger` and :ref:`contact-merge`
+     - Criteria of destination contact selection in an automatic merger, some minor rephrasing
+   * -
+     -
+     - :doc:`/EPPReference/CommandStructure/Update/UpdateDomain`
+     - Mention of nsset and keyset unlinking with empty elements
