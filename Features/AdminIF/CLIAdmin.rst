@@ -34,6 +34,7 @@ Manage objects
 * Merge a pair of duplicate contacts (manual)
 * Merge a set of duplicate contacts (automatic)
 * Update DNSSEC keys from CDNSKEY records (AKM) (periodical)
+* Re-register a domain for another owner and force the domain expired
 
 Manage finance
 ^^^^^^^^^^^^^^
