@@ -292,3 +292,13 @@ Procedure to resolve a public request:
    In both cases, you will be prompted for an extra confirmation by retyping
    a number. Type it and hit :guilabel:`OK`.
 #. The request has been resolved.
+
+.. _generate-rs:
+
+Generate a record statement
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+#. `View object's details`_ and scroll down.
+#. Under the :guilabel:`Generate record statement` heading, select the date and
+   time to which the record shall be retrieved from the history of registrations.
+#. Click the :guilabel:`Download PDF` button.
+#. The generated PDF file will start downloading shortly.
