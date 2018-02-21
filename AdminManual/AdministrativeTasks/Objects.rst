@@ -35,7 +35,7 @@ of command usage.
 View object's details
 ^^^^^^^^^^^^^^^^^^^^^
 :ref:`Search <FRED-Admin-AdminTasks-Search>` for an object in the WebAdmin
-and then click on its *id* or *handle* to display the details.
+and then click on its *id* or *handle* or *fqdn* to display the details.
 
 If the search result contains only one record, you are redirected to its details.
 
@@ -284,8 +284,8 @@ The types of public requests:
 Procedure to resolve a public request:
 
 #. In the WebAdmin, select :menuselection:`Logs --> PublicRequests`.
-#. :ref:`Search <FRED-Admin-AdminTasks-Search>` for unresolved requests.
-   (Tip: Use *Status*: ``PRS_NEW``.)
+#. :ref:`Search <FRED-Admin-AdminTasks-Search>` for unresolved requests
+   (use the field *Status*: ``PRS_NEW``).
 #. View request's details.
 #. If the request is justified, click the :guilabel:`Accept and send` button
    to answer it, otherwise click :guilabel:`Invalidate and close`.
