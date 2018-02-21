@@ -65,6 +65,7 @@ The record statement interface :ref:`daemon <FRED-Arch-servers-cpp>`.
 This daemon implements operations over the database which allow generation
 of signed PDF documents with information about registrable objects;
 it functions as another backend for
+:ref:`Daphne <FRED-Arch-clients-webadmin>`,
 :ref:`web whois <FRED-Arch-clients-webwhois>` and
 :ref:`Domain Browser <FRED-Arch-clients-db>`.
 
@@ -150,12 +151,12 @@ The common functions provided by the framework encompass:
 The modules can run either in a single process or in several processes and
 they may share a single :ref:`configuration <config-servers-py>` file.
 
-A module in the context of PYFRED is a Python module containing the ``init``
-function which is called when the module is loaded. The initialization function
-returns a CORBA object and the name under which the object is registered
-with the naming service, and the framework takes care of making the module
-accessible from the outside. The module interacts with the framework
-only during initialization and works independently afterwards.
+.. A module in the context of PYFRED is a Python module containing the ``init``
+   function which is called when the module is loaded. The initialization function
+   returns a CORBA object and the name under which the object is registered
+   with the naming service, and the framework takes care of making the module
+   accessible from the outside. The module interracts with the framework
+   only during initialization and after that, it has a life of its own.
 
 .. _FRED-Arch-servers-genzone:
 
@@ -185,16 +186,14 @@ messages through email. It integrates a templating system for email
 assembly, operations for sending and archivation of outgoing email and search
 in archived messages.
 
-.. Note:: The mailer does not send email by itself, it just hands over all email
+.. Note:: The mailer does not send email by itself, it just hands all email over
    to a mail transfer agent.
 
 Attachments are either constructed from templates or retrieved from the file
 manager.
 
-The mailer is used by the CORBA servers `fred-rifd`_, `fred-adifd`_,
-`fred-pifd`_, `TechCheck`_, `fred-rsifd`_, `fred-mifd`_,
-and also by the CORBA clients :ref:`AKM <FRED-Arch-clients-akm>`,
-:ref:`WebAdmin <FRED-Arch-clients-webadmin>`, and
+The mailer is used by the CORBA servers `fred-rifd`_, `fred-adifd`_, `TechCheck`_,
+and also by the CORBA clients :ref:`WebAdmin <FRED-Arch-clients-webadmin>` and
 :ref:`MojeID <FRED-Arch-clients-mid>`.
 
 .. _FRED-Arch-servers-filemanager:
@@ -206,11 +205,11 @@ The file manager :ref:`daemon <FRED-Arch-servers-py>`.
 
 This daemon implements operations for managing files, namely the upload,
 download and search of managed files.
-Each file as such is stored in the file system and only its metadata are
+Each file is stored in the file system as such and only its metadata are
 recorded in the database.
 
 The file manager is used by :ref:`mailer <FRED-Arch-servers-mailer>`,
-`fred-mifd`_, and file manager client.
+:ref:`web whois service <FRED-Arch-clients-webwhois>` and file manager client.
 
 .. _FRED-Arch-servers-techcheck:
 
@@ -219,7 +218,14 @@ TechCheck
 
 The technical checks :ref:`daemon <FRED-Arch-servers-py>`.
 
-This daemon implements operations for :doc:`checking technical condition of
-name servers </Features/Concepts/Teccheck>`.
+This daemon implements operations for performing technical tests on name server
+sets.
+
+The tests are either launched periodically and a report is sent to the
+corresponding technical contact of the nsset by email, or they are requested
+by registrars and the reports are included in EPP poll messages.
+
+The technical tests are scaled by severity and the tests of higher
+severity can be performed only if the tests of lower severity were successful.
 
 Both planned checks and results are stored in the database.
