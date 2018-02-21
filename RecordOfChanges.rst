@@ -4,7 +4,7 @@
 Record of Changes
 =================
 
-Overview of changes from the previous edition of documentation.
+Overview of changes in documentation from previous editions.
 
 .. tabularcolumns:: |p{0.075\textwidth}|p{0.075\textwidth}|p{0.25\textwidth}|p{0.575\textwidth}|
 
