@@ -83,6 +83,7 @@ Manage domains
    * Change blocking of this domain
    * Unblock this domain
    * Blacklist and delete this domain
+   * Generate a record statement
 * Import emails for out-of-zone notification
 
 
@@ -102,6 +103,7 @@ Browse contacts
    * Enqueue contact for automatic verification
    * Enqueue contact for manual verification
    * View related logs (List logged actions in the last month by various Service types)
+   * Generate a record statement
 
 
 
@@ -130,6 +132,7 @@ Browse NS sets
    * List domains with this NSSet
    * List emails in the last month where this NSSet is mentioned
    * View related logs (List logged actions in the last month by various Service types)
+   * Generate a record statement
 
 
 
@@ -141,6 +144,7 @@ Browse key sets
    * List domains with this KeySet
    * List emails from the last month where this KeySet is mentioned
    * View related logs (List logged actions in the last month by various Service types)
+   * Generate a record statement
 
 
 
