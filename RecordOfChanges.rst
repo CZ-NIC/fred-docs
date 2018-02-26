@@ -80,3 +80,40 @@ Overview of changes in documentation from previous editions.
      -
      - :doc:`/EPPReference/CommandStructure/Update/UpdateDomain`
      - Mention of nsset and keyset unlinking with empty elements
+   * - **2.35**
+     - **1.0**
+     - :doc:`/ReleaseNotes/index`
+     - Added release notes for FRED 2.35
+   * -
+     -
+     - :doc:`/ReleaseNotes/Upgrade-2-35-howto`
+     - An ad-hoc guide to database upgrade specifics in this release
+   * -
+     -
+     - :doc:`System requirements </AdminManual/Installation/SystemReqs>`
+     - Increased minimum version of PostgreSQL
+   * -
+     -
+     - :doc:`Customization </AdminManual/Customization>`,
+       :doc:`CSParams </AdminManual/Appendixes/CSParams/index>`
+     - Changed email template database table name
+   * -
+     -
+     - :doc:`Features </Features/General/RecordStatements>`,
+       :doc:`Features </Features/AdminIF/WebAdmin>`,
+       :doc:`Components </Architecture/TopLevelComponents/index>`,
+       :ref:`Components <FRED-Arch-servers-rsif>`,
+       :ref:`Task <generate-rs>`
+     - Generation of historical record statements in Daphne
+   * -
+     -
+     - :doc:`Features admin </Features/AdminIF/CLIAdmin>`
+     - New administration feature to manage objects
+   * -
+     -
+     - :doc:`Source code </Architecture/SourceCode>`
+     - Added list of GitHub repositories
+   * -
+     -
+     - :ref:`ORB parameters <config-servers-omni>`
+     - Added minimum omniORB settings for FRED servers
