@@ -123,6 +123,33 @@ and marked [CZ.NIC].
 
    * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-dbifd.conf`
 
+
+Configuration parameters can also be passed as *command-line arguments* to the daemons,
+see ``<daemon> --help``.
+
+.. _config-servers-omni:
+
+.. rubric:: ORB parameters
+
+Additionally, each daemon accepts ORB parameters which it hands over to its ORB.
+
+.. Important:: **OmniORB minimum**
+
+   You need to override the following omniORB settings when running FRED servers:
+
+   * native character encoding – to encode/decode text data for transmission with UTF-8;
+     this can be set on the command-line as :code:`<daemon> -ORBnativeCharCodeSet UTF-8` or
+     in the ORB configuration file (possibly :file:`/etc/omniORB.cfg`)
+     as the ``nativeCharCodeSet`` variable,
+
+   * endpoint address – to specify a *port* on which a server listens for CORBA calls;
+     a unique port must be specified for each server; this must be set on the command-line,
+     such as |br| :code:`<daemon> -ORBendPoint giop:tcp::<port>`.
+
+To list all possible ORB parameters, run ``omniNames -help``;
+see also `omniORB configuration <http://omniorb.sourceforge.net/omni42/omniORB/omniORB004.html>`_
+for a more detailed explanation of the ORB parameters.
+
 .. _config-servers-py:
 
 Python daemon(s)
