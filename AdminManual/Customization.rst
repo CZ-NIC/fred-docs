@@ -32,7 +32,7 @@ notifications and exported PDFs.
 Email templates
 ---------------
 Email templates are located in the database tables :file:`mail_type`
-(email subject) and :file:`mail_templates` (email body).
+(email subject) and :file:`mail_template` (email body).
 
 We recommend to replace the Czech variant of texts with the variant in your
 language and keep the English variant for common understanding.

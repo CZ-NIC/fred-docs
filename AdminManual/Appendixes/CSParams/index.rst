@@ -12,7 +12,7 @@ The parameters are listed for each email type and there is an index
 with short descriptions of common parameters at the end of this appendix.
 
 Email types can be found by their names in the table ``mail_type`` and
-the templates for each type can be found in the table ``mail_templates``.
+the templates for each type can be found in the table ``mail_template``.
 
 .. contents:: Chapter TOC
    :local:
