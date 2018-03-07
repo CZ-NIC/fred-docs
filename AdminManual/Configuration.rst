@@ -57,6 +57,10 @@ CORBA servers
 
 The CORBA servers are located in a system-binaries directory (:file:`@PREFIX@/sbin`).
 
+:program:`Systemd` startup scripts are included with FRED packages
+(e.g. :file:`/lib/systemd/system/fred-rifd.service`). A startup
+command is introduced with :code:`ExecStart=` in the scripts.
+
 .. _config-servers-cpp:
 
 C++ daemons
