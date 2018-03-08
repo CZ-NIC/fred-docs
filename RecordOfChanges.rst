@@ -117,3 +117,19 @@ Overview of changes in documentation from previous editions.
      -
      - :ref:`ORB parameters <config-servers-omni>`
      - Added minimum omniORB settings for FRED servers
+   * - **2.36**
+     - **1.0**
+     - :doc:`/ReleaseNotes/index`
+     - Added release notes for FRED 2.36
+   * -
+     -
+     - :doc:`/Concepts/index`
+     - Extracted to a separate publication
+   * -
+     -
+     - :doc:`/Concepts/LifeCycle/index`
+     - Added object life cycle
+   * -
+     -
+     - :doc:`/Concepts/Contacts`
+     - Added contacts
