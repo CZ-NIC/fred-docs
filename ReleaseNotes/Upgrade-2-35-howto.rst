@@ -20,7 +20,7 @@ require more attention.
 
 .. Caution:: The last script (4) is destructive! Besides adding some new constraints,
    it deletes columns and tables that are no longer needed. Before running it,
-   double-check that you migrated all necessary data!
+   double-check that you have migrated all necessary data!
 
 Email templates migration (2)
 -----------------------------
