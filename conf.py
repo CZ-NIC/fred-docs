@@ -143,23 +143,9 @@ html_theme = 'fred_theme'
 # documentation.
 #
 html_theme_options = {
-    "bgcolor"    : "white",
-    "textcolor"  : "#666666",
-    "linkcolor"  : "#990D1C", # FRED Red, darkened
-    "visitedlinkcolor": "#804D52", # FRED Red, darkened, faded
-    "relbarbgcolor"   : "#444444",
-    "relbartextcolor" : "white",
-    "sidebartextcolor" : "#666666",
-    "sidebarlinkcolor" : "#339fc7",
-    "codebgcolor"   : "#EEEEEE",
-    "codetextcolor" : "#222222",
-    "headbgcolor"     : "white",
-    "headtextcolor"   : "black",
-    "headlinkcolor"   : "black",
-    "footerbgcolor"   : "white",
-    "footertextcolor" : "#878787",
-    "externalrefs" : True
+    #"name": "value",
 }
+# Moved to fred_theme/theme.conf
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = ['.']
@@ -207,9 +193,9 @@ html_last_updated_fmt = today_fmt
 html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#
-html_sidebars = {'**': ['globaltoc.html', 'searchbox.html']}
-# , 'links.html'
+# DEPRECATED
+#html_sidebars = {'**': ['globaltoc.html', 'searchbox.html']}
+# Moved to fred_theme/theme.conf
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
