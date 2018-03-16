@@ -46,7 +46,6 @@ a.headerlink {
 }
 
 div.sphinxsidebar {
-    width: 350px;
 }
 
 div.sphinxsidebarwrapper {
@@ -93,7 +92,7 @@ div.body h1 {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 26px;
     font-weight: bold;
-    text-align: lect;
+    text-align: left;
     color: white;
     letter-spacing: 0;
     text-transform: uppercase;
@@ -130,10 +129,12 @@ div.sphinxsidebar #searchbox input[type="text"] {
 div.sphinxsidebar #searchbox input[type="submit"] {
     background-color: #CE1126; /* CZ.NIC Red */
     /* background-color: #CF2F44; FRED Red */
-    width: auto;
+    box-sizing: content-box;
+    min-width: 2em;
+    padding-left: 2px;
+    padding-right: 2px;
     text-transform: uppercase;
-    margin-top: 2px;
-    margin-bottom: 2px;
+    width: auto;
 }
 
 /* Table settings */
