@@ -38,8 +38,9 @@ Glossary of Terms
       command-line interface
 
    ENUM
-      electronic mapping of telephone numbers, see also
-      http://icannwiki.com/ENUM
+      electronic mapping of telephone numbers, see also `About ENUM (CZ.NIC)
+      <https://www.nic.cz/page/1260/o-enum/>`_ or `ENUM (ICANNWiki)
+      <http://icannwiki.com/ENUM>`_
 
    EPP
       extensible provisioning protocol, see also the :doc:`/EPPReference/index`
@@ -49,7 +50,9 @@ Glossary of Terms
       This is a request by a registrant that is submitted directly
       to the Registry, e.g. a request for a transfer password or an enhanced
       security setting (a Registry lock).
-      See also https://www.nic.cz/whois/publicrequest/
+
+      For example: `request to block an object in the Czech Registry
+      <https://www.nic.cz/whois/block-object/?language=en>`_
 
    Registrant
       Registrant is the contact which is assigned as the domain owner;
