@@ -337,6 +337,8 @@ Invoicing
    * charge fee (subtract from credit)
    * bill (create invoice record)
 
+.. _cronjob-contact-reminder:
+
 Annual contact reminder
 -----------------------
 
