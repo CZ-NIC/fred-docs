@@ -54,6 +54,12 @@ Glossary of Terms
       For example: `request to block an object in the Czech Registry
       <https://www.nic.cz/whois/block-object/?language=en>`_
 
+   Registrable object
+      A data object managed by the Registry that can be registered and modified
+      by registrars. There are four types: domains, contacts, nssets, and keysets.
+
+      They are also called *managed objects* in the EPP.
+
    Registrant
       Registrant is the contact which is assigned as the domain owner;
       also called the holder.
@@ -63,6 +69,11 @@ Glossary of Terms
 
    Domain owner
       See :term:`Registrant`.
+
+   Object owner
+      A contact which is authorized to request changes of a :term:`registrable object`.
+      These are the technical contacts in nssets and keysets, the contact itself,
+      or the :term:`domain owner`.
 
    AKM
       automatic keyset management, see also the :doc:`AKM concept </Features/Concepts/AKM>`
