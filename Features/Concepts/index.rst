@@ -7,6 +7,7 @@ Concepts
 .. toctree::
 
    LifeCycle/index
+   Contacts
    Transfer
    Teccheck
    ContactMerger
