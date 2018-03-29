@@ -41,6 +41,8 @@ If the search result contains only one record, you are redirected to its details
 
 .. Domains
 
+.. _task-admin-blocking:
+
 Administrative blocking of domains
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
