@@ -39,8 +39,17 @@ the current designated registrar to reject nor inhibit the transfer.
 
 .. _fig-features-transfer:
 
-.. figure:: ../_graphics/Features-transfer.png
+.. figure:: ../_graphics/Transfer.png
    :alt: Object transfer process sequence diagram
    :align: center
 
    Sequence diagram – Object transfer process
+
+Further authorization options
+-----------------------------
+
+A transfer of a domain may also be authorized using authinfo of the domain holder
+or any of its administrative contacts.
+
+A transfer of a nsset or keyset may also be authorized using authinfo of any
+of its technical contacts.
