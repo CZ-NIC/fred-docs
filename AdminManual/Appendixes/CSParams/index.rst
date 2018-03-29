@@ -428,6 +428,8 @@ Email type: ``request_block``
    * ``otype`` – operation type: ``1`` – blocking, ``2`` – unblocking,
    * ``rtype`` – request type: ``1`` – all object changes, ``2`` – object transfer.
 
+.. _email-template-contact-reminder:
+
 Email type: ``annual_contact_reminder``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to a contact in response to the upcoming contact registration anniversary
