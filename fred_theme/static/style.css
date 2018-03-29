@@ -172,3 +172,19 @@ li.current > a, a.current {
    color: #555555;
    font-weight: bold!important;
 }
+
+.align-bottom {
+   vertical-align: bottom;
+}
+
+.align-top {
+   vertical-align: top;
+}
+
+.float-left {
+   float: left;
+}
+
+p {
+   clear: both;
+}
