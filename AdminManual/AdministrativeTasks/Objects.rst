@@ -218,7 +218,7 @@ Merge a pair of duplicate contacts (manual)
 
 The Registry operator can use a manual merge and select a pair of duplicate
 contacts by themself. The operator must also decide which contact will be
-the *destination contact*.
+the *destination contact*, which will remain.
 
 A pair of merge-able contacts can be then merged by running a command like this:
 
@@ -237,35 +237,8 @@ Also see the program ``--help`` for more options.
 Merge a set of duplicate contacts (automatic)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Duplicate contacts can be selected automatically as a whole set
-which may contain more than two duplicates.
-
-Mergers are performed per registrar. Specific registrars can be excluded or included
-using command-line options.
-
-The *destination contact* is determined by filtering the set with various criteria
-(see :ref:`merge-auto-criteria`) which make the outcome the best possible choice.
-Other contacts in the set are treated as *source contacts*.
-
-Priority of the criteria can be changed in a command-line option.
-
-The automatic merge procedure may be setup as a :doc:`periodic task
-</AdminManual/PeriodicTasks>` in Cron.
-
-An automatic selection of duplicates and merger can be run like this:
-
-.. code-block:: shell
-
-   fred-admin --contact_merge_duplicate_auto --registrar <registrar-handle> \
-      --selection_filter_order mcs_filter_max_objects_bound,mcs_filter_recently_created,mcs_filter_identified_contact \
-      [--dry_run]
-
-This command will attempt to detect a set of duplicate contacts which are managed
-by the registrar given by its handle, and :ref:`merge <merge-operation>`
-all *source contacts* into the best *destination contact*.
-
-The ``--dry_run`` option is available to preview what the command will do.
-Also see the program ``--help`` for more options.
+The automatic merge procedure should be set up as a :ref:`periodic task
+<cronjob-contact-merger>`.
 
 .. _resolve-public-request:
 
