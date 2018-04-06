@@ -72,7 +72,7 @@ Administration of registrable objects
 Regular procedure
 ^^^^^^^^^^^^^^^^^
 
-.. Important:: This task is critical for Registry operation!
+.. Important:: This task is critical for Registry operation, it must be set up!
 
 **Task command**::
 
@@ -109,10 +109,10 @@ Regular procedure
 
 Separate object deletion
 ^^^^^^^^^^^^^^^^^^^^^^^^
-.. Important:: This procedure is critical for Registry operation!
+.. Important:: This task is critical for Registry operation!
 
-   If the deletion of objects is not invoked within the regular procedure,
-   it must be invoked separately.
+   Set this cronjob if you want to perform object deletion (or part of it)
+   separately from the :ref:`cronjob-regular`.
 
 **Task command**::
 
