@@ -57,6 +57,8 @@ To make use of all FRED features, the following auxiliary programs are required:
    source code yourself. But don't worry, the appropriate packages
    are included in the dependency lists for each supported operating system.
 
-.. [#pg] FRED might be able to run with PG >= 9.4, but this has NOT been tested!
+.. [#pg] FRED might be able to run with PG >= 9.4, but versions lower than 9.6
+   are no longer tested.
+
    We highly recommend to use PG 9.6 as this is the PG version we use
    for development and testing.
