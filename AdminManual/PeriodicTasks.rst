@@ -152,7 +152,7 @@ procedure is finished)
      ``--object_delete_spread_during_time`` argument in seconds
    * the value of ``object_delete_parts`` is calculated depending
      on CRON configuration (how often the task is run)
-   * finally, deletes the rest (``--object_delete_parts=1`` – this is
+   * finally, deletes the rest (\ ``--object_delete_parts=1`` – this is
      the default value if the parameter is omitted)
 
    * *Example*: spread the deletion of domains over a whole day::
@@ -165,10 +165,54 @@ procedure is finished)
 
      **Real run time** [CZ.NIC]: ~ 5 s (one iteration)
 
+.. _cronjob-contact-merger:
+
 Automatic contact merger
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. todo:: v2.30 - Contact merger cronjob
+See also :doc:`introduction to the contact merger </Concepts/ContactMerger>`.
+
+**Task command**::
+
+   /usr/sbin/fred-admin --contact_merge_duplicate_auto \
+      [--except_registrar <registrar-handle> ... OR --registrar <registrar-handle> ...] \
+      [--selection_filter_order <filter1,filter2,filter3>] \
+      [--dry_run]
+
+**Typically launched**: once a week
+
+.. **Real run time** [CZ.NIC]: ~ 16 minutes
+
+**Required FRED components**:
+
+* ``pyfred``: Mailer module
+* ``fred-logd``: Logger
+
+**Other required components**: none
+
+**Task activities**:
+
+* looks for duplicate contacts per registrar that can be specified as:
+   * all registrars in the database except registrars given
+     in ``--except_registrar`` arguments (e.g. when you don't want to merge
+     contacts managed by the system registrar), or
+   * only registrars given in ``--registrar`` arguments,
+* :ref:`selects the best destination contact <merge-auto-criteria>`,
+* :ref:`merges <merge-operation>` all *source contacts* into the *destination contact*.
+
+Useful filters for selection of the *destination contact*:
+
+* :abbr:`mcs_filter_max_domains_bound (contact has most domains linked as a holder or administrative contact)`
+* :abbr:`mcs_filter_max_objects_bound (contact has most objects linked – domains, nssets or keysets)`
+* :abbr:`mcs_filter_recently_updated (contact has been updated most recently)`
+* :abbr:`mcs_filter_recently_created (contact has been created most recently)`
+
+The procedure will apply the filters in the order specified on the command line;
+if not specified, the default filters in the default order will be applied,
+see the :doc:`concept </Concepts/ContactMerger>`.
+
+The ``--dry_run`` option is available to preview what the command will do.
+Also see the program ``--help`` for more options.
 
 Automatic contact verification :sup:`CZ-specific`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
