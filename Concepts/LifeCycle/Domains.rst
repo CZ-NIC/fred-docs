@@ -20,7 +20,7 @@ This section describes a flow of states related to domain registration expiratio
 :Allowed for: domains
 :Affects: `zone presence`_, existence
 
-.. figure:: /Features/_graphics/Lifecycle-domains-exp.png
+.. figure:: /Concepts/_graphics/Lifecycle-domains-exp.png
    :align: center
 
    Domain registration expiration
@@ -115,7 +115,7 @@ This section describes a flow of states related to ENUM domain validation expira
 :Allowed for: :term:`ENUM` domains
 :Affects: `zone presence`_
 
-.. figure:: /Features/_graphics/Lifecycle-domains-val.png
+.. figure:: /Concepts/_graphics/Lifecycle-domains-val.png
    :align: center
 
    ENUM domain validation expiration

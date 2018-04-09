@@ -16,7 +16,7 @@ and :doc:`prohibitions <Prohibitions>` eventually.
 :Allowed for: contacts, nssets, keysets
 :Affects: existence
 
-.. figure:: /Features/_graphics/Lifecycle-nondomains.png
+.. figure:: /Concepts/_graphics/Lifecycle-nondomains.png
    :align: center
 
    Non-domains obsoletion

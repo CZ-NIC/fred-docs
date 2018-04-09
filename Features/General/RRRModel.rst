@@ -13,7 +13,7 @@ is owned by one registrar (called the "designated registrar") and no other
 registrar [#]_ may modify it.
 
 A registrant is allowed to change the designated registrar of an object by means
-of the :doc:`transfer process <../Concepts/Transfer>`.
+of the :doc:`transfer process </Concepts/Transfer>`.
 
 The registrable objects are the following:
 

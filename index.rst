@@ -41,6 +41,7 @@ Contributions may be submitted using the pull-request mechanism.
    :maxdepth: 2
 
    Features/index
+   Concepts/index
    Architecture/index
    AdminManual/index
    EPPReference/index

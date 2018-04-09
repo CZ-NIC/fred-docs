@@ -11,4 +11,4 @@ link DNSSEC-enabled domains into the global chain of trust and respond to key up
 This method does not require registrars to be involved in any way
 because the publishing of the CDNSKEY records relies on DNS operators.
 
-:doc:`More on the concept of automatic keyset management. </Features/Concepts/AKM>`
+:doc:`More on the concept of automatic keyset management. </Concepts/AKM>`

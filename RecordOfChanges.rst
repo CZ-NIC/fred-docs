@@ -22,7 +22,7 @@ Overview of changes in documentation from previous editions.
      - Added more email templates
    * - **2.30**
      -
-     - :doc:`/Features/Concepts/ContactMerger`
+     - :doc:`/Concepts/ContactMerger`
      - Added contact merger concept, tasks and email template
    * -
      -
@@ -30,7 +30,7 @@ Overview of changes in documentation from previous editions.
      - Added a new CS parameter
    * - **2.31**
      -
-     - :doc:`/Features/Concepts/AKM`
+     - :doc:`/Concepts/AKM`
      - Added :term:`AKM` concept, components, task and email templates
    * - **2.32**
      -
@@ -58,7 +58,7 @@ Overview of changes in documentation from previous editions.
      - Added divergence from the standards of object mapping in FRED EPP
    * -
      -
-     - :doc:`/Features/Concepts/Teccheck`
+     - :doc:`/Concepts/Teccheck`
      - Expanded on the concept of technical checks
    * - **2.34**
      - **1.0**
@@ -74,7 +74,7 @@ Overview of changes in documentation from previous editions.
      - Procedures accept object types by name, new argument, removed dependency on ``fred-rifd``
    * -
      - **1.1**
-     - :doc:`/Features/Concepts/ContactMerger` and :ref:`contact-merge`
+     - :doc:`/Concepts/ContactMerger` and :ref:`contact-merge`
      - Criteria of destination contact selection in an automatic merger, some minor rephrasing
    * -
      -

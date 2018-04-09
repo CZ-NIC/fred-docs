@@ -35,7 +35,7 @@ the current designated registrar to reject nor inhibit the transfer.
 
 .. _fig-features-transfer:
 
-.. figure:: ../_graphics/Transfer.png
+.. figure:: _graphics/Transfer.png
    :alt: Object transfer process sequence diagram
    :align: center
 

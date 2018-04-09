@@ -209,7 +209,7 @@ to represent the same identity and that are in a merge-able state.
 The contact merger can be used from the command line only.
 
 The definition of merge-able contacts and the description of the merge
-operation can be found in the :doc:`/Features/Concepts/ContactMerger` concept.
+operation can be found in the :doc:`/Concepts/ContactMerger` concept.
 
 .. _contact-merge-manual:
 

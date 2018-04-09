@@ -178,7 +178,7 @@ Automatic contact verification :sup:`CZ-specific`
 Automatic keyset management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-See also the :doc:`AKM concept </Features/Concepts/AKM>`.
+See also the :doc:`AKM concept </Concepts/AKM>`.
 
 **Task command**::
 

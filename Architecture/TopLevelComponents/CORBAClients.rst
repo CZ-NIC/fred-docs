@@ -97,7 +97,7 @@ Fred-akm
 ~~~~~~~~~
 
 This command-line application implements the processing logic of :doc:`automatic
-keyset management </Features/Concepts/AKM>` and is used to perform
+keyset management </Concepts/AKM>` and is used to perform
 the :ref:`periodic task <cronjob-akm>`.
 Refer to ``fred-akm --help`` for all available commands.
 

@@ -46,7 +46,7 @@ a contact linked to this object or the contact itself via the :term:`public requ
 
 :Affects: EPP
 
-.. figure:: /Features/_graphics/Lifecycle-locks.png
+.. figure:: /Concepts/_graphics/Lifecycle-locks.png
    :align: center
 
    Locks

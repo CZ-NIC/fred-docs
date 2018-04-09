@@ -91,7 +91,7 @@ which must be a **singular** occurrence of **one of** the following:
 * ``<renew>`` – object registration renewals (to be used only with domains), an object-related command type,
 * ``<transfer>`` – object transfer requests, an object-related command type:
    * ``@op`` **(R)** – transfer operation –
-     Because of :doc:`the concept of transfer </Features/Concepts/Transfer>`
+     Because of :doc:`the concept of transfer </Concepts/Transfer>`
      in the FRED, only one value is permitted and that is ``request``
      which is used to request a transfer.
 * ``<update>`` – updates of object details, an object-related command type,

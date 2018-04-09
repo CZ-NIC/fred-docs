@@ -4,7 +4,7 @@
 Transfer
 ===============
 
-Commands for object transfers. See also :doc:`/Features/Concepts/Transfer`.
+Commands for object transfers. See also :doc:`/Concepts/Transfer`.
 
 .. toctree::
 

@@ -17,4 +17,4 @@ The tests include existence and reachability of name servers,
 presence of delegated domains on name servers or the authoritative
 flag of DNS answers for such domains.
 
-:doc:`More on the concept of technical checks. <../Concepts/Teccheck>`
+:doc:`More on the concept of technical checks. </Concepts/Teccheck>`

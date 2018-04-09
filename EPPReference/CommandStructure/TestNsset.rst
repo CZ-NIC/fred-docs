@@ -5,7 +5,7 @@ Test nsset
 ===========
 
 A nsset test command is used to request
-a :doc:`technical check </Features/Concepts/Teccheck>` of a nsset.
+a :doc:`technical check </Concepts/Teccheck>` of a nsset.
 
 The check is not performed immediately but it is scheduled for execution.
 After the tests have finished, a report is provided to the client

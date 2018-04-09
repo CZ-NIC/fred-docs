@@ -20,7 +20,7 @@ Registrants are supposed to ask their DNS operators to do so or not to do so.
 
 A CDNSKEY contains the KSK of a child zone (domain) solely for the purpose to request
 updates to DS records in the parent zone (Registry). DS records are calculated
-by the Registry; see also :doc:`zone generation concept </Features/Concepts/Genzone>`.
+by the Registry; see also :doc:`zone generation concept </Concepts/Genzone>`.
 
 The CDNSKEY resource records are recognized by the FRED as **valid** when they comply
 with the same constraints as the rest of managed keysets – see
