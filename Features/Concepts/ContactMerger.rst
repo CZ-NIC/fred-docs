@@ -131,7 +131,7 @@ The procedure of merging a pair of duplicate contacts performs as follows:
 #. If the *source contact* has had the ``contactPassedManualVerification``
    status active, sets it on the *destination contact*.
 #. Deletes the *source contact* from the Registry.
-#. Generates new auth.info for the *destination contact*.
+#. Generates new authinfo for the *destination contact*.
 #. Generates poll messages for changes made in the step 2.
 
 .. _merge-auto-criteria:
