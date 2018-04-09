@@ -1,0 +1,18 @@
+@startuml
+skinparam monochrome true
+
+participant "Contact" as Contact
+participant "Old registrar" as Oreg
+participant "New registrar" as Nreg
+participant "Registry" as Ry
+
+Contact -> Oreg : request authinfo
+Oreg -> Ry: request authinfo
+Ry -> Oreg: provide authinfo
+Oreg -> Contact: provide authinfo
+Contact -> Nreg : request transfer + provide authinfo
+Nreg -> Ry: request transfer + provide authinfo
+Ry -> Ry: transfer
+Ry -> Oreg: notification about transfer (poll)
+Ry -> Contact: notification about transfer (email)
+@enduml
