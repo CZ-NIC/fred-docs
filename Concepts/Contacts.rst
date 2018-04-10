@@ -15,7 +15,7 @@ for a description of contact details.
 
 .. _contact-roles:
 
-.. rubric:: Roles
+.. rubric:: Roles of linked contacts
 
 Contacts can have the following roles depending on the type of the registrable
 object to which they are linked:
