@@ -16,5 +16,6 @@ Concepts
    EPPClientWorkflow
    ContactMerger
    AKM
+   Communication
    Genzone
    Billing
