@@ -10,6 +10,8 @@ The life cycle of a domain is influenced by `registration expiration`_, :ref:`va
 <validation-expiration>` (in ENUM domains), and eventually by forced :ref:`presence in a zone
 <zone-presence>` (in or out) and :doc:`prohibitions <Prohibitions>`.
 
+.. _registration-expiration:
+
 Registration expiration
 -----------------------
 
