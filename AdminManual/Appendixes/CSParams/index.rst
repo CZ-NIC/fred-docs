@@ -18,6 +18,8 @@ the templates for each type can be found in the table ``mail_template``.
    :local:
    :backlinks: none
 
+.. _email-type-sendai-pif:
+
 Email type: ``sendauthinfo_pif``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -31,6 +33,8 @@ Email type: ``sendauthinfo_pif``
   :ref:`reqid <csparams-reqid>`,
   :ref:`type <csparams-type>`
 
+.. _email-type-sendai-epp:
+
 Email type: ``sendauthinfo_epp``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -42,6 +46,8 @@ Email type: ``sendauthinfo_epp``
   :ref:`handle <csparams-handle>`,
   :ref:`registrar <csparams-registrar>`,
   :ref:`type <csparams-type>`
+
+.. _email-type-expired-notify:
 
 Email type: ``expiration_notify``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -57,6 +63,8 @@ Email type: ``expiration_notify``
   :ref:`exregdate <csparams-exregdate>`,
   :ref:`owner <csparams-owner>`,
   :ref:`registrar <csparams-registrar>`,
+
+.. _email-type-expired-outzone-warning-own:
 
 Email type: ``expiration_dns_warning_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -74,6 +82,8 @@ Email type: ``expiration_dns_warning_owner``
   :ref:`registrar <csparams-registrar>`,
   :ref:`zone <csparams-zone>`
 
+.. _email-type-expired-outzone-own:
+
 Email type: ``expiration_dns_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -88,6 +98,8 @@ Email type: ``expiration_dns_owner``
   :ref:`registrar <csparams-registrar>`,
   :ref:`zone <csparams-zone>`
 
+.. _email-type-expired-delwarn-own:
+
 Email type: ``expiration_register_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -95,6 +107,8 @@ Email type: ``expiration_register_owner``
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
   :ref:`domain <csparams-domain>`,
+
+.. _email-type-expired-outzone-tech:
 
 Email type: ``expiration_dns_tech``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -107,6 +121,8 @@ Email type: ``expiration_dns_tech``
   :ref:`nsset <csparams-nsset>`,
   :ref:`statechangedate <csparams-statechangedate>`
 
+.. _email-type-expired-deleted-tech:
+
 Email type: ``expiration_register_tech``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -116,6 +132,8 @@ Email type: ``expiration_register_tech``
   :ref:`domain <csparams-domain>`,
   :ref:`exregdate <csparams-exregdate>`,
   :ref:`nsset <csparams-nsset>`,
+
+.. _email-type-valid-warn:
 
 Email type: ``expiration_validation_before``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -130,6 +148,8 @@ Email type: ``expiration_validation_before``
   :ref:`owner <csparams-owner>`,
   :ref:`registrar <csparams-registrar>`,
   :ref:`valdate <csparams-valdate>`
+
+.. _email-type-valid:
 
 Email type: ``expiration_validation``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -407,6 +427,8 @@ Email type: ``techcheck``
      prints the results according to the subject (\ ``name``) of the test. Print
      of the test results is grouped by severity.
 
+.. _email-type-request-block:
+
 Email type: ``request_block``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -459,6 +481,8 @@ Email type: ``annual_contact_reminder``
    * ``domains`` – list of domains where the contact is the owner,
    * ``nssets`` – list of nssets where the contact is a technical contact,
    * ``keysets`` – list of keysets where the contact is a technical contact.
+
+.. _email-type-merged-contact:
 
 Email type: ``merge_contacts_auto``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

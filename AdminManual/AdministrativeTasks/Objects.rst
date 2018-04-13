@@ -9,6 +9,8 @@ after login.
 
 To modify objects, you have to use an EPP client (e.g. :program:`fred-client`).
 
+.. _modify-operations:
+
 Operations to modify objects
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The operations for object modification encompass:
