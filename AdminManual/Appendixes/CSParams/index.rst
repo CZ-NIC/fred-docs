@@ -26,7 +26,6 @@ Email type: ``sendauthinfo_pif``
   :ref:`defaults.* <csparams-defaults>`,
   :ref:`authinfo <csparams-authinfo>`,
   :ref:`handle <csparams-handle>`,
-  :ref:`registrar <csparams-registrar>`,
   :ref:`reqdate <csparams-reqdate>`,
   :ref:`reqid <csparams-reqid>`,
   :ref:`type <csparams-type>`
@@ -40,8 +39,6 @@ Email type: ``sendauthinfo_epp``
   :ref:`authinfo <csparams-authinfo>`,
   :ref:`handle <csparams-handle>`,
   :ref:`registrar <csparams-registrar>`,
-  :ref:`reqdate <csparams-reqdate>`,
-  :ref:`reqid <csparams-reqid>`,
   :ref:`type <csparams-type>`
 
 Email type: ``expiration_notify``
@@ -51,17 +48,12 @@ Email type: ``expiration_notify``
   :ref:`defaults.* <csparams-defaults>`,
   :ref:`administrators <csparams-administrators>`,
   :ref:`checkdate <csparams-checkdate>`,
-  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
   :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`domain <csparams-domain>`,
   :ref:`exdate <csparams-exdate>`,
   :ref:`exregdate <csparams-exregdate>`,
-  :ref:`nsset <csparams-nsset>`,
   :ref:`owner <csparams-owner>`,
   :ref:`registrar <csparams-registrar>`,
-  :ref:`statechangedate <csparams-statechangedate>`
-* additional parameter concerning ENUM domains:
-  :ref:`valdate <csparams-valdate>`
 
 Email type: ``expiration_dns_warning_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -77,14 +69,6 @@ Email type: ``expiration_dns_warning_owner``
   :ref:`owner <csparams-owner>`,
   :ref:`registrar <csparams-registrar>`,
   :ref:`zone <csparams-zone>`
-* additional parameter concerning ENUM domains:
-  :ref:`valdate <csparams-valdate>`
-
-.. ??? maybe also:
-     :ref:`checkdate <csparams-checkdate>`,
-     :ref:`exdate <csparams-exdate>`,
-     :ref:`nsset <csparams-nsset>`,
-     :ref:`statechangedate <csparams-statechangedate>`,
 
 Email type: ``expiration_dns_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -92,37 +76,19 @@ Email type: ``expiration_dns_owner``
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
   :ref:`administrators <csparams-administrators>`,
-  :ref:`checkdate <csparams-checkdate>`,
   :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`domain <csparams-domain>`,
-  :ref:`exdate <csparams-exdate>`,
   :ref:`exregdate <csparams-exregdate>`,
-  :ref:`nsset <csparams-nsset>`,
   :ref:`owner <csparams-owner>`,
   :ref:`registrar <csparams-registrar>`,
-  :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`zone <csparams-zone>`
-* additional parameter concerning ENUM domains:
-  :ref:`valdate <csparams-valdate>`
 
 Email type: ``expiration_register_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the domain owner in response to the upcoming domain cancellation
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
-  :ref:`checkdate <csparams-checkdate>`,
-  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`domain <csparams-domain>`,
-  :ref:`exdate <csparams-exdate>`,
-  :ref:`exregdate <csparams-exregdate>`,
-  :ref:`nsset <csparams-nsset>`,
-  :ref:`owner <csparams-owner>`,
-  :ref:`registrar <csparams-registrar>`,
-  :ref:`statechangedate <csparams-statechangedate>`
-* additional parameter concerning ENUM domains:
-  :ref:`valdate <csparams-valdate>`
 
 Email type: ``expiration_dns_tech``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -130,36 +96,18 @@ Email type: ``expiration_dns_tech``
   from zone
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
-  :ref:`checkdate <csparams-checkdate>`,
-  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`domain <csparams-domain>`,
-  :ref:`exdate <csparams-exdate>`,
-  :ref:`exregdate <csparams-exregdate>`,
   :ref:`nsset <csparams-nsset>`,
-  :ref:`owner <csparams-owner>`,
-  :ref:`registrar <csparams-registrar>`,
   :ref:`statechangedate <csparams-statechangedate>`
-* additional parameter concerning ENUM domains:
-  :ref:`valdate <csparams-valdate>`
 
 Email type: ``expiration_register_tech``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the technical contacts of the nsset whose domain was just cancelled
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
-  :ref:`checkdate <csparams-checkdate>`,
-  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`domain <csparams-domain>`,
-  :ref:`exdate <csparams-exdate>`,
   :ref:`exregdate <csparams-exregdate>`,
   :ref:`nsset <csparams-nsset>`,
-  :ref:`owner <csparams-owner>`,
-  :ref:`registrar <csparams-registrar>`,
-  :ref:`statechangedate <csparams-statechangedate>`
-* additional parameter concerning ENUM domains:
-  :ref:`valdate <csparams-valdate>`
 
 Email type: ``expiration_validation_before``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -167,16 +115,11 @@ Email type: ``expiration_validation_before``
   of domain's validation
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
+  :ref:`administrators <csparams-administrators>`,
   :ref:`checkdate <csparams-checkdate>`,
-  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`domain <csparams-domain>`,
-  :ref:`exdate <csparams-exdate>`,
-  :ref:`exregdate <csparams-exregdate>`,
-  :ref:`nsset <csparams-nsset>`,
   :ref:`owner <csparams-owner>`,
   :ref:`registrar <csparams-registrar>`,
-  :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`valdate <csparams-valdate>`
 
 Email type: ``expiration_validation``
@@ -185,17 +128,11 @@ Email type: ``expiration_validation``
   of domain's validation
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
+  :ref:`administrators <csparams-administrators>`,
   :ref:`checkdate <csparams-checkdate>`,
-  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
   :ref:`domain <csparams-domain>`,
-  :ref:`exdate <csparams-exdate>`,
-  :ref:`exregdate <csparams-exregdate>`,
-  :ref:`nsset <csparams-nsset>`,
   :ref:`owner <csparams-owner>`,
   :ref:`registrar <csparams-registrar>`,
-  :ref:`statechangedate <csparams-statechangedate>`,
-  :ref:`valdate <csparams-valdate>`
 
 .. _email-type-notify-create:
 
@@ -210,10 +147,8 @@ Email type: ``notification_create``
   :ref:`ticket <csparams-ticket>`,
   :ref:`type <csparams-type>`
 
-* additional parameters concerning new objects:
-   * ``fresh.object.authinfo`` – transfer password
-
 * additional parameters concerning a new **contact**:
+   * ``fresh.object.authinfo`` – transfer password
    * ``fresh.contact.name`` – name of contact person
    * ``fresh.contact.org`` – organization name
    * ``fresh.contact.address.permanent`` – permanent personal address
@@ -245,7 +180,7 @@ Email type: ``notification_create``
    * ``fresh.contact.disclose.fax`` – fax number disclosure setting (show/hide)
 
 * There are no additional parameters concerning new objects of other types
-  (nsset, domain, keyset).
+  (domain, nsset, keyset).
 
 .. _email-type-notify-update:
 
@@ -268,15 +203,15 @@ Email type: ``notification_update``
      of an object and parameters containing both the old and the new
      value of the attribute are passed in the following manner:
 
-      * :samp:`changes.{*}.{attribute}` indicates a change in an attribute
+      * :samp:`changes.{<object>}.{<attribute>}` indicates a change in an attribute
         – if the attribute has changed, it contains the value "``1``";
         otherwise the parameter is not passed,
-      * :samp:`changes.{*}.{attribute}.old` contains the value of the attribute
+      * :samp:`changes.{<object>}.{<attribute>}.old` contains the value of the attribute
         before the change (passed only if the attribute has changed),
-      * :samp:`changes.{*}.{attribute}.new` contains the value of the attribute
+      * :samp:`changes.{<object>}.{<attribute>}.new` contains the value of the attribute
         after the change (passed only if the attribute has changed).
 
-   * :samp:`changes.{object}.authinfo` – indicates that the object's transfer
+   * :samp:`changes.object.authinfo` – indicates that the object's transfer
      password has changed,
    * Indication of changes of other attributes is specific for each object type
      as follows.
@@ -284,6 +219,14 @@ Email type: ``notification_update``
 * additional parameters concerning changes in a **contact**:
    * ``changes.contact.name`` – contact name has changed
    * ``changes.contact.org`` – organization name has changed
+   * ``changes.contact.telephone`` – phone number has changed
+   * ``changes.contact.fax`` – fax number has changed
+   * ``changes.contact.email`` – email address has changed
+   * ``changes.contact.notify_email`` – notification email address has changed
+   * ``changes.contact.ident_type`` – type of personal identification has
+     changed
+   * ``changes.contact.ident`` – personal identifier has changed
+   * ``changes.contact.vat`` – VAT-payer registration number (DIČ) has changed
    * ``changes.contact.address.permanent`` – permanent (headquarters) address
      has changed
    * ``changes.contact.address.mailing`` – mailing address has changed
@@ -294,14 +237,6 @@ Email type: ``notification_update``
      has changed
    * ``changes.contact.address.shipping_3`` – 3\ :sup:`rd` shipping address
      has changed
-   * ``changes.contact.telephone`` – phone number has changed
-   * ``changes.contact.fax`` – fax number has changed
-   * ``changes.contact.email`` – email address has changed
-   * ``changes.contact.notify_email`` – notification email address has changed
-   * ``changes.contact.ident_type`` – type of personal identification has
-     changed
-   * ``changes.contact.ident`` – personal identifier has changed
-   * ``changes.contact.vat`` – VAT-payer registration number (DIČ) has changed
    * ``changes.contact.disclose.name`` – name disclosure setting has changed
    * ``changes.contact.disclose.org`` – organization disclosure setting has
      changed
@@ -334,6 +269,7 @@ Email type: ``notification_update``
    * ``changes.domain.nsset`` – nsset assignment has changed
    * ``changes.domain.keyset`` – keyset assignment has changed
    * ``changes.domain.admin_c`` – list of administrative contacts has changed
+   * ``changes.domain.temp_c`` :sup:`DEPRECATED` – list of temporary contacts has changed
    * ``changes.domain.val_ex_date`` :sup:`ENUM` – date of validation expiry
      has changed
    * ``changes.domain.publish`` :sup:`ENUM` – publication in telephone
@@ -375,9 +311,8 @@ Email type: ``notification_unused``
   from the database, to the email contact of the removed object
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
+  :ref:`deldate <csparams-deldate>`,
   :ref:`handle <csparams-handle>`,
-  :ref:`registrar <csparams-registrar>`,
-  :ref:`ticket <csparams-ticket>`,
   :ref:`type <csparams-type>`
 
 .. _email-type-notify-delete:
@@ -395,8 +330,8 @@ Email type: ``notification_delete``
 
 .. _email-type-techcheck:
 
-Email type: ``techcheck``
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Email type: ``techcheck`` ???
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent if a test in a technical check of a nsset has failed, as a report
   to technical contacts of the nsset
 * common passed parameters:
@@ -557,6 +492,7 @@ Email type: ``akm_candidate_state_ko``
   or by discovery of changed records, to technical contacts of the domain's nsset
 * common passed parameters:
   :ref:`defaults.* <csparams-defaults>`
+  :ref:`domain <csparams-domain>`
 * additional parameters:
    * ``datetime`` – date and time of the discovery.
 
@@ -665,6 +601,11 @@ Common parameters
    ``checkdate``
       the date when the object-state check was performed and this email created
       (according to the server's local time, date format: YYYY-MM-DD)
+
+   .. _csparams-deldate:
+
+   ``deldate``
+      date of deletion of an idle (obsolete) object
 
    .. _csparams-dnsdate:
 
