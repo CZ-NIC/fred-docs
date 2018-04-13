@@ -466,7 +466,7 @@ For a domain name to be valid, it must not match any pattern that is currently 
 Adding a registrar memo to annual reminders
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The :ref:`email template <email-template-contact-reminder>`
+The :ref:`email template <email-type-contact-reminder>`
 for :ref:`annual reminders of contacts <contact-reminder>`
 allows to include a memo from the designated registrar in the email
 and a custom email address to which the contact can reply.

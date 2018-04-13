@@ -449,7 +449,7 @@ Refer to ``fred-admin --help_dates`` for acceptable date formatting.
    * were created on the day and month 300 days ago (before the specified date)
    * were not changed in the last 300 days (relatively to the specified date)
 * sends them an email of the ``annual_contact_reminder`` type (see :ref:`template
-  params <email-template-contact-reminder>`)
+  params <email-type-contact-reminder>`)
 
 Collect statistics :sup:`CZ-specific`
 ---------------------------------------
