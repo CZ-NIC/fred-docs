@@ -24,12 +24,12 @@ Email type: ``sendauthinfo_pif``
   which was placed through the Registry website
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
+  :ref:`authinfo <csparams-authinfo>`,
+  :ref:`handle <csparams-handle>`,
   :ref:`registrar <csparams-registrar>`,
   :ref:`reqdate <csparams-reqdate>`,
   :ref:`reqid <csparams-reqid>`,
-  :ref:`type <csparams-type>`,
-  :ref:`handle <csparams-handle>`,
-  :ref:`authinfo <csparams-authinfo>`
+  :ref:`type <csparams-type>`
 
 Email type: ``sendauthinfo_epp``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -37,29 +37,29 @@ Email type: ``sendauthinfo_epp``
   which was placed through a registrar
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
+  :ref:`authinfo <csparams-authinfo>`,
+  :ref:`handle <csparams-handle>`,
   :ref:`registrar <csparams-registrar>`,
   :ref:`reqdate <csparams-reqdate>`,
   :ref:`reqid <csparams-reqid>`,
-  :ref:`type <csparams-type>`,
-  :ref:`handle <csparams-handle>`,
-  :ref:`authinfo <csparams-authinfo>`
+  :ref:`type <csparams-type>`
 
 Email type: ``expiration_notify``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the domain owner in response to the domain expiration
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
+  :ref:`administrators <csparams-administrators>`,
   :ref:`checkdate <csparams-checkdate>`,
-  :ref:`domain <csparams-domain>`,
-  :ref:`owner <csparams-owner>`,
-  :ref:`nsset <csparams-nsset>`,
-  :ref:`exdate <csparams-exdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
-  :ref:`exregdate <csparams-exregdate>`,
   :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`statechangedate <csparams-statechangedate>`,
+  :ref:`dnsdate <csparams-dnsdate>`,
+  :ref:`domain <csparams-domain>`,
+  :ref:`exdate <csparams-exdate>`,
+  :ref:`exregdate <csparams-exregdate>`,
+  :ref:`nsset <csparams-nsset>`,
+  :ref:`owner <csparams-owner>`,
   :ref:`registrar <csparams-registrar>`,
-  :ref:`administrators <csparams-administrators>`
+  :ref:`statechangedate <csparams-statechangedate>`
 * additional parameter concerning ENUM domains:
   :ref:`valdate <csparams-valdate>`
 
@@ -69,13 +69,13 @@ Email type: ``expiration_dns_warning_owner``
   from the zone
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
-  :ref:`domain <csparams-domain>`,
-  :ref:`owner <csparams-owner>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
-  :ref:`exregdate <csparams-exregdate>`,
-  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`registrar <csparams-registrar>`,
   :ref:`administrators <csparams-administrators>`,
+  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
+  :ref:`dnsdate <csparams-dnsdate>`,
+  :ref:`domain <csparams-domain>`,
+  :ref:`exregdate <csparams-exregdate>`,
+  :ref:`owner <csparams-owner>`,
+  :ref:`registrar <csparams-registrar>`,
   :ref:`zone <csparams-zone>`
 * additional parameter concerning ENUM domains:
   :ref:`valdate <csparams-valdate>`
@@ -91,17 +91,17 @@ Email type: ``expiration_dns_owner``
 * sent to the domain owner in response to the exclusion of a domain from the zone
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
-  :ref:`checkdate <csparams-checkdate>`,
-  :ref:`domain <csparams-domain>`,
-  :ref:`owner <csparams-owner>`,
-  :ref:`nsset <csparams-nsset>`,
-  :ref:`exdate <csparams-exdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
-  :ref:`exregdate <csparams-exregdate>`,
-  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`statechangedate <csparams-statechangedate>`,
-  :ref:`registrar <csparams-registrar>`,
   :ref:`administrators <csparams-administrators>`,
+  :ref:`checkdate <csparams-checkdate>`,
+  :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
+  :ref:`dnsdate <csparams-dnsdate>`,
+  :ref:`domain <csparams-domain>`,
+  :ref:`exdate <csparams-exdate>`,
+  :ref:`exregdate <csparams-exregdate>`,
+  :ref:`nsset <csparams-nsset>`,
+  :ref:`owner <csparams-owner>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`zone <csparams-zone>`
 * additional parameter concerning ENUM domains:
   :ref:`valdate <csparams-valdate>`
@@ -112,15 +112,15 @@ Email type: ``expiration_register_owner``
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
-  :ref:`domain <csparams-domain>`,
-  :ref:`owner <csparams-owner>`,
-  :ref:`nsset <csparams-nsset>`,
-  :ref:`exdate <csparams-exdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
-  :ref:`exregdate <csparams-exregdate>`,
   :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`statechangedate <csparams-statechangedate>`,
-  :ref:`registrar <csparams-registrar>`
+  :ref:`dnsdate <csparams-dnsdate>`,
+  :ref:`domain <csparams-domain>`,
+  :ref:`exdate <csparams-exdate>`,
+  :ref:`exregdate <csparams-exregdate>`,
+  :ref:`nsset <csparams-nsset>`,
+  :ref:`owner <csparams-owner>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`statechangedate <csparams-statechangedate>`
 * additional parameter concerning ENUM domains:
   :ref:`valdate <csparams-valdate>`
 
@@ -131,15 +131,15 @@ Email type: ``expiration_dns_tech``
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
-  :ref:`domain <csparams-domain>`,
-  :ref:`owner <csparams-owner>`,
-  :ref:`nsset <csparams-nsset>`,
-  :ref:`exdate <csparams-exdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
-  :ref:`exregdate <csparams-exregdate>`,
   :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`statechangedate <csparams-statechangedate>`,
-  :ref:`registrar <csparams-registrar>`
+  :ref:`dnsdate <csparams-dnsdate>`,
+  :ref:`domain <csparams-domain>`,
+  :ref:`exdate <csparams-exdate>`,
+  :ref:`exregdate <csparams-exregdate>`,
+  :ref:`nsset <csparams-nsset>`,
+  :ref:`owner <csparams-owner>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`statechangedate <csparams-statechangedate>`
 * additional parameter concerning ENUM domains:
   :ref:`valdate <csparams-valdate>`
 
@@ -149,15 +149,15 @@ Email type: ``expiration_register_tech``
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
-  :ref:`domain <csparams-domain>`,
-  :ref:`owner <csparams-owner>`,
-  :ref:`nsset <csparams-nsset>`,
-  :ref:`exdate <csparams-exdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
-  :ref:`exregdate <csparams-exregdate>`,
   :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`statechangedate <csparams-statechangedate>`,
-  :ref:`registrar <csparams-registrar>`
+  :ref:`dnsdate <csparams-dnsdate>`,
+  :ref:`domain <csparams-domain>`,
+  :ref:`exdate <csparams-exdate>`,
+  :ref:`exregdate <csparams-exregdate>`,
+  :ref:`nsset <csparams-nsset>`,
+  :ref:`owner <csparams-owner>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`statechangedate <csparams-statechangedate>`
 * additional parameter concerning ENUM domains:
   :ref:`valdate <csparams-valdate>`
 
@@ -168,15 +168,15 @@ Email type: ``expiration_validation_before``
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
-  :ref:`domain <csparams-domain>`,
-  :ref:`owner <csparams-owner>`,
-  :ref:`nsset <csparams-nsset>`,
-  :ref:`exdate <csparams-exdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
-  :ref:`exregdate <csparams-exregdate>`,
   :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`statechangedate <csparams-statechangedate>`,
+  :ref:`dnsdate <csparams-dnsdate>`,
+  :ref:`domain <csparams-domain>`,
+  :ref:`exdate <csparams-exdate>`,
+  :ref:`exregdate <csparams-exregdate>`,
+  :ref:`nsset <csparams-nsset>`,
+  :ref:`owner <csparams-owner>`,
   :ref:`registrar <csparams-registrar>`,
+  :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`valdate <csparams-valdate>`
 
 Email type: ``expiration_validation``
@@ -186,15 +186,15 @@ Email type: ``expiration_validation``
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
-  :ref:`domain <csparams-domain>`,
-  :ref:`owner <csparams-owner>`,
-  :ref:`nsset <csparams-nsset>`,
-  :ref:`exdate <csparams-exdate>`,
-  :ref:`dnsdate <csparams-dnsdate>`,
-  :ref:`exregdate <csparams-exregdate>`,
   :ref:`day_before_exregdate <csparams-day_before_exregdate>`,
-  :ref:`statechangedate <csparams-statechangedate>`,
+  :ref:`dnsdate <csparams-dnsdate>`,
+  :ref:`domain <csparams-domain>`,
+  :ref:`exdate <csparams-exdate>`,
+  :ref:`exregdate <csparams-exregdate>`,
+  :ref:`nsset <csparams-nsset>`,
+  :ref:`owner <csparams-owner>`,
   :ref:`registrar <csparams-registrar>`,
+  :ref:`statechangedate <csparams-statechangedate>`,
   :ref:`valdate <csparams-valdate>`
 
 .. _email-type-notify-create:
@@ -205,9 +205,9 @@ Email type: ``notification_create``
   to the email contact of the created object
 * common passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
-  :ref:`ticket <csparams-ticket>`,
-  :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`ticket <csparams-ticket>`,
   :ref:`type <csparams-type>`
 
 * additional parameters concerning new objects:
@@ -255,9 +255,9 @@ Email type: ``notification_update``
   is updated, to the email contact of the updated object
 * common passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
-  :ref:`ticket <csparams-ticket>`,
-  :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`ticket <csparams-ticket>`,
   :ref:`type <csparams-type>`
 
 * additional parameters concerning changes in an object:
@@ -350,9 +350,9 @@ Email type: ``notification_transfer``
   to a new registrar, to the email contact of the transferred object
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
-  :ref:`ticket <csparams-ticket>`,
-  :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`ticket <csparams-ticket>`,
   :ref:`type <csparams-type>`
 
 .. _email-type-notify-renew:
@@ -362,9 +362,9 @@ Email type: ``notification_renew``
 * sent after a domain is renewed, to its owner's email
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
-  :ref:`ticket <csparams-ticket>`,
-  :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`ticket <csparams-ticket>`,
   :ref:`type <csparams-type>`
 
 .. _email-type-notify-idle:
@@ -375,9 +375,9 @@ Email type: ``notification_unused``
   from the database, to the email contact of the removed object
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
-  :ref:`ticket <csparams-ticket>`,
-  :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`ticket <csparams-ticket>`,
   :ref:`type <csparams-type>`
 
 .. _email-type-notify-delete:
@@ -388,9 +388,9 @@ Email type: ``notification_delete``
   to the email contact of the deleted object
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
-  :ref:`ticket <csparams-ticket>`,
-  :ref:`registrar <csparams-registrar>`,
   :ref:`handle <csparams-handle>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`ticket <csparams-ticket>`,
   :ref:`type <csparams-type>`
 
 .. _email-type-techcheck:
@@ -458,9 +458,9 @@ Email type: ``request_block``
   after a :term:`public request` for object (un)blocking has been carried out
 * common passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
+  :ref:`handle <csparams-handle>`,
   :ref:`reqdate <csparams-reqdate>`,
   :ref:`reqid <csparams-reqid>`,
-  :ref:`handle <csparams-handle>`,
   :ref:`type <csparams-type>`
 * additional parameters:
    * ``otype`` – operation type: ``1`` – blocking, ``2`` – unblocking,
