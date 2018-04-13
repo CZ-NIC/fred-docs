@@ -22,24 +22,33 @@ Email type: ``sendauthinfo_pif``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent in response to a request for a transfer password
   which was placed through the Registry website
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
-  :ref:`registrar <csparams-registrar>`, :ref:`reqdate <csparams-reqdate>`,
-  :ref:`reqid <csparams-reqid>`, :ref:`type <csparams-type>`,
-  :ref:`handle <csparams-handle>`, :ref:`authinfo <csparams-authinfo>`
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`reqdate <csparams-reqdate>`,
+  :ref:`reqid <csparams-reqid>`,
+  :ref:`type <csparams-type>`,
+  :ref:`handle <csparams-handle>`,
+  :ref:`authinfo <csparams-authinfo>`
 
 Email type: ``sendauthinfo_epp``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent in response to a request for a transfer password
   which was placed through a registrar
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
-  :ref:`registrar <csparams-registrar>`, :ref:`reqdate <csparams-reqdate>`,
-  :ref:`reqid <csparams-reqid>`, :ref:`type <csparams-type>`,
-  :ref:`handle <csparams-handle>`, :ref:`authinfo <csparams-authinfo>`
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`reqdate <csparams-reqdate>`,
+  :ref:`reqid <csparams-reqid>`,
+  :ref:`type <csparams-type>`,
+  :ref:`handle <csparams-handle>`,
+  :ref:`authinfo <csparams-authinfo>`
 
 Email type: ``expiration_notify``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the domain owner in response to the domain expiration
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
   :ref:`domain <csparams-domain>`,
   :ref:`owner <csparams-owner>`,
@@ -58,7 +67,8 @@ Email type: ``expiration_dns_warning_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the domain owner in response to the upcoming exclusion of a domain
   from the zone
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
   :ref:`domain <csparams-domain>`,
   :ref:`owner <csparams-owner>`,
   :ref:`dnsdate <csparams-dnsdate>`,
@@ -79,7 +89,8 @@ Email type: ``expiration_dns_warning_owner``
 Email type: ``expiration_dns_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the domain owner in response to the exclusion of a domain from the zone
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
   :ref:`domain <csparams-domain>`,
   :ref:`owner <csparams-owner>`,
@@ -98,7 +109,8 @@ Email type: ``expiration_dns_owner``
 Email type: ``expiration_register_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the domain owner in response to the upcoming domain cancellation
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
   :ref:`domain <csparams-domain>`,
   :ref:`owner <csparams-owner>`,
@@ -116,7 +128,8 @@ Email type: ``expiration_dns_tech``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the technical contacts of the nsset whose domain was just excluded
   from zone
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
   :ref:`domain <csparams-domain>`,
   :ref:`owner <csparams-owner>`,
@@ -133,7 +146,8 @@ Email type: ``expiration_dns_tech``
 Email type: ``expiration_register_tech``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the technical contacts of the nsset whose domain was just cancelled
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
   :ref:`domain <csparams-domain>`,
   :ref:`owner <csparams-owner>`,
@@ -151,7 +165,8 @@ Email type: ``expiration_validation_before``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the owner of an ENUM domain in response to the upcoming expiry
   of domain's validation
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
   :ref:`domain <csparams-domain>`,
   :ref:`owner <csparams-owner>`,
@@ -168,7 +183,8 @@ Email type: ``expiration_validation``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the owner of the ENUM domain in response to the expiry
   of domain's validation
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
   :ref:`checkdate <csparams-checkdate>`,
   :ref:`domain <csparams-domain>`,
   :ref:`owner <csparams-owner>`,
@@ -187,9 +203,12 @@ Email type: ``notification_create``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent when a new object (domain, contact, nsset, keyset) is created,
   to the email contact of the created object
-* common passed parameters:  :ref:`defaults.* <csparams-defaults>`,
-  :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
-  :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
+* common passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
+  :ref:`ticket <csparams-ticket>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`handle <csparams-handle>`,
+  :ref:`type <csparams-type>`
 
 * additional parameters concerning new objects:
    * ``fresh.object.authinfo`` – transfer password
@@ -234,9 +253,12 @@ Email type: ``notification_update``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent after an object (domain, contact, nsset, keyset)
   is updated, to the email contact of the updated object
-* common passed parameters:  :ref:`defaults.* <csparams-defaults>`,
-  :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
-  :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
+* common passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
+  :ref:`ticket <csparams-ticket>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`handle <csparams-handle>`,
+  :ref:`type <csparams-type>`
 
 * additional parameters concerning changes in an object:
 
@@ -326,18 +348,24 @@ Email type: ``notification_transfer``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent after an object (domain, contact, nsset, keyset) is transferred
   to a new registrar, to the email contact of the transferred object
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
-  :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
-  :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
+  :ref:`ticket <csparams-ticket>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`handle <csparams-handle>`,
+  :ref:`type <csparams-type>`
 
 .. _email-type-notify-renew:
 
 Email type: ``notification_renew``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent after a domain is renewed, to its owner's email
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
-  :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
-  :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
+  :ref:`ticket <csparams-ticket>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`handle <csparams-handle>`,
+  :ref:`type <csparams-type>`
 
 .. _email-type-notify-idle:
 
@@ -345,9 +373,12 @@ Email type: ``notification_unused``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent after an unused object (contact, keyset, nsset) is removed
   from the database, to the email contact of the removed object
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
-  :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
-  :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
+  :ref:`ticket <csparams-ticket>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`handle <csparams-handle>`,
+  :ref:`type <csparams-type>`
 
 .. _email-type-notify-delete:
 
@@ -355,9 +386,12 @@ Email type: ``notification_delete``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent after an object (domain, contact, nsset, keyset) is deleted,
   to the email contact of the deleted object
-* passed parameters: :ref:`defaults.* <csparams-defaults>`,
-  :ref:`ticket <csparams-ticket>`, :ref:`registrar <csparams-registrar>`,
-  :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
+* passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
+  :ref:`ticket <csparams-ticket>`,
+  :ref:`registrar <csparams-registrar>`,
+  :ref:`handle <csparams-handle>`,
+  :ref:`type <csparams-type>`
 
 .. _email-type-techcheck:
 
@@ -365,7 +399,8 @@ Email type: ``techcheck``
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent if a test in a technical check of a nsset has failed, as a report
   to technical contacts of the nsset
-* common passed parameters: :ref:`defaults.* <csparams-defaults>`
+* common passed parameters:
+  :ref:`defaults.* <csparams-defaults>`
 * additional parameters:
    * ``handle`` – handle of the nsset
    * ``checkdate`` – date on which the technical check was performed
@@ -421,9 +456,12 @@ Email type: ``request_block``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the domain owner / the contact / technical contacts of an object
   after a :term:`public request` for object (un)blocking has been carried out
-* common passed parameters: :ref:`defaults.* <csparams-defaults>`,
-  :ref:`reqdate <csparams-reqdate>`, :ref:`reqid <csparams-reqid>`,
-  :ref:`handle <csparams-handle>`, :ref:`type <csparams-type>`
+* common passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
+  :ref:`reqdate <csparams-reqdate>`,
+  :ref:`reqid <csparams-reqid>`,
+  :ref:`handle <csparams-handle>`,
+  :ref:`type <csparams-type>`
 * additional parameters:
    * ``otype`` – operation type: ``1`` – blocking, ``2`` – unblocking,
    * ``rtype`` – request type: ``1`` – all object changes, ``2`` – object transfer.
@@ -434,7 +472,8 @@ Email type: ``annual_contact_reminder``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to a contact in response to the upcoming contact registration anniversary
   as a reminder to check accuracy of contact information in the registry
-* common passed parameters: :ref:`defaults.* <csparams-defaults>`,
+* common passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
   :ref:`handle <csparams-handle>`
 * additional parameters:
    * ``organization`` – name of contact's organization,
@@ -467,7 +506,8 @@ Email type: ``annual_contact_reminder``
 Email type: ``merge_contacts_auto``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent to the contact after an automatic merger of its duplicates
-* common passed parameters: :ref:`defaults.* <csparams-defaults>`
+* common passed parameters:
+  :ref:`defaults.* <csparams-defaults>`
 * additional parameters:
    * ``dst_contact_handle`` – handle of the destination contact into which the
      duplicates have been merged,
@@ -493,8 +533,10 @@ Email type: ``akm_candidate_state_ok``
 * sent after valid CDNSKEY records are discovered on a insecured domain
   and the acceptance period is initiated,
   to technical contacts of the domain's nsset
-* common passed parameters: :ref:`defaults.* <csparams-defaults>`,
-  :ref:`domain <csparams-domain>`, :ref:`zone <csparams-zone>`
+* common passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
+  :ref:`domain <csparams-domain>`,
+  :ref:`zone <csparams-zone>`
 
 * additional parameters:
 
@@ -513,7 +555,8 @@ Email type: ``akm_candidate_state_ko``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent when the acceptance period is broken by absence of the CDNSKEY records
   or by discovery of changed records, to technical contacts of the domain's nsset
-* common passed parameters: :ref:`defaults.* <csparams-defaults>`
+* common passed parameters:
+  :ref:`defaults.* <csparams-defaults>`
 * additional parameters:
    * ``datetime`` – date and time of the discovery.
 
@@ -523,8 +566,10 @@ Email type: ``akm_keyset_update``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent when an auto-managed keyset is updated from new CDNSKEY records,
   to technical contacts of the domain's nsset
-* common passed parameters: :ref:`defaults.* <csparams-defaults>`,
-  :ref:`domain <csparams-domain>`, :ref:`zone <csparams-zone>`
+* common passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
+  :ref:`domain <csparams-domain>`,
+  :ref:`zone <csparams-zone>`
 * additional parameters:
    * ``keys`` – list of discovered CDNSKEY records (the first item of the list
      as ``keys.0`` etc.),
@@ -536,7 +581,8 @@ Email type: ``record_statement``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * sent in response to a request for a registry record statement about an object,
   to the email of the domain owner / the contact / technical contacts
-* common passed parameters: :ref:`defaults.* <csparams-defaults>`,
+* common passed parameters:
+  :ref:`defaults.* <csparams-defaults>`,
 * additional parameters:
    * ``request_day`` – the day of the request date,
    * ``request_month`` – the month of the request date,
