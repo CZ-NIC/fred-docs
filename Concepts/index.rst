@@ -13,6 +13,7 @@ Concepts
    Contacts
    Transfer
    Teccheck
+   EPPClientWorkflow
    ContactMerger
    AKM
    Genzone
