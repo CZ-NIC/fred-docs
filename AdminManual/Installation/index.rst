@@ -41,7 +41,6 @@ This chapter describes how to install the FRED.
    BinsUbuntu
    BinsFedora
    SourceTar
-   SourceRPM
    AuxConfig
    SystemInit
    Test
