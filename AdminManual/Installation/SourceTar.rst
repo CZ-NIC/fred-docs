@@ -75,7 +75,9 @@ Package list:
 * :file:`fred-akm`
 * :file:`cdnskey-scanner`
 
-For each package in the list, run this command sequence from its directory::
+For each package in the list, run this command sequence from its directory:
+
+.. code-block:: bash
 
    autoreconf -vfi # generates the configure script
    ./configure
@@ -109,7 +111,9 @@ to the :program:`configure` script or as environment variables.
 Finish ``mod-corba`` installation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Run the :program:`libtool` script (after ``make install``) to finish
-the :file:`mod-corba` installation::
+the :file:`mod-corba` installation:
+
+.. code-block:: bash
 
    sudo ./libtool --finish /usr/lib/apache2/modules
 
@@ -137,7 +141,9 @@ Package list:
 * :file:`fred-webadmin`
 * :file:`fred-webwhois` [#s]_
 
-For each package in the list, run this command from its directory::
+For each package in the list, run this command from its directory:
+
+.. code-block:: bash
 
    sudo python ./setup.py install
 
