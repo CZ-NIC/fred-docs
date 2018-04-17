@@ -41,9 +41,9 @@ Each subproject has its own GitHub repository.
 * `fred-webwhois <https://www.github.com/CZ-NIC/fred-webwhois.git>`_
   – the web WHOIS server (front end) implemented with Django
 
-* `fred-utils-distutils <https://www.github.com/CZ-NIC/fred-utils-distutils.git>`_
-  – a Python wrapper over ``python-setuptools`` (necessary for installation of all FRED subprojects in Python)
-* `fred-utils-pyfco <https://www.github.com/CZ-NIC/fred-utils-pyfco.git>`_
+* :ref:`D <install-dist>` `fred-utils-distutils <https://www.github.com/CZ-NIC/fred-utils-distutils.git>`_
+  – a Python wrapper over ``python-setuptools`` (necessary for installation of some FRED subprojects in Python)
+* :ref:`D <install-dist>` `fred-utils-pyfco <https://www.github.com/CZ-NIC/fred-utils-pyfco.git>`_
   – a Python wrapper over CORBA
 * `fred-utils-pylogger <https://www.github.com/CZ-NIC/fred-utils-pylogger.git>`_
   – a Python wrapper over logging infrastructure for all Python clients

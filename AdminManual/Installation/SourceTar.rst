@@ -7,6 +7,8 @@ Installation from source tarballs
 This section will guide you through the compilation of the FRED and
 the follow-up installation. This procedure is meant for Ubuntu.
 
+See also :doc:`source code architecture </Architecture/SourceCode>`.
+
 Add the CZ.NIC repositories and signing key
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -14,9 +16,8 @@ Add the CZ.NIC repositories and signing key
 
    add-apt-repository "deb http://archive.nic.cz/ubuntu $(lsb_release -sc) main"
    add-apt-repository "deb http://archive.nic.cz/private $(lsb_release -sc) main"
-   add-apt-repository "deb http://archive.nic.cz/scratch $(lsb_release -sc) main"
 
-   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F20C079E020ADBB4
+   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1C0200016A9AC5C6
 
    apt-get update
 
@@ -39,10 +40,17 @@ Install all the packages from the appropriate list.
 Download and unpack
 ^^^^^^^^^^^^^^^^^^^
 
-::
+We publish a list of GitHub-generated tarballs on our website.
+
+You may use the `latest version list <https://fred.nic.cz/files/fred/fred-sources-list-latest.txt>`_
+or an archived version list, such as https://fred.nic.cz/files/fred/fred-sources-list-2.36.txt.
+
+.. code-block:: bash
 
    mkdir fred && cd fred
-   wget -i https://fred.nic.cz/files/fred/fred-sources-list.txt
+   curl https://fred.nic.cz/files/fred/fred-sources-list-latest.txt | while read LN; do
+      curl -JLO $LN # these options are necessary to have nice filenames
+   done
    for F in *.tar.gz; do tar -zxvf $F; done
 
 Install "A" packages
@@ -67,6 +75,7 @@ Package list:
 
 For each package in the list, run this command sequence from its directory::
 
+   autoreconf -vfi # generates the configure script
    ./configure
    make
    sudo make install
@@ -107,26 +116,29 @@ Install "D" packages
 ^^^^^^^^^^^^^^^^^^^^
 
 These packages use **Distutils** for installation which is a collection
-of Python scripts based on :file:`python-setuptools`, therefore
+of Python scripts based on **Setuptools**, therefore
 the Distutils package must be installed before other "D" packages.
+Naturally, Setuptools must be installed (:file:`python-setuptools` or
+:code:`pip install setuptools`) before all other Python packages.
 
 Package list:
 
-* :file:`fred-distutils` *# install first (in the Python path)*
+* :file:`fred-utils-distutils` *# install first (in the Python path)*
+* :file:`fred-utils-pyfco` [#s]_
+* :file:`fred-utils-pylogger` [#s]_
 * :file:`fred-client`
 * :file:`fred-doc2pdf`
 * :file:`fred-pyfred`
-* :file:`fred-pylogger`
-* :file:`fred-rdap`
+* :file:`fred-rdap` [#s]_
 * :file:`fred-transproc`
 * :file:`fred-webadmin`
-* :file:`fred-whois`
+* :file:`fred-webwhois` [#s]_
 
 For each package in the list, run this command from its directory::
 
    sudo python ./setup.py install
 
-The ``install`` command first calls compilation (build) if needed and
+The ``install`` command calls compilation (build) first if needed and
 then just copies files required for operation to the target directories.
 (You usually need administrator permissions if you install elsewhere
 than your home directory.)
@@ -138,6 +150,10 @@ for installation parameters.
 The installer writes a list of installed files (with their full path)
 to the :file:`install.log` file when it finishes.
 
+.. [#s] These packages have been ported from Distutils to Setuptools
+   but they have the same installation command, except it does not install
+   a configuration file and the package must be configured as described
+   in a README file included in the package.
 
 Finalization
 ^^^^^^^^^^^^
