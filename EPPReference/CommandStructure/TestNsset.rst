@@ -9,7 +9,7 @@ a :doc:`technical check </Concepts/Teccheck>` of a nsset.
 
 The check is not performed immediately but it is scheduled for execution.
 After the tests have finished, a report is provided to the client
-in :ref:`poll messages <struct-poll-test>`.
+in :ref:`poll messages <epp-poll-type-techcheck>`.
 
 The nsset test command is a ``test`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).

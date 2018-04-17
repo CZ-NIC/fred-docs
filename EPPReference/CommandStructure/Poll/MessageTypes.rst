@@ -24,6 +24,8 @@ Poll message types
 
 .. index:: ⒺlowCreditData, Ⓔzone, Ⓔlimit, Ⓔcredit
 
+.. _epp-poll-type-low-credit:
+
 Low credit
 ----------
 
@@ -77,6 +79,8 @@ and contains:
 
 .. index:: ⒺrequestFeeInfoData, ⒺperiodFrom, ⒺperiodTo, ⒺtotalFreeCount,
    ⒺusedCount, Ⓔprice
+
+.. _epp-poll-type-request-usage:
 
 Request usage
 -------------
@@ -132,6 +136,8 @@ that exceed the limit.
 .. index:: ⒺimpendingExpData, ⒺexpData, ⒺdnsOutageData, ⒺdelData,
    Ⓔname, ⒺexDate
 
+.. _epp-poll-type-domain-exp:
+
 Domain life cycle
 -----------------
 
@@ -184,6 +190,8 @@ and contain the following child elements:
 
 .. index:: ⒺimpendingValExpData, ⒺvalExpData, Ⓔname, ⒺvalExDate
 
+.. _epp-poll-type-domain-val:
+
 ENUM domain validation
 ----------------------
 
@@ -232,8 +240,9 @@ and contain the same child elements:
       </response>
    </epp>
 
-
 .. index:: ⒺtrnData, Ⓔname, Ⓔid, ⒺclID
+
+.. _epp-poll-type-transfer:
 
 Object transfer
 ---------------
@@ -391,6 +400,8 @@ This message type appears in the following object namespaces: ``domain``,
 
 .. index:: ⒺidleDelData, Ⓔid
 
+.. _epp-poll-type-idle-del:
+
 Idle object deletion
 --------------------
 
@@ -434,7 +445,7 @@ This message type appears in the following object namespaces: ``contact``,
 
 .. index:: ⒺtestData, Ⓔid, Ⓔname, Ⓔresult, Ⓔtestname, Ⓔstatus, Ⓔnote
 
-.. _struct-poll-test:
+.. _epp-poll-type-techcheck:
 
 Technical check results
 -----------------------

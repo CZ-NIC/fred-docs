@@ -85,7 +85,7 @@ Currently, there are no level-0 tests and the highest level in use is 6.
      - At least two DNS servers with different software.
 
 If a check is requested by a registrar via EPP, the results are delivered
-to the registrar in a :ref:`EPP poll message <struct-poll-test>`.
+to the registrar in a :ref:`EPP poll message <epp-poll-type-techcheck>`.
 
 If a periodic check fails, technical contacts of a nsset are :ref:`notified by
 email <email-type-techcheck>` which informs also about the cause of the failure.
