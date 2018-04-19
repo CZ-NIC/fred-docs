@@ -138,17 +138,18 @@ that exceed the limit.
 
 .. _epp-poll-type-domain-exp:
 
-Domain life cycle
+Domain expiration
 -----------------
 
-There are several notifications concerning the life cycle of domains
+There are several notifications concerning expiration of domains
 that have the same content but are issued on different **events**:
 
-* ``<domain:impendingExpData>`` – the domain is going to expire (by default 30 days before expiration),
-* ``<domain:expData>`` – the domain has expired (on the date of expiration),
-* ``<domain:dnsOutageData>`` – the domain has been excluded from the zone (by default 30 days after expiration),
-* ``<domain:delData>`` – the domain has been deleted (by default 61 days
-  after expiration or deleted by the Registry for another reason).
+* ``<domain:impendingExpData>`` – the domain is going to expire
+  (see :ref:`expW state <registration-expiration>`),
+* ``<domain:expData>`` – the domain has :ref:`expired <registration-expiration>`,
+* ``<domain:dnsOutageData>`` – the domain has become :ref:`unguarded
+  <registration-expiration>` and has been excluded from the zone,
+* ``<domain:delData>`` – the domain has been :ref:`deleted <registration-expiration>`.
 
 Only one of these elements can occur in a single poll message.
 
@@ -198,9 +199,9 @@ ENUM domain validation
 Notifications concerning the validation of ENUM domains for **events**:
 
 * ``<enumval:impendingValExpData>`` – domain's validation is going to expire
-  (by default 30 days before validation expiration),
-* ``<enumval:valExpData>`` – domain's validation has expired (on the day
-  of validation expiration).
+  (see :ref:`valW1 state <validation-expiration>`),
+* ``<enumval:valExpData>`` – domain's validation has expired (see :ref:`notValidated
+  state <validation-expiration>`).
 
 Only one of these elements can occur in a single poll message.
 
@@ -405,7 +406,8 @@ This message type appears in the following object namespaces: ``domain``,
 Idle object deletion
 --------------------
 
-**Event:** An object has been deleted because it had not been used for a long time.
+**Event:** An object has been deleted because it had become :doc:`obsolete
+</Concepts/LifeCycle/NonDomains>`.
 
 ``<*:idleDelData>`` **(1)** declares the object :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contains:
