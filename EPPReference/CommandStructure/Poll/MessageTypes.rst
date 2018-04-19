@@ -37,13 +37,13 @@ and contains:
 * ``<fred:zone>`` **(1)** – FQDN of the zone in question as :term:`eppcom:labelType`,
 * ``<fred:limit>`` **(1)** – the stated limit:
    * ``<fred:zone>`` **(1)** – zone as :term:`eppcom:labelType`,
-   * ``<fred:credit>`` **(1)** – credit treshold for notification as :term:`fred:amountType`,
+   * ``<fred:credit>`` **(1)** – credit treshold for notice as :term:`fred:amountType`,
 * ``<fred:credit>`` **(1)** – amount of credit:
    * ``<fred:zone>`` **(1)** – zone as :term:`eppcom:labelType`,
    * ``<fred:credit>`` **(1)** – current client's credit as :term:`fred:amountType`.
 
 .. code-block:: xml
-   :caption: Example of a notification of low credit
+   :caption: Example of a notice of low credit
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -100,11 +100,11 @@ that exceed the limit.
   for this month as :term:`xs:unsignedLong`,
 * ``<fred:usedCount>`` **(1)** – the total of requests used during the period
   as :term:`xs:unsignedLong`,
-* ``<fred:price>`` **(1)** – additional charge for requests over limit
+* ``<fred:price>`` **(1)** – additional charge for requests over the limit
   that the client will be billed as :term:`fred:amountType`.
 
 .. code-block:: xml
-   :caption: Example of a notification of request usage
+   :caption: Example of a message about request usage
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -141,7 +141,7 @@ that exceed the limit.
 Domain expiration
 -----------------
 
-There are several notifications concerning expiration of domains
+There are several messages concerning expiration of domains
 that have the same content but are issued on different **events**:
 
 * ``<domain:impendingExpData>`` – the domain is going to expire
@@ -162,7 +162,7 @@ and contain the following child elements:
   as :term:`xs:date`.
 
 .. code-block:: xml
-   :caption: Example of a notification of impending domain expiration
+   :caption: Example of a message about impending domain expiration
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -196,7 +196,7 @@ and contain the following child elements:
 ENUM domain validation
 ----------------------
 
-Notifications concerning the validation of ENUM domains for **events**:
+Messages concerning the validation of ENUM domains for **events**:
 
 * ``<enumval:impendingValExpData>`` – domain's validation is going to expire
   (see :ref:`valW1 state <validation-expiration>`),
@@ -214,7 +214,7 @@ and contain the same child elements:
   as :term:`xs:date`.
 
 .. code-block:: xml
-   :caption: Example of a notification of ENUM validation expiration
+   :caption: Example of a message about ENUM validation expiration
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -265,7 +265,7 @@ This message type appears in all 4 object namespaces: ``domain``, ``contact``,
 ``nsset``, ``keyset``.
 
 .. code-block:: xml
-   :caption: Example of a transfer notification
+   :caption: Example of a transfer message
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -306,7 +306,7 @@ Object update
 and contains:
 
 * ``<*:opTRID>`` **(1)** – operation transaction identifier (an identification
-  of the operation in the Registry that has caused this notification)
+  of the operation in the Registry that has caused this message)
   as :term:`domain:trIDStringType`,
 * ``<*:oldData>`` **(1)** – data before the update, the content is presented
   as an ``infData`` element (the same as in response to the ``info`` command:
@@ -325,7 +325,7 @@ This message type appears in the following object namespaces: ``domain``,
 ``contact``, ``nsset``, ``keyset``.
 
 .. code-block:: xml
-   :caption: Example of a notification of an updated object
+   :caption: Example of an update message
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -418,7 +418,7 @@ This message type appears in the following object namespaces: ``contact``,
 ``nsset``, ``keyset``.
 
 .. code-block:: xml
-   :caption: Example of a notification of a deleted idle object
+   :caption: Example of a message about a deleted idle object
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -471,7 +471,7 @@ Technical check results
      from the test implementation as :term:`xs:string`.
 
 .. code-block:: xml
-   :caption: Example of a notification with the results of a technical check
+   :caption: Example of a message with the results of a technical check
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
