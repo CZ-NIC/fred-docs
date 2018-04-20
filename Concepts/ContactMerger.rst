@@ -22,82 +22,62 @@ The other option is to use the automatic merge procedure which can select
 a whole set of duplicate contacts automatically and merge them
 into a single *destination contact*. The *destination contact* is filtered
 from the set using :ref:`prioritized criteria <merge-auto-criteria>`.
-Only contacts that have the same :term:`designated registrar` can be merged
-automatically.
 (See the task :ref:`contact-merge-auto`.)
 
-
-
-Identical contacts in a manual merger
--------------------------------------
-
-For two contacts to be considered identical by the merger:
-
-* the *source contact* and the *destination contact* must have the following
-  database values identical:
-
-   * name: ``contact.name`` [#trim]_
-   * organization: ``contact.organization`` [#trim]_
-   * address: ``contact.street1``, ``contact.street2``, ``contact.street3``,
-     ``contact.city``, ``contact.stateorprovince``, ``contact.postalcode``,
-     ``contact.country`` [#trim]_
-   * email: ``contact.email`` [#trim]_
-
-* if this attribute is filled in the *destination contact*, then the *source*
-  contact attribute must either contain the same value or be empty:
-
-   * identifier: ``contact.ssntype``
-   * identifier: ``contact.ssn`` [#trim]_
-   * VAT: ``contact.vat`` [#trim]_
+In both cases, the contacts must be managed by the same registrar, however,
+they are replaced in linked objects even if the linked objects have different
+registrars.
 
 .. _merge-auto-identity:
 
-Identical contacts in an automatic merger
------------------------------------------
+Identical contacts
+------------------
 
 For contacts to be considered identical by the merger, they must have
-the following database values identical:
+the following attributes identical:
 
+* current designated registrar: ``object.clid``
 * name: ``contact.name`` [#trim]_
 * organization: ``contact.organization`` [#trim]_
-* address: ``contact.street1``, ``contact.street2``, ``contact.street3``,
+* address (permanent): ``contact.street1``, ``contact.street2``, ``contact.street3``,
   ``contact.city``, ``contact.stateorprovince``, ``contact.postalcode``,
   ``contact.country`` [#trim]_
 * email: ``contact.email`` [#trim]_
 * notification email: ``contact.notifyemail`` [#trim]_
 * fax: ``contact.fax`` [#trim]_
 * telephone: ``contact.telephone`` [#trim]_
-* identifier: ``contact.ssntype``
-* identifier: ``contact.ssn`` [#trim]_
+* identity document type: ``contact.ssntype``
+* identity document number: ``contact.ssn`` [#trim]_
 * VAT: ``contact.vat`` [#trim]_
 * disclose flags: ``contact.disclosename``, ``contact.discloseorganization``,
   ``contact.discloseaddress``, ``contact.disclosetelephone``,
   ``contact.disclosefax``, ``contact.discloseemail``, ``contact.disclosevat``,
-  ``contact.discloseident``, ``contact.disclosenotifyemail``,
-  ``contact.warning_letter``
-* current designated registrar: ``object.clid``
+  ``contact.discloseident``, ``contact.disclosenotifyemail``
+* user's preference of sending domain expiration letters: ``contact.warning_letter``
 * and for each associated contact address of any type (\ ``MAILING``, ``BILLING``,
   ``SHIPPING``, ``SHIPPING_2``, ``SHIPPING_3``):
 
-   * ``contact_address.company_name`` [#trim]_
-   * ``contact_address.street1`` [#trim]_
-   * ``contact_address.street2`` [#trim]_
-   * ``contact_address.street3`` [#trim]_
-   * ``contact_address.city`` [#trim]_
-   * ``contact_address.stateorprovince`` [#trim]_
-   * ``contact_address.postalcode`` [#trim]_
-   * ``contact_address.country`` [#trim]_
+   * :samp:`{contact_address}.company_name` [#trim]_
+   * :samp:`{contact_address}.street1` [#trim]_
+   * :samp:`{contact_address}.street2` [#trim]_
+   * :samp:`{contact_address}.street3` [#trim]_
+   * :samp:`{contact_address}.city` [#trim]_
+   * :samp:`{contact_address}.stateorprovince` [#trim]_
+   * :samp:`{contact_address}.postalcode` [#trim]_
+   * :samp:`{contact_address}.country` [#trim]_
 
 .. [#trim] These values are trimmed before they are compared. Trimming means
    that spaces at the beginning and at the end of strings are removed.
-   Trimming does not affect any other whitespace characters.
+   Trimming does not affect any other whitespace characters nor spaces that
+   separate words.
 
 .. _mergeable-contacts:
 
 Merge-able contacts
 -------------------
 
-Contacts must be identical [*]_ and comply with the following conditions:
+Contacts must be :ref:`identical <merge-auto-identity>` and comply with the
+following conditions:
 
 * the *source contact*\ (s):
    * must not be administratively blocked (\ ``serverBlocked`` status active), and
@@ -114,9 +94,6 @@ Contacts must be identical [*]_ and comply with the following conditions:
    * must not have the ``serverUpdateProhibited`` status active.
 
 .. Note:: The rules for identity and merge-ability are hard-coded.
-
-.. [*] The definition of identity of duplicates varies for a manual and
-   automatic merger.
 
 .. _merge-operation:
 
@@ -162,3 +139,30 @@ is chosen from them randomly.
 
 .. [#default] This is the default setting used in CZ.NIC. The Registry operator
    may modify which criteria will be applied and in what order, in a command option.
+
+
+.. only:: domain_browser
+
+   .. _merge-db-identity:
+
+   Identical contacts in the Domain Browser
+   ----------------------------------------
+
+   For two contacts to be considered identical by the merger:
+
+   * the *source contact* and the *destination contact* must have the following
+     attributes identical:
+
+      * name: ``contact.name`` [#trim]_
+      * organization: ``contact.organization`` [#trim]_
+      * address: ``contact.street1``, ``contact.street2``, ``contact.street3``,
+        ``contact.city``, ``contact.stateorprovince``, ``contact.postalcode``,
+        ``contact.country`` [#trim]_
+      * email: ``contact.email`` [#trim]_
+
+   * if this attribute is filled in the *destination contact*, then the *source*
+     contact attribute must either contain the same value or be empty:
+
+      * identity document type: ``contact.ssntype``
+      * identity document number: ``contact.ssn`` [#trim]_
+      * VAT: ``contact.vat`` [#trim]_
