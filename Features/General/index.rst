@@ -75,6 +75,8 @@ can perform registrations and modify existing data in the Registry.
 
 .. include:: Whois.rst
 
+.. include:: GDPRCompliance.rst
+
 .. include:: Notifications.rst
 
 .. include:: TecChecks.rst
