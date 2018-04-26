@@ -41,4 +41,5 @@ Terms and definitions can be found :doc:`in the glossary </Glossary>`.
    ManagedObjects/index
    SchemasNamespaces/index
    CommandStructure/index
+   PoliciesRules
    Appendixes/index

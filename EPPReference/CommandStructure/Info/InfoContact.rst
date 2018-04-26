@@ -112,6 +112,11 @@ and it contains the following child elements:
    * ``<contact:vat/>`` **(0..1)** – the VAT number disclosure setting as an empty element,
    * ``<contact:ident/>`` **(0..1)** – the identity document disclosure setting as an empty element,
    * ``<contact:notifyEmail/>`` **(0..1)** – the notification email disclosure setting as an empty element,
+
+   .. Note:: Omitted items must be interpreted according to the server disclosure policy.
+
+      See :doc:`/EPPReference/PoliciesRules`.
+
 * ``<contact:vat>`` **(0..1)** – the :term:`VAT`-payer identifier as a :term:`contact:vatT`,
 * ``<contact:ident>`` **(0..1)** – identity-document identification:
    * ``@type`` **(R)** – the type of the identity document as one of values:
@@ -152,7 +157,9 @@ and it contains the following child elements:
          <contact:crID>REG-MYREG</contact:crID>
          <contact:crDate>2017-05-04T11:30:25+02:00</contact:crDate>
          <contact:authInfo>PfLyxPC4</contact:authInfo>
-         <contact:disclose flag="0"/>
+         <contact:disclose flag="1">
+            <contact:addr/>
+         </contact:disclose>
       </contact:infData>
       </resData>
       <trID>
@@ -218,7 +225,9 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and contains:
                <contact:upID>REG-FRED_A</contact:upID>
                <contact:upDate>2015-08-25T17:37:31+02:00</contact:upDate>
                <contact:authInfo>TzInfeuS</contact:authInfo>
-               <contact:disclose flag="0"/>
+               <contact:disclose flag="1">
+                  <contact:addr/>
+               </contact:disclose>
                <contact:notifyEmail>foobar-notify@nic.cz</contact:notifyEmail>
             </contact:infData>
          </resData>

@@ -35,23 +35,27 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
          * ``<contact:sp>`` **(0..1)** – state or province as :term:`contact:optPostalLineType`,
          * ``<contact:pc>`` **(1)** – postal code as :term:`contact:pcType`,
          * ``<contact:cc>`` **(1)** – country code as :term:`contact:ccType`,
-   * ``<contact:voice>`` **(0..1)** – change phone number as :term:`contact:e164StringType`,
+   * ``<contact:voice>`` **(0..1)** – change telephone number as :term:`contact:e164StringType`,
    * ``<contact:fax>`` **(0..1)** – change fax number as :term:`contact:e164StringType`,
    * ``<contact:email>`` **(0..1)** – change email as :term:`contact:emailCommaListType`,
    * ``<contact:authInfo>`` **(0..1)** – change authorization information (transfer password) as :term:`fredcom:authInfoType`
    * ``<contact:disclose>`` **(0..1)** – change contact information disclosure settings:
       * ``@flag`` **(R)** – disclose flag as a :term:`xs:boolean`: ``0`` – hide listed items, ``1`` – publish listed items,
-      * ``<contact:addr/>`` **(0..1)** – address disclosure setting as an empty element,
-      * ``<contact:voice/>`` **(0..1)** – voice disclosure setting as an empty element,
+      * ``<contact:addr/>`` **(0..1)** – address disclosure setting (applies to all addresses) as an empty element,
+      * ``<contact:voice/>`` **(0..1)** – telephone disclosure setting as an empty element,
       * ``<contact:fax/>`` **(0..1)** – fax disclosure setting as an empty element,
       * ``<contact:email/>`` **(0..1)** – email disclosure setting as an empty element,
       * ``<contact:vat/>`` **(0..1)** – VAT number disclosure setting as an empty element,
       * ``<contact:ident/>`` **(0..1)** – identity document disclosure setting as an empty element,
       * ``<contact:notifyEmail/>`` **(0..1)** – notification email disclosure setting as an empty element.
 
-      .. Note:: Omitted items will be reset by the server according to its data-collection policy.
+      .. Note:: Omitted items will be reset by the server according to its disclosure policy.
 
          Whether the new disclosure settings will have an effect, also depends on the server's policy.
+
+         If the whole ``<contact:disclose>`` element is omitted, it means no change of the disclosure preference.
+
+         See also :doc:`/EPPReference/PoliciesRules`, which contain examples of behaviour.
 
    * ``<contact:vat>`` **(0..1)** – change :term:`VAT`-payer identifier as a :term:`contact:vatT`,
    * ``<contact:ident>`` **(0..1)** – change identity-document identification:
@@ -77,7 +81,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
                <contact:id>CID-MYOWN</contact:id>
                <contact:chg>
                   <contact:voice>+420.222333444</contact:voice>
-                  <contact:disclose flag="0">
+                  <contact:disclose flag="1">
                      <contact:voice/>
                   </contact:disclose>
                </contact:chg>

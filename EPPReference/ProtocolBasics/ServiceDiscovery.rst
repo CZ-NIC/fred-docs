@@ -135,6 +135,8 @@ It contains the following child elements:
 
   More about DCP in :rfc:`5730#page-9`.
 
+  See also :doc:`/EPPReference/PoliciesRules`.
+
 .. code-block:: xml
    :caption: Example
 
@@ -145,7 +147,7 @@ It contains the following child elements:
 
        <greeting>
            <svID>EPP server (DSDng)</svID>
-           <svDate>2017-05-12T17:01:11+02:00</svDate>
+           <svDate>2018-05-15T21:05:42+02:00/svDate>
            <svcMenu>
                <version>1.0</version>
                <lang>en</lang>
@@ -160,7 +162,7 @@ It contains the following child elements:
            </svcMenu>
            <dcp>
                <access>
-                   <all/>
+                   <none/>
                </access>
                <statement>
                    <purpose>
