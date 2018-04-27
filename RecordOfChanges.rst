@@ -133,3 +133,8 @@ Overview of changes in documentation from previous editions.
      -
      - :doc:`/Concepts/Contacts`
      - Added contacts
+   * -
+     - **1.1**
+     - :doc:`/AdminManual/Installation/SourceTar`
+     - Upgraded installation procedure to use source from GitHub,
+       new signing key for secure apt
