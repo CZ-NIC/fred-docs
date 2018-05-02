@@ -330,20 +330,24 @@ Email type: ``notification_delete``
 
 .. _email-type-techcheck:
 
-Email type: ``techcheck`` ???
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* sent if a test in a technical check of a nsset has failed, as a report
-  to technical contacts of the nsset
+Email type: ``techcheck``
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* sent if a test in a :doc:`technical check </Concepts/Teccheck>` of a nsset
+  has failed, as a report to technical contacts of the nsset
 * common passed parameters:
-  :ref:`defaults.* <csparams-defaults>`
+  :ref:`defaults.* <csparams-defaults>`,
+  :ref:`handle <csparams-handle>`,
+  :ref:`registrar <csparams-registrar>`
+
 * additional parameters:
-   * ``handle`` – handle of the nsset
    * ``checkdate`` – date on which the technical check was performed
    * ``ticket`` – check number
    * ``tests`` – list of datasets with results of the tests which
-     have failed; items in the list have the following attributes:
+     have failed; a single dataset (one list item, e.g. ``tests.0``) has the
+     following attributes:
 
-      * :samp:`tests.*.type` – severity of the test result (``error``/``warning``/``notice``),
+      * :samp:`tests.*.type` – severity of the test result ( ``error`` / ``warning`` / ``notice``),
       * :samp:`tests.*.name` – subject of the test,
       * :samp:`tests.*.ns` – further information about the test result
         whose content depends on the test subject.
@@ -384,8 +388,8 @@ Email type: ``techcheck`` ???
 
      The original template defines and uses the ``printtest()`` macro which accepts
      a result dataset (an item from the ``tests`` list) as an argument and
-     prints the results according to the subject (``name``) of the test. Print
-     of the test results is then grouped by severity of failure.
+     prints the results according to the subject (\ ``name``) of the test. Print
+     of the test results is grouped by severity.
 
 Email type: ``request_block``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
