@@ -216,7 +216,7 @@ Email type: ``notification_update``
      value of the attribute are passed in the following manner:
 
       * :samp:`changes.{<object>}.{<attribute>}` indicates a change in an attribute
-        – if the attribute has changed, it contains the value "``1``";
+        – if the attribute has changed, it contains the value ``1``;
         otherwise the parameter is not passed,
       * :samp:`changes.{<object>}.{<attribute>}.old` contains the value of the attribute
         before the change (passed only if the attribute has changed),
@@ -363,7 +363,7 @@ Email type: ``techcheck``
      have failed; a single dataset (one list item, e.g. ``tests.0``) has the
      following attributes:
 
-      * :samp:`tests.*.type` – severity of the test result ( ``error`` / ``warning`` / ``notice``),
+      * :samp:`tests.*.type` – severity of the test result (\ ``error`` / ``warning`` / ``notice``),
       * :samp:`tests.*.name` – subject of the test,
       * :samp:`tests.*.ns` – further information about the test result
         whose content depends on the test subject.
