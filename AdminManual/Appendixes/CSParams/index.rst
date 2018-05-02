@@ -20,6 +20,7 @@ the templates for each type can be found in the table ``mail_template``.
 
 Email type: ``sendauthinfo_pif``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent in response to a request for a transfer password
   which was placed through the Registry website
 * passed parameters:
@@ -32,6 +33,7 @@ Email type: ``sendauthinfo_pif``
 
 Email type: ``sendauthinfo_epp``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent in response to a request for a transfer password
   which was placed through a registrar
 * passed parameters:
@@ -43,6 +45,7 @@ Email type: ``sendauthinfo_epp``
 
 Email type: ``expiration_notify``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent to the domain owner in response to the domain expiration
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
@@ -57,6 +60,7 @@ Email type: ``expiration_notify``
 
 Email type: ``expiration_dns_warning_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent to the domain owner in response to the upcoming exclusion of a domain
   from the zone
 * passed parameters:
@@ -72,6 +76,7 @@ Email type: ``expiration_dns_warning_owner``
 
 Email type: ``expiration_dns_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent to the domain owner in response to the exclusion of a domain from the zone
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
@@ -85,6 +90,7 @@ Email type: ``expiration_dns_owner``
 
 Email type: ``expiration_register_owner``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent to the domain owner in response to the upcoming domain cancellation
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
@@ -92,6 +98,7 @@ Email type: ``expiration_register_owner``
 
 Email type: ``expiration_dns_tech``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent to the technical contacts of the nsset whose domain was just excluded
   from zone
 * passed parameters:
@@ -102,6 +109,7 @@ Email type: ``expiration_dns_tech``
 
 Email type: ``expiration_register_tech``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent to the technical contacts of the nsset whose domain was just cancelled
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
@@ -111,6 +119,7 @@ Email type: ``expiration_register_tech``
 
 Email type: ``expiration_validation_before``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent to the owner of an ENUM domain in response to the upcoming expiry
   of domain's validation
 * passed parameters:
@@ -124,6 +133,7 @@ Email type: ``expiration_validation_before``
 
 Email type: ``expiration_validation``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent to the owner of the ENUM domain in response to the expiry
   of domain's validation
 * passed parameters:
@@ -138,6 +148,7 @@ Email type: ``expiration_validation``
 
 Email type: ``notification_create``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent when a new object (domain, contact, nsset, keyset) is created,
   to the email contact of the created object
 * common passed parameters:
@@ -186,6 +197,7 @@ Email type: ``notification_create``
 
 Email type: ``notification_update``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent after an object (domain, contact, nsset, keyset)
   is updated, to the email contact of the updated object
 * common passed parameters:
@@ -282,6 +294,7 @@ Email type: ``notification_update``
 
 Email type: ``notification_transfer``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent after an object (domain, contact, nsset, keyset) is transferred
   to a new registrar, to the email contact of the transferred object
 * passed parameters:
@@ -295,6 +308,7 @@ Email type: ``notification_transfer``
 
 Email type: ``notification_renew``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent after a domain is renewed, to its owner's email
 * passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
@@ -307,6 +321,7 @@ Email type: ``notification_renew``
 
 Email type: ``notification_unused``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent after an unused object (contact, keyset, nsset) is removed
   from the database, to the email contact of the removed object
 * passed parameters:
@@ -319,6 +334,7 @@ Email type: ``notification_unused``
 
 Email type: ``notification_delete``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent after an object (domain, contact, nsset, keyset) is deleted,
   to the email contact of the deleted object
 * passed parameters:
@@ -393,6 +409,7 @@ Email type: ``techcheck``
 
 Email type: ``request_block``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent to the domain owner / the contact / technical contacts of an object
   after a :term:`public request` for object (un)blocking has been carried out
 * common passed parameters:
@@ -409,6 +426,7 @@ Email type: ``request_block``
 
 Email type: ``annual_contact_reminder``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent to a contact in response to the upcoming contact registration anniversary
   as a reminder to check accuracy of contact information in the registry
 * common passed parameters:
@@ -444,6 +462,7 @@ Email type: ``annual_contact_reminder``
 
 Email type: ``merge_contacts_auto``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent to the contact after an automatic merger of its duplicates
 * common passed parameters:
   :ref:`defaults.* <csparams-defaults>`
@@ -469,6 +488,7 @@ Email type: ``merge_contacts_auto``
 
 Email type: ``akm_candidate_state_ok``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent after valid CDNSKEY records are discovered on a insecured domain
   and the acceptance period is initiated,
   to technical contacts of the domain's nsset
@@ -492,6 +512,7 @@ Email type: ``akm_candidate_state_ok``
 
 Email type: ``akm_candidate_state_ko``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent when the acceptance period is broken by absence of the CDNSKEY records
   or by discovery of changed records, to technical contacts of the domain's nsset
 * common passed parameters:
@@ -504,6 +525,7 @@ Email type: ``akm_candidate_state_ko``
 
 Email type: ``akm_keyset_update``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent when an auto-managed keyset is updated from new CDNSKEY records,
   to technical contacts of the domain's nsset
 * common passed parameters:
@@ -519,6 +541,7 @@ Email type: ``akm_keyset_update``
 
 Email type: ``record_statement``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * sent in response to a request for a registry record statement about an object,
   to the email of the domain owner / the contact / technical contacts
 * common passed parameters:
@@ -560,6 +583,7 @@ Email type: ``sendpersonalinfo_pif``
 
 Description of parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
 This section contains description of parameters which are common to several
 email types.
 
@@ -567,6 +591,7 @@ email types.
 
 Registry information (defaults)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 These parameters are passed to all email types and can be found and adapted
 in the table ``mail_defaults``.
 
