@@ -40,10 +40,11 @@ Install all the packages from the appropriate list.
 Download and unpack
 ^^^^^^^^^^^^^^^^^^^
 
-We publish a list of GitHub-generated tarballs on our website.
+We publish a list of GitHub-generated tarballs `on the website
+<https://fred.nic.cz/page/3612/get-fred/>`_.
 
 You may use the `latest version list <https://fred.nic.cz/files/fred/fred-sources-list-latest.txt>`_
-or an archived version list, such as https://fred.nic.cz/files/fred/fred-sources-list-2.36.txt.
+or an archived version list (see the website for archived versions).
 
 .. code-block:: bash
 
