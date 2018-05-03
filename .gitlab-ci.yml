@@ -25,7 +25,7 @@ deploy_test:
 
 build:
   stage: build
-  image: cznic/sphinx_runner:v19
+  image: cznic/sphinx_runner:v20
   script:
       - source /usr/local/ve/bin/activate
       - mkdir _build
