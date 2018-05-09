@@ -138,3 +138,7 @@ Overview of changes in documentation from previous editions.
      - :doc:`/AdminManual/Installation/SourceTar`
      - Upgraded installation procedure to use source from GitHub,
        new signing key for secure apt
+   * -
+     - **1.2**
+     - :doc:`/ReleaseNotes/index`
+     - Added release notes for the version 2.36.1; upgraded to a newer Sphinx

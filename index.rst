@@ -6,7 +6,7 @@
 FRED |version| Documentation
 ============================
 
-.. rubric:: :doc:`Edition: 1.1 <RecordOfChanges>`
+.. rubric:: :doc:`Edition: 1.2 <RecordOfChanges>`
 
 This documentation aids users of the **Free Registry for ENUM and Domains**,
 the domain name registry software developed by `CZ.NIC <http://www.nic.cz>`_
