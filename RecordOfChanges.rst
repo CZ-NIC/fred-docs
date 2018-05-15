@@ -142,3 +142,43 @@ Overview of changes in documentation from previous editions.
      - **1.2**
      - :doc:`/ReleaseNotes/index`
      - Added release notes for the version 2.36.1; upgraded to a newer Sphinx
+   * - **2.37**
+     - **1.0**
+     - :doc:`/ReleaseNotes/index`
+     - Added release notes for FRED 2.37.0
+   * -
+     -
+     - :doc:`/Features/General/index`
+     - Added GDPR compliance as a new FRED feature
+   * -
+     -
+     - :doc:`/EPPReference/PoliciesRules`
+     - Added a new chapter
+   * -
+     -
+     - :doc:`/EPPReference/CommandStructure/Create/CreateContact`,
+       :doc:`/EPPReference/CommandStructure/Update/UpdateContact`,
+       :doc:`/EPPReference/CommandStructure/Info/InfoContact`
+     - Improved explanations about information disclosure
+   * -
+     -
+     - :ref:`epp-poll-type-update`
+     - Added a poll-message type about contact update
+   * -
+     -
+     - :doc:`/AdminManual/AdministrativeTasks/Objects`
+     - Added a new public-request type
+   * -
+     -
+     - :ref:`cronjob-public-requests`
+     - Added a cronjob to process public requests for personal information
+   * -
+     -
+     - :doc:`/AdminManual/Appendixes/CSParams/index`
+     - Added a new email template for sending personal information
+
+..
+   * -
+     -
+     - :doc:`/ReleaseNotes/Upgrade-2-37`
+     - Considerations before upgrading -- to be confirmed
