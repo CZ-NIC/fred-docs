@@ -48,8 +48,8 @@ Glossary of Terms
 
    Public request
       This is a request by a registered contact that is submitted directly
-      to the Registry, e.g. a request for a transfer password (authinfo)
-      or an enhanced security setting (a Registry lock).
+      to the Registry, e.g. a request for a transfer password (authinfo),
+      personal information, or an enhanced security setting (a Registry lock).
 
       For example: `request to block an object in the Czech Registry
       <https://www.nic.cz/whois/block-object/?language=en>`_

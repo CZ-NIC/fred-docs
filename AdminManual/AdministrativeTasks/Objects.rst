@@ -269,8 +269,8 @@ Also see the program ``--help`` for more options.
 
 Resolve a public request
 ^^^^^^^^^^^^^^^^^^^^^^^^
-The public has the option to request a transfer password or turn on/off
-enhanced security of their objects in the Registry database.
+The public has the option to request a transfer password, personal data,
+or turn on/off enhanced security of their objects in the Registry database.
 
 The form for request input and more details about the public requests can be
 found on the default location: http://localhost/whois/publicrequest.py
@@ -282,14 +282,15 @@ The types of public requests:
 * Unblocking of transfer
 * Blocking of all changes
 * Unblocking of all changes
+* Sending personal data
 
 Procedure to resolve a public request:
 
 #. In the WebAdmin, select :menuselection:`Logs --> PublicRequests`.
 #. :ref:`Search <FRED-Admin-AdminTasks-Search>` for unresolved requests
-   (use the field *Status*: ``PRS_NEW``).
+   (use the field *Status* with the value ``PRS_NEW``).
 #. View request's details.
-#. If the request is justified, click the :guilabel:`Accept and send` button
+#. If the request has been authorized, click the :guilabel:`Accept and send` button
    to answer it, otherwise click :guilabel:`Invalidate and close`.
    In both cases, you will be prompted for an extra confirmation by retyping
    a number. Type it and hit :guilabel:`OK`.
