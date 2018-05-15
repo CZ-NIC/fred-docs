@@ -267,6 +267,8 @@ all *source contacts* into the best *destination contact*.
 The ``--dry_run`` option is available to preview what the command will do.
 Also see the program ``--help`` for more options.
 
+.. _resolve-public-request:
+
 Resolve a public request
 ^^^^^^^^^^^^^^^^^^^^^^^^
 The public has the option to request a transfer password, personal data,
