@@ -237,6 +237,42 @@ Communication
 * SMS Texts :sup:`CZ-specific`
 * Registered Letters :sup:`CZ-specific`
 
+.. _cronjob-public-requests:
+
+Processing public requests
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. Note:: This procedure processes only :term:`public request`\ s for personal information.
+
+**Task command**::
+
+   /usr/sbin/fred-admin --process_public_requests [--types <list of public request types>]
+
+**Typically launched**: every 5 minutes
+
+**Required FRED components**:
+
+* ``pyfred``: Mailer module – email generation
+* ``fred-logd``: Logger interface
+
+**Other required components**: none
+
+**Task activities**:
+
+* generates emails in response to :ref:`resolved <resolve-public-request>`
+  public requests of types:
+
+   * ``personalinfo_auto_pif`` – requests to send personal info to an email in the registry
+     (authorized and resolved automatically),
+   * ``personalinfo_email_pif`` –  requests to send personal info to another email,
+     authorized with an email signed with a digital signature
+     (:ref:`resolved manually <resolve-public-request>`),
+   * ``personalinfo_post_pif`` – requests to send personal info to another email,
+     authorized with a letter containing a notarized signature
+     (:ref:`resolved manually <resolve-public-request>`).
+
+  If the ``--types`` argument is omitted, all of the aforementioned types are processed.
+
 Registrars
 ----------
 
