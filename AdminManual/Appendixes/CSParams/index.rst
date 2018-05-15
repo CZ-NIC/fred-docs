@@ -539,6 +539,34 @@ Email type: ``record_statement``
    * ``request_month`` – the month of the request date,
    * ``request_year`` – the year of the request date.
 
+.. _email-type-personal-info:
+
+Email type: ``sendpersonalinfo_pif``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* sent in response to a :term:`public request` for personal information in a contact,
+  to the email of the contact
+* common passed parameters: :ref:`defaults.* <csparams-defaults>`,
+  :ref:`handle <csparams-handle>`
+* additional parameters:
+   * ``name`` – name (personal),
+   * ``organization`` – name of an organization,
+   * ``address`` – the main (permanent) address,
+   * ``mailing_address`` – mailing address,
+   * ``billing_address`` – billing address,
+   * ``shipping_address_1`` – 1\ :sup:`st` shipping address,
+   * ``shipping_address_2`` – 2\ :sup:`nd` shipping address,
+   * ``shipping_address_3`` – 3\ :sup:`rd` shipping address,
+   * ``ident_type`` – identity document type,
+   * ``ident_value`` – identity document number,
+   * ``dic`` – VAT payer number,
+   * ``telephone`` – phone number,
+   * ``fax`` – fax number,
+   * ``email`` – the main email address,
+   * ``notify_email`` – the notification email address,
+   * ``registrar_name`` – the name of the designated registrar,
+   * ``registrar_url`` – the website of the designated registrar.
+
 .. _csparams-description:
 
 Description of parameters
