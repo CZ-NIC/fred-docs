@@ -47,7 +47,7 @@ The server disclosure policy defines the default disclosure preference (flag)
 for each attribute and also says which attribute's disclosure preference is adjustable
 by contacts.
 
-The server's default disclosure preference is to **hide all** personal data **except**
+The server's default disclosure preference is to **hide all** personal information **except**
 *name* and *organization*, which are always visible, and *address*, which
 is forced visible on creation, but is hidden later when certain conditions are met
 (see `Hiding address`_). Visibility of other contact attributes can be adjusted

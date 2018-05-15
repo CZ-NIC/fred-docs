@@ -271,7 +271,7 @@ Also see the program ``--help`` for more options.
 
 Resolve a public request
 ^^^^^^^^^^^^^^^^^^^^^^^^
-The public has the option to request a transfer password, personal data,
+The public has the option to request a transfer password, personal information,
 or turn on/off enhanced security of their objects in the Registry database.
 
 The form for request input and more details about the public requests can be
@@ -284,7 +284,7 @@ The types of public requests:
 * Unblocking of transfer
 * Blocking of all changes
 * Unblocking of all changes
-* Sending personal data
+* Sending personal information
 
 Procedure to resolve a public request:
 

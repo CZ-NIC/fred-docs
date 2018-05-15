@@ -14,7 +14,7 @@ The second version is a `web WHOIS application <https://www.nic.cz/whois/>`_.
 The web version supports hyperlinked and more detailed results.
 There is even a possibility to enable CAPTCHA protection against robots.
 
-Both versions contain the security feature of hiding personal data of contacts.
+Both versions contain the security feature of hiding personal information of contacts.
 
 Additionally, the FRED contains a prototype implementation of the RDAP protocol
 which allows client applications to obtain results in a more recent,

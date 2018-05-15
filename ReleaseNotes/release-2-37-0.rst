@@ -12,7 +12,7 @@ Version 2.37.0
       * ``contact:info`` response displays disclosure settings with ``flag="1"``
         (in reverse to previous versions)
       * affected also behaviour of ``contact:create`` and ``contact:update``
-   * added new :term:`public request` types (requests for personal data)
+   * added new :term:`public request` types (requests for personal information)
      with a new web form, fred-admin procedure, filtering and resolving in Daphne,
      and an email template
    * provided utility ``fred-disclose-flags-update`` for a custom reset
