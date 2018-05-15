@@ -300,15 +300,19 @@ and contains:
   as :term:`domain:trIDStringType`,
 * ``<*:oldData>`` **(1)** – data before the update, the content is presented
   as an ``infData`` element (the same as in response to the ``info`` command:
-  :ref:`domain:infData <domain-infdata>`, :ref:`nsset:infData <nsset-infdata>`,
+  :ref:`domain:infData <domain-infdata>`,
+  :ref:`contact:infData <contact-infdata>`,
+  :ref:`nsset:infData <nsset-infdata>`,
   :ref:`keyset:infData <keyset-infdata>`),
 * ``<*:newData>`` **(1)** – data after the update, the content is presented
   as an ``infData`` element (the same as in response to the ``info`` command:
-  :ref:`domain:infData <domain-infdata>`, :ref:`nsset:infData <nsset-infdata>`,
+  :ref:`domain:infData <domain-infdata>`,
+  :ref:`contact:infData <contact-infdata>`,
+  :ref:`nsset:infData <nsset-infdata>`,
   :ref:`keyset:infData <keyset-infdata>`).
 
 This message type appears in the following object namespaces: ``domain``,
-``nsset``, ``keyset``.
+``contact``, ``nsset``, ``keyset``.
 
 .. code-block:: xml
    :caption: Example of a notification of an updated object
