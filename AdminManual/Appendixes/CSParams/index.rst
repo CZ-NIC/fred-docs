@@ -544,14 +544,14 @@ Email type: ``record_statement``
 Email type: ``sendpersonalinfo_pif``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* sent in response to a :term:`public request` for personal information in a contact,
-  to the email of the contact
+* sent in response to a resolved :term:`public request` for personal information
+  of a contact, to the email selected within the request
 * common passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`handle <csparams-handle>`
 * additional parameters:
    * ``name`` – name (personal),
    * ``organization`` – name of an organization,
-   * ``address`` – the main (permanent) address,
+   * ``address`` – main (permanent) address,
    * ``mailing_address`` – mailing address,
    * ``billing_address`` – billing address,
    * ``shipping_address_1`` – 1\ :sup:`st` shipping address,
@@ -559,13 +559,13 @@ Email type: ``sendpersonalinfo_pif``
    * ``shipping_address_3`` – 3\ :sup:`rd` shipping address,
    * ``ident_type`` – identity document type,
    * ``ident_value`` – identity document number,
-   * ``dic`` – VAT payer number,
+   * ``dic`` – :term:`VAT`-payer number,
    * ``telephone`` – phone number,
    * ``fax`` – fax number,
-   * ``email`` – the main email address,
-   * ``notify_email`` – the notification email address,
-   * ``registrar_name`` – the name of the designated registrar,
-   * ``registrar_url`` – the website of the designated registrar.
+   * ``email`` – main email address,
+   * ``notify_email`` – notification email address,
+   * ``registrar_name`` – name of the designated registrar,
+   * ``registrar_url`` – website of the designated registrar.
 
 .. _csparams-description:
 

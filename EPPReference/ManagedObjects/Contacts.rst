@@ -12,7 +12,8 @@ Schema: contact-1.6.2.xsd
 .. Note:: Contact mapping is based on the standard :rfc:`5733`
    but implemented with the following modifications:
 
-   * addition of notification email, VAT identification number, personal identification number and the type thereof,
+   * addition of notification email, VAT-payer identification number, identity-document
+     number and the type thereof,
    * replacement of two postal addresses with just one postal address.
 
 .. _mng-contact-attr:
@@ -27,16 +28,17 @@ the following attributes:
    The contact handle. See :ref:`mngobj-handle-syntax`.
 
 ``postalInfo``
-   Information for the purpose of ordinary mailing, consisting of:
+   Information for postal purposes, consisting of:
 
    ``name``
-      The contact name. (personal or company)
+      The contact name (person or company).
 
    ``org``
-      The name of an organization.
+      The name of an organization (use with a company). You may leave this empty
+      to signify a natural person.
 
    ``addr``
-      The postal address, consisting of:
+      The permanent address / company seat, consisting of:
 
       ``street``
          1–3 street line(s).
@@ -78,8 +80,8 @@ the following attributes:
    .. Note:: The contact handle, name and organization are always disclosed.
 
 ``mailing``/``addr`` :sup:`extension`
-   An additional :ref:`mailing address <mng-contact-ext>` which consists
-   of the same items as the postal address (``postalInfo``/``addr``).
+   An additional :ref:`mailing address <mng-contact-ext>`, which consists
+   of the same items as the permanent address (``postalInfo``/``addr``).
 
 .. _mng-contact-stat:
 
