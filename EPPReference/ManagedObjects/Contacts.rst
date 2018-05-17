@@ -5,6 +5,7 @@ Contacts
 --------
 
 A contact contains information which represents a person or a company.
+See also :doc:`the concept of contacts </Concepts/Contacts>`.
 
 Namespace: \http://www.nic.cz/xml/epp/contact-1.6 |br|
 Schema: contact-1.6.2.xsd
