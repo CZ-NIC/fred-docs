@@ -7,6 +7,9 @@ Contacts
 Contacts are a type of :term:`registrable object`\ s which represents a natural
 or legal person in the Registry.
 
+The FRED understands a contact without a value in the *organization* attribute
+as a natural person for the purpose of disclosure.
+
 See also :doc:`attributes of contacts (EPP Reference) </EPPReference/ManagedObjects/Contacts>`
 for a description of contact details.
 
