@@ -15,14 +15,16 @@ replaced with the *destination contact* in every linked object.
 The *source contact*\ (s) is (are) then deleted from the Registry.
 
 The Registry operator may choose a pair of duplicate contacts themself and
-merge just the two them if the two contacts are :ref:`merge-able <mergeable-contacts>`.
+merge just the two of them if the two contacts are :ref:`merge-able <mergeable-contacts>`.
 (See the task :ref:`contact-merge-manual`.)
 
 The other option is to use the automatic merge procedure which can select
 a whole set of duplicate contacts automatically and merge them
-into a single *destination contact*. The *destination contact* is filtered
-from the set using :ref:`prioritized criteria <merge-auto-criteria>`.
-(See the task :ref:`contact-merge-auto`.)
+into a single *destination contact*. The *destination contact* is determined
+by filtering the set with various criteria (see :ref:`merge-auto-criteria`),
+which make the outcome the best possible choice. The other contacts in the set
+are treated as *source contacts*.
+(This task can be set as a :ref:`periodic task <cronjob-contact-merger>`.)
 
 In both cases, the contacts must be managed by the same registrar, however,
 they are replaced in linked objects even if the linked objects have different
