@@ -176,9 +176,19 @@ Overview of changes in documentation from previous editions.
      -
      - :doc:`/AdminManual/Appendixes/CSParams/index`
      - Added a new email template for sending personal information
-
-..
+   * -
+     - **1.1**
+     - :doc:`/ReleaseNotes/index`
+     - Added release notes for the version 2.37.1
    * -
      -
      - :doc:`/ReleaseNotes/Upgrade-2-37`
-     - Considerations before upgrading -- to be confirmed
+     - Added considerations before upgrading
+   * -
+     -
+     - :doc:`/Concepts/ContactMerger`
+     - Corrected the definition of identical contacts
+   * -
+     -
+     - :ref:`cronjob-contact-merger`
+     - Added a cronjob
