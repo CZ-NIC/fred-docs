@@ -40,7 +40,7 @@ To initialize the Registry, you need to perform these tasks:
    * set authentication data for registrar(s),
    * grant registrars access to the zone(s),
 
-* prepare the accounting subsystem:
+* prepare billing:
 
    * create a price list for operations,
    * define the parameters for invoice numbering,
@@ -205,6 +205,8 @@ Both types of registrars are prepared in the same way:
    registrar will do. However, if it is the billing and invoicing subsystem
    you want to work with, we recommend adding a (testing) common registrar, too.
 
+.. _reginit-newreg:
+
 Creating a registrar
 ^^^^^^^^^^^^^^^^^^^^
 .. code-block:: bash
@@ -285,11 +287,12 @@ This command grants a registrar permissions to manage objects in a specified z
 * ``--zone_fqdn`` (*) – name of a zone the registrar gains access to
 * ``--from_date`` – date since when the access is allowed – default: today
 
+.. _FRED-Admin-reginit-billing:
 
-Preparing the accounting subsystem
-----------------------------------
+Preparing billing
+-----------------
 
-The accounting subsystem allows you to set prices for operations,
+The billing subsystem allows you to set prices for operations,
 charge registrars for these operations, keep track of their credit
 and create bills (invoices) for them.
 
@@ -306,6 +309,7 @@ Otherwise you need to prepare the subsystem for use by doing these tasks:
 * set a custom VAT tax rate,
 * assign initial credit to common registrars.
 
+.. _reginit-price-list:
 
 Creating price list
 ^^^^^^^^^^^^^^^^^^^
@@ -324,9 +328,6 @@ Chargeable operations include:
 * ``RenewDomain`` – domain renewal (renewal per unit, corresponding
   EPP commands: create_domain, renew_domain), pricing period:
   per unit (:ref:`ex_period_min <FRED-Admin-reginit-zone-add>`)
-
-.. QUESTION RenewDomain - per unit or hard-coded per year?
-
 * ``GeneralEppOperation`` – operation over request-usage limit (charged only
   after all uncharged requests were exhausted), pricing period: per operation
 
@@ -375,6 +376,7 @@ If you don't want to charge for an operation, just set the price to zero.
    ``CreateDomain + RenewDomain`` whereas a renewal of an existing domain
    is billed only as one operation ``RenewDomain``.
 
+.. _reginit-invoice-numbering:
 
 Invoice numbering
 ^^^^^^^^^^^^^^^^^
@@ -439,6 +441,7 @@ Defining custom initial numbers
 This command adds a custom initial number (prefix) for the given combination
 of a year, zone and invoice type (0 – advance, 1 – account).
 
+.. _reginit-vat:
 
 Value-added tax
 ^^^^^^^^^^^^^^^
@@ -452,8 +455,8 @@ The percentage (PERC) is usually given by the law, e.g. 21 %. So is the period
 of validity. The coefficient (COEF) is the officially correct way
 (in the Czech Republic) to figure out the tax basis and therefore it is used
 in calculations. You can calculate the coefficient with the following formula:
-``PERC / (PERC + 100) = COEF`` and the result is then rounded to four decimal
-places, e.g. for 21 % VAT: 21 / (21 + 100) = 0.1736.
+:code:`PERC / (PERC + 100) = COEF` and the result is then rounded to four decimal
+places, e.g. for 21 % VAT: :code:`21 / (21 + 100) = 0.1736`.
 
 Since there is no command to change the VAT rate, you must run an SQL script
 directly:
@@ -463,7 +466,7 @@ directly:
    $ psql -U fred
    fred=> begin;
    update price_vat set valid_to = '2014-12-31 23:00:00' where valid_to is null;
-   insert into price_vat (koef,vat) values (0.1736,21) ;
+   insert into price_vat (koef, vat) values (0.1736, 21) ;
    commit ;
 
 This SQL script will:
@@ -471,6 +474,7 @@ This SQL script will:
 * end the validity of the last rate to the specified date time in UTC,
 * add the new coefficient and the new percentage.
 
+.. _reginit-credit:
 
 Assigning credit to a registrar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

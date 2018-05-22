@@ -29,6 +29,8 @@ notifications and exported PDFs.
    :local:
    :backlinks: none
 
+.. _custom-email:
+
 Email templates
 ---------------
 Email templates are located in the database tables :file:`mail_type`
@@ -50,6 +52,8 @@ For a detailed reference of the passed parameters according to email type see
    Header - table: mail_header_defaults ?
    Footer - table: mail_footer ?
    (cs) defaults.* - table:mail_defaults
+
+.. _custom-pdf:
 
 PDF templates
 ----------------

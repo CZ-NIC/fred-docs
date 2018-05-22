@@ -51,6 +51,8 @@ for command parameters.)
 * Groups: ``sudo fred-admin --registrar_into_group <parameters>``
 * Certifications: ``sudo fred-admin --registrar_create_certification <parameters>``
 
+.. _daphne-task-registrar-edit:
+
 Edit registrar's details
 ^^^^^^^^^^^^^^^^^^^^^^^^
 To modify registrar's information, use the WebAdmin:
@@ -132,6 +134,8 @@ the :guilabel:`Delete` checkbox and click :guilabel:`Save`.
 
 .. Note:: The WebAdmin lets you remove only empty groups.
 
+.. _daphne-task-assign-payment:
+
 Assign a payment to a registrar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -153,7 +157,7 @@ with a registrar automatically, you can do so manually in the WebAdmin:
    Type it and hit :guilabel:`OK`.
 
 #. The pairing is saved. (If the payment was sufficient, registrar's credit
-   is increased.)
+   has been increased.)
 
 .. NOTE The type of payment must correspond with an appropriate destination
    account if you have various accounts for various purposes. Where is this set?
