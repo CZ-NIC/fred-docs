@@ -455,8 +455,11 @@ Email type: ``annual_contact_reminder``
    * ``notify_email`` – notification email address,
    * ``registrar_name`` – name of the :term:`designated registrar`,
    * ``registrar_url`` – website address of the :term:`designated registrar`,
-   * ``registrar_memo_cz`` – additional information provided by the registrar (Czech variant),
-   * ``registrar_memo_en`` – additional information provided by the registrar (English variant),
+   * ``registrar_memo_cz`` – a memo provided by the registrar (Czech/local variant),
+   * ``registrar_memo_en`` – a memo provided by the registrar (English variant),
+
+     .. Note:: The registrar memo is :ref:`configurable <config-contact-reminder>`.
+
    * ``domains`` – list of domains where the contact is the owner,
    * ``nssets`` – list of nssets where the contact is a technical contact,
    * ``keysets`` – list of keysets where the contact is a technical contact.

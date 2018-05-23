@@ -24,8 +24,8 @@ Configuration
 This chapter contains an overview of executable files that are a part of the FRED
 and the location and names of their default configuration files.
 
-There are also some :ref:`configurable database values <config-db>` related
-to the rules of registration that you should consider revising.
+There are also some :ref:`configurable database values <config-db>`,
+which you should consider revising.
 
 .. Note:: The descriptions of configurable values are contained in the default
    configuration files.
@@ -350,7 +350,7 @@ Domain name format validation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The implemented rules for domain-name formatting are enumerated in the table
-``enum_domain_name_validation_checker``. The Registry operator can turn them on or off
+\ ``enum_domain_name_validation_checker``. The Registry operator can turn them on or off
 by adding or removing an association in the table ``zone_domain_name_validation_checker_map``,
 such as:
 
@@ -447,7 +447,7 @@ The syntax for these patterns is `POSIX regular expressions
 <https://www.postgresql.org/docs/current/static/functions-matching.html#POSIX-SYNTAX-DETAILS>`_
 and pattern matching is case insensitive (the ``~*`` operator).
 
-Temporal validity (``valid_from``–``valid_to``) must be specified for each pattern,
+Temporal validity (\ ``valid_from``–\ ``valid_to``) must be specified for each pattern,
 however the ``valid_to`` datetime can be left empty and then the validity is unbounded
 (the pattern is applicable forever).
 
@@ -460,3 +460,24 @@ The patterns can be used in various ways:
 * or any other that regular expressions can express.
 
 For a domain name to be valid, it must not match any pattern that is currently applicable.
+
+.. _config-contact-reminder:
+
+Adding a registrar memo to annual reminders
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The :ref:`email template <email-template-contact-reminder>`
+for :ref:`annual reminders of contacts <contact-reminder>`
+allows to include a memo from the designated registrar in the email
+and a custom email address to which the contact can reply.
+
+The Registry operator may insert this information
+into the ``reminder_registrar_parameter`` table:
+
+* ``registrar_id`` – identify the registrar,
+* ``template_memo`` – enter the memo in plain text;
+  use the ``~@~`` sequence to separate language variants
+  (local language first, English second); whitespace is preserved,
+* ``reply_to`` – enter an email address for the Reply-To header.
+
+This must be done manually with an SQL insert.
