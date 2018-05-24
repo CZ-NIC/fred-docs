@@ -67,13 +67,14 @@ script to install software required for the operation of the FRED.
    .. code-block:: bash
 
       add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe multiverse"
+      add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc)-updates universe multiverse"
       add-apt-repository "http://archive.nic.cz/ubuntu/"
 
 #. Add the CZ.NIC signing key to ``apt`` and update ``apt`` index
 
    .. code-block:: bash
 
-      apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F20C079E020ADBB4
+      apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1C0200016A9AC5C6
       apt-get update
 
 #. Install the Postfix mail server
@@ -82,7 +83,7 @@ script to install software required for the operation of the FRED.
 
       apt-get install postfix
 
-3. Install the FRED package with all dependencies
+#. Install the FRED package
 
    .. code-block:: bash
 
@@ -99,27 +100,22 @@ script to install software required for the operation of the FRED.
 
       su - postgres -c "/usr/sbin/fred-dbmanager install"
 
-#. Enable the FRED sites in Apache and reload configuration
+#. Enable FRED sites in UWSGI
+
+   .. code-block:: bash
+
+      ln -s /etc/uwsgi/apps-available/fred-rdap.ini /etc/uwsgi/apps-enabled/
+      ln -s /etc/uwsgi/apps-available/fred-webwhois.ini /etc/uwsgi/apps-enabled/
+      service uwsgi restart
+
+#. Enable FRED sites in Apache
 
    .. code-block:: bash
 
       a2ensite 02-fred-mod-eppd-apache.conf
       a2ensite 02-fred-mod-whoisd-apache.conf
-      a2ensite 03-fred-whois.conf
-      a2ensite rdap.conf
-      service apache2 reload
-
-#. Start the FRED services
-
-   .. code-block:: bash
-
-      service fred-rifd start
-      service fred-adifd start
-      service fred-pifd start
-      service fred-logd start
-      service fred-msgd start
-      service fred-pyfred start
-      service fred-webadmin start
+      a2enconf fred-rdap.conf
+      a2enconf fred-webwhois.conf
 
 #. Replace ``mpm-event`` with ``mpm-prefork`` in Apache and restart
 
@@ -131,10 +127,22 @@ script to install software required for the operation of the FRED.
 
    .. code-block:: bash
 
-      apt-get install apache2-mpm-prefork # only 14.04
       a2dismod mpm_event
       a2enmod mpm_prefork
       service apache2 restart
+
+#. Start the FRED services
+
+   .. code-block:: bash
+
+      service fred-rifd start
+      service fred-adifd start
+      service fred-pifd start
+      service fred-logd start
+      service fred-msgd start
+      service fred-rsifd start
+      service fred-pyfred start
+      service fred-webadmin start
 
 #. Finished. You can :ref:`test the installation <FRED-Admin-Install-Test>` now.
 
