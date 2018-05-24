@@ -119,7 +119,7 @@ script to install software required for the operation of the FRED.
 
 #. Replace ``mpm-event`` with ``mpm-prefork`` in Apache and restart
 
-   .. Note:: This is a workaround for Ubuntu 14.04 and 16.04.
+   .. Note:: This is a workaround for Ubuntu 16.04.
 
       The ``mod-whoisd`` module is not compatible with the ``mpm-event``
       Apache scheme that is installed by default, so it must be
