@@ -192,3 +192,11 @@ Overview of changes in documentation from previous editions.
      -
      - :ref:`cronjob-contact-merger`
      - Added a cronjob
+   * -
+     - **1.2**
+     - :doc:`/AdminManual/Installation/SystemReqs`
+     - Discontinued support for Ubuntu 14
+   * -
+     -
+     - :doc:`/AdminManual/Installation/BinsUbuntu`
+     - Updated the installation script and its description
