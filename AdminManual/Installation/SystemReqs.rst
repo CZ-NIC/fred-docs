@@ -28,9 +28,9 @@ To deploy binaries, you must have installed one of these **operating systems**:
 * RHEL 7
 * CentOS 7
 
-To compile sources from tarballs, you can use any Linux distribution of your
-choice in theory but the compilation/installation procedure
-was tested only on Ubuntu.
+To compile sources from tarballs, you may try to use any Linux distribution
+of your choice, but we tested the compilation/installation procedure
+only on Ubuntu.
 
 
 .. _system-reqs-aux:
