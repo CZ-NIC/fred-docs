@@ -32,9 +32,6 @@ To compile sources from tarballs, you can use any Linux distribution of your
 choice in theory but the compilation/installation procedure
 was tested only on Ubuntu.
 
-You can also compile sources from the provided RPM packages on any system
-that contains the RPM Package Manager.
-
 
 .. _system-reqs-aux:
 
