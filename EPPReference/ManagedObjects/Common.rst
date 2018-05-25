@@ -50,33 +50,30 @@ Domain names and hostnames
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A domain name being registered or a name-server hostname being assigned to an nsset
-must be in the :term:`FQDN` form.
+must be in the :term:`FQDN` form and must comply with restrictions as follows.
 
-A domain name or a hostname must comply with the following syntax:
+.. rubric:: Regular domain names (e.g. in the ``cz`` zone)
 
-* it may contain only characters [a-z,A-Z,0-9], hyphen ``-`` (`U+002D
-  <http://www.fileformat.info/info/unicode/char/2d/index.htm>`_),
-  and dot ``.`` as the delimiter of labels,
+* are composed of 2 labels separated with a period ``.``,
+* the first label
+   * contains only upper-case and lower-case letters of the English alphabet,
+     digits (characters 0 through 9), and ``-`` [#hyph]_ characters,
+   * does not begin nor end with the ``-`` [#hyph]_ character,
+   * does not contain two or more consecutive ``-`` [#hyph]_ characters,
+   * has the length of 1–63 characters,
+* the second label is a TLD zone (e.g. ``cz``),
+* may end with a period.
 
-  .. Note:: The capitalization of letters is irrelevant, the server converts
-     upper-case letters to their lower-case variant.
+The register is case-insensitive and presents the domain names transformed to lower case.
 
-* it may end with a dot,
-* its labels must not begin nor end with a hyphen ``-``,
-* its labels must have the length of 1–63 characters,
-* its total length (including dot delimiters) must not exceed 255 characters.
+.. rubric:: ENUM domain names (e.g. in the ``0.2.4.e164.arpa`` zone)
 
-Labels of ENUM domains must be single decimal digits.
+* are composed of 6–15 labels separated with a period ``.``,
+* each label preceeding the zone contains exactly one digit (characters 0 through 9),
+* ends with a Tier1 ENUM zone (e.g. ``0.2.4.e164.arpa``),
+* may end with a period.
 
-A domain name must belong to one of the zones which are managed by the Registry,
-that is, it must end with the FQDN of one of those zones.
-
-Additional CZ.NIC rules for domain names:
-
-* their labels must not contain two consecutive hyphens ``--`` (IDN not allowed),
-* the number of allowed labels:
-   * 2 labels in a FQDN in the case of the ``.cz`` zone, and
-   * 6–15 labels in a FQDN in the case of the ``.0.2.4.e164.arpa`` ENUM zone.
+The register is case-insensitive and presents the domain names transformed to lower case.
 
 .. Note::
 
@@ -85,22 +82,38 @@ Additional CZ.NIC rules for domain names:
    a document that declares the rules of registrar communication with the Registry,
    including a definition of valid domain names.
 
+.. rubric:: Hostnames
+
+* are composed of labels separated with periods ``.``,
+* labels
+   * contain only upper-case and lower-case letters of the English alphabet,
+     digits (characters 0 through 9), and ``-`` [#hyph]_ characters,
+   * do not begin nor end with the ``-`` [#hyph]_ character,
+   * have the length of 1–63 characters,
+* may end with a period,
+* must not exceed the total length of 255 characters
+  (including delimiter periods and the final period).
+
 .. _mngobj-handle-syntax:
 
 Handles of contacts, nssets and keysets
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A handle may contain only characters [a-z,A-Z,0-9] and hyphen ``-`` (`U+002D
-<http://www.fileformat.info/info/unicode/char/2d/index.htm>`_) which must
-not appear at the beginning or the end of the handle.
+Handles of contacts, name-server sets and key sets:
 
-.. Note:: The capitalization of letters is irrelevant, the server converts
-   lower-case letters to their upper-case variant.
+* contain only upper-case and/or lower-case letters of the English alphabet,
+  digits (characters 0 through 9), and ``-`` [#hyph]_ characters,
+* do not begin nor end with the \ ``-`` [#hyph]_ character,
+* do not exceed the length of 30 [#length]_ characters.
 
-The length of a handle that is an argument to a ``create`` command, must not
-exceed 30 characters (:term:`fredcom:objIDCreateType`), in other cases,
-a handle may be up to 63 characters long (:term:`fredcom:objIDType`
-or :term:`fredcom:objIDChgType`).
+The register is case-insensitive and presents the identifiers transformed to upper case.
+
+.. [#hyph] the character of the basic ASCII set for hyphen/minus
+
+.. [#length] The length of a handle that is an argument to a ``create`` command,
+   must not exceed 30 characters (:term:`fredcom:objIDCreateType`),
+   in other cases, a handle may be up to 63 characters long
+   (:term:`fredcom:objIDType` or :term:`fredcom:objIDChgType`).
 
 .. Note::
 
