@@ -94,7 +94,7 @@ and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain th
 .. code-block:: shell
    :caption: FRED-client equivalent
 
-   > update_contact CID-MYOWN (() +420.222333444 NULL NULL NULL (n voice))
+   > update_contact CID-MYOWN (() +420.222333444 NULL NULL NULL (y voice))
 
 .. index:: Ⓔmailing, Ⓔaddr
 

@@ -107,7 +107,7 @@ the following child elements:
 .. code-block:: shell
    :caption: FRED-client equivalent
 
-   > create_contact CID-MYCONTACT 'John Doe' john@doe.cz 'Street 123' City 12300 CZ NULL 'Company X Ltd.' trnpwd +420.222123456 NULL (y (voice, email)) 1312112029 () notify-john@doe.cz
+   > create_contact CID-MYCONTACT 'John Doe' john@doe.cz 'Street 123' City 12300 CZ NULL 'Company X Ltd.' trnpwd +420.222123456 NULL (y (fax, vat, ident, notify_email)) 1312112029 () notify-john@doe.cz
 
 .. index:: Ⓔmailing, Ⓔaddr
 
