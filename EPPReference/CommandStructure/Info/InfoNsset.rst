@@ -83,6 +83,9 @@ and it contains the following child elements:
 * ``<nsset:upDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last update as :term:`xs:dateTime`,
 * ``<nsset:trDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last transfer as :term:`xs:dateTime`,
 * ``<nsset:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
+
+  .. Note:: Authinfo is displayed only to the :term:`designated registrar`.
+
 * ``<nsset:ns>`` **(0..10)** – a nameserver given by:
    * ``<nsset:name>`` **(1)** – a nameserver hostname as :term:`eppcom:labelType`,
    * ``<nsset:addr>`` **(0..n)** – a namesever's IP address as :term:`nsset:addrStringType`,

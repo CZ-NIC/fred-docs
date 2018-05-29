@@ -97,6 +97,9 @@ and it contains the following child elements:
 * ``<contact:fax>`` **(0..1)** – the fax number as :term:`contact:e164StringType`,
 * ``<contact:email>`` **(0..1)** – a comma-separated list of email addresses as :term:`contact:emailCommaListType`,
 * ``<contact:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
+
+  .. Note:: Authinfo is displayed only to the :term:`designated registrar`.
+
 * ``<contact:clID>`` **(1)** – the designated registrar's handle as :term:`eppcom:clIDType`,
 * ``<contact:crID>`` **(1)** – the handle of the registrar who created this contact as :term:`eppcom:clIDType`,
 * ``<contact:crDate>`` **(1)** – the :ref:`timestamp <mngobj-timestamps>` of creation as :term:`xs:dateTime`,

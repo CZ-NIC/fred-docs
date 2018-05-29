@@ -97,6 +97,9 @@ and it contains the following child elements:
 * ``<domain:exDate>`` **(0..1)** – the date of expiration as :term:`xs:date`,
 * ``<domain:trDate>`` **(0..1)** – the :ref:`timestamp <mngobj-timestamps>` of the last transfer as :term:`xs:dateTime`,
 * ``<domain:authInfo>`` **(0..1)** – authorization information (transfer password) as :term:`fredcom:authInfoType`,
+
+  .. Note:: Authinfo is displayed only to the :term:`designated registrar`.
+
 * ``<domain:tempcontact>`` **(0..n)** – a temporary contact handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
