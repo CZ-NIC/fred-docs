@@ -149,7 +149,7 @@ Interpretation of the result:
      - show
      - show
 
-Request – show a specified subset
+Request – show a specified subset
 '''''''''''''''''''''''''''''''''
 
 The EPP request contains:
@@ -201,7 +201,7 @@ Requests to hide listed attributes – ``<contact:disclose flag="0">``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 These requests don't make sense when the policy is to *hide*; it always
-results in a contact having all disclosure settings set to *hide* except
+results in a contact having all disclosure settings set to *hide* except
 for *address* which can't be set in the operation ``create`` and is set
 to *show*.
 
@@ -479,7 +479,7 @@ Interpretation of the result:
      - show
      - show
 
-Request – show a specified subset – contact does NOT satisfy conditions for hiding address (and ``<addr/>`` is NOT listed)
+Request – show a specified subset – contact does NOT satisfy conditions for hiding address (and ``<addr/>`` is NOT listed)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 The EPP request contains:
@@ -501,7 +501,7 @@ The request results in an error:
       <msg>Object status prohibits operation</msg>
    </result>
 
-Request – show a specified subset – contact does NOT satisfy conditions for hiding address (and ``<addr/>`` IS listed)
+Request – show a specified subset – contact does NOT satisfy conditions for hiding address (and ``<addr/>`` IS listed)
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Contact disclosure settings before the request:
@@ -576,7 +576,7 @@ Interpretation of the result:
      - show
      - show
 
-Request – show a specified subset – contact DOES satisfy conditions for hiding address
+Request – show a specified subset – contact DOES satisfy conditions for hiding address
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Contact disclosure settings before the request:

@@ -35,8 +35,8 @@ the following attributes:
       The contact name (person or company).
 
    ``org``
-      The name of an organization (use with a company). You may leave this empty
-      to signify a natural person.
+      The name of an organization (use with a company). You may leave this empty
+      to signify a natural person.
 
    ``addr``
       The permanent address / company seat, consisting of:

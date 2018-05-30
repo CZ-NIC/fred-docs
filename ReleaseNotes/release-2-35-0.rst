@@ -12,7 +12,7 @@ Version 2.35.0
    * email rendered only on demand (sending, inspecting details)
    * newer minimum version of PostgreSQL required – see the :ref:`System requirements <system-reqs-aux>`
 * transproc allows to restrict payment downloads with dynamic date intervals
-* new fred-admin command (``--create_expired_domain`` – re-register a domain for another owner and force the domain expired)
+* new fred-admin command (``--create_expired_domain`` – re-register a domain for another owner and force the domain expired)
 * generation of historical record statements in Daphne
 
 .. rubric:: Bugfixes

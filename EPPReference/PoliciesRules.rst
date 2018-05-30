@@ -14,7 +14,7 @@ policy entails these :doc:`contact attributes <ManagedObjects/Contacts>`:
 *identity document* (:code:`<ident/>`), *notify email* (:code:`<notifyEmail/>`).
 
 Clients (registrars) are not considered third-party entities in the FRED,
-and they deal with the information under terms of a contract with the Registry
+and they deal with the information under terms of a contract with the Registry
 operator.
 
 The policies comply with :term:`GDPR` and they are currently hard-coded.
@@ -98,7 +98,7 @@ Contact disclosure preference
 
 The contact disclosure preference expresses an opposite of the server disclosure preference
 where it is allowed by the policy to be adjusted. With the server disclosure preference to hide data,
-the contact disclosure preference represents consent to disclose a piece of personal information.
+the contact disclosure preference represents consent to disclose a piece of personal information.
 
 To set or view disclosure preference, the :code:`<contact:disclose>` element is used.
 Its syntax is described in the reference of each command:
@@ -128,19 +128,19 @@ See also the :ref:`examples <epp-disc-examples>` at the end of this chapter.
 Hiding address
 --------------
 
-When a new contact is being created, the contact disclosure preference for *address*
+When a new contact is being created, the contact disclosure preference for *address*
 cannot be requested and the server uses its default disclosure preference,
 which is to **show** *address*.
 
 Once the contact [#cont-natur]_ is verified (has the status flag ``identifiedContact``)
 or validated (has the status flag ``validatedContact``), the server changes
 the disclosure preference for *address* to "**hide**" automatically and
-notifies the client (the designated registrar) about this change in a poll message.
+notifies the client (the designated registrar) about this change in a poll message.
 At this point, the contact is allowed to change it.
 
 When the contact [#cont-natur]_ loses both verification and validation, the server changes
 the disclosure preference for *address* back to "**show**" automatically and
-notifies the client (the designated registrar) about this change in a poll message.
+notifies the client (the designated registrar) about this change in a poll message.
 At this point, the contact cannot change it.
 
 When the contact [#cont-natur]_ regains verification or validation, the same thing happens
@@ -148,11 +148,11 @@ as if it has gained it for the first time, see above. The contact disclosure
 preference for *address* is ignored and overwritten.
 
 .. [#cont-natur] This works only for contacts of natural persons, i.e. contacts
-   that have the attribute *organization* without a value.
+   that have the attribute *organization* without a value.
 
 .. Note::
 
    The :code:`<addr/>` disclose flag affects disclosure of **all addresses**
-   in a contact.
+   in a contact.
 
 .. include:: Disclosure_Examples.rst

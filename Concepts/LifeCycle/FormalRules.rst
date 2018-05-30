@@ -21,7 +21,7 @@ Domain registration expiration rules
 
 Legend:
 
-* ``regexdate`` the date when a domain expires (``domain.exdate``)
+* ``regexdate`` the date when a domain expires (``domain.exdate``)
 
 .. code-block:: none
    :caption: expirationWarning

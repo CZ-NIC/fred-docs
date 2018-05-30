@@ -12,7 +12,7 @@ The FRED has adapted its policies to hide most of the personal information
 and it does not share personal information
 with third-party entities (especially the public via FRED's public interfaces)
 without explicit consent from end users (natural persons),
-with the exception of name, organization, and, if a contact is not verified, address.
+with the exception of name, organization, and, if a contact is not verified, address.
 
 The consent for disclosure of some contact information can be given
 as disclosure preference flags through the EPP.

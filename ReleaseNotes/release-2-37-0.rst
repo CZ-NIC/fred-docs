@@ -13,9 +13,9 @@ Version 2.37.0
         (in reverse to previous versions)
       * affected also behaviour of ``contact:create`` and ``contact:update``
    * added new :term:`public request` types (requests for personal information)
-     with a new web form, fred-admin procedure, filtering and resolving in Daphne,
+     with a new web form, fred-admin procedure, filtering and resolving in Daphne,
      and an email template
-   * provided utility ``fred-disclose-flags-update`` for a custom reset
+   * provided utility ``fred-disclose-flags-update`` for a custom reset
      of contact disclosure preference
    * see also :doc:`Upgrade-2-37`
 
@@ -26,7 +26,7 @@ Version 2.37.0
 
 .. rubric:: Bugfixes
 
-* Daphne: fixed returning zone access to a registrar from whom the access
+* Daphne: fixed returning zone access to a registrar from whom the access
   to this zone was taken away before
 * EPPClient: fixed interpretation of disclose flags in responses to ``contact:info``
   to handle both the old and the new server disclosure policy

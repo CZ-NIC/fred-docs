@@ -124,7 +124,7 @@ Overview of changes in documentation from previous editions.
    * -
      -
      - :doc:`/Concepts/index`
-     - Extracted to a separate publication
+     - Extracted to a separate publication
    * -
      -
      - :doc:`/Concepts/LifeCycle/index`
@@ -141,7 +141,7 @@ Overview of changes in documentation from previous editions.
    * -
      - **1.2**
      - :doc:`/ReleaseNotes/index`
-     - Added release notes for the version 2.36.1; upgraded to a newer Sphinx
+     - Added release notes for the version 2.36.1; upgraded to a newer Sphinx
    * - **2.37**
      - **1.0**
      - :doc:`/ReleaseNotes/index`
@@ -149,11 +149,11 @@ Overview of changes in documentation from previous editions.
    * -
      -
      - :doc:`/Features/General/index`
-     - Added GDPR compliance as a new FRED feature
+     - Added GDPR compliance as a new FRED feature
    * -
      -
      - :doc:`/EPPReference/PoliciesRules`
-     - Added a new chapter
+     - Added a new chapter
    * -
      -
      - :doc:`/EPPReference/CommandStructure/Create/CreateContact`,
@@ -163,19 +163,19 @@ Overview of changes in documentation from previous editions.
    * -
      -
      - :ref:`epp-poll-type-update`
-     - Added a poll-message type about contact update
+     - Added a poll-message type about contact update
    * -
      -
      - :doc:`/AdminManual/AdministrativeTasks/Objects`
-     - Added a new public-request type
+     - Added a new public-request type
    * -
      -
      - :ref:`cronjob-public-requests`
-     - Added a cronjob to process public requests for personal information
+     - Added a cronjob to process public requests for personal information
    * -
      -
      - :doc:`/AdminManual/Appendixes/CSParams/index`
-     - Added a new email template for sending personal information
+     - Added a new email template for sending personal information
    * -
      - **1.1**
      - :doc:`/ReleaseNotes/index`
@@ -191,7 +191,7 @@ Overview of changes in documentation from previous editions.
    * -
      -
      - :ref:`cronjob-contact-merger`
-     - Added a cronjob
+     - Added a cronjob
    * -
      - **1.2**
      - :doc:`/AdminManual/Installation/SystemReqs`
@@ -203,11 +203,11 @@ Overview of changes in documentation from previous editions.
    * -
      - **1.3**
      - :ref:`config-contact-reminder`
-     - Added a configurable database table
+     - Added a configurable database table
    * -
      -
      - :doc:`/Concepts/Billing`
-     - Added a very general description of handling money in the FRED
+     - Added a very general description of handling money in the FRED
    * -
      -
      - :doc:`/AdminManual/Appendixes/CSParams/index`

@@ -6,7 +6,7 @@ Version 2.34.0
 
 .. rubric:: Enhancements
 
-* transitioned to a newer C++ standard (C++14)
+* transitioned to a newer C++ standard (C++14)
 * Registrars' passwords stored as hashes
 * reimplemented object deletion (object types by name, spread during time argument)
 * reimplemented generation of poll messages

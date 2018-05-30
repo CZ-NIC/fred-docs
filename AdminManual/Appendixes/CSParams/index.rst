@@ -380,7 +380,7 @@ Email type: ``techcheck``
    * ``checkdate`` – date on which the technical check was performed
    * ``ticket`` – check number
    * ``tests`` – list of datasets with results of the tests which
-     have failed; a single dataset (one list item, e.g. ``tests.0``) has the
+     have failed; a single dataset (one list item, e.g. ``tests.0``) has the
      following attributes:
 
       * :samp:`tests.*.type` – severity of the test result (\ ``error`` / ``warning`` / ``notice``),
@@ -473,8 +473,8 @@ Email type: ``annual_contact_reminder``
    * ``notify_email`` – notification email address,
    * ``registrar_name`` – name of the :term:`designated registrar`,
    * ``registrar_url`` – website address of the :term:`designated registrar`,
-   * ``registrar_memo_cz`` – a memo provided by the registrar (Czech/local variant),
-   * ``registrar_memo_en`` – a memo provided by the registrar (English variant),
+   * ``registrar_memo_cz`` – a memo provided by the registrar (Czech/local variant),
+   * ``registrar_memo_en`` – a memo provided by the registrar (English variant),
 
      .. Note:: The registrar memo is :ref:`configurable <config-contact-reminder>`.
 
@@ -566,7 +566,7 @@ Email type: ``akm_keyset_update``
 Email type: ``record_statement``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* sent in response to a request for a registry record statement about an object,
+* sent in response to a request for a registry record statement about an object,
   to the email of the domain owner / the contact / technical contacts
 * common passed parameters:
   :ref:`defaults.* <csparams-defaults>`,
@@ -580,8 +580,8 @@ Email type: ``record_statement``
 Email type: ``sendpersonalinfo_pif``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* sent in response to a resolved :term:`public request` for personal information
-  of a contact, to the email selected within the request
+* sent in response to a resolved :term:`public request` for personal information
+  of a contact, to the email selected within the request
 * common passed parameters: :ref:`defaults.* <csparams-defaults>`,
   :ref:`handle <csparams-handle>`
 * additional parameters:

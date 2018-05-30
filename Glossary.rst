@@ -55,7 +55,7 @@ Glossary of Terms
       <https://www.nic.cz/whois/block-object/?language=en>`_
 
    Registrable object
-      A data object stored in the Registry that can be registered and modified
+      A data object stored in the Registry that can be registered and modified
       by registrars. There are four types: domains, contacts, nssets, and keysets.
 
       They are also called *managed objects* in the EPP.
@@ -71,7 +71,7 @@ Glossary of Terms
       See :term:`Registrant`.
 
    Object owner
-      A contact which is authorized to request changes of a :term:`registrable object`.
+      A contact which is authorized to request changes of a :term:`registrable object`.
       These are the technical contacts in nssets and keysets, the contact itself,
       or the :term:`domain owner`.
 

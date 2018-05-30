@@ -16,7 +16,7 @@ and others on greater details which, if not satisfied, do not actually
 jeopardise domain delegation.
 
 .. Note:: The tests are only informative,
-   they do not affect inclusion/exclusion of a domain in/from a zone.
+   they do not affect inclusion/exclusion of a domain in/from a zone.
 
 Each test has a unique name that describes the name-server property
 to be tested. Test severity indicates the significance of failure of a given
@@ -38,7 +38,7 @@ of a passed/failed result.
 
 Each nsset may contain information about the *severity level* that should be
 tested for it (the ``report level`` attribute) but this can be overridden
-when a check is being requested by a registrar via the EPP interface.
+when a check is being requested by a registrar via the EPP interface.
 If neither provides this information, the default level is tested
 (FRED's default: 3, configurable).
 Currently, there are no level-0 tests and the highest level in use is 6.
@@ -54,7 +54,7 @@ Currently, there are no level-0 tests and the highest level in use is 6.
    * - Glue_OK
      - 1
      -
-     - Tests whether there is a glue record when required for a given DNS server and domains.
+     - Tests whether there is a glue record when required for a given DNS server and domains.
    * - Existence
      - 1
      - Glue_OK
@@ -84,8 +84,8 @@ Currently, there are no level-0 tests and the highest level in use is 6.
      - Glue_OK, Existence
      - At least two DNS servers with different software.
 
-If a check is requested by a registrar via EPP, the results are delivered
-to the registrar in a :ref:`EPP poll message <epp-poll-type-techcheck>`.
+If a check is requested by a registrar via EPP, the results are delivered
+to the registrar in a :ref:`EPP poll message <epp-poll-type-techcheck>`.
 
 If a periodic check fails, technical contacts of a nsset are :ref:`notified by
 email <email-type-techcheck>` which informs also about the cause of the failure.

@@ -11,5 +11,5 @@ Version 2.36.0
 
 .. rubric:: Bugfixes
 
-* EPP: fixed contact update removing a street line
+* EPP: fixed contact update removing a street line
 * Record statements: fixed exception type when object is not found

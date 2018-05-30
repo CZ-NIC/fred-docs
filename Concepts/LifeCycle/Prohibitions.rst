@@ -42,7 +42,7 @@ User blocking (locks)
 ---------------------
 
 Any registrable object may be blocked as an enhanced security setting by
-a contact linked to this object or the contact itself via the :term:`public request`\ s.
+a contact linked to this object or the contact itself via the :term:`public request`\ s.
 
 :Affects: EPP
 
@@ -74,7 +74,7 @@ Administrative blocking
 Domains (together with the :term:`domain owner`\ s, eventually) can be blocked
 by the Registry operator :ref:`via Daphne <task-admin-blocking>`,
 e.g. when the registration rules or the law are being violated, or when there is
-a police investigation or litigation ongoing.
+a police investigation or litigation ongoing.
 
 When an object is blocked by the Registry operator, it has the flag ``serverBlocked``.
 
@@ -82,7 +82,7 @@ When an object is blocked by the Registry operator, it has the flag ``serverBloc
 Prohibitions are set by the Registry operator and they can be revoked **only**
 by the Registry operator.
 
-To define a blocking state, any combination of the prohibition flags above can be set,
+To define a blocking state, any combination of the prohibition flags above can be set,
 and in domains, this can even be combined with the manual zone presence flags ``serverInzoneManual``
 or ``serverOutzoneManual``.
 

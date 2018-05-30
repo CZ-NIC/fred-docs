@@ -58,7 +58,7 @@ CORBA servers
 The CORBA servers are located in a system-binaries directory (:file:`@PREFIX@/sbin`).
 
 :program:`Systemd` startup scripts are included with FRED packages
-(e.g. :file:`/lib/systemd/system/fred-rifd.service`). A startup
+(e.g. :file:`/lib/systemd/system/fred-rifd.service`). A startup
 command is introduced with :code:`ExecStart=` in the scripts.
 
 .. _config-servers-cpp:
@@ -146,13 +146,13 @@ Additionally, each daemon accepts ORB parameters which it hands over to its ORB.
      in the ORB configuration file (possibly :file:`/etc/omniORB.cfg`)
      as the ``nativeCharCodeSet`` variable,
 
-   * endpoint address – to specify a *port* on which a server listens for CORBA calls;
-     a unique port must be specified for each server; this must be set on the command-line,
+   * endpoint address – to specify a *port* on which a server listens for CORBA calls;
+     a unique port must be specified for each server; this must be set on the command-line,
      such as |br| :code:`<daemon> -ORBendPoint giop:tcp::<port>`.
 
 To list all possible ORB parameters, run ``omniNames -help``;
 see also `omniORB configuration <http://omniorb.sourceforge.net/omni42/omniORB/omniORB004.html>`_
-for a more detailed explanation of the ORB parameters.
+for a more detailed explanation of the ORB parameters.
 
 .. _config-servers-py:
 
@@ -463,13 +463,13 @@ For a domain name to be valid, it must not match any pattern that is currently 
 
 .. _config-contact-reminder:
 
-Adding a registrar memo to annual reminders
+Adding a registrar memo to annual reminders
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The :ref:`email template <email-type-contact-reminder>`
 for :ref:`annual reminders of contacts <contact-reminder>`
-allows to include a memo from the designated registrar in the email
-and a custom email address to which the contact can reply.
+allows to include a memo from the designated registrar in the email
+and a custom email address to which the contact can reply.
 
 The Registry operator may insert this information
 into the ``reminder_registrar_parameter`` table:

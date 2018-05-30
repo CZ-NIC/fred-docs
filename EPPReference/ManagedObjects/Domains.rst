@@ -13,8 +13,8 @@ Schema: domain-1.4.2.xsd
 .. Note:: Domain name mapping is based on the standard :rfc:`5731`
    but implemented with the following modifications:
 
-   * replacement of a list of name servers with a nsset,
-   * addition of a keyset,
+   * replacement of a list of name servers with a nsset,
+   * addition of a keyset,
    * simplification of the list of contacts to just one type of contact (admin).
 
 .. _mng-domain-attr:

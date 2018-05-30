@@ -9,7 +9,7 @@ Structure notes clarification
 
 .. rubric:: TODO-LINK
 
-This pseudo-link must be replaced with a true reference
+This pseudo-link must be replaced with a true reference
 which probably did not exist at the moment this link was created.
 
 .. rubric:: Abbreviations
@@ -25,11 +25,11 @@ which probably did not exist at the moment this link was created.
 * WIKI = https://admin.nic.cz/wiki
    * WIKI/Dev ~= /developers/*
    * WIKI/Test ~= /sqa/testing/FRED/docs
-* OLDREPO = stará dokumentace v repozitáři `fred/docs`
+* OLDREPO = stará dokumentace v repozitáři `fred/docs`
 * THESIS = stará diplomka
-* DB = lze snad vyčíst z databáze FREDu
+* DB = lze snad vyčíst z databáze FREDu
 * HELP = nápověda programu
-* NOTES = mám k tomu poznámky
+* NOTES = mám k tomu poznámky
 * IVIEW = někdo další to musí vysvětlit/sepsat
 * SELF = můžu dopsat sama
-* translate = bude potřeba přeložit z češtiny do angličtiny
+* translate = bude potřeba přeložit z češtiny do angličtiny

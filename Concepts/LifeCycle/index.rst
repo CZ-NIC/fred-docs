@@ -5,10 +5,10 @@
 Life cycle of registrable objects
 =================================
 
-This chapter describes the life cycle of :term:`registrable object`\ s
-that is based on object *flags*.
+This chapter describes the life cycle of :term:`registrable object`\
+s that is based on object *flags*.
 
-A set of flags assigned to an object at a given moment constitutes an object *state*.
+A set of flags assigned to an object at a given moment constitutes an object *state*.
 
 
 

@@ -148,7 +148,7 @@ procedure is finished)
      e.g. if ``--object_delete_parts=2``, a half of the list is deleted
      in a single iteration, if ``object_delete_parts=10``, a tenth of the list
      is deleted in a single iteration and so on
-   * single iteration can be spread over a period of time specified in the
+   * single iteration can be spread over a period of time specified in the
      ``--object_delete_spread_during_time`` argument in seconds
    * the value of ``object_delete_parts`` is calculated depending
      on CRON configuration (how often the task is run)
@@ -202,7 +202,7 @@ See also :doc:`introduction to the contact merger </Concepts/ContactMerger>`.
 
 Useful filters for selection of the *destination contact*:
 
-* :abbr:`mcs_filter_max_domains_bound (contact has most domains linked as a holder or administrative contact)`
+* :abbr:`mcs_filter_max_domains_bound (contact has most domains linked as a holder or administrative contact)`
 * :abbr:`mcs_filter_max_objects_bound (contact has most objects linked – domains, nssets or keysets)`
 * :abbr:`mcs_filter_recently_updated (contact has been updated most recently)`
 * :abbr:`mcs_filter_recently_created (contact has been created most recently)`
@@ -286,7 +286,7 @@ Communication
 Processing public requests
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. Note:: This procedure processes only :term:`public request`\ s for personal information.
+.. Note:: This procedure processes only :term:`public request`\ s for personal information.
 
 **Task command**::
 
@@ -309,10 +309,10 @@ Processing public requests
    * ``personalinfo_auto_pif`` – requests to send personal info to an email in the registry
      (authorized and resolved automatically),
    * ``personalinfo_email_pif`` –  requests to send personal info to another email,
-     authorized with an email signed with a digital signature
+     authorized with an email signed with a digital signature
      (:ref:`resolved manually <resolve-public-request>`),
    * ``personalinfo_post_pif`` – requests to send personal info to another email,
-     authorized with a letter containing a notarized signature
+     authorized with a letter containing a notarized signature
      (:ref:`resolved manually <resolve-public-request>`).
 
   If the ``--types`` argument is omitted, all of the aforementioned types are processed.

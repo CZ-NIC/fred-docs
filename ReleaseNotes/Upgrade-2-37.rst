@@ -7,17 +7,17 @@ Considerations for upgrade to FRED 2.37
 .. rubric:: Registry operator
 
 :doc:`Policies of the EPP server </EPPReference/PoliciesRules>` are hard-coded
-in this version. If the new policies do not suit your needs, wait for a future
+in this version. If the new policies do not suit your needs, wait for a future
 version that will make these policies configurable.
 
 Because we needed to hide most of personal information in the production database
-that used to be shown, we created a utility that can reset disclosure preferences
+that used to be shown, we created a utility that can reset disclosure preferences
 in existing contacts.
 We have used the utility ``fred-disclose-flags-update`` to reset disclose flags
 according to these rules (ignoring former preferences):
 
 * Hide all attributes except *name*, *organization*, and *address*.
-* If a contact (of a natural person) is verified, hide *address*, too.
+* If a contact (of a natural person) is verified, hide *address*, too.
 
 Note that these rules also apply when new contacts are created and when they
 become verified, and that these rules are part of the hard-coded policies.

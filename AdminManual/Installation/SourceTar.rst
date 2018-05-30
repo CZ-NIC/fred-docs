@@ -40,7 +40,7 @@ Install all the packages from the appropriate list.
 Download and unpack
 ^^^^^^^^^^^^^^^^^^^
 
-We publish a list of GitHub-generated tarballs `on the website
+We publish a list of GitHub-generated tarballs `on the website
 <https://fred.nic.cz/page/3612/get-fred/>`_.
 
 You may use the `latest version list <https://fred.nic.cz/files/fred/fred-sources-list-latest.txt>`_
@@ -162,8 +162,8 @@ to the :file:`install.log` file when it finishes.
 
 .. [#s] These packages have been ported from Distutils to Setuptools
    but they have the same installation command, except it does not install
-   a configuration file and the package must be configured as described
-   in a README file included in the package.
+   a configuration file and the package must be configured as described
+   in a README file included in the package.
 
 Finalization
 ^^^^^^^^^^^^

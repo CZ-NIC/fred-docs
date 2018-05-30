@@ -14,7 +14,7 @@ that must be provided with the transfer request to authorize the transfer.
 The transfer process in the FRED is different from the standard one
 (see :rfc:`5730#section-2.9.3.4`) and it works as follows:
 
-#. A contact linked to an object intended for transfer requests authinfo of the object.
+#. A contact linked to an object intended for transfer requests authinfo of the object.
    He can do so via the current registrar, via the new registrar or
    by submitting a \ :term:`public request` to the Registry directly.
 #. The authinfo is provided to the contact either through one of the involved
@@ -44,8 +44,8 @@ the current designated registrar to reject nor inhibit the transfer.
 Further authorization options
 -----------------------------
 
-A transfer of a domain may also be authorized using authinfo of the domain holder
+A transfer of a domain may also be authorized using authinfo of the domain holder
 or any of its administrative contacts.
 
-A transfer of a nsset or keyset may also be authorized using authinfo of any
+A transfer of a nsset or keyset may also be authorized using authinfo of any
 of its technical contacts.

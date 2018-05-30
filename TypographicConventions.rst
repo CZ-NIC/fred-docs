@@ -103,7 +103,7 @@ is allowed in project configuration.
 
 .. todo:: This is an authoring note. The TODOs are turned on.
 
-If you cannot see a green frame here, the TODOs are turned off.
+If you cannot see a green frame here, the TODOs are turned off.
 
 Semantic markup overview
 ------------------------

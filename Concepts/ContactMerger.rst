@@ -24,7 +24,7 @@ into a single *destination contact*. The *destination contact* is determined
 by filtering the set with various criteria (see :ref:`merge-auto-criteria`),
 which make the outcome the best possible choice. The other contacts in the set
 are treated as *source contacts*.
-(This task can be set as a :ref:`periodic task <cronjob-contact-merger>`.)
+(This task can be set as a :ref:`periodic task <cronjob-contact-merger>`.)
 
 In both cases, the contacts must be managed by the same registrar, however,
 they are replaced in linked objects even if the linked objects have different
@@ -128,7 +128,7 @@ evaluated in this order [#default]_:
 * contact is identified,
 * contact is conditionally identified,
 * contact handle complies with the syntax for mojeID handles,
-* contact has most domains linked (as a :term:`holder` or administrative contact),
+* contact has most domains linked (as a :term:`holder` or administrative contact),
 * contact has most objects linked (domains, name-server sets or key sets),
 * contact has been updated most recently,
 * contact has been created most recently.
@@ -140,7 +140,7 @@ If more than one contact meets all of these criteria, the *destination contact*
 is chosen from them randomly.
 
 .. [#default] This is the default setting used in CZ.NIC. The Registry operator
-   may modify which criteria will be applied and in what order, in a command option.
+   may modify which criteria will be applied and in what order, in a command option.
 
 
 .. only:: domain_browser
