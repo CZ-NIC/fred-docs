@@ -208,3 +208,7 @@ Overview of changes in documentation from previous editions.
      -
      - :doc:`/Concepts/Billing`
      - Added a very general description of handling money in the FRED
+   * -
+     -
+     - :doc:`/AdminManual/Appendixes/CSParams/index`
+     - Reviewed mail template parameters
