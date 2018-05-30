@@ -200,3 +200,11 @@ Overview of changes in documentation from previous editions.
      -
      - :doc:`/AdminManual/Installation/BinsUbuntu`
      - Updated the installation script and its description
+   * -
+     - **1.3**
+     - :ref:`config-contact-reminder`
+     - Added a configurable database table
+   * -
+     -
+     - :doc:`/Concepts/Billing`
+     - Added a very general description of handling money in the FRED
