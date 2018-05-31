@@ -6,6 +6,8 @@ Record of Changes
 
 Overview of changes in documentation from previous editions.
 
+The newest are :ref:`at the end <roc-end>`.
+
 .. tabularcolumns:: |p{0.075\textwidth}|p{0.075\textwidth}|p{0.25\textwidth}|p{0.575\textwidth}|
 
 .. list-table::
@@ -212,3 +214,5 @@ Overview of changes in documentation from previous editions.
      -
      - :doc:`/AdminManual/Appendixes/CSParams/index`
      - Reviewed mail template parameters
+
+.. _roc-end:
