@@ -20,3 +20,4 @@ Concepts
    Communication
    Genzone
    Billing
+   AuditLog
