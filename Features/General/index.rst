@@ -100,3 +100,5 @@ can perform registrations and modify existing data in the Registry.
 .. include:: AKM.rst
 
 .. include:: RecordStatements.rst
+
+.. include:: AuditLog.rst
