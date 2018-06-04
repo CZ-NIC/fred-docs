@@ -45,6 +45,7 @@ Contributions may be submitted using the pull-request mechanism.
    Architecture/index
    AdminManual/index
    EPPReference/index
+   RDAPReference/index
    ReleaseNotes/index
 
 .. only:: mode_structure and format_html
