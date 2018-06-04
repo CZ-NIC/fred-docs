@@ -17,6 +17,15 @@ Appendices contain overviews of result codes, error reasons and simple data
 types from schemas.
 
 
+General workflow
+----------------
+
+This reference manual focuses on the syntax and allowed values
+but it does not describe how to use the registrar interface in general.
+The description of the command workflow can be found in this concept article:
+:doc:`/Concepts/EPPClientWorkflow`.
+We recommend reading it to understand the broader context.
+
 
 Conventions for describing XML structures
 -------------------------------------------------
