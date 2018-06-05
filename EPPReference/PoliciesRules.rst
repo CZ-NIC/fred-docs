@@ -125,6 +125,8 @@ If the contact does not satisfy the conditions for `hiding address`_, then
 
 See also the :ref:`examples <epp-disc-examples>` at the end of this chapter.
 
+.. _epp-rules-hiding-address:
+
 Hiding address
 --------------
 
