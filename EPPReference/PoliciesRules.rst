@@ -134,19 +134,19 @@ When a new contact is being created, the contact disclosure preference for *add
 cannot be requested and the server uses its default disclosure preference,
 which is to **show** *address*.
 
-Once the contact [#cont-natur]_ is verified (has the status flag ``identifiedContact``)
-or validated (has the status flag ``validatedContact``), the server changes
+Once the contact [#cont-natur]_ is verified (gets the status flag ``identifiedContact``
+or ``validatedContact``), the server changes
 the disclosure preference for *address* to "**hide**" automatically and
 notifies the client (the designated registrar) about this change in a poll message.
 At this point, the contact is allowed to change it.
 
-When the contact [#cont-natur]_ loses both verification and validation, the server changes
+When the contact [#cont-natur]_ loses verification, the server changes
 the disclosure preference for *address* back to "**show**" automatically and
 notifies the client (the designated registrar) about this change in a poll message.
 At this point, the contact cannot change it.
 
-When the contact [#cont-natur]_ regains verification or validation, the same thing happens
-as if it has gained it for the first time, see above. The contact disclosure
+When the contact [#cont-natur]_ regains verification, the same thing happens
+as if it has gained it for the first time, see above. The previous contact disclosure
 preference for *address* is ignored and overwritten.
 
 .. [#cont-natur] This works only for contacts of natural persons, i.e. contacts
