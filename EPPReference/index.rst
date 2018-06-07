@@ -21,7 +21,7 @@ Have reference information for implementing and debugging a custom EPP client.
 
 .. struct-end
 
-.. rubric:: Prerequisities
+.. rubric:: Prerequisites
 
 You should have a basic understanding of XML terminology and principles.
 

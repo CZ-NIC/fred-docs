@@ -22,7 +22,7 @@ be aware of the tools for manual intervention.
 
 .. struct-end
 
-.. rubric:: Prerequisities
+.. rubric:: Prerequisites
 
 To understand this manual, you should already be familiar with the general
 :ref:`features <FRED-Features>` and the :ref:`architecture <FRED-Arch>`
