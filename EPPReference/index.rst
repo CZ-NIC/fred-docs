@@ -13,7 +13,7 @@ to suit FRED particularities.
 
 .. rubric:: Target audience
 
-Developer, tester
+Developers, testers
 
 .. rubric:: Purpose
 

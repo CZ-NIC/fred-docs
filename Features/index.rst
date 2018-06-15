@@ -12,13 +12,12 @@ logic behind these features).
 
 .. rubric:: Target audience
 
-Acquirer, tester, (system administrator, developer)
+Acquirers, testers, (system administrators, developers)
 
 .. rubric:: Purpose
 
-Determine if the system can satisfy your needs, compare with other products,
-find advanced or not-so-obvious usage, have checklist for verification,
-(be aware of the logic behind the features).
+Determining if the system can satisfy your needs, comparing it with other products,
+finding advanced or not-so-obvious usage, having checklist for verification.
 
 .. struct-end
 

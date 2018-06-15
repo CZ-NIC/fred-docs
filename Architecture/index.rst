@@ -11,11 +11,12 @@ This document describes the top-level architecture and internal bindings of the 
 
 .. rubric:: Target audience
 
-Developer, system administrator, customer support
+Developers, system administrators, customer support
 
 .. rubric:: Purpose
 
-Know the basic top-level composition and organization of the system (reflects general design, no implementation details).
+Knowing the basic top-level composition and organization of the system
+(reflects general design, no implementation details).
 
 .. struct-end
 

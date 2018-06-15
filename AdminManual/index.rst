@@ -12,13 +12,13 @@ of the system.
 
 .. rubric:: Target audience
 
-System administrator, customer support
+System administrators, customer support
 
 .. rubric:: Purpose
 
-Make the system work and keep it operational (install, configure, customize,
-maintain), set automated tasks,
-be aware of the tools for manual intervention.
+Making the system work and keeping it operational (installation, configuration,
+customization, maintanance), setting automated tasks,
+being aware of the tools for manual intervention.
 
 .. struct-end
 
