@@ -214,5 +214,13 @@ The newest are :ref:`at the end <roc-end>`.
      -
      - :doc:`/AdminManual/Appendixes/CSParams/index`
      - Reviewed mail template parameters
+   * -
+     - **1.4**
+     - :doc:`/Concepts/EPPClientWorkflow`
+     - Added a description of a general EPP client workflow
+   * -
+     -
+     - :doc:`/RDAPReference/index`
+     - Added RDAP reference guide
 
 .. _roc-end:
