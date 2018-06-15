@@ -22,7 +22,7 @@ object to which they are linked:
 
 * the domain holder,
 * an administrative contact of a domain,
-* a technical contact of a nsset or a keyset.
+* a technical contact of an nsset or a keyset.
 
 The *domain holder* may request any modification of their domain, including the change
 of the domain holder.

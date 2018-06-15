@@ -186,13 +186,13 @@ The domain is naturally included in the zone if and only if it meets the followi
 
 * the domain is not ``unguarded``, and
 * the domain is validated if it is an ENUM domain, and
-* the domain has a nsset assigned to it, and
+* the domain has an nsset assigned to it, and
 * the domain is not forced out of the zone manually, i.e. it does not have the ``serverOutzoneManual`` flag. |br|
   This flag forces the domain not to be included despite having met the conditions above.
 
 The domain can be forced to the zone by setting the manual flag ``serverInzoneManual``.
 This can override registration expiration flow up to ``deleteCandidate`` and expired validation.
-However, if the domain does not have a nsset, this flag will not have the desired effect.
+However, if the domain does not have an nsset, this flag will not have the desired effect.
 
 Neither of these manual flags affects the basic flow.
 

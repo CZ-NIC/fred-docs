@@ -6,7 +6,7 @@ Transfer nsset
 ================
 
 A nsset transfer :ref:`command <struct-command>` is used to take over
-sponsorship of a nsset.
+sponsorship of an nsset.
 A transfer password must be provided for authorization.
 It can be the transfer password of:
 

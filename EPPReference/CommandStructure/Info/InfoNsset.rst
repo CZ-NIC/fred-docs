@@ -5,7 +5,7 @@
 Info nsset
 =============
 
-A nsset info :ref:`command <struct-command>` is used to view details of a nsset.
+A nsset info :ref:`command <struct-command>` is used to view details of an nsset.
 
 The nsset info command is an ``info`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
@@ -20,7 +20,7 @@ Command element structure
 The ``<nsset:info>`` element must declare the ``nsset`` :doc:`namespace and schema
 </EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
-* ``<nsset:id>`` **(1)**  – a nsset handle as :term:`fredcom:objIDType`.
+* ``<nsset:id>`` **(1)**  – an nsset handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example

@@ -5,7 +5,7 @@ Update nsset
 =============
 
 
-A nsset update :ref:`command <struct-command>` is used to alter details of a nsset.
+A nsset update :ref:`command <struct-command>` is used to alter details of an nsset.
 
 The nsset update command is an ``update`` element in the ``nsset`` namespace
 (``http://www.nic.cz/xml/epp/nsset-1.2``).
@@ -21,7 +21,7 @@ Command element structure
 The ``<nsset:update>`` element must declare the ``nsset`` namespace
 and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
-* ``<nsset:id>`` **(1)**  – a nsset handle as :term:`fredcom:objIDType`,
+* ``<nsset:id>`` **(1)**  – an nsset handle as :term:`fredcom:objIDType`,
 * ``<nsset:add>`` **(0..1)** – a list of items that will be added to this nsset:
 
    * ``<nsset:ns>`` **(0..10)** – a nameserver given by:

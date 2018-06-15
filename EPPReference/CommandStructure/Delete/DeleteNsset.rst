@@ -5,7 +5,7 @@
 Delete nsset
 ==============
 
-A nsset delete :ref:`command <struct-command>` is used to delete a nsset
+A nsset delete :ref:`command <struct-command>` is used to delete an nsset
 whose status allows it to be deleted.
 
 The nsset delete command is a ``delete`` element in the ``nsset`` namespace

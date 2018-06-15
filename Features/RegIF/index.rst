@@ -64,14 +64,14 @@ Manage contacts
 Manage nssets
 --------------
 
-* Check availability of a nsset
-* Create a nsset
-* Get info about a nsset
-* Delete a nsset
-* Transfer a nsset
-* Update a nsset
-* Request a technical check of a nsset
-* Send authorization information of a nsset to emails of the contacts linked with the nsset
+* Check availability of an nsset
+* Create an nsset
+* Get info about an nsset
+* Delete an nsset
+* Transfer an nsset
+* Update an nsset
+* Request a technical check of an nsset
+* Send authorization information of an nsset to emails of the contacts linked with the nsset
 
 Manage keysets
 --------------

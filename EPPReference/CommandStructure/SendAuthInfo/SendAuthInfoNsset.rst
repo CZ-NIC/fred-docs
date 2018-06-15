@@ -6,7 +6,7 @@
 Send auth.info for nsset
 ==========================
 
-A nsset sendAuthInfo command is used to provide the transfer password of a nsset
+A nsset sendAuthInfo command is used to provide the transfer password of an nsset
 to the technical contacts of the nsset.
 
 The client sends only the request for the provision to the Registry and
@@ -25,7 +25,7 @@ Command element structure
 The ``<nsset:sendAuthInfo>`` element must declare the ``nsset`` namespace
 and :doc:`schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child element:
 
-* ``<nsset:id>`` **(1)** – a nsset handle as :term:`fredcom:objIDType`.
+* ``<nsset:id>`` **(1)** – an nsset handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example

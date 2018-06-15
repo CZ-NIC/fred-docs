@@ -369,7 +369,7 @@ Email type: ``notification_delete``
 Email type: ``techcheck``
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* sent if a test in a :doc:`technical check </Concepts/Teccheck>` of a nsset
+* sent if a test in a :doc:`technical check </Concepts/Teccheck>` of an nsset
   has failed, as a report to technical contacts of the nsset
 * common passed parameters:
   :ref:`defaults.* <csparams-defaults>`,

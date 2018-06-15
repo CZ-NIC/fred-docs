@@ -49,7 +49,7 @@ Each managed object has the following attributes:
 Domain names and hostnames
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-A domain name being registered or a name-server hostname being assigned to a nsset
+A domain name being registered or a name-server hostname being assigned to an nsset
 must be in the :term:`FQDN` form.
 
 A domain name or a hostname must comply with the following syntax:

@@ -20,7 +20,7 @@ Command element structure
 
 The ``<nsset:check>`` element must declare the ``nsset`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>` and it must contain the following child elements:
 
-* ``<nsset:id>`` **(1..n)**  – a nsset handle as :term:`fredcom:objIDType`.
+* ``<nsset:id>`` **(1..n)**  – an nsset handle as :term:`fredcom:objIDType`.
 
 .. code-block:: xml
    :caption: Example

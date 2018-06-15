@@ -47,5 +47,5 @@ Further authorization options
 A transfer of a domain may also be authorized using authinfo of the domain holder
 or any of its administrative contacts.
 
-A transfer of a nsset or keyset may also be authorized using authinfo of any
+A transfer of an nsset or keyset may also be authorized using authinfo of any
 of its technical contacts.

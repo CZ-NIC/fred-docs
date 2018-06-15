@@ -30,7 +30,7 @@ schema </EPPReference/SchemasNamespaces/index>`, and it must contain the followi
 
   If omitted, the domain expiration is set to the minimum. (FRED's default: 1 year)
 
-* ``<domain:nsset>`` **(0..1)** – a nsset handle to associate as :term:`fredcom:objIDType`,
+* ``<domain:nsset>`` **(0..1)** – an nsset handle to associate as :term:`fredcom:objIDType`,
 * ``<domain:keyset>`` **(0..1)** – the keyset handle to associate as :term:`fredcom:objIDType`,
 * ``<domain:registrant>`` **(1)** – the domain owner handle as :term:`fredcom:objIDType`,
 * ``<domain:admin>`` **(0..n)** – an administrative contact handle as :term:`fredcom:objIDType`,
