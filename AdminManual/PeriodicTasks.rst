@@ -320,6 +320,8 @@ Processing public requests
 Registrars
 ----------
 
+.. _cronjob-registrars-usage:
+
 Generating poll messages about request usage
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
