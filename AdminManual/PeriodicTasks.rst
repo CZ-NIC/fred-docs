@@ -351,8 +351,8 @@ Generating poll messages about request usage
 
 .. _block-registrars-limit:
 
-Blocking registrars over limit
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Blocking registrars over limit :sup:`CZ-specific`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **Task command**::
 
