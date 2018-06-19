@@ -5,25 +5,24 @@ This documentation aids users of the [Free Registry for ENUM and
 Domains](https://fred.nic.cz), the domain name registry software
 developed by CZ.NIC.
 
-The documentation contains 5 essential publications:
+The documentation contains the following publications:
 
 * Features,
 * Concepts,
 * Architecture Description,
 * Administration Manual,
-* EPP Reference Manual.
+* EPP Reference Manual,
+* RDAP API Reference.
 
+The newest edition of the documentation is published at https://fred.nic.cz/documentation.
 
 ## What is in development
 
 Parts of the docs which are currently in development by CZ.NIC:
 
 * registry communications overview,
-* EPP client workflow,
 * multi-server deployment example,
-* billing,
 * audit logging,
-* RDAP API reference,
 * and other minor topics.
 
 
@@ -36,5 +35,5 @@ We accept pull requests.
 
 The `master` always contains the newest edition of the documentation of the
 last FRED release.
-The documentation of older FRED releases is available under tags like `v2.33`.
-The oldest historical version is `v2.29`.
+The documentation of older FRED releases is available under tags such as `v2.33`.
+The oldest historical version tagged is `v2.29`.
