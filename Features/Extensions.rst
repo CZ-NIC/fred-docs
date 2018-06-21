@@ -1,8 +1,8 @@
 
 .. _FRED-Features-Extensions:
 
-Extending features
-======================
+Extending features :sup:`CZ-specific`
+=====================================
 
 The FRED functionality is enriched by some extensions.
 
