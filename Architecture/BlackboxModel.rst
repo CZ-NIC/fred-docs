@@ -4,6 +4,9 @@
 Blackbox model
 ==========================
 
+This model, which can be also considered a context diagram, illustrates
+basic data flows between Registry end users and the Registry.
+
 .. only:: mode_structure
 
    .. struct-start
