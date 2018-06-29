@@ -222,5 +222,17 @@ The newest are :ref:`at the end <roc-end>`.
      -
      - :doc:`/RDAPReference/index`
      - Added RDAP reference guide
+   * -
+     - **1.5**
+     - :doc:`/Concepts/UsersInterfaces`
+     - Added an introduction to FRED's users and user interfaces
+   * -
+     -
+     - :doc:`/Concepts/Communication`
+     - Added an overview of FRED's communication (notifications, warnings, etc.)
+   * -
+     -
+     - :doc:`/Features/PublicIF/index`
+     - Added a list of Public interface features
 
 .. _roc-end:

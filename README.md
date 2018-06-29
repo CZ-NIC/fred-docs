@@ -20,10 +20,8 @@ The newest edition of the documentation is published at https://fred.nic.cz/docu
 
 Parts of the docs which are currently in development by CZ.NIC:
 
-* registry communications overview,
 * multi-server deployment example,
-* audit logging,
-* and other minor topics.
+* audit logging.
 
 
 ## Contributions
