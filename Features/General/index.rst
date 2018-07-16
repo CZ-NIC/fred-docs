@@ -67,38 +67,74 @@ can perform registrations and modify existing data in the Registry.
    :local:
    :backlinks: none
 
+.. _features-gen-rrrmodel:
+
 .. include:: RRRModel.rst
+
+.. _features-gen-genzone:
 
 .. include:: Genzone.rst
 
+.. _features-gen-epp:
+
 .. include:: EPPProtocol.rst
+
+.. _features-gen-whois:
 
 .. include:: Whois.rst
 
+.. _features-gen-gdpr:
+
 .. include:: GDPRCompliance.rst
+
+.. _features-gen-notifications:
 
 .. include:: Notifications.rst
 
+.. _features-gen-tecchecks:
+
 .. include:: TecChecks.rst
+
+.. _features-gen-multilang:
 
 .. include:: MultiLanguage.rst
 
+.. _features-gen-dnssec:
+
 .. include:: DNSSECSupport.rst
+
+.. _features-gen-billing:
 
 .. include:: InvoicingBanking.rst
 
+.. _features-gen-enum:
+
 .. include:: ENUM.rst
+
+.. _features-gen-contverif:
 
 .. include:: ContactVerification.rst
 
+.. _features-gen-contmerger:
+
 .. include:: ContactMerger.rst
+
+.. _features-gen-locks:
 
 .. include:: ObjectLocking.rst
 
+.. _features-gen-handleformat:
+
 .. include:: DomainHandleValidation.rst
+
+.. _features-gen-akm:
 
 .. include:: AKM.rst
 
+.. _features-gen-rs:
+
 .. include:: RecordStatements.rst
+
+.. _features-gen-auditlog:
 
 .. include:: AuditLog.rst
