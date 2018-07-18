@@ -97,3 +97,6 @@ Glossary of Terms
       <https://en.wikipedia.org/wiki/General_Data_Protection_Regulation>`_,
       `Regulation (EU) 2016/679 (official source)
       <https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32016R0679>`_
+
+   db
+      database
