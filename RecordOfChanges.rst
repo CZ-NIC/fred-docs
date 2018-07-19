@@ -221,7 +221,7 @@ The newest are :ref:`at the end <roc-end>`.
    * -
      -
      - :doc:`/RDAPReference/index`
-     - Added RDAP reference guide
+     - Added an RDAP reference guide
    * -
      - **1.5**
      - :doc:`/Concepts/UsersInterfaces`
@@ -234,5 +234,14 @@ The newest are :ref:`at the end <roc-end>`.
      -
      - :doc:`/Features/PublicIF/index`
      - Added a list of Public interface features
+   * -
+     - **1.6**
+     - :ref:`Audit log feature <features-gen-auditlog>`,
+       :doc:`Audit log concept </Concepts/AuditLog>`
+     - Added the audit log
+   * -
+     -
+     - :doc:`/Architecture/Deployment`
+     - Added an example of distributed deployment
 
 .. _roc-end:
