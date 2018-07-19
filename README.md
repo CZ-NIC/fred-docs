@@ -20,9 +20,7 @@ The newest edition of the documentation is published at https://fred.nic.cz/docu
 
 Parts of the docs which are currently in development by CZ.NIC:
 
-* multi-server deployment example,
-* audit logging.
-
+* To be planned.
 
 ## Contributions
 
