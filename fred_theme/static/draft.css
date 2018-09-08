@@ -1,0 +1,35 @@
+
+.draft-marker {
+    background-image: linear-gradient(darkred, white);
+    border: solid 1px darkred;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 100%;
+    line-height: 1.0;
+    text-align: center;
+    padding: 1ex 0;
+}
+
+.draft-diagonal {
+    width: 280px;
+    position: fixed;
+    top: 60px;
+    right: -60px;
+    transform: rotate(45deg);
+}
+
+.draft-title {
+    color: white;
+}
+
+.draft-branch a {
+    color: darkred !important;
+    line-height: 1.0 !important;
+}
+
+.draft-narrow {
+    width: 200px;
+    position: fixed;
+    top: 40px;
+    right: -1px;
+}

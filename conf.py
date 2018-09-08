@@ -16,7 +16,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 import time
 # sys.path.insert(0, os.path.abspath('.'))
@@ -131,6 +131,15 @@ rst_epilog = """
 
    <br />
 """
+
+# Git
+if 'GIT_BRANCH' in os.environ:
+    git_branch = os.environ['GIT_BRANCH']
+else:
+    git_branch = None
+
+# Draft
+is_draft = git_branch and git_branch != 'master'
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -256,6 +265,13 @@ html_search_language = 'en'
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'FREDdoc'
+
+# Custom HTML template variables
+html_context = {
+    'git_branch': git_branch,
+    'is_draft': is_draft,
+    #'diff_with': 'master', # make html SPHINXOPTS='-A diff_with=branch-name'
+}
 
 # -- Options for LaTeX output ---------------------------------------------
 

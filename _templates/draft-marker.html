@@ -1,0 +1,19 @@
+{#
+    Draft marker
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#}
+{% if builder == "html" and is_draft %}
+<!-- Draft marker -->
+<div class="draft-marker draft-diagonal">
+    <span class="draft-title">D R A F T</span><br/>
+    <span class="draft-branch">
+        {% if diff_with %}
+        <a href="https://gitlab.office.nic.cz/docs/fred-docs/compare/{{ diff_with }}...{{ git_branch }}"
+           title="View diff">{{ diff_with }} ... {{ git_branch }}</a>
+        {% else %}
+        <a href="https://gitlab.office.nic.cz/docs/fred-docs/tree/{{ git_branch }}"
+           title="View branch">{{ git_branch }}</a>
+        {%- endif %}
+    </span>
+</div>
+{%- endif %}
