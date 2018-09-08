@@ -6,8 +6,6 @@
 FRED |version| Documentation
 ============================
 
-.. rubric:: :doc:`Edition: 1.6 <RecordOfChanges>`
-
 This documentation aids users of the **Free Registry for ENUM and Domains**,
 the domain name registry software developed by `CZ.NIC <http://www.nic.cz>`_
 as an open-source solution.
@@ -18,25 +16,25 @@ as an open-source solution.
       which means that it contains authoring/editing/managing notes
       in addition to the actual content.
 
-.. rubric:: Source & Contributions
+:Edition: :doc:`1.6 <RecordOfChanges>`
 
-The source code of this documentation is open and can be found on `GitHub
-<https://github.com/CZ-NIC/fred-docs>`_.
-Contributions may be submitted using the pull-request mechanism.
+:Source: The source code of this documentation is open and can be found
+         on `GitHub <https://github.com/CZ-NIC/fred-docs>`_.
 
-.. rubric:: General information on this documentation
+         Contributions may be submitted using the pull-request mechanism.
+
+:Metainfo:
+
+   .. toctree::
+      :name: fred-toc-info
+      :maxdepth: 1
+
+      RecordOfChanges
+      TypographicConventions
+      Glossary
 
 .. toctree::
-   :name: fred-toc-info
-   :maxdepth: 1
-
-   RecordOfChanges
-   TypographicConventions
-   Glossary
-
-.. rubric:: Publications
-
-.. toctree::
+   :caption: Publications
    :name: fred-toc-publications
    :maxdepth: 2
 
