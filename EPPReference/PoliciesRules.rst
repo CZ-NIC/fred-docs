@@ -141,8 +141,8 @@ notifies the client (the designated registrar) about this change in a poll mess
 At this point, the contact is allowed to change it.
 
 When the contact [#cont-natur]_ loses verification, the server changes
-the disclosure preference for *address* back to "**show**" automatically and
-notifies the client (the designated registrar) about this change in a poll message.
+the disclosure preference for *address* back to "**show**" automatically
+(the client is NOT notified about this change).
 At this point, the contact cannot change it.
 
 When the contact [#cont-natur]_ regains verification, the same thing happens
