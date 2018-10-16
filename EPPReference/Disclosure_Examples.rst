@@ -267,6 +267,7 @@ Result – the response to ``contact:info`` contains:
 
    <contact:disclose flag="1">
      <contact:addr/>
+     <contact:notifyEmail/>
    </contact:disclose>
 
 Interpretation of the result:
