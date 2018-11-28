@@ -67,7 +67,7 @@ of signed PDF documents with information about registrable objects;
 it functions as another backend for
 :ref:`Daphne <FRED-Arch-clients-webadmin>`,
 :ref:`web whois <FRED-Arch-clients-webwhois>` and
-:ref:`Domain Browser <FRED-Arch-clients-db>`.
+Domain Browser extension.
 
 .. _FRED-Arch-servers-adif:
 
@@ -118,8 +118,8 @@ fred-mifd
 ~~~~~~~~~
 The :ref:`daemon <FRED-Arch-servers-cpp>` of the MojeID extension.
 
-This daemon implements operations for the :ref:`MojeID service
-<FRED-Arch-clients-mid>`.
+This daemon implements operations for the :ref:`MojeID extension
+<FRED-Features-Extensions>`.
 
 .. _FRED-Arch-servers-dbif:
 
@@ -127,8 +127,8 @@ fred-dbifd
 ~~~~~~~~~~
 The :ref:`daemon <FRED-Arch-servers-cpp>` of the Domain Browser extension.
 
-This daemon implements operations for the :ref:`DomainBrowser service
-<FRED-Arch-clients-db>`.
+This daemon implements operations for the :ref:`Domain Browser extension
+<FRED-Features-Extensions>`.
 
 .. _FRED-Arch-servers-py:
 
@@ -194,7 +194,7 @@ manager.
 
 The mailer is used by the CORBA servers `fred-rifd`_, `fred-adifd`_, `TechCheck`_,
 and also by the CORBA clients :ref:`WebAdmin <FRED-Arch-clients-webadmin>` and
-:ref:`MojeID <FRED-Arch-clients-mid>`.
+MojeID extension.
 
 .. _FRED-Arch-servers-filemanager:
 

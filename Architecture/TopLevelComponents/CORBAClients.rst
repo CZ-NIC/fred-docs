@@ -176,28 +176,4 @@ The service is built on a web server engine (any).
 
 
 
-Extending services
-^^^^^^^^^^^^^^^^^^
-Extensions are optional applications which are not a part of the FRED
-as such. As standalone applications, they use the FRED daemons (CORBA
-servers) to access the FRED database.
-
-.. _FRED-Arch-clients-mid:
-
-MojeID
-~~~~~~
-This service allows users to log in with a single username and password to any
-web service that supports the MojeID authentication, from any computer or
-mobile device.
-
-The service is built on a web server engine (any).
-
-.. _FRED-Arch-clients-db:
-
-Domain browser
-~~~~~~~~~~~~~~
-This service gives an overview of domains, name server sets
-and DNS key sets which are linked to the contact of a logged-in user
-in the Registry. The user logs in using the MojeID service.
-
-The service is built on a web server engine (any).
+...

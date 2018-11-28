@@ -4,9 +4,10 @@
 Extending features :sup:`CZ-specific`
 =====================================
 
-The FRED functionality is enriched by some extensions.
+The FRED functionality can be enriched by some extensions.
 
-.. Note:: So far, these extensions are specific to the Czech Registry.
+.. Note:: The following extensions are specific to the Czech Registry
+   and they are not released to the public.
 
 MojeID
 ------
