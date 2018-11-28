@@ -265,7 +265,7 @@ Procedure to resolve a public request:
 
 #. In the WebAdmin, select :menuselection:`Logs --> PublicRequests`.
 #. :ref:`Search <FRED-Admin-AdminTasks-Search>` for unresolved requests
-   (use the field *Status* with the value ``PRS_NEW``).
+   (use the field *Status* with the value ``PRS_OPENED``).
 #. View request's details.
 #. If the request has been authorized, click the :guilabel:`Accept and send` button
    to answer it, otherwise click :guilabel:`Invalidate and close`.
