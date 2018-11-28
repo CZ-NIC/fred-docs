@@ -48,4 +48,5 @@ via the REST API and process a response in the JSON format.
 Web browser
 ^^^^^^^^^^^
 
-A web browser is just a web browser.
+A web browser used to access FRED's services should support graphics
+and JavaScript.
