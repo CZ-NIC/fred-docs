@@ -140,15 +140,17 @@ Adding zone name servers
 
    $ fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=a.ns.nic.cz
    $ fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=b.ns.nic.cz --addr=1.2.3.4
-   $ fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=c.ns.nic.cz --addr=5.6.7.8,9.0.1.2
+   $ fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=c.ns.nic.cz --addr=5.6.7.8 9.0.1.2
+   # or
+   $ fred-admin --zone_ns_add --zone_fqdn cz --ns_fqdn c.ns.nic.cz --addr 5.6.7.8 --addr 9.0.1.2
 
 This command assigns a name server to a zone.
 
 * ``--zone_fqdn`` (*) – the zone a name server is added to
-* ``--ns_fqdn`` (*) – name server's FQDN – fully qualified domain name
+* ``--ns_fqdn`` (*) – name server's :term:`FQDN`
 * ``--addr`` – name server's IP address (glue) – it is required
-  when the nameserver's FQDN is from the same zone to which it is added;
-  you can list several IP addresses separated by a comma
+  when the nameserver's FQDN is from the same zone to which it is being added;
+  you can list several IP addresses separated with a space
 
 .. _FRED-Admin-reginit-zone-example:
 
