@@ -6,6 +6,10 @@ CORBA clients
 
 The CORBA clients constitute the frontend interfaces that serve actual users.
 
+.. contents::
+   :local:
+   :backlinks: none
+
 Registrar interface
 ^^^^^^^^^^^^^^^^^^^^
 

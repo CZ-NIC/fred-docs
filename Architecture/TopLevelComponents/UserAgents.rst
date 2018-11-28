@@ -10,6 +10,10 @@ in the FRED schema, such as a web browser, are not actual components of FRED.
 However, there is an exception of the EPP client which is a user agent
 that comes with the FRED.
 
+.. contents::
+   :local:
+   :backlinks: none
+
 .. _FRED-Arch-uagents-epp:
 
 EPP client

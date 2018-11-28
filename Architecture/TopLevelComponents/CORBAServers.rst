@@ -9,6 +9,10 @@ All of them use the same ORB implementation
 (`omniORB <http://omniorb.sourceforge.net>`_) which takes care
 of the server side and process threading.
 
+.. contents::
+   :local:
+   :backlinks: none
+
 .. _FRED-Arch-servers-cpp:
 
 C++ daemons
