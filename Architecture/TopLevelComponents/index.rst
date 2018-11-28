@@ -36,7 +36,7 @@ components and their relationships.
      of the FRED software.
    * *White* components are not developed by the CZ.NIC but are required
      for the proper function of the Registry.
-   * *Green* components are developed by the CZ.NIC but they are not
+   * otherwise coloured components are developed by the CZ.NIC but they are not
      parts of the FRED software.
    * *Arrows* signify direct cooperation of components (the arrow points
      at the component which serves the other component); neither the colour
