@@ -249,72 +249,32 @@ values in certain database tables.
 
 .. _config-dbparams:
 
-Basic parameters
-^^^^^^^^^^^^^^^^
+Life cycle parameters
+^^^^^^^^^^^^^^^^^^^^^
 
-A part of configuration relates to the rules of registration, it states e.g.
+A part of database configuration relates to the :doc:`life cycle </Concepts/LifeCycle/index>`
+of :term:`registrable object`\ s. It states e.g.
 when to send a notification to a contact before their domain expires or
-how long after expiration can be a domain re-registered.
+for how long a domain is protected before it can be re-registered.
 
-There is a table in the *main* database dedicated to this kind of configuration
-called ``enum_parameters``.
+There is a table dedicated to this kind of configuration called ``enum_parameters``.
+The parameters in this table can be changed using the following command:
 
-Command to change a parameter::
+.. code-block:: shell
 
-   fred-admin --enum_parameter_change \
-      --parameter_name=<name> \
-      --parameter_value=<value>
+   fred-admin --enum_parameter_change --parameter_name=<name> --parameter_value=<value>
 
-Descriptions of parameters ordered by name (also :ref:`see the figure below
-<fig-domain-lifecycle>` for an illustration of periods related to the domain
-life cycle):
+Parameters that affect **all types** of registrable objects:
 
-* ``expiration_notify_period`` – how many days before a domain expiration
-  is the owner notified about the expiration, negative integer,
-  default: -30
-* ``expiration_dns_protection_period`` – for how many days after expiration
-  is a domain still generated in a zone, integer,
-  default: 30
-* ``expiration_letter_warning_period`` – how many days after expiration
-  is the owner warned about domain deletion, integer,
-  default: 34
-* ``expiration_registration_protection_period`` – for how many days
-  after expiration is a domain protected before it is deleted and
-  can be re-registered, integer,
-  default: 61
+* ``regular_day_procedure_period`` – an hour in the day when the :ref:`regular
+  procedure <cronjob-regular>` is run (24-hour system, 0 means 00:00, 14 means
+  14:00 etc.),
+  default: ``0``
 
-   .. Note:: The system does not check that these intervals correctly follow
-      one another. The following figure, however, gives an idea about how
-      the intervals should be organized in time.
+.. ??? the value must agree with the :ref:`CRON job setting <cronjob-regular>`,
 
-      .. _fig-domain-lifecycle:
-
-      .. figure:: _graphics/domain_lifecycle.png
-         :alt: Illustration of events and periods related to the domain life cycle
-         :align: center
-
-         Events and periods related to the domain life cycle
-
-         *Vertical bars* on the time line signify notification events and
-         *crosses* mean action events taken on domains.
-
-* ``handle_registration_protection_period`` – for how many months is a handle
-  (of a contact, nsset or keyset) protected before it can be re-registered,
-  default: 2
-* ``object_registration_protection_period`` – how many months an object
-  (nsset, keyset) must be unedited and unassigned to be considered idle and
-  marked for deletion,
-  default: 6
-* ``outzone_unguarded_email_warning_period`` – for how many days after expiration
-  may customer support enter additional email addresses in Daphne before the system
-  starts sending warnings about domain exclusion from the zone to them, integer,
-  default: 25
-* ``regular_day_procedure_period`` – an hour in the day when the daily
-  procedure is run (24-hour system, 0 means 00:00, 14 means 14:00 etc.),
-  ??? the value must agree with the :ref:`CRON job setting <cronjob-regular>`,
-  default: 0
 * ``regular_day_procedure_zone`` – time zone for periodic tasks,
-  default: Europe/Prague
+  default: ``Europe/Prague``
 
    .. Important:: It is necessary to adapt the time zone to your area!
 
@@ -324,20 +284,57 @@ life cycle):
    <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>`_
    (the *TZ* column).
 
+* ``roid_suffix`` – suffix used in **r**\ epository **o**\ bject **id**\ entifiers
+  (see also :term:`ROID`), which are :doc:`assigned to registrable objects
+  </EPPReference/ManagedObjects/Common>` by the Registry,
+  default: ``EPP``
+
+Parameters that affect **only domains**:
+
+* ``expiration_dns_protection_period`` – for how many days after expiration
+  is a domain still generated in a zone, integer,
+  default: ``30``
+* ``expiration_letter_warning_period`` – how many days after expiration
+  is the owner warned about domain deletion, integer,
+  default: ``34``
+* ``expiration_notify_period`` – how many days before a domain expiration
+  is the owner notified about the expiration, negative integer,
+  default: ``-30``
+* ``expiration_registration_protection_period`` – for how many days
+  after expiration is a domain protected before it is deleted and
+  can be re-registered, integer,
+  default: ``61``
+* ``outzone_unguarded_email_warning_period`` – for how many days after expiration
+  may customer support enter additional email addresses in Daphne before the system
+  starts sending warnings about domain exclusion from the zone to them, integer,
+  default: ``25``
 * ``regular_day_outzone_procedure_period`` – an hour in the day when the outzone
   procedure is run (24-hour system, 0 means 00:00, 14 means 14:00 etc.),
-  ??? the value must agree with a CRON job setting,
-  default: 14
-* ``roid_suffix`` – suffix used in **r**\ epository **o**\ bject **id**\ entifiers
-  which are :doc:`assigned to registrable objects </EPPReference/ManagedObjects/Common>`
-  by the Registry, see also :term:`ROID`,
-  default: EPP
+  default: ``14``
+
 * ``validation_notify1_period`` :sup:`ENUM domains` – how many days before validation
   expiry the owner should be notified for the first time, negative integer,
-  default: -30
+  default: ``-30``
 * ``validation_notify2_period`` :sup:`ENUM domains` – how many days before validation
   expiry the owner should be notified for the second time, negative integer,
-  default: -15
+  default: ``-15``
+
+.. ??? regular_day_outzone_procedure_period
+   the value must agree with a CRON job setting? (not documented),
+
+.. Important:: The system does not verify that the time intervals
+   follow one another correctly. Double check with the :doc:`life cycle
+   </Concepts/LifeCycle/index>`!
+
+Parameters that affect **only non-domain objects**:
+
+* ``handle_registration_protection_period`` – for how many months is a handle
+  (of a contact, nsset or keyset) protected before it can be re-registered,
+  default: ``2``
+* ``object_registration_protection_period`` – how many months an object
+  (nsset, keyset) must be unedited and unassigned to be considered idle and
+  marked for deletion,
+  default: ``6``
 
 .. todo:: Request usage configurables
 
