@@ -141,6 +141,7 @@ Package list:
 * :file:`fred-transproc`
 * :file:`fred-webadmin`
 * :file:`fred-webwhois` [#s]_
+* :file:`fred-logger-maintenance` [#s]_ (optional)
 
 For each package in the list, run this command from its directory:
 

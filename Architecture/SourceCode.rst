@@ -25,7 +25,7 @@ Each subproject has its own GitHub repository.
 * :ref:`A <install-auto>` `fred-db <https://www.github.com/CZ-NIC/fred-db.git>`_
   – a collection of SQL scripts to set up the database in PostgreSQL
 * :ref:`D <install-dist>` `fred-doc2pdf <https://www.github.com/CZ-NIC/fred-doc2pdf.git>`_
-  – a Python wrapper over ``rml2pdf`` used for generation of some PDF documents
+  – a Python wrapper over ``rml2pdf`` used for generation of PDF documents
 * :ref:`A <install-auto>` `fred-idl <https://www.github.com/CZ-NIC/fred-idl.git>`_
   – IDL interface definitions for CORBA inter-process communication
 * :ref:`A <install-auto>` `fred-mod-corba <https://www.github.com/CZ-NIC/fred-mod-corba.git>`_
@@ -53,3 +53,7 @@ Each subproject has its own GitHub repository.
   – a Python wrapper over CORBA
 * :ref:`D <install-dist>` `fred-utils-pylogger <https://www.github.com/CZ-NIC/fred-utils-pylogger.git>`_
   – a Python wrapper over logging infrastructure for all Python clients
+
+
+* :ref:`D <install-dist>` `logger-maintenance <https://www.github.com/CZ-NIC/fred-logger-maintenance>`_
+  – Python scripts for logger database maintenance

@@ -223,6 +223,9 @@ Database management
 ~~~~~~~~~~~~~~~~~~~
 * :file:`fred-dbmanager` (in :file:`@PREFIX@/sbin`) – Basic database management
   script (no config. file)
+* :file:`create_parts` and :file:`drop_parts` (in :file:`@PREFIX@/bin`)
+  – :ref:`Logger partitions <logger-partitions>` maintenance scripts (example config in
+  :file:`@PREFIX@/share/doc/fred-logger-maintenance/examples/logger.conf.example`)
 
 Database search
 ~~~~~~~~~~~~~~~
