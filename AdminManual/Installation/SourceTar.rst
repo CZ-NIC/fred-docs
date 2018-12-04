@@ -135,10 +135,10 @@ Package list:
 * :file:`fred-utils-pyfco` [#s]_
 * :file:`fred-utils-pylogger` [#s]_
 * :file:`fred-client`
-* :file:`fred-doc2pdf`
+* :file:`fred-doc2pdf` [#s]_
 * :file:`fred-pyfred`
 * :file:`fred-rdap` [#s]_
-* :file:`fred-transproc`
+* :file:`fred-transproc` [#s]_
 * :file:`fred-webadmin`
 * :file:`fred-webwhois` [#s]_
 * :file:`fred-logger-maintenance` [#s]_ (optional)
