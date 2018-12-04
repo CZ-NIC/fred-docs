@@ -9,15 +9,15 @@ the follow-up installation. This procedure is meant for Ubuntu.
 
 See also :doc:`source code architecture </Architecture/SourceCode>`.
 
-Add the CZ.NIC repositories and signing key
+Add the CZ.NIC signing key and repositories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: bash
 
+   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1C0200016A9AC5C6
+
    add-apt-repository "deb http://archive.nic.cz/ubuntu $(lsb_release -sc) main"
    add-apt-repository "deb http://archive.nic.cz/private $(lsb_release -sc) main"
-
-   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1C0200016A9AC5C6
 
    apt-get update
 
@@ -67,7 +67,7 @@ must be installed before other "A" packages and before the :file:`fred-pyfred`
 
 Package list:
 
-* :file:`fred-idl` *# install first*
+* :file:`fred-idl` -- *install first!*
 * :file:`fred-mod-corba`
 * :file:`fred-mod-eppd`
 * :file:`fred-mod-whoisd`
@@ -131,7 +131,7 @@ Naturally, Setuptools must be installed (:file:`python-setuptools` or
 
 Package list:
 
-* :file:`fred-utils-distutils` *# install first (in the Python path)*
+* :file:`fred-utils-distutils` -- *install first! (in the Python path)*
 * :file:`fred-utils-pyfco` [#s]_
 * :file:`fred-utils-pylogger` [#s]_
 * :file:`fred-client`
@@ -175,12 +175,6 @@ the system operational:
 * enable Apache modules,
 * setup the database schema,
 * launch servers.
-
-.. Important:: Remember to :ref:`set the timezone in PostgreSQL <set-pg>`
-   to ``UTC``.
-
-Then :ref:`test the installation <FRED-Admin-Install-Test>`
-and :ref:`initialize the system <FRED-Admin-Install-SysInit>`.
 
 Enable Apache modules
 ~~~~~~~~~~~~~~~~~~~~~
@@ -347,12 +341,21 @@ script or run this command:
 
    sudo /usr/etc/init.d/fred-webadmin-server start
 
-.. NOTE bad prefix reported in ticket #13929 (internal instance of Trac)
-.. TODO Still a problem? 2016-10: Yes
+.. NOTE bad prefix reported in Trac ticket #13929
 
 Now, you can perform :ref:`the smoke test <test-smoke>` to make sure
 that all interfaces are available and working together.
 
-
-
 .. todo:: how to create service(s) and add it(them) to startup launch
+
+After installation
+^^^^^^^^^^^^^^^^^^
+
+Check and adapt, respectively, the :doc:`system configuration <../Configuration>`.
+
+.. Important:: Remember to :ref:`set the timezone in PostgreSQL <set-pg>`
+   to ``UTC``.
+
+Before registrars can access the Registry, you must :doc:`initialize <SystemInit>` it.
+
+You may also want to :doc:`test the installation <Test>`.

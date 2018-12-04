@@ -7,21 +7,22 @@ Installation of binaries on Ubuntu
 This section will guide you through installation of pre-compiled binaries
 on Ubuntu.
 
-Before you start, make sure that all system requirements are met,
-see :ref:`System requirements <system-reqs>`.
+Before you start, make sure that all :ref:`system requirements <system-reqs>`
+are met.
 
 You can install the binaries in two ways:
 
-* download and run our `installation script`_ that will take care
-  of everything that needs to be done, or
+* download and run our `installation script`_ that will automatically install
+  all required components incl. auxiliary software, or
 * you can follow the :ref:`installation steps <install-steps-ubuntu>`
-  one-by-one manually. The steps basically describe what the script does.
+  one-by-one manually. The steps describe basically what the script does.
 
 .. Note:: During installation, you will be prompted about Postfix configuration
-   and MS core fonts license agreement.
+   (see `Postfix Documentation <http://www.postfix.org/documentation.html>`_)
+   and to accept MS core fonts license agreement.
 
 .. Important:: Remember to :ref:`set the timezone in PostgreSQL <set-pg>`
-   to ``UTC``.
+   to ``UTC``, after you complete installation either way.
 
 
 
@@ -62,6 +63,12 @@ script to install software required for the operation of the FRED.
 
       apt-get install software-properties-common
 
+#. Add the current CZ.NIC signing key to ``apt``
+
+   .. code-block:: bash
+
+      apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1C0200016A9AC5C6
+
 #. Add required repositories
 
    .. code-block:: bash
@@ -70,11 +77,10 @@ script to install software required for the operation of the FRED.
       add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc)-updates universe multiverse"
       add-apt-repository "http://archive.nic.cz/ubuntu/"
 
-#. Add the CZ.NIC signing key to ``apt`` and update ``apt`` index
+#. Update ``apt`` index
 
    .. code-block:: bash
 
-      apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 1C0200016A9AC5C6
       apt-get update
 
 #. Install the Postfix mail server
@@ -144,9 +150,13 @@ script to install software required for the operation of the FRED.
       service fred-pyfred start
       service fred-webadmin start
 
-#. Finished. You can :ref:`test the installation <FRED-Admin-Install-Test>` now.
+#. Finished.
 
-.. Note::
+After installation
+^^^^^^^^^^^^^^^^^^
 
-   Before you start using the system, you must
-   :ref:`initialize <FRED-Admin-Install-SysInit>` it.
+Check and adapt, respectively, the :doc:`system configuration <../Configuration>`.
+
+Before registrars can access the Registry, you must :doc:`initialize <SystemInit>` it.
+
+You may also want to :doc:`test the installation <Test>`.

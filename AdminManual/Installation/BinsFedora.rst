@@ -57,9 +57,13 @@ Installation steps
       service httpd start
       service fred-webadmin-server start
 
-#. Finished. You can :ref:`test the installation <FRED-Admin-Install-Test>` now.
+#. Finished.
 
-.. Note::
+After installation
+^^^^^^^^^^^^^^^^^^
 
-   Before you start using the system, you must
-   :ref:`initialize <FRED-Admin-Install-SysInit>` it.
+Check and adapt, respectively, the :doc:`system configuration <../Configuration>`.
+
+Before registrars can access the Registry, you must :doc:`initialize <SystemInit>` it.
+
+You may also want to :doc:`test the installation <Test>`.
