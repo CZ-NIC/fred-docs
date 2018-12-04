@@ -77,8 +77,9 @@ See `PostgreSQL's documentation: SQL Dump
 Logger database content archivation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The *logger* database is divided into partitions by months which is embedded
-in its schema. This allows you to dump only the data from a specified month
+The :doc:`logger </Concepts/AuditLog>` database is divided into partitions
+by months which is embedded in its schema.
+This allows you to dump only the data from a specified month
 (usually the previous one).
 
 Advanced backup: continuous archiving
