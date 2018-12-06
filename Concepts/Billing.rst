@@ -6,26 +6,26 @@ Billing
 
 Billing in the FRED is targeted at **registrars**, who are charged for various operations,
 such as registrations, renewals, or the annual fee. The FRED supports both *prepaid*
-and *postpaid* mode, which can be configured *per operation*.
+and *postpaid* model, which can be configured *per operation*.
 
 A virtual account is managed for each registrar, which holds just the amount
 of **credit** without a specific currency. Incoming payments increase the credit
 on this account and charging for operations decreases it. The current state
 of credit is available over EPP. An account is kept for each zone separately.
 
-.. rubric:: Payment mode
+.. rubric:: Payment model
 
-If a charged operation has the **prepaid mode** associated with it, it **fails**
-when there is not enough credit. (EPP response code: :code:`2104 Billing failure`.)
-Therefore registrars must pay in advance.
+If a charged operation has the **prepaid model** associated with it, it **fails**
+when there is not enough credit (EPP response code: :code:`2104 Billing failure`).
+Therefore registrars must pay in advance to use these operations.
 
-If a charged operation has the **postpaid mode** associated with it, it **succeeds**
+If a charged operation has the **postpaid model** associated with it, it **succeeds**
 even when there is not enough credit.
 Therefore registrars do not have to pay in advance.
 This situation can create debt and it is up to the Registry to force registrars
 to pay it off.
 
-Each operation can have a different mode. Generally, setting the mode means
+Each operation can have a different model. Generally, setting the model means
 to (dis)allow negative credit.
 
 .. contents:: Chapter TOC
@@ -119,7 +119,7 @@ then creating a new domain registration for 2 years costs ``4 + (2 * 6) = 
 and renewing an existing domain for 3 years costs ``3 * 6 = USD 18``.
 
 The amount is subtracted from credit.
-In the prepaid mode, if there is not enough credit, the command fails.
+In the prepaid model, if there is not enough credit, the command fails.
 
 .. rubric:: Charging for all EPP requests over a limit :sup:`OPTIONAL`
 
@@ -174,7 +174,7 @@ into accounting software. The PDF format is generated with a templating system.
 Customization options
 ---------------------------
 
-* Configure prepaid/postpaid mode per operation
+* Configure prepaid/postpaid model per operation
 * Configure price list and VAT
 * Write custom connectors for bank systems or add credit manually
 * Invoices can be ignored or :ref:`PDF templates must be adapted <custom-pdf>`
