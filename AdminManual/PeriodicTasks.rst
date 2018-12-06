@@ -392,24 +392,11 @@ Blocking registrars over limit :sup:`CZ-specific`
 Import & pairing of payments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Task command**::
+.. Important::
 
-   /usr/bin/transproc
-
-**Typically launched**: depends how often you need to check for payments
-
-**Required FRED components**:
-
-* ``fred-admin``: the command ``--bank_import_xml`` is called
-  for the import to the database
-
-**Other required components**: none
-
-**Task activities**:
-
-* imports payments from all configured sources into the database
-* if a payment is paired with a registrar, increases credit
-  and creates an advance invoice
+   .. versionchanged:: 2.38
+      This feature has partially been moved from FRED to an external system.
+      See :doc:`/Concepts/PAIN`.
 
 Invoicing
 ---------

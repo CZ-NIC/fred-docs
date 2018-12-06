@@ -139,25 +139,11 @@ the :guilabel:`Delete` checkbox and click :guilabel:`Save`.
 Assign a payment to a registrar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If a payment was imported to the database but it could not be matched
-with a registrar automatically, you can do so manually in the WebAdmin:
+.. Important::
 
-#. To view the list of payments, select in the WebAdmin menu:
-   :menuselection:`Registrars --> Payments`
+   .. versionchanged:: 2.38
+      This feature is no longer supported in Daphne (WebAdmin).
+      You may assign payments using :program:`Django PAIN`
+      or through the Accounting interface directly.
 
-#. Search for the *Not assigned* payments or restrict the search further,
-   should there be too many results, and choose a payment to view its details.
-
-#. Select the *From/to registrar* type of payment.
-
-#. Enter the *Registrar's handle* to pair the payment with.
-
-#. Confirm the input by clicking :guilabel:`Save`.
-   You will be prompted for an extra confirmation by retyping a number.
-   Type it and hit :guilabel:`OK`.
-
-#. The pairing is saved. (If the payment was sufficient, registrar's credit
-   has been increased.)
-
-.. NOTE The type of payment must correspond with an appropriate destination
-   account if you have various accounts for various purposes. Where is this set?
+      See :doc:`/Concepts/PAIN`.

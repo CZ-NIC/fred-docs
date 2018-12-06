@@ -107,6 +107,10 @@ and marked [CZ.NIC].
 
    * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-akmd.conf`
 
+* :file:`fred-accifd` – accounting daemon – operations for payment pairing
+
+   * standalone configuration file [CZ.NIC]: :file:`/etc/fred/fred-accifd.conf`
+
 * :file:`fred-msgd` – messaging daemon – operations for sending SMS text
   messages and paper letters
 
@@ -241,6 +245,11 @@ Apache modules
 Configuration of FRED Apache modules and FRED sites can be found in Apache
 configuration subdirectories, usually under :file:`/etc/apache2/`.
 
+Django PAIN
+^^^^^^^^^^^^^
+
+Configuration of this Django utility is in the :file:`settings.py`
+and described within project source.
 
 .. _config-db:
 

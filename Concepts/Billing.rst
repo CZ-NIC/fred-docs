@@ -52,6 +52,11 @@ with the bank transaction. If the symbol in a transaction matches a registrar,
 the payment is associated with this registrar. Unmatched transactions may be
 :ref:`associated manually <daphne-task-assign-payment>` in the web administration (Daphne).
 
+.. versionchanged:: 2.38
+   Bank transactions are collected, parsed and associated with registrars externally,
+   and imported to FRED via a new Accounting interface for further processing.
+   See also :doc:`PAIN`.
+
 Processing payments
 -------------------
 

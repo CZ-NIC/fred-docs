@@ -4,12 +4,12 @@
 Invoicing and banking :sup:`CZ-specific`
 ------------------------------------------
 
-The FRED implements the prepaid-invoicing model.
+The FRED implements both the prepaid-invoicing and postpaid-invoicing model
+which can be selected for each billed operation.
 
-Bank accounts are queried for incoming payments using bank-specific scripts
-and these payments are matched to registrars using pairing symbols.
-If a payment matches, an advance invoice is issued and credit is extended
-to the matching registrar by a corresponding amount.
+Payments collected by an external system can be paired with FRED using the
+Accounting interface. When a payment is paired, an advance invoice is issued
+and credit is extended to the matching registrar by a corresponding amount.
 The credit is then decreased upon each domain registration or renewal.
 The price of registration and renewal is configurable per zone.
 
@@ -19,11 +19,13 @@ and renewals and the total amount of money subtracted from the credit.
 
 .. Note::
 
-   Work with the accounting subsystem may be tricky
+   Work with the billing subsystem may be tricky
    because it is tightly tied to the context of the financial and commercial
    laws of the Czech Republic (esp. the :term:`VAT` handling and invoice
    essentials).
 
    Therefore it may not be fully (or at all) suitable for your environment.
 
-.. todo:: update with the postpaid model (negative credit)
+More about :doc:`billing in FRED </Concepts/Billing>`.
+
+There is also a new concept of billing being developed, see :doc:`/Concepts/PAIN`.

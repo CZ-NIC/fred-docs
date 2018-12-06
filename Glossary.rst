@@ -100,3 +100,6 @@ Glossary of Terms
 
    db
       database
+
+   PAIN
+      PAyments and INvoices. See :doc:`/Concepts/PAIN`.

@@ -57,3 +57,8 @@ Each subproject has its own GitHub repository.
 
 * :ref:`D <install-dist>` `logger-maintenance <https://www.github.com/CZ-NIC/fred-logger-maintenance>`_
   – Python scripts for logger database maintenance
+
+* `django-pain <https://www.github.com/CZ-NIC/django-pain>`_
+  – Django :term:`PAIN` application
+* `fred-pain <https://www.github.com/CZ-NIC/fred-pain>`_
+  – FRED plugin for :term:`PAIN` also based on Django

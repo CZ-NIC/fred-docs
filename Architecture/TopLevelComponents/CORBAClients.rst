@@ -77,10 +77,13 @@ Transproc
 This Python script is used to download and analyze transcripts
 of bank transactions or simple payments. It parses a downloaded transcript,
 whose format is specific to each bank, using a *processor* (configurable
-script), transforms it into the internal XML format recognized by the FRED
-and calls the :program:`fred-admin` to import this data into the database.
+script), transforms it into an internal XML format
+and calls :ref:`pain <FRED-Arch-clients-pain>` to save this data into the
+**PAIN** database.
 
 The script has its own configuration file.
+
+See also :doc:`/Concepts/PAIN`.
 
 .. _FRED-Arch-clients-admin:
 
@@ -126,6 +129,23 @@ The utility is implemented with the `getdns <https://getdnsapi.net/>`_ and
 
 No configuration file nor database access required.
 The scanner reads from STDIN and writes to STDOUT.
+
+.. _FRED-Arch-clients-pain:
+
+PAIN utility & admin service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This utility collects and parses payments, and saves them to an independent
+database. It is based on `Django <https://www.djangoproject.com/>`_.
+
+The utility allows to pair processed payments with a registrar
+credit account and invoices in FRED, either automatically or manually using
+the Django admin interface.
+
+The ``fred-pain`` module connects this independent utility to FRED over CORBA.
+
+See also :doc:`/Concepts/PAIN`.
+
 
 
 Public interface

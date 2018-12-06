@@ -97,6 +97,15 @@ management of keysets (loading domains with name servers, updating DNSSEC,
 notifying contacts); it functions as the backend for the :ref:`AKM client
 <FRED-Arch-clients-akm>`.
 
+.. _FRED-Arch-servers-acc:
+
+fred-accifd
+~~~~~~~~~~~
+The accounting :ref:`daemon <FRED-Arch-servers-cpp>`.
+
+This daemon implements operations for pairing processed payments of registrars
+with credit and invoices.
+
 .. _FRED-Arch-servers-msg:
 
 fred-msgd
