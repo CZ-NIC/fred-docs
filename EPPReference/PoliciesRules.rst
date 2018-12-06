@@ -17,7 +17,21 @@ Clients (registrars) are not considered third-party entities in the FRED,
 and they deal with the information under terms of a contract with the Registry
 operator.
 
-The policies comply with :term:`GDPR` and they are currently hard-coded.
+.. versionchanged:: 2.38
+   The policies are configurable. This chapter describes the default
+   :term:`CZ-specific` :ref:`configuration <config-contact-disclosure>`
+   that used to be hard-coded in version 2.37.
+
+.. Note::
+
+   The policies & rules of disclosure may be configured by the Registry
+   operator differently.
+
+   The Registry operator is supposed to publish a document that declares
+   the rules of registrar communication with the Registry,
+   including a description of the policies & rules of disclosure.
+
+**If you are a CZ.NIC registrar, the following description applies to you.**
 
 .. contents:: Chapter TOC
    :local:

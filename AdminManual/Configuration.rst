@@ -490,3 +490,7 @@ into the ``reminder_registrar_parameter`` table:
 * ``reply_to`` – enter an email address for the Reply-To header.
 
 This must be done manually with an SQL insert.
+
+.. _config-contact-disclosure:
+
+.. include:: ConfigDisclosure.rst
