@@ -10,6 +10,8 @@ The CORBA clients constitute the frontend interfaces that serve actual users.
    :local:
    :backlinks: none
 
+
+
 Registrar interface
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -35,6 +37,7 @@ Apache module. Transportation is provided by the TCP/IP protocols.
 
 The service is built on a web server engine (Apache). It has its own
 configuration in the Apache config. syntax.
+
 
 
 Administration interface
@@ -127,7 +130,7 @@ name server.
 The utility is implemented with the `getdns <https://getdnsapi.net/>`_ and
 `libevent <http://libevent.org/>`_ APIs.
 
-No configuration file nor database access required.
+Neither a configuration file nor database access are required.
 The scanner reads from STDIN and writes to STDOUT.
 
 .. _FRED-Arch-clients-pain:
@@ -186,7 +189,7 @@ The web site is protected against data mining with CAPTCHA.
 
 This service does not allow to browse information about ENUM domains.
 
-The service is built on a web server engine (any).
+It is based on `Django <https://www.djangoproject.com/>`_.
 
 .. _FRED-Arch-clients-rdap:
 
@@ -196,8 +199,4 @@ RDAP service
 This service processes queries sent via the HTTP protocol using the REST API.
 If the query is successful, the response contains JSON-formatted data.
 
-The service is built on a web server engine (any).
-
-
-
-...
+It is based on `Django <https://www.djangoproject.com/>`_.

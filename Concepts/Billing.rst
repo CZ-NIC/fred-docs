@@ -167,7 +167,7 @@ and account (monthly bills).
 Invoices are automatically numbered, but initial numbers (per year and invoice type)
 must be configured before invoices can be generated, see :ref:`reginit-invoice-numbering`.
 
-Invoices are delivered to registrars' email in XML and PDF formats. The XML format is
+Invoices are delivered to registrars' email in both XML and PDF formats. The XML format is
 FRED's format for invoices and it can be transformed with XSLT for import
 into accounting software. The PDF format is generated with a templating system.
 

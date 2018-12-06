@@ -21,13 +21,13 @@ We work with the following nodes:
 
 * `EPP node`_ -- EPP service
 * `ADMIN node`_ -- web admin service
-* `WEB node`_ -- public web services: WHOISes, RDAP, Domain Browser [#ext]_
+* `WEB node`_ -- public web services: Unix WHOIS, Web WHOIS, RDAP, Domain Browser [#ext]_
 * `HM node`_ -- zone management
 * `APP node`_ -- application servers, CLI admin tools, pgbouncer, CORBA naming
   service
 * :ref:`DB node <deploy-db>` -- the main FRED database
 * :ref:`LOGDB node <deploy-db>` -- the logger database
-* MOJEID node [#ext]_ -- MojeID service, web and database
+* MOJEID node [#ext]_ -- MojeID service and database
 
 .. [#ext] MojeID and Domain Browser are :term:`CZ-specific` :doc:`extensions
    </Features/Extensions>`, and they are not described further.
