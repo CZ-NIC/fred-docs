@@ -383,15 +383,15 @@ This section describes communication that arises from administrative tasks of th
      - Registry has carried out a periodic check, which has failed
      - :ref:`Technical contacts <contact-roles>` of the nsset
      - Email (:ref:`CS params <email-type-techcheck>`)
-   * - :doc:`Automatic keyset management </Concepts/AKM>` – Acceptance period iniated
+   * - :doc:`/Concepts/AKM` – Acceptance period iniated
      - Registry has discovered valid CDNSKEY records on an insecured domain
      - :ref:`Technical contacts <contact-roles>` of the nsset
      - Email
-   * - :doc:`Automatic keyset management </Concepts/AKM>` – Acceptance period broken
+   * - :doc:`/Concepts/AKM` – Acceptance period broken
      - Registry has detected that CDNSKEY records changed during the acceptance period
      - :ref:`Technical contacts <contact-roles>` of the nsset
      - Email
-   * - :doc:`Automatic keyset management </Concepts/AKM>` – Acceptance period completed
+   * - :doc:`/Concepts/AKM` – Acceptance period completed
      - Registry has updated a domain with the newly accepted key set
      - See :ref:`Update notification <Object modifications>`
      -
@@ -399,7 +399,7 @@ This section describes communication that arises from administrative tasks of th
      -
      - Registrar
      - Poll message (:ref:`structure <epp-poll-type-update>`)
-   * - :doc:`Automatic keyset management </Concepts/AKM>` – Keys update
+   * - :doc:`/Concepts/AKM` – Keys update
      - Registry has discovered new valid CDNSKEY records on a secured domain
      - :ref:`Technical contacts <contact-roles>` of the nsset
      - Email (:ref:`CS params <email-type-akm-upd>`)

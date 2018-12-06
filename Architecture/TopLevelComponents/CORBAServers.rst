@@ -90,7 +90,7 @@ It functions as the backend for Daphne, the :ref:`web administration service
 
 fred-akmd
 ~~~~~~~~~
-The automatic keyset management :ref:`daemon <FRED-Arch-servers-cpp>`.
+The automated keyset management :ref:`daemon <FRED-Arch-servers-cpp>`.
 
 This daemon implements operations over the database that support automatic
 management of keysets (loading domains with name servers, updating DNSSEC,

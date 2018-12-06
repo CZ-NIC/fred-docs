@@ -219,7 +219,7 @@ Automatic contact verification :sup:`CZ-specific`
 
 .. _cronjob-akm:
 
-Automatic keyset management
+Automated keyset management
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 See also the :doc:`AKM concept </Concepts/AKM>`.

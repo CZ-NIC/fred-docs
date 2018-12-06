@@ -106,9 +106,8 @@ This program shares configuration with C++ daemons.
 Fred-akm
 ~~~~~~~~~
 
-This command-line application implements the processing logic of :doc:`automatic
-keyset management </Concepts/AKM>` and is used to perform
-the :ref:`periodic task <cronjob-akm>`.
+This command-line application implements the processing logic of :doc:`/Concepts/AKM`
+and is used to perform the :ref:`periodic task <cronjob-akm>`.
 Refer to ``fred-akm --help`` for all available commands.
 
 The program has its own :ref:`configuration <config-cliutils>` file.
@@ -121,7 +120,7 @@ The program uses a local SQLite database to store internal intermediary data
 CDNSKEY scanner
 ~~~~~~~~~~~~~~~
 
-This command-line utility is used during automatic management of keysets
+This command-line utility is used during automated management of keysets
 to scan specified name servers for requests to update DNSSEC keys
 of specified domains. The utility spreads queries over a specified run time
 to avoid overloading the DNS infrastructure and distributes queries per

@@ -17,7 +17,7 @@ Each subproject has its own GitHub repository.
 .. rubric:: List of the subprojects and repositories
 
 * :ref:`A <install-auto>` `fred-akm <https://www.github.com/CZ-NIC/fred-akm.git>`_
-  – a CLI CORBA client for automatic keyset management
+  – a CLI CORBA client for automated keyset management
 * :ref:`A <install-auto>` `fred-cdnskey-scanner <https://www.github.com/CZ-NIC/fred-cdnskey-scanner.git>`_
   – a CLI tool to scan a set of domains for CDNSKEY records
 * :ref:`D <install-dist>` `fred-client <https://www.github.com/CZ-NIC/fred-client.git>`_

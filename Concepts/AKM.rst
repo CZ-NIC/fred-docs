@@ -1,7 +1,7 @@
 
 
 
-Automatic keyset management
+Automated keyset management
 ===========================
 
 AKM is based on the two RFCs:

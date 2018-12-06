@@ -1,7 +1,7 @@
 
 
 
-Automatic keyset management
+Automated keyset management
 ---------------------------
 
 In order to simplify introduction and rotation of DNSSEC keys, the FRED implements
@@ -11,4 +11,4 @@ link DNSSEC-enabled domains into the global chain of trust and respond to key up
 This method does not require registrars to be involved in any way
 because the publishing of the CDNSKEY records relies on DNS operators.
 
-:doc:`More on the concept of automatic keyset management. </Concepts/AKM>`
+:doc:`More on the concept of automated keyset management. </Concepts/AKM>`
