@@ -244,4 +244,56 @@ The newest are :ref:`at the end <roc-end>`.
      - :doc:`/Architecture/Deployment`
      - Added an example of distributed deployment
 
-.. _roc-end:
+       .. _roc-end:
+   * - **2.38**
+     - **1.0**
+     - :doc:`/ReleaseNotes/index`
+     - Added release notes for FRED 2.38.0, 2.37.3 and 2.37.2
+   * -
+     -
+     - :doc:`/ReleaseNotes/Upgrade-2-38-0`
+     - Added considerations before upgrade
+   * -
+     -
+     - :ref:`features-gen-billing`, |br|
+       :doc:`/Concepts/Billing`, |br|
+       :doc:`/Concepts/PAIN`, |br|
+       :doc:`/Architecture/BlackboxModel`, |br|
+       :doc:`/Architecture/TopLevelComponents/index`, |br|
+       :doc:`/AdminManual/Configuration`, |br|
+       :ref:`cron-collect-payments`, |br|
+       :ref:`daphne-task-assign-payment`
+     - Added or changed according to PAIN Phase 1
+       (see :doc:`the release notes </ReleaseNotes/index>`)
+   * -
+     -
+     - :ref:`contact-disclosure`,
+       :ref:`config-contact-disclosure`,
+       :doc:`/EPPReference/PoliciesRules`
+     - Changed disclosure policies to configurable
+   * -
+     -
+     - :ref:`install-dist`
+     - Marked more packages as ported to setuptools
+   * -
+     -
+     - :ref:`FRED-Admin-reginit-zone-ns`
+     - Changed syntax of the command
+   * -
+     -
+     - :ref:`resolve-public-request`
+     - Changed the name of the status of new public requests
+   * -
+     -
+     - :ref:`config-dbparams`
+     - Revised configuration of basic :term:`db` parameters
+   * -
+     -
+     - /AdminManual/Extensions,
+       :doc:`/Architecture/TopLevelComponents/CORBAClients`
+     - Removed :term:`CZ-specific` front-end extensions,
+       because they are not released to the public
+   * -
+     -
+     - :doc:`/AdminManual/Installation/BinsUbuntu`
+     - Revised the installation process a tiny bit
