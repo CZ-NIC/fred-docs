@@ -61,6 +61,8 @@ The audit log records can be viewed in the web administration
 The log records can be searched like any other records,
 see :doc:`/AdminManual/AdministrativeTasks/Search`.
 
+.. _logger-partitions:
+
 Database & partitioning
 -----------------------
 

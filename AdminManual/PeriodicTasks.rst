@@ -389,6 +389,8 @@ Blocking registrars over limit :sup:`CZ-specific`
 
 * in the database, table: ``request_fee_registrar_parameter``
 
+.. _cron-collect-payments:
+
 Import & pairing of payments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
