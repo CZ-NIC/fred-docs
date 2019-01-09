@@ -38,16 +38,16 @@ Version 2.38.0
 
 .. rubric:: Bugfixes
 
-* Server (fred-admin): check that a domain has not been deleted yet before deleting it
+* Server (fred-admin): check that a domain has not been deleted yet before deleting it
   (using the command ``--object_delete_candidates``
   with the argument ``--object_delete_spread_during_time``
-  used to log an error when attempting to delete a domain repeatedly)
+  used to log an error when attempting to delete a domain repeatedly)
 * Mod-eppd, Client: show extra-addr extension in the EPP greeting
   (``<extURI>http://www.nic.cz/xml/epp/extra-addr-1.0</extURI>``)
   when enabled in mod-eppd
 
    * Client upgrade is necessary!
 
-* Server (fred-rifd): in ``send_authinfo`` operations, check validity of email addresses
-  of linked contacts; if any address is invalid, end with the "2400 Command failed" error
-  and do not send anything
+* Server (fred-rifd): in ``sendauthinfo`` operations, check validity of the main email address
+  of linked contacts; if there is no valid address in any of the linked contacts,
+  end with the "2400 Command failed" error to signify that nothing will be sent
