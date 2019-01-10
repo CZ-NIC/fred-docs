@@ -243,8 +243,6 @@ The newest are :ref:`at the end <roc-end>`.
      -
      - :doc:`/Architecture/Deployment`
      - Added an example of distributed deployment
-
-       .. _roc-end:
    * - **2.38**
      - **1.0**
      - :doc:`/ReleaseNotes/index`
@@ -297,3 +295,9 @@ The newest are :ref:`at the end <roc-end>`.
      -
      - :doc:`/AdminManual/Installation/BinsUbuntu`
      - Revised the installation process a tiny bit
+
+       .. _roc-end:
+   * -
+     - **1.1**
+     - :doc:`/ReleaseNotes/index`
+     - Corrected the note in 2.38.0 about the ``sendauthinfo`` bugfix
