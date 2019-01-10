@@ -54,7 +54,7 @@ the payment is associated with this registrar. Unmatched transactions may be
 
 .. versionchanged:: 2.38
    Bank transactions are collected, parsed and associated with registrars externally,
-   and imported to FRED via a new Accounting interface for further processing.
+   and imported to FRED via a new Accounting interface for further processing.
    See also :doc:`PAIN`.
 
 Processing payments

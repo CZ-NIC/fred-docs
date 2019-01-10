@@ -78,7 +78,7 @@ administrative operations, which are not available in the Web service itself,
 including automated self-administration tasks.
 
 The Registry staff may also edit domains and the other :term:`registrable object`\
-s for various administrative reasons, but they must use the RIF
+s for various administrative reasons, but they must use the RIF
 with the *system registrar* account.
 
 Public interface (PIF)

@@ -9,8 +9,8 @@ FRED creates an audit trail of activity of all user services
 from which service requests come.
 
 An audit trail is required as the basis for information security audits and
-it can also serve as a supporting mechanism for access control, prevention
-of criminal activity, evidence in a trial, or just an auxiliary tool in problem
+it can also serve as a supporting mechanism for access control, prevention
+of criminal activity, evidence in a trial, or just an auxiliary tool in problem
 solving.
 
 The specialized schema of the log database allows the records to be maintained

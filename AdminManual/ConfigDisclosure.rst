@@ -25,7 +25,7 @@ can be used in the disclose element of the corresponding operation.
 
 .. rubric:: fred-rifd
 
-``contact_data_filter`` -- a method of enforcing server's disclosure policy:
+``contact_data_filter`` -- a method of enforcing server's disclosure policy:
 
 * ``set_unused_discloseflags`` -- sets disclosure of attributes, for which
   there was no preference, to the configured defaults unconditionally
@@ -38,7 +38,7 @@ The Registry operator may develop and assign custom methods.
 
 Default disclosure settings ``default_disclose*`` are listed for ``create`` and
 ``update`` operations separately. If the attribute's disclosure cannot be set
-in an operation, it must have a default setting listed here.
+in an operation, it must have a default setting listed here.
 
 Example configurations
 ^^^^^^^^^^^^^^^^^^^^^^

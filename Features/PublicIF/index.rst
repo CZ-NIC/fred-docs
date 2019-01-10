@@ -78,9 +78,9 @@ Public requests
 * Request for sending personal info
 * Requests (all of the above types) fullfilled to:
    * an email in the Registry are approved immediatelly and automatically
-   * a custom email must be approved manually and accompanied by a confirmation:
-      * Email signed with a digital certificate
-      * Letter with a notarized signature
+   * a custom email must be approved manually and accompanied by a confirmation:
+      * Email signed with a digital certificate
+      * Letter with a notarized signature
 
 Registrar list
 --------------

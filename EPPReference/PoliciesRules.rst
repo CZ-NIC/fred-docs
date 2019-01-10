@@ -31,7 +31,7 @@ operator.
    the rules of registrar communication with the Registry,
    including a description of the policies & rules of disclosure.
 
-**If you are a CZ.NIC registrar, the following description applies to you.**
+**If you are a CZ.NIC registrar, the following description applies to you.**
 
 .. contents:: Chapter TOC
    :local:

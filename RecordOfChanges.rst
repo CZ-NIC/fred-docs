@@ -217,7 +217,7 @@ The newest are :ref:`at the end <roc-end>`.
    * -
      - **1.4**
      - :doc:`/Concepts/EPPClientWorkflow`
-     - Added a description of a general EPP client workflow
+     - Added a description of a general EPP client workflow
    * -
      -
      - :doc:`/RDAPReference/index`
@@ -296,4 +296,4 @@ The newest are :ref:`at the end <roc-end>`.
    * -
      -
      - :doc:`/AdminManual/Installation/BinsUbuntu`
-     - Revised the installation process a tiny bit
+     - Revised the installation process a tiny bit

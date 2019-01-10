@@ -129,7 +129,7 @@ name server.
 The utility is implemented with the `getdns <https://getdnsapi.net/>`_ and
 `libevent <http://libevent.org/>`_ APIs.
 
-Neither a configuration file nor database access are required.
+Neither a configuration file nor database access are required.
 The scanner reads from STDIN and writes to STDOUT.
 
 .. _FRED-Arch-clients-pain:
@@ -140,7 +140,7 @@ PAIN utility & admin service
 This utility collects and parses payments, and saves them to an independent
 database. It is based on `Django <https://www.djangoproject.com/>`_.
 
-The utility allows to pair processed payments with a registrar
+The utility allows to pair processed payments with a registrar
 credit account and invoices in FRED, either automatically or manually using
 the Django admin interface.
 

@@ -28,4 +28,4 @@ and renewals and the total amount of money subtracted from the credit.
 
 More about :doc:`billing in FRED </Concepts/Billing>`.
 
-There is also a new concept of billing being developed, see :doc:`/Concepts/PAIN`.
+There is also a new concept of billing being developed, see :doc:`/Concepts/PAIN`.

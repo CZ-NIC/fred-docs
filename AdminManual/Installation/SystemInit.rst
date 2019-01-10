@@ -24,7 +24,7 @@ Config-zone script
 For a simple setup of your particular TLD, you can download and use
 `this Python script <https://fred.nic.cz/files/fred/fred-config-zone.py>`_.
 
-It takes a TLD as an argument and generates a set of shell commands
+It takes a TLD as an argument and generates a set of shell commands
 on std.output, which can be directly executed. Of course, you can have a look
 at those commands first to see what they do.
 

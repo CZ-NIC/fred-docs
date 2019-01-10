@@ -7,12 +7,12 @@ Version 2.38.0
 .. rubric:: Enhancements
 
 * Server (fred-admin): change ``--zone_ns_add`` syntax -- when entering
-  multiple IP addresses, separate them with a space or repeat the argument
+  multiple IP addresses, separate them with a space or repeat the argument
   (see :ref:`FRED-Admin-reginit-zone-ns`)
 * Server: remove an obsolete database layer from back end
 * Mod-eppd, Server (fred-rifd): make disclosure policy and default disclose flags
   configurable, see also :doc:`Upgrade-2-38-0`
-* improve public requests -- asynchronous processing with a command in fred-admin
+* improve public requests -- asynchronous processing with a command in fred-admin
 * continue porting to setuptools (``doc2pdf``, ``transproc``)
 * continue porting to Python 3
 
