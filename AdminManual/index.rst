@@ -50,5 +50,4 @@ Terms and definitions can be found :ref:`in the glossary <glossary>`.
    Accounting
    Maintenance
    Customization
-   Extensions
    Appendixes/index
