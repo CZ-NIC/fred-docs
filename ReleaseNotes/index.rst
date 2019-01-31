@@ -15,6 +15,8 @@ Overview of changes in software from preceding versions.
    :local:
    :backlinks: none
 
+.. include:: release-2-38-1.rst
+
 .. include:: release-2-38-0.rst
 
 .. include:: release-2-37-3.rst
