@@ -88,7 +88,7 @@ The newest are :ref:`at the end <roc-end>`.
      - Added release notes for FRED 2.35
    * -
      -
-     - :doc:`/ReleaseNotes/Upgrade-2-35-howto`
+     - :doc:`/ReleaseNotes/Upgrade-2-35`
      - An ad-hoc guide to database upgrade specifics in this release
    * -
      -

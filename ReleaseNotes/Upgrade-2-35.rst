@@ -36,8 +36,8 @@ e.g. with this query which will tell whether there is more than one template for
 
    SELECT count(*)
      FROM mail_type_template_map
-    GROUP BY typeid
-   HAVING count(*) > 1;
+     GROUP BY typeid
+     HAVING count(*) > 1;
 
 If the cardinality is 1:1 (the query returned nothing), you may just run the
 script ``2.32.0-2.33.0-2-migrate-without-mail-archive.sql``.
@@ -48,17 +48,19 @@ that each email type has just one template.
 Email archive migration (3)
 ---------------------------
 
-The ``mail_archive`` table no longer contains complete emails but only parameters
-passed in the JSON format from ``pyfred-mailer``.
+The ``mail_archive`` table no longer contains complete emails but only headers
+and body parameters passed in the JSON format from ``pyfred-mailer``.
 
 .. rubric:: Full migration
 
-The migration script ``2.32.0-2.33.0-3-migrate-mail-archive.sql`` contains functions
-that are capable of transforming stored email messages into the JSON form.
-However, they are based on template texts. If you don't use the default email templates
-(which is very likely), you need to adapt or write your own transformation functions.
+.. versionchanged:: 2.38.1
 
-.. rubric:: Headers-only migration
+   Full-migration functions, which were designed for the :term:`CZ-specific` migration
+   (based on default email templates), were **discontinued**.
+   If you want to migrate body parameter values together with headers,
+   you must write your own function(s) first.
+
+.. rubric:: Headers-only migration (default)
 
 This option is handy if you want to keep just the information to whom the email has been sent.
 The following function from the script ``2.32.0-2.33.0-3-migrate-mail-archive.sql``
@@ -67,6 +69,18 @@ can be used (after adaptation if necessary):
 .. code-block:: sql
 
    migrate_mail_header(message TEXT) RETURNS JSONB
+
+Migrated headers of sent emails by default: ``To``, ``Cc``, ``Bcc``, ``Message-ID``
+
+Migrated headers of non-delivery reports by default
+(function *migrate_mail_archive_response_to_json_impl*):
+``To``, ``Data``, ``Action``,
+``Status``, ``Subject``, ``Remote-MTA``, ``Reporting-MTA``, ``Diagnostic-Code``,
+``Final-Recipient``
+
+.. versionchanged:: 2.38.1
+
+   The migration is executed within the script.
 
 .. rubric:: No migration
 

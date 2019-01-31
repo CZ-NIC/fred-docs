@@ -6,7 +6,7 @@ Version 2.35.0
 
 .. rubric:: Enhancements
 
-* changes in the database schema concerning email storage – see :doc:`./Upgrade-2-35-howto`
+* changes in the database schema concerning email storage – see :doc:`./Upgrade-2-35`
    * email stored unrendered to decrease ``mail_archive`` table size
    * support for email template versioning
    * email rendered only on demand (sending, inspecting details)
