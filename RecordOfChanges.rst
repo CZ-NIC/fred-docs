@@ -295,9 +295,13 @@ The newest are :ref:`at the end <roc-end>`.
      -
      - :doc:`/AdminManual/Installation/BinsUbuntu`
      - Revised the installation process a tiny bit
-
-       .. _roc-end:
    * -
      - **1.1**
      - :doc:`/ReleaseNotes/index`
      - Corrected the note in 2.38.0 about the ``sendauthinfo`` bugfix
+
+       .. _roc-end:
+   * -
+     - **1.2**
+     - :doc:`/ReleaseNotes/index`
+     - Added release notes for FRED 2.38.1
