@@ -299,9 +299,18 @@ The newest are :ref:`at the end <roc-end>`.
      - **1.1**
      - :doc:`/ReleaseNotes/index`
      - Corrected the note in 2.38.0 about the ``sendauthinfo`` bugfix
-
-       .. _roc-end:
    * -
      - **1.2**
      - :doc:`/ReleaseNotes/index`
      - Added release notes for FRED 2.38.1
+
+       .. _roc-end:
+   * -
+     - **1.3**
+     - :ref:`system-reqs`
+     - Updated supported Fedora versions
+   * -
+     -
+     - :doc:`/AdminManual/Installation/BinsUbuntu`,
+       :doc:`/AdminManual/Installation/BinsFedora`
+     - Updated installation procedures
