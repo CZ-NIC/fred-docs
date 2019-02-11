@@ -23,8 +23,8 @@ Operating system
 To deploy binaries, you must have installed one of these **operating systems**:
 
 * Ubuntu 16.04 LTS (Xenial Xerus)
-* Fedora 24
-* Fedora 25
+* Fedora 28
+* Fedora 29
 * RHEL 7
 * CentOS 7
 
