@@ -9,6 +9,11 @@ the follow-up installation. This procedure is meant for Ubuntu.
 
 See also :doc:`source code architecture </Architecture/SourceCode>`.
 
+.. Important:: Remember to :ref:`set the timezone in PostgreSQL <set-pg>`
+   to ``UTC``.
+
+
+
 Add the CZ.NIC signing key and repositories
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
