@@ -151,11 +151,4 @@ script to install software required for the operation of the FRED.
 
 #. Finished.
 
-After installation
-^^^^^^^^^^^^^^^^^^
-
-Check and adapt, respectively, the :doc:`system configuration <../Configuration>`.
-
-Before registrars can access the Registry, you must :doc:`initialize <SystemInit>` it.
-
-You may also want to :doc:`test the installation <Test>`.
+.. include:: After.rst

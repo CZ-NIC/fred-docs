@@ -348,14 +348,4 @@ that all interfaces are available and working together.
 
 .. todo:: how to create service(s) and add it(them) to startup launch
 
-After installation
-^^^^^^^^^^^^^^^^^^
-
-Check and adapt, respectively, the :doc:`system configuration <../Configuration>`.
-
-.. Important:: Remember to :ref:`set the timezone in PostgreSQL <set-pg>`
-   to ``UTC``.
-
-Before registrars can access the Registry, you must :doc:`initialize <SystemInit>` it.
-
-You may also want to :doc:`test the installation <Test>`.
+.. include:: After.rst
