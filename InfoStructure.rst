@@ -125,14 +125,6 @@ Customization
    :start-after: .. struct-start
    :end-before: .. struct-end
 
-
-Extensions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. include:: AdminManual/Extensions.rst
-   :start-after: .. struct-start
-   :end-before: .. struct-end
-
 Client user guide
 -----------------
 
