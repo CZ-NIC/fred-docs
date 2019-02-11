@@ -125,7 +125,13 @@ todo_include_todos = False
 # Conditional inclusion tags - uncomment to allow inclusion
 #tags.add('mode_structure')
 
-# Substitutions
+# Substitutions - parametrized
+#rst_prolog = """
+#.. |subst-name| replace:: {}
+#
+#""".format(variable)
+
+# Substitutions - fixed
 rst_epilog = """
 .. |br| raw:: html
 
