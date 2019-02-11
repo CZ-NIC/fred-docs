@@ -14,12 +14,8 @@ You can install the binaries in two ways:
 
 * download and run our `installation script`_ that will automatically install
   all required components incl. auxiliary software, or
-* you can follow the :ref:`installation steps <install-steps-ubuntu>`
+* you can follow the `installation steps`_
   one-by-one manually. The steps describe basically what the script does.
-
-.. Note:: During installation, you will be prompted about Postfix configuration
-   (see `Postfix Documentation <http://www.postfix.org/documentation.html>`_)
-   and to accept MS core fonts license agreement.
 
 .. Important:: Remember to :ref:`set the timezone in PostgreSQL <set-pg>`
    to ``UTC``, after you complete installation either way.
@@ -61,7 +57,7 @@ script to install software required for the operation of the FRED.
 
    .. code-block:: bash
 
-      apt-get install software-properties-common
+      apt-get --assume-yes install software-properties-common
 
 #. Add the current CZ.NIC signing key to ``apt``
 
@@ -87,13 +83,16 @@ script to install software required for the operation of the FRED.
 
    .. code-block:: bash
 
-      apt-get install postfix
+      # preset Postfix configuration
+      debconf-set-selections <<< "postfix postfix/mailname string $(hostname)"
+      debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
+      apt-get --assume-yes install postfix
 
 #. Install the FRED package
 
    .. code-block:: bash
 
-      apt-get install fred
+      apt-get --assume-yes install fred
 
 #. Install the database schema of the FRED
 
