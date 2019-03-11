@@ -68,8 +68,10 @@ We work with the following nodes:
 Network
 ^^^^^^^^
 
-Network rules are described further per node, but here is an overview of logical
-connections in the network (one instance).
+Network rules are described per node in the following sections, but here is an
+overview of logical connections in the network (a single instance of the system).
+
+.. _deploy-ports:
 
 .. _fig-deployment-network:
 
@@ -80,14 +82,15 @@ connections in the network (one instance).
 
    Network -- Logical topology
 
-.. _deploy-ports:
+*Restricted network access* means that servers should be accessed only from IP
+addresses allowed on a firewall.
 
-.. Note::
+*Unrestricted network access* means that servers can be accessed from any IP
+address, but only necessary ports should be open for access as illustrated
+in the network rules for each node.
 
-   .. rubric:: Ports
-
-   The port numbers mentioned in the network rules are settings
-   of the default installation.
+The **port** numbers mentioned in the network rules are settings resulting
+from the default installation.
 
 .. _deploy-epp:
 
