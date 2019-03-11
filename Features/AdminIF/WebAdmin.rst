@@ -89,6 +89,7 @@ Manage domains
 
 Browse contacts
 ^^^^^^^^^^^^^^^
+
 * Search/filter contacts
 * View contact details
    * List domains where this contact is an owner
@@ -179,10 +180,9 @@ Browse invoices
 Browse and assign payments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Search/filter payments
-* View payment details
-   * Assign a type to a not-assigned payment
-      * Associate a not-assigned payment with a registrar
+.. versionchanged:: 2.38
+
+   The feature has been discontinued. See :doc:`/Concepts/PAIN`.
 
 
 
