@@ -249,7 +249,7 @@ The newest are :ref:`at the end <roc-end>`.
      - Added release notes for FRED 2.38.0, 2.37.3 and 2.37.2
    * -
      -
-     - :doc:`/ReleaseNotes/Upgrade-2-38-0`
+     - :doc:`/ReleaseNotes/Upgrade-2-38`
      - Added considerations before upgrade
    * -
      -

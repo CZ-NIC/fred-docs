@@ -1,8 +1,20 @@
 
 
 
-Version 2.36.0
-==========================
+Version 2.36
+============
+
+Release 2.36.1
+--------------
+
+.. rubric:: Bugfixes
+
+* WebWhois+RDAP: fixed display of domains in the ``deleteCandidate`` state
+
+
+
+Release 2.36.0
+--------------
 
 .. rubric:: Enhancements
 

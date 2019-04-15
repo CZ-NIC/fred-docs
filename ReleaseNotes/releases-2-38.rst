@@ -1,8 +1,73 @@
 
 
 
-Version 2.38.0
-==========================
+Version 2.38
+=============
+
+
+
+Release 2.38.5
+----------------
+
+.. rubric:: Bugfixes
+
+* AKM Client: fix insecured-domain key acceptance when interfered by a manually-added keyset
+
+
+
+Release 2.38.4
+----------------
+
+.. rubric:: Bugfixes
+
+* (\ :term:`CZ-specific`) Server (fred-mifd): fix MojeID PIN3 resending
+
+
+
+Release 2.38.3
+----------------
+
+.. rubric:: Bugfixes
+
+* (\ :term:`CZ-specific`) Stat collector: fix parsing of realms with asterisk
+  in authority in MojeID stats
+
+
+
+Release 2.38.2
+-----------------
+
+.. rubric:: Bugfixes
+
+* fred-pain: Log suspicious invoices from FRED
+* (\ :term:`CZ-specific`) Stat collector: query optimizations, add Py3 support
+* Transproc: Restrict console logging to ERROR level
+* WebWhois: Return status codes to HTML ``data-`` attributes of object details
+
+
+
+Release 2.38.1
+----------------
+
+.. rubric:: Bugfixes
+
+* Database:
+   * fix ``mail_archive`` migration (modifies behaviour of the upgrade scripts
+     ``2.32.0-2.33.0-{1,3,4}-*.sql``, see updated :doc:`./Upgrade-2-35`)
+   * drop a constraint to allow multiple invoices for a single payment or
+     a single invoice for multiple payments
+
+     .. Important:: Run the upgrade script `2.35.0-2.35.1.sql
+        <https://github.com/CZ-NIC/fred-db/blob/master/upgrades/2.35.0-2.35.1.sql>`_,
+        if you want to use :doc:`PAIN </Concepts/PAIN>` with FRED 2.38.
+
+* Server (fred-accifd): fix search for a registrar by payment data
+* Transproc: add another :term:`CZ-specific` bank connector
+
+
+
+Release 2.38.0
+----------------
 
 .. rubric:: Enhancements
 
@@ -11,13 +76,13 @@ Version 2.38.0
   (see :ref:`FRED-Admin-reginit-zone-ns`)
 * Server: remove an obsolete database layer from back end
 * Mod-eppd, Server (fred-rifd): make disclosure policy and default disclose flags
-  configurable, see also :doc:`Upgrade-2-38-0`
+  configurable, see also :doc:`Upgrade-2-38`
 * improve public requests -- asynchronous processing with a command in fred-admin
 * continue porting to setuptools (``doc2pdf``, ``transproc``)
 * continue porting to Python 3
 
 * :term:`PAIN` :emphasis:`Phase 1` -- detach payment import and processing from FRED, |br|
-  see also :doc:`/Concepts/PAIN` and :doc:`Upgrade-2-38-0`
+  see also :doc:`/Concepts/PAIN` and :doc:`Upgrade-2-38`
 
    * new Django application ``django-pain``
       * ``fred-pain``: FRED plugin for PAIN

@@ -1,7 +1,7 @@
 
 
 
-Version 2.35.0
+Release 2.35.0
 ==========================
 
 .. rubric:: Enhancements

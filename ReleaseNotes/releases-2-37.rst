@@ -1,8 +1,39 @@
 
 
 
-Version 2.37.0
-==========================
+Version 2.37
+============
+
+Release 2.37.3
+--------------
+
+.. rubric:: Bugfixes
+
+* Doc2pdf: (\ :term:`CZ-specific`) fixed helios.xsl transformation (invoice export)
+
+
+
+Release 2.37.2
+--------------
+
+.. rubric:: Bugfixes
+
+* Database: restore (alter function schemas for security reasons)
+
+
+
+Release 2.37.1
+--------------
+
+.. rubric:: Bugfixes
+
+* Server: fixed sending of authinfo to multiple recipients when sending it to an email in the registry
+* Server: fixed separator escaping in CSV serializer
+
+
+
+Release 2.37.0
+--------------
 
 .. rubric:: Enhancements
 

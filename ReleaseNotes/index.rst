@@ -11,28 +11,11 @@ Overview of changes in software from preceding versions.
 
 .. struct-end
 
-.. contents:: History
-   :local:
-   :backlinks: none
+.. toctree::
 
-.. include:: release-2-38-1.rst
-
-.. include:: release-2-38-0.rst
-
-.. include:: release-2-37-3.rst
-
-.. include:: release-2-37-2.rst
-
-.. include:: release-2-37-1.rst
-
-.. include:: release-2-37-0.rst
-
-.. include:: release-2-36-1.rst
-
-.. include:: release-2-36-0.rst
-
-.. include:: release-2-35-0.rst
-
-.. include:: release-2-34-0.rst
-
-.. include:: release-2-33-1.rst
+   releases-2-38
+   releases-2-37
+   releases-2-36
+   releases-2-35
+   releases-2-34
+   releases-2-33

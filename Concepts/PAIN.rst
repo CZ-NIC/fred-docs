@@ -38,4 +38,4 @@ is released to the public along with FRED, but it is :term:`CZ-specific`
 and is intended only as an example implementation for inspiration or customization.
 When we reach the target state, we will provide some customization instructions.
 
-See also :doc:`/ReleaseNotes/Upgrade-2-38-0`.
+See also :doc:`/ReleaseNotes/Upgrade-2-38`.
