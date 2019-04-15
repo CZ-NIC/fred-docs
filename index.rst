@@ -6,7 +6,7 @@
 FRED |version| Documentation
 ============================
 
-This documentation aids users of the **Free Registry for ENUM and Domains**,
+This documentation aids various user groups of the **Free Registry for ENUM and Domains**,
 the domain name registry software developed by `CZ.NIC <http://www.nic.cz>`_
 as an open-source solution.
 
@@ -16,7 +16,7 @@ as an open-source solution.
       which means that it contains authoring/editing/managing notes
       in addition to the actual content.
 
-:Edition: :doc:`1.4 <RecordOfChanges>`
+:Edition: :doc:`1.0 <RecordOfChanges>`
 
 :Source: The source code of this documentation is open and can be found
          on `GitHub <https://github.com/CZ-NIC/fred-docs>`_.

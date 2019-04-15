@@ -5,6 +5,7 @@ Record of Changes
 =================
 
 Overview of changes in documentation from previous editions.
+For changes in software, see :doc:`/ReleaseNotes/index`.
 
 The newest are :ref:`at the end <roc-end>`.
 
@@ -312,9 +313,25 @@ The newest are :ref:`at the end <roc-end>`.
      - :doc:`/AdminManual/Installation/BinsUbuntu`,
        :doc:`/AdminManual/Installation/BinsFedora`
      - Updated installation procedures
-
-       .. _roc-end:
    * -
      - **1.4**
      - :doc:`/ReleaseNotes/index`
      - Added release notes for FRED 2.38.{2,3,4,5} and FRED 2.39.0
+
+       .. _roc-end:
+   * - **2.39**
+     - **1.0**
+     - :doc:`/Architecture/SourceCode`
+     - Added libfred component and updated build groups
+   * -
+     -
+     - :doc:`/AdminManual/Installation/SourceTar`
+     - Updated installation procedure with new tools
+   * -
+     -
+     - :doc:`/AdminManual/AdministrativeTasks/Objects`
+     - Contact unblocking together with domain now possible
+   * -
+     -
+     - :doc:`/AdminManual/Customization/index`
+     - Customization reworked for email templates and state-change notifications
