@@ -98,12 +98,13 @@ Authoring notes
 ---------------
 
 Authoring notes—or TODOs—usually hold suggestions for new topics or notes
-about pending improvements. The TODOs are visible in the text if their output
+about pending improvements. The TODOs are visible in the text, if their output
 is allowed in project configuration.
 
-.. todo:: This is an authoring note. The TODOs are turned on.
+.. todo:: This is an authoring note. The TODOs are on.
+   :class: todo-backlog
 
-If you cannot see a green frame here, the TODOs are turned off.
+If you cannot see a green rectangle before this paragraph, the TODO output is disabled.
 
 Semantic markup overview
 ------------------------

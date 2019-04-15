@@ -68,7 +68,8 @@ A **response** will be assigned by the server:
 
 Transaction identifiers should be logged, retained and protected.
 
-.. todo:: disable notification prefix
+.. todo:: describe the disable-notification prefix
+   :class: todo-backlog
 
 .. _struct-command:
 

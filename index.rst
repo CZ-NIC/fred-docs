@@ -33,6 +33,10 @@ as an open-source solution.
       TypographicConventions
       Glossary
 
+.. only:: include_todolist and format_html
+
+   :doc:`/TODOList`
+
 .. toctree::
    :caption: Publications
    :name: fred-toc-publications

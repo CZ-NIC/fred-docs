@@ -352,5 +352,6 @@ Now, you can perform :ref:`the smoke test <test-smoke>` to make sure
 that all interfaces are available and working together.
 
 .. todo:: how to create service(s) and add it(them) to startup launch
+   :class: todo-backlog
 
 .. include:: After.rst

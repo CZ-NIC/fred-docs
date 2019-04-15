@@ -465,3 +465,4 @@ for the statistics server which is not a part of the FRED.
 .. NOTE simple_stats.py (installed from apt with fred-whois)
 
 .. todo:: PYFRED internal periodic tasks (tech.checks, mailer) - see config
+   :class: todo-backlog

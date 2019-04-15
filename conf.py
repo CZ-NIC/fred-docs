@@ -116,11 +116,6 @@ pygments_style = 'sphinx'
 # If true, keep warnings as "system message" paragraphs in the built documents.
 # keep_warnings = False
 
-# Extensions configuration - TODOs
-# If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
-#todo_link_only = True
-
 # Conditional inclusion tags - uncomment to allow inclusion
 #tags.add('mode_structure')
 
@@ -145,6 +140,18 @@ else:
 
 # Draft
 is_draft = git_branch and git_branch != 'master'
+
+# When we're drafting
+if is_draft:
+    # Produce output for `todo` and `todoList`
+    todo_include_todos = True
+    # Show warnings for todos on build
+    todo_emit_warnings = True
+    # Include a link to TODOList on the main page
+    tags.add('include_todolist')
+    # Include stuff for the current version
+    tags.add(version)
+
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -189,6 +196,13 @@ html_favicon = "fred_theme/static/favicon.ico"
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# Additional CSS // requires version >=1.8
+html_css_files = []
+
+# When we're drafting
+if is_draft:
+    html_css_files.append('todos.css')
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied

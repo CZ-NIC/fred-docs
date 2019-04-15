@@ -349,6 +349,7 @@ Parameters that affect **only non-domain objects**:
   default: ``6``
 
 .. todo:: Request usage configurables
+   :class: todo-backlog
 
    * table:request_fee_parameter (.count_free_base+.count_free_per_domain)
    * table:request_fee_registrar_parameter (.request_price_limit)

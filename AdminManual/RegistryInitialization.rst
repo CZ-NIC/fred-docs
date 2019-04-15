@@ -180,6 +180,7 @@ Preparing registrars
 --------------------
 
 .. todo:: Explain system/common reg. in Features, then rewrite
+   :class: todo-backlog
 
 There are two types of registrars:
 
@@ -202,6 +203,7 @@ Both types of registrars are prepared in the same way:
 .. Tip::
 
    .. todo:: rewrite
+      :class: todo-backlog
 
    If you want to work only with the EPP communication, the system
    registrar will do. However, if it is the billing and invoicing subsystem
@@ -411,6 +413,7 @@ Creating default initial numbers
       --prefix=23 --zone_fqdn=cz --invoice_type_name=account
 
 .. todo:: Explain invoice types in Features, then rewrite
+   :class: todo-backlog
 
 This command adds a number prefix for invoices of a given type in a zone.
 
@@ -434,7 +437,8 @@ initial numbers are created for the next year.
 Defining custom initial numbers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. todo:: QUESTION Is okay or deprecated?
+.. todo:: ??? Is this way okay or deprecated?
+   :class: todo-backlog
 
 .. code-block:: bash
 
