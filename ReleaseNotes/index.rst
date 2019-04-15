@@ -13,6 +13,7 @@ Overview of changes in software from preceding versions.
 
 .. toctree::
 
+   releases-2-39
    releases-2-38
    releases-2-37
    releases-2-36
