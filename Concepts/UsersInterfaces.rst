@@ -49,7 +49,10 @@ do not apply -- it can edit any object in any state (and without being designate
 to manage the object), it does not need to have credit, and it does not generate
 EPP notifications.
 
-This account must always exist in the Registry database and it must be unique.
+.. Important:: The system registrar account must always exist in the Registry
+   database and there must be exactly one of this kind!
+
+   See :ref:`FRED-Admin-reginit-reg` during registry initialization.
 
 .. _interfaces-adif:
 
