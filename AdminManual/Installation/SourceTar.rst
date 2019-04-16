@@ -29,6 +29,9 @@ Add the CZ.NIC signing key and repositories
 Satisfy dependecies
 ^^^^^^^^^^^^^^^^^^^
 
+.. todo:: update src dependencies
+   :class: todo-backlog
+
 We prepared lists of all particular packages on which FRED's compilation,
 installation or operation depends (package names may slightly differ
 across OS versions):
@@ -54,34 +57,29 @@ or an archived version list (see the website for archived versions).
 .. code-block:: bash
 
    mkdir fred && cd fred
-   curl https://fred.nic.cz/files/fred/fred-sources-list-latest.txt | while read LN; do
-      curl -JLO $LN # these options are necessary to have nice filenames
+   curl https://fred.nic.cz/files/fred/fred-sources-list-latest.txt | while read -r line; do
+      curl -JLO "$line" # these options are necessary to have nice filenames
    done
-   for F in *.tar.gz; do tar -zxvf $F; done
+   for file in *.tar.gz; do tar xvzf "$file" && ln -s "${file%.tar.gz}" "${file%-*}"; done
+
+.. 1/ popisnější jména
+   2/ v bash se podle konvence píší velkými písmeny jen proměnné prostředí,
+      tj. to co se exportuje
+   3/ udělá to symlinky na ty adresáře, tak se půjde dát odkazovat
+      -DIDL_DIR=../../fred-idl/idl a nebude tam ta verze.
 
 .. _install-auto:
 
 Install "A" packages
 ^^^^^^^^^^^^^^^^^^^^
-These packages are configured, compiled and installed using **Autotools** [#]_
-(autoconf, automake and libtool).
 
-IDL definitions are required during compilation, therefore the IDL package
-must be installed before other "A" packages and before the :file:`fred-pyfred`
-"D" package.
+These packages are configured, compiled and installed using **Autotools** [#]_.
 
 Package list:
 
-* :file:`fred-idl` -- *install first!*
-* :file:`fred-mod-corba`
-* :file:`fred-mod-eppd`
-* :file:`fred-mod-whoisd`
-* :file:`fred-server`
 * :file:`fred-db`
-* :file:`fred-akm`
-* :file:`cdnskey-scanner`
 
-For each package in the list, run this command sequence from its directory:
+From the directory of the package, run this command sequence:
 
 .. code-block:: bash
 
@@ -114,23 +112,66 @@ to the :program:`configure` script or as environment variables.
 .. [#] For more information about Autotools see
    the `GNU Automake Manual <http://www.gnu.org/software/automake/manual/>`_.
 
-Finish ``mod-corba`` installation
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Run the :program:`libtool` script (after ``make install``) to finish
-the :file:`mod-corba` installation:
+.. _install-cmake:
+
+Install "C" packages
+^^^^^^^^^^^^^^^^^^^^
+
+These packages use **CMake** [#]_ for build and installation.
+
+Some of these packages require IDL definitions during compilation, therefore the IDL package
+must be installed before other "C" packages and before the :file:`fred-pyfred`
+"D" package.
+
+Package list:
+
+* :file:`fred-idl` (does not require build nor installation)
+* :file:`fred-libfred` (not to be built standalone, it is included by the *server*)
+* :file:`fred-server`
+* :file:`fred-mod-corba` (doesn't require IDLs)
+* :file:`fred-mod-eppd`
+* :file:`fred-mod-whoisd`
+* :file:`fred-akm`
+* :file:`cdnskey-scanner` (doesn't require IDLs)
+
+For :file:`fred-mod-corba` and :file:`cdnskey-scanner` run: [#CDIR]_
 
 .. code-block:: bash
 
-   sudo ./libtool --finish /usr/lib/apache2/modules
+   mkdir _build && cd _build
+   cmake ..
+
+For :file:`fred-server` build run: [#CDIR]_
+
+.. code-block:: bash
+
+   mkdir _build && cd _build
+   cmake -DIDL_DIR=../../fred-idl/idl -DLIBFRED_DIR=../../libfred ..
+
+For the other packages run: [#CDIR]_
+
+.. code-block:: bash
+
+   mkdir _build && cd _build
+   cmake -DIDL_DIR=../../fred-idl/idl ..
+
+.. [#CDIR] The positional argument of CMake should be the directory
+   with the :file:`CMakeLists.txt` file of the component being built.
+   We build relatively to the parent directory `..` in our code samples.
+
+.. [#] For more information about CMake see https://cmake.org/.
 
 .. _install-dist:
 
-Install "D" packages
-^^^^^^^^^^^^^^^^^^^^
+.. _install-setup:
 
-These packages use **Distutils** for installation which is a collection
-of Python scripts based on **Setuptools**, therefore
-the Distutils package must be installed before other "D" packages.
+Install "D" & "S" packages
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+These packages use either FRED's **Distutils** wrapper over Setuptools or they
+have been ported to use **Setuptools** directly for build and/or installation.
+
+Therefore the Distutils package must be installed before other "D" packages.
 Naturally, Setuptools must be installed (:file:`python-setuptools` or
 :code:`pip install setuptools`) before all other Python packages.
 
@@ -139,12 +180,12 @@ Package list:
 * :file:`fred-utils-distutils` -- *install first! (in the Python path)*
 * :file:`fred-utils-pyfco` [#s]_
 * :file:`fred-utils-pylogger` [#s]_
-* :file:`fred-client`
+* :file:`fred-client` [#s]_
 * :file:`fred-doc2pdf` [#s]_
-* :file:`fred-pyfred`
+* :file:`fred-pyfred` -- the last package still using Distutils
 * :file:`fred-rdap` [#s]_
 * :file:`fred-transproc` [#s]_
-* :file:`fred-webadmin`
+* :file:`fred-webadmin` [#s]_
 * :file:`fred-webwhois` [#s]_
 * :file:`fred-logger-maintenance` [#s]_ (optional)
 
@@ -154,12 +195,12 @@ For each package in the list, run this command from its directory:
 
    sudo python ./setup.py install
 
-The ``install`` command calls compilation (build) first if needed and
+The ``install`` command calls compilation (``build``) first, if needed, and
 then just copies files required for operation to the target directories.
 (You usually need administrator permissions if you install elsewhere
-than your home directory.)
+than to your home directory.)
 
-The target directory (installation prefix) or other parameters can be
+The target directory (installation prefix), or other parameters, can be
 passed as arguments. Refer to ``python ./setup.py --help install``
 for installation parameters.
 
