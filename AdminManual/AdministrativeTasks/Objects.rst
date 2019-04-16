@@ -1,19 +1,25 @@
 
 .. _FRED-Admin-AdminTasks-Objects:
 
-Registrable objects administration
-----------------------------------
+Objects administration
+----------------------
 
-All information about objects can be browsed and viewed via the WebAdmin
-after login.
+All information about objects (registrable and other) can be browsed and viewed
+via the WebAdmin after login.
 
-To modify objects, you have to use an EPP client (e.g. :program:`fred-client`).
+To modify :term:`registrable object`\ s, you have to use an :doc:`EPP client
+</Concepts/EPPClientWorkflow>` (e.g. :program:`fred-client`).
+
+.. contents:: Chapter TOC
+   :local:
+   :backlinks: none
 
 .. _modify-operations:
 
-Operations to modify objects
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The operations for object modification encompass:
+Operations to modify registrable objects
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The operations for registrable object modification encompass:
 
 * check – see if an object can be registered,
 * create – register a new object,
@@ -25,17 +31,18 @@ The operations for object modification encompass:
 * update – change object's details.
 
 These operations are typically performed by registrars
-and they can be achieved only through the EPP interface.
+and they can be achieved only through the :ref:`Registrar interface
+<interfaces-rif>`.
 If you need to do any of these as the Registry, it is what
 the **system registrar** is for.
 
-Refer to the help of the :program:`fred-client` program for the descriptions
-of command usage.
+Refer to the :doc:`/Concepts/EPPClientWorkflow` concept for details.
 
 .. _view-objects-details:
 
 View object's details
 ^^^^^^^^^^^^^^^^^^^^^
+
 :ref:`Search <FRED-Admin-AdminTasks-Search>` for an object in the WebAdmin
 and then click on its *id* or *handle* or *fqdn* to display the details.
 
@@ -53,6 +60,7 @@ by forcing or prohibiting some operations over this domain.
 
 Blocking statuses
 ~~~~~~~~~~~~~~~~~
+
 The blocking is achieved by setting various blocking statuses.
 Which statuses are suitable depends on the case and the purpose of blocking.
 Sometimes you may need to block even the owner together with the domain
@@ -73,6 +81,7 @@ and the domain.
 
 Block a domain
 ~~~~~~~~~~~~~~
+
 To set a blocking of a single domain, follow this procedure:
 
 #. In the WebAdmin, :ref:`view domain's details <view-objects-details>` and
@@ -100,8 +109,9 @@ To set a blocking of a single domain, follow this procedure:
 .. Note:: A blocked contact cannot be restored, you will have to use another one
    when unblocking the domain.
 
-Change blocking
-~~~~~~~~~~~~~~~
+Change blocking of a domain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 If a domain already has been set some blocking statuses, you can modify them
 following this procedure:
 
@@ -119,6 +129,7 @@ following this procedure:
 
 Unblock a domain
 ~~~~~~~~~~~~~~~~
+
 To remove blocking statuses from a domain, follow this procedure:
 
 #. In the WebAdmin, :ref:`view domain's details <view-objects-details>` and
@@ -154,8 +165,8 @@ so that it may not be re-registered for some time or at all.
 #. Confirm by clicking the :guilabel:`Blacklist and delete` button and then
    :guilabel:`OK`.
 
-Blocking or blacklisting in bulk
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Blocking, unblocking, or blacklisting in bulk
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To block, unblock, change blocking of or blacklist a set of domains, follow
 this procedure:
@@ -170,7 +181,8 @@ this procedure:
 #. The blocking form appears that lets you set the blocking parameters
    for all selected domains at once. Options are the same as for the
    single-domain variant of these operations (see `block a domain`_,
-   `change blocking`_, `unblock a domain`_ or `blacklist and delete a domain`_).
+   `change blocking of a domain`_, `unblock a domain`_ or `blacklist and
+   delete a domain`_).
 #. Proceed by clicking the button and confirm by :guilabel:`OK`.
 
 
@@ -246,6 +258,7 @@ The automatic merge procedure should be set up as a :ref:`periodic task
 
 Resolve a public request
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
 The public has the option to request a transfer password, personal information,
 or turn on/off enhanced security of their objects in the Registry database.
 
@@ -277,6 +290,7 @@ Procedure to resolve a public request:
 
 Generate a record statement
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 #. `View object's details`_ and scroll down.
 #. Under the :guilabel:`Generate record statement` heading, select the date and
    time to which the record shall be retrieved from the history of registrations.
