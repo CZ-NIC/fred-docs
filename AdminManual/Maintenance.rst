@@ -116,3 +116,18 @@ which is a part of the operating system.
 Syslog data on a remote log server can be maintained for example
 by the `syslog-ng` application, see the `syslog-ng documentation
 <https://www.balabit.com/sites/default/files/documents/syslog-ng-ose-latest-guides/en/syslog-ng-ose-guide-admin/html-single/index.html>`_
+
+Upgrading
+---------
+
+.. Important::
+
+   Before you upgrade to a newer version, read the :doc:`/ReleaseNotes/index`
+   and associated upgrade considerations carefully!
+
+.. rubric:: Considerations overview
+
+* :doc:`/ReleaseNotes/Upgrade-2-39`
+* :doc:`/ReleaseNotes/Upgrade-2-38`
+* :doc:`/ReleaseNotes/Upgrade-2-37`
+* :doc:`/ReleaseNotes/Upgrade-2-35`
