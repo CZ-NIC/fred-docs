@@ -15,6 +15,8 @@ The end-user groups of the Registry system are:
 See also the :doc:`context diagram </Architecture/BlackboxModel>`,
 which illustrates basic data flows between the users and the Registry.
 
+.. _interfaces-rif:
+
 Registrar interface (RIF)
 -------------------------
 
@@ -49,6 +51,8 @@ EPP notifications.
 
 This account must always exist in the Registry database and it must be unique.
 
+.. _interfaces-adif:
+
 Administrator interface (ADIF)
 ------------------------------
 
@@ -80,6 +84,8 @@ including automated self-administration tasks.
 The Registry staff may also edit domains and the other :term:`registrable object`\
 s for various administrative reasons, but they must use the RIF
 with the *system registrar* account.
+
+.. _interfaces-pif:
 
 Public interface (PIF)
 ----------------------
