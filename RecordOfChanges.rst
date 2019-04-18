@@ -303,8 +303,6 @@ The newest are :ref:`at the end <roc-end>`.
      - **1.2**
      - :doc:`/ReleaseNotes/index`
      - Added release notes for FRED 2.38.1
-
-       .. _roc-end:
    * -
      - **1.3**
      - :ref:`system-reqs`
@@ -314,3 +312,9 @@ The newest are :ref:`at the end <roc-end>`.
      - :doc:`/AdminManual/Installation/BinsUbuntu`,
        :doc:`/AdminManual/Installation/BinsFedora`
      - Updated installation procedures
+
+       .. _roc-end:
+   * -
+     - **1.4**
+     - :doc:`/ReleaseNotes/index`
+     - Added release notes for FRED 2.38.{2,3,4,5} and FRED 2.39.0
