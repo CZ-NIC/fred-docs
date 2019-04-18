@@ -58,14 +58,16 @@ Administrative blocking of domains
 Blocking a domain means to withdraw it from the typical workflow
 by forcing or prohibiting some operations over this domain.
 
-Blocking statuses
-~~~~~~~~~~~~~~~~~
+State flags for blocking
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-The blocking is achieved by setting various blocking statuses.
-Which statuses are suitable depends on the case and the purpose of blocking.
-Sometimes you may need to block even the owner together with the domain
-in which case the same blocking statuses are applied to both the owner contact
-and the domain.
+The blocking is achieved by setting various blocking state flags (prohibitions,
+see also :doc:`/Concepts/LifeCycle/index`).
+Which flags are suitable, depends on each case and the purpose of blocking.
+
+Sometimes you may need to block even the domain holder together with the domain
+name, in which case the same blocking state flags are applied to both the owner
+contact and the domain.
 
 * *The domain is administratively kept out of zone* – forces the exclusion
   of a domain from the zone (overrides all rules for domain inclusion),
@@ -94,25 +96,25 @@ To set a blocking of a single domain, follow this procedure:
       * ``Do not block the holder`` will not do anything with the registrant,
         they will be able to change any contact information or
         the designated registrar or to be deleted,
-      * ``Block the holder`` will apply the same blocking statuses
-        to the registrant as the blocked domain(s) (this option can be chosen
+      * ``Block the holder`` will apply the same blocking flags
+        to the registrant as the blocked domain(s) (this option can be selected
         only if you're blocking all domains of this registrant at once),
       * ``Create copy of the holder`` will duplicate the contact and apply
-        the same blocking statuses to the duplicate as to the domain being blocked
+        the same blocking flags to the duplicate as to the domain being blocked
         while the other domains and the original contact remain intact.
    * *Block to date* – on this date, the blocking will be cancelled automatically,
-   * *Blocking statuses* – select which blocking statuses to turn on.
+   * *Blocking statuses* – select which blocking flags to turn on.
 
 #. Apply the blocking by clicking the :guilabel:`Block` button
    and confirm with :guilabel:`OK`.
 
-.. Note:: A blocked contact cannot be restored, you will have to use another one
-   when unblocking the domain.
+.. Note:: A blocked holder will be restored during domain unblocking automatically
+   under certain conditions. See `Unblock a domain`_.
 
 Change blocking of a domain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If a domain already has been set some blocking statuses, you can modify them
+If a domain already has been set some blocking flags, you can modify them
 following this procedure:
 
 #. In the WebAdmin, :ref:`view domain's details <view-objects-details>` and
@@ -122,7 +124,7 @@ following this procedure:
    * *Reason* – the reason why the blocking is being changed,
    * *Block to date* – change the end of blocking or leave empty to keep
      the old value,
-   * *Blocking statuses* – check or uncheck statuses to change the blocking.
+   * *Blocking statuses* – check or uncheck flags to change the blocking.
 
 #. Apply the blocking by clicking the :guilabel:`Block` button
    and confirm with :guilabel:`OK`.
@@ -130,7 +132,7 @@ following this procedure:
 Unblock a domain
 ~~~~~~~~~~~~~~~~
 
-To remove blocking statuses from a domain, follow this procedure:
+To remove blocking flags from a domain, follow this procedure:
 
 #. In the WebAdmin, :ref:`view domain's details <view-objects-details>` and
    click the :guilabel:`Unblock` button at the bottom.
@@ -139,13 +141,19 @@ To remove blocking statuses from a domain, follow this procedure:
    * *Reason* – the reason why the domain is being unblocked,
    * *New holder* – assign a new owner by their *handle*,
    * *Remove admin. contacts* – unassign all administrative contacts,
-   * *Restore prev. state* – restore the state (owner) that was before blocking.
+   * *Restore prev. state* – restore the object state that was before blocking.
 
 #. Proceed with the unblocking by clicking the :guilabel:`Unblock` button
    and confirm with :guilabel:`OK`.
 
-The system removes all blocking statuses.
-It does not unblock the original owner in any case.
+The system removes all blocking flags, eventually restores the former set of
+flags which used to be assigned before the blocking, if requested.
+
+The system attempts to unblock the original owner contact, if it had been blocked
+together with the domain, and if it is not linked to any other blocked domains.
+If it is linked to other blocked domains, the system creates a copy of the owner
+contact, replaces the original contact with the copy in the blocked domains,
+and unblocks the original owner.
 
 Blacklist and delete a domain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
