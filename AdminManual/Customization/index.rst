@@ -10,4 +10,5 @@ generated announcements or notifications, and exported PDFs.
 .. toctree::
 
    Email
+   Notifications
    PDF
