@@ -34,6 +34,7 @@ needs_sphinx = '1.8'
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.ifconfig',
+    #'sphinxcontrib.plantuml',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -151,6 +152,8 @@ if is_draft:
     # Include stuff for the current version
     tags.add(version)
 
+# Extension - PlantUML
+#plantuml = 'java -jar /usr/share/plantuml/plantuml.jar'
 
 # -- Options for HTML output ----------------------------------------------
 
