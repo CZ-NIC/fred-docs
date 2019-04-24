@@ -49,5 +49,5 @@ Terms and definitions can be found :ref:`in the glossary <glossary>`.
    AdministrativeTasks/index
    Accounting
    Maintenance
-   Customization
+   Customization/index
    Appendixes/index
