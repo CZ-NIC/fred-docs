@@ -1,0 +1,319 @@
+:orphan:
+
+Webwhois Django Views
+---------------------
+
+This section lists the webwhois views and their relationships with references
+to templates.
+
+https://docs.djangoproject.com/en/1.11/topics/class-based-views/generic-display/#adding-extra-context
+
+.. contents:: TOC
+   :local:
+   :backlinks: none
+
+.. todo:: expand on attributes and methods of views
+   :class: todo-backlog
+
+Module `webwhois.views`
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. module:: webwhois.views
+
+All views, except for base views, are available from this module.
+
+Module `webwhois.views.base`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. module:: webwhois.views.base
+
+Module which provides webwhois base views.
+
+.. class:: BaseContextMixin
+
+   Base mixin for webwhois views, inherits from ``django.views.generic.base.ContextMixin``.
+
+   .. attribute:: base_template
+
+      Base template used to render the webwhois view.
+      This value is passed into context as a ``base_template`` variable.
+      Default value is ``base_site_example.html``.
+
+   Context:
+
+   * ``base_template`` - Name of the base template.
+
+.. class:: RegistryObjectMixin
+
+   Base mixin for webwhois views, which displays an object detail.
+   It inherits from :py:func:`webwhois.views.base.BaseContextMixin`.
+
+   .. attribute:: server_exception_template
+
+      Template used to render an error.
+
+   Default context -- see :ref:`custom-web-template-error`.
+
+Module `webwhois.views.form_whois`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. module:: webwhois.views.form_whois
+
+Module which provides view for generic whois search form.
+
+.. class:: WhoisFormView
+
+   View which renders and processes a whois form.
+   Inherits from a ``django.views.generic.FormView`` and
+   :py:func:`webwhois.views.base.BaseContextMixin`.
+
+   Default template: ``webwhois/form_whois.html``
+
+   Default context: None additional. See also :ref:`custom-web-template-whois-form`.
+
+Module `webwhois.views.resolve_handle_type`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. module:: webwhois.views.resolve_handle_type
+
+Module which provides view for whois search.
+
+.. class:: ResolveHandleTypeView
+
+   View which processes a whois request for all types of objects.
+   Inherits from a ``django.views.generic.TemplateView`` and
+   :py:func:`webwhois.views.base.RegistryObjectMixin`.
+
+   Default template: ``webwhois/multiple_entries.html``
+
+   Default context -- see :ref:`custom-web-template-whois-multiple`.
+
+Module `webwhois.views.detail_contact`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. module:: webwhois.views.detail_contact
+
+Module which provides view for contact detail.
+
+.. class:: ContactDetailView
+
+   View which renders a detail of a contact.
+   Inherits from a ``django.views.generic.TemplateView`` and
+   :py:func:`webwhois.views.base.RegistryObjectMixin`.
+
+   Default template: ``webwhois/contact.html``
+
+   Default context -- see :ref:`custom-web-template-whois-contact`.
+
+Module `webwhois.views.detail_domain`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. module:: webwhois.views.detail_domain
+
+Module which provides view for domain detail.
+
+.. class:: DomainDetailView
+
+   View which renders a detail of a domain.
+   Inherits from a ``django.views.generic.TemplateView`` and
+   :py:func:`webwhois.views.base.RegistryObjectMixin`.
+
+   Default template: ``webwhois/domain.html``
+
+   Default context -- see :ref:`custom-web-template-whois-domain`.
+
+Module `webwhois.views.detail_nsset`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. module:: webwhois.views.detail_nsset
+
+Module which provides view for nsset detail.
+
+.. class:: NssetDetailView
+
+   View which renders a detail of a nsset.
+   Inherits from a ``django.views.generic.TemplateView`` and
+   :py:func:`webwhois.views.base.RegistryObjectMixin`.
+
+   Default template: ``webwhois/nsset.html``
+
+   Default context -- see :ref:`custom-web-template-whois-nsset`.
+
+Module `webwhois.views.detail_keyset`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. module:: webwhois.views.detail_keyset
+
+Module which provides view for keyset detail.
+
+.. class:: KeysetDetailView
+
+   View which renders a detail of a keyset.
+   Inherits from a ``django.views.generic.TemplateView`` and
+   :py:func:`webwhois.views.base.RegistryObjectMixin`.
+
+   Default template: ``webwhois/keyset.html``
+
+   Default context -- see :ref:`custom-web-template-whois-keyset`.
+
+Module `webwhois.views.registrars`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. module:: webwhois.views.registrar
+
+Module which handles the list and details of registrars.
+
+.. class:: RegistrarDetailView
+
+   View which renders a detail of a registrar.
+   Inherits from a ``django.views.generic.TemplateView`` and
+   :py:func:`webwhois.views.base.RegistryObjectMixin`.
+
+   Default template: ``webwhois/registrar.html``
+
+   Default context -- see :ref:`custom-web-template-registrar-detail`.
+
+.. class:: RegistrarListView
+
+   View which renders a list of registrars.
+   Inherits from a ``django.views.generic.TemplateView`` and
+   :py:func:`webwhois.views.base.BaseContextMixin`.
+
+   .. attribute:: group_name
+
+      If set, filters registrars which are members of a group.
+
+   .. attribute:: is_retail
+
+      Whether a list of retail or wholesale registrars should be displayed.
+      This attribute is deprecated, use ``group_name`` instead.
+
+   Default template: ``webwhois/registrar_list.html``
+
+   Default context -- see :ref:`custom-web-template-registrar-list`.
+
+.. class:: DownloadEvalFileView
+
+   View which provides the certification evaluation file.
+
+Module `webwhois.views.logger_mixin`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. module:: webwhois.views.logger_mixin
+
+Module which provides support for logging.
+
+.. class:: LoggerMixin
+
+   View which provides basic support for logging.
+
+Module `webwhois.views.public_request_mixin`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. module:: webwhois.views.public_request_mixin
+
+Module which provides support for public requests.
+
+.. class:: PublicRequestLoggerMixin
+
+   View which provides basic support for logging of public requests.
+   Inherits from :py:func:`webwhois.views.logger_mixin.LoggerMixin`.
+
+.. class:: PublicRequestFormView
+
+   View which provides basic management of public requests.
+   Inherits from a ``django.views.generic.FormView`` and
+   :py:func:`webwhois.views.public_request_mixin.PublicRequestLoggerMixin`.
+
+Module `webwhois.views.public_request`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. module:: webwhois.views.public_request
+
+Module which provides views for public requests.
+
+.. class:: SendPasswordFormView
+
+   View which processes a form for sending of auth info.
+   Inherits from :py:func:`webwhois.views.public_request_mixin.PublicRequestFormView`
+   and :py:func:`webwhois.views.base.BaseContextMixin`..
+
+   Default template: ``webwhois/form_send_password.html``
+
+   Default context: None additional. See also :ref:`custom-web-templates-pr-authinfo`.
+
+.. class:: PersonalInfoFormView
+
+   View which processes a form for sending a personal info.
+   Inherits from :py:func:`webwhois.views.public_request_mixin.PublicRequestFormView`
+   and :py:func:`webwhois.views.base.BaseContextMixin`..
+
+   Default template: ``webwhois/form_personal_info.html``
+
+   Default context: None additional. See also :ref:`custom-web-templates-pr-personinfo`.
+
+.. class:: BlockObjectFormView
+
+   View which processes a form for object blocking.
+   Inherits from :py:func:`webwhois.views.public_request_mixin.PublicRequestFormView`
+   and :py:func:`webwhois.views.base.BaseContextMixin`..
+
+   Default template: ``webwhois/form_block_object.html``
+
+   Default context: None additional. See also :ref:`custom-web-templates-pr-lock`.
+
+.. class:: UnblockObjectFormView
+
+   View which processes a form for object unblocking. Inherits from
+   :py:func:`webwhois.views.public_request_mixin.PublicRequestFormView`
+   and :py:func:`webwhois.views.base.BaseContextMixin`..
+
+   Default template: ``webwhois/form_unblock_object.html``
+
+   Default context: None additional. See also :ref:`custom-web-templates-pr-unlock`.
+
+.. class:: PublicResponseNotFoundView
+
+   View which renders a template for unknown public response. Inherits from
+   ``django.views.generic.TemplateView``
+   and :py:func:`webwhois.views.base.BaseContextMixin`..
+
+   Default template: ``webwhois/public_request_response_not_found.html``
+
+   Default context: None additional. See also :ref:`custom-web-templates-pr-unknown`.
+
+.. class:: BaseResponseTemplateView
+
+   Base view for public responses. Inherits from ``django.views.generic.TemplateView``
+   and :py:func:`webwhois.views.base.BaseContextMixin`..
+
+   Context:
+
+   * ``public_response`` -- A public response object
+
+.. class:: EmailInRegistryView
+
+   View which renders a public response with answer send to the email in registry.
+   Inherits from :py:func:`webwhois.views.public_request.BaseResponseTemplateView`.
+
+   Default template: ``webwhois/public_request_email_in_registry.html``
+
+   Default context -- see :ref:`custom-web-templates-pr-emailregistry`.
+
+.. class:: CustomEmailView
+
+   View which renders a public response with answer send to a custom email.
+   Inherits from :py:func:`webwhois.views.public_request.BaseResponseTemplateView`..
+
+   Default template: ``webwhois/public_request_custom_email.html``
+
+   Default context -- see :ref:`custom-web-templates-pr-emailcustom`.
+
+.. class:: NotarizedLetterView
+
+   View which renders a public response confirmed by a notarized letter.
+   Inherits from :py:func:`webwhois.views.public_request.BaseResponseTemplateView`..
+
+   Default template: ``webwhois/public_request_notarized_letter.html``
+
+   Default context -- see :ref:`custom-web-templates-pr-notarized`.

@@ -154,6 +154,7 @@ if is_draft:
 
 # Extension - PlantUML
 #plantuml = 'java -jar /usr/share/plantuml/plantuml.jar'
+#plantuml_output_format = 'svg'
 
 # -- Options for HTML output ----------------------------------------------
 

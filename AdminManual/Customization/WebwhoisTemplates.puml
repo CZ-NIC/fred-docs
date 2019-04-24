@@ -1,0 +1,75 @@
+' Class diagram
+skinparam packageBorderColor #cccccc
+skinparam packageBackgroundColor #eeeeee
+
+class "$base_template" as base_site << (T,orchid) Template >> {
+   base_site_example.html
+}
+class "webwhois/block_main.html" as block_main << (T,orchid) >>
+class "webwhois/server_exception.html" as server_exception << (T,orchid) >>
+
+base_site <|-- block_main : "extends"
+block_main <|- server_exception : "extends"
+' server_exception in whois only?
+
+package "Whois" as Whois {
+   class "webwhois/form_whois.html" as form_whois << (T,orchid) >>
+   class "webwhois/multiple_entries.html" as multiple_entries << (T,orchid) >>
+   class "webwhois/domain.html" as domain << (T,orchid) >>
+   class "webwhois/contact.html" as contact << (T,orchid) >>
+   class "webwhois/nsset.html" as nsset << (T,orchid) >>
+   class "webwhois/nsset_detail.html" as nsset_detail << (T,orchid) >>
+   class "webwhois/keyset.html" as keyset << (T,orchid) >>
+   class "webwhois/keyset_detail.html" as keyset_detail << (T,orchid) >>
+   class "webwhois/verified_record_statement_link.html" as record_statement << (T,orchid) >>
+   block_main <|-- form_whois : "extends"
+   block_main <|-- multiple_entries : "extends"
+   block_main <|-- domain : "extends"
+   domain *-- record_statement : "includes"
+   block_main <|-- contact : "extends"
+   contact *-- record_statement : "includes"
+   block_main <|-- nsset : "extends"
+   nsset *-- nsset_detail : "includes"
+   nsset *-- record_statement : "includes"
+   block_main <|-- keyset : "extends"
+   keyset *-- keyset_detail : "includes"
+   keyset *-- record_statement : "includes"
+}
+
+package "Public requests" as PublicRequests {
+   ' Forms
+   class "webwhois/form_public_request.html" as form_public_request << (T,orchid) >>
+   class "webwhois/public_request_form_menu.html" as form_pr_menu << (T,orchid) >>
+   class "webwhois/form_block_object.html" as form_block_object << (T,orchid) >>
+   class "webwhois/form_personal_info.html" as form_personal_info << (T,orchid) >>
+   class "webwhois/form_send_password.html" as form_send_password << (T,orchid) >>
+   class "webwhois/form_unblock_object.html" as form_unblock_object << (T,orchid) >>
+   block_main <|-- form_public_request : "extends"
+   form_public_request <|-- form_send_password : "extends"
+   form_send_password *-- form_pr_menu : "includes"
+   form_public_request <|-- form_block_object : "extends"
+   form_block_object *-- form_pr_menu : "includes"
+   form_public_request <|-- form_unblock_object : "extends"
+   form_unblock_object *-- form_pr_menu : "includes"
+   form_public_request <|-- form_personal_info : "extends"
+   form_personal_info *-- form_pr_menu : "includes"
+   ' Responses
+   class "webwhois/public_request_response_not_found.html" as response_not_found << (T,orchid) >>
+   class "webwhois/public_request_email_in_registry.html" as email_in_registry << (T,orchid) >>
+   class "webwhois/public_request_custom_email.html" as custom_email << (T,orchid) >>
+   class "webwhois/public_request_notarized_letter.html" as notarized_letter << (T,orchid) >>
+   block_main <|-- response_not_found : "extends"
+   block_main <|-- email_in_registry : "extends"
+   block_main <|-- custom_email : "extends"
+   block_main <|-- notarized_letter : "extends"
+}
+
+package "Registrars" {
+   class "webwhois/registrar_list.html" as registrar_list << (T,orchid) >>
+   class "webwhois/registrar.html" as registrar << (T,orchid) >>
+   block_main <|-- registrar_list : "extends"
+   block_main <|-- registrar : "extends"
+}
+
+' Layout tuning
+record_statement -[hidden]--> form_block_object

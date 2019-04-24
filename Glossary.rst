@@ -47,12 +47,8 @@ Glossary of Terms
       or :rfc:`5730`
 
    Public request
-      This is a request by a registered contact that is submitted directly
-      to the Registry, e.g. a request for a transfer password (authinfo),
-      personal information, or an enhanced security setting (a Registry lock).
-
-      For example: `request to block an object in the Czech Registry
-      <https://www.nic.cz/whois/block-object/?language=en>`_
+      This is a request that is submitted directly to the Registry through its
+      public website, see :ref:`public-requests`.
 
    Registrable object
       A data object stored in the Registry that can be registered and modified

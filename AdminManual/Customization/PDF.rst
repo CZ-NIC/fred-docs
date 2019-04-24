@@ -1,4 +1,6 @@
 
+.. _custom-pdf:
+
 Customizing PDF templates
 -------------------------
 
