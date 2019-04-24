@@ -19,20 +19,20 @@ Channels
 The FRED is capable of using the following channels of communication:
 
 * Email
-   * mandatory in contacts and registrars
+   * mandatory piece of information in contacts and registrars
    * used for most communication
 * Notify email
    * optional, contacts only
    * used for notifications only
    * If a contact does not have a notify email, it is not notified.
-* Generic and additional emails
-   * extra addresses unrelated to registry records
-   * used only for `outzone unguarded warnings`_ (life-cycle event)
+* :ref:`Generic <comm-channels-generic>` and additional emails
+   * extra addresses uncontained in Registry records
+   * additional addresses must be :ref:`supplied manually <comm-objlife-outzone>`
+   * used only for `outzone unguarded warnings`_ (a life-cycle event)
 * Poll messages
    * an integral part of EPP
    * used for communication with registrars related to EPP activity
-* Letter :term:`CZ-specific`
-* Registered letter :term:`CZ-specific`
+* Letter or Registered letter :term:`CZ-specific`
 * SMS :term:`CZ-specific`
 
 .. _comm-channels-generic:
@@ -47,9 +47,9 @@ which the stakeholders often use to name their domain-based mailboxes.
 
 The generic email addresses are generated based on the following patterns:
 \ ``info@<fqdn>``, ``kontakt@<fqdn>``, ``postmaster@<fqdn>``,
-\ ``<fqdn>@<fqdn>`` where ``<fqdn>`` is the domain name in question.
+\ ``<fqdn>@<fqdn>``, where ``<fqdn>`` is the domain name in question.
 
-The patterns for the generic email addresses are hard-coded.
+The patterns for the generic email addresses are hard-coded and :term:`CZ-specific`.
 
 .. _comm-objmodif:
 
@@ -262,6 +262,8 @@ registrable objects </Concepts/LifeCycle/index>` (state changes).
    * - Deletion warning |br| :term:`CZ-specific`
      - Domain is going to be deleted – the :ref:`delW state <registration-expiration>`
        has been reached
+
+       *CZ.NIC: This letter was discontinued in January 2019.*
      - :ref:`Holder <contact-roles>`
      - Letter
    * - Deletion notice
@@ -302,6 +304,7 @@ registrable objects </Concepts/LifeCycle/index>` (state changes).
      - :ref:`Technical contacts <contact-roles>` or the contact
      - Notify email (:ref:`CS params <email-type-notify-idle>`)
 
+.. _comm-objlife-outzone:
 
 Outzone unguarded warnings
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -323,14 +326,17 @@ After the warnings are sent, the list of additional email addresses is cleared
 in the Registry database. A new list of addresses must be imported if there is
 need for another warning of this type.
 
+.. _comm-objlife-settings:
+
 Settings
 ^^^^^^^^
 
 To disable these messages, remove the corresponding row in the database table
-``notify_statechange_map`` for the state change you do not wish to communicate.
+``notify_statechange_map`` for the state change that you do not wish to communicate.
+See :doc:`/AdminManual/Customization/Notifications` for details.
 
-To modify when the messages are sent, reconfigure parameters of the :doc:`life cycle
-</Concepts/LifeCycle/index>` itself.
+To modify **when** the messages are sent, :ref:`reconfigure <config-dbparams>`
+parameters of the :doc:`object life cycle </Concepts/LifeCycle/index>` itself.
 
 .. _comm-admin:
 
@@ -462,7 +468,7 @@ This section describes communication that arises from registrar administration.
      - Addressee
      - Channel
    * - Low credit
-     - Registrar's credit has dropped below :ref:`the limit <comm-registrars-settings>`
+     - Registrar's credit has dropped below the limit, see :ref:`comm-registrars-settings` below
      - Registrar
      - Poll message (:ref:`structure <epp-poll-type-low-credit>`)
    * - Request usage

@@ -47,7 +47,7 @@ To initialize the Registry, you need to perform these tasks:
    * set the VAT tax and coefficient,
    * assign credit to registrars,
 
-* set some parameters.
+* adapt parameters in the database.
 
 ..  Important:: Perform the tasks in the same order as presented!
 
@@ -484,6 +484,7 @@ This SQL script will:
 
 Assigning credit to a registrar
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. code-block:: bash
 
    $ fred-admin --invoice_credit \
@@ -503,12 +504,14 @@ amount is subtracted automatically.
    against the database, for example:
 
    .. code-block:: bash
+      :caption: Find out registrar id
 
        $ psql -U fred -c "SELECT id FROM registrar where handle = 'REG-FRED_A';"
 
    This command will find a registrar by its handle and return its identifier.
 
    .. code-block:: bash
+      :caption: Find out zone id
 
        $ psql -U fred -c "SELECT id FROM zone where fqdn = 'cz';"
 
@@ -517,23 +520,41 @@ amount is subtracted automatically.
 
 Setting parameters in the database
 ----------------------------------
+
+There are some tables of configurable parameters in the main database.
+Most of these parameters can be used with the default values, however,
+it is important to adapt at least the values mentioned in this chapter.
+
+For more information about configuration of the Registry via database values
+see :ref:`config-db`.
+
+Timezone for automated administration :sup:`MANDATORY`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 ..  enum_parameters.regular_day_procedure_zone
 
-There is a table of customizable parameters in the main database.
-Most of them can be used with default values, however the following
-parameter **must** be adapted to your environment:
+.. Important:: The following parameter **must** be adapted to your environment!
 
-* the appropriate time zone for automated administration
-  – **regular_day_procedure_zone**::
+Set the appropriate time zone for automated administration with the
+**regular_day_procedure_zone** parameter:
+
+.. code-block:: bash
+   :caption: Set the appropriate time zone for automated administration
 
    $ fred-admin --enum_parameter_change \
       --parameter_name=regular_day_procedure_zone \
       --parameter_value=TZNAME
 
-  where TZNAME is the standardized name of your time zone which can be found
-  in the Postgres table ``pg_timezone_names`` (the *name* column) or
-  `in this list <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>`_
-  (the *TZ* column), for example ``Europe/Prague`` (this is the default value).
+where TZNAME is the standardized name of your time zone, which can be found
+in the Postgres table ``pg_timezone_names`` (the *name* column) or
+`in this Wikipedia list <https://en.wikipedia.org/wiki/List_of_tz_database_time_zones>`_
+(the *TZ* column), for example ``Europe/Prague`` (this is the default value).
 
-.. Note:: You can customize also other parameters from this table,
-   see :ref:`config-dbparams`.
+Registry contact information :sup:`RECOMMENDED`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For the purpose of email communication from the Registry, adapt Registry contact
+information, which is used in email templating.
+
+See :ref:`Customizing email templates -- Registry contact information
+<custom-email-registry>` for details.
