@@ -26,8 +26,7 @@ import time
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-#needs_sphinx = '1.7' # not required, but recommended
-# WARNING: A lower version may make mess in the theme or templates.
+needs_sphinx = '1.8'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
