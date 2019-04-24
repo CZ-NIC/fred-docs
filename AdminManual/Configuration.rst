@@ -259,6 +259,20 @@ Database tables
 Some parts of the Registry behaviour can be configured by modifying or adding
 values in certain database tables.
 
+.. Important:: **If you reconfigure the system using database tables, remember
+   to examine changes in the database component before upgrading the FRED!**
+
+   Sometimes we need to edit the database configuration for ourselves and these
+   changes are added to a database upgrade script, which would overwrite
+   your settings.
+   Therefore you should either **backup** your current database tables to recover
+   your settings after the upgrade, **or adapt** the upgrade script directly,
+   so that you don't lose your settings.
+
+.. contents:: Section TOC
+   :local:
+   :backlinks: none
+
 .. _config-dbparams:
 
 Life cycle parameters
