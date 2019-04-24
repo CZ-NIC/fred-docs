@@ -20,7 +20,7 @@ The newest are :ref:`at the end <roc-end>`.
      - Change description
    * - older
      -
-     - :doc:`/AdminManual/Appendixes/CSParams/index`
+     - :doc:`/AdminManual/Appendixes/EmailParameters`
      - Added more email templates
    * - **2.30**
      -
@@ -28,7 +28,7 @@ The newest are :ref:`at the end <roc-end>`.
      - Added contact merger concept, tasks and email template
    * -
      -
-     - :doc:`/AdminManual/Appendixes/CSParams/index`
+     - :doc:`/AdminManual/Appendixes/EmailParameters`
      - Added a new CS parameter
    * - **2.31**
      -
@@ -96,8 +96,8 @@ The newest are :ref:`at the end <roc-end>`.
      - Increased minimum version of PostgreSQL
    * -
      -
-     - :doc:`Customization </AdminManual/Customization>`,
-       :doc:`CSParams </AdminManual/Appendixes/CSParams/index>`
+     - :doc:`Customization </AdminManual/Customization/Email>`,
+       :doc:`Email Params </AdminManual/Appendixes/EmailParameters>`
      - Changed email template database table name
    * -
      -
@@ -176,7 +176,7 @@ The newest are :ref:`at the end <roc-end>`.
      - Added a cronjob to process public requests for personal information
    * -
      -
-     - :doc:`/AdminManual/Appendixes/CSParams/index`
+     - :doc:`/AdminManual/Appendixes/EmailParameters`
      - Added a new email template for sending personal information
    * -
      - **1.1**
@@ -212,7 +212,7 @@ The newest are :ref:`at the end <roc-end>`.
      - Added a very general description of handling money in the FRED
    * -
      -
-     - :doc:`/AdminManual/Appendixes/CSParams/index`
+     - :doc:`/AdminManual/Appendixes/EmailParameters`
      - Reviewed mail template parameters
    * -
      - **1.4**

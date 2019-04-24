@@ -1,18 +1,18 @@
 
 .. _FRED-Admin-App-CSParams:
 
-ClearSilver parameters reference
---------------------------------
+Email Parameters Reference
+--------------------------
 
-This is a reference of available parameters which are passed to ClearSilver
+This is a reference of available parameters (data sets) which are passed to email
 templates when generating email based on events in the FRED.
-See also `template syntax in ClearSilver <http://www.clearsilver.net/docs/man_templates.hdf>`_.
 
-The parameters are listed for each email type and there is an index
-with short descriptions of common parameters at the end of this appendix.
+The parameter names are listed for each email type together with the corresponding
+trigger event, and there is an index with short descriptions of common parameters
+at the end of this appendix.
 
-Email types can be found by their names in the table ``mail_type`` and
-the templates for each type can be found in the table ``mail_template``.
+See also :doc:`/AdminManual/Customization/Email` for detailed information
+on template customization.
 
 .. contents:: Chapter TOC
    :local:
@@ -616,8 +616,8 @@ email types.
 Registry information (defaults)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-These parameters are passed to all email types and can be found and adapted
-in the table ``mail_defaults``.
+These parameters are passed to all email types.
+See also :ref:`custom-email-registry`.
 
 * ``defaults.company`` – name of the Registry
 * ``defaults.street`` – street in the headquarters address of the Registry
