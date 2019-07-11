@@ -317,8 +317,6 @@ The newest are :ref:`at the end <roc-end>`.
      - **1.4**
      - :doc:`/ReleaseNotes/index`
      - Added release notes for FRED 2.38.{2,3,4,5} and FRED 2.39.0
-
-       .. _roc-end:
    * - **2.39**
      - **1.0**
      - :doc:`/Architecture/SourceCode`
@@ -335,3 +333,9 @@ The newest are :ref:`at the end <roc-end>`.
      -
      - :doc:`/AdminManual/Customization/index`
      - Customization reworked for email templates and state-change notifications
+
+       .. _roc-end:
+   * -
+     - **1.1**
+     - :doc:`/AdminManual/Customization/Web`
+     - Added webwhois customization and template reference
