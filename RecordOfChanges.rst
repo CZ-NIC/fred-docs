@@ -333,9 +333,14 @@ The newest are :ref:`at the end <roc-end>`.
      -
      - :doc:`/AdminManual/Customization/index`
      - Customization reworked for email templates and state-change notifications
-
-       .. _roc-end:
    * -
      - **1.1**
      - :doc:`/AdminManual/Customization/Web`
      - Added webwhois customization and template reference
+
+       .. _roc-end:
+   * -
+     - **1.2**
+     - :doc:`/AdminManual/Installation/BinsUbuntu`,
+       :doc:`/AdminManual/Installation/BinsFedora`
+     - Updated installation procedures - system registrar required for servers to launch
