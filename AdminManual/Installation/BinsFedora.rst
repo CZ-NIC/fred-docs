@@ -99,6 +99,23 @@ Installation steps
       systemctl start postgresql
       su - postgres -c "/usr/sbin/fred-dbmanager install"
 
+#. Some servers require the :ref:`system registrar <system-registrar>`
+   to be present in the Registry, before they can be started.
+
+   To quickly create it, use the following command (eventually see
+   :ref:`FRED-Admin-reginit-reg`):
+
+   .. code-block:: bash
+
+      fred-admin --registrar_add --handle=REG-SYSTEM --country=CZ --no_vat --system
+
+   The default handle is ``REG-SYSTEM``, but you may use a different handle
+   if you specify it in the configuration options ``system_registrar`` and
+   ``automatically_managed_keyset_registrar``.
+
+   You don't need to set up EPP access for this registrar, because internal
+   administration happens out of EPP.
+
 #. Start services
 
    .. code-block:: bash
