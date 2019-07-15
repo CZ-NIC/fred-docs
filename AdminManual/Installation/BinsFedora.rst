@@ -110,6 +110,7 @@ Installation steps
       systemctl start fred-logd
       systemctl start fred-msgd
       systemctl start fred-rsifd
+      systemctl start fred-akmd
       systemctl start fred-pyfred
       systemctl start fred-webadmin
       systemctl start httpd

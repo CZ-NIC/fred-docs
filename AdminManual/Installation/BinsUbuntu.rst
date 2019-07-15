@@ -146,6 +146,7 @@ script to install software required for the operation of the FRED.
       service fred-logd start
       service fred-msgd start
       service fred-rsifd start
+      service fred-akmd start
       service fred-pyfred start
       service fred-webadmin start
 
