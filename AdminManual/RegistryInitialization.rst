@@ -222,7 +222,7 @@ Creating a registrar
 
    # adding a system registrar:
    $ fred-admin --registrar_add \
-      --handle=REG-SYS --reg_name="System registrar" \
+      --handle=REG-SYSTEM --reg_name="System registrar" \
       --country=CZ --system
 
 This command creates a new registrar with some data.
