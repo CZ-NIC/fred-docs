@@ -121,7 +121,7 @@ Installation steps
       .. code-block:: bash
 
          test -d /run/uwsgi/ && echo "/run/uwsgi exists" || {
-            echo "/run/uwsgi missing so creating"
+            echo "/run/uwsgi is missing, so we're creating it"
             install -o uwsgi -g uwsgi -d /run/uwsgi
          }
          systemctl start uwsgi
