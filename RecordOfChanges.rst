@@ -337,10 +337,18 @@ The newest are :ref:`at the end <roc-end>`.
      - **1.1**
      - :doc:`/AdminManual/Customization/Web`
      - Added webwhois customization and template reference
-
-       .. _roc-end:
    * -
      - **1.2**
      - :doc:`/AdminManual/Installation/BinsUbuntu`,
        :doc:`/AdminManual/Installation/BinsFedora`
      - Updated installation procedures - system registrar required for servers to launch
+
+       .. _roc-end:
+   * -
+     - **1.3**
+     - :doc:`/ReleaseNotes/index`
+     - Added release notes for FRED 2.39.1 and 2.39.2
+   * -
+     -
+     - :doc:`/AdminManual/Installation/SystemReqs`
+     - Upgraded supported Fedora versions
