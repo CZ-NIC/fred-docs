@@ -30,6 +30,7 @@ as an open-source solution.
       :maxdepth: 1
 
       RecordOfChanges
+      LegalNotice
       TypographicConventions
       Glossary
 
