@@ -31,8 +31,8 @@ Low credit
 
 **Event:** Client's credit has dropped below the stated limit.
 
-``<fred:lowCreditData>`` **(1)** declares the ``fred`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
-and contains:
+``<fred:lowCreditData>`` **(1)** declares the ``fred`` :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>`, and contains:
 
 * ``<fred:zone>`` **(1)** – FQDN of the zone in question as :term:`eppcom:labelType`,
 * ``<fred:limit>`` **(1)** – the stated limit:
@@ -149,11 +149,13 @@ that have the same content but are issued on different **events**:
 * ``<domain:expData>`` – the domain has :ref:`expired <registration-expiration>`,
 * ``<domain:dnsOutageData>`` – the domain has become :ref:`unguarded
   <registration-expiration>` and has been excluded from the zone,
-* ``<domain:delData>`` – the domain has been :ref:`deleted <registration-expiration>`.
+* ``<domain:delData>`` – the domain has been :ref:`deleted <registration-expiration>`
+  after registration expiration.
 
 Only one of these elements can occur in a single poll message.
 
-All of these elements declare the ``domain`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
+All of these elements declare the ``domain`` :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>`,
 and contain the following child elements:
 
 * ``<domain:name>`` **(1)** – the domain name they are referring to
@@ -205,8 +207,8 @@ Messages concerning the validation of ENUM domains for **events**:
 
 Only one of these elements can occur in a single poll message.
 
-Both of these elements declare the ``enumval`` :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
-and contain the same child elements:
+Both of these elements declare the ``enumval`` :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>`, and contain the same child elements:
 
 * ``<enumval:name>`` **(1)** – the domain name to which they are referring
   as :term:`eppcom:labelType`,
@@ -250,8 +252,11 @@ Object transfer
 
 **Event:** An object has been transferred to another registrar.
 
-``<*:trnData>`` **(1)** declares the object :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
-and contains:
+This message type appears in all 4 object namespaces: ``domain``, ``contact``,
+``nsset``, ``keyset``.
+
+``<*:trnData>`` **(1)** declares the object :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>`, and contains:
 
 * an object identifier **(1)** which is **one of**:
    * ``<domain:name>`` – a domain name as :term:`eppcom:labelType`,
@@ -260,9 +265,6 @@ and contains:
 * ``<*:trDate>`` **(1)** – the date of the transfer as :term:`xs:dateTime`,
 * ``<*:clID>`` **(1)** – the handle of the registrar who requested the transfer
   as :term:`eppcom:clIDType`.
-
-This message type appears in all 4 object namespaces: ``domain``, ``contact``,
-``nsset``, ``keyset``.
 
 .. code-block:: xml
    :caption: Example of a transfer message
@@ -300,10 +302,13 @@ This message type appears in all 4 object namespaces: ``domain``, ``contact``,
 Object update
 ---------------
 
-**Event:** An object has been updated (in consequence of a server-side operation).
+**Event:** An object has been updated by the Registry.
 
-``<*:updateData>`` **(1)** declares the object :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
-and contains:
+This message type appears in the following object namespaces: ``domain``,
+``contact``, ``nsset``, ``keyset``.
+
+``<*:updateData>`` **(1)** declares the object :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>`, and contains:
 
 * ``<*:opTRID>`` **(1)** – operation transaction identifier (an identification
   of the operation in the Registry that has caused this message)
@@ -321,11 +326,8 @@ and contains:
   :ref:`nsset:infData <nsset-infdata>`,
   :ref:`keyset:infData <keyset-infdata>`).
 
-This message type appears in the following object namespaces: ``domain``,
-``contact``, ``nsset``, ``keyset``.
-
 .. code-block:: xml
-   :caption: Example of an update message
+   :caption: Example of a message about a domain update
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -399,6 +401,89 @@ This message type appears in the following object namespaces: ``domain``,
       </response>
    </epp>
 
+.. code-block:: xml
+   :caption: Example of a message about a contact update
+   :name: contact-update-example
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
+       <response>
+           <result code="1301">
+               <msg>Command completed successfully; ack to dequeue</msg>
+           </result>
+           <msgQ count="1" id="24024414">
+               <qDate>2019-07-31T15:36:17+02:00</qDate>
+               <msg>
+                   <contact:updateData xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
+                    xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.1.xsd">
+                       <contact:opTRID>ReqID-0001071557</contact:opTRID>
+                       <contact:oldData>
+                           <contact:infData xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
+                            xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.1.xsd">
+                               <contact:id>TEST-POLL</contact:id>
+                               <contact:roid>C0011364592-CZ</contact:roid>
+                               <contact:status s="linked">Has relation to other records in the registry</contact:status>
+                               <contact:postalInfo>
+                                   <contact:name>Jan Novak</contact:name>
+                                   <contact:addr>
+                                       <contact:street>Narodni trida 1230/12</contact:street>
+                                       <contact:city>Praha</contact:city>
+                                       <contact:pc>12000</contact:pc>
+                                       <contact:cc>CZ</contact:cc>
+                                   </contact:addr>
+                               </contact:postalInfo>
+                               <contact:voice>+420.606000048</contact:voice>
+                               <contact:email>primary@nic.cz</contact:email>
+                               <contact:clID>REG-FRED_A</contact:clID>
+                               <contact:crID>REG-FRED_A</contact:crID>
+                               <contact:crDate>2019-07-31T15:34:15+02:00</contact:crDate>
+                               <contact:disclose flag="1">
+                                   <contact:addr/>
+                               </contact:disclose>
+                               <contact:ident type="birthday">1990-06-06</contact:ident>
+                           </contact:infData>
+                       </contact:oldData>
+                       <contact:newData>
+                           <contact:infData xmlns:contact="http://www.nic.cz/xml/epp/contact-1.6"
+                            xsi:schemaLocation="http://www.nic.cz/xml/epp/contact-1.6 contact-1.6.1.xsd">
+                               <contact:id>TEST-POLL</contact:id>
+                               <contact:roid>C0011364592-CZ</contact:roid>
+                               <contact:status s="linked">Has relation to other records in the registry</contact:status>
+                               <contact:postalInfo>
+                                   <contact:name>Zmena Jmena</contact:name>
+                                   <contact:addr>
+                                       <contact:street>Nova adresa 2</contact:street>
+                                       <contact:street>Nova druha adresa</contact:street>
+                                       <contact:city>Nove Mesto</contact:city>
+                                       <contact:pc>143 11</contact:pc>
+                                       <contact:cc>CZ</contact:cc>
+                                   </contact:addr>
+                               </contact:postalInfo>
+                               <contact:voice>+420.606000048</contact:voice>
+                               <contact:email>primary@nic.cz</contact:email>
+                               <contact:clID>REG-FRED_A</contact:clID>
+                               <contact:crID>REG-FRED_A</contact:crID>
+                               <contact:crDate>2019-07-31T15:34:15+02:00</contact:crDate>
+                               <contact:upID>REG-FRED_A</contact:upID>
+                               <contact:upDate>2019-07-31T15:36:17+02:00</contact:upDate>
+                               <contact:disclose flag="1">
+                                   <contact:addr/>
+                               </contact:disclose>
+                               <contact:ident type="birthday">1990-06-06</contact:ident>
+                           </contact:infData>
+                       </contact:newData>
+                   </contact:updateData>
+               </msg>
+           </msgQ>
+           <trID>
+               <clTRID>rtjr004#19-07-31at15:36:22</clTRID>
+               <svTRID>ReqID-0001071558</svTRID>
+           </trID>
+       </response>
+   </epp>
+
 .. index:: ⒺidleDelData, Ⓔid
 
 .. _epp-poll-type-idle-del:
@@ -409,13 +494,13 @@ Idle object deletion
 **Event:** An object has been deleted because it had become :doc:`obsolete
 </Concepts/LifeCycle/NonDomains>`.
 
+This message type appears in the following object namespaces: ``contact``,
+``nsset``, ``keyset``.
+
 ``<*:idleDelData>`` **(1)** declares the object :doc:`namespace and schema </EPPReference/SchemasNamespaces/index>`,
 and contains:
 
 * ``<*:id>`` **(1)** – the handle of the deleted object as :term:`fredcom:objIDType`.
-
-This message type appears in the following object namespaces: ``contact``,
-``nsset``, ``keyset``.
 
 .. code-block:: xml
    :caption: Example of a message about a deleted idle object
@@ -440,6 +525,52 @@ This message type appears in the following object namespaces: ``contact``,
          <trID>
             <clTRID>cjtp007#17-07-26at18:30:02</clTRID>
             <svTRID>ReqID-0000140927</svTRID>
+         </trID>
+      </response>
+   </epp>
+
+.. index:: ⒺdelData, Ⓔname, ⒺexDate
+
+.. _epp-poll-type-del:
+
+Domain deletion
+--------------------
+
+**Event:** A domain has been deleted by the Registry for another reason than expiration.
+
+``<domain:delData>`` **(1)** declares the object :doc:`namespace and schema
+</EPPReference/SchemasNamespaces/index>`, and contains:
+
+* ``<domain:name>`` **(1)** – the handle of the deleted object as :term:`eppcom:labelType`,
+* ``<domain:exDate>`` **(1)** – the date of deletion as :term:`xs:date`.
+
+.. Note:: This message type has the same content as domain deletion
+   in :ref:`epp-poll-type-domain-exp`.
+
+.. code-block:: xml
+   :caption: Example of a message about a deleted domain
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="urn:ietf:params:xml:ns:epp-1.0 epp-1.0.xsd">
+      <response>
+         <result code="1301">
+            <msg>Command completed successfully; ack to dequeue</msg>
+         </result>
+         <msgQ count="1" id="24115160">
+            <qDate>2019-07-30T14:43:20+02:00</qDate>
+            <msg>
+                <domain:delData xmlns:domain="http://www.nic.cz/xml/epp/domain-1.4"
+                 xsi:schemaLocation="http://www.nic.cz/xml/epp/domain-1.4 domain-1.4.1.xsd">
+                    <domain:name>example.cz</domain:name>
+                    <domain:exDate>2019-07-30</domain:exDate>
+                </domain:delData>
+            </msg>
+         </msgQ>
+         <trID>
+            <clTRID>budt002#19-07-30at14:48:59</clTRID>
+            <svTRID>ReqID-0001043237</svTRID>
          </trID>
       </response>
    </epp>
