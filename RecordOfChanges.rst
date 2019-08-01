@@ -342,8 +342,6 @@ The newest are :ref:`at the end <roc-end>`.
      - :doc:`/AdminManual/Installation/BinsUbuntu`,
        :doc:`/AdminManual/Installation/BinsFedora`
      - Updated installation procedures - system registrar required for servers to launch
-
-       .. _roc-end:
    * -
      - **1.3**
      - :doc:`/ReleaseNotes/index`
@@ -352,3 +350,9 @@ The newest are :ref:`at the end <roc-end>`.
      -
      - :doc:`/AdminManual/Installation/SystemReqs`
      - Upgraded supported Fedora versions
+
+       .. _roc-end:
+   * -
+     - **1.4**
+     - :doc:`/EPPReference/CommandStructure/Poll/MessageTypes`
+     - Reworked this chapter a little, added more examples
