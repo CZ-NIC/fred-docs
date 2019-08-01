@@ -350,9 +350,23 @@ The newest are :ref:`at the end <roc-end>`.
      -
      - :doc:`/AdminManual/Installation/SystemReqs`
      - Upgraded supported Fedora versions
-
-       .. _roc-end:
    * -
      - **1.4**
      - :doc:`/EPPReference/CommandStructure/Poll/MessageTypes`
      - Reworked this chapter a little, added more examples
+
+       .. _roc-end:
+   * - **2.40**
+     - **1.0**
+     - :doc:`/ReleaseNotes/index`
+     - Added release notes for FRED 2.40.0
+   * -
+     -
+     - :doc:`/LegalNotice`
+     - Added legal notice for the FRED and the documentation
+   * -
+     -
+     - :ref:`Object modif. (Communication) <comm-objmodif>`, |br|
+       :ref:`Object update (Poll message types) <epp-poll-type-update>`
+     - Added a new communication rule (notify a registrar of a domain about
+       an update in a linked contact of another registrar)
