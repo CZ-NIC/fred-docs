@@ -302,7 +302,8 @@ This message type appears in all 4 object namespaces: ``domain``, ``contact``,
 Object update
 ---------------
 
-**Event:** An object has been updated by the Registry.
+**Event:** An object has been updated by the Registry, or a contact linked
+to a domain of another registrar has been updated by its sponsoring registrar.
 
 This message type appears in the following object namespaces: ``domain``,
 ``contact``, ``nsset``, ``keyset``.

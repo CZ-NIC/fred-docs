@@ -175,6 +175,10 @@ Modifications must finish successfully for notifications to occur.
        both old and new notify email
      -
    * -
+     - Registrar updated a contact linked to a domain of another registrar
+     - The registrar of the linked domain
+     - Poll message (:ref:`structure <epp-poll-type-update>`)
+   * -
      - Registrar updated an nsset
      - :ref:`Tech. contacts <contact-roles>` |br|
        both old and new
