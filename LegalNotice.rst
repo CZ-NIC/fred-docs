@@ -42,7 +42,7 @@ Arbitratiton Court attached to the Czech Chamber of Commerce and the
 Agricultural Chamber of the Czech Republic („Court“). Any dispute, controversy
 or claim arising out or relating to using FRED (or this documentation), incl.
 its interpretation, performance, invalidity, no event etc. shall be finally set
-by the above mentioned Court by a sole arbitrator appointed by the President of
+by the above mentioned Court by a sole arbitrator appointed by the President of
 this Court in accordance with the Rules of that Court.
 
 Terms of use of the FRED logo

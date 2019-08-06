@@ -14,7 +14,7 @@ are used to build them:
 * ::D:: stands for FRED Distutils (used with some remaining Python code),
 * ::S:: stands for standard Python Setuptools.
 
-.. Note:: This is a transitional state, it will get better in the following version.
+.. Note:: This is a transitional state, it will get better in the following version.
 
 Each subproject has its own GitHub repository.
 
@@ -36,7 +36,7 @@ Subprojects and repositories
 * :ref:`::C:: <install-cmake>` `fred-idl <https://www.github.com/CZ-NIC/fred-idl.git>`_
   – IDL interface definitions for CORBA inter-process communication
 * :ref:`::C:: <install-cmake>` `fred-libfred <https://www.github.com/CZ-NIC/fred-libfred.git>`_ :sup:`NEW`
-  – a C++ library implementing operations on core registry objects (dependency for ``fred-server``)
+  – a C++ library implementing operations on core registry objects (dependency for ``fred-server``)
 * :ref:`::C:: <install-cmake>` `fred-mod-corba <https://www.github.com/CZ-NIC/fred-mod-corba.git>`_
   – an Apache module serving other two modules (EPP, WHOIS) the common functionality of CORBA communication
 * :ref:`::C:: <install-cmake>` `fred-mod-eppd <https://www.github.com/CZ-NIC/fred-mod-eppd.git>`_

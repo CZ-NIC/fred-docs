@@ -4,14 +4,14 @@ Customizing public web interface
 
 The *public web interface* (see also :ref:`interfaces-pif`)
 is sourced as the component :program:`fred-webwhois`.
-It is a standard **Django application**.
+It is a standard **Django application**.
 
 .. Note:: We give quickstart tips in this customization tutorial, however,
    we recommend you to familiarize yourself with the `Django framework
    <https://docs.djangoproject.com/en/1.11/intro/>`_.
 
-   Also notice that there is a difference between
-   `a Django app and a Django project
+   Also notice that there is a difference between
+   `a Django app and a Django project
    <https://stackoverflow.com/questions/19350785/what-s-the-difference-between-a-project-and-an-app-in-django-world>`_.
 
 The :file:`fred-webwhois` app has some *templates* and *views*.
@@ -19,8 +19,8 @@ It does not have any *models*, since it handles data through CORBA calls.
 
 The public web interface can be divided into 3 feature groups:
 
-* whois lookup -- a form for web WHOIS search, results and details about registered objects,
-* registrar listing -- a list of accredited registrars and their details,
+* whois lookup -- a form for web WHOIS search, results and details about registered objects,
+* registrar listing -- a list of accredited registrars and their details,
 * public requests -- forms and responses for submission of requests from the public.
 
 These feature groups are not stricly separated in the code, they are only used
@@ -37,24 +37,24 @@ Redesigning stylesheets
 
 If you need to adapt the visual style only, changing CSS should suffice.
 
-Create a folder for stylesheets under the :file:`static/webwhois` directory
+Create a folder for stylesheets under the :file:`static/webwhois` directory
 of the :program:`fred-webwhois` app, such as ``css``,
 and put your stylesheet(s) in there.
 
-Then you have to add a reference to your stylesheet file(s) in the template
+Then you have to add a reference to your stylesheet file(s) in the template
 that contains the HTML head (by default in the :ref:`base template
 <custom-web-template-base>`) as follows:
 
 .. code-block:: django
-   :caption: Link to a stylesheet in a template
+   :caption: Link to a stylesheet in a template
 
    <link rel="stylesheet" type="text/css" href="{% static "webwhois/css/mystyle.css" %}"/>
 
-You should use the ``static`` tag and a path relative to the static directory.
+You should use the ``static`` tag and a path relative to the static directory.
 Django will render this expression to the full file path accordingly.
 
 Before deployment, you must collect static files (e.g. images, JavaScript, CSS)
-to a single location, see `Django 1.11: Managing static files
+to a single location, see `Django 1.11: Managing static files
 <https://docs.djangoproject.com/en/1.11/howto/static-files/>`_.
 
 Reconfiguring URLs
@@ -92,16 +92,16 @@ components, you can override only the components necessary.
 
 For example:
 
-Let us say that you want a different representation of the list of registrars:
-a simple list instead of a table. You only need to override the template component
+Let us say that you want a different representation of the list of registrars:
+a simple list instead of a table. You only need to override the template component
 that defines the table (block ``webwhois_content``), which originates in the template
 ``webwhois/registrar_list.html``.
 
-* Create a file such as :file:`/path/to/my-templates/webwhois/my_registrar_list.html`
+* Create a file such as :file:`/path/to/my-templates/webwhois/my_registrar_list.html`
   with the following content:
 
   .. code-block:: django
-     :caption: Django: Overriding a template block
+     :caption: Django: Overriding a template block
 
      {# Name the template to be extended. #}
      {% extends "webwhois/registrar_list.html" %}
@@ -125,7 +125,7 @@ that defines the table (block ``webwhois_content``), which originates in the tem
   in your URLs module:
 
   .. code-block:: python
-     :caption: Django: Reconfiguring a template for a view
+     :caption: Django: Reconfiguring a template for a view
 
      urlpatterns = [
       # From the template reference, we know that the list is rendered by this view
@@ -143,7 +143,7 @@ that defines the table (block ``webwhois_content``), which originates in the tem
   to the ``DIRS`` list in templates configuration as follows:
 
   .. code-block:: python
-     :caption: Django: Setting a custom template path in project settings
+     :caption: Django: Setting a custom template path in project settings
 
      TEMPLATES = [
          {
@@ -158,9 +158,9 @@ that defines the table (block ``webwhois_content``), which originates in the tem
 For more about Django templates in fred-webwhois see :doc:`WebwhoisTemplates`.
 
 See also `Django 1.11: Templates
-<https://docs.djangoproject.com/en/1.11/topics/templates/>`_ (a brief introduction).
+<https://docs.djangoproject.com/en/1.11/topics/templates/>`_ (a brief introduction).
 
-Creating a new localization
+Creating a new localization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Django uses **gettext** for internationalization and localization.

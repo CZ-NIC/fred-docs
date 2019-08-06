@@ -28,7 +28,7 @@ The FRED is capable of using the following channels of communication:
 * :ref:`Generic <comm-channels-generic>` and additional emails
    * extra addresses uncontained in Registry records
    * additional addresses must be :ref:`supplied manually <comm-objlife-outzone>`
-   * used only for `outzone unguarded warnings`_ (a life-cycle event)
+   * used only for `outzone unguarded warnings`_ (a life-cycle event)
 * Poll messages
    * an integral part of EPP
    * used for communication with registrars related to EPP activity
@@ -175,7 +175,7 @@ Modifications must finish successfully for notifications to occur.
        both old and new notify email
      -
    * -
-     - Registrar updated a contact linked to a domain of another registrar
+     - Registrar updated a contact linked to a domain of another registrar
      - The registrar of the linked domain
      - Poll message (:ref:`structure <epp-poll-type-update>`)
    * -

@@ -263,7 +263,7 @@ values in certain database tables.
    to examine changes in the database component before upgrading the FRED!**
 
    Sometimes we need to edit the database configuration for ourselves and these
-   changes are added to a database upgrade script, which would overwrite
+   changes are added to a database upgrade script, which would overwrite
    your settings.
    Therefore you should either **backup** your current database tables to recover
    your settings after the upgrade, **or adapt** the upgrade script directly,

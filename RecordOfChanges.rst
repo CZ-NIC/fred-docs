@@ -353,7 +353,7 @@ The newest are :ref:`at the end <roc-end>`.
    * -
      - **1.4**
      - :doc:`/EPPReference/CommandStructure/Poll/MessageTypes`
-     - Reworked this chapter a little, added more examples
+     - Reworked this chapter a little, added more examples
 
        .. _roc-end:
    * - **2.40**

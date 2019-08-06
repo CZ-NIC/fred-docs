@@ -109,9 +109,9 @@ To set a blocking of a single domain, follow this procedure:
    and confirm with :guilabel:`OK`.
 
 .. Note:: A blocked holder will be restored during domain unblocking automatically
-   under certain conditions. See `Unblock a domain`_.
+   under certain conditions. See `Unblock a domain`_.
 
-Change blocking of a domain
+Change blocking of a domain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If a domain already has been set some blocking flags, you can modify them
@@ -151,7 +151,7 @@ flags which used to be assigned before the blocking, if requested.
 
 The system attempts to unblock the original owner contact, if it had been blocked
 together with the domain, and if it is not linked to any other blocked domains.
-If it is linked to other blocked domains, the system creates a copy of the owner
+If it is linked to other blocked domains, the system creates a copy of the owner
 contact, replaces the original contact with the copy in the blocked domains,
 and unblocks the original owner.
 
@@ -189,7 +189,7 @@ this procedure:
 #. The blocking form appears that lets you set the blocking parameters
    for all selected domains at once. Options are the same as for the
    single-domain variant of these operations (see `block a domain`_,
-   `change blocking of a domain`_, `unblock a domain`_ or `blacklist and
+   `change blocking of a domain`_, `unblock a domain`_ or `blacklist and
    delete a domain`_).
 #. Proceed by clicking the button and confirm by :guilabel:`OK`.
 

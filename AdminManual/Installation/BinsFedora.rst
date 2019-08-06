@@ -109,7 +109,7 @@ Installation steps
 
       fred-admin --registrar_add --handle=REG-SYSTEM --country=CZ --no_vat --system
 
-   The default handle is ``REG-SYSTEM``, but you may use a different handle
+   The default handle is ``REG-SYSTEM``, but you may use a different handle
    if you specify it in the configuration options ``system_registrar`` and
    ``automatically_managed_keyset_registrar``.
 

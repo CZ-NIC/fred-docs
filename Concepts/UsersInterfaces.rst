@@ -44,7 +44,7 @@ The RIF provides the following:
 .. rubric:: System registrar
 
 This is a registrar account that belongs to the Registry itself and allows
-the Registry to edit :term:`registrable object`\ s as necessary. Normal rules
+the Registry to edit :term:`registrable object`\ s as necessary. Normal rules
 do not apply -- it can edit any object in any state (and without being designated
 to manage the object), it does not need to have credit, and it does not generate
 EPP notifications.
@@ -85,7 +85,7 @@ administrative operations, which are not available in the Web service itself,
 including automated self-administration tasks.
 
 The Registry staff may also edit domains and the other :term:`registrable object`\
-s for various administrative reasons, but they must use the RIF
+s for various administrative reasons, but they must use the RIF
 with the *system registrar* account.
 
 .. _interfaces-pif:
@@ -94,7 +94,7 @@ Public interface (PIF)
 ----------------------
 
 The public interface provides the **public** with public information about
-domains and other :term:`registrable object`\ s recorded in the Registry.
+domains and other :term:`registrable object`\ s recorded in the Registry.
 
 The PIF has 3 services which provide the public information in various formats
 via various protocols: Unix WHOIS service, Web WHOIS service, and RDAP service.

@@ -10,8 +10,8 @@ Release 2.40.0
 .. rubric:: Enhancements
 
 * Server:
-   * notify registrars of domains linked to a contact of another registrar
-     about a change in this contact via a poll message
+   * notify registrars of domains linked to a contact of another registrar
+     about a change in this contact via a poll message
    * improve notifications about deletions and updates of domains and contacts
      by the Registry
 

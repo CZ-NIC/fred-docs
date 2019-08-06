@@ -69,7 +69,7 @@ Network
 ^^^^^^^^
 
 Network rules are described per node in the following sections, but here is an
-overview of logical connections in the network (a single instance of the system).
+overview of logical connections in the network (a single instance of the system).
 
 .. _deploy-ports:
 
@@ -83,7 +83,7 @@ overview of logical connections in the network (a single instance of the system)
    Network -- Logical topology
 
 *Restricted network access* means that servers should be accessed only from IP
-addresses allowed on a firewall.
+addresses allowed on a firewall.
 
 *Unrestricted network access* means that servers can be accessed from any IP
 address, but only necessary ports should be open for access as illustrated

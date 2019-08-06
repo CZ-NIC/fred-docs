@@ -122,7 +122,7 @@ Upgrading
 
 .. Important::
 
-   Before you upgrade to a newer version, read the :doc:`/ReleaseNotes/index`
+   Before you upgrade to a newer version, read the :doc:`/ReleaseNotes/index`
    and associated upgrade considerations carefully!
 
 .. rubric:: Considerations overview

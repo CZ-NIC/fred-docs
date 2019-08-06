@@ -63,10 +63,10 @@ or an archived version list (see the website for archived versions).
    for file in *.tar.gz; do tar xvzf "$file" && ln -s "${file%.tar.gz}" "${file%-*}"; done
 
 .. 1/ popisnější jména
-   2/ v bash se podle konvence píší velkými písmeny jen proměnné prostředí,
+   2/ v bash se podle konvence píší velkými písmeny jen proměnné prostředí,
       tj. to co se exportuje
    3/ udělá to symlinky na ty adresáře, tak se půjde dát odkazovat
-      -DIDL_DIR=../../fred-idl/idl a nebude tam ta verze.
+      -DIDL_DIR=../../fred-idl/idl a nebude tam ta verze.
 
 .. _install-auto:
 

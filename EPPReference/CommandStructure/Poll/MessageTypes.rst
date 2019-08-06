@@ -302,8 +302,8 @@ This message type appears in all 4 object namespaces: ``domain``, ``contact``,
 Object update
 ---------------
 
-**Event:** An object has been updated by the Registry, or a contact linked
-to a domain of another registrar has been updated by its sponsoring registrar.
+**Event:** An object has been updated by the Registry, or a contact linked
+to a domain of another registrar has been updated by its sponsoring registrar.
 
 This message type appears in the following object namespaces: ``domain``,
 ``contact``, ``nsset``, ``keyset``.
@@ -328,7 +328,7 @@ This message type appears in the following object namespaces: ``domain``,
   :ref:`keyset:infData <keyset-infdata>`).
 
 .. code-block:: xml
-   :caption: Example of a message about a domain update
+   :caption: Example of a message about a domain update
 
    <?xml version="1.0" encoding="UTF-8"?>
    <epp xmlns="urn:ietf:params:xml:ns:epp-1.0"
@@ -403,7 +403,7 @@ This message type appears in the following object namespaces: ``domain``,
    </epp>
 
 .. code-block:: xml
-   :caption: Example of a message about a contact update
+   :caption: Example of a message about a contact update
    :name: contact-update-example
 
    <?xml version="1.0" encoding="UTF-8"?>
@@ -537,7 +537,7 @@ and contains:
 Domain deletion
 --------------------
 
-**Event:** A domain has been deleted by the Registry for another reason than expiration.
+**Event:** A domain has been deleted by the Registry for another reason than expiration.
 
 ``<domain:delData>`` **(1)** declares the object :doc:`namespace and schema
 </EPPReference/SchemasNamespaces/index>`, and contains:

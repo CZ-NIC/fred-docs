@@ -12,7 +12,7 @@ into several database tables as follows.
    in the database component before upgrading the FRED!**
 
    Sometimes we need to edit the templates for ourselves and these changes are
-   added to a database upgrade script, which would overwrite your settings.
+   added to a database upgrade script, which would overwrite your settings.
    Therefore you should either **backup** your current database tables to recover
    your settings after the upgrade, **or adapt** the upgrade script directly,
    so that you don't lose your settings.
@@ -33,7 +33,7 @@ Table: ``mail_template_default``
 This table contains Registry contact information (called ``defaults``)
 grouped in the JSON form.
 
-``defaults.*`` are a data subset that is passed to all email templates.
+``defaults.*`` are a data subset that is passed to all email templates.
 
 The parameters are described :ref:`in the parameter reference <csparams-defaults>`.
 
@@ -70,7 +70,7 @@ This table maps an email type ``name``, which is referred to in the
 :ref:`FRED-Admin-App-CSParams`, to an ``id`` referenced by the ``mail_template``
 table.
 
-Each email type serves a specific purpose that is built in into the overall
+Each email type serves a specific purpose that is built in into the overall
 functionality of the Registry. For this reason, there is no easy way of adding
 custom email types at the moment, although you may easily customize the existing
 types.
@@ -90,9 +90,9 @@ Email composition
 An email message is composed of:
 
 * header fields,
-* a subject,
-* a body,
-* a footer at the end of the body,
+* a subject,
+* a body,
+* a footer at the end of the body,
 * vCard attachment.
 
 .. _custom-email-compose-head:
@@ -121,7 +121,7 @@ reference it in the ``mail_template.mail_header_default_id`` attribute.
 
 .. rubric:: Message-ID generation
 
-A complete Message-ID is composed in the following manner::
+A complete Message-ID is composed in the following manner::
 
    <mail_archive.id>.<int(epoch_time)>@<mail_header_default.h_messageidserver>
 
@@ -134,7 +134,7 @@ Table: ``mail_template_footer``
 
 This table allows you to preset email footers.
 
-An email footer is a component of email content that is added right after the body,
+An email footer is a component of email content that is added right after the body,
 typically used to include uniformly-formatted :ref:`Registry contact information
 <custom-email-registry>`. For example:
 
@@ -160,7 +160,7 @@ Email vCards
 
 Table: ``mail_vcard``
 
-This table contains a unique Registry vCard that is inserted by Mailer to all emails
+This table contains a unique Registry vCard that is inserted by Mailer to all emails
 as an attachment.
 
 You may redefine it by updating the row. VCard version is not restricted by the FRED,
@@ -193,14 +193,14 @@ Table: ``mail_template``
 
 This table contains the core of the email templates, and it has the following attributes:
 
-* ``mail_type_id`` -- reference to a mail type ``id`` from ``mail_type``,
+* ``mail_type_id`` -- reference to a mail type ``id`` from ``mail_type``,
 * ``version`` -- version number of the template (see below),
-* ``subject`` -- a short description of message content for the ``Subject`` header,
-* ``body_template`` -- the main part of a template, see :ref:`custom-email-templating`,
+* ``subject`` -- a short description of message content for the ``Subject`` header,
+* ``body_template`` -- the main part of a template, see :ref:`custom-email-templating`,
 * ``body_template_content_type`` -- content subtype of the message (only ``plain`` is tested),
-* ``mail_template_footer_id`` -- reference to a footer ``id`` from ``mail_template_footer``,
-* ``mail_template_default_id`` -- reference to a defaults ``id`` from ``mail_template_default``,
-* ``mail_header_default_id`` -- reference to a headers ``id`` from ``mail_header_default``,
+* ``mail_template_footer_id`` -- reference to a footer ``id`` from ``mail_template_footer``,
+* ``mail_template_default_id`` -- reference to a defaults ``id`` from ``mail_template_default``,
+* ``mail_header_default_id`` -- reference to a headers ``id`` from ``mail_header_default``,
 * ``created_at`` -- template creation timestamp.
 
 .. rubric:: Subject
@@ -212,7 +212,7 @@ separator (``/``), you should use it consistently across the email types.
 .. rubric:: Content type
 
 The general content type of an email body is always ``text``.
-The ``body_template_content_type`` attribute is a subtype, usually ``plain``,
+The ``body_template_content_type`` attribute is a subtype, usually ``plain``,
 therefore the full content type results in ``text/plain``. Other text subtypes
 are theoretically possible (such as html, css, xml, csv), although only ``plain``
 has been tested!
@@ -222,7 +222,7 @@ has been tested!
 - The last version is used in generation of new emails.
 - Older versions are kept to regenerate archived messages for viewing
   in the WebAdmin.
-- When you're changing any attribute of a mail template, **insert a new row**
+- When you're changing any attribute of a mail template, **insert a new row**
   with the change and with the version number incremented by 1.
 
 .. Tip:: To write upgrades, you may use our database functions
@@ -236,21 +236,21 @@ Body templating
 
 In the email body template, we use the convention: local-language (Czech) text
 first, English text second,
-and the language variants are optically separated with a couple of newlines.
+and the language variants are optically separated with a couple of newlines.
 
 .. Note:: We recommend to replace the Czech variant of texts with the variant
    in your local language and keep the English variant for common understanding.
 
 Email bodies are processed with the `ClearSilver <http://www.clearsilver.net/>`_
 template system, which takes a template in plain text and passes it
-a data set to create a resulting email.
-Each email template is passed a different data set, which depends on the email type.
-Data (parameters) are passed to a template in a hierarchical form.
-To traverse the hierarchy, a dot convention is used.
+a data set to create a resulting email.
+Each email template is passed a different data set, which depends on the email type.
+Data (parameters) are passed to a template in a hierarchical form.
+To traverse the hierarchy, a dot convention is used.
 
 ClearSilver lets you do some basic templating:
 
-* Output the value of a variable:
+* Output the value of a variable:
 
   .. code-block:: xml
      :caption: ClearSilver example: Variable
@@ -270,7 +270,7 @@ ClearSilver lets you do some basic templating:
       /if ?> <?cs var:ident_value ?>
      <?cs /if ?>
 
-* Iterate over a list:
+* Iterate over a list:
 
   .. code-block:: xml
      :caption: ClearSilver example: List iteration
