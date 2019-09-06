@@ -49,15 +49,15 @@ Download and unpack
 ^^^^^^^^^^^^^^^^^^^
 
 We publish a list of GitHub-generated tarballs `on the website
-<https://fred.nic.cz/page/3612/get-fred/>`_.
+<https://fred.nic.cz/en/get-fred/>`_.
 
-You may use the `latest version list <https://fred.nic.cz/files/fred/fred-sources-list-latest.txt>`_
+You may use the `latest version list <https://fred.nic.cz/fred-sources-list-latest.txt>`_
 or an archived version list (see the website for archived versions).
 
 .. code-block:: bash
 
    mkdir fred && cd fred
-   curl https://fred.nic.cz/files/fred/fred-sources-list-latest.txt | while read -r line; do
+   curl https://fred.nic.cz/fred-sources-list-latest.txt | while read -r line; do
       curl -JLO "$line" # these options are necessary to have nice filenames
    done
    for file in *.tar.gz; do tar xvzf "$file" && ln -s "${file%.tar.gz}" "${file%-*}"; done

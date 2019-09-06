@@ -22,7 +22,7 @@ Config-zone script
 ^^^^^^^^^^^^^^^^^^
 
 For a simple setup of your particular TLD, you can download and use
-this Python script: `fred-config-zone.py <https://fred.nic.cz/public/media/1568014036/55/>`_.
+this Python script as follows.
 
 It takes a TLD as an argument and generates a set of shell commands
 on std.output, which can be directly executed. Of course, you can have a look
@@ -33,11 +33,13 @@ create one system registrar with the handle ``REG-TLD`` and
 EPP password ``passwd``.
 Zone SOA parameters are extracted from the real DNS.
 
-Here is an example of usage with the CZ TLD:
+Here is an example of usage with the ``.cz`` TLD:
 
 .. code-block:: bash
    :caption: Config-zone script usage example
 
+   # Download the script
+   wget -O fred-config-zone.py https://fred.nic.cz/public/media/1568014036/55/
    # Generate a configuration script for a particular zone
    python fred-config-zone.py cz > fred-config-cz.sh
    # Run the script
