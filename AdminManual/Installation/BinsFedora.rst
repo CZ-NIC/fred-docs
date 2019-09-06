@@ -33,7 +33,7 @@ follow this procedure:
    # Switch to root
    sudo su -
    # Download the script
-   wget https://fred.nic.cz/files/fred/fred-rh-install.sh
+   wget -O fred-rh-install.sh https://fred.nic.cz/public/media/1568014036/57/
    # Execute the script
    . fred-rh-install.sh
 

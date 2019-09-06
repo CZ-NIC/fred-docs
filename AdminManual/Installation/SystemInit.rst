@@ -22,7 +22,7 @@ Config-zone script
 ^^^^^^^^^^^^^^^^^^
 
 For a simple setup of your particular TLD, you can download and use
-`this Python script <https://fred.nic.cz/files/fred/fred-config-zone.py>`_.
+this Python script: `fred-config-zone.py <https://fred.nic.cz/public/media/1568014036/55/>`_.
 
 It takes a TLD as an argument and generates a set of shell commands
 on std.output, which can be directly executed. Of course, you can have a look
@@ -38,6 +38,7 @@ Here is an example of usage with the CZ TLD:
 .. code-block:: bash
    :caption: Config-zone script usage example
 
-   wget https://fred.nic.cz/files/fred/fred-config-zone.py
+   # Generate a configuration script for a particular zone
    python fred-config-zone.py cz > fred-config-cz.sh
+   # Run the script
    . fred-config-cz.sh

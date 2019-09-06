@@ -33,7 +33,7 @@ follow this procedure:
    # Switch to root
    sudo su -
    # Download the script
-   wget https://fred.nic.cz/files/fred/fred-ubuntu-install.sh
+   wget -O fred-ubuntu-install.sh https://fred.nic.cz/public/media/1568014036/56/
    # Execute the script
    . fred-ubuntu-install.sh
 
