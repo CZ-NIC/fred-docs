@@ -16,7 +16,7 @@ as an open-source solution.
       which means that it contains authoring/editing/managing notes
       in addition to the actual content.
 
-:Edition: :doc:`1.0 <RecordOfChanges>`
+:Edition: :doc:`1.1 <RecordOfChanges>`
 
 :Source: The source code of this documentation is open and can be found
          on `GitHub <https://github.com/CZ-NIC/fred-docs>`_.

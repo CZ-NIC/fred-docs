@@ -18,6 +18,10 @@ For changes in software, see :doc:`/ReleaseNotes/index`.
      - Segment
      - Change description
    * - **2.40**
+     - **1.1**
+     - :doc:`/AdminManual/Installation/index`
+     - Corrected installation procedures
+   * -
      - **1.0**
      - :doc:`/ReleaseNotes/index`
      - Added release notes for FRED 2.40.0
