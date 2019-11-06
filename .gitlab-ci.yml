@@ -6,7 +6,7 @@ deploy_production:
   stage: deploy
   script:
     #- mv _build/latex/FRED.pdf _build/
-    - /usr/local/bin/deploy fred-docs/${CI_PROJECT_ID}/.
+    - /usr/local/bin/deploy ${CI_PROJECT_ID}
   only:
     - /^\d+\.\d+\.\d+$/
   tags:
@@ -16,7 +16,7 @@ deploy_test:
   stage: deploy
   script:
     #- mv _build/latex/FRED.pdf _build/
-    - /usr/local/bin/deploy fred-docs/${CI_PROJECT_ID}_test/.
+    - /usr/local/bin/deploy ${CI_PROJECT_ID}_test
   only:
     - /^\d+\.\d+\.\d+$/
     - /^\d+\.\d+\.\d+-rc\d+$/
