@@ -28,5 +28,6 @@ This chapter contains lists of FRED's features related to administration.
    :maxdepth: 2
    :caption: Chapter TOC
 
+   Ferda
    WebAdmin
    CLIAdmin

@@ -49,6 +49,10 @@ a.headerlink {
 div.sphinxsidebar {
 }
 
+div.sphinxsidebarwrapper .caption-text {
+   font-weight: bold;
+}
+
 div.sphinxsidebarwrapper {
     margin :0;
     padding :0 10px 40px 41px;

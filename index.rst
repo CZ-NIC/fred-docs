@@ -47,6 +47,7 @@ as an open-source solution.
    Concepts/index
    Architecture/index
    AdminManual/index
+   FerdaManual/index
    EPPReference/index
    RDAPReference/index
    ReleaseNotes/index

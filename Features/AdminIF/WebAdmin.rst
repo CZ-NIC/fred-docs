@@ -1,8 +1,6 @@
 
-.. _FRED-Features-Admin-Web:
-
-Web admin features
--------------------
+Daphne webadmin features
+------------------------
 
 Webadmin features are divided into feature groups which also constitute
 the sections of this document.
