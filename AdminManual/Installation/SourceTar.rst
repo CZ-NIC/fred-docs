@@ -36,8 +36,7 @@ We prepared lists of all particular packages on which FRED's compilation,
 installation or operation depends (package names may slightly differ
 across OS versions):
 
-* :ref:`Ubuntu 14.04 LTS <Source-Deps-Ubu14>`
-* :ref:`Ubuntu 16.04 LTS <Source-Deps-Ubu16>`
+* :doc:`Ubuntu 16.04 LTS </AdminManual/Appendixes/DependenciesUbuntu16>`
 
 Install all the packages from the appropriate list.
 
