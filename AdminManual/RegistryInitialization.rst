@@ -83,7 +83,7 @@ Creating a zone
 ^^^^^^^^^^^^^^^
 .. code-block:: bash
 
-   $ fred-admin --zone_add \
+   fred-admin --zone_add \
       --zone_fqdn=cz \
       --ex_period_min=12 \
       --ex_period_max=120 \
@@ -138,11 +138,11 @@ Adding zone name servers
 ^^^^^^^^^^^^^^^^^^^^^^^^
 .. code-block:: bash
 
-   $ fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=a.ns.nic.cz
-   $ fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=b.ns.nic.cz --addr=1.2.3.4
-   $ fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=c.ns.nic.cz --addr=5.6.7.8 9.0.1.2
+   fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=a.ns.nic.cz
+   fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=b.ns.nic.cz --addr=1.2.3.4
+   fred-admin --zone_ns_add --zone_fqdn=cz --ns_fqdn=c.ns.nic.cz --addr=5.6.7.8 9.0.1.2
    # or
-   $ fred-admin --zone_ns_add --zone_fqdn cz --ns_fqdn c.ns.nic.cz --addr 5.6.7.8 --addr 9.0.1.2
+   fred-admin --zone_ns_add --zone_fqdn cz --ns_fqdn c.ns.nic.cz --addr 5.6.7.8 --addr 9.0.1.2
 
 This command assigns a name server to a zone.
 
@@ -216,12 +216,12 @@ Creating a registrar
 .. code-block:: bash
 
    # adding a common registrar:
-   $ fred-admin --registrar_add \
+   fred-admin --registrar_add \
       --handle=REG-FRED_A --reg_name="Testing registrar A" \
       --organization="Company l.t.d." --country=CZ
 
    # adding a system registrar:
-   $ fred-admin --registrar_add \
+   fred-admin --registrar_add \
       --handle=REG-SYSTEM --reg_name="System registrar" \
       --country=CZ --system
 
@@ -245,7 +245,7 @@ Authentication data allows registrars to connect to the Registry securely.
 
 .. code-block:: bash
 
-   $ fred-admin --registrar_acl_add \
+   fred-admin --registrar_acl_add \
       --handle=REG-FRED_A \
       --certificate="39:D1:0C:CA:05:3A:CC:C0:0B:EC:6F:3F:81:0D:C7:9E" \
       --password=passwd
@@ -259,7 +259,7 @@ This command assigns the given access control data to a registrar.
 
   It can be created from an existing certificate with the following command::
 
-     $ openssl x509 -noout -fingerprint -md5 -in /path/to/cert.pem | cut -d= -f2
+     openssl x509 -noout -fingerprint -md5 -in /path/to/cert.pem | cut -d= -f2
 
 .. Note:: For testing purposes, you can use the test certificate that comes
    with the :file:`fred-mod-eppd` package and was installed
@@ -281,7 +281,7 @@ Granting access to a zone
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 .. code-block:: bash
 
-   $ fred-admin --registrar_add_zone \
+   fred-admin --registrar_add_zone \
       --zone_fqdn=cz --handle=REG-FRED_A \
       --from_date="2007-01-01"
 
@@ -342,23 +342,23 @@ Chargeable operations include:
 
 .. code-block:: bash
 
-   $ fred-admin --price_add --operation='CreateDomain' --zone_fqdn=cz \
+   fred-admin --price_add --operation='CreateDomain' --zone_fqdn=cz \
       --valid_from='2014-12-31 23:00:00' \
       --operation_price 0 --period 1
 
-   $ fred-admin --price_add --operation='RenewDomain' --zone_fqdn=cz \
+   fred-admin --price_add --operation='RenewDomain' --zone_fqdn=cz \
       --valid_from='2014-12-31 23:00:00' --valid_to='2015-01-31 22:59:59' \
       --operation_price 155 --period 1
 
-   $ fred-admin --price_add --operation='RenewDomain' \
+   fred-admin --price_add --operation='RenewDomain' \
       --valid_from='2015-01-31 23:00:00' --zone_fqdn=cz \
       --operation_price 140 --period 1
 
-   $ fred-admin --price_add --operation='RenewDomain' --zone_fqdn=cz \
+   fred-admin --price_add --operation='RenewDomain' --zone_fqdn=cz \
       --valid_from='2015-09-01 19:15:56.159594' --valid_to='2015-12-31 23:00:00' \
       --operation_price 190 --period 1
 
-   $ fred-admin --price_add --operation='GeneralEppOperation' \
+   fred-admin --price_add --operation='GeneralEppOperation' \
       --valid_from='2015-05-31 22:00:00' --zone_fqdn=cz \
       --operation_price 0.10 --period 1 --enable_postpaid_operation
 
@@ -407,9 +407,9 @@ Creating default initial numbers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. code-block:: bash
 
-   $ fred-admin --add_invoice_number_prefix \
+   fred-admin --add_invoice_number_prefix \
       --prefix=24 --zone_fqdn=cz --invoice_type_name=advance
-   $ fred-admin --add_invoice_number_prefix \
+   fred-admin --add_invoice_number_prefix \
       --prefix=23 --zone_fqdn=cz --invoice_type_name=account
 
 .. todo:: Explain invoice types in Features, then rewrite
@@ -428,7 +428,7 @@ This command adds a number prefix for invoices of a given type in a zone.
 
 .. code-block:: bash
 
-   $ fred-admin --create_invoice_prefixes --for_current_year
+   fred-admin --create_invoice_prefixes --for_current_year
 
 This command creates initial invoice numbers for all available combinations
 for the current year. If the ``--for_current_year`` argument is omitted,
@@ -442,7 +442,7 @@ Defining custom initial numbers
 
 .. code-block:: bash
 
-   $ fred-admin --invoice_add_prefix --zone_fqdn=cz --type 0 --year 2017 --prefix 401700001
+   fred-admin --invoice_add_prefix --zone_fqdn=cz --type 0 --year 2017 --prefix 401700001
 
 This command adds a custom initial number (prefix) for the given combination
 of a year, zone and invoice type (0 – advance, 1 – account).
@@ -469,7 +469,7 @@ directly:
 
 .. code-block:: bash
 
-   $ psql -U fred
+   psql -U fred
    fred=> begin;
    update price_vat set valid_to = '2014-12-31 23:00:00' where valid_to is null;
    insert into price_vat (koef, vat) values (0.1736, 21) ;
@@ -487,7 +487,7 @@ Assigning credit to a registrar
 
 .. code-block:: bash
 
-   $ fred-admin --invoice_credit \
+   fred-admin --invoice_credit \
       --zone_id=1 --registrar_id=1 --price=15000
 
 This command adds some credit to a registrar in a zone and creates an advance
@@ -506,14 +506,14 @@ amount is subtracted automatically.
    .. code-block:: bash
       :caption: Find out registrar id
 
-       $ psql -U fred -c "SELECT id FROM registrar where handle = 'REG-FRED_A';"
+       psql -U fred -c "SELECT id FROM registrar where handle = 'REG-FRED_A';"
 
    This command will find a registrar by its handle and return its identifier.
 
    .. code-block:: bash
       :caption: Find out zone id
 
-       $ psql -U fred -c "SELECT id FROM zone where fqdn = 'cz';"
+       psql -U fred -c "SELECT id FROM zone where fqdn = 'cz';"
 
    This command will find a zone by its FQDN and return its identifier.
 
@@ -541,7 +541,7 @@ Set the appropriate time zone for automated administration with the
 .. code-block:: bash
    :caption: Set the appropriate time zone for automated administration
 
-   $ fred-admin --enum_parameter_change \
+   fred-admin --enum_parameter_change \
       --parameter_name=regular_day_procedure_zone \
       --parameter_value=TZNAME
 
