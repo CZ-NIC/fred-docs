@@ -23,24 +23,24 @@ components and their relationships.
 
 .. _fig-arch-components:
 
-.. figure:: /Architecture/_graphics/schema-components.png
-   :alt:
-   :align: center
-   :figwidth: 100%
+.. rubric:: Diagram of FRED components
 
-   Diagram of FRED components
+.. Note:: Click a component to read its description.
 
-   .. rubric:: Legend
+.. raw:: html
+    :file: ../_graphics/schema-components.svg
 
-   * *Violet* components are developed by the CZ.NIC and they are parts
-     of the FRED software.
-   * *White* components are not developed by the CZ.NIC but are required
-     for the proper function of the Registry.
-   * otherwise coloured components are developed by the CZ.NIC but they are not
-     parts of the FRED software.
-   * *Arrows* signify direct cooperation of components (the arrow points
-     at the component which serves the other component); neither the colour
-     nor the style of arrows carry any meaning.
+.. rubric:: Legend
+
+* *Violet* components are developed by the CZ.NIC and they are parts
+  of the FRED software.
+* *White* components are not developed by the CZ.NIC but are required
+  for the proper function of the Registry.
+* Components coloured otherwise are developed by the CZ.NIC but they are not
+  parts of the FRED software.
+* *Arrows* signify direct cooperation of components (the arrow points
+  at the component which serves the other component); neither the colour
+  nor the style of arrows carry any meaning.
 
 .. toctree::
    :maxdepth: 2
