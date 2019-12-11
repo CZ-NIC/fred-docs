@@ -25,6 +25,7 @@ To deploy binaries, you must have installed one of these **operating systems**:
 * Ubuntu 16.04 LTS (Xenial Xerus)
 * Fedora 29
 * Fedora 30
+* Fedora 31
 * RHEL 7
 * CentOS 7
 
