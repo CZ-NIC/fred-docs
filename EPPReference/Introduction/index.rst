@@ -4,9 +4,7 @@
 Introduction
 ============
 
-This is a reference manual for the EPP protocol as implemented by the FRED.
-
-The global XSD schema ``all-2.4.0`` has been taken as the **baseline** for the reference.
+This is a reference manual for the EPP protocol as implemented in the FRED.
 
 The manual describes protocol basics and the generic structure of messages
 in a nutshell (based on the main RFC standard), introduces registrable objects
@@ -16,6 +14,17 @@ of specific commands and responses, all interleaved with examples.
 Appendices contain overviews of result codes, error reasons and simple data
 types from schemas.
 
+.. rubric:: Conformance of this reference
+
+The global XSD schema ``all-2.4.0`` has been taken as the baseline.
+
+.. rubric:: Specifications
+
+* :rfc:`5730` Extensible Provisioning Protocol (EPP) -- the main standard
+* :rfc:`5731` EPP Domain Name Mapping
+* :rfc:`5732` EPP Host Mapping
+* :rfc:`5733` EPP Contact Mapping
+* :rfc:`5734` EPP Transport over TCP
 
 General workflow
 ----------------
