@@ -56,7 +56,7 @@ or an archived version list (see the website for archived versions).
 .. code-block:: bash
 
    mkdir fred && cd fred
-   curl https://fred.nic.cz/fred-sources-list-latest.txt | while read -r line; do
+   curl -L https://fred.nic.cz/fred-sources-list-latest.txt | while read -r line; do
       curl -JLO "$line" # these options are necessary to have nice filenames
    done
    for file in *.tar.gz; do tar xvzf "$file" && ln -s "${file%.tar.gz}" "${file%-*}"; done
