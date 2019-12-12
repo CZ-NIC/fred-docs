@@ -12,12 +12,7 @@ Overview of changes in software from preceding versions.
 .. struct-end
 
 .. toctree::
+   :glob:
+   :reversed:
 
-   releases-2-40
-   releases-2-39
-   releases-2-38
-   releases-2-37
-   releases-2-36
-   releases-2-35
-   releases-2-34
-   releases-2-33
+   releases-*

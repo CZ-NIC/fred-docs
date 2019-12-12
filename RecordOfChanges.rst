@@ -5,7 +5,7 @@ Record of Changes
 =================
 
 Overview of changes in documentation from previous editions.
-For changes in software, see :doc:`/ReleaseNotes/index`.
+For changes in software see :doc:`/ReleaseNotes/index`.
 
 .. tabularcolumns:: |p{0.075\textwidth}|p{0.075\textwidth}|p{0.25\textwidth}|p{0.575\textwidth}|
 
@@ -17,6 +17,26 @@ For changes in software, see :doc:`/ReleaseNotes/index`.
      - Edition
      - Segment
      - Change description
+   * - **2.41**
+     - **1.0**
+     - :doc:`/ReleaseNotes/index`
+     - Added release notes for FRED 2.41.0
+   * -
+     -
+     - :doc:`/Architecture/TopLevelComponents/index`
+     - Replaced the diagram with clickable SVG
+   * -
+     -
+     - :doc:`/AdminManual/Installation/SystemReqs`
+     - Added support for Fedora 31
+   * -
+     -
+     - :doc:`/EPPReference/Introduction/index`
+     - Added listing of EPP specifications
+   * -
+     -
+     - :doc:`/RDAPReference/index`
+     - Added status mapping reference
    * - **2.40**
      - **1.1**
      - :doc:`/AdminManual/Installation/index`
