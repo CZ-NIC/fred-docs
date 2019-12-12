@@ -30,12 +30,13 @@ only some of :dfn:`DNR (Domain Name Registry)` functionality as follows:
    * Domain by name (reverse lookup by IP not implemented)
    * Nameserver by hostname (reverse lookup by IP not implemented)
    * Entity by handle
-   * Unimplemented lookup: IP (\ ``/ip``), autonomous system (\ ``/as``)
+* Unimplemented lookup: IP (\ ``/ip``), autonomous system (\ ``/as``)
 * Lookup extensions:
    * FRED nsset by handle
    * FRED keyset by handle
 * Help (\ ``/help``)
-* Search **not** implemented (\ ``/domains``, ``/nameservers``, ``/entities``)
+* Search queries are **not** implemented (\ ``/domains``, ``/nameservers``,
+  ``/entities``)
 
 .. rubric:: Specifications
 
