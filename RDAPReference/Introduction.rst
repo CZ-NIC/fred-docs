@@ -44,4 +44,6 @@ only some of :dfn:`DNR (Domain Name Registry)` functionality as follows:
 * :rfc:`7482` Registration Data Access Protocol (RDAP) Query Format
 * :rfc:`7483` JSON Responses for the Registration Data Access Protocol (RDAP)
 * :rfc:`7484` Finding the Authoritative Registration Data (RDAP) Service
+* :rfc:`8056` Extensible Provisioning Protocol (EPP)
+  and Registration Data Access Protocol (RDAP) Status Mapping
 * `FRED RDAP Extension Specification <https://fred.nic.cz/rdap-extension/>`_

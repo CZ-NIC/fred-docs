@@ -34,3 +34,4 @@ You should have basic understanding of HTTP and JSON.
    Entity
    FRED_nsset
    FRED_keyset
+   StatusMap

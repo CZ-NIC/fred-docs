@@ -30,6 +30,8 @@ On the top level, the response may contain members:
 * ``port43`` -- hostname of Registry WHOIS server, :rfc:`7483#section-4.7`
 * ``rdapConformance`` -- an array of strings, each providing a hint on the used specification, :rfc:`7483#section-4.1`
 * ``secureDNS`` -- secure DNS information, :rfc:`7483#section-5.3`
+* ``status`` -- an array of status flags describing the object state,
+  see :doc:`StatusMap`, :rfc:`7483#section-4.6` and :rfc:`8056#section-2`
 
 .. Note:: A response may contain an ``actionEvent`` called "enum validation expiration",
    which is an extension of events in ENUM domains.
@@ -325,5 +327,8 @@ On the top level, the response may contain members:
             "eventAction": "transfer",
             "eventDate": "2007-02-28T13:55:00+00:00"
          }
-      ]
+      ],
+      "status": [
+         "active"
+      ],
    }

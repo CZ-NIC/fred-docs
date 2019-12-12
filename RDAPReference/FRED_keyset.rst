@@ -22,7 +22,8 @@ On the top level, the response may contain members:
 * ``objectClassName`` -- string "fred_keyset" representing the object type in RDAP, :rfc:`7483#section-4.9`
 * ``port43`` -- hostname of Registry WHOIS server, :rfc:`7483#section-4.7`
 * ``rdapConformance`` -- an array of strings, each providing a hint on the used specification, :rfc:`7483#section-4.1`
-* ``status`` -- an array of status flags describing the object state, :rfc:`7483#section-4.6`
+* ``status`` -- an array of status flags describing the object state,
+  see :doc:`StatusMap`, :rfc:`7483#section-4.6` and :rfc:`8056#section-2`
 
 .. code-block:: json
    :caption: Response example (https://rdap.nic.cz/fred_keyset/CZ.NIC)
