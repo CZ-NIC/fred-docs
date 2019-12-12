@@ -50,11 +50,3 @@ as an open-source solution.
    EPPReference/index
    RDAPReference/index
    ReleaseNotes/index
-
-.. only:: mode_structure and format_html
-
-   .. rubric:: Structure notes
-
-   * :doc:`/InfoSources`
-   * :doc:`/InfoStructure`
-   * :doc:`/TODOList`
