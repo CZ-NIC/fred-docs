@@ -98,7 +98,8 @@ rst_epilog = """
 git_branch = os.popen('git rev-parse --abbrev-ref HEAD').read().strip()
 
 # Draft
-is_draft = git_branch and git_branch != 'master'
+is_draft = False
+#is_draft = git_branch and git_branch != 'master'
 
 # When we're drafting
 if is_draft:
