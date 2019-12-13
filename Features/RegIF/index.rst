@@ -8,7 +8,7 @@ Registrar features
 
    .. struct-start
 
-   **Sources:**  ? :ref:`??? <src>` | **AoW:** unplanned
+   **Sources:**  ? | **AoW:** unplanned
 
    **Chapter outline:**
 

@@ -8,7 +8,7 @@ Maintenance
 
    .. struct-start
 
-   **Sources:** IVIEW + translate :ref:`??? <src>` | **AoW:** done & unplanned
+   **Sources:** IVIEW + translate | **AoW:** done & unplanned
 
    **Chapter outline:**
 

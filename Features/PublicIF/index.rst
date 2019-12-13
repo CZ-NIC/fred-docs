@@ -10,7 +10,7 @@ These are the features that the FRED public interface provides to the public.
 
    .. struct-start
 
-   **Sources:**  ? :ref:`??? <src>` | **AoW:** unplanned
+   **Sources:**  ? | **AoW:** unplanned
 
    **Chapter outline:**
 

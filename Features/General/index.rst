@@ -8,7 +8,7 @@ General features
 
    .. struct-start
 
-   **Sources:** WEB/Features + WIKI/Dev + WIKI/Test :ref:`??? <src>`
+   **Sources:** WEB/Features + WIKI/Dev + WIKI/Test
    | **AoW:** 9 days (the rest)
 
    **Chapter outline:**

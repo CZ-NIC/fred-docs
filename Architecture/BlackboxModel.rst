@@ -11,7 +11,7 @@ basic data flows between Registry end users and the Registry.
 
    .. struct-start
 
-   **Sources:** OLDREPO + NOTES :ref:`??? <src>`
+   **Sources:** OLDREPO + NOTES
    | **AoW:** (used old picture) 3 days to create a new picture
 
    **Chapter outline:**

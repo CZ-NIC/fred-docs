@@ -8,7 +8,7 @@ Periodic tasks
 
    .. struct-start
 
-   **Sources:** WIKI/Dev + IVIEW + translate :ref:`??? <src>`
+   **Sources:** WIKI/Dev + IVIEW + translate
    | **AoW:** 4 days (the rest)
 
    **Chapter outline:**

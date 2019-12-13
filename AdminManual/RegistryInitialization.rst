@@ -8,7 +8,7 @@ Registry initialization
 
    .. struct-start
 
-   **Sources:** NOTES :ref:`??? <src>`
+   **Sources:** NOTES
    | **AoW:** done & unplanned
 
    **Chapter outline:**

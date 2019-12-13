@@ -8,7 +8,7 @@ Configuration
 
    .. struct-start
 
-   **Sources:** NOTES + IVIEW + translate :ref:`??? <src>`
+   **Sources:** NOTES + IVIEW + translate
    | **AoW:** done & unplanned
 
    **Chapter outline:**

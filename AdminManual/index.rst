@@ -47,7 +47,6 @@ Terms and definitions can be found :ref:`in the glossary <glossary>`.
    RegistryInitialization
    PeriodicTasks
    AdministrativeTasks/index
-   Accounting
    Maintenance
    Customization/index
    Appendixes/index

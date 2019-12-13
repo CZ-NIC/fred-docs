@@ -10,7 +10,7 @@ This chapter describes how to install the FRED.
 
    .. struct-start
 
-   **Sources:** WEB/Install + NOTES :ref:`??? <src>`
+   **Sources:** WEB/Install + NOTES
    | **AoW:** done & unplanned
 
    **Chapter outline:**

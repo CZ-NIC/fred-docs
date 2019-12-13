@@ -8,7 +8,7 @@ Administrative tasks
 
    .. struct-start
 
-   **Sources:** HELP + SELF :ref:`??? <src>` | **AoW:** done & unplanned
+   **Sources:** HELP + SELF | **AoW:** done & unplanned
 
    **Chapter outline:**
 
