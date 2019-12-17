@@ -6,6 +6,7 @@
 
 import os
 import time
+import re
 #import sphinx_rtd_theme
 
 # -- General configuration ------------------------------------------------
@@ -95,11 +96,11 @@ rst_epilog = """
 """
 
 # Git
+#git_branch = os.getenv('CI_COMMIT_REF_NAME')
 git_branch = os.popen('git rev-parse --abbrev-ref HEAD').read().strip()
 
 # Draft
-is_draft = False
-#is_draft = git_branch and git_branch != 'master'
+is_draft = git_branch and git_branch != 'master' and git_branch != 'HEAD'
 
 # When we're drafting
 if is_draft:
@@ -161,10 +162,6 @@ html_static_path = ['fred_theme/static']
 
 # Additional CSS // requires version >=1.8
 html_css_files = ['svg.css']
-
-# When we're drafting
-if is_draft:
-    html_css_files.append('todos.css')
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
