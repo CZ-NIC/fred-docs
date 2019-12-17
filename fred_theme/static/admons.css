@@ -33,9 +33,22 @@ div.admonition {
 }
 
 /* Specific admonitions */
-div.admonition-todo {
+div.admonition-todo, div.todo-backlog {
    background-color: #CAE2B6;
    border: solid 1px #439427;
+}
+
+div.todo-backlog p.admonition-title::after {
+   content: " (backlog)";
+}
+
+div.todo-version {
+   background-color: #FFDDAA;
+   border: solid 1px #CC3300;
+}
+
+div.todo-version p.admonition-title::after {
+   content: " (version)";
 }
 
 div.warning {
