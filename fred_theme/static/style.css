@@ -164,8 +164,8 @@ div.code-block-caption {
    /*font-weight: bold;*/
 }
 
-/* TOCtree caption */
-.toctree-wrapper .caption-text {
+/* Caption */
+p.caption .caption-text {
    font-weight: bold;
 }
 
