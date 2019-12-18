@@ -8,8 +8,7 @@ Administration features
 
    .. struct-start
 
-   :ref:`Info. sources <src>` vary, see outline
-   | **AoW:** 2 days (the rest)
+   **AoW:** 2 days (the rest)
 
    **Chapter outline:**
 
