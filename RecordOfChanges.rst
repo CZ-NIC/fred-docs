@@ -18,6 +18,10 @@ For changes in software see :doc:`/ReleaseNotes/index`.
      - Segment
      - Change description
    * - **2.41**
+     - **1.1**
+     - :doc:`/FerdaManual/index`
+     - Added Ferda Administration Manual
+   * -
      - **1.0**
      - :doc:`/ReleaseNotes/index`
      - Added release notes for FRED 2.41.0
