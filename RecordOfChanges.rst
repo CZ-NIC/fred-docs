@@ -18,6 +18,19 @@ For changes in software see :doc:`/ReleaseNotes/index`.
      - Segment
      - Change description
    * - **2.41**
+     - **1.2**
+     - :doc:`/ReleaseNotes/index`
+     - Expanded release notes for FRED 2.41.0
+   * -
+     -
+     - :doc:`/Architecture/SourceCode`,
+       :doc:`/AdminManual/Installation/SourceTar`
+     - Reorganized source code structure and installation procedure
+   * -
+     -
+     - :doc:`/EPPReference/CommandStructure/Create/CreateKeyset`
+     - Fixed minimum occurences of ``<keyset:dnskey>`` element in the EPP command
+   * -
      - **1.1**
      - :doc:`/FerdaManual/index`
      - Added Ferda Administration Manual
