@@ -22,7 +22,7 @@ The ``<keyset:create>`` element must declare the ``keyset`` :doc:`namespace and 
 </EPPReference/SchemasNamespaces/index>`, and it must contain the following child elements:
 
 * ``<keyset:id>`` **(1)** – the keyset handle as :term:`fredcom:objIDCreateType`.
-* ``<keyset:dnskey>`` **(0..10)** – a DNS key (:ref:`see object's attributes
+* ``<keyset:dnskey>`` **(1..10)** – a DNS key (:ref:`see object's attributes
   for allowed values <mng-keyset-attr>`) given by:
 
    * ``<keyset:flags>`` **(1)** – flags as :term:`xs:unsignedShort`,

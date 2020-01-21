@@ -589,8 +589,8 @@ Technical check results
 ``<nsset:testData>`` **(1)** declares the ``nsset`` :doc:`namespace and schema
 </EPPReference/SchemasNamespaces/index>`, and contains:
 
-.. * ``<nsset:cltestid>`` **(0..1)** – clTRID of the tec.check request???
-     as :term:`nsset:trIDStringType`, // probably unused
+.. * ``<nsset:cltestid>`` **(0..1)** – clTRID of the tech.check request
+     as :term:`nsset:trIDStringType`, // probably obsolete
 
 * ``<nsset:id>`` **(1)** – the nsset handle as :term:`fredcom:objIDType`,
 * ``<nsset:name>`` **(0..n)** – a listing of additional domain names that have
