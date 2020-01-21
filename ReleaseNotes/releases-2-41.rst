@@ -11,7 +11,6 @@ Release 2.41.0
 
 .. rubric:: Enhancements
 
-* :file:`fred-utils-distutils` -- discontinue
 * :repo:`fred-libfred`
    - unify random numbers generator
    - lessen strictness of locking ``registrar_credit`` on initialization of
@@ -20,13 +19,11 @@ Release 2.41.0
 * :repo:`fred-rdap`
    - include standard server prohibition flags in status display
    - clean up configuration variables
-* :repo:`fred-server` -- allow invoicing registrars for the annual fee monthly
-  or yearly
+* :repo:`fred-server`
+   - allow invoicing registrars for the annual fee monthly or yearly
+   - add manpages for :program:`fred-admin`
+* :file:`fred-utils-distutils` -- discontinue
 * :repo:`fred-webadmin` -- allow modification of registrar handles
-
-.. * :repo:`pyfred` -- transfer to Setuptools
-
-.. * :repo:`utils-pyfco`, :repo:`utils-pylogger`
 
 .. rubric:: Bugfixes
 
