@@ -9,12 +9,9 @@ The source code of FRED is divided into several subprojects.
 The subprojects belong to one of the following groups depending on which tools
 are used to build them:
 
-* ::A:: stands for Autotools (used only for fred-db now),
-* ::C:: stands for CMake (used with C++ code)
-* ::D:: stands for FRED Distutils (used with some remaining Python code),
-* ::S:: stands for standard Python Setuptools.
-
-.. Note:: This is a transitional state, it will get better in the following version.
+* ::A:: stands for Autotools (used only in :file:`fred-db`),
+* ::C:: stands for CMake (used with C++ code),
+* ::S:: stands for Python Setuptools.
 
 Each subproject has its own GitHub repository.
 
@@ -35,7 +32,7 @@ Subprojects and repositories
   – a Python wrapper over ``rml2pdf`` used for generation of PDF documents
 * :ref:`::C:: <install-cmake>` `fred-idl <https://www.github.com/CZ-NIC/fred-idl.git>`_
   – IDL interface definitions for CORBA inter-process communication
-* :ref:`::C:: <install-cmake>` `fred-libfred <https://www.github.com/CZ-NIC/fred-libfred.git>`_ :sup:`NEW`
+* :ref:`::C:: <install-cmake>` `fred-libfred <https://www.github.com/CZ-NIC/fred-libfred.git>`_
   – a C++ library implementing operations on core registry objects (dependency for ``fred-server``)
 * :ref:`::C:: <install-cmake>` `fred-mod-corba <https://www.github.com/CZ-NIC/fred-mod-corba.git>`_
   – an Apache module serving other two modules (EPP, WHOIS) the common functionality of CORBA communication
@@ -43,7 +40,7 @@ Subprojects and repositories
   – an Apache module for parsing EPP commands and transforming them into CORBA calls to a back-end server (and vice versa)
 * :ref:`::C:: <install-cmake>` `fred-mod-whoisd <https://www.github.com/CZ-NIC/fred-mod-whoisd.git>`_
   – an Apache module for processing WHOIS commands and transforming them into CORBA calls to a back-end server (and vice versa)
-* :ref:`::D:: <install-dist>` `fred-pyfred <https://www.github.com/CZ-NIC/fred-pyfred.git>`_
+* :ref:`::S:: <install-setup>` `fred-pyfred <https://www.github.com/CZ-NIC/fred-pyfred.git>`_
   – a Python CORBA server and clients for zone-file generation, email communication, and technical checks, including file-manager components
 * :ref:`::S:: <install-setup>` `fred-rdap <https://www.github.com/CZ-NIC/fred-rdap.git>`_
   – an RDAP server (front end) prototype implemented with Django
@@ -56,9 +53,6 @@ Subprojects and repositories
 
 .. rubric:: Utilities
 
-* :ref:`::S:: <install-setup>` `fred-utils-distutils <https://www.github.com/CZ-NIC/fred-utils-distutils.git>`_
-  – a Python wrapper over ``python-setuptools`` (necessary for installation
-  of some FRED subprojects in Python)
 * :ref:`::S:: <install-setup>` `fred-utils-pyfco <https://www.github.com/CZ-NIC/fred-utils-pyfco.git>`_
   – a Python wrapper over CORBA (used by fred-rdap, fred-webwhois, fred-webadmin)
 * :ref:`::S:: <install-setup>` `fred-utils-pylogger <https://www.github.com/CZ-NIC/fred-utils-pylogger.git>`_
@@ -72,7 +66,7 @@ Subprojects and repositories
 
 * :ref:`::S:: <install-setup>` `fred-transproc <https://www.github.com/CZ-NIC/fred-transproc.git>`_
   – a Python script for querying various sources of bank transactions (payments) and processing them with Django PAIN
-* `django-pain <https://www.github.com/CZ-NIC/django-pain>`_
+* :ref:`::S:: <install-setup>` `django-pain <https://www.github.com/CZ-NIC/django-pain>`_
   – Django :term:`PAIN` application
-* `fred-pain <https://www.github.com/CZ-NIC/fred-pain>`_
+* :ref:`::S:: <install-setup>` `fred-pain <https://www.github.com/CZ-NIC/fred-pain>`_
   – FRED connector plugin for :term:`PAIN` also based on Django

@@ -40,10 +40,6 @@ across OS versions):
 
 Install all the packages from the appropriate list.
 
-.. IDEA Separate dependencies for compilation, installation and operation.
-   Advantage?
-
-
 Download and unpack
 ^^^^^^^^^^^^^^^^^^^
 
@@ -82,7 +78,7 @@ From the directory of the package, run this command sequence:
 
 .. code-block:: bash
 
-   autoreconf -vfi # generates the configure script
+   autoreconf -vfi # generates the 'configure' script
    ./configure
    make
    sudo make install
@@ -120,12 +116,12 @@ These packages use **CMake** [#]_ for build and installation.
 
 Some of these packages require IDL definitions during compilation, therefore the IDL package
 must be installed before other "C" packages and before the :file:`fred-pyfred`
-"D" package.
+package.
 
 Package list:
 
 * :file:`fred-idl` (does not require build nor installation)
-* :file:`fred-libfred` (not to be built standalone, it is included by the *server*)
+* :file:`fred-libfred` (not to be built standalone, it is included by *fred-server*)
 * :file:`fred-server`
 * :file:`fred-mod-corba` (doesn't require IDLs)
 * :file:`fred-mod-eppd`
@@ -164,29 +160,29 @@ For the other packages run: [#CDIR]_
 
 .. _install-setup:
 
-Install "D" & "S" packages
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Install "S" packages
+^^^^^^^^^^^^^^^^^^^^
 
-These packages use either FRED's **Distutils** wrapper over Setuptools or they
-have been ported to use **Setuptools** directly for build and/or installation.
+These packages use **Setuptools** [#]_ for build and/or installation.
 
-Therefore the Distutils package must be installed before other "D" packages.
-Naturally, Setuptools must be installed (:file:`python-setuptools` or
+Setuptools must be installed (:file:`python-setuptools` or
 :code:`pip install setuptools`) before all other Python packages.
 
 Package list:
 
-* :file:`fred-utils-distutils` -- *install first! (in the Python path)*
-* :file:`fred-utils-pyfco` [#s]_
-* :file:`fred-utils-pylogger` [#s]_
-* :file:`fred-client` [#s]_
-* :file:`fred-doc2pdf` [#s]_
-* :file:`fred-pyfred` -- the last package still using Distutils
-* :file:`fred-rdap` [#s]_
-* :file:`fred-transproc` [#s]_
-* :file:`fred-webadmin` [#s]_
-* :file:`fred-webwhois` [#s]_
-* :file:`fred-logger-maintenance` [#s]_ (optional)
+* :file:`fred-utils-pyfco`
+* :file:`fred-utils-pylogger`
+* :file:`fred-client`
+* :file:`fred-doc2pdf`
+* :file:`fred-pyfred`
+* :file:`fred-rdap`
+* :file:`fred-webadmin`
+* :file:`fred-webwhois`
+
+* :file:`fred-logger-maintenance` (optional)
+* :file:`fred-transproc` (optional)
+* :file:`django-pain` (optional)
+* :file:`fred-pain` (optional)
 
 For each package in the list, run this command from its directory:
 
@@ -206,10 +202,8 @@ for installation parameters.
 The installer writes a list of installed files (with their full path)
 to the :file:`install.log` file when it finishes.
 
-.. [#s] These packages have been ported from Distutils to Setuptools
-   but they have the same installation command, except it does not install
-   a configuration file and the package must be configured as described
-   in a README file included in the package.
+.. [#] For more information about Setuptools see
+   https://setuptools.readthedocs.io.
 
 Finalization
 ^^^^^^^^^^^^
