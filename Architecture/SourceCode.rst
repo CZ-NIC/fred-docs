@@ -20,53 +20,53 @@ Subprojects and repositories
 
 .. rubric:: Core
 
-* :ref:`::C:: <install-cmake>` `fred-akm <https://www.github.com/CZ-NIC/fred-akm.git>`_
+* :ref:`::C:: <install-cmake>` :repo:`fred-akm`
   – a CLI CORBA client for automated keyset management
-* :ref:`::C:: <install-cmake>` `fred-cdnskey-scanner <https://www.github.com/CZ-NIC/fred-cdnskey-scanner.git>`_
+* :ref:`::C:: <install-cmake>` :repo:`fred-cdnskey-scanner`
   – a CLI tool to scan a set of domains for CDNSKEY records
-* :ref:`::S:: <install-setup>` `fred-client <https://www.github.com/CZ-NIC/fred-client.git>`_
+* :ref:`::S:: <install-setup>` :repo:`fred-client`
   – a Python EPP client – a CLI application and an API library
-* :ref:`::A:: <install-auto>` `fred-db <https://www.github.com/CZ-NIC/fred-db.git>`_
+* :ref:`::A:: <install-auto>` :repo:`fred-db`
   – a collection of SQL scripts to set up the database in PostgreSQL
-* :ref:`::S:: <install-setup>` `fred-doc2pdf <https://www.github.com/CZ-NIC/fred-doc2pdf.git>`_
+* :ref:`::S:: <install-setup>` :repo:`fred-doc2pdf`
   – a Python wrapper over ``rml2pdf`` used for generation of PDF documents
-* :ref:`::C:: <install-cmake>` `fred-idl <https://www.github.com/CZ-NIC/fred-idl.git>`_
+* :ref:`::C:: <install-cmake>` :repo:`fred-idl`
   – IDL interface definitions for CORBA inter-process communication
-* :ref:`::C:: <install-cmake>` `fred-libfred <https://www.github.com/CZ-NIC/fred-libfred.git>`_
+* :ref:`::C:: <install-cmake>` :repo:`fred-libfred`
   – a C++ library implementing operations on core registry objects (dependency for ``fred-server``)
-* :ref:`::C:: <install-cmake>` `fred-mod-corba <https://www.github.com/CZ-NIC/fred-mod-corba.git>`_
+* :ref:`::C:: <install-cmake>` :repo:`fred-mod-corba`
   – an Apache module serving other two modules (EPP, WHOIS) the common functionality of CORBA communication
-* :ref:`::C:: <install-cmake>` `fred-mod-eppd <https://www.github.com/CZ-NIC/fred-mod-eppd.git>`_
+* :ref:`::C:: <install-cmake>` :repo:`fred-mod-eppd`
   – an Apache module for parsing EPP commands and transforming them into CORBA calls to a back-end server (and vice versa)
-* :ref:`::C:: <install-cmake>` `fred-mod-whoisd <https://www.github.com/CZ-NIC/fred-mod-whoisd.git>`_
+* :ref:`::C:: <install-cmake>` :repo:`fred-mod-whoisd`
   – an Apache module for processing WHOIS commands and transforming them into CORBA calls to a back-end server (and vice versa)
-* :ref:`::S:: <install-setup>` `fred-pyfred <https://www.github.com/CZ-NIC/fred-pyfred.git>`_
+* :ref:`::S:: <install-setup>` :repo:`fred-pyfred`
   – a Python CORBA server and clients for zone-file generation, email communication, and technical checks, including file-manager components
-* :ref:`::S:: <install-setup>` `fred-rdap <https://www.github.com/CZ-NIC/fred-rdap.git>`_
+* :ref:`::S:: <install-setup>` :repo:`fred-rdap`
   – an RDAP server (front end) prototype implemented with Django
-* :ref:`::C:: <install-cmake>` `fred-server <https://www.github.com/CZ-NIC/fred-server.git>`_
+* :ref:`::C:: <install-cmake>` :repo:`fred-server`
   – C++ CORBA servers (back end) for the core registry functionality and a CLI administration tool
-* :ref:`::S:: <install-setup>` `fred-webadmin <https://www.github.com/CZ-NIC/fred-webadmin.git>`_
+* :ref:`::S:: <install-setup>` :repo:`fred-webadmin`
   – the Daphne web administration server (front end) for registry customer support (mainly registrar creation and activity inspection)
-* :ref:`::S:: <install-setup>` `fred-webwhois <https://www.github.com/CZ-NIC/fred-webwhois.git>`_
+* :ref:`::S:: <install-setup>` :repo:`fred-webwhois`
   – the web WHOIS server (front end) implemented with Django
 
 .. rubric:: Utilities
 
-* :ref:`::S:: <install-setup>` `fred-utils-pyfco <https://www.github.com/CZ-NIC/fred-utils-pyfco.git>`_
+* :ref:`::S:: <install-setup>` :repo:`fred-utils-pyfco`
   – a Python wrapper over CORBA (used by fred-rdap, fred-webwhois, fred-webadmin)
-* :ref:`::S:: <install-setup>` `fred-utils-pylogger <https://www.github.com/CZ-NIC/fred-utils-pylogger.git>`_
+* :ref:`::S:: <install-setup>` :repo:`fred-utils-pylogger`
   – a Python wrapper over logging infrastructure for all Python clients
   (used by fred-rdap, fred-webwhois, fred-webadmin)
 
-* :ref:`::S:: <install-setup>` `fred-logger-maintenance <https://www.github.com/CZ-NIC/fred-logger-maintenance>`_
+* :ref:`::S:: <install-setup>` :repo:`fred-logger-maintenance`
   – Python scripts for logger (audit log) database maintenance
 
 .. rubric:: PAIN (sample implementation of new billing)
 
-* :ref:`::S:: <install-setup>` `fred-transproc <https://www.github.com/CZ-NIC/fred-transproc.git>`_
+* :ref:`::S:: <install-setup>` :repo:`fred-transproc`
   – a Python script for querying various sources of bank transactions (payments) and processing them with Django PAIN
-* :ref:`::S:: <install-setup>` `django-pain <https://www.github.com/CZ-NIC/django-pain>`_
+* :ref:`::S:: <install-setup>` :repo:`django-pain`
   – Django :term:`PAIN` application
-* :ref:`::S:: <install-setup>` `fred-pain <https://www.github.com/CZ-NIC/fred-pain>`_
+* :ref:`::S:: <install-setup>` :repo:`fred-pain`
   – FRED connector plugin for :term:`PAIN` also based on Django

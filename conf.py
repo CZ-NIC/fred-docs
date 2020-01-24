@@ -115,7 +115,7 @@ if is_draft:
 
 # -- Extension - extlinks
 extlinks = {
-    'repo': ('https://github.com/CZ-NIC/fred-%s', ''),
+    'repo': ('https://github.com/CZ-NIC/%s', ''),
 }
 
 # -- Extension - PlantUML
