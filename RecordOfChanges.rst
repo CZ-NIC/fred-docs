@@ -18,6 +18,11 @@ For changes in software see :doc:`/ReleaseNotes/index`.
      - Segment
      - Change description
    * - **2.41**
+     - **1.3**
+     - :doc:`/AdminManual/Installation/SystemReqs`,
+       :doc:`/AdminManual/Installation/BinsFedora`
+     - Added support for RHEL/CentOS 8
+   * -
      - **1.2**
      - :doc:`/ReleaseNotes/index`
      - Expanded release notes for FRED 2.41.0
