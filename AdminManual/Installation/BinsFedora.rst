@@ -52,7 +52,7 @@ Installation steps
 
          dnf config-manager --add-repo http://archive.nic.cz/yum/fred/fedora/fred.repo
 
-   b) RHEL/CentOS
+   b) RHEL/CentOS 7
 
       .. code-block:: bash
 
@@ -73,15 +73,22 @@ Installation steps
          ln -s /var/lib/pgsql/9.6/data/ /var/lib/pgsql/
          ln -s /usr/lib/systemd/system/postgresql-9.6.service /usr/lib/systemd/system/postgresql.service
 
+   c) RHEL/CentOS 8
+
+      .. code-block:: bash
+
+         dnf install dnf-plugins-core epel-release
+         dnf config-manager --add-repo http://archive.nic.cz/yum/fred/epel/fred.repo
+
 #. Install all FRED packages
 
-   a) Fedora
+   a) Fedora, RHEL/CentOS 8
 
       .. code-block:: bash
 
          dnf install -y 'fred-*' -x '*debug*'
 
-   b) RHEL/CentOS
+   b) RHEL/CentOS 7
 
       .. code-block:: bash
 

@@ -27,7 +27,9 @@ To deploy binaries, you must have installed one of these **operating systems**:
 * Fedora 30
 * Fedora 31
 * RHEL 7
+* RHEL 8
 * CentOS 7
+* CentOS 8
 
 To compile sources from tarballs, you may try to use any Linux distribution
 of your choice, but we tested the compilation/installation procedure
